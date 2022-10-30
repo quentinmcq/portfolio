@@ -1,0 +1,23 @@
+### Node template
+# IDE / Editor
+.idea
+
+# Dependency directories
+node_modules
+
+# Vue generate
+dist
+dist-ssr
+
+# dotenv environment variables files
+.env.local
+
+# Logs
+logs
+*.log
+yarn-debug.log*
+yarn-error.log*
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+.pnp.*

@@ -1,0 +1,62 @@
+.timeline-item {
+  padding: 0;
+
+  &__card {
+    text-align: left;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    width: 280px;
+
+    @media (min-width: $md) {
+      margin-bottom: 30px;
+      width: 330px;
+    }
+  }
+
+  &__year {
+    color: $whitesmoke;
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  &__thumbnail-container {
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+  }
+
+  &__thumbnail {
+    @media (min-width: $lg) {
+      transition: transform 0.4s;
+
+      &:hover {
+        transform: scale(1.08);
+      }
+    }
+  }
+
+  &__title {
+    word-break: break-word;
+  }
+
+  &__location {
+    font-size: 14px;
+    white-space: normal;
+    padding-bottom: 15px;
+
+    @media (min-width: $md) {
+      font-size: 15px;
+    }
+  }
+
+  &__description {
+    display: none;
+
+    @media (min-width: $md) {
+      display: block;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      font-size: 15px;
+      white-space: normal;
+    }
+  }
+}

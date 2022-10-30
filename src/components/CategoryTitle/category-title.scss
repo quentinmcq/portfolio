@@ -1,0 +1,19 @@
+.category-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 26px;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $md) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-size: 40px;
+  }
+}

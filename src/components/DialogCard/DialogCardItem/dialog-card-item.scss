@@ -1,0 +1,42 @@
+.dialog-card-item {
+  scroll-behavior: unset;
+  padding: 15px;
+  flex-basis: auto;
+
+  &__links {
+    margin-top: 20px;
+    margin-bottom: 15px;
+
+    &__img {
+      cursor: pointer;
+    }
+  }
+
+  &__see-more {
+    justify-content: center;
+  }
+
+  &__card-thumbnail {
+    cursor: pointer;
+  }
+
+  &__card-internal {
+    padding: 15px 5px 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__cross-icon {
+      text-align: right;
+      margin-right: 10px;
+    }
+
+    .cross-icon {
+      color: $cherry-red !important;
+    }
+  }
+}
+
+:deep(.v-overlay__scrim) {
+  opacity: 35%;
+}

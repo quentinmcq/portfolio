@@ -1,0 +1,19 @@
+<template>
+  <v-container :id="label">
+    <Timeline :items="items" :label="label" />
+  </v-container>
+</template>
+
+<script setup>
+import { ref } from 'vue';
+import Timeline from '@/components/Timeline/Timeline.vue';
+
+const label = ref('experience');
+
+defineProps({
+  items: {
+    type: Array,
+    required: true
+  }
+});
+</script>

@@ -1,0 +1,32 @@
+.scroll-top {
+  position: fixed;
+  right: 11px;
+  bottom: 15px;
+  z-index: 998;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  transform: translateY(100px);
+  opacity: 0;
+  text-decoration: none;
+
+  @media (min-width: $xl) {
+    right: 20px;
+    bottom: 18px;
+  }
+
+  &__transition {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &:hover {
+    transform: scale(1.08);
+    transition: 0.5s all ease 0s;
+  }
+
+  &__icon {
+    padding: 10px;
+    background: $cherry-red;
+    border-radius: 8px;
+  }
+}

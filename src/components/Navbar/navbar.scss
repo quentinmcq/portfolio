@@ -1,0 +1,76 @@
+.navbar {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  transition: all 0.5s ease;
+  transform: translateY(-100px);
+  opacity: 0;
+
+  :deep(.v-toolbar-title__placeholder) {
+    overflow: initial;
+  }
+
+  &__transition {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__full-name {
+    cursor: pointer;
+    margin-right: 10px;
+    color: $whitesmoke;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    @media (min-width: $md) {
+      font-size: 18px;
+    }
+
+    &:last-child {
+      margin-right: 16px;
+    }
+  }
+
+  &__first-letter {
+    padding-right: 0.5px;
+    color: $cherry-red;
+  }
+
+  &__nav-icon {
+    color: $whitesmoke !important;
+  }
+
+  &__link-list {
+    display: block;
+    padding-top: 100px;
+    text-transform: uppercase;
+    list-style-type: none;
+    font-size: 25px;
+    font-family: Lekton, sans-serif;
+    letter-spacing: 2.5pt;
+    font-weight: 700;
+  }
+
+  &__link {
+    display: block;
+    padding-bottom: 0.6em;
+    padding-left: 1.5em;
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      color: #e52c4d !important;
+      transform: scale(1.06);
+    }
+
+    @media (min-width: $md) {
+      font-size: 25px;
+    }
+
+    @media (min-width: $lg) {
+      font-size: 30px;
+    }
+  }
+}

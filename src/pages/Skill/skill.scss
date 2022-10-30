@@ -1,0 +1,14 @@
+.skill {
+  &__card {
+    padding: 30px;
+    background-color: $whitesmoke;
+
+    @media (min-width: $xl) {
+      padding: 40px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+  }
+}

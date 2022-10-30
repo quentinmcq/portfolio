@@ -1,0 +1,16 @@
+.locale-switcher {
+  :deep(.v-btn) {
+    width: 42px;
+    min-width: 42px !important;
+    height: 29px !important;
+    min-height: 29px;
+    transform: none;
+  }
+
+  &__label {
+    margin: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+}
