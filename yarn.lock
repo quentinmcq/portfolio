@@ -1069,9 +1069,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-vue@npm:^9.6.0":
-  version: 9.6.0
-  resolution: "eslint-plugin-vue@npm:9.6.0"
+"eslint-plugin-vue@npm:^9.7.0":
+  version: 9.7.0
+  resolution: "eslint-plugin-vue@npm:9.7.0"
   dependencies:
     eslint-utils: ^3.0.0
     natural-compare: ^1.4.0
@@ -1082,7 +1082,7 @@ __metadata:
     xml-name-validator: ^4.0.0
   peerDependencies:
     eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
-  checksum: fcfb333b09af4d1db027f8a52b7ffdf0ebaa649f5738b7a6124bd02aaa1e075daaaa97e490a863667dda16c79e1d37688a8311d7685b9a63d3c4c0dd5f1d9622
+  checksum: 733abf4f9ce2e355cc8d5501e6df94d7b332d9f8e0b5b5436ff24455e376c4c20a03d689e0502bd8facfb4953f1b1bf943fb0f7b0f2bc10c77a45bed9a8a9105
   languageName: node
   linkType: hard
 
@@ -2193,12 +2193,12 @@ __metadata:
     axios: ^1.1.3
     emailjs-com: ^3.2.0
     eslint: ^8.26.0
-    eslint-plugin-vue: ^9.6.0
+    eslint-plugin-vue: ^9.7.0
     prettier: ^2.7.1
     roboto-fontface: ^0.10.0
     sass: ^1.55.0
     sass-loader: ^13.1.0
-    vite: ^3.2.1
+    vite: ^3.2.2
     vite-plugin-vuetify: ^1.0.0
     vue: ^3.2.41
     vue-i18n: ^9.2.2
@@ -2727,9 +2727,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^3.2.1":
-  version: 3.2.1
-  resolution: "vite@npm:3.2.1"
+"vite@npm:^3.2.2":
+  version: 3.2.2
+  resolution: "vite@npm:3.2.2"
   dependencies:
     esbuild: ^0.15.9
     fsevents: ~2.3.2
@@ -2758,7 +2758,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: d33f6f4c80f85f327cf74c56d2189f1ba1d808987501eae9455c65bbb1ba5ea96af0f68647e18fe0c61e82126ea91f10480c1e80964a6836a751502647a42f2b
+  checksum: 7197ac91c612dda922367a95afa1b210353d6168d41845c186e2217bda1328d17b021b93d8089e336f9533b94645ae5dca18bb10937759f559c87006dd957fcd
   languageName: node
   linkType: hard
 
