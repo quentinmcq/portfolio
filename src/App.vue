@@ -16,8 +16,8 @@
 <script setup>
 import { useResponsive } from '@/composables/responsive';
 import Navbar from './components/Navbar/Navbar.vue';
-import Header from './components/Header/Header.vue';
-import Footer from './components/Footer/Footer.vue';
+import Header from './pages/Header/Header.vue';
+import Footer from './pages/Footer/Footer.vue';
 import Home from './pages/Home/Home.vue';
 
 const { appStyle } = useResponsive();

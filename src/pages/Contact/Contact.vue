@@ -68,13 +68,7 @@
                 {{ $t('contact.submit') }}
               </v-btn>
 
-              <v-btn
-                color="#e52c4d"
-                class="ml-4"
-                :size="buttonSize"
-                @click="reset"
-                outlined
-              >
+              <v-btn color="#e52c4d" class="ml-4" :size="buttonSize" @click="reset" outlined>
                 {{ $t('contact.erase') }}
               </v-btn>
             </v-container>

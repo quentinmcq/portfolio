@@ -1,7 +1,7 @@
 import { computed } from 'vue';
 
-export function useImagePath({ mainDirectory = 'pages', directory, image }) {
-  const location = `../${mainDirectory}/${directory}/img/${image}`;
+export function useImagePath({ directory, image }) {
+  const location = `/public/assets/img/${image}`;
   const path = computed(() => new URL(location, import.meta.url).href);
 
   return { path };

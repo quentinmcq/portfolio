@@ -1,7 +1,11 @@
 .snackbar {
   &__link_config {
-    color: white;
-    font-weight: bold;
-    text-decoration: underline;
+    color: $white;
+    font-weight: 900;
+    text-decoration: none;
+
+    &:hover {
+      color: $cherry-red;
+    }
   }
 }

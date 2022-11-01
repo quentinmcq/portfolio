@@ -5,11 +5,12 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true,
-    'vue/setup-compiler-macros': true
+    node: true
   },
   extends: ['plugin:vue/vue3-essential', 'eslint:recommended', '@vue/eslint-config-prettier'],
-  //plugins: ['prettier', 'vue'],
+  parserOptions: {
+    ecmaVersion: 'latest'
+  },
   rules: {
     semi: [2, 'always'],
     'no-console': 'off',

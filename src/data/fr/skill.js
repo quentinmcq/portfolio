@@ -1,7 +1,7 @@
 export default [
   {
     label: 'Langages web',
-    color: 'orange',
+    color: '#ec8d0a',
     technologies: [
       { name: 'JavaScript', link: 'https://developer.mozilla.org/fr/docs/Web/JavaScript' },
       { name: 'PHP', link: 'https://www.php.net/manual/fr/intro-whatis.php' }
@@ -9,12 +9,12 @@ export default [
   },
   {
     label: 'Base de données',
-    color: 'blue',
+    color: '#2196F3',
     technologies: [{ name: 'MySQL', link: 'https://www.mysql.com/fr/' }]
   },
   {
     label: 'Frameworks Front-end',
-    color: 'green',
+    color: '#4CAF50',
     technologies: [
       { name: 'VueJS', link: 'https://vuejs.org/' },
       { name: 'Vuetify', link: 'https://vuetifyjs.com/en/' }
@@ -22,12 +22,12 @@ export default [
   },
   {
     label: 'Frameworks Back-end',
-    color: 'purple',
+    color: '#9C27b0',
     technologies: [{ name: 'Symfony', link: 'https://symfony.com/' }]
   },
   {
     label: 'Gestion de projets',
-    color: 'pink',
+    color: '#da4e76',
     technologies: [
       { name: 'Git', link: 'https://git-scm.com/' },
       { name: 'Docker', link: 'https://www.docker.com/' },
@@ -37,7 +37,7 @@ export default [
   },
   {
     label: 'Gestion de données',
-    color: 'red',
+    color: '#e01f0f',
     technologies: [
       { name: 'RabbitMQ', link: 'https://www.rabbitmq.com/' },
       { name: 'Elasticsearch', link: 'https://www.elastic.co/fr/elasticsearch/' }
@@ -45,12 +45,12 @@ export default [
   },
   {
     label: 'Langues',
-    color: 'brown',
+    color: '#a86147',
     technologies: [{ name: 'Français (natif)' }, { name: 'Anglais (B2)' }]
   },
   {
     label: 'Personnelles',
-    color: '',
+    color: '#000',
     technologies: [{ name: 'Autonomie' }, { name: "Travail d'équipe" }, { name: 'Organisation' }]
   }
 ];

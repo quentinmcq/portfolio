@@ -1,5 +1,5 @@
 <template>
-  <v-container :id="label" class='project'>
+  <v-container :id="label" class="project">
     <CategoryTitle :label="label" />
     <DialogCard :items="allItems" :label="label" />
 
@@ -47,4 +47,4 @@ function loadMore() {
 }
 </script>
 
-<style lang='scss' src='./project.scss' scoped/>
+<style lang="scss" src="./project.scss" scoped />

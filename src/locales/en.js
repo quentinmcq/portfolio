@@ -35,7 +35,7 @@ export default {
 
   footer: {
     copyright: '© Copyright - {currentYear}',
-    credit: 'Developed with \u2764\uFE0F by Quentin MACQ'
+    credit: 'Developed with ❤️ by Quentin MACQ'
   },
 
   presentation: {
@@ -44,7 +44,7 @@ export default {
     'part-2':
       'Passionate about development for several years now, I code mainly in {symfony} and {vuejs}, where I maintain projects in teams.',
     'part-3':
-      'Curious by nature, I do technological watch regularly so as not to miss any important news! \uD83D\uDCBB'
+      'Curious by nature, I do technological watch regularly so as not to miss any important news! 💻'
   },
 
   skill: {

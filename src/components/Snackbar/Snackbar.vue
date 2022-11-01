@@ -1,17 +1,17 @@
 <template>
   <v-snackbar
-    v-model='snackbar'
-    :timeout='infinite'
-    class='snackbar'
-    location='bottom left'
+    v-model="snackbar"
+    :timeout="infinite"
+    class="snackbar"
+    location="bottom left"
     multi-line
   >
-    <a :href='link' class='snackbar__link_config' target='_blank'>{{
-        $t('snackbar.information')
-      }}</a>
+    <a :href="link" class="snackbar__link_config" target="_blank">{{
+      $t('snackbar.information')
+    }}</a>
 
     <template #actions>
-      <v-btn color='#e52c4d' variant='text' @click='snackbar = false'>
+      <v-btn color="#e52c4d" variant="text" @click="snackbar = false">
         {{ $t('snackbar.close') }}
       </v-btn>
     </template>
@@ -28,4 +28,4 @@ const link = 'https://quentin-macq-old.netlify.app';
 onMounted(() => setTimeout(() => (snackbar.value = true), 2000));
 </script>
 
-<style lang='scss' scoped src='./snackbar.scss' />
+<style lang="scss" scoped src="./snackbar.scss" />

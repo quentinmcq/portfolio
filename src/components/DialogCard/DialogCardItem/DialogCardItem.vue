@@ -10,7 +10,7 @@
             <span v-if="item.year">({{ item.year }})</span>
           </v-card-title>
 
-          <v-card-text v-if="item.subtitle" style='max-width: 600px'>
+          <v-card-text v-if="item.subtitle" style="max-width: 600px">
             {{ $t(`${prefix}.subtitle`) }}
           </v-card-text>
         </div>

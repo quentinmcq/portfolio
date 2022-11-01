@@ -24,7 +24,7 @@ export default {
 
   snackbar: {
     close: 'Fermer',
-    information: 'Lien vers mon 1er portfolio',
+    information: '➡️ Lien vers mon 1er portfolio'
   },
 
   header: {
@@ -35,7 +35,7 @@ export default {
 
   footer: {
     copyright: '© Copyright - {currentYear}',
-    credit: 'Developed with \u2764\uFE0F by Quentin MACQ'
+    credit: 'Developed with ❤️ by Quentin MACQ'
   },
 
   presentation: {
@@ -44,7 +44,7 @@ export default {
     'part-2':
       'Passionné par le développement depuis plusieurs années maintenant, je code principalement en {symfony} et {vuejs}, où je maintiens des projets en équipe.',
     'part-3':
-      'Curieux de nature, je fais régulièrement de la veille technologique afin de ne rater aucune news importante ! \uD83D\uDCBB'
+      'Curieux de nature, je fais régulièrement de la veille technologique afin de ne rater aucune news importante ! 💻'
   },
 
   skill: {
