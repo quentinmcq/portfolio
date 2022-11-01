@@ -2,7 +2,7 @@ import { computed } from 'vue';
 import { useDisplay } from 'vuetify';
 
 export function useStyle() {
-  const { name, smAndDown } = useDisplay();
+  const { name, xs } = useDisplay();
 
   const appStyle = computed(() => {
     return (
@@ -16,7 +16,7 @@ export function useStyle() {
   });
 
   const gridStyle = computed(() =>
-    smAndDown.value ? {} : { gridTemplateColumns: 'repeat(2, 1fr)' }
+    xs.value ? {} : { gridTemplateColumns: 'repeat(2, 1fr)' }
   );
 
   return { appStyle, gridStyle };
