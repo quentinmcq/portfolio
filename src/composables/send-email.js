@@ -2,6 +2,7 @@ import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useHtml } from '@/composables/email/html';
 import { useEmailJs } from '@/composables/email/emailjs';
+
 // import { useTimeout } from '@/composables/timeout';
 
 export function useEmail({ name, phone, email, message }) {
@@ -19,7 +20,14 @@ export function useEmail({ name, phone, email, message }) {
     loading.value = true;
 
     try {
-      await useEmailJs({ name, phone, email, message });
+      const data = {
+        name: name.value,
+        phone: phone.value || t('contact.empty'),
+        email: email.value,
+        message: message.value
+      };
+
+      await useEmailJs(data);
       loading.value = false;
       useHtml({ html: STATUS.SENT });
     } catch {

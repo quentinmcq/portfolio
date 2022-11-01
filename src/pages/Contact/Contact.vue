@@ -1,74 +1,74 @@
 <template>
-  <v-container :id="label" class="contact">
-    <CategoryTitle :label="label" />
+  <v-container :id='label' class='contact'>
+    <CategoryTitle :label='label' />
 
-    <v-row align="center" justify="center" data-aos="zoom-in">
+    <v-row align='center' data-aos='zoom-in' justify='center'>
       <v-col>
-        <v-card class="contact__card">
-          <v-form class="contact__form" ref="form" v-model="valid" @submit.prevent="sendEmail">
+        <v-card class='contact__card'>
+          <v-form ref='form' v-model='valid' class='contact__form' @submit.prevent='sendEmail'>
             <v-text-field
-              v-model="name"
-              :rules="nameRules"
-              class="contact__form__field"
+              v-model='name'
               :label="$t('contact.name')"
-              color="#273142"
-              type="text"
-              variant="underlined"
+              :rules='nameRules'
+              class='contact__form__field'
               clearable
+              color='#273142'
               required
+              type='text'
+              variant='underlined'
             />
 
             <v-text-field
-              v-model="phone"
-              :counter="PHONE_NUMBER_LENGTH"
-              :rules="phoneRules"
-              class="contact__form__field"
+              v-model='phone'
+              :counter='PHONE_NUMBER_LENGTH'
               :label="$t('contact.phone-number')"
-              color="#273142"
-              type="tel"
-              variant="underlined"
+              :rules='phoneRules'
+              class='contact__form__field'
               clearable
+              color='#273142'
+              type='tel'
+              variant='underlined'
             />
 
             <v-text-field
-              v-model="email"
-              :rules="emailRules"
-              class="contact__form__field"
+              v-model='email'
               :label="$t('contact.mail-address')"
-              color="#273142"
-              type="email"
-              variant="underlined"
+              :rules='emailRules'
+              class='contact__form__field'
               clearable
+              color='#273142'
               required
+              type='email'
+              variant='underlined'
             />
 
             <v-textarea
-              v-model="message"
-              :rules="messageRules"
-              class="contact__form__field"
+              v-model='message'
               :label="$t('contact.message')"
-              color="#273142"
-              type="text"
-              variant="underlined"
+              :rows='textAreaRows'
+              :rules='messageRules'
               auto-grow
+              class='contact__form__field'
               clearable
+              color='#273142'
               required
-              :rows="textAreaRows"
+              type='text'
+              variant='underlined'
             />
 
-            <v-container class="contact__form__buttons">
+            <v-container class='contact__form__buttons'>
               <v-btn
-                id="message-status"
-                color="#273142"
-                type="submit"
-                :loading="loading"
-                :size="buttonSize"
-                @click="validate"
+                id='message-status'
+                :loading='loading'
+                :size='buttonSize'
+                color='#273142'
+                type='submit'
+                @click='validate'
               >
                 {{ $t('contact.submit') }}
               </v-btn>
 
-              <v-btn color="#e52c4d" class="ml-4" :size="buttonSize" @click="reset" outlined>
+              <v-btn :size='buttonSize' class='ml-4' color='#e52c4d' outlined @click='reset'>
                 {{ $t('contact.erase') }}
               </v-btn>
             </v-container>
@@ -95,23 +95,23 @@ const { buttonSize, textAreaRows } = useResponsive();
 const label = ref('contact');
 const form = ref(null);
 const {
-  name,
-  phone,
-  email,
-  message,
   nameRules,
   phoneRules,
   emailRules,
   messageRules,
   validate,
-  reset
+  reset,
+  name,
+  phone,
+  email,
+  message
 } = useForm({ form });
 
 const { valid, loading, send } = useEmail({
-  name: name.value,
-  phone: phone.value || t('contact.empty'),
-  email: email.value,
-  message: message.value
+  name,
+  phone,
+  email,
+  message
 });
 
 async function sendEmail() {
@@ -122,4 +122,4 @@ async function sendEmail() {
 }
 </script>
 
-<style lang="scss" src="./contact.scss" />
+<style lang='scss' src='./contact.scss' />
