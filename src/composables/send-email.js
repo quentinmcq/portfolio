@@ -10,19 +10,20 @@ export function useEmail({ name, phone, email, message }) {
   const valid = ref(false);
   const loading = ref(false);
 
-  const STATUS = {
-    SEND: t('contact.send'),
-    SENT: t('contact.sent'),
-    ERROR: t('contact.error')
-  };
-
   const send = async () => {
+    const EMPTY = 'vide';
+    const STATUS = {
+      SEND: t('contact.send'),
+      SENT: t('contact.sent'),
+      ERROR: t('contact.error')
+    };
+
     loading.value = true;
 
     try {
       const data = {
         name: name.value,
-        phone: phone.value || t('contact.empty'),
+        phone: phone.value || EMPTY,
         email: email.value,
         message: message.value
       };

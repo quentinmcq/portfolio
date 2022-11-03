@@ -3,6 +3,14 @@
   padding: 15px;
   flex-basis: auto;
 
+  &__card {
+    cursor: pointer;
+
+    &__subtitle {
+      max-width: 600px;
+    }
+  }
+
   &__links {
     margin-top: 20px;
     margin-bottom: 15px;
@@ -16,11 +24,7 @@
     justify-content: center;
   }
 
-  &__card-thumbnail {
-    cursor: pointer;
-  }
-
-  &__card-internal {
+  &__popin {
     padding: 15px 5px 20px;
     max-width: 800px;
     margin-left: auto;

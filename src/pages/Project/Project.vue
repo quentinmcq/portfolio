@@ -36,14 +36,14 @@ const { xl } = useDisplay();
 const { buttonSize } = useResponsive();
 
 const label = ref('project');
-const numberOfItemsToDisplay = ref(xl.value ? 4 : 2);
+const numberOfItemsToDisplay = xl.value ? 4 : 2;
 let displayedItems = ref(numberOfItemsToDisplay);
 
 const allItems = computed(() => props.items.slice(0, displayedItems.value));
 const hasMoreItems = computed(() => displayedItems.value < props.items.length);
 
 function loadMore() {
-  displayedItems.value += numberOfItemsToDisplay.value;
+  displayedItems.value += numberOfItemsToDisplay;
 }
 </script>
 

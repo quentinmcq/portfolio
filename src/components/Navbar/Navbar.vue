@@ -31,7 +31,7 @@
     <ul class="navbar__link-list">
       <li v-for="(item, index) in menu" :key="index">
         <a :href="item.link" class="navbar__link" @click="toggleMenu">
-          {{ $t(`navbar[${index}].title`) }}
+          {{ $t(`menu[${index}].title`) }}
         </a>
       </li>
     </ul>

@@ -1,7 +1,7 @@
 <template>
   <v-col class="dialog-card-item" md="6">
-    <div class="card-animation dialog-card-item__card-thumbnail">
-      <v-card class="dialog-card-item__card-external" color="#f4f4f4">
+    <div class="card-animation">
+      <v-card color="#f4f4f4" class="dialog-card-item__card">
         <div @click="dialog = true">
           <v-img :src="path" cover height="180" />
 
@@ -10,15 +10,15 @@
             <span v-if="item.year">({{ item.year }})</span>
           </v-card-title>
 
-          <v-card-text v-if="item.subtitle" style="max-width: 600px">
+          <v-card-text v-if="item.subtitle" class="dialog-card-item__card__subtitle">
             {{ $t(`${prefix}.subtitle`) }}
           </v-card-text>
         </div>
       </v-card>
 
       <v-dialog v-model="dialog" :transition="transition">
-        <v-card class="dialog-card-item__card-internal" color="#f4f4f4">
-          <div class="dialog-card-item__card-internal__cross-icon">
+        <v-card class="dialog-card-item__popin" color="#f4f4f4">
+          <div class="dialog-card-item__popin__cross-icon">
             <v-icon
               class="cross-icon"
               color="white"

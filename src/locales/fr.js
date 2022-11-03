@@ -1,4 +1,4 @@
-import navbar from '@/data/fr/menu';
+import menu from '@/data/fr/menu';
 import project from '@/data/fr/project';
 import skill from '@/data/fr/skill';
 import hobby from '@/data/fr/hobby';
@@ -14,7 +14,7 @@ export default {
     vuejs: 'Vue.js'
   },
 
-  navbar,
+  menu,
 
   translations: {
     en: 'Anglais',
@@ -77,7 +77,6 @@ export default {
 
   contact: {
     'main-title': 'Contact',
-    empty: 'vide',
     erase: 'Effacer',
     error: 'Erreur... 😰',
     'invalid-address-format': "Le format de l'adresse est invalide",
