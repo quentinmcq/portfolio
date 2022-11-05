@@ -1,7 +1,6 @@
 <template>
   <div>
     <LoadingBar />
-    <Snackbar />
     <ScrollTop />
     <Presentation />
     <Skill :skills="skills" />
@@ -20,7 +19,6 @@ import experiences from '@/data/fr/experience';
 import projects from '@/data/fr/project';
 import hobbies from '@/data/fr/hobby';
 import LoadingBar from '@/components/LoadingBar/LoadingBar.vue';
-import Snackbar from '@/components/Snackbar/Snackbar.vue';
 import ScrollTop from '@/components/ScrollTop/ScrollTop.vue';
 import Presentation from '@/pages/Presentation/Presentation.vue';
 import Skill from '@/pages/Skill/Skill.vue';

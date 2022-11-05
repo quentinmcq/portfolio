@@ -19,13 +19,15 @@
       margin-left: 15px;
       font-size: 14px;
     }
-  }
 
-  &__icon {
-    margin-right: 2px;
+    :deep(.v-btn__prepend) {
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+      margin-right: 3px;
 
-    @media (min-width: $lg) {
-      margin-right: 4px;
+      @media (min-width: $lg) {
+        margin-right: 4px;
+      }
     }
   }
 }

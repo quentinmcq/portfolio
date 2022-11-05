@@ -6,13 +6,8 @@
     :target="target"
     :color="presentation.color"
     :size="buttonSize"
+    :prepend-icon="icon"
   >
-    <v-icon
-      class="presentation-button__icon"
-      v-if="presentation.icon"
-      :size="iconSize"
-      :icon="presentation.icon"
-    />
     {{ presentation.label }}
   </v-btn>
 </template>
@@ -28,9 +23,10 @@ const props = defineProps({
   }
 });
 
-const { buttonSize, iconSize } = useResponsive();
+const { buttonSize } = useResponsive();
 
 const target = computed(() => (!props.presentation.link.startsWith('#') ? '_blank' : ''));
+const icon = computed(() => (props.presentation.icon || ''));
 </script>
 
 <style scoped lang="scss" src="./presentation-button.scss" />

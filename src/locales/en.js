@@ -22,11 +22,6 @@ export default {
     title: 'Translations'
   },
 
-  snackbar: {
-    close: 'Close',
-    information: 'Link to my first portfolio'
-  },
-
   header: {
     'good-visit': 'Good visit!',
     technologies: 'Symfony/Vue.Js',
