@@ -21,16 +21,16 @@ const props = defineProps({
   }
 });
 
-const { xl } = useDisplay();
+const { lgAndUp } = useDisplay();
 
 const label = ref('project');
-const numberOfItemsToDisplay = xl.value ? 4 : 2;
+const numberOfItemsToDisplay = lgAndUp.value ? 4 : 2;
 let displayedItems = ref(numberOfItemsToDisplay);
 
 const allItems = computed(() => props.items.slice(0, displayedItems.value));
 const hasMoreItems = computed(() => displayedItems.value < props.items.length);
 
-function setNumberOfItemsToDisplay(event) {
-  displayedItems.value += event;
+function setNumberOfItemsToDisplay(number) {
+  displayedItems.value += number;
 }
 </script>

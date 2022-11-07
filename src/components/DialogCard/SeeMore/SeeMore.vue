@@ -7,7 +7,6 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
 import { useDisplay } from 'vuetify';
 import { useResponsive } from '@/composables/responsive';
 
@@ -18,11 +17,11 @@ defineProps({
   }
 });
 
-const { xl } = useDisplay();
+const { lgAndUp } = useDisplay();
 const { buttonSize } = useResponsive();
 
 const emit = defineEmits(['see-more']);
-const numberOfItemsToDisplay = xl.value ? 4 : 2;
+const numberOfItemsToDisplay = lgAndUp.value ? 4 : 2;
 
 function loadMore() {
   emit('see-more', numberOfItemsToDisplay);
