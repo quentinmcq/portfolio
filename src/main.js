@@ -5,7 +5,6 @@ import i18n from './plugins/v-18n.js';
 import writer from 'vue-writer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-//import smoothscroll from 'smoothscroll-polyfill';
 import { loadFonts } from './plugins/webfontloader';
 
 loadFonts();

@@ -26,7 +26,7 @@ const props = defineProps({
 const { buttonSize } = useResponsive();
 
 const target = computed(() => (!props.presentation.link.startsWith('#') ? '_blank' : ''));
-const icon = computed(() => (props.presentation.icon || ''));
+const icon = computed(() => props.presentation.icon || '');
 </script>
 
 <style scoped lang="scss" src="./presentation-button.scss" />

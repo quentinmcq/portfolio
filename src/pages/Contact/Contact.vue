@@ -1,74 +1,74 @@
 <template>
-  <v-container :id='label' class='contact'>
-    <CategoryTitle :label='label' />
+  <v-container :id="label" class="contact">
+    <CategoryTitle :label="label" />
 
-    <v-row align='center' data-aos='zoom-in' justify='center'>
+    <v-row align="center" data-aos="zoom-in" justify="center">
       <v-col>
-        <v-card class='contact__card'>
-          <v-form ref='form' v-model='valid' class='contact__form' @submit.prevent='sendEmail'>
+        <v-card class="contact__card">
+          <v-form ref="form" v-model="valid" class="contact__form" @submit.prevent="sendEmail">
             <v-text-field
-              v-model='name'
+              v-model="name"
               :label="$t('contact.name')"
-              :rules='nameRules'
-              class='contact__form__field'
+              :rules="nameRules"
+              class="contact__form__field"
               clearable
-              color='#273142'
+              color="#273142"
               required
-              type='text'
-              variant='underlined'
+              type="text"
+              variant="underlined"
             />
 
             <v-text-field
-              v-model='phone'
-              :counter='PHONE_NUMBER_LENGTH'
+              v-model="phone"
+              :counter="PHONE_NUMBER_LENGTH"
               :label="$t('contact.phone-number')"
-              :rules='phoneRules'
-              class='contact__form__field'
+              :rules="phoneRules"
+              class="contact__form__field"
               clearable
-              color='#273142'
-              type='tel'
-              variant='underlined'
+              color="#273142"
+              type="tel"
+              variant="underlined"
             />
 
             <v-text-field
-              v-model='email'
+              v-model="email"
               :label="$t('contact.mail-address')"
-              :rules='emailRules'
-              class='contact__form__field'
+              :rules="emailRules"
+              class="contact__form__field"
               clearable
-              color='#273142'
+              color="#273142"
               required
-              type='email'
-              variant='underlined'
+              type="email"
+              variant="underlined"
             />
 
             <v-textarea
-              v-model='message'
+              v-model="message"
               :label="$t('contact.message')"
-              :rows='textAreaRows'
-              :rules='messageRules'
+              :rows="textAreaRows"
+              :rules="messageRules"
               auto-grow
-              class='contact__form__field'
+              class="contact__form__field"
               clearable
-              color='#273142'
+              color="#273142"
               required
-              type='text'
-              variant='underlined'
+              type="text"
+              variant="underlined"
             />
 
-            <v-container class='contact__form__buttons'>
+            <v-container class="contact__form__buttons">
               <v-btn
-                id='message-status'
-                :loading='loading'
-                :size='buttonSize'
-                color='#273142'
-                type='submit'
-                @click='validate'
+                id="message-status"
+                :loading="loading"
+                :size="buttonSize"
+                color="#273142"
+                type="submit"
+                @click="validate"
               >
                 {{ $t('contact.submit') }}
               </v-btn>
 
-              <v-btn :size='buttonSize' class='ml-4' color='#e52c4d' outlined @click='reset'>
+              <v-btn :size="buttonSize" class="ml-4" color="#e52c4d" outlined @click="reset">
                 {{ $t('contact.erase') }}
               </v-btn>
             </v-container>
@@ -122,4 +122,4 @@ async function sendEmail() {
 }
 </script>
 
-<style lang='scss' src='./contact.scss' />
+<style lang="scss" src="./contact.scss" />

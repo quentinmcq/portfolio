@@ -11,7 +11,8 @@ export default {
     'first-name': 'Quentin',
     name: 'MACQ',
     symfony: 'Symfony',
-    vuejs: 'Vue.js'
+    vuejs: 'Vue.js',
+    'see-more': 'See more'
   },
 
   menu,
@@ -60,7 +61,6 @@ export default {
   project: {
     'main-title': 'Projects',
     'find-out-more': 'Find out more',
-    'more-projects': 'See more',
     'private-project': 'Private project',
     ...project
   },
