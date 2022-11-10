@@ -25,7 +25,6 @@ const { lgAndUp } = useDisplay();
 
 const label = ref('hobby');
 const numberOfItemsToDisplay = lgAndUp.value ? 4 : 2;
-console.log(numberOfItemsToDisplay);
 let displayedItems = ref(numberOfItemsToDisplay);
 
 const allItems = computed(() => props.items.slice(0, displayedItems.value));
