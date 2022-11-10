@@ -11,13 +11,13 @@ export default [
   },
   {
     label: 'linkedin',
-    link: 'https://fr.linkedin.com/in/quentin-macq-3193a4198',
+    link: 'https://fr.linkedin.com/in/quentinmcq-3193a4198',
     color: 'blue',
     icon: 'mdi-linkedin'
   },
   {
     label: 'github',
-    link: 'https://github.com/quentin-macq?tab=repositories',
+    link: 'https://github.com/quentinmcq?tab=repositories',
     color: 'black',
     icon: 'mdi-github'
   }

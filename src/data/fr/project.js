@@ -17,7 +17,7 @@ export default [
     image: 'couteau-suisse.png',
     year: '2020',
     chips: ['Laravel', 'PHP', 'JS', 'Livewire', 'Bootstrap'],
-    link: 'https://github.com/quentin-macq/teach-me'
+    link: 'https://github.com/quentinmcq/teach-me'
   },
   {
     title: 'TeachMe',
@@ -27,7 +27,7 @@ export default [
     image: 'teachme.png',
     year: '2020',
     chips: ['Laravel', 'PHP', 'JS', 'Inertia', 'Bootstrap'],
-    link: 'https://github.com/quentin-macq/swiss-knife'
+    link: 'https://github.com/quentinmcq/swiss-knife'
   },
   {
     title: 'Interface EDT',
@@ -37,7 +37,7 @@ export default [
     image: 'edt.png',
     year: '2020',
     chips: ['VueJS', 'JS', 'Bootstrap'],
-    link: 'https://github.com/quentin-macq/university-schedule'
+    link: 'https://github.com/quentinmcq/university-schedule'
   },
   {
     title: 'Slay the Demons',
@@ -47,7 +47,7 @@ export default [
     image: 'slay-the-demon.png',
     year: '2020',
     chips: ['Laravel', 'Angular', 'PHP', 'JS', 'Phaser', 'Bootstrap'],
-    link: 'https://github.com/quentin-macq/slay-the-demons'
+    link: 'https://github.com/quentinmcq/slay-the-demons'
   },
   {
     title: 'TV Inside',
@@ -57,7 +57,7 @@ export default [
     image: 'tv-time.png',
     year: '2019',
     chips: ['Laravel', 'PHP', 'Bootstrap'],
-    link: 'https://github.com/quentin-macq/tv-inside'
+    link: 'https://github.com/quentinmcq/tv-inside'
   },
   {
     title: 'Bomberman',
@@ -67,7 +67,7 @@ export default [
     image: 'bomberman.png',
     year: '2019',
     chips: ['Python', 'PyQt'],
-    link: 'https://github.com/quentin-macq/bomberman'
+    link: 'https://github.com/quentinmcq/bomberman'
   },
   {
     title: "Site web de l'IUT",
@@ -77,6 +77,6 @@ export default [
     image: 'site.png',
     year: '2018',
     chips: ['JS', 'HTML/CSS'],
-    link: 'https://github.com/quentin-macq/university-website'
+    link: 'https://github.com/quentinmcq/university-website'
   }
 ];
