@@ -1,3 +1,5 @@
+import { GITHUB_USERNAME, GITHUB_URL, LINKEDIN_URL, LINKEDIN_USERNAME } from '@/misc/constants';
+
 export default [
   {
     label: 'cv',
@@ -11,13 +13,13 @@ export default [
   },
   {
     label: 'linkedin',
-    link: 'https://fr.linkedin.com/in/quentinmcq-3193a4198',
+    link: `${LINKEDIN_URL}/${LINKEDIN_USERNAME}`,
     color: 'blue',
     icon: 'mdi-linkedin'
   },
   {
     label: 'github',
-    link: 'https://github.com/quentinmcq?tab=repositories',
+    link: `${GITHUB_URL}/${GITHUB_USERNAME}`,
     color: 'black',
     icon: 'mdi-github'
   }

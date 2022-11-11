@@ -1,14 +1,14 @@
 import menu from '@/data/en/menu';
 import project from '@/data/en/project';
-import hobby from '@/data/en/hobby';
 import skill from '@/data/en/skill';
+import hobby from '@/data/en/hobby';
 import education from '@/data/en/education';
 import experience from '@/data/en/experience';
 
 export default {
   common: {
     and: 'et',
-    'first-name': 'Quentin',
+    firstname: 'Quentin',
     name: 'MACQ',
     symfony: 'Symfony',
     vuejs: 'Vue.js',
@@ -24,9 +24,9 @@ export default {
   },
 
   header: {
-    'good-visit': 'Good visit!',
+    visit: 'Good visit!',
     technologies: 'Symfony/Vue.Js',
-    'web-developer': 'Web developer'
+    developer: 'Web developer'
   },
 
   footer: {
@@ -83,7 +83,6 @@ export default {
     'phone-number': 'Phone number',
     'required-field': 'This field is required',
     send: 'Send',
-    sent: 'Sent! 😄',
-    submit: 'Submit'
+    sent: 'Sent! 😄'
   }
 };

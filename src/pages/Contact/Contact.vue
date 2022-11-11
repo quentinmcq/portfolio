@@ -65,7 +65,7 @@
                 type="submit"
                 @click="validate"
               >
-                {{ $t('contact.submit') }}
+                {{ $t('contact.send') }}
               </v-btn>
 
               <v-btn :size="buttonSize" class="ml-4" color="#e52c4d" outlined @click="reset">
@@ -81,15 +81,12 @@
 
 <script setup>
 import { ref } from 'vue';
-import { useI18n } from 'vue-i18n';
 import { useForm } from '@/composables/email/form';
 import { useResponsive } from '@/composables/responsive';
 import { useEmail } from '@/composables/send-email';
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue';
 
 const PHONE_NUMBER_LENGTH = 10;
-
-const { t } = useI18n();
 const { buttonSize, textAreaRows } = useResponsive();
 
 const label = ref('contact');

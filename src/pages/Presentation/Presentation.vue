@@ -14,7 +14,7 @@
             >
               <template #name>
                 <a :href="presentations[0].link" class="presentation__link" target="_blank"
-                  >{{ $t('common.first-name') }} {{ $t('common.name') }}
+                  >{{ $t('common.firstname') }} {{ $t('common.name') }}
                 </a>
               </template>
 

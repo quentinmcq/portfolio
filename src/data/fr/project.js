@@ -1,3 +1,5 @@
+import { GITHUB_USERNAME, GITHUB_URL } from '@/misc/constants';
+
 export default [
   {
     title: 'Unpaid Tracking',
@@ -17,7 +19,7 @@ export default [
     image: 'couteau-suisse.png',
     year: '2020',
     chips: ['Laravel', 'PHP', 'JS', 'Livewire', 'Bootstrap'],
-    link: 'https://github.com/quentinmcq/teach-me'
+    link: `${GITHUB_URL}/${GITHUB_USERNAME}/teach-me`
   },
   {
     title: 'TeachMe',
@@ -27,7 +29,7 @@ export default [
     image: 'teachme.png',
     year: '2020',
     chips: ['Laravel', 'PHP', 'JS', 'Inertia', 'Bootstrap'],
-    link: 'https://github.com/quentinmcq/swiss-knife'
+    link: `${GITHUB_URL}/${GITHUB_USERNAME}/swiss-knife`
   },
   {
     title: 'Interface EDT',
@@ -37,7 +39,7 @@ export default [
     image: 'edt.png',
     year: '2020',
     chips: ['VueJS', 'JS', 'Bootstrap'],
-    link: 'https://github.com/quentinmcq/university-schedule'
+    link: `${GITHUB_URL}/${GITHUB_USERNAME}/university-schedule`
   },
   {
     title: 'Slay the Demons',
@@ -47,7 +49,7 @@ export default [
     image: 'slay-the-demon.png',
     year: '2020',
     chips: ['Laravel', 'Angular', 'PHP', 'JS', 'Phaser', 'Bootstrap'],
-    link: 'https://github.com/quentinmcq/slay-the-demons'
+    link: `${GITHUB_URL}/${GITHUB_USERNAME}/slay-the-demons`
   },
   {
     title: 'TV Inside',
@@ -57,7 +59,7 @@ export default [
     image: 'tv-time.png',
     year: '2019',
     chips: ['Laravel', 'PHP', 'Bootstrap'],
-    link: 'https://github.com/quentinmcq/tv-inside'
+    link: `${GITHUB_URL}/${GITHUB_USERNAME}/tv-inside`
   },
   {
     title: 'Bomberman',
@@ -67,7 +69,7 @@ export default [
     image: 'bomberman.png',
     year: '2019',
     chips: ['Python', 'PyQt'],
-    link: 'https://github.com/quentinmcq/bomberman'
+    link: `${GITHUB_URL}/${GITHUB_USERNAME}/bomberman`
   },
   {
     title: "Site web de l'IUT",
@@ -77,6 +79,6 @@ export default [
     image: 'site.png',
     year: '2018',
     chips: ['JS', 'HTML/CSS'],
-    link: 'https://github.com/quentinmcq/university-website'
+    link: `${GITHUB_URL}/${GITHUB_USERNAME}/university-website`
   }
 ];

@@ -8,7 +8,7 @@ import experience from '@/data/fr/experience';
 export default {
   common: {
     and: 'et',
-    'first-name': 'Quentin',
+    firstname: 'Quentin',
     name: 'MACQ',
     symfony: 'Symfony',
     vuejs: 'Vue.js',
@@ -24,9 +24,9 @@ export default {
   },
 
   header: {
-    'good-visit': 'Bonne visite !',
+    visit: 'Bonne visite !',
     technologies: 'Symfony/Vue.Js',
-    'web-developer': 'Développeur Web'
+    developer: 'Développeur Web'
   },
 
   footer: {
@@ -83,7 +83,6 @@ export default {
     'phone-number': 'Numéro de téléphone',
     'required-field': 'Ce champ est requis',
     send: 'Envoyer',
-    sent: 'Envoyé ! 😄',
-    submit: 'Envoyer'
+    sent: 'Envoyé ! 😄'
   }
 };
