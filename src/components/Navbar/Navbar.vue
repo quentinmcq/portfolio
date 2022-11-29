@@ -30,7 +30,7 @@
 
     <ul class="navbar__link-list">
       <li v-for="(item, index) in menu" :key="index">
-        <a :href="item.link" class="navbar__link" @click="toggleMenu">
+        <a class="navbar__link" @click="scrollToSection(item.link)">
           {{ $t(`menu[${index}].title`) }}
         </a>
       </li>
@@ -57,6 +57,13 @@ const drawer = ref(false);
 
 function toggleMenu() {
   drawer.value = !drawer.value;
+}
+
+function scrollToSection(anchor) {
+  const link = document.querySelector(anchor);
+
+  link.scrollIntoView({ behavior: 'smooth' });
+  toggleMenu();
 }
 </script>
 
