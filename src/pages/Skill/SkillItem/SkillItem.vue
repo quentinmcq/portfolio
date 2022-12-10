@@ -6,13 +6,13 @@
 
     <v-chip
       class="skill-item__config"
-      v-for="(technology, index) in skill.technologies"
+      v-for="(content, key) in skill.content"
       :color="skill.color"
-      :key="index"
-      :href="technology.link"
+      :key="key"
+      :href="content.link"
       target="_blank"
     >
-      {{ technology.name }}
+      {{ $t(`skill[${index}].content[${key}].name`) }}
     </v-chip>
   </v-col>
 </template>

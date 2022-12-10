@@ -39,7 +39,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { useScroll } from '@/composables/scroll';
 import { useResponsive } from '@/composables/responsive';
 import LocaleSwitcher from '@/components/LocaleSwitcher/LocaleSwitcher.vue';
@@ -48,12 +48,21 @@ import menu from '@/data/fr/menu';
 const { visible, scrollToTop } = useScroll();
 const { menuWidth } = useResponsive();
 
+onMounted(() => {
+  removeMenuLogoBackground();
+});
+
 const fullName = [
   { firstLetter: 'Q', content: 'uentin' },
   { firstLetter: 'M', content: 'acq' }
 ];
 
 const drawer = ref(false);
+
+function removeMenuLogoBackground() {
+  const menuLogo = document.querySelector('.navbar__nav-icon');
+  menuLogo.classList.remove('v-btn--variant-elevated');
+}
 
 function toggleMenu() {
   drawer.value = !drawer.value;

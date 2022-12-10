@@ -39,6 +39,12 @@ const selectedLocale = ref(1);
 
 function switchLocale(lang) {
   locale.value = lang;
+
+  storeLangToLocalStorage(lang);
+}
+
+function storeLangToLocalStorage(lang) {
+  localStorage.setItem('lang', lang);
 }
 </script>
 

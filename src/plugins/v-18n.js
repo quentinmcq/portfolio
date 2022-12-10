@@ -4,7 +4,7 @@ import en from '@/locales/en';
 
 export default createI18n({
   legacy: false, // Vuetify does not support the legacy mode of vue-i18n
-  locale: 'fr',
+  locale: localStorage.getItem('lang') || 'fr',
   fallbackLocale: 'fr',
   globalInjection: true,
   allowComposition: true,

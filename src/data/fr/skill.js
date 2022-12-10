@@ -2,7 +2,7 @@ export default [
   {
     label: 'Langages web',
     color: '#ec8d0a',
-    technologies: [
+    content: [
       { name: 'JavaScript', link: 'https://developer.mozilla.org/fr/docs/Web/JavaScript' },
       { name: 'PHP', link: 'https://www.php.net/manual/fr/intro-whatis.php' }
     ]
@@ -10,12 +10,12 @@ export default [
   {
     label: 'Base de données',
     color: '#2196F3',
-    technologies: [{ name: 'MySQL', link: 'https://www.mysql.com/fr/' }]
+    content: [{ name: 'MySQL', link: 'https://www.mysql.com/fr/' }]
   },
   {
     label: 'Frameworks Front-end',
     color: '#4CAF50',
-    technologies: [
+    content: [
       { name: 'VueJS', link: 'https://vuejs.org/' },
       { name: 'Vuetify', link: 'https://vuetifyjs.com/en/' }
     ]
@@ -23,12 +23,12 @@ export default [
   {
     label: 'Frameworks Back-end',
     color: '#9C27b0',
-    technologies: [{ name: 'Symfony', link: 'https://symfony.com/' }]
+    content: [{ name: 'Symfony', link: 'https://symfony.com/' }]
   },
   {
     label: 'Gestion de projets',
     color: '#da4e76',
-    technologies: [
+    content: [
       { name: 'Git', link: 'https://git-scm.com/' },
       { name: 'Docker', link: 'https://www.docker.com/' },
       { name: 'Redmine', link: 'https://www.redmine.org/' },
@@ -38,7 +38,7 @@ export default [
   {
     label: 'Gestion de données',
     color: '#e01f0f',
-    technologies: [
+    content: [
       { name: 'RabbitMQ', link: 'https://www.rabbitmq.com/' },
       { name: 'Elasticsearch', link: 'https://www.elastic.co/fr/elasticsearch/' }
     ]
@@ -46,11 +46,11 @@ export default [
   {
     label: 'Langues',
     color: '#a86147',
-    technologies: [{ name: 'Français (natif)' }, { name: 'Anglais (B2)' }]
+    content: [{ name: 'Français (natif)' }, { name: 'Anglais (B2)' }]
   },
   {
     label: 'Personnelles',
     color: '#000',
-    technologies: [{ name: 'Autonomie' }, { name: "Travail d'équipe" }, { name: 'Organisation' }]
+    content: [{ name: 'Autonomie' }, { name: "Travail d'équipe" }, { name: 'Organisation' }]
   }
 ];
