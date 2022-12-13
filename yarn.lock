@@ -290,10 +290,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdi/font@npm:^7.0.96":
-  version: 7.0.96
-  resolution: "@mdi/font@npm:7.0.96"
-  checksum: 3bc71dc45e784af98fc41ff58eedd77b7ec93fdd5ad2ea599914efd7eff0412db97e4d1766ae3abb55d90a39e5e6dbc550ffe36c72fa504d5b2b021b5aa16f8e
+"@mdi/font@npm:^7.1.96":
+  version: 7.1.96
+  resolution: "@mdi/font@npm:7.1.96"
+  checksum: db6dce72f553e844d049cc563cf89ae58dfd0f55f99f743ccbf1ca6ab644c940f50fbd78ecd91290a67ebb58fa5bae4983bbab782a6611456bd87566825c1ca4
   languageName: node
   linkType: hard
 
@@ -2194,7 +2194,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "portfolio@workspace:."
   dependencies:
-    "@mdi/font": ^7.0.96
+    "@mdi/font": ^7.1.96
     "@rushstack/eslint-patch": ^1.2.0
     "@vitejs/plugin-vue": ^4.0.0
     "@vue/eslint-config-prettier": ^7.0.0
@@ -2207,12 +2207,12 @@ __metadata:
     roboto-fontface: ^0.10.0
     sass: ^1.56.2
     sass-loader: ^13.2.0
-    vite: ^4.0.0
-    vite-plugin-vuetify: ^1.0.0
+    vite: ^4.0.1
+    vite-plugin-vuetify: ^1.0.1
     vue: ^3.2.45
     vue-i18n: ^9.2.2
     vue-writer: ^1.2.0
-    vuetify: ^3.0.4
+    vuetify: ^3.0.5
     webfontloader: ^1.6.28
   languageName: unknown
   linkType: soft
@@ -2227,7 +2227,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.1.10, postcss@npm:^8.4.19":
+"postcss@npm:^8.1.10":
   version: 8.4.19
   resolution: "postcss@npm:8.4.19"
   dependencies:
@@ -2235,6 +2235,17 @@ __metadata:
     picocolors: ^1.0.0
     source-map-js: ^1.0.2
   checksum: 62782723a385f92b7525f66d29614624de7c5643855423db3a5efd9287e677650300192749adddbbb6734cea9b1d5f5fd4f6ea00ca3f9a95dbbb88f835f5ca64
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^8.4.20":
+  version: 8.4.20
+  resolution: "postcss@npm:8.4.20"
+  dependencies:
+    nanoid: ^3.3.4
+    picocolors: ^1.0.0
+    source-map-js: ^1.0.2
+  checksum: 1a5609ea1c1b204f9c2974a0019ae9eef2d99bf645c2c9aac675166c4cb1005be7b5e2ba196160bc771f5d9ac896ed883f236f888c891e835e59d28fff6651aa
   languageName: node
   linkType: hard
 
@@ -2722,27 +2733,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-plugin-vuetify@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "vite-plugin-vuetify@npm:1.0.0"
+"vite-plugin-vuetify@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "vite-plugin-vuetify@npm:1.0.1"
   dependencies:
     "@vuetify/loader-shared": ^1.7.0
     debug: ^4.3.3
     upath: ^2.0.1
   peerDependencies:
-    vite: ^2.7.0 || ^3.0.0
+    vite: ^2.7.0 || ^3.0.0 || ^4.0.0
     vuetify: ^3.0.0-beta.4
-  checksum: 3b179aa1314ece8e798aa5760309f967bced3e30b653699be20bf25226bdcf5befc5159dc9ce343ccd46ea7c9dcda7bad62418cd6d5cf2cd14bf0c1912d84c7c
+  checksum: 24d860e930fa9b48370c056b5398b17e9d6af49e1a54a49ab5fc248ddcdd2669d528df61b5beb0d3befadf0daac9ca20343cb841abb10733d2537a889cd197ec
   languageName: node
   linkType: hard
 
-"vite@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "vite@npm:4.0.0"
+"vite@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "vite@npm:4.0.1"
   dependencies:
     esbuild: ^0.16.3
     fsevents: ~2.3.2
-    postcss: ^8.4.19
+    postcss: ^8.4.20
     resolve: ^1.22.1
     rollup: ^3.7.0
   peerDependencies:
@@ -2770,7 +2781,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 83099d5033fa5580714641df3cda16579ec104b9f3d447c2cf3208105ef2e6f8573267fbe3bdc93c0e51a70830d4d30bc166767c9f8805b1075a405625471930
+  checksum: c51bd7cb955973cce1c63e6d29ac25ea6f8920db6de2ca97f285c80cf9607649d87254d1fabd9aa5920149572a6220686b9e3bf6fd0851f7c86ec8522bba0098
   languageName: node
   linkType: hard
 
@@ -2827,9 +2838,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vuetify@npm:^3.0.4":
-  version: 3.0.4
-  resolution: "vuetify@npm:3.0.4"
+"vuetify@npm:^3.0.5":
+  version: 3.0.5
+  resolution: "vuetify@npm:3.0.5"
   peerDependencies:
     vite-plugin-vuetify: ^1.0.0-alpha.12
     vue: ^3.2.0
@@ -2842,7 +2853,7 @@ __metadata:
       optional: true
     webpack-plugin-vuetify:
       optional: true
-  checksum: 2b9901f8960d44844959cc26c7cc71c3aa5571f9cb917b15397138ca4ed7df65f5a1652816ec6796e9a5a50c8ac760e35bc70e88adaab459869aa671bc943dc8
+  checksum: 3cc596e5bbd1d7604e283938b7a37844e9af7a909c7b8acf84c1291b563220f8386458b15701f2bcfb6d0982310e61b8dc20b7ed818c6b41341525ec7037c1af
   languageName: node
   linkType: hard
 
