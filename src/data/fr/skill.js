@@ -16,7 +16,8 @@ export default [
     label: 'Frameworks Front-end',
     color: '#4CAF50',
     content: [
-      { name: 'VueJS', link: 'https://vuejs.org/' },
+      { name: 'Vue.js', link: 'https://vuejs.org/' },
+      { name: 'Nuxt.js', link: 'https://nuxtjs.org/' },
       { name: 'Vuetify', link: 'https://vuetifyjs.com/en/' }
     ]
   },
