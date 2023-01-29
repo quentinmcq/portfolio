@@ -7,6 +7,7 @@
     :color="presentation.color"
     :size="buttonSize"
     :prepend-icon="icon"
+    @click="sendEventOnButtonClick"
   >
     {{ presentation.label }}
   </v-btn>
@@ -14,6 +15,7 @@
 
 <script setup>
 import { computed } from 'vue';
+import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
 import { useResponsive } from '@/composables/responsive';
 
 const props = defineProps({
@@ -27,6 +29,15 @@ const { buttonSize } = useResponsive();
 
 const target = computed(() => (!props.presentation.link.startsWith('#') ? '_blank' : ''));
 const icon = computed(() => props.presentation.icon || '');
+
+function sendEventOnButtonClick() {
+  useGoogleAnalyticsEvent({
+    action: 'presentation-button',
+    event_category: 'trafic',
+    event_label: 'A user clicked on a presentation button',
+    value: 2
+  });
+}
 </script>
 
 <style scoped lang="scss" src="./presentation-button.scss" />
