@@ -1,7 +1,7 @@
 export function loadConfig() {
   return {
     config: {
-      id: '351355978'
+      id: 'G-CEZM6CC0XH'
     }
   };
 }

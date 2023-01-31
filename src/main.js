@@ -6,7 +6,7 @@ import writer from 'vue-writer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { loadFonts } from './plugins/webfontloader';
-// import { loadConfig } from './plugins/google-analytics';
+import { loadConfig } from './plugins/google-analytics';
 import VueGtag from 'vue-gtag';
 
 loadFonts();
@@ -15,13 +15,5 @@ const app = createApp(App);
 
 app.AOS = new AOS.init({ offset: 100, duration: 600, disable: ['mobile', 'phone'], once: true });
 
-app
-  .use(vuetify)
-  .use(i18n)
-  .use(writer)
-  .use(VueGtag, {
-    config: {
-      id: 'G-CEZM6CC0XH'
-    }
-  });
+app.use(vuetify).use(i18n).use(writer).use(VueGtag, loadConfig());
 app.mount('#app');
