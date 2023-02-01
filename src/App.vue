@@ -15,7 +15,7 @@
 
 <script setup>
 import { onMounted } from 'vue';
-import { useGoogleAnalyticsEvent } from './composables/google-analytics';
+import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
 import { useResponsive } from '@/composables/responsive';
 import Navbar from './components/Navbar/Navbar.vue';
 import Header from './pages/Header/Header.vue';
@@ -27,10 +27,9 @@ const { appStyle } = useResponsive();
 
 function sendEventOnFirstPageLoading() {
   useGoogleAnalyticsEvent({
-    action: 'first-loading',
-    event_category: 'trafic',
-    event_label: 'A user went to your site',
-    value: 1
+    action: 'website-entry',
+    event_category: 'website',
+    event_label: 'A user has entered the site'
   });
 }
 </script>

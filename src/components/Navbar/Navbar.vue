@@ -26,7 +26,16 @@
     location="right"
     temporary
   >
-    <v-icon class="cross-icon" color="white" icon="mdi-close" size="50" @click="toggleMenu" />
+    <v-icon
+      class="cross-icon"
+      color="white"
+      icon="mdi-close"
+      size="50"
+      @click="
+        toggleMenu;
+        sendMenuClickAnalyticsEvent;
+      "
+    />
 
     <ul class="navbar__link-list">
       <li v-for="(item, index) in menu" :key="index">
@@ -42,6 +51,7 @@
 import { ref, onMounted } from 'vue';
 import { useScroll } from '@/composables/scroll';
 import { useResponsive } from '@/composables/responsive';
+import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
 import LocaleSwitcher from '@/components/LocaleSwitcher/LocaleSwitcher.vue';
 import menu from '@/data/fr/menu';
 
@@ -72,7 +82,16 @@ function scrollToSection(anchor) {
   const link = document.querySelector(anchor);
 
   link.scrollIntoView({ behavior: 'smooth' });
+
   toggleMenu();
+}
+
+function sendMenuClickAnalyticsEvent() {
+  useGoogleAnalyticsEvent({
+    action: `timeline-card:click`,
+    event_category: 'Menu',
+    event_label: 'Menu'
+  });
 }
 </script>
 

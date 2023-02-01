@@ -3,12 +3,17 @@
     <CategoryTitle :label="label" />
     <DialogCard :items="allItems" :label="label" customButtonText />
 
-    <SeeMore v-show="hasMoreItems" :items="items" @see-more="setNumberOfItemsToDisplay" />
+    <SeeMore
+      v-show="hasMoreItems"
+      :items="items"
+      :label="label"
+      @see-more="setNumberOfItemsToDisplay"
+    />
   </v-container>
 </template>
 
 <script setup>
-import { computed, ref } from 'vue';
+import { ref, computed } from 'vue';
 import { useDisplay } from 'vuetify';
 import DialogCard from '@/components/DialogCard/DialogCard.vue';
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue';

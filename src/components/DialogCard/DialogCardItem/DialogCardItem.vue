@@ -38,7 +38,7 @@
 
             <v-row v-if="Array.isArray(item.link)" class="dialog-card-item__links">
               <v-col v-for="(link, index) in item.link" :key="index">
-                <a :href="link.url" target="_blank">
+                <a :href="link.url" target="_blank" @click="sendDialogCardClickAnalyticsEvent">
                   <v-img
                     :src="linkImgPath(link.img)"
                     height="40"
@@ -57,7 +57,7 @@
               color="#e52c4d"
               target="_blank"
               variant="outlined"
-              @click="dialog = false"
+              @click="sendFindOutMoreButtonClickAnalyticsEvent"
             >
               <span>{{ $t(buttonText) }}</span>
             </v-btn>
@@ -74,6 +74,7 @@ import { useResponsive } from '@/composables/responsive';
 import { useImagePath } from '@/composables/image-path';
 import { useTranslate } from '@/composables/translate';
 import { useRandomNumber } from '@/composables/random-number';
+import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
 import ChipItem from '@/components/ChipItem/ChipItem.vue';
 
 const props = defineProps({
@@ -106,15 +107,12 @@ const props = defineProps({
   }
 });
 
-const link = ref(props.item?.link);
-
-function websiteLink() {
-  const { randomNumber } = useRandomNumber({ range: link.value.length });
-  return Array.isArray(link.value) ? link.value[randomNumber.value].url : link.value;
-}
-
+let dialog = ref(false);
 const prefix = useTranslate(props.label, props.index);
 const { buttonSize } = useResponsive();
+const buttonText = computed(() =>
+  props.customButtonText ? `${prefix}.button` : `${props.label}.find-out-more`
+);
 const { path } = useImagePath({
   directory: props.label,
   image: props.item.image
@@ -129,10 +127,28 @@ function linkImgPath(image) {
   return path.value;
 }
 
-let dialog = ref(false);
-const buttonText = computed(() =>
-  props.customButtonText ? `${prefix}.button` : `${props.label}.find-out-more`
-);
+function websiteLink() {
+  const link = ref(props.item?.link);
+  const { randomNumber } = useRandomNumber({ range: link.value.length });
+
+  return Array.isArray(link.value) ? link.value[randomNumber.value].url : link.value;
+}
+
+function sendDialogCardClickAnalyticsEvent() {
+  useGoogleAnalyticsEvent({
+    action: `dialog-card:click`,
+    event_category: props.label,
+    event_label: props.item.title
+  });
+}
+
+function sendFindOutMoreButtonClickAnalyticsEvent() {
+  useGoogleAnalyticsEvent({
+    action: `find-out-more-button:click`,
+    event_category: props.label,
+    event_label: props.item.title
+  });
+}
 </script>
 
 <style lang="scss" scoped src="./dialog-card-item.scss" />

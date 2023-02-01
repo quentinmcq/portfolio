@@ -9,22 +9,39 @@
 <script setup>
 import { useDisplay } from 'vuetify';
 import { useResponsive } from '@/composables/responsive';
+import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
+import { useI18n } from 'vue-i18n';
 
-defineProps({
+const props = defineProps({
   items: {
     type: Array,
     default: () => []
+  },
+  label: {
+    type: String,
+    required: true
   }
 });
 
 const { lgAndUp } = useDisplay();
 const { buttonSize } = useResponsive();
+const { t } = useI18n();
 
 const emit = defineEmits(['see-more']);
 const numberOfItemsToDisplay = lgAndUp.value ? 4 : 2;
 
 function loadMore() {
   emit('see-more', numberOfItemsToDisplay);
+
+  sendSeeMoreAnalyticsEvent();
+}
+
+function sendSeeMoreAnalyticsEvent() {
+  useGoogleAnalyticsEvent({
+    action: `see-more-button:click`,
+    event_category: props.label,
+    event_label: t('common.see-more')
+  });
 }
 </script>
 
