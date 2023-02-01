@@ -61,6 +61,7 @@
     text-decoration: none;
 
     &:hover {
+      cursor: pointer;
       color: #e52c4d !important;
       transform: scale(1.06);
     }

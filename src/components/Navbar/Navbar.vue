@@ -32,7 +32,7 @@
       icon="mdi-close"
       size="50"
       @click="
-        toggleMenu;
+        toggleMenu();
         sendMenuClickAnalyticsEvent;
       "
     />
@@ -48,7 +48,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
 import { useScroll } from '@/composables/scroll';
 import { useResponsive } from '@/composables/responsive';
 import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
@@ -57,30 +57,18 @@ import menu from '@/data/fr/menu';
 
 const { visible, scrollToTop } = useScroll();
 const { menuWidth } = useResponsive();
-
-onMounted(() => {
-  removeMenuLogoBackground();
-});
-
 const fullName = [
   { firstLetter: 'Q', content: 'uentin' },
   { firstLetter: 'M', content: 'acq' }
 ];
 
 const drawer = ref(false);
-
-function removeMenuLogoBackground() {
-  const menuLogo = document.querySelector('.navbar__nav-icon');
-  menuLogo.classList.remove('v-btn--variant-elevated');
-}
-
 function toggleMenu() {
   drawer.value = !drawer.value;
 }
 
 function scrollToSection(anchor) {
   const link = document.querySelector(anchor);
-
   link.scrollIntoView({ behavior: 'smooth' });
 
   toggleMenu();
