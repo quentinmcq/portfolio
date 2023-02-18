@@ -1,6 +1,6 @@
 <template>
   <v-container :id="label" class="contact">
-    <CategoryTitle :label="label" />
+    <category-title :label="label" />
 
     <v-row align="center" data-aos="zoom-in" justify="center">
       <v-col>

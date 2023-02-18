@@ -1,8 +1,8 @@
 <template>
-  <CategoryTitle :label="label" />
+  <category-title :label="label" />
 
   <v-timeline :density="timelineDensity" line-color="white">
-    <TimelineItem
+    <timeline-item
       v-for="(item, index) in items"
       :key="index"
       :index="index"

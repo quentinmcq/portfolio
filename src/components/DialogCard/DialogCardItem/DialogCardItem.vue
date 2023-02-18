@@ -33,7 +33,7 @@
             {{ $t(`${prefix}.description`) }}
 
             <v-row v-if="chips" class="ma-4" justify="center">
-              <ChipItem v-for="(label, index) in chips" :key="index" :label="label" />
+              <chip-item v-for="(label, index) in chips" :key="index" :label="label" />
             </v-row>
 
             <v-row v-if="Array.isArray(item.link)" class="dialog-card-item__links">

@@ -1,14 +1,14 @@
 <template>
   <v-app>
     <v-main class="app">
-      <Navbar />
-      <Header />
+      <navbar />
+      <header-main />
 
       <v-container :style="appStyle">
-        <Home />
+        <home />
       </v-container>
 
-      <Footer />
+      <footer-main />
     </v-main>
   </v-app>
 </template>
@@ -18,8 +18,8 @@ import { onMounted } from 'vue';
 import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
 import { useResponsive } from '@/composables/responsive';
 import Navbar from './components/Navbar/Navbar.vue';
-import Header from './pages/Header/Header.vue';
-import Footer from './pages/Footer/Footer.vue';
+import HeaderMain from './components/Header/Header.vue';
+import FooterMain from './components/Footer/Footer.vue';
 import Home from './pages/Home/Home.vue';
 
 onMounted(() => sendEventOnFirstPageLoading());

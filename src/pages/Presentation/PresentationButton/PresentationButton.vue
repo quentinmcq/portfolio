@@ -40,4 +40,4 @@ function sendEventOnButtonClick() {
 }
 </script>
 
-<style scoped lang="scss" src="./presentation-button.scss" />
+<style lang="scss" src="./presentation-button.scss" scoped />

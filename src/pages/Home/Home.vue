@@ -1,14 +1,15 @@
 <template>
   <div>
-    <LoadingBar />
-    <ScrollTop />
-    <Presentation />
-    <Skill :skills="skills" />
-    <Education :items="educations" />
-    <Experience :items="experiences" />
-    <Project :items="projects" />
-    <Hobby :items="hobbies" />
-    <Contact />
+    <loading-bar />
+    <scroll-top />
+
+    <presentation />
+    <skill :skills="skills" />
+    <education :items="educations" />
+    <experience :items="experiences" />
+    <project :items="projects" />
+    <hobby :items="hobbies" />
+    <contact />
   </div>
 </template>
 

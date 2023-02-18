@@ -24,7 +24,7 @@ const chipColor = computed(() => {
     Python: '#306998',
     'HTML/CSS': '#2965f1',
     VueJS: '#41B883',
-    Symfony: '#36393e',
+    Symfony: '#9C27b0',
     Laravel: '#F05340',
     React: '#61DBFB',
     Angular: '#B52E31',
@@ -33,4 +33,4 @@ const chipColor = computed(() => {
 });
 </script>
 
-<style scoped lang="scss" src="./chip-item.scss" />
+<style lang="scss" src="./chip-item.scss" scoped />

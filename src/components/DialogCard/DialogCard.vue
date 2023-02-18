@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <DialogCardItem
+    <dialog-card-item
       v-for="(item, index) in items"
       :key="index"
       :chips="item?.chips"

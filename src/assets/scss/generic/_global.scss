@@ -1,6 +1,3 @@
-@import 'breakpoints';
-@import 'vuetify';
-
 html,
 body {
   width: 100%;
@@ -36,7 +33,7 @@ body {
   margin: 5px !important;
 
   &:hover {
-    color: #e52c4d !important;
+    color: $cherry-red !important;
     transform: scale(1.06);
   }
 }

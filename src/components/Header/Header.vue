@@ -16,4 +16,4 @@
   </header>
 </template>
 
-<style scoped lang="scss" src="./header.scss" />
+<style lang="scss" src="./header.scss" scoped />

@@ -27,4 +27,4 @@ const { chipSize } = useResponsive();
 const currentYear = computed(() => new Date().getFullYear());
 </script>
 
-<style scoped lang="scss" src="./footer.scss" />
+<style lang="scss" src="./footer.scss" scoped />

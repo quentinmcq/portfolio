@@ -48,4 +48,4 @@ function storeLangToLocalStorage(lang) {
 }
 </script>
 
-<style scoped lang="scss" src="./locale-switcher.scss" />
+<style lang="scss" src="./locale-switcher.scss" scoped />

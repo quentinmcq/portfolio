@@ -1,6 +1,6 @@
 <template>
   <v-container :id="label" class="presentation">
-    <CategoryTitle :label="label" />
+    <category-title :label="label" />
 
     <v-row data-aos="zoom-in">
       <v-col>
@@ -74,4 +74,4 @@ const symfonyLink = 'https://symfony.com/';
 const vuejsLink = 'https://vuejs.org/';
 </script>
 
-<style scoped lang="scss" src="./presentation.scss" />
+<style lang="scss" src="./presentation.scss" scoped />

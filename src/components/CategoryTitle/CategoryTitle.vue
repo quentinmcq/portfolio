@@ -13,4 +13,4 @@ defineProps({
 });
 </script>
 
-<style scoped lang="scss" src="./category-title.scss" />
+<style lang="scss" src="./category-title.scss" scoped />

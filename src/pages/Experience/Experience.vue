@@ -1,6 +1,6 @@
 <template>
   <v-container :id="label">
-    <Timeline :items="items" :label="label" />
+    <timeline :items="items" :label="label" />
   </v-container>
 </template>
 

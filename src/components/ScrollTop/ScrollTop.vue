@@ -14,4 +14,4 @@ const { iconSize } = useResponsive();
 const { visible, scrollToTop } = useScroll();
 </script>
 
-<style scoped lang="scss" src="./scroll-top.scss" />
+<style lang="scss" src="./scroll-top.scss" scoped />

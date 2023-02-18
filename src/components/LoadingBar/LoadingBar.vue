@@ -12,4 +12,4 @@ const loading = ref(true);
 onMounted(() => setTimeout(() => (loading.value = false), 1000));
 </script>
 
-<style scoped lang="scss" src="./loading-bar.scss" />
+<style lang="scss" src="./loading-bar.scss" scoped />

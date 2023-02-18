@@ -31,4 +31,4 @@ defineProps({
 });
 </script>
 
-<style lang="scss" src="./skill-item.scss" />
+<style lang="scss" src="./skill-item.scss" scoped />

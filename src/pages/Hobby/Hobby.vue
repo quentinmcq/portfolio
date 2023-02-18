@@ -1,9 +1,9 @@
 <template>
   <v-container :id="label">
-    <CategoryTitle :label="label" />
-    <DialogCard :items="allItems" :label="label" customButtonText />
+    <category-title :label="label" />
+    <dialog-card :items="allItems" :label="label" customButtonText />
 
-    <SeeMore
+    <see-more
       v-show="hasMoreItems"
       :items="items"
       :label="label"

@@ -1,9 +1,9 @@
 <template>
   <v-container :id="label" class="project">
-    <CategoryTitle :label="label" />
-    <DialogCard :items="allItems" :label="label" />
+    <category-title :label="label" />
+    <dialog-card :items="allItems" :label="label" />
 
-    <SeeMore
+    <see-more
       v-show="hasMoreItems"
       :items="items"
       :label="label"

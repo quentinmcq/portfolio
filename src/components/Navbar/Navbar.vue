@@ -83,4 +83,4 @@ function sendMenuClickAnalyticsEvent() {
 }
 </script>
 
-<style lang="scss" scoped src="./navbar.scss" />
+<style lang="scss" src="./navbar.scss" scoped />
