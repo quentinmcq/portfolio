@@ -30,7 +30,7 @@
 import { useResponsive } from '@/composables/responsive';
 import { useImagePath } from '@/composables/image-path';
 import { useAnimation } from '@/composables/animation';
-import { usePrefixTranslation } from '@/composables/translate';
+import { usePrefixTranslation } from '@/composables/prefix-translation';
 import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
 
 const { timelineSize } = useResponsive();

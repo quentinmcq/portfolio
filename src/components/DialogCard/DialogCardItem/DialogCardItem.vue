@@ -72,7 +72,7 @@
 import { ref, computed } from 'vue';
 import { useResponsive } from '@/composables/responsive';
 import { useImagePath } from '@/composables/image-path';
-import { usePrefixTranslation } from '@/composables/translate';
+import { usePrefixTranslation } from '@/composables/prefix-translation';
 import { useRandomNumberGenerator } from '@/composables/random-number';
 import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
 import ChipItem from '@/components/ChipItem/ChipItem.vue';
