@@ -63,12 +63,12 @@
                 :size="buttonSize"
                 color="#273142"
                 type="submit"
-                @click="validate"
+                @click="validateForm"
               >
                 {{ $t('contact.send') }}
               </v-btn>
 
-              <v-btn :size="buttonSize" class="ml-4" color="#e52c4d" outlined @click="reset">
+              <v-btn :size="buttonSize" class="ml-4" color="#e52c4d" outlined @click="resetForm">
                 {{ $t('contact.erase') }}
               </v-btn>
             </v-container>
@@ -81,7 +81,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import { useContactForm } from '@/composables/email/form';
+import { useContactForm } from '@/composables/email/contact-form';
 import { useResponsive } from '@/composables/responsive';
 import { useEmailSender } from '@/composables/send-email';
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue';
@@ -98,16 +98,16 @@ const { buttonSize, textAreaRows } = useResponsive();
 
 const form = ref(null);
 const {
+  name,
+  phone,
+  email,
+  message,
   nameRules,
   phoneRules,
   emailRules,
   messageRules,
-  validate,
-  reset,
-  name,
-  phone,
-  email,
-  message
+  validateForm,
+  resetForm
 } = useContactForm({ form });
 
 const { valid, loading, sendEmail } = useEmailSender({
@@ -120,7 +120,7 @@ const { valid, loading, sendEmail } = useEmailSender({
 async function handleSubmit() {
   if (valid.value) {
     await sendEmail();
-    reset();
+    resetForm();
   }
 }
 </script>

@@ -30,7 +30,7 @@
 import { useResponsive } from '@/composables/responsive';
 import { useImagePath } from '@/composables/image-path';
 import { useAnimation } from '@/composables/animation';
-import { useTranslate } from '@/composables/translate';
+import { usePrefixTranslation } from '@/composables/translate';
 import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
 
 const { timelineSize } = useResponsive();
@@ -52,7 +52,7 @@ const props = defineProps({
   }
 });
 
-const prefix = useTranslate(props.label, props.index);
+const prefix = usePrefixTranslation(props.label, props.index);
 const { path } = useImagePath({
   directory: props.label,
   image: props.item.image

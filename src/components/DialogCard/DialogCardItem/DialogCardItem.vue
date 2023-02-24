@@ -72,7 +72,7 @@
 import { ref, computed } from 'vue';
 import { useResponsive } from '@/composables/responsive';
 import { useImagePath } from '@/composables/image-path';
-import { useTranslate } from '@/composables/translate';
+import { usePrefixTranslation } from '@/composables/translate';
 import { useRandomNumberGenerator } from '@/composables/random-number';
 import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
 import ChipItem from '@/components/ChipItem/ChipItem.vue';
@@ -108,7 +108,7 @@ const props = defineProps({
 });
 
 let dialog = ref(false);
-const prefix = useTranslate(props.label, props.index);
+const prefix = usePrefixTranslation(props.label, props.index);
 const { buttonSize } = useResponsive();
 const buttonText = computed(() =>
   props.customButtonText ? `${prefix}.button` : `${props.label}.find-out-more`
