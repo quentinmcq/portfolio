@@ -73,7 +73,7 @@ import { ref, computed } from 'vue';
 import { useResponsive } from '@/composables/responsive';
 import { useImagePath } from '@/composables/image-path';
 import { useTranslate } from '@/composables/translate';
-import { useRandomNumber } from '@/composables/random-number';
+import { useRandomNumberGenerator } from '@/composables/random-number';
 import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
 import ChipItem from '@/components/ChipItem/ChipItem.vue';
 
@@ -129,7 +129,7 @@ function linkImgPath(image) {
 
 function websiteLink() {
   const link = ref(props.item?.link);
-  const { randomNumber } = useRandomNumber({ range: link.value.length });
+  const { randomNumber } = useRandomNumberGenerator({ range: link.value.length });
 
   return Array.isArray(link.value) ? link.value[randomNumber.value].url : link.value;
 }
@@ -137,16 +137,16 @@ function websiteLink() {
 function sendDialogCardClickAnalyticsEvent() {
   useGoogleAnalyticsEvent({
     action: `dialog-card:click`,
-    event_category: props.label,
-    event_label: props.item.title
+    category: props.label,
+    label: props.item.title
   });
 }
 
 function sendFindOutMoreButtonClickAnalyticsEvent() {
   useGoogleAnalyticsEvent({
     action: `find-out-more-button:click`,
-    event_category: props.label,
-    event_label: props.item.title
+    category: props.label,
+    label: props.item.title
   });
 }
 </script>

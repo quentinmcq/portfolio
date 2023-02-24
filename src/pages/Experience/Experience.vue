@@ -5,14 +5,15 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
 import Timeline from '@/components/Timeline/Timeline.vue';
-
-const label = ref('experience');
 
 defineProps({
   items: {
     type: Array,
+    required: true
+  },
+  label: {
+    type: String,
     required: true
   }
 });

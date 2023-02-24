@@ -77,8 +77,8 @@ function scrollToSection(anchor) {
 function sendMenuClickAnalyticsEvent() {
   useGoogleAnalyticsEvent({
     action: `timeline-card:click`,
-    event_category: 'Menu',
-    event_label: 'Menu'
+    category: 'Menu',
+    label: 'Menu'
   });
 }
 </script>

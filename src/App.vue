@@ -28,8 +28,8 @@ const { appStyle } = useResponsive();
 function sendEventOnFirstPageLoading() {
   useGoogleAnalyticsEvent({
     action: 'website-entry',
-    event_category: 'website',
-    event_label: 'A user has entered the site'
+    category: 'website',
+    label: 'A user has entered the site'
   });
 }
 </script>

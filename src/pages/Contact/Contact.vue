@@ -5,7 +5,7 @@
     <v-row align="center" data-aos="zoom-in" justify="center">
       <v-col>
         <v-card class="contact__card">
-          <v-form ref="form" v-model="valid" class="contact__form" @submit.prevent="sendEmail">
+          <v-form ref="form" v-model="valid" class="contact__form" @submit.prevent="handleSubmit">
             <v-text-field
               v-model="name"
               :label="$t('contact.name')"
@@ -20,7 +20,7 @@
 
             <v-text-field
               v-model="phone"
-              :counter="PHONE_NUMBER_LENGTH"
+              :counter="PHONE_NUMBER_MAX_LENGTH"
               :label="$t('contact.phone-number')"
               :rules="phoneRules"
               class="contact__form__field"
@@ -81,15 +81,21 @@
 
 <script setup>
 import { ref } from 'vue';
-import { useForm } from '@/composables/email/form';
+import { useContactForm } from '@/composables/email/form';
 import { useResponsive } from '@/composables/responsive';
-import { useEmail } from '@/composables/send-email';
+import { useEmailSender } from '@/composables/send-email';
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue';
 
-const PHONE_NUMBER_LENGTH = 10;
+defineProps({
+  label: {
+    type: String,
+    required: true
+  }
+});
+
+const PHONE_NUMBER_MAX_LENGTH = 10;
 const { buttonSize, textAreaRows } = useResponsive();
 
-const label = ref('contact');
 const form = ref(null);
 const {
   nameRules,
@@ -102,18 +108,18 @@ const {
   phone,
   email,
   message
-} = useForm({ form });
+} = useContactForm({ form });
 
-const { valid, loading, send } = useEmail({
+const { valid, loading, sendEmail } = useEmailSender({
   name,
   phone,
   email,
   message
 });
 
-async function sendEmail() {
+async function handleSubmit() {
   if (valid.value) {
-    await send();
+    await sendEmail();
     reset();
   }
 }

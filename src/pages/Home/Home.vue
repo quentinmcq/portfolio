@@ -3,13 +3,13 @@
     <loading-bar />
     <scroll-top />
 
-    <presentation />
-    <skill :skills="skills" />
-    <education :items="educations" />
-    <experience :items="experiences" />
-    <project :items="projects" />
-    <hobby :items="hobbies" />
-    <contact />
+    <presentation label="presentation" />
+    <skill :skills="skills" label="skill" />
+    <education :items="educations" label="education" />
+    <experience :items="experiences" label="experience" />
+    <project :items="projects" label="project" />
+    <hobby :items="hobbies" label="hobby" />
+    <contact label="contact" />
   </div>
 </template>
 

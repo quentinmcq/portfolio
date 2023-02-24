@@ -1,4 +1,4 @@
-export async function loadFonts() {
+export async function initWebFontLoader() {
   const webFontLoader = await import('webfontloader');
 
   webFontLoader.load({

@@ -61,12 +61,12 @@ const { path } = useImagePath({
 function sendTimelineCardClickAnalyticsEvent() {
   useGoogleAnalyticsEvent({
     action: `timeline-card:click`,
-    event_category: props.label,
-    event_label: props.item.title
+    category: props.label,
+    label: props.item.title
   });
 }
 
-const { animation } = useAnimation(props.index);
+const { animation } = useAnimation({ value: props.index });
 </script>
 
 <style lang="scss" src="./timeline-item.scss" scoped />

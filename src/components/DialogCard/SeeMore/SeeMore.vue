@@ -39,8 +39,8 @@ function loadMore() {
 function sendSeeMoreAnalyticsEvent() {
   useGoogleAnalyticsEvent({
     action: `see-more-button:click`,
-    event_category: props.label,
-    event_label: t('common.see-more')
+    category: props.label,
+    label: t('common.see-more')
   });
 }
 </script>

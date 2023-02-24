@@ -3,41 +3,35 @@ import { useI18n } from 'vue-i18n';
 import { useHtml } from '@/composables/email/html';
 import { useEmailJs } from '@/composables/email/emailjs';
 
-// import { useTimeout } from '@/composables/timeout';
-
-export function useEmail({ name, phone, email, message }) {
+export function useEmailSender({ name, phone, email, message }) {
   const { t } = useI18n();
   const valid = ref(false);
   const loading = ref(false);
 
-  const send = async () => {
-    const EMPTY = 'vide';
-    const STATUS = {
-      SEND: t('contact.send'),
-      SENT: t('contact.sent'),
-      ERROR: t('contact.error')
-    };
-
+  const sendEmail = async () => {
     loading.value = true;
 
     try {
       const data = {
         name: name.value,
-        phone: phone.value || EMPTY,
+        phone: phone.value || '',
         email: email.value,
         message: message.value
       };
 
       await useEmailJs(data);
-      loading.value = false;
-      useHtml({ html: STATUS.SENT });
+      useHtml({ html: t('contact.sent') });
     } catch {
-      useHtml({ html: STATUS.ERROR });
+      useHtml({ html: t('contact.error') });
+    } finally {
+      loading.value = false;
+      showSendStatus(t('contact.send'));
     }
-
-    // useTimeout({ code: useHtml({ html: STATUS.SEND }), delay: 3000 });
-    setTimeout(() => useHtml({ html: STATUS.SEND }), 3000);
   };
 
-  return { valid, loading, send };
+  const showSendStatus = (status) => {
+    setTimeout(() => useHtml({ html: status }), 3000);
+  };
+
+  return { valid, loading, sendEmail };
 }

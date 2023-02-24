@@ -33,8 +33,8 @@ const icon = computed(() => props.presentation.icon || '');
 function sendEventOnButtonClick() {
   useGoogleAnalyticsEvent({
     action: 'presentation-button',
-    event_category: 'trafic',
-    event_label: 'A user clicked on a presentation button',
+    category: 'trafic',
+    label: 'A user clicked on a presentation button',
     value: 2
   });
 }

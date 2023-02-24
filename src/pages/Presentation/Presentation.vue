@@ -61,15 +61,20 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
 import { useAge } from '@/composables/age';
 import presentations from '@/data/fr/presentation.js';
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue';
 import PresentationButton from '@/pages/Presentation/PresentationButton/PresentationButton.vue';
 
-const { age } = useAge();
+defineProps({
+  label: {
+    type: String,
+    required: true
+  }
+});
 
-const label = ref('presentation');
+const { age } = useAge('2000/09/20');
+
 const symfonyLink = 'https://symfony.com/';
 const vuejsLink = 'https://vuejs.org/';
 </script>

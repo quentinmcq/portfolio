@@ -3,11 +3,19 @@ import 'vuetify/styles';
 
 import { createVuetify } from 'vuetify';
 
-export default createVuetify({
-  global: {
-    ripple: false
-  },
-  icons: {
-    iconfont: 'mdiSvg'
-  }
-});
+const globalOptions = {
+  ripple: false
+};
+
+const iconOptions = {
+  iconfont: 'mdiSvg'
+};
+
+export function initVuetify(app) {
+  const vuetify = createVuetify({
+    global: globalOptions,
+    icons: iconOptions
+  });
+
+  app.use(vuetify);
+}

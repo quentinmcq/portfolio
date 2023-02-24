@@ -1,7 +1,11 @@
-export function loadConfig() {
-  return {
+import VueGtag from 'vue-gtag';
+
+export function initGoogleAnalytics(app) {
+  const initOptions = {
     config: {
-      id: 'G-CEZM6CC0XH'
+      id: import.meta.env.VITE_APP_GA_ID
     }
   };
+
+  app.use(VueGtag, initOptions);
 }

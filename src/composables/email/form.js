@@ -3,7 +3,7 @@ import { useI18n } from 'vue-i18n';
 
 const MESSAGE_MIN_LENGTH = 20;
 
-export function useForm({ form }) {
+export function useContactForm({ form }) {
   const { t } = useI18n();
 
   const name = ref('');

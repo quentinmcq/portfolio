@@ -1,19 +1,19 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import vuetify from './plugins/vuetify';
-import i18n from './plugins/v-i18n.js';
+import { initWebFontLoader } from './plugins/webfontloader';
+import { initGoogleAnalytics } from './plugins/google-analytics';
+import { initVuetify } from './plugins/vuetify';
+import { initI18n } from './plugins/v-i18n';
+import { initAos } from './plugins/aos';
 import writer from 'vue-writer';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { loadFonts } from './plugins/webfontloader';
-import { loadConfig } from './plugins/google-analytics';
-import VueGtag from 'vue-gtag';
-
-loadFonts();
 
 const app = createApp(App);
 
-app.AOS = new AOS.init({ offset: 100, duration: 600, disable: ['mobile', 'phone'], once: true });
+initWebFontLoader();
+initGoogleAnalytics(app);
+initVuetify(app);
+initI18n(app);
+initAos(app);
 
-app.use(vuetify).use(i18n).use(writer).use(VueGtag, loadConfig());
+app.use(writer);
 app.mount('#app');
