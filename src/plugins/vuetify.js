@@ -1,6 +1,5 @@
 import '@mdi/font/css/materialdesignicons.css';
 import 'vuetify/styles';
-
 import { createVuetify } from 'vuetify';
 
 const globalOptions = {
@@ -12,10 +11,10 @@ const iconOptions = {
 };
 
 export function initVuetify(app) {
-  const vuetify = createVuetify({
+  const vuetifyInstance = createVuetify({
     global: globalOptions,
     icons: iconOptions
   });
 
-  app.use(vuetify);
+  app.use(vuetifyInstance);
 }

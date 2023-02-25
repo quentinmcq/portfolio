@@ -1,7 +1,7 @@
 import { computed } from 'vue';
 
-export function useAnimation({ value }) {
-  if (isNaN(value)) {
+export function useAnimation({ value = 0 }) {
+  if (!Number.isInteger(value)) {
     throw new Error('The provided value must be a number');
   }
 

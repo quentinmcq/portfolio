@@ -31,8 +31,8 @@
             >
               <template #symfony>
                 <a :href="symfonyLink" class="presentation__link" target="_blank" rel="noopener">
-                  {{ $t('common.symfony') }}</a
-                >
+                  {{ $t('common.symfony') }}
+                </a>
               </template>
 
               <template #vuejs>
@@ -73,7 +73,7 @@ defineProps({
   }
 });
 
-const { age } = useAge('2000/09/20');
+const { age } = useAge();
 
 const symfonyLink = 'https://symfony.com/';
 const vuejsLink = 'https://vuejs.org/';

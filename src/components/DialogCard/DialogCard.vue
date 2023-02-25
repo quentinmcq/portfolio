@@ -27,12 +27,10 @@ defineProps({
   },
   customButtonText: {
     type: Boolean,
-    required: false,
     default: null
   },
   transition: {
     type: String,
-    required: false,
     default: 'dialog-bottom-transition'
   }
 });

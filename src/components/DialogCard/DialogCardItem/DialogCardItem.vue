@@ -52,7 +52,7 @@
           <v-card-actions class="dialog-card-item__see-more">
             <v-btn
               :disabled="!item.link"
-              :href="websiteLink()"
+              :href="findOutMoreLink()"
               :size="buttonSize"
               color="#e52c4d"
               target="_blank"
@@ -92,17 +92,14 @@ const props = defineProps({
   },
   chips: {
     type: Array,
-    required: false,
     default: null
   },
   customButtonText: {
     type: Boolean,
-    required: false,
     default: null
   },
   transition: {
     type: String,
-    required: false,
     default: 'dialog-bottom-transition'
   }
 });
@@ -127,7 +124,7 @@ function linkImgPath(image) {
   return path.value;
 }
 
-function websiteLink() {
+function findOutMoreLink() {
   const link = ref(props.item?.link);
   const { randomNumber } = useRandomNumberGenerator({ range: link.value.length });
 

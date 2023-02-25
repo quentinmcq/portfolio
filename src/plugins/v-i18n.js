@@ -3,7 +3,7 @@ import fr from '@/locales/fr';
 import en from '@/locales/en';
 
 export function initI18n(app) {
-  const i18n = createI18n({
+  const i18nInstance = createI18n({
     legacy: false, // Vuetify does not support the legacy mode of vue-i18n
     locale: localStorage.getItem('lang') || 'fr',
     fallbackLocale: 'fr',
@@ -15,5 +15,5 @@ export function initI18n(app) {
     }
   });
 
-  app.use(i18n);
+  app.use(i18nInstance);
 }
