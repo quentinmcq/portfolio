@@ -35,8 +35,12 @@ const { lgAndUp } = useDisplay();
 const DEFAULT_NUMBER_OF_ITEMS_TO_DISPLAY = lgAndUp.value ? 4 : 2;
 const numberOfDisplayedItems = ref(DEFAULT_NUMBER_OF_ITEMS_TO_DISPLAY);
 
-const allItems = computed(() => props.items.slice(0, numberOfDisplayedItems.value));
-const hasMoreItems = computed(() => numberOfDisplayedItems.value < props.items.length);
+const allItems = computed(() =>
+  props.items.slice(0, numberOfDisplayedItems.value)
+);
+const hasMoreItems = computed(
+  () => numberOfDisplayedItems.value < props.items.length
+);
 
 function setNumberOfItemsToDisplay(number) {
   numberOfDisplayedItems.value += number;

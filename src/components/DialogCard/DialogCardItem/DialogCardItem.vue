@@ -10,7 +10,10 @@
             <span v-if="item.year">({{ item.year }})</span>
           </v-card-title>
 
-          <v-card-text v-if="item.subtitle" class="dialog-card-item__card__subtitle">
+          <v-card-text
+            v-if="item.subtitle"
+            class="dialog-card-item__card__subtitle"
+          >
             {{ $t(`${prefix}.subtitle`) }}
           </v-card-text>
         </div>
@@ -33,12 +36,23 @@
             {{ $t(`${prefix}.description`) }}
 
             <v-row v-if="chips" class="ma-4" justify="center">
-              <chip-item v-for="(label, index) in chips" :key="index" :label="label" />
+              <chip-item
+                v-for="(label, index) in chips"
+                :key="index"
+                :label="label"
+              />
             </v-row>
 
-            <v-row v-if="Array.isArray(item.link)" class="dialog-card-item__links">
+            <v-row
+              v-if="Array.isArray(item.link)"
+              class="dialog-card-item__links"
+            >
               <v-col v-for="(link, index) in item.link" :key="index">
-                <a :href="link.url" target="_blank" @click="sendDialogCardClickAnalyticsEvent">
+                <a
+                  :href="link.url"
+                  target="_blank"
+                  @click="sendDialogCardClickAnalyticsEvent"
+                >
                   <v-img
                     :src="linkImgPath(link.img)"
                     height="40"
@@ -126,9 +140,13 @@ function linkImgPath(image) {
 
 function findOutMoreLink() {
   const link = ref(props.item?.link);
-  const { randomNumber } = useRandomNumberGenerator({ range: link.value.length });
+  const { randomNumber } = useRandomNumberGenerator({
+    range: link.value.length
+  });
 
-  return Array.isArray(link.value) ? link.value[randomNumber.value].url : link.value;
+  return Array.isArray(link.value)
+    ? link.value[randomNumber.value].url
+    : link.value;
 }
 
 function sendDialogCardClickAnalyticsEvent() {

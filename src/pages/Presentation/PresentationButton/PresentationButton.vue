@@ -27,7 +27,9 @@ const props = defineProps({
 
 const { buttonSize } = useResponsive();
 
-const target = computed(() => (!props.presentation.link.startsWith('#') ? '_blank' : ''));
+const target = computed(() =>
+  !props.presentation.link.startsWith('#') ? '_blank' : ''
+);
 const icon = computed(() => props.presentation.icon || '');
 
 function sendEventOnButtonClick() {

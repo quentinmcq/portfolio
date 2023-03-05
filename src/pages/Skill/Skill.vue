@@ -4,7 +4,12 @@
 
     <v-card class="card-animation skill__card" data-aos="zoom-in">
       <v-row :style="gridStyle" class="skill__grid">
-        <skill-item v-for="(skill, index) in skills" :key="index" :index="index" :skill="skill" />
+        <skill-item
+          v-for="(skill, index) in skills"
+          :key="index"
+          :index="index"
+          :skill="skill"
+        />
       </v-row>
     </v-card>
   </v-container>

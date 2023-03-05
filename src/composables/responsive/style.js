@@ -15,7 +15,9 @@ export function useStyle() {
     );
   });
 
-  const gridStyle = computed(() => (xs.value ? {} : { gridTemplateColumns: 'repeat(2, 1fr)' }));
+  const gridStyle = computed(() =>
+    xs.value ? {} : { gridTemplateColumns: 'repeat(2, 1fr)' }
+  );
 
   return { appStyle, gridStyle };
 }

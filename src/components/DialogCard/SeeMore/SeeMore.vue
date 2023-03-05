@@ -1,6 +1,12 @@
 <template>
   <v-container class="see-more">
-    <v-btn :size="buttonSize" class="ma-3" color="#e52c4d" shaped @click="loadMore">
+    <v-btn
+      :size="buttonSize"
+      class="ma-3"
+      color="#e52c4d"
+      shaped
+      @click="loadMore"
+    >
       {{ $t('common.see-more') }}
     </v-btn>
   </v-container>

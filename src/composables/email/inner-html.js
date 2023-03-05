@@ -1,5 +1,8 @@
-export function useSetInnerHTML({ selector = '#message-status .v-btn__content', content }) {
-  const setInnerHTML = (element) => {
+export function useSetInnerHTML({
+  selector = '#message-status .v-btn__content',
+  content
+}) {
+  const setInnerHTML = element => {
     if (element) {
       element.innerHTML = content;
     }

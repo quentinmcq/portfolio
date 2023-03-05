@@ -1,5 +1,8 @@
 import { mount } from '@vue/test-utils';
-import { vuetifyInstanceTest, i18nInstanceTest } from '@/plugins/test-configuration';
+import {
+  vuetifyInstanceTest,
+  i18nInstanceTest
+} from '@/plugins/test-configuration';
 import Presentation from '../Presentation.vue';
 
 describe('Presentation component', () => {
@@ -19,7 +22,9 @@ describe('Presentation component', () => {
   });
 
   it('renders four PresentationButton components', () => {
-    const presentationButtons = wrapper.findAllComponents({ name: 'PresentationButton' });
+    const presentationButtons = wrapper.findAllComponents({
+      name: 'PresentationButton'
+    });
     expect(presentationButtons.length).toBe(4);
   });
 
@@ -36,7 +41,9 @@ describe('Presentation component', () => {
   });
 
   it('renders content for part 3 of the presentation', () => {
-    const part3 = wrapper.find('.presentation__card-style > div:nth-child(2) > div:nth-child(3)');
+    const part3 = wrapper.find(
+      '.presentation__card-style > div:nth-child(2) > div:nth-child(3)'
+    );
     expect(part3.exists()).toBe(true);
     expect(part3.text()).toContain('presentation.part-3');
   });

@@ -6,8 +6,17 @@
 
     <v-card class="timeline-item__card" color="#f4f4f4" :data-aos="animation">
       <div class="timeline-item__thumbnail-container">
-        <a :href="item.link" target="_blank" @click="sendTimelineCardClickAnalyticsEvent">
-          <v-img class="timeline-item__thumbnail" :src="path" height="180" cover />
+        <a
+          :href="item.link"
+          target="_blank"
+          @click="sendTimelineCardClickAnalyticsEvent"
+        >
+          <v-img
+            class="timeline-item__thumbnail"
+            :src="path"
+            height="180"
+            cover
+          />
         </a>
       </div>
 

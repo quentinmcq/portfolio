@@ -23,6 +23,10 @@ export default [
   },
   {
     label: 'Personal',
-    content: [{ name: 'Autonomy' }, { name: 'Teamwork' }, { name: 'Organization' }]
+    content: [
+      { name: 'Autonomy' },
+      { name: 'Teamwork' },
+      { name: 'Organization' }
+    ]
   }
 ];

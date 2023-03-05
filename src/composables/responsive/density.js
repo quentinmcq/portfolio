@@ -7,7 +7,9 @@ const DEFAULT_DENSITY = 'default';
 export function useDensity() {
   const { xs } = useDisplay();
 
-  const timelineDensity = computed(() => (xs.value ? COMPACT_DENSITY : DEFAULT_DENSITY));
+  const timelineDensity = computed(() =>
+    xs.value ? COMPACT_DENSITY : DEFAULT_DENSITY
+  );
 
   return { timelineDensity };
 }

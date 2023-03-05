@@ -4,7 +4,12 @@
       <template #activator="{ props }">
         <v-btn color="#e52c4d" v-bind="props">
           <v-icon color="white" dense icon="mdi-translate" />
-          <v-icon color="white" class="hidden-sm-and-down" size="14" icon="mdi-chevron-down" />
+          <v-icon
+            color="white"
+            class="hidden-sm-and-down"
+            size="14"
+            icon="mdi-chevron-down"
+          />
         </v-btn>
       </template>
 

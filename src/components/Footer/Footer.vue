@@ -10,7 +10,12 @@
         </div>
       </div>
 
-      <v-chip class="footer__version" color="#e52c4d" theme="dark" :size="chipSize">
+      <v-chip
+        class="footer__version"
+        color="#e52c4d"
+        theme="dark"
+        :size="chipSize"
+      >
         {{ version }}
       </v-chip>
     </v-col>

@@ -1,6 +1,11 @@
 import { event } from 'vue-gtag';
 
-export function useGoogleAnalyticsEvent({ action, category, label, value = 0 }) {
+export function useGoogleAnalyticsEvent({
+  action,
+  category,
+  label,
+  value = 0
+}) {
   try {
     event(action, {
       category,

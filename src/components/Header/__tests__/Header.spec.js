@@ -1,6 +1,9 @@
 import { shallowMount } from '@vue/test-utils';
 import Header from '../Header.vue';
-import { i18nInstanceTest, vuetifyInstanceTest } from '@/plugins/test-configuration';
+import {
+  i18nInstanceTest,
+  vuetifyInstanceTest
+} from '@/plugins/test-configuration';
 import VueWriter from 'vue-writer';
 
 describe('Header.vue', () => {
@@ -22,7 +25,7 @@ describe('Header.vue', () => {
       global: {
         plugins: [vuetifyInstanceTest, i18nInstanceTest],
         mocks: {
-          $t: (key) =>
+          $t: key =>
             ({
               'header.developer': 'Developer',
               'header.technologies': 'Technologies',

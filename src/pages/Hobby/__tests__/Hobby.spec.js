@@ -1,5 +1,8 @@
 import { mount, shallowMount } from '@vue/test-utils';
-import { vuetifyInstanceTest, i18nInstanceTest } from '@/plugins/test-configuration';
+import {
+  vuetifyInstanceTest,
+  i18nInstanceTest
+} from '@/plugins/test-configuration';
 import Hobby from '../Hobby.vue';
 import DialogCard from '@/components/DialogCard/DialogCard.vue';
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue';

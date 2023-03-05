@@ -1,4 +1,9 @@
-import { GITHUB_USERNAME, GITHUB_URL, LINKEDIN_URL, LINKEDIN_USERNAME } from '@/misc/constants';
+import {
+  GITHUB_USERNAME,
+  GITHUB_URL,
+  LINKEDIN_URL,
+  LINKEDIN_USERNAME
+} from '@/misc/constants';
 
 export default [
   {

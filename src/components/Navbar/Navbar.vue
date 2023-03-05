@@ -1,5 +1,10 @@
 <template>
-  <v-toolbar :class="{ navbar__transition: visible }" class="navbar" color="#273142" elevation="0">
+  <v-toolbar
+    :class="{ navbar__transition: visible }"
+    class="navbar"
+    color="#273142"
+    elevation="0"
+  >
     <v-toolbar-title>
       <span
         v-for="item in fullName"

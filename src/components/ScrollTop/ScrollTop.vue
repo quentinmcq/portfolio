@@ -1,5 +1,9 @@
 <template>
-  <a class="scroll-top" :class="{ 'scroll-top__transition': visible }" @click="scrollToTop">
+  <a
+    class="scroll-top"
+    :class="{ 'scroll-top__transition': visible }"
+    @click="scrollToTop"
+  >
     <div class="scroll-top__icon">
       <v-icon color="#f4f4f4" :size="iconSize" icon="mdi-arrow-up" />
     </div>

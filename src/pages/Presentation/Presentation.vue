@@ -13,7 +13,10 @@
               scope="global"
             >
               <template #name>
-                <a :href="presentations[0].link" class="presentation__link" target="_blank"
+                <a
+                  :href="presentations[0].link"
+                  class="presentation__link"
+                  target="_blank"
                   >{{ $t('common.firstname') }} {{ $t('common.name') }}
                 </a>
               </template>
@@ -30,13 +33,23 @@
               scope="global"
             >
               <template #symfony>
-                <a :href="symfonyLink" class="presentation__link" target="_blank" rel="noopener">
+                <a
+                  :href="symfonyLink"
+                  class="presentation__link"
+                  target="_blank"
+                  rel="noopener"
+                >
                   {{ $t('common.symfony') }}
                 </a>
               </template>
 
               <template #vuejs>
-                <a :href="vuejsLink" class="presentation__link" target="_blank" rel="noopener">
+                <a
+                  :href="vuejsLink"
+                  class="presentation__link"
+                  target="_blank"
+                  rel="noopener"
+                >
                   {{ $t('common.vuejs') }}</a
                 >
               </template>

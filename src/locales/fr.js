@@ -36,7 +36,8 @@ export default {
 
   presentation: {
     'main-title': 'Présentation',
-    'part-1': "Salut, moi c'est {name}, j'ai {age} ans, et je suis développeur web.",
+    'part-1':
+      "Salut, moi c'est {name}, j'ai {age} ans, et je suis développeur web.",
     'part-2':
       'Passionné par le développement depuis plusieurs années maintenant, je code principalement en {symfony} et {vuejs}, où je maintiens des projets en équipe.',
     'part-3':
@@ -78,7 +79,8 @@ export default {
     'invalid-phone-number': 'Le numéro est invalide',
     'mail-address': 'Adresse mail',
     message: 'Message',
-    'min-message-length': 'Le message doit comporter {minLength} caractères minimum',
+    'min-message-length':
+      'Le message doit comporter {minLength} caractères minimum',
     name: 'Nom',
     'phone-number': 'Numéro de téléphone',
     'required-field': 'Ce champ est requis',

@@ -3,7 +3,10 @@ export default [
     label: 'Langages web',
     color: '#ec8d0a',
     content: [
-      { name: 'JavaScript', link: 'https://developer.mozilla.org/fr/docs/Web/JavaScript' },
+      {
+        name: 'JavaScript',
+        link: 'https://developer.mozilla.org/fr/docs/Web/JavaScript'
+      },
       { name: 'PHP', link: 'https://www.php.net/manual/fr/intro-whatis.php' }
     ]
   },
@@ -41,7 +44,10 @@ export default [
     color: '#e01f0f',
     content: [
       { name: 'RabbitMQ', link: 'https://www.rabbitmq.com/' },
-      { name: 'Elasticsearch', link: 'https://www.elastic.co/fr/elasticsearch/' }
+      {
+        name: 'Elasticsearch',
+        link: 'https://www.elastic.co/fr/elasticsearch/'
+      }
     ]
   },
   {
@@ -52,6 +58,10 @@ export default [
   {
     label: 'Personnelles',
     color: '#000',
-    content: [{ name: 'Autonomie' }, { name: "Travail d'équipe" }, { name: 'Organisation' }]
+    content: [
+      { name: 'Autonomie' },
+      { name: "Travail d'équipe" },
+      { name: 'Organisation' }
+    ]
   }
 ];

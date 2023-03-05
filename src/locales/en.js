@@ -78,7 +78,8 @@ export default {
     'mail-address': 'Mail address',
     'main-title': 'Contact',
     message: 'Message',
-    'min-message-length': 'The message must be at least {minLength} characters long',
+    'min-message-length':
+      'The message must be at least {minLength} characters long',
     name: 'Name',
     'phone-number': 'Phone number',
     'required-field': 'This field is required',

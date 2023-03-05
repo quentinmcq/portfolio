@@ -5,7 +5,12 @@
     <v-row align="center" data-aos="zoom-in" justify="center">
       <v-col>
         <v-card class="contact__card">
-          <v-form ref="form" v-model="valid" class="contact__form" @submit.prevent="handleSubmit">
+          <v-form
+            ref="form"
+            v-model="valid"
+            class="contact__form"
+            @submit.prevent="handleSubmit"
+          >
             <v-text-field
               v-model="name"
               :label="$t('contact.name')"
@@ -68,7 +73,13 @@
                 {{ $t('contact.send') }}
               </v-btn>
 
-              <v-btn :size="buttonSize" class="ml-4" color="#e52c4d" outlined @click="resetForm">
+              <v-btn
+                :size="buttonSize"
+                class="ml-4"
+                color="#e52c4d"
+                outlined
+                @click="resetForm"
+              >
                 {{ $t('contact.erase') }}
               </v-btn>
             </v-container>

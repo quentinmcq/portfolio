@@ -1,5 +1,8 @@
 import { shallowMount } from '@vue/test-utils';
-import { vuetifyInstanceTest, i18nInstanceTest } from '@/plugins/test-configuration';
+import {
+  vuetifyInstanceTest,
+  i18nInstanceTest
+} from '@/plugins/test-configuration';
 import Home from '../Home.vue';
 import LoadingBar from '@/components/LoadingBar/LoadingBar.vue';
 import ScrollTop from '@/components/ScrollTop/ScrollTop.vue';
