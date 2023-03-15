@@ -5,10 +5,10 @@ const COMPACT_DENSITY = 'compact';
 const DEFAULT_DENSITY = 'default';
 
 export function useDensity() {
-  const { xs } = useDisplay();
+  const { smAndDown } = useDisplay();
 
   const timelineDensity = computed(() =>
-    xs.value ? COMPACT_DENSITY : DEFAULT_DENSITY
+    smAndDown.value ? COMPACT_DENSITY : DEFAULT_DENSITY
   );
 
   return { timelineDensity };

@@ -1,6 +1,6 @@
 <template>
   <v-col class="grid-list-sm">
-    <h3 class="skill-item__title">
+    <h3 class="skill-item__title" data-aos="zoom-in">
       {{ $t(`skill[${index}].label`) }}
     </h3>
 
@@ -11,6 +11,7 @@
       :key="key"
       :href="content.link"
       target="_blank"
+      data-aos="zoom-in"
     >
       {{ $t(`skill[${index}].content[${key}].name`) }}
     </v-chip>

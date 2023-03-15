@@ -9,11 +9,11 @@ import writer from 'vue-writer';
 
 const app = createApp(App);
 
+initAos(app);
 initWebFontLoader();
 initGoogleAnalytics(app);
 initVuetify(app);
 initI18n(app);
-initAos(app);
 
 app.use(writer);
 app.mount('#app');

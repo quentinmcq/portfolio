@@ -1,7 +1,11 @@
 <template>
   <v-col class="dialog-card-item" md="6">
     <div class="card-animation">
-      <v-card color="#f4f4f4" class="dialog-card-item__card">
+      <v-card
+        color="#f4f4f4"
+        class="dialog-card-item__card"
+        :data-aos="animation"
+      >
         <div @click="dialog = true">
           <v-img :src="path" cover height="180" />
 
@@ -89,6 +93,7 @@ import { useImagePath } from '@/composables/image-path';
 import { usePrefixTranslation } from '@/composables/prefix-translation';
 import { useRandomNumberGenerator } from '@/composables/random-number';
 import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
+import { useAnimation } from '@/composables/animation';
 import ChipItem from '@/components/ChipItem/ChipItem.vue';
 
 const props = defineProps({
@@ -164,6 +169,8 @@ function sendFindOutMoreButtonClickAnalyticsEvent() {
     label: props.item.title
   });
 }
+
+const { animation } = useAnimation({ value: props.index, type: 'dialog' });
 </script>
 
 <style lang="scss" scoped src="./dialog-card-item.scss" />

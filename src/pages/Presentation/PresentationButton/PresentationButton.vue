@@ -8,6 +8,7 @@
     :size="buttonSize"
     :prepend-icon="icon"
     @click="sendEventOnButtonClick"
+    data-aos="zoom-in"
   >
     {{ presentation.label }}
   </v-btn>

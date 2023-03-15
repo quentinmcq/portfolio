@@ -75,7 +75,7 @@ function sendTimelineCardClickAnalyticsEvent() {
   });
 }
 
-const { animation } = useAnimation({ value: props.index });
+const { animation } = useAnimation({ value: props.index, type: 'timeline' });
 </script>
 
 <style lang="scss" src="./timeline-item.scss" scoped />
