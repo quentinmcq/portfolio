@@ -7,7 +7,7 @@
         :data-aos="animation"
       >
         <div @click="dialog = true">
-          <v-img :src="path" cover height="180" />
+          <v-img :src="path" cover eager height="180" />
 
           <v-card-title class="pt-3">
             {{ $t(`${prefix}.title`) }}
@@ -61,6 +61,7 @@
                     :src="linkImgPath(link.img)"
                     height="40"
                     class="dialog-card-item__links__img"
+                    eager
                   />
                 </a>
               </v-col>

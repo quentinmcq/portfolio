@@ -16,6 +16,7 @@
             :src="path"
             height="180"
             cover
+            eager
           />
         </a>
       </div>
