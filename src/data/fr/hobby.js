@@ -7,12 +7,11 @@ export default [
       "J'ai démarré cette activité lorsque je suis devenu développeur. J'ai ajouté quelques-unes de mes sources préférées ci-dessous ! 👨🏻‍💻",
     image: 'news.png',
     link: [
-      { url: 'https://app.daily.dev/', img: 'daily_dev.png' },
       { url: 'https://www.symfony-news.com/', img: 'symfony.png' },
-      { url: 'https://www.jstips.co/', img: 'js_tips.svg' },
+      { url: 'https://www.omglinux.com/', img: 'omglinux.png' },
       { url: 'https://grafikart.fr/', img: 'grafikart.png' },
       { url: 'https://dev.to/', img: 'dev_to.png' },
-      { url: 'https://news.ycombinator.com/', img: 'hacker_news.jpg' }
+      { url: 'https://css-tricks.com/', img: 'css_tricks.png' }
     ]
   },
   {

@@ -1,15 +1,31 @@
 import { ref } from 'vue';
 import { useEventListener } from '@/composables/event';
+import { useDisplay } from 'vuetify';
 
-export function useScroll({ limitHeight = 980 } = {}) {
+const XS_WIDTH = 780;
+const SM_WIDTH = 1000;
+const MD_WIDTH = 760;
+const LG_AND_UP_WIDTH = 630;
+
+export function useScroll() {
   const visible = ref(false);
+  const { xs, sm, md, lgAndUp } = useDisplay();
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  let limitHeight = ref(0);
 
-  useEventListener(
-    window,
-    'scroll',
-    () => (visible.value = window.scrollY > limitHeight)
-  );
+  useEventListener(window, 'scroll', () => {
+    if (visible.value && window.scrollY > limitHeight.value) return;
+    setVisible();
+  });
+
+  const setVisible = () => {
+    if (xs.value) limitHeight.value = XS_WIDTH;
+    else if (sm.value) limitHeight.value = SM_WIDTH;
+    else if (md.value) limitHeight.value = MD_WIDTH;
+    else if (lgAndUp.value) limitHeight.value = LG_AND_UP_WIDTH;
+
+    visible.value = window.scrollY > limitHeight.value;
+  };
 
   return { visible, scrollToTop };
 }

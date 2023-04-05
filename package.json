@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "vite --open",
+    "dev:network": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
     "test:unit": "vitest",
