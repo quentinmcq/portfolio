@@ -17,6 +17,7 @@
             height="180"
             cover
             eager
+            :alt="item.image"
           />
         </a>
       </div>
