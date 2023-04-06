@@ -78,6 +78,7 @@
               target="_blank"
               variant="outlined"
               @click="sendFindOutMoreButtonClickAnalyticsEvent"
+              :aria-label="$t(buttonText)"
             >
               <span>{{ $t(buttonText) }}</span>
             </v-btn>

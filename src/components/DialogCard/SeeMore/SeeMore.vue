@@ -6,6 +6,7 @@
       color="#e52c4d"
       shaped
       @click="loadMore"
+      :aria-label="$t('common.see-more')"
     >
       {{ $t('common.see-more') }}
     </v-btn>

@@ -2,7 +2,7 @@
   <div class="locale-switcher">
     <v-menu bottom offset-y transition="slide-y-transition" rounded="md">
       <template #activator="{ props }">
-        <v-btn color="#e52c4d" v-bind="props">
+        <v-btn color="#e52c4d" v-bind="props" aria-label="Choix de la langue">
           <v-icon color="white" dense icon="mdi-translate" />
           <v-icon
             color="white"

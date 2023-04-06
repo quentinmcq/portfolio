@@ -9,6 +9,7 @@
     :prepend-icon="icon"
     @click="sendEventOnButtonClick"
     data-aos="zoom-in"
+    :aria-label="presentation.label"
   >
     {{ presentation.label }}
   </v-btn>

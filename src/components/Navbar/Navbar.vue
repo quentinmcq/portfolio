@@ -21,7 +21,11 @@
 
     <v-spacer />
 
-    <v-app-bar-nav-icon class="navbar__nav-icon" @click="toggleMenu" />
+    <v-app-bar-nav-icon
+      class="navbar__nav-icon"
+      @click="toggleMenu"
+      aria-label="bouton de menu"
+    />
   </v-toolbar>
 
   <v-navigation-drawer

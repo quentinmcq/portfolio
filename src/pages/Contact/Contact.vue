@@ -69,6 +69,7 @@
                 color="#273142"
                 type="submit"
                 @click="validateForm"
+                :aria-label="$t('contact.send')"
               >
                 {{ $t('contact.send') }}
               </v-btn>
@@ -79,6 +80,7 @@
                 color="#e52c4d"
                 outlined
                 @click="resetForm"
+                :aria-label="$t('contact.erase')"
               >
                 {{ $t('contact.erase') }}
               </v-btn>
