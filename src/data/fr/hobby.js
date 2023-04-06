@@ -5,7 +5,7 @@ export default [
     type: 'news',
     description:
       "J'ai démarré cette activité lorsque je suis devenu développeur. J'ai ajouté quelques-unes de mes sources préférées ci-dessous ! 👨🏻‍💻",
-    image: 'news.png',
+    image: 'news.jpg',
     link: [
       { url: 'https://www.symfony-news.com/', img: 'symfony.png' },
       { url: 'https://www.omglinux.com/', img: 'omglinux.png' },
@@ -47,7 +47,7 @@ export default [
     type: 'music',
     description:
       "Un de mes passe-temps favoris. J'écoute des genres assez variés (rap, electronic, ...) et j'adore découvrir de nouveaux artistes 🎵",
-    image: 'music.png',
+    image: 'music.jpg',
     link: 'https://open.spotify.com/user/3lefkr5qkab0fpvg88w7ou80u?si=2d561e3457384487'
   }
 ];
