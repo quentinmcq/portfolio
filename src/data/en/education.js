@@ -7,7 +7,7 @@ export default [
   },
   {
     title: 'Professional degree',
-    location: 'University Institute of Technology, Lens',
+    location: 'University institute of technology, Lens',
     description:
       'This 3rd year of study allowed me to test my computer skills, especially in web development.'
   },

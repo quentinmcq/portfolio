@@ -1430,20 +1430,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-vue@npm:^9.12.0":
-  version: 9.12.0
-  resolution: "eslint-plugin-vue@npm:9.12.0"
+"eslint-plugin-vue@npm:^9.13.0":
+  version: 9.13.0
+  resolution: "eslint-plugin-vue@npm:9.13.0"
   dependencies:
     "@eslint-community/eslint-utils": ^4.3.0
     natural-compare: ^1.4.0
     nth-check: ^2.0.1
     postcss-selector-parser: ^6.0.9
     semver: ^7.3.5
-    vue-eslint-parser: ^9.0.1
+    vue-eslint-parser: ^9.3.0
     xml-name-validator: ^4.0.0
   peerDependencies:
     eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
-  checksum: 77727261d0137f88869f978c6ea2bafe002b6275e90e95849d0ed668bb87c295e21a562aa2ef8d5b884c67c142e245163fb3fca09a3a90ec49e7b3d4b416fa99
+  checksum: 619b8239edd095591e7e8404cd4ad5a9e5712bb4dceb77274bf4272168478d7ec4e8c7275cfbee49e7a6a68751804235dc225eacd55b5d1dd02687a1d21136c0
   languageName: node
   linkType: hard
 
@@ -2776,20 +2776,20 @@ __metadata:
     axios: ^1.4.0
     emailjs-com: ^3.2.0
     eslint: ^8.40.0
-    eslint-plugin-vue: ^9.12.0
+    eslint-plugin-vue: ^9.13.0
     jsdom: ^22.0.0
     prettier: ^2.8.8
     roboto-fontface: ^0.10.0
     sass: ^1.62.1
     sass-loader: ^13.2.2
-    vite: ^4.3.5
+    vite: ^4.3.7
     vite-plugin-vuetify: ^1.0.2
     vitest: ^0.31.0
     vue: ^3.3.2
     vue-gtag: ^2.0.1
     vue-i18n: ^9.2.2
     vue-writer: ^1.2.0
-    vuetify: ^3.2.4
+    vuetify: ^3.2.5
     webfontloader: ^1.6.28
   languageName: unknown
   linkType: soft
@@ -3591,9 +3591,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^4.3.5":
-  version: 4.3.5
-  resolution: "vite@npm:4.3.5"
+"vite@npm:^4.3.7":
+  version: 4.3.7
+  resolution: "vite@npm:4.3.7"
   dependencies:
     esbuild: ^0.17.5
     fsevents: ~2.3.2
@@ -3624,7 +3624,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 6b7f2189f097110846e49a3f1d463bd620dfe9e4f433b1967e5b99f0789610ff4475e85e3e71476e6fa40be25449bb6f1c45edb95c79deba6f3f173699bff948
+  checksum: cda8c86fd9f9ab984f2ab8ae09f89bfef7dc636142f0b1ed30d37b8155516729cf91d95eab7ba43d43bb51d8068f0d938ac85dc80d3f53497fbd35f50d27ec25
   languageName: node
   linkType: hard
 
@@ -3689,9 +3689,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-eslint-parser@npm:^9.0.1":
-  version: 9.1.0
-  resolution: "vue-eslint-parser@npm:9.1.0"
+"vue-eslint-parser@npm:^9.3.0":
+  version: 9.3.0
+  resolution: "vue-eslint-parser@npm:9.3.0"
   dependencies:
     debug: ^4.3.4
     eslint-scope: ^7.1.1
@@ -3702,7 +3702,7 @@ __metadata:
     semver: ^7.3.6
   peerDependencies:
     eslint: ">=6.0.0"
-  checksum: e2e6b05989294c4439d91283a78a0cb444cfba30f2715a5be1950d7815cadb5c8f449d9362a92bdd163cb8944abaac73bb076ce3c27b27586eaa4560002e6dfd
+  checksum: 9bdf375655c405f49a6e46e20127e42e2cb03ec63e811baf9798da7b881769653bb56aba7007d7e6584b8b22c14f0ffbdaf8fa3a902bd52ce9ff947b78e55188
   languageName: node
   linkType: hard
 
@@ -3751,9 +3751,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vuetify@npm:^3.2.4":
-  version: 3.2.4
-  resolution: "vuetify@npm:3.2.4"
+"vuetify@npm:^3.2.5":
+  version: 3.2.5
+  resolution: "vuetify@npm:3.2.5"
   peerDependencies:
     vite-plugin-vuetify: ^1.0.0-alpha.12
     vue: ^3.2.0
@@ -3766,7 +3766,7 @@ __metadata:
       optional: true
     webpack-plugin-vuetify:
       optional: true
-  checksum: 1465be3346c4d7e7e61120ff5d90d929369c8a325834771fadc5c9114aa367b86f911d6ff00f3c458eeef4f371e0522eba2f43f5fd18a3816a87383ee94e516c
+  checksum: b974f87165b66eaf13ad86fb717f3f8673092be7d0fb7842ea650cdc02eb0091729593464b825d91cd0b86843a65acc240ddb7649d2049cac3544afb7072d09c
   languageName: node
   linkType: hard
 

@@ -14,9 +14,17 @@
   }
 
   &__year {
-    color: $whitesmoke;
+    color: $dark-red;
+    opacity: initial;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 15px;
+    margin-top: -10px;
+    margin-bottom: 8px;
+
+    @media (min-width: $lg) {
+      color: $whitesmoke;
+      font-size: 24px;
+    }
   }
 
   &__thumbnail-container {
@@ -35,13 +43,15 @@
   }
 
   &__title {
+    white-space: normal;
     word-break: break-word;
+    margin-bottom: -9px;
   }
 
   &__location {
     font-size: 14px;
     white-space: normal;
-    padding-bottom: 15px;
+    padding-bottom: 8px;
 
     @media (min-width: $md) {
       font-size: 15px;
@@ -49,14 +59,10 @@
   }
 
   &__description {
-    display: none;
-
-    @media (min-width: $md) {
-      display: block;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      font-size: 15px;
-      white-space: normal;
-    }
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 15px;
+    white-space: normal;
   }
 }

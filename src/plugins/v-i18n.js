@@ -7,6 +7,8 @@ export function initI18n(app) {
     legacy: false, // Vuetify does not support the legacy mode of vue-i18n
     locale: localStorage.getItem('lang') || 'fr',
     fallbackLocale: 'fr',
+    missingWarn: false,
+    fallbackWarn: false,
     globalInjection: true,
     allowComposition: true,
     messages: {

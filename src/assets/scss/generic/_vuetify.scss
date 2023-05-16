@@ -1,10 +1,10 @@
 /* Vuetify override settings */
 .v-btn,
 .v-chip {
-  transition: transform 0.4s;
+  transition: transform 0.6s !important;
 }
 
 .v-btn:hover,
 .v-chip:hover {
-  transform: scale(1.08);
+  transform: scale(1.07) !important;
 }

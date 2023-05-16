@@ -69,10 +69,10 @@
             </v-row>
           </v-card-text>
 
-          <v-card-actions class="dialog-card-item__see-more">
+          <v-card-actions class="dialog-card-item__see-more" v-if="isValidLink">
             <v-btn
               :disabled="!item.link"
-              :href="findOutMoreLink()"
+              :href="item.link"
               :size="buttonSize"
               color="#e52c4d"
               target="_blank"
@@ -94,7 +94,6 @@ import { ref, computed } from 'vue';
 import { useResponsive } from '@/composables/responsive';
 import { useImagePath } from '@/composables/image-path';
 import { usePrefixTranslation } from '@/composables/prefix-translation';
-import { useRandomNumberGenerator } from '@/composables/random-number';
 import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
 import { useAnimation } from '@/composables/animation';
 import ChipItem from '@/components/ChipItem/ChipItem.vue';
@@ -132,6 +131,7 @@ const { buttonSize } = useResponsive();
 const buttonText = computed(() =>
   props.customButtonText ? `${prefix}.button` : `${props.label}.find-out-more`
 );
+const isValidLink = computed(() => typeof props.item.link === 'string');
 const { path } = useImagePath({
   directory: props.label,
   image: props.item.image
@@ -144,17 +144,6 @@ function linkImgPath(image) {
   });
 
   return path.value;
-}
-
-function findOutMoreLink() {
-  const link = ref(props.item?.link);
-  const { randomNumber } = useRandomNumberGenerator({
-    range: link.value.length
-  });
-
-  return Array.isArray(link.value)
-    ? link.value[randomNumber.value].url
-    : link.value;
 }
 
 function sendDialogCardClickAnalyticsEvent() {
@@ -173,7 +162,10 @@ function sendFindOutMoreButtonClickAnalyticsEvent() {
   });
 }
 
-const { animation } = useAnimation({ value: props.index, type: 'dialog' });
+const { animation } = useAnimation({
+  index: props.index,
+  componentType: 'dialog'
+});
 </script>
 
 <style lang="scss" scoped src="./dialog-card-item.scss" />

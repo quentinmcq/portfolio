@@ -26,11 +26,15 @@
         {{ $t(`${prefix}.title`) }}
       </v-card-title>
 
+      <v-card-subtitle class="timeline-item__year" v-if="smAndDown">
+        {{ $t(`${prefix}.year`) }}
+      </v-card-subtitle>
+
       <v-card-subtitle class="timeline-item__location">
         {{ $t(`${prefix}.location`) }}
       </v-card-subtitle>
 
-      <v-card-subtitle class="timeline-item__description">
+      <v-card-subtitle class="timeline-item__description" v-if="smAndUp">
         {{ $t(`${prefix}.description`) }}
       </v-card-subtitle>
     </v-card>
@@ -43,6 +47,7 @@ import { useImagePath } from '@/composables/image-path';
 import { useAnimation } from '@/composables/animation';
 import { usePrefixTranslation } from '@/composables/prefix-translation';
 import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
+import { useDisplay } from 'vuetify';
 
 const { timelineSize } = useResponsive();
 
@@ -63,6 +68,8 @@ const props = defineProps({
   }
 });
 
+const { smAndDown, smAndUp } = useDisplay();
+
 const prefix = usePrefixTranslation(props.label, props.index);
 const { path } = useImagePath({
   directory: props.label,
@@ -77,7 +84,10 @@ function sendTimelineCardClickAnalyticsEvent() {
   });
 }
 
-const { animation } = useAnimation({ value: props.index, type: 'timeline' });
+const { animation } = useAnimation({
+  index: props.index,
+  componentType: 'timeline'
+});
 </script>
 
 <style lang="scss" src="./timeline-item.scss" scoped />

@@ -10,7 +10,7 @@ export default [
   },
   {
     title: 'Licence Professionnelle',
-    location: 'Institut Universitaire de technologie, Lens',
+    location: 'Institut universitaire de technologie, Lens',
     description:
       "Cette 3ème année d'étude m'a permis d'éprouver mes connaissances en informatique, notamment dans le développement web.",
     image: 'iut.jpg',
@@ -19,7 +19,7 @@ export default [
   },
   {
     title: 'DUT Informatique',
-    location: 'Institut Universitaire de technologie, Lens',
+    location: 'Institut universitaire de technologie, Lens',
     description:
       "Cette formation m'a permis d'apprendre les bases de l'algorithmie et de découvrir divers domaines informatiques.",
     image: 'iut.jpg',
