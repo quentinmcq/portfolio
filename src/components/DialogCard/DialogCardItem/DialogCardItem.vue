@@ -23,7 +23,7 @@
         </div>
       </v-card>
 
-      <v-dialog v-model="dialog" :transition="transition">
+      <v-dialog v-model="dialog" :transition="transition" width="auto">
         <v-card class="dialog-card-item__popin" color="#f4f4f4">
           <div class="dialog-card-item__popin__cross-icon">
             <v-icon
