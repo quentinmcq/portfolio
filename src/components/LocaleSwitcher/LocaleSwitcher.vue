@@ -13,21 +13,20 @@
         </v-btn>
       </template>
 
-      <v-list nav dense>
+      <v-list nav density="compact" width="108" class="text-center">
         <v-list-item-subtitle class="locale-switcher__label">
-          {{ $t('translations.title') }}
+          {{ $t('languages.title') }}
         </v-list-item-subtitle>
 
         <v-list-item
+          class="locale-switcher__item"
           v-model="selectedLocale"
           v-for="locale in availableLocales"
           :key="locale"
-          active-color="#e52c4d"
           @click="switchLocale(locale)"
-          dense
         >
           <v-list-item-title>
-            {{ $t(`translations.${locale}`) }}
+            {{ $t(`languages.${locale}`) }}
           </v-list-item-title>
         </v-list-item>
       </v-list>

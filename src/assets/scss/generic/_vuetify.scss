@@ -8,3 +8,7 @@
 .v-chip:hover {
   transform: scale(1.07) !important;
 }
+
+.v-overlay__scrim {
+  opacity: 0.5;
+}

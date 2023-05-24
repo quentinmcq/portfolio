@@ -237,10 +237,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:8.40.0":
-  version: 8.40.0
-  resolution: "@eslint/js@npm:8.40.0"
-  checksum: e84936b8ebd1c8fd90e860182e95d1404006da4cbca722b14950b298aeeca102b080aa9b62c8e69f90824ec54e19f1ba79b239046223624d1414ee82e8e628ac
+"@eslint/js@npm:8.41.0":
+  version: 8.41.0
+  resolution: "@eslint/js@npm:8.41.0"
+  checksum: af013d70fe8d0429cdf5cd8b5dcc6fc384ed026c1eccb0cfe30f5849b968ab91645111373fd1b83282b38955b1bdfbe667c1a7dbda3b06cae753521223cad775
   languageName: node
   linkType: hard
 
@@ -385,10 +385,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rushstack/eslint-patch@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "@rushstack/eslint-patch@npm:1.2.0"
-  checksum: faa749faae0e83c26ae9eb00ad36a897ac78f3cf27da8e8ff21c00bcf7973b598d823d8f2b3957ef66079288bcf577f94df831eae2d65f3f68d8ca32f18b6aff
+"@rushstack/eslint-patch@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "@rushstack/eslint-patch@npm:1.3.0"
+  checksum: 2860b4adeebbab9a13bff68a2737ecf660fe199a3d2eca45b0359132ff92052467622ac4b22837958bc3ad611714d5f2b662db98ffdc5db34df604b4d502d347
   languageName: node
   linkType: hard
 
@@ -1437,9 +1437,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-vue@npm:^9.13.0":
-  version: 9.13.0
-  resolution: "eslint-plugin-vue@npm:9.13.0"
+"eslint-plugin-vue@npm:^9.14.0":
+  version: 9.14.0
+  resolution: "eslint-plugin-vue@npm:9.14.0"
   dependencies:
     "@eslint-community/eslint-utils": ^4.3.0
     natural-compare: ^1.4.0
@@ -1450,7 +1450,7 @@ __metadata:
     xml-name-validator: ^4.0.0
   peerDependencies:
     eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
-  checksum: 619b8239edd095591e7e8404cd4ad5a9e5712bb4dceb77274bf4272168478d7ec4e8c7275cfbee49e7a6a68751804235dc225eacd55b5d1dd02687a1d21136c0
+  checksum: e4240a76494ae6bf1d9bd9b6bb26707dbbc91682412458be5def68381c2b7c25b7452eb1e13b138f41a79064cb10e8abb529a742fadb68a94fc9f275d0ba12de
   languageName: node
   linkType: hard
 
@@ -1488,14 +1488,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.40.0":
-  version: 8.40.0
-  resolution: "eslint@npm:8.40.0"
+"eslint@npm:^8.41.0":
+  version: 8.41.0
+  resolution: "eslint@npm:8.41.0"
   dependencies:
     "@eslint-community/eslint-utils": ^4.2.0
     "@eslint-community/regexpp": ^4.4.0
     "@eslint/eslintrc": ^2.0.3
-    "@eslint/js": 8.40.0
+    "@eslint/js": 8.41.0
     "@humanwhocodes/config-array": ^0.11.8
     "@humanwhocodes/module-importer": ^1.0.1
     "@nodelib/fs.walk": ^1.2.8
@@ -1515,13 +1515,12 @@ __metadata:
     find-up: ^5.0.0
     glob-parent: ^6.0.2
     globals: ^13.19.0
-    grapheme-splitter: ^1.0.4
+    graphemer: ^1.4.0
     ignore: ^5.2.0
     import-fresh: ^3.0.0
     imurmurhash: ^0.1.4
     is-glob: ^4.0.0
     is-path-inside: ^3.0.3
-    js-sdsl: ^4.1.4
     js-yaml: ^4.1.0
     json-stable-stringify-without-jsonify: ^1.0.1
     levn: ^0.4.1
@@ -1534,7 +1533,7 @@ __metadata:
     text-table: ^0.2.0
   bin:
     eslint: bin/eslint.js
-  checksum: b79eba37f52f517a420eec99a80ae9f284d2cbe73afc0d4d3d4d5ed1cce0b06f21badc0374bfb7ac239efd2d49a1fd7c6111d6c3d52888521f377ba33de77e61
+  checksum: 09979a6f8451dcc508a7005b6670845c8a518376280b3fd96657a406b8b6ef29d0e480d1ba11b4eb48da93d607e0c55c9b877676fe089d09973ec152354e23b2
   languageName: node
   linkType: hard
 
@@ -1849,10 +1848,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"grapheme-splitter@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "grapheme-splitter@npm:1.0.4"
-  checksum: 0c22ec54dee1b05cd480f78cf14f732cb5b108edc073572c4ec205df4cd63f30f8db8025afc5debc8835a8ddeacf648a1c7992fe3dcd6ad38f9a476d84906620
+"graphemer@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "graphemer@npm:1.4.0"
+  checksum: bab8f0be9b568857c7bec9fda95a89f87b783546d02951c40c33f84d05bb7da3fd10f863a9beb901463669b6583173a8c8cc6d6b306ea2b9b9d5d3d943c3a673
   languageName: node
   linkType: hard
 
@@ -2099,13 +2098,6 @@ __metadata:
     html-beautify: js/bin/html-beautify.js
     js-beautify: js/bin/js-beautify.js
   checksum: 2e61c1183c73d7464ec7d5354763ee9e17ecb4b5c7a3744e9a9dc2e9c406fc6e0c37399130d1ee48313ff502e03e8a949dce96acdaee309dc44317249565934d
-  languageName: node
-  linkType: hard
-
-"js-sdsl@npm:^4.1.4":
-  version: 4.3.0
-  resolution: "js-sdsl@npm:4.3.0"
-  checksum: ce908257cf6909e213af580af3a691a736f5ee8b16315454768f917a682a4ea0c11bde1b241bbfaecedc0eb67b72101b2c2df2ffaed32aed5d539fca816f054e
   languageName: node
   linkType: hard
 
@@ -2774,7 +2766,7 @@ __metadata:
   resolution: "portfolio@workspace:."
   dependencies:
     "@mdi/font": ^7.2.96
-    "@rushstack/eslint-patch": ^1.2.0
+    "@rushstack/eslint-patch": ^1.3.0
     "@vitejs/plugin-vue": ^4.2.3
     "@vue/eslint-config-prettier": ^7.1.0
     "@vue/shared": ^3.3.4
@@ -2782,13 +2774,13 @@ __metadata:
     aos: ^2.3.4
     axios: ^1.4.0
     emailjs-com: ^3.2.0
-    eslint: ^8.40.0
-    eslint-plugin-vue: ^9.13.0
+    eslint: ^8.41.0
+    eslint-plugin-vue: ^9.14.0
     jsdom: ^22.0.0
     prettier: ^2.8.8
     roboto-fontface: ^0.10.0
     sass: ^1.62.1
-    sass-loader: ^13.2.2
+    sass-loader: ^13.3.0
     vite: ^4.3.8
     vite-plugin-vuetify: ^1.0.2
     vitest: ^0.31.1
@@ -3092,15 +3084,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass-loader@npm:^13.2.2":
-  version: 13.2.2
-  resolution: "sass-loader@npm:13.2.2"
+"sass-loader@npm:^13.3.0":
+  version: 13.3.0
+  resolution: "sass-loader@npm:13.3.0"
   dependencies:
     klona: ^2.0.6
     neo-async: ^2.6.2
   peerDependencies:
     fibers: ">= 3.1.0"
-    node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
+    node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
     sass: ^1.3.0
     sass-embedded: "*"
     webpack: ^5.0.0
@@ -3113,7 +3105,7 @@ __metadata:
       optional: true
     sass-embedded:
       optional: true
-  checksum: 0368e4eaa4e2109bb6c6b6bc7dbfb9d8e412a0ab965f98672d336e84bd103575a1551cfe98395f20335b350f2a94e67f7c816cc8e3f4ab85147a1c1221e22fd8
+  checksum: a3b57eaf09ae853fa95298bd7a42d64409f3f3b97f46ec4c61178763ffb61edddd5f89cc03940ef963aa328b4f6dcd4f1153e810e5eb29fb07ac02ddc121749c
   languageName: node
   linkType: hard
 

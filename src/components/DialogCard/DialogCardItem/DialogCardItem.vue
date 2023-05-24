@@ -7,7 +7,14 @@
         :data-aos="animation"
       >
         <div @click="dialog = true">
-          <v-img :src="path" cover eager height="180" :alt="item.image" />
+          <Image
+            :src="path"
+            :lazy-src="path"
+            :alt="item.image"
+            height="180"
+            cover
+            eager
+          />
 
           <v-card-title class="pt-3">
             {{ $t(`${prefix}.title`) }}
@@ -39,37 +46,11 @@
           <v-card-text>
             {{ $t(`${prefix}.description`) }}
 
-            <v-row v-if="chips" class="ma-4" justify="center">
-              <chip-item
-                v-for="(label, index) in chips"
-                :key="index"
-                :label="label"
-              />
-            </v-row>
-
-            <v-row
-              v-if="Array.isArray(item.link)"
-              class="dialog-card-item__links"
-            >
-              <v-col v-for="(link, index) in item.link" :key="index">
-                <a
-                  :href="link.url"
-                  target="_blank"
-                  @click="sendDialogCardClickAnalyticsEvent"
-                >
-                  <v-img
-                    :src="linkImgPath(link.img)"
-                    height="40"
-                    class="dialog-card-item__links__img"
-                    eager
-                    :alt="link.img"
-                  />
-                </a>
-              </v-col>
-            </v-row>
+            <!-- Overloads the component with additional custom content (chips, logos, ...) -->
+            <slot name="customContent" />
           </v-card-text>
 
-          <v-card-actions class="dialog-card-item__see-more" v-if="isValidLink">
+          <v-card-actions class="dialog-card-item__see-more" v-if="!item.links">
             <v-btn
               :disabled="!item.link"
               :href="item.link"
@@ -80,7 +61,7 @@
               @click="sendFindOutMoreButtonClickAnalyticsEvent"
               :aria-label="$t(buttonText)"
             >
-              <span>{{ $t(buttonText) }}</span>
+              {{ $t(buttonText) }}
             </v-btn>
           </v-card-actions>
         </v-card>
@@ -90,13 +71,13 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
+import { computed, ref } from 'vue';
 import { useResponsive } from '@/composables/responsive';
 import { useImagePath } from '@/composables/image-path';
 import { usePrefixTranslation } from '@/composables/prefix-translation';
 import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
 import { useAnimation } from '@/composables/animation';
-import ChipItem from '@/components/ChipItem/ChipItem.vue';
+import Image from '../../Image/Image.vue';
 
 const props = defineProps({
   item: {
@@ -110,10 +91,6 @@ const props = defineProps({
   label: {
     type: String,
     required: true
-  },
-  chips: {
-    type: Array,
-    default: null
   },
   customButtonText: {
     type: Boolean,
@@ -131,28 +108,11 @@ const { buttonSize } = useResponsive();
 const buttonText = computed(() =>
   props.customButtonText ? `${prefix}.button` : `${props.label}.find-out-more`
 );
-const isValidLink = computed(() => typeof props.item.link === 'string');
+
 const { path } = useImagePath({
   directory: props.label,
-  image: props.item.image
+  image: props.item.cover
 });
-
-function linkImgPath(image) {
-  const { path } = useImagePath({
-    directory: `${props.label}`,
-    image: `logo/${image}`
-  });
-
-  return path.value;
-}
-
-function sendDialogCardClickAnalyticsEvent() {
-  useGoogleAnalyticsEvent({
-    action: `dialog-card:click`,
-    category: props.label,
-    label: props.item.title
-  });
-}
 
 function sendFindOutMoreButtonClickAnalyticsEvent() {
   useGoogleAnalyticsEvent({
@@ -168,4 +128,4 @@ const { animation } = useAnimation({
 });
 </script>
 
-<style lang="scss" scoped src="./dialog-card-item.scss" />
+<style lang="scss" src="./dialog-card-item.scss" />

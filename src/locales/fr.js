@@ -17,10 +17,10 @@ export default {
 
   menu,
 
-  translations: {
+  languages: {
     en: 'Anglais',
     fr: 'Français',
-    title: 'Traductions'
+    title: 'Langues'
   },
 
   header: {

@@ -1,0 +1,16 @@
+.image-gallery {
+  margin-top: 10px;
+
+  @media (min-width: $lg) {
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+
+  img {
+    object-position: top;
+  }
+
+  &__rounded {
+    border-radius: 5px;
+  }
+}

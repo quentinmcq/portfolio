@@ -4,7 +4,7 @@ export default [
     location: 'EPSI, Lille',
     description:
       "Cette formation en alternance me permet d'approfondir mes compétences techniques et de m'apprendre les notions de gestion de projets/management, voie que je souhaite suivre par la suite.",
-    image: 'epsi.jpg',
+    cover: 'epsi.jpg',
     year: '2021 - 2023',
     link: 'https://www.epsi.fr/campus/campus-de-lille/'
   },
@@ -13,7 +13,7 @@ export default [
     location: 'Institut universitaire de technologie, Lens',
     description:
       "Cette 3ème année d'étude m'a permis d'éprouver mes connaissances en informatique, notamment dans le développement web.",
-    image: 'iut.jpg',
+    cover: 'iut.jpg',
     year: '2020 - 2021',
     link: 'http://www.iut-lens.univ-artois.fr/formations/lp-dioc-metiers-de-linformatique/'
   },
@@ -22,7 +22,7 @@ export default [
     location: 'Institut universitaire de technologie, Lens',
     description:
       "Cette formation m'a permis d'apprendre les bases de l'algorithmie et de découvrir divers domaines informatiques.",
-    image: 'iut.jpg',
+    cover: 'iut.jpg',
     year: '2018 - 2020',
     link: 'http://www.iut-lens.univ-artois.fr/formations/but-informatique/'
   },
@@ -31,7 +31,7 @@ export default [
     location: 'Lycée Fernand Darchicourt, Hénin-Beaumont',
     description:
       "J'ai décroché mon BAC S mention Assez Bien (spécialité Physique-Chimie et Euro Anglais).",
-    image: 'highschool.jpg',
+    cover: 'highschool.jpg',
     year: '2015 - 2018',
     link: 'https://www.lycee-darchicourt.net/'
   }

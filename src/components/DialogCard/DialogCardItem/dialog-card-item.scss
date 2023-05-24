@@ -11,15 +11,6 @@
     }
   }
 
-  &__links {
-    margin-top: 20px;
-    margin-bottom: 15px;
-
-    &__img {
-      cursor: pointer;
-    }
-  }
-
   &__see-more {
     justify-content: center;
   }
@@ -39,8 +30,9 @@
       color: $cherry-red !important;
     }
   }
-}
 
-:deep(.v-overlay__scrim) {
-  opacity: 35%;
+  &__logos {
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
 }

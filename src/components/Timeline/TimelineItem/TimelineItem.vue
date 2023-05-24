@@ -11,13 +11,14 @@
           target="_blank"
           @click="sendTimelineCardClickAnalyticsEvent"
         >
-          <v-img
-            class="timeline-item__thumbnail"
+          <Image
+            class="image-animation"
             :src="path"
+            :lazy-src="path"
+            :alt="item.image"
             height="180"
             cover
             eager
-            :alt="item.image"
           />
         </a>
       </div>
@@ -48,6 +49,7 @@ import { useAnimation } from '@/composables/animation';
 import { usePrefixTranslation } from '@/composables/prefix-translation';
 import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
 import { useDisplay } from 'vuetify';
+import Image from '../../Image/Image.vue';
 
 const { timelineSize } = useResponsive();
 
@@ -73,7 +75,7 @@ const { smAndDown, smAndUp } = useDisplay();
 const prefix = usePrefixTranslation(props.label, props.index);
 const { path } = useImagePath({
   directory: props.label,
-  image: props.item.image
+  image: props.item.cover
 });
 
 function sendTimelineCardClickAnalyticsEvent() {
