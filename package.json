@@ -23,7 +23,7 @@
     "vue-gtag": "^2.0.1",
     "vue-i18n": "^9.2.2",
     "vue-writer": "^1.2.0",
-    "vuetify": "^3.3.0",
+    "vuetify": "^3.3.1",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {

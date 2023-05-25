@@ -8,7 +8,7 @@ export default [
       'Permet de lister les impayés, où des mensualités n’ont pas été réglées. Un processus de relance est alors entamé (SMS/mail de relance, mise en demeure puis recouvrement).',
     cover: 'unpaid.png',
     year: '2021',
-    chips: ['Symfony', 'VueJS', 'PHP', 'JS', 'Vuetify', 'Docker', 'API REST'],
+    chips: ['Symfony', 'VueJS', 'PHP', 'JS', 'Vuetify', 'Docker', 'API'],
     link: ''
   },
   {
