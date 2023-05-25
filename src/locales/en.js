@@ -36,11 +36,11 @@ export default {
 
   presentation: {
     'main-title': 'Presentation',
-    'part-1': "Hi, I'm {name}, {age} years old, and I'm a web developer.",
+    'part-1': "Hi, I'm {name} and I'm {age} years old.",
     'part-2':
-      'Passionate about development for several years now, I code mainly in {symfony} and {vuejs}, where I maintain projects in teams.',
+      'Passionate web developer, my favorite technologies are {symfony} and {vuejs}.',
     'part-3':
-      'Curious by nature, I do technological watch regularly so as not to miss any important news! 💻'
+      'Curious by nature, I try to keep up to date with the latest news by doing technological watch 💻'
   },
 
   skill: {

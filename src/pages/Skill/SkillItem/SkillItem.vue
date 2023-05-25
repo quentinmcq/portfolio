@@ -4,27 +4,26 @@
       {{ $t(`skill[${index}].label`) }}
     </h3>
 
-    <v-chip
-      class="skill-item__config"
-      v-for="(content, key) in skill.content"
-      :color="skill.color"
+    <skill-chip
+      v-for="(label, key) in skill.content"
       :key="key"
-      :href="content.link"
+      :label="label"
+      :color="skill.color"
+      class="skill-item__config"
       target="_blank"
       data-aos="zoom-in"
-    >
-      {{ $t(`skill[${index}].content[${key}].name`) }}
-    </v-chip>
+    />
   </v-col>
 </template>
 
 <script setup>
+import SkillChip from '@/components/SkillChip/SkillChip.vue';
+
 defineProps({
   skill: {
     type: Object,
     required: true
   },
-
   index: {
     type: Number,
     required: true

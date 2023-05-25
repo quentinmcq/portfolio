@@ -61,6 +61,10 @@ defineProps({
   alt: {
     type: String,
     required: true
+  },
+  loader: {
+    type: Boolean,
+    default: true
   }
 });
 </script>

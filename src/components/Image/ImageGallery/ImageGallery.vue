@@ -34,7 +34,7 @@
 </template>
 
 <script setup>
-import { useImagePath } from '../../../composables/image-path';
+import { useImagePath } from '@/composables/image-path';
 import { ref } from 'vue';
 import Image from '../Image.vue';
 import { useDisplay } from 'vuetify';

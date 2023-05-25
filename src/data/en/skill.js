@@ -18,15 +18,9 @@ export default [
     label: 'Data management'
   },
   {
-    label: 'Languages',
-    content: [{ name: 'French (native)' }, { name: 'English (B2)' }]
+    label: 'Languages'
   },
   {
-    label: 'Personal',
-    content: [
-      { name: 'Autonomy' },
-      { name: 'Teamwork' },
-      { name: 'Organization' }
-    ]
+    label: 'Personal'
   }
 ];

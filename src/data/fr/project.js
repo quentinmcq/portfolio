@@ -28,7 +28,7 @@ export default [
       "L'utilisateur peut créer un compte, modifier ses informations et parcourir les cours proposés sur le site. De plus, un système de rôle permet gérer les accès des utilisateurs (professeur, ...).",
     cover: 'teachme.png',
     year: '2020',
-    chips: ['Laravel', 'PHP', 'JS', 'Inertia', 'Bootstrap'],
+    chips: ['Laravel', 'PHP', 'JS', 'InertiaJS', 'Bootstrap'],
     link: `${GITHUB_URL}/${GITHUB_USERNAME}/swiss-knife`
   },
   {
@@ -78,7 +78,7 @@ export default [
       'Cette nouvelle interface contient majoritairement des modifications de style ainsi que des améliorations du code (outils/technologies plus récents).',
     cover: 'site.png',
     year: '2018',
-    chips: ['JS', 'HTML/CSS'],
+    chips: ['JS', 'HTML'],
     link: `${GITHUB_URL}/${GITHUB_USERNAME}/university-website`
   }
 ];

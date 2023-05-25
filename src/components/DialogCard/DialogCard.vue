@@ -11,10 +11,11 @@
     >
       <template #customContent>
         <v-row v-if="item?.chips" class="mt-4 mb-3" justify="center">
-          <chip-item
+          <skill-chip
             v-for="(label, index) in item?.chips"
             :key="index"
             :label="label"
+            target="_blank"
           />
         </v-row>
 
@@ -43,11 +44,11 @@
 </template>
 
 <script setup>
-import DialogCardItem from '@/components/DialogCard/DialogCardItem/DialogCardItem.vue';
-import ChipItem from '@/components/ChipItem/ChipItem.vue';
 import { useImagePath } from '../../composables/image-path';
 import { useGoogleAnalyticsEvent } from '../../composables/google-analytics';
-import Image from '../Image/Image.vue';
+import DialogCardItem from '@/components/DialogCard/DialogCardItem/DialogCardItem.vue';
+import SkillChip from '@/components/SkillChip/SkillChip.vue';
+import Image from '@/components/Image/Image.vue';
 import ImageGallery from '@/components/Image/ImageGallery/ImageGallery.vue';
 
 const props = defineProps({

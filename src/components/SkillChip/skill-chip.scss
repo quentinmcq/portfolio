@@ -1,0 +1,16 @@
+.skill-chip {
+  &__config {
+    font-weight: bold;
+    margin: 5px 8px 5px 2px !important;
+    //padding: 2px 18px;
+  }
+}
+
+:deep(.v-chip__prepend .v-responsive .v-img__placeholder .v-row) {
+  justify-content: initial !important;
+}
+
+:deep(.v-chip__prepend .v-progress-circular) {
+  width: 15px;
+  height: 15px;
+}

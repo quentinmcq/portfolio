@@ -20,7 +20,7 @@
 
         <v-list-item
           class="locale-switcher__item"
-          v-model="selectedLocale"
+          v-model="selectedLocaleIndex"
           v-for="locale in availableLocales"
           :key="locale"
           @click="switchLocale(locale)"
@@ -39,11 +39,14 @@ import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 const { locale, availableLocales } = useI18n();
-const selectedLocale = ref(1);
+const selectedLocaleIndex = ref(1);
 
 function switchLocale(lang) {
-  locale.value = lang;
+  if (locale.value !== lang) {
+    availableLocales.reverse();
+  }
 
+  locale.value = lang;
   storeLangToLocalStorage(lang);
 }
 

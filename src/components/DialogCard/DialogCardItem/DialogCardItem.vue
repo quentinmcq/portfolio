@@ -10,7 +10,7 @@
           <Image
             :src="path"
             :lazy-src="path"
-            :alt="item.image"
+            :alt="item.cover"
             height="180"
             cover
             eager
