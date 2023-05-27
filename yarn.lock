@@ -1437,9 +1437,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-vue@npm:^9.14.0":
-  version: 9.14.0
-  resolution: "eslint-plugin-vue@npm:9.14.0"
+"eslint-plugin-vue@npm:^9.14.1":
+  version: 9.14.1
+  resolution: "eslint-plugin-vue@npm:9.14.1"
   dependencies:
     "@eslint-community/eslint-utils": ^4.3.0
     natural-compare: ^1.4.0
@@ -1450,7 +1450,7 @@ __metadata:
     xml-name-validator: ^4.0.0
   peerDependencies:
     eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
-  checksum: e4240a76494ae6bf1d9bd9b6bb26707dbbc91682412458be5def68381c2b7c25b7452eb1e13b138f41a79064cb10e8abb529a742fadb68a94fc9f275d0ba12de
+  checksum: 63a7d90194fe36b605c74fcb43d0f4d41d996b0d8733b89e1979a5fe1d400ee8a6d74d9b5cc9fbdff532f1c0aec93019e93f775a1f1b693d703b97ad1b932543
   languageName: node
   linkType: hard
 
@@ -2119,9 +2119,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsdom@npm:^22.0.0":
-  version: 22.0.0
-  resolution: "jsdom@npm:22.0.0"
+"jsdom@npm:^22.1.0":
+  version: 22.1.0
+  resolution: "jsdom@npm:22.1.0"
   dependencies:
     abab: ^2.0.6
     cssstyle: ^3.0.0
@@ -2151,7 +2151,7 @@ __metadata:
   peerDependenciesMeta:
     canvas:
       optional: true
-  checksum: 5d554ccb1637035d1c3baa832ce6f6c66549b6fa43cc7c39295250092e74a10c2e6c674cb40a208ae850d80436dd109862f95d293528345ab5d6cc5213847f8e
+  checksum: d955ab83a6dad3e6af444098d30647c719bbb4cf97de053aa5751c03c8d6f3283d8c4d7fc2774c181f1d432fb0250e7332bc159e6b466424f4e337d73adcbf30
   languageName: node
   linkType: hard
 
@@ -2775,13 +2775,13 @@ __metadata:
     axios: ^1.4.0
     emailjs-com: ^3.2.0
     eslint: ^8.41.0
-    eslint-plugin-vue: ^9.14.0
-    jsdom: ^22.0.0
+    eslint-plugin-vue: ^9.14.1
+    jsdom: ^22.1.0
     prettier: ^2.8.8
     roboto-fontface: ^0.10.0
     sass: ^1.62.1
     sass-loader: ^13.3.0
-    vite: ^4.3.8
+    vite: ^4.3.9
     vite-plugin-vuetify: ^1.0.2
     vitest: ^0.31.1
     vue: ^3.3.4
@@ -3590,9 +3590,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^4.3.8":
-  version: 4.3.8
-  resolution: "vite@npm:4.3.8"
+"vite@npm:^4.3.9":
+  version: 4.3.9
+  resolution: "vite@npm:4.3.9"
   dependencies:
     esbuild: ^0.17.5
     fsevents: ~2.3.2
@@ -3623,7 +3623,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 454a7c0c1bd1fd5611c9df28c62e3adbe75f48e87fc787179c5af60c4ab9a87aa0eda44be446d898851a135766d36f65f8e7d56317556aa807d30e561de369c4
+  checksum: 8c45a516278d1e0425fac00c0877336790f71484a851a318346a70e0d2aef9f3b9651deb2f9f002c791ceb920eda7d6a3cda753bdefd657321c99f448b02dd25
   languageName: node
   linkType: hard
 

@@ -71,7 +71,7 @@ export default {
   },
   livewire: {
     label: 'Livewire',
-    icon: 'livewire.png',
+    icon: 'livewire.svg',
     link: 'https://laravel-livewire.com/',
     width: 17,
     height: 17
@@ -132,7 +132,7 @@ export default {
   redmine: {
     label: 'Redmine',
     color: '#61DBFB',
-    icon: 'redmine.png',
+    icon: 'redmine.svg',
     link: 'https://www.redmine.org/'
   },
   symfony: {
