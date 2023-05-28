@@ -9,7 +9,7 @@
       :label="label"
       :transition="transition"
     >
-      <template #customContent>
+      <template #chipsAndLinks>
         <v-row v-if="item?.chips" class="mt-4 mb-3" justify="center">
           <skill-chip
             v-for="(label, index) in item?.chips"
@@ -36,8 +36,16 @@
             </a>
           </v-col>
         </v-row>
+      </template>
 
-        <ImageGallery v-if="item.images" :images="item.images" :label="label" />
+      <template #imageGallery>
+        <v-card-text>
+          <ImageGallery
+            v-if="item.images"
+            :images="item.images"
+            :label="label"
+          />
+        </v-card-text>
       </template>
     </dialog-card-item>
   </v-row>

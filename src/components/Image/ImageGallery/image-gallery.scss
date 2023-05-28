@@ -1,6 +1,12 @@
 .image-gallery {
   margin-top: 10px;
 
+  &__wrapper {
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+
   @media (min-width: $lg) {
     margin-top: 20px;
     margin-bottom: 5px;
@@ -12,5 +18,19 @@
 
   &__rounded {
     border-radius: 5px;
+  }
+
+  &__year {
+    font-size: 28px;
+    font-weight: 900;
+
+    @media (min-width: $lg) {
+      font-size: 38px;
+    }
+  }
+
+  &__img-wrapper {
+    display: flex;
+    flex-wrap: wrap;
   }
 }

@@ -1,32 +1,41 @@
 <template>
   <v-row class="image-gallery">
-    <v-col
-      v-for="(image, index) of images"
-      :key="index"
-      class="d-flex child-flex"
-      cols="4"
+    <div
+      v-for="year in reversedYears"
+      :key="year"
+      class="image-gallery__wrapper"
     >
-      <Image
-        class="image-animation image-gallery__rounded"
-        @click="openImage(image.link)"
-        :src="linkImgPath(image.link)"
-        :alt="image.link"
-        :max-height="setMaxHeight()"
-        aspect-ratio="1"
-        cover
-        eager
-      />
-    </v-col>
+      <v-col>
+        <v-card-title class="image-gallery__year"> {{ year }} </v-card-title>
+
+        <div class="image-gallery__img-wrapper">
+          <v-col v-for="image in images[year]" :key="image" cols="auto">
+            <Image
+              :key="image"
+              class="image-animation image-gallery__rounded"
+              @click="openImage(year, image)"
+              :src="linkImgPath(year, image)"
+              :alt="image"
+              :max-width="maxDimensionGalleryImage"
+              :max-height="maxDimensionGalleryImage"
+              aspect-ratio="1"
+              cover
+              eager
+            />
+          </v-col>
+        </div>
+      </v-col>
+    </div>
   </v-row>
 
-  <div class="text-center" v-if="clickedImagePath">
+  <div v-if="clickedImagePath">
     <v-dialog v-model="dialog" width="auto">
       <Image
         @click="dialog = false"
-        :src="linkImgPath(clickedImagePath)"
+        :src="linkImgPath(clickedYear, clickedImagePath)"
         :alt="clickedImagePath"
-        max-width="850"
-        max-height="650"
+        :max-width="maxDimensionOpenImageWidth"
+        :max-height="maxDimensionOpenImageHeight"
         eager
       />
     </v-dialog>
@@ -35,13 +44,13 @@
 
 <script setup>
 import { useImagePath } from '@/composables/image-path';
-import { ref } from 'vue';
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
 import Image from '../Image.vue';
 import { useDisplay } from 'vuetify';
 
 const props = defineProps({
   images: {
-    type: Array,
+    type: Object,
     required: true
   },
   label: {
@@ -52,24 +61,59 @@ const props = defineProps({
 
 const dialog = ref(false);
 const clickedImagePath = ref('');
+const clickedYear = ref('');
 const { xs } = useDisplay();
 
-function linkImgPath(image) {
+const maxDimensionOpenImageWidth = ref(undefined);
+const maxDimensionOpenImageHeight = ref(undefined);
+
+onMounted(() => {
+  calculateMaxDimensionOpenImage();
+  window.addEventListener('resize', calculateMaxDimensionOpenImage);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', calculateMaxDimensionOpenImage);
+});
+
+const maxDimensionGalleryImage = computed(() => (xs.value ? 110 : 160));
+const reversedYears = computed(() => Object.keys(props.images).reverse());
+
+function calculateMaxDimensionOpenImage() {
+  const maxSizeRatio = 0.9;
+  const { innerWidth: screenWidth, innerHeight: screenHeight } = window;
+  const isScreenNarrow = screenWidth < screenHeight;
+
+  const maxDimension = isScreenNarrow ? screenWidth : screenHeight;
+  const maxImageDimension = maxDimension * maxSizeRatio;
+  const imageRatio = screenWidth / screenHeight;
+
+  let maxWidth = maxImageDimension;
+  let maxHeight = maxImageDimension / imageRatio;
+
+  if (!isScreenNarrow && maxImageDimension < screenHeight) {
+    maxWidth = maxImageDimension * imageRatio;
+    maxHeight = maxImageDimension;
+  }
+
+  maxDimensionOpenImageWidth.value = Math.floor(maxWidth);
+  maxDimensionOpenImageHeight.value = Math.floor(maxHeight);
+}
+
+function linkImgPath(year, image) {
   const { path } = useImagePath({
     directory: `${props.label}`,
-    image: `manga/${image}`
+    image: `manga/${year}/${image}`
   });
 
   return path.value;
 }
 
-function openImage(path) {
-  dialog.value = true;
+function openImage(year, path) {
   clickedImagePath.value = path;
-}
+  clickedYear.value = year;
 
-function setMaxHeight() {
-  return xs.value ? 80 : 230;
+  dialog.value = true;
 }
 </script>
 

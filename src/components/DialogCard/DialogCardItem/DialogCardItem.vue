@@ -47,7 +47,7 @@
             {{ $t(`${prefix}.description`) }}
 
             <!-- Overloads the component with additional custom content (chips, logos, ...) -->
-            <slot name="customContent" />
+            <slot name="chipsAndLinks" />
           </v-card-text>
 
           <v-card-actions class="dialog-card-item__see-more" v-if="!item.links">
@@ -64,6 +64,8 @@
               {{ $t(buttonText) }}
             </v-btn>
           </v-card-actions>
+
+          <slot name="imageGallery" />
         </v-card>
       </v-dialog>
     </div>

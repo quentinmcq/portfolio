@@ -20,13 +20,25 @@ export default [
       "J'ai découvert cet univers grâce à un ami qui a su me partager sa passion. J'ai maintenant ma propre collection qui ne cesse de s'agrandir ! 📚",
     cover: 'manga.webp',
     link: 'http://mangacollec.com/user/kakashi/collection',
-    images: [
-      { link: 'collection_1.webp' },
-      { link: 'collection_2.webp' },
-      { link: 'collection_3.webp' },
-      { link: 'collection_4.webp' },
-      { link: 'collection_5.webp' }
-    ]
+    images: {
+      2023: [
+        'collection_1.webp',
+        'collection_2.webp',
+        'collection_3.webp',
+        'collection_4.webp',
+        'collection_5.webp',
+        'collection_6.webp'
+      ],
+      2022: ['collection_1.webp', 'collection_2.webp', 'collection_3.webp'],
+      2021: [
+        'collection_1.webp',
+        'collection_2.webp',
+        'collection_3.webp',
+        'collection_4.webp',
+        'collection_5.webp'
+      ],
+      2020: ['collection_1.webp', 'collection_2.webp', 'collection_3.webp']
+    }
   },
   {
     title: 'Escalade',
