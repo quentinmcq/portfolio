@@ -1,6 +1,5 @@
 <template>
   <v-img
-    class="image"
     :src="src"
     :lazySrc="lazySrc"
     :aspect-ratio="aspectRatio"
