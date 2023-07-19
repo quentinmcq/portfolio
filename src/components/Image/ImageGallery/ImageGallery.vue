@@ -16,8 +16,8 @@
               @click="openImage(year, image)"
               :src="linkImgPath(year, image)"
               :alt="image"
-              :max-width="maxDimensionGalleryImage"
-              :max-height="maxDimensionGalleryImage"
+              :width="dimensionGalleryImage"
+              :height="dimensionGalleryImage"
               aspect-ratio="1"
               cover
               eager
@@ -34,8 +34,8 @@
         @click="dialog = false"
         :src="linkImgPath(clickedYear, clickedImagePath)"
         :alt="clickedImagePath"
-        :max-width="maxDimensionOpenImageWidth"
-        :max-height="maxDimensionOpenImageHeight"
+        :width="dimensionOpenImageWidth"
+        :height="dimensionOpenImageHeight"
         eager
       />
     </v-dialog>
@@ -64,8 +64,8 @@ const clickedImagePath = ref('');
 const clickedYear = ref('');
 const { xs } = useDisplay();
 
-const maxDimensionOpenImageWidth = ref(undefined);
-const maxDimensionOpenImageHeight = ref(undefined);
+const dimensionOpenImageWidth = ref(undefined);
+const dimensionOpenImageHeight = ref(undefined);
 
 onMounted(() => {
   calculateMaxDimensionOpenImage();
@@ -76,7 +76,7 @@ onBeforeUnmount(() => {
   window.removeEventListener('resize', calculateMaxDimensionOpenImage);
 });
 
-const maxDimensionGalleryImage = computed(() => (xs.value ? 110 : 160));
+const dimensionGalleryImage = computed(() => (xs.value ? 110 : 160));
 const reversedYears = computed(() => Object.keys(props.images).reverse());
 
 function calculateMaxDimensionOpenImage() {
@@ -96,8 +96,8 @@ function calculateMaxDimensionOpenImage() {
     maxHeight = maxImageDimension;
   }
 
-  maxDimensionOpenImageWidth.value = Math.floor(maxWidth);
-  maxDimensionOpenImageHeight.value = Math.floor(maxHeight);
+  dimensionOpenImageWidth.value = Math.floor(maxWidth);
+  dimensionOpenImageHeight.value = Math.floor(maxHeight);
 }
 
 function linkImgPath(year, image) {
