@@ -56,9 +56,14 @@
   &__link {
     display: block;
     padding-bottom: 0.6em;
-    padding-left: 1.5em;
+    padding-left: 1.6em;
     color: #fff;
     text-decoration: none;
+    max-width: fit-content;
+
+    @media only screen and (min-width: 390px) and (orientation: landscape) {
+      padding-left: 3.1em;
+    }
 
     &:hover {
       cursor: pointer;
@@ -73,5 +78,12 @@
     @media (min-width: $lg) {
       font-size: 30px;
     }
+  }
+}
+
+@media only screen and (min-width: 390px) and (orientation: landscape) {
+  :deep(.cross-icon) {
+    padding-top: 0.5em;
+    padding-left: 0.8em;
   }
 }
