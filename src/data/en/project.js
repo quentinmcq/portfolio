@@ -3,19 +3,19 @@ export default [
     title: 'Unpaid Tracking',
     subtitle: 'Unpaid follow-up tool',
     description:
-      'Allows you to list unpaid bills, where monthly payments have not been paid. A reminder process is then initiated (reminder SMS / email, formal notice then recovery).'
+      'Allows you to list unpaid bills, where monthly payments have not been paid. A reminder process is then initiated : reminder SMS/email, formal notice then recovery.'
   },
   {
     title: 'Swiss Knife',
     subtitle: 'Site for disabled students',
     description:
-      'The user can create an account and choose his type of handicap (color blindness, visually impaired, ...). He also has tools at his disposal to help him on a daily basis like voice assistant.'
+      'The user can create an account and choose his type of handicap (color blindness, visually impaired, etc). He also has tools at his disposal to help him on a daily basis like voice assistant.'
   },
   {
     title: 'TeachMe',
     subtitle: 'Online course site',
     description:
-      'The user can create an account, modify his information and browse the courses offered on the site. In addition, a role system allows user access (teacher, etc.) to be managed.'
+      'The user can create an account, modify his personal information and browse the courses offered on the site. In addition, a role system allows user access (admin, teacher, etc) to be managed.'
   },
   {
     title: 'University timetable',
@@ -39,12 +39,12 @@ export default [
     title: 'Bomberman',
     subtitle: 'Video game with graphical interface',
     description:
-      'The players have to eliminate the opponents with bombs. Powerups are scattered throughout the map in blocks. Be careful, these bonuses can be advantages as well as penalties!'
+      'The players have to eliminate the opponents with bombs. Power-ups are scattered throughout the map in blocks. Be careful, these bonuses can be advantages as well as penalties!'
   },
   {
     title: 'University website',
     subtitle: 'Redesign of the university website',
     description:
-      'This new interface mainly contains style modifications as well as code improvements (more recent tools / technologies).'
+      'Project to create a new site for my university. The goal was to achieve a modern and more elegant interface than the site of the time.'
   }
 ];
