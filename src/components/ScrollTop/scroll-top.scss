@@ -9,6 +9,11 @@
   opacity: 0;
   text-decoration: none;
 
+  @media only screen and (min-width: 390px) and (orientation: landscape) {
+    bottom: 18px;
+    right: 22px;
+  }
+
   @media (min-width: $xl) {
     right: 20px;
     bottom: 18px;

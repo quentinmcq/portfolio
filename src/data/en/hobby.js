@@ -27,6 +27,6 @@ export default [
     title: 'Music',
     button: 'My albums',
     description:
-      'One of my favorite hobbies. I listen to quite a variety of genres (rap, electronic, ...) and I love discovering new artists 🎵'
+      'One of my favorite hobbies. I listen to quite a variety of genres (rap, electronic, etc) and I love discovering new artists 🎵'
   }
 ];

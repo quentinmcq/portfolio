@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "packageManager": "yarn@3.6.0",
-  "version": "3.0.0",
+  "version": "3.5.2",
   "author": "Quentin Macq",
   "private": true,
   "scripts": {
@@ -35,7 +35,7 @@
     "eslint-plugin-vue": "^9.15.1",
     "jsdom": "^22.1.0",
     "prettier": "^3.0.0",
-    "sass": "^1.63.6",
+    "sass": "^1.64.0",
     "sass-loader": "^13.3.2",
     "vite": "^4.4.4",
     "vite-plugin-vuetify": "^1.0.2",

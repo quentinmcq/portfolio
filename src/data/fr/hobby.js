@@ -60,7 +60,7 @@ export default [
     title: 'Musique',
     button: 'Mes albums',
     description:
-      "Un de mes passe-temps favoris. J'écoute des genres assez variés (rap, electronic, ...) et j'adore découvrir de nouveaux artistes 🎵",
+      "Un de mes passe-temps favoris. J'écoute des genres assez variés (rap, electronic, etc) et j'adore découvrir de nouveaux artistes 🎵",
     cover: 'music.webp',
     link: 'https://open.spotify.com/user/3lefkr5qkab0fpvg88w7ou80u?si=2d561e3457384487'
   }
