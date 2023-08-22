@@ -629,13 +629,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitejs/plugin-vue@npm:^4.3.1":
-  version: 4.3.1
-  resolution: "@vitejs/plugin-vue@npm:4.3.1"
+"@vitejs/plugin-vue@npm:^4.3.3":
+  version: 4.3.3
+  resolution: "@vitejs/plugin-vue@npm:4.3.3"
   peerDependencies:
     vite: ^4.0.0
     vue: ^3.2.25
-  checksum: ab19e0be479099fd16c4ddc23b30a910c7890b8dcb7d8b3cda44515cd005bb57e20ab6fd261f3f1fadd58a6baa9ff0d120897cdc8dad378e3fa40cc791a4ec28
+  checksum: 17f8d737085a7f0e65cdc5347b44d844980b84775e884e7432e623644c3bb5916703139967743c94b70e3db57689d2d2511850cd4adeb9886075fd49fef7124d
   languageName: node
   linkType: hard
 
@@ -3274,7 +3274,7 @@ __metadata:
   dependencies:
     "@mdi/font": ^7.2.96
     "@rushstack/eslint-patch": ^1.3.3
-    "@vitejs/plugin-vue": ^4.3.1
+    "@vitejs/plugin-vue": ^4.3.3
     "@vue/eslint-config-prettier": ^8.0.0
     "@vue/shared": ^3.3.4
     "@vue/test-utils": ^2.4.1
@@ -3286,7 +3286,7 @@ __metadata:
     jsdom: ^22.1.0
     prettier: ^3.0.2
     roboto-fontface: ^0.10.0
-    sass: ^1.66.0
+    sass: ^1.66.1
     sass-loader: ^13.3.2
     vite: ^4.4.9
     vite-plugin-vuetify: ^1.0.2
@@ -3295,7 +3295,7 @@ __metadata:
     vue-gtag: ^2.0.1
     vue-i18n: ^9.2.2
     vue-writer: ^1.2.0
-    vuetify: ^3.3.13
+    vuetify: ^3.3.14
     webfontloader: ^1.6.28
   languageName: unknown
   linkType: soft
@@ -3617,16 +3617,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.66.0":
-  version: 1.66.0
-  resolution: "sass@npm:1.66.0"
+"sass@npm:^1.66.1":
+  version: 1.66.1
+  resolution: "sass@npm:1.66.1"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
     immutable: ^4.0.0
     source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: ae292e6a41a8812c0206c528885969e2f6f35870397e6d5bc33477927fd09faffda196aefe2cfe49e0c57f1448129b522f845bb134f3b6a131b184e3be86cf92
+  checksum: 74fc11d0fcd5e16c5331b57dd59865705a299c64e89f2b99646869caeb011dc8d0b6144a6c74a90c264e9ef70654207dbf44fc9b7e3393f8bd14809b904c8a52
   languageName: node
   linkType: hard
 
@@ -4296,9 +4296,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vuetify@npm:^3.3.13":
-  version: 3.3.13
-  resolution: "vuetify@npm:3.3.13"
+"vuetify@npm:^3.3.14":
+  version: 3.3.14
+  resolution: "vuetify@npm:3.3.14"
   peerDependencies:
     typescript: ">=4.7"
     vite-plugin-vuetify: ^1.0.0-alpha.12
@@ -4314,7 +4314,7 @@ __metadata:
       optional: true
     webpack-plugin-vuetify:
       optional: true
-  checksum: 1800ea695205a021a10a0def08e2bb0f3191071083743e9b273c76c50044fb798350f638053e87f4325dc17ca4edbceb8af8b8c97eb2a914ae399fc3f91213fe
+  checksum: d7e26d537620a76b3908ba3a3d93085fe75760503e9d107ac5be704c81f104216f76f76a34eeec7527891a16da51e22a0512390f055a70ec9cb0e4d04c3b3d92
   languageName: node
   linkType: hard
 
