@@ -30,6 +30,11 @@ export default {
     icon: 'elasticsearch.svg',
     link: 'https://www.elastic.co/elasticsearch/'
   },
+  grafana: {
+    label: 'Grafana',
+    icon: 'grafana.svg',
+    link: 'https://grafana.com/'
+  },
   git: {
     label: 'Git',
     icon: 'git.svg',

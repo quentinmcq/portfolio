@@ -15,6 +15,7 @@ export default [
   },
   {
     title: 'Manga',
+    type: 'manga',
     button: 'Ma collection',
     description:
       "J'ai découvert cet univers grâce à un ami qui a su me partager sa passion. J'ai maintenant ma propre collection qui ne cesse de s'agrandir ! 📚",
@@ -42,11 +43,23 @@ export default [
   },
   {
     title: 'Escalade',
+    type: 'climbing',
     button: 'Mon club',
     description:
-      "Discipline coup de coeur que j'ai découvert au lycée et que j'ai décidé de re-pratiquer quelques années plus tard 🧗🏻‍♂️",
+      "Discipline qui m'a passionné lorsque j'étais au lycée et que j'ai choisi de reprendre quelques années après 🧗🏻‍♂️",
     cover: 'climbing.webp',
-    link: 'https://escalade-rouvroy.fr/'
+    link: 'https://escalade-rouvroy.fr/',
+    images: {
+      2023: [
+        'picture_1.webp',
+        'picture_2.webp',
+        'picture_3.webp',
+        'picture_4.webp',
+        'picture_5.webp',
+        'picture_6.webp',
+        'picture_7.webp'
+      ]
+    }
   },
   {
     title: 'VTT',

@@ -27,7 +27,7 @@ export default [
   {
     label: 'Gestion de données',
     color: '#e01f0f',
-    content: ['RabbitMQ', 'Elasticsearch']
+    content: ['Grafana', 'RabbitMQ', 'Elasticsearch']
   },
   {
     label: 'Langues',

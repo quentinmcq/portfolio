@@ -3,24 +3,24 @@ export default [
     title: 'Computer engineer',
     location: 'EPSI, Lille',
     description:
-      'This sandwich course formation allows me to deepen my technical skills and teach me the concepts of project management / management, a path that I wish to follow thereafter.'
+      '<ul><li>Deepening of technical and transversal skills</li><li>Acquisition of project and team management skills</li>'
   },
   {
     title: 'Professional degree',
     location: 'University institute of technology, Lens',
     description:
-      'This 3rd year of study allowed me to test my computer skills, especially in web development.'
+      '<ul><li>Strengthening web development skills (PHP, JS)</li></ul>'
   },
   {
     title: 'Two year degree',
     location: 'University Institute of Technology, Lens',
     description:
-      'This training allowed me to learn the basics of algorithms and to discover various computer fields.'
+      '<ul><li>Learning the basics of algorithms </li><li>Discovery of various IT fields </li></ul>'
   },
   {
     title: 'Scientific baccalaureate',
     location: 'Fernand Darchicourt high school, Hénin-Beaumont',
     description:
-      'I got my scientific baccalaureate with honors (specialty Physics-Chemistry and English).'
+      '<ul><li>Obtaining the “good honors” distinction (Physics-Chemistry specialty and European English section).</li></ul>'
   }
 ];
