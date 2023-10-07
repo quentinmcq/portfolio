@@ -56,8 +56,7 @@ export default [
         'picture_3.webp',
         'picture_4.webp',
         'picture_5.webp',
-        'picture_6.webp',
-        'picture_7.webp'
+        'picture_6.webp'
       ]
     }
   },
