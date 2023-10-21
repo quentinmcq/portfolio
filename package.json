@@ -13,17 +13,17 @@
     "lint": "eslint . --ext .vue,.js,.cjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@mdi/font": "^7.2.96",
-    "@vue/shared": "^3.3.4",
+    "@mdi/font": "^7.3.67",
+    "@vue/shared": "^3.3.6",
     "aos": "^2.3.4",
     "axios": "^1.5.1",
     "emailjs-com": "^3.2.0",
     "roboto-fontface": "^0.10.0",
-    "vue": "^3.3.4",
+    "vue": "^3.3.6",
     "vue-gtag": "^2.0.1",
     "vue-i18n": "^9.5.0",
     "vue-writer": "^1.2.0",
-    "vuetify": "^3.3.20",
+    "vuetify": "^3.3.22",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
@@ -31,13 +31,13 @@
     "@vitejs/plugin-vue": "^4.4.0",
     "@vue/eslint-config-prettier": "^8.0.0",
     "@vue/test-utils": "^2.4.1",
-    "eslint": "^8.51.0",
+    "eslint": "^8.52.0",
     "eslint-plugin-vue": "^9.17.0",
     "jsdom": "^22.1.0",
     "prettier": "^3.0.3",
-    "sass": "^1.69.0",
+    "sass": "^1.69.4",
     "sass-loader": "^13.3.2",
-    "vite": "^4.4.11",
+    "vite": "^4.5.0",
     "vite-plugin-vuetify": "^1.0.2",
     "vitest": "^0.34.6"
   }
