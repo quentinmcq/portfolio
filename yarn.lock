@@ -4332,8 +4332,8 @@ __metadata:
   linkType: hard
 
 "vuetify@npm:^3.3.22":
-  version: 3.3.22
-  resolution: "vuetify@npm:3.3.22"
+  version: 3.3.23
+  resolution: "vuetify@npm:3.3.23"
   peerDependencies:
     typescript: ">=4.7"
     vite-plugin-vuetify: ^1.0.0-alpha.12
@@ -4349,7 +4349,7 @@ __metadata:
       optional: true
     webpack-plugin-vuetify:
       optional: true
-  checksum: 8ec6ad98226f73a4d25bf09ae51c65b83b7f3f5dc909bcf4a3baf630e89acc2a2ab793bee9e2ebdbf48e6979babcdb9cf1a7bca6eba0648de71e5d7beca37cb7
+  checksum: ff3be03c0ae3eac17c4f94f8bdbed03f87f0d8eb2277df7c58edff3667516a15abe0a077b35fe2f90d5b7ba9ae481d1945e85ff9444a3ca80d1a04c2ec2268bc
   languageName: node
   linkType: hard
 
