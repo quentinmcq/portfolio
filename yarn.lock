@@ -874,7 +874,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/shared@npm:3.3.7, @vue/shared@npm:^3.3.6":
+"@vue/shared@npm:3.3.7, @vue/shared@npm:^3.3.7":
   version: 3.3.7
   resolution: "@vue/shared@npm:3.3.7"
   checksum: 7199c5a26d528fd6f04ce9aa97eb7cd5cb98d4b9e9bc77661837960a01f36cd4c0f88725b9b7739fb6e4c864ab9849b96db662da51b1c56f0b70a6905c5db755
@@ -1085,7 +1085,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.5.1":
+"axios@npm:^1.6.0":
   version: 1.6.0
   resolution: "axios@npm:1.6.0"
   dependencies:
@@ -1763,7 +1763,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-vue@npm:^9.17.0":
+"eslint-plugin-vue@npm:^9.18.1":
   version: 9.18.1
   resolution: "eslint-plugin-vue@npm:9.18.1"
   dependencies:
@@ -3311,26 +3311,26 @@ __metadata:
     "@rushstack/eslint-patch": "npm:^1.5.1"
     "@vitejs/plugin-vue": "npm:^4.4.0"
     "@vue/eslint-config-prettier": "npm:^8.0.0"
-    "@vue/shared": "npm:^3.3.6"
+    "@vue/shared": "npm:^3.3.7"
     "@vue/test-utils": "npm:^2.4.1"
     aos: "npm:^2.3.4"
-    axios: "npm:^1.5.1"
+    axios: "npm:^1.6.0"
     emailjs-com: "npm:^3.2.0"
     eslint: "npm:^8.52.0"
-    eslint-plugin-vue: "npm:^9.17.0"
+    eslint-plugin-vue: "npm:^9.18.1"
     jsdom: "npm:^22.1.0"
     prettier: "npm:^3.0.3"
     roboto-fontface: "npm:^0.10.0"
-    sass: "npm:^1.69.4"
+    sass: "npm:^1.69.5"
     sass-loader: "npm:^13.3.2"
     vite: "npm:^4.5.0"
     vite-plugin-vuetify: "npm:^1.0.2"
     vitest: "npm:^0.34.6"
-    vue: "npm:^3.3.6"
+    vue: "npm:^3.3.7"
     vue-gtag: "npm:^2.0.1"
-    vue-i18n: "npm:^9.5.0"
+    vue-i18n: "npm:^9.6.1"
     vue-writer: "npm:^1.2.0"
-    vuetify: "npm:^3.3.22"
+    vuetify: "npm:^3.3.23"
     webfontloader: "npm:^1.6.28"
   languageName: unknown
   linkType: soft
@@ -3644,7 +3644,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.69.4":
+"sass@npm:^1.69.5":
   version: 1.69.5
   resolution: "sass@npm:1.69.5"
   dependencies:
@@ -4291,7 +4291,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-i18n@npm:^9.5.0":
+"vue-i18n@npm:^9.6.1":
   version: 9.6.1
   resolution: "vue-i18n@npm:9.6.1"
   dependencies:
@@ -4313,7 +4313,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue@npm:^3.3.6":
+"vue@npm:^3.3.7":
   version: 3.3.7
   resolution: "vue@npm:3.3.7"
   dependencies:
@@ -4331,7 +4331,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vuetify@npm:^3.3.22":
+"vuetify@npm:^3.3.23":
   version: 3.3.23
   resolution: "vuetify@npm:3.3.23"
   peerDependencies:
