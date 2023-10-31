@@ -44,6 +44,7 @@
             v-if="item.images"
             :images="item.images"
             :label="label"
+            :type="item.type"
           />
         </v-card-text>
       </template>

@@ -3,7 +3,7 @@ export default [
     title: 'Ingénieur Informatique',
     location: 'EPSI, Lille',
     description:
-      "Cette formation en alternance me permet d'approfondir mes compétences techniques et de m'apprendre les notions de gestion de projets/management, voie que je souhaite suivre par la suite.",
+      "<ul><li>Approfondissement de compétences techniques et transverses</li><li>Acquisition de compétences en gestion de projets et d'équipe</li>",
     cover: 'epsi.webp',
     year: '2021 - 2023',
     link: 'https://www.epsi.fr/campus/campus-de-lille/'
@@ -12,7 +12,7 @@ export default [
     title: 'Licence Professionnelle',
     location: 'Institut universitaire de technologie, Lens',
     description:
-      "Cette 3ème année d'étude m'a permis d'éprouver mes connaissances en informatique, notamment dans le développement web.",
+      '<ul><li>Renforcement des compétences en développement web (PHP, JS)</li></ul>',
     cover: 'iut.webp',
     year: '2020 - 2021',
     link: 'http://www.iut-lens.univ-artois.fr/formations/lp-dioc-metiers-de-linformatique/'
@@ -21,7 +21,7 @@ export default [
     title: 'DUT Informatique',
     location: 'Institut universitaire de technologie, Lens',
     description:
-      "Cette formation m'a permis d'apprendre les bases de l'algorithmie et de découvrir divers domaines informatiques.",
+      "<ul><li>Apprentissage des bases de l'algorithmie</li><li>Découverte de divers domaines informatiques</li></ul>",
     cover: 'iut.webp',
     year: '2018 - 2020',
     link: 'http://www.iut-lens.univ-artois.fr/formations/but-informatique/'
@@ -30,7 +30,7 @@ export default [
     title: 'Bac Scientifique',
     location: 'Lycée Fernand Darchicourt, Hénin-Beaumont',
     description:
-      "J'ai décroché mon BAC S mention Assez Bien (spécialité Physique-Chimie et Euro Anglais).",
+      '<ul><li> Obtention de la mention Assez Bien (spécialité Physique-Chimie et section européenne anglais).</li></ul>',
     cover: 'darchicourt.webp',
     year: '2015 - 2018',
     link: 'https://www.lycee-darchicourt.net/'

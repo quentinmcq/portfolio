@@ -56,6 +56,10 @@ const props = defineProps({
   label: {
     type: String,
     required: true
+  },
+  type: {
+    type: String,
+    required: true
   }
 });
 
@@ -103,7 +107,7 @@ function calculateMaxDimensionOpenImage() {
 function linkImgPath(year, image) {
   const { path } = useImagePath({
     directory: `${props.label}`,
-    image: `manga/${year}/${image}`
+    image: `${props.type}/${year}/${image}`
   });
 
   return path.value;
