@@ -1,9 +1,0 @@
-{
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base"
-  ],
-  "timezone": "Europe/Paris",
-  "dependencyDashboard": true,
-  "automerge": true
-}
