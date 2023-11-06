@@ -21,7 +21,7 @@
     "roboto-fontface": "^0.10.0",
     "vue": "^3.3.7",
     "vue-gtag": "^2.0.1",
-    "vue-i18n": "^9.6.2",
+    "vue-i18n": "^9.6.5",
     "vue-writer": "^1.2.0",
     "vuetify": "^3.3.23",
     "webfontloader": "^1.6.28"
