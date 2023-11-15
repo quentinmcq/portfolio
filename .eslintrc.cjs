@@ -1,23 +1,23 @@
-/* eslint-env node */
-require('@rushstack/eslint-patch/modern-module-resolution');
-
 module.exports = {
   root: true,
-  env: {
-    browser: true,
-    node: true
-  },
   extends: [
-    'plugin:vue/vue3-essential',
     'eslint:recommended',
-    '@vue/eslint-config-prettier'
+    'plugin:vue/vue3-essential',
+    'plugin:@stylistic/disable-legacy',
   ],
-  parserOptions: {
-    ecmaVersion: 'latest'
-  },
+  plugins: [
+    '@stylistic'
+  ],
   rules: {
-    semi: [2, 'always'],
+    '@stylistic/semi': ['error', 'always'],
+    '@stylistic/space-before-function-paren': ['error', {
+      'anonymous': 'never',
+      'named': 'never',
+      'asyncArrow': 'always'
+    }],
     'no-console': 'off',
+    'vue/custom-event-name-casing': 'off',
+    'vue/multi-word-component-names': 'off',
     'vue/html-self-closing': [
       'error',
       {
@@ -25,8 +25,6 @@ module.exports = {
           void: 'any'
         }
       }
-    ],
-    'vue/custom-event-name-casing': 'off',
-    'vue/multi-word-component-names': 'off'
+    ]
   }
 };
