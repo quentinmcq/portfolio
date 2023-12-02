@@ -36,7 +36,7 @@
       </v-card-subtitle>
 
       <v-card-subtitle class="timeline-item__description" v-if="smAndUp">
-        {{ $t(`${prefix}.description`) }}
+        <div v-html="$t(`${prefix}.description`)" />
       </v-card-subtitle>
     </v-card>
   </v-timeline-item>

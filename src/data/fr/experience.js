@@ -1,9 +1,19 @@
 export default [
   {
+    title: 'Développeur full stack',
+    location: 'Motoblouz, Carvin',
+    description:
+      '<ul><li>Développement de nouveaux projets</li><li>Maintien/refonte des outils internes</li><li>Participation aux rituels agiles</li><li>Participation à la stratégie du S.I</li></ul>',
+    cover: 'motoblouz.webp',
+    year: '2023',
+    // year: `2023 - ${new Date().getFullYear()}`,
+    link: 'https://www.motoblouz.com/'
+  },
+  {
     title: 'Alternance service IT',
     location: 'Motoblouz, Carvin',
     description:
-      "Intégré au sein de l'équipe, je participe à la réalisation de petits développements sur les différents projets existants. J'apprends de nombreuses choses chaque jour !",
+      "<ul><li>Implication dans des projets impactants</li><li>Participation aux sprints d'équipe</li><li>Contribution à la vie d'entreprise</li></ul>",
     cover: 'motoblouz.webp',
     year: '2021 - 2023',
     link: 'https://www.motoblouz.com/'
@@ -12,7 +22,7 @@ export default [
     title: 'Stage service IT',
     location: 'Motoblouz, Carvin',
     description:
-      "Lors de mon année en licence, j'ai eu la chance de pouvoir intégrer l'équipe IT de Motoblouz pendant 16 semaines. J'ai travaillé sur un vrai projet et fait de superbes rencontres !",
+      "<ul><li>Refonte d'un outil de suivi des impayés</li><li>Ajout de fonctionnalités supplémentaires</li><li>Recettage régulier avec le service métier</li></ul>",
     cover: 'motoblouz.webp',
     year: '2021',
     link: 'https://www.motoblouz.com/'
@@ -21,7 +31,7 @@ export default [
     title: 'Stage découverte',
     location: 'Benedicta SA, Seclin',
     description:
-      "J'ai eu l'occasion de découvrir le fonctionnement d'une entreprise lors d'un stage de 2 semaines. Ce fut une expérience intéressante.",
+      "<ul><li>Découverte du fonctionnement d'une entreprise agroalimentaire durant un stage de deux semaines</li></ul>",
     cover: 'heinz.webp',
     year: '2014',
     link: 'https://www.benedicta.com/'
