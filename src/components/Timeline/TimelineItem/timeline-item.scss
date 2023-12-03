@@ -17,7 +17,7 @@
     color: $dark-red;
     opacity: initial;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 14px;
     margin-top: -10px;
     margin-bottom: 8px;
 
@@ -36,6 +36,11 @@
     white-space: normal;
     word-break: break-word;
     margin-bottom: -9px;
+    font-size: 18px;
+
+    @media (min-width: $md) {
+      font-size: 20px;
+    }
   }
 
   &__location {
@@ -53,5 +58,13 @@
     font-size: 15px;
     line-height: 22px;
     white-space: normal;
+  }
+}
+
+.image-animation {
+  height: 160px;
+
+  @media (min-width: $md) {
+    height: 180px;
   }
 }

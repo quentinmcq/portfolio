@@ -1,9 +1,4 @@
-/* Vuetify override settings */
-.v-btn,
-.v-chip {
-  transition: transform 0.6s !important;
-}
-
+/* Vuetify override specific settings */
 .v-btn:hover,
 .v-chip:hover {
   transform: scale(1.07) !important;
@@ -11,4 +6,16 @@
 
 .v-overlay__scrim {
   opacity: 0.5;
+}
+
+.v-timeline--vertical {
+  row-gap: 0 !important;
+
+  .v-timeline-item:first-child .v-timeline-divider__before {
+    top: 26px;
+  }
+
+  .v-timeline-item:last-child .v-timeline-divider__after {
+    bottom: 74px;
+  }
 }

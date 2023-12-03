@@ -16,7 +16,6 @@
             :src="path"
             :lazy-src="path"
             :alt="item.cover"
-            height="180"
             cover
             eager
           />

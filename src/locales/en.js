@@ -49,12 +49,12 @@ export default {
   },
 
   education: {
-    'main-title': 'Education',
+    'main-title': 'Academic background',
     ...education
   },
 
   experience: {
-    'main-title': 'Experiences',
+    'main-title': 'Professional background',
     ...experience
   },
 

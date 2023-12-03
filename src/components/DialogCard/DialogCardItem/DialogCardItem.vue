@@ -16,7 +16,7 @@
             eager
           />
 
-          <v-card-title class="pt-3">
+          <v-card-title class="dialog-card-item__card__title pt-3">
             {{ $t(`${prefix}.title`) }}
             <span v-if="item.year">({{ item.year }})</span>
           </v-card-title>

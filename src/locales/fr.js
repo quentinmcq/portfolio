@@ -49,12 +49,12 @@ export default {
   },
 
   education: {
-    'main-title': 'Éducation',
+    'main-title': 'Parcours universitaire',
     ...education
   },
 
   experience: {
-    'main-title': 'Expériences',
+    'main-title': 'Parcours professionnel',
     ...experience
   },
 

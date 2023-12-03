@@ -12,8 +12,19 @@ const iconOptions = {
 
 export function initVuetify(app) {
   const vuetifyInstance = createVuetify({
-    global: globalOptions,
-    icons: iconOptions
+    defaults: {
+      global: globalOptions,
+      icons: iconOptions,
+        VContainer: {
+          style: 'padding: 14px'
+        },
+        VBtn: {
+          style: 'transition: transform 0.6s'
+        },
+        VChip: {
+          style: 'transition: transform 0.6s'
+        }
+    }
   });
 
   app.use(vuetifyInstance);

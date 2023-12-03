@@ -1,5 +1,5 @@
 <template>
-  <v-container :id="label">
+  <v-container :id="label" class="experience">
     <timeline :items="items" :label="label" />
   </v-container>
 </template>
