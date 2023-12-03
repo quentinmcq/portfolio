@@ -2,6 +2,7 @@
   "name": "portfolio",
   "packageManager": "yarn@4.0.2",
   "version": "3.5.2",
+  "type": "module",
   "author": "Quentin Macq",
   "private": true,
   "scripts": {
