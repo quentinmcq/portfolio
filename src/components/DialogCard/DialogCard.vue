@@ -53,8 +53,8 @@
 </template>
 
 <script setup>
-import { useImagePath } from '../../composables/image-path';
-import { useGoogleAnalyticsEvent } from '../../composables/google-analytics';
+import { useImagePath } from '@/composables/image-path.js';
+import { useGoogleAnalyticsEvent } from '@/composables/google-analytics.js';
 import DialogCardItem from '@/components/DialogCard/DialogCardItem/DialogCardItem.vue';
 import SkillChip from '@/components/SkillChip/SkillChip.vue';
 import Image from '@/components/Image/Image.vue';

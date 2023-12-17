@@ -3,7 +3,7 @@ export default [
     title: 'Veille technologique',
     button: 'Mes sources',
     description:
-      "J'ai démarré cette activité lorsque je suis devenu développeur. J'ai ajouté quelques-unes de mes sources préférées ci-dessous ! 👨🏻‍💻",
+      "J'ai démarré cette activité lorsque je suis devenu développeur. Vous retrouverez ici quelques-unes de mes sources préférées 👨🏻‍💻",
     cover: 'news.webp',
     links: [
       { url: 'https://www.symfony-news.com/', img: 'symfony.webp' },
@@ -64,7 +64,7 @@ export default [
     title: 'VTT',
     button: 'Mes trajets',
     description:
-      "VTTiste depuis plusieurs années maintenant, j'adore découvrir de nouveaux paysages, tester de nouveaux parcours et repousser mes limites ! 🚵🏻‍♂️",
+      "VTTiste depuis plusieurs années maintenant, j'adore découvrir de nouveaux paysages, tester de nouveaux parcours et repousser mes limites 🚵🏻‍♂️",
     cover: 'bike.webp',
     link: 'https://strava.com/athletes/61088761'
   },
@@ -72,7 +72,7 @@ export default [
     title: 'Musique',
     button: 'Mes albums',
     description:
-      "Un de mes passe-temps favoris. J'écoute des genres assez variés (rap, electronic, etc) et j'adore découvrir de nouveaux artistes 🎵",
+      "Un de mes passe-temps favoris. J'écoute des genres assez variés et j'adore découvrir de nouveaux artistes 🎵",
     cover: 'music.webp',
     link: 'https://open.spotify.com/user/3lefkr5qkab0fpvg88w7ou80u?si=2d561e3457384487'
   }
