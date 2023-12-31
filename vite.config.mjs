@@ -21,5 +21,11 @@ export default defineConfig({
         additionalData: '@import "@/assets/scss/_index.scss";'
       }
     }
+  },
+  // Allow mdi fonts to be loaded in local
+  server: {
+    fs: {
+      allow: ['C:/Users/Quentin/']
+    }
   }
 });

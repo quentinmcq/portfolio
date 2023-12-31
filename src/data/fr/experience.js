@@ -1,12 +1,11 @@
 export default [
   {
-    title: 'Développeur full stack',
+    title: 'Développeur Full-Stack',
     location: 'Motoblouz, Carvin',
     description:
       '<ul><li>Développement de nouveaux projets</li><li>Maintien/refonte des outils internes</li><li>Participation aux rituels agiles</li><li>Participation à la stratégie du S.I</li></ul>',
     cover: 'motoblouz.webp',
     year: '2023',
-    // year: `2023 - ${new Date().getFullYear()}`,
     link: 'https://www.motoblouz.com/'
   },
   {

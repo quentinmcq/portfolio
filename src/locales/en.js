@@ -25,8 +25,7 @@ export default {
 
   header: {
     visit: 'Good visit!',
-    technologies: 'Symfony/Vue.Js',
-    developer: 'Web developer'
+    developer: 'Full-Stack Developer'
   },
 
   footer: {

@@ -3,7 +3,7 @@ export default [
     title: 'Technological watch',
     button: 'My sources',
     description:
-      "I started this activity when I became a developer. I've added some of my favorite sources below! 👨🏻‍💻"
+      "I started this activity when I became a developer. Here you will find some of my favorite sources 👨🏻‍💻"
   },
   {
     title: 'Manga',
@@ -21,12 +21,12 @@ export default [
     title: 'VTT',
     button: 'My walks',
     description:
-      'Mountain biker for several years now, I love discovering new landscapes, testing new routes and pushing my limits! 🚵🏻‍♂️'
+      'Mountain biker for several years now, I love discovering new landscapes, testing new routes and pushing my limits 🚵🏻‍♂️'
   },
   {
     title: 'Music',
     button: 'My albums',
     description:
-      'One of my favorite hobbies. I listen to quite a variety of genres (rap, electronic, etc) and I love discovering new artists 🎵'
+      'One of my favorite hobbies. I listen to quite a variety of genres and I love discovering new artists 🎵'
   }
 ];

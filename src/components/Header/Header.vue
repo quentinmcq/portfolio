@@ -9,7 +9,6 @@
       class="header__typed"
       :array="[
         $t('header.developer'),
-        $t('header.technologies'),
         $t('header.visit')
       ]"
       :typeSpeed="80"

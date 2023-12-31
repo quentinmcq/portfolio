@@ -11,7 +11,6 @@
         :alt="chipConfig.label"
         :width="width"
         :height="height"
-        :loader="false"
         eager
       />
     </template>
@@ -24,7 +23,7 @@ import { computed } from 'vue';
 import { useResponsive } from '@/composables/responsive';
 import technology from '@/data/technology';
 import Image from '@/components/Image/Image.vue';
-import { useImagePath } from '../../composables/image-path';
+import { useImagePath } from '@/composables/image-path.js';
 
 const props = defineProps({
   label: {

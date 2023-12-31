@@ -14,30 +14,30 @@
     "lint": "eslint . --ext .vue,.js,.cjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@mdi/font": "^7.3.67",
-    "@vue/shared": "^3.3.12",
+    "@mdi/font": "^7.4.47",
+    "@vue/shared": "^3.4.3",
     "aos": "^2.3.4",
-    "axios": "^1.6.2",
+    "axios": "^1.6.3",
     "emailjs-com": "^3.2.0",
     "roboto-fontface": "^0.10.0",
-    "vue": "^3.3.12",
+    "vue": "^3.4.3",
     "vue-gtag": "^2.0.1",
     "vue-i18n": "^9.8.0",
     "vue-writer": "^1.2.0",
-    "vuetify": "^3.4.7",
+    "vuetify": "^3.4.9",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@stylistic/eslint-plugin": "^1.5.1",
-    "@vitejs/plugin-vue": "^4.5.2",
+    "@vitejs/plugin-vue": "^5.0.2",
     "@vue/test-utils": "^2.4.3",
     "eslint": "^8.56.0",
     "eslint-plugin-vue": "^9.19.2",
     "jsdom": "^23.0.1",
-    "sass": "^1.69.5",
-    "sass-loader": "^13.3.2",
+    "sass": "^1.69.6",
+    "sass-loader": "^13.3.3",
     "vite": "^5.0.10",
     "vite-plugin-vuetify": "^2.0.1",
-    "vitest": "^1.0.4"
+    "vitest": "^1.1.1"
   }
 }
