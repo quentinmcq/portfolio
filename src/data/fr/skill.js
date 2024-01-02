@@ -20,7 +20,7 @@ export default [
     content: ['Symfony']
   },
   {
-    label: 'Gestion de projets',
+    label: 'Intégration continue',
     color: '#da4e76',
     content: ['Git', 'Docker', 'Redmine', 'Jenkins']
   },
@@ -29,14 +29,14 @@ export default [
     color: '#e01f0f',
     content: ['Grafana', 'RabbitMQ', 'Elasticsearch']
   },
-  {
-    label: 'Langues',
-    color: '#a86147',
-    content: ['French (native)', 'English (B2)']
-  },
-  {
-    label: 'Personnelles',
-    color: '',
-    content: ['Autonomy', 'Teamwork', 'Organization']
-  }
+  // {
+  //   label: 'Langues',
+  //   color: '#a86147',
+  //   content: ['French (native)', 'English (B2)']
+  // },
+  // {
+  //   label: 'Personnelles',
+  //   color: '',
+  //   content: ['Autonomy', 'Teamwork', 'Organization']
+  // }
 ];

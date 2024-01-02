@@ -3,19 +3,19 @@ export default [
     title: 'Technological watch',
     button: 'My sources',
     description:
-      "I started this activity when I became a developer. Here you will find some of my favorite sources 👨🏻‍💻"
+      "I started this activity as soon as I became a developer. Here you will find some of my favorite sources 👨🏻‍💻"
   },
   {
     title: 'Manga',
     button: 'My collection',
     description:
-      'I discovered this universe thanks to a friend who knew how to share his passion with me. I now have my own growing collection! 📚'
+      'Thanks to a friend who shared his passion with me, I discovered this universe and built my own manga collection, which continues to grow over time 📚'
   },
   {
     title: 'Climbing',
     button: 'My club',
     description:
-      'Favorite discipline that I discovered in high school and decided to practice again a few years later 🧗🏻‍♂️'
+      'A discipline that captivated me when I was in high school and which I decided to return to a few years later 🧗🏻‍♂️'
   },
   {
     title: 'VTT',

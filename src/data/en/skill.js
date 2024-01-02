@@ -12,15 +12,15 @@ export default [
     label: 'Back-end frameworks'
   },
   {
-    label: 'Project management'
+    label: 'Continuous integration'
   },
   {
     label: 'Data management'
   },
-  {
-    label: 'Languages'
-  },
-  {
-    label: 'Personal'
-  }
+  // {
+  //   label: 'Languages'
+  // },
+  // {
+  //   label: 'Personal'
+  // }
 ];

@@ -94,8 +94,8 @@ export default {
     color: '#41B883',
     icon: 'nuxtjs.svg',
     link: 'https://nuxt.com/',
-    width: 16,
-    height: 16
+    width: 18,
+    height: 18
   },
   phaser: {
     label: 'Phaser',
