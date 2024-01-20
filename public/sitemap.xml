@@ -6,48 +6,48 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
 >
     <url>
-        <loc>https://quentin-macq.netlify.app/</loc>
-        <lastmod>2023-06-01</lastmod>
+        <loc>https://qmacq.netlify.app/</loc>
+        <lastmod>2024-01-20</lastmod>
     </url>
     <url>
-        <loc>https://quentin-macq.netlify.app/#presentation</loc>
-        <lastmod>2023-06-01</lastmod>
+        <loc>https://qmacq.netlify.app/#presentation</loc>
+        <lastmod>2024-01-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://quentin-macq.netlify.app/#skill</loc>
-        <lastmod>2023-06-01</lastmod>
+        <loc>https://qmacq.netlify.app/#skill</loc>
+        <lastmod>2024-01-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://quentin-macq.netlify.app/#education</loc>
-        <lastmod>2023-06-01</lastmod>
+        <loc>https://qmacq.netlify.app/#education</loc>
+        <lastmod>2024-01-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://quentin-macq.netlify.app/#experience</loc>
-        <lastmod>2023-06-01</lastmod>
+        <loc>https://qmacq.netlify.app/#experience</loc>
+        <lastmod>2024-01-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://quentin-macq.netlify.app/#project</loc>
-        <lastmod>2023-06-01</lastmod>
+        <loc>https://qmacq.netlify.app/#project</loc>
+        <lastmod>2024-01-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://quentin-macq.netlify.app/#hobby</loc>
-        <lastmod>2023-06-01</lastmod>
+        <loc>https://qmacq.netlify.app/#hobby</loc>
+        <lastmod>2024-01-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://quentin-macq.netlify.app/#contact</loc>
-        <lastmod>2023-06-01</lastmod>
+        <loc>https://qmacq.netlify.app/#contact</loc>
+        <lastmod>2024-01-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
