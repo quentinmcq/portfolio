@@ -13,7 +13,7 @@
   </v-app>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { onMounted } from 'vue';
 import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
 import { useResponsive } from '@/composables/responsive';

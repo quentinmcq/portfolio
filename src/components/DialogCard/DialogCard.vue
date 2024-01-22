@@ -52,7 +52,7 @@
   </v-row>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useImagePath } from '@/composables/image-path.js';
 import { useGoogleAnalyticsEvent } from '@/composables/google-analytics.js';
 import DialogCardItem from '@/components/DialogCard/DialogCardItem/DialogCardItem.vue';
@@ -60,23 +60,16 @@ import SkillChip from '@/components/SkillChip/SkillChip.vue';
 import Image from '@/components/Image/Image.vue';
 import ImageGallery from '@/components/Image/ImageGallery/ImageGallery.vue';
 
-const props = defineProps({
-  items: {
-    type: Array,
-    required: true
-  },
-  label: {
-    type: String,
-    required: true
-  },
-  customButtonText: {
-    type: Boolean,
-    default: null
-  },
-  transition: {
-    type: String,
-    default: 'dialog-bottom-transition'
-  }
+interface Props {
+  items: Array<Object>;
+  label: String;
+  customButtonText?: Boolean;
+  transition?: String;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  customButtonText: null,
+  transition: 'dialog-bottom-transition'
 });
 
 function linkImgPath(image) {

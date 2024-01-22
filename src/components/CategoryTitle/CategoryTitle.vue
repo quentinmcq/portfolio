@@ -4,13 +4,12 @@
   </div>
 </template>
 
-<script setup>
-defineProps({
-  label: {
-    type: String,
-    required: true
-  }
-});
+<script setup lang="ts">
+interface Props {
+  label: string;
+}
+
+defineProps<Props>();
 </script>
 
 <style lang="scss" src="./category-title.scss" scoped />

@@ -10,7 +10,7 @@
   </a>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useScroll } from '@/composables/scroll';
 import { useResponsive } from '@/composables/responsive';
 

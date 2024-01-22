@@ -92,24 +92,23 @@
   </v-container>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue';
 import { useContactForm } from '@/composables/email/contact-form';
 import { useResponsive } from '@/composables/responsive';
 import { useEmailSender } from '@/composables/send-email';
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue';
 
-defineProps({
-  label: {
-    type: String,
-    required: true
-  }
-});
+interface Props {
+  label: string;
+}
+
+defineProps<Props>();
 
 const PHONE_NUMBER_MAX_LENGTH = 10;
 const { buttonSize, textAreaRows } = useResponsive();
 
-const form = ref(null);
+const form = ref<HTMLInputElement | null>(null);
 const {
   name,
   phone,

@@ -42,26 +42,19 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useImagePath } from '@/composables/image-path';
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
 import Image from '../Image.vue';
 import { useDisplay } from 'vuetify';
 
-const props = defineProps({
-  images: {
-    type: Object,
-    required: true
-  },
-  label: {
-    type: String,
-    required: true
-  },
-  type: {
-    type: String,
-    required: true
-  }
-});
+interface Props {
+  images: Object;
+  label: String;
+  type: String;
+}
+
+const props = defineProps<Props>();
 
 const dialog = ref(false);
 const clickedImagePath = ref('');
@@ -121,4 +114,4 @@ function openImage(year, path) {
 }
 </script>
 
-<style lang="scss" src="./image-gallery.scss" />
+<style scoped lang="scss" src="./image-gallery.scss" />

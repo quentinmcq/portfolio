@@ -41,7 +41,7 @@
   </v-timeline-item>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useResponsive } from '@/composables/responsive';
 import { useImagePath } from '@/composables/image-path';
 import { useAnimation } from '@/composables/animation';
@@ -50,27 +50,16 @@ import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
 import { useDisplay } from 'vuetify';
 import Image from '../../Image/Image.vue';
 
+interface Props {
+  item: TimelineItem;
+  index: number;
+  label: string;
+}
+
+const props = defineProps<Props>();
+
 const { timelineSize } = useResponsive();
-
-const props = defineProps({
-  item: {
-    type: Object,
-    required: true
-  },
-
-  index: {
-    type: Number,
-    required: true
-  },
-
-  label: {
-    type: String,
-    required: true
-  }
-});
-
 const { smAndDown, smAndUp } = useDisplay();
-
 const prefix = usePrefixTranslation(props.label, props.index);
 const { path } = useImagePath({
   directory: props.label,

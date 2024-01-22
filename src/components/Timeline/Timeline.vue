@@ -12,22 +12,17 @@
   </v-timeline>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useResponsive } from '@/composables/responsive';
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue';
 import TimelineItem from '@/components/Timeline/TimelineItem/TimelineItem.vue';
 
+interface Props {
+  items: Array<Object>;
+  label: String;
+}
+
+defineProps<Props>();
+
 const { timelineDensity } = useResponsive();
-
-defineProps({
-  items: {
-    type: Array,
-    required: true
-  },
-
-  label: {
-    type: String,
-    required: true
-  }
-});
 </script>

@@ -18,22 +18,20 @@
   </v-chip>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { computed } from 'vue';
 import { useResponsive } from '@/composables/responsive';
 import technology from '@/data/technology';
 import Image from '@/components/Image/Image.vue';
 import { useImagePath } from '@/composables/image-path.js';
 
-const props = defineProps({
-  label: {
-    type: String,
-    required: true
-  },
-  color: {
-    type: String,
-    default: undefined
-  }
+interface Props {
+  label: string;
+  color?: string;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  color: undefined
 });
 
 const { chipSize } = useResponsive();

@@ -19,47 +19,28 @@
   </v-img>
 </template>
 
-<script setup>
-defineProps({
-  width: {
-    type: [String, Number],
-    default: undefined
-  },
-  height: {
-    type: [String, Number],
-    default: undefined
-  },
-  maxWidth: {
-    type: [String, Number],
-    default: undefined
-  },
-  maxHeight: {
-    type: [String, Number],
-    default: undefined
-  },
-  src: {
-    type: String,
-    required: true
-  },
-  lazySrc: {
-    type: String,
-    default: undefined
-  },
-  aspectRatio: {
-    type: String,
-    default: undefined
-  },
-  cover: {
-    type: Boolean,
-    default: false
-  },
-  eager: {
-    type: Boolean,
-    default: false
-  },
-  alt: {
-    type: String,
-    required: true
-  }
+<script setup lang="ts">
+interface Props {
+  width?: string | number;
+  height?: string | number;
+  maxWidth?: string | number;
+  maxHeight?: string | number;
+  src: string;
+  lazySrc?: string;
+  aspectRatio?: string;
+  cover?: boolean;
+  eager?: boolean;
+  alt: string;
+}
+
+withDefaults(defineProps<Props>(), {
+  width: undefined,
+  height: undefined,
+  maxWidth: undefined,
+  maxHeight: undefined,
+  lazySrc: undefined,
+  aspectRatio: undefined,
+  cover: false,
+  eager: false
 });
 </script>

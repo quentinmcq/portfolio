@@ -56,7 +56,7 @@
   </v-navigation-drawer>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue';
 import { useScroll } from '@/composables/scroll';
 import { useResponsive } from '@/composables/responsive';

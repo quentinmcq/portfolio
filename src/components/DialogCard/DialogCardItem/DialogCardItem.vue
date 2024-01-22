@@ -72,8 +72,8 @@
   </v-col>
 </template>
 
-<script setup>
-import { computed, ref } from 'vue';
+<script setup lang="ts">
+import { ref, toRefs, computed } from 'vue';
 import { useResponsive } from '@/composables/responsive';
 import { useImagePath } from '@/composables/image-path';
 import { usePrefixTranslation } from '@/composables/prefix-translation';
@@ -81,32 +81,25 @@ import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
 import { useAnimation } from '@/composables/animation';
 import Image from '../../Image/Image.vue';
 
-const props = defineProps({
-  item: {
-    type: Object,
-    required: true
-  },
-  index: {
-    type: Number,
-    required: true
-  },
-  label: {
-    type: String,
-    required: true
-  },
-  customButtonText: {
-    type: Boolean,
-    default: null
-  },
-  transition: {
-    type: String,
-    default: 'dialog-bottom-transition'
-  }
+interface Props {
+  item: Object,
+  index: Number,
+  label: String,
+  customButtonText?: Boolean,
+  transition?: String
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  customButtonText: null,
+  transition: 'dialog-bottom-transition'
 });
 
 let dialog = ref(false);
-const prefix = usePrefixTranslation(props.label, props.index);
+const { item, index, label } = toRefs(props);
+
+const prefix = usePrefixTranslation(label, index);
 const { buttonSize } = useResponsive();
+
 const buttonText = computed(() =>
   props.customButtonText ? `${prefix}.button` : `${props.label}.find-out-more`
 );
@@ -116,6 +109,11 @@ const { path } = useImagePath({
   image: props.item.cover
 });
 
+const { animation } = useAnimation({
+  index: props.index,
+  componentType: 'dialog'
+});
+
 function sendFindOutMoreButtonClickAnalyticsEvent() {
   useGoogleAnalyticsEvent({
     action: `find-out-more-button:click`,
@@ -123,11 +121,6 @@ function sendFindOutMoreButtonClickAnalyticsEvent() {
     label: props.item.title
   });
 }
-
-const { animation } = useAnimation({
-  index: props.index,
-  componentType: 'dialog'
-});
 </script>
 
 <style lang="scss" src="./dialog-card-item.scss" />

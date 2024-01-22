@@ -1,10 +1,18 @@
 module.exports = {
   root: true,
   extends: [
-    'eslint:recommended',
     'plugin:vue/vue3-essential',
-    'plugin:@stylistic/disable-legacy',
+    'eslint:recommended',
+    '@vue/eslint-config-typescript',
+    'plugin:@stylistic/disable-legacy'
   ],
+  env: {
+    node: true,
+    'vue/setup-compiler-macros': true
+  },
+  parserOptions: {
+    ecmaVersion: 'latest'
+  },
   plugins: [
     '@stylistic'
   ],
