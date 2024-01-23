@@ -11,6 +11,7 @@ export function initI18n(app) {
     fallbackWarn: false,
     globalInjection: true,
     allowComposition: true,
+    warnHtmlMessage: false,
     messages: {
       fr,
       en

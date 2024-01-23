@@ -1,10 +1,17 @@
 import { useDisplay } from 'vuetify';
-import { computed } from 'vue';
+import { computed, ComputedRef } from 'vue';
 
 const SM_SIZE = 'small';
 const DEFAULT_SIZE = 'default';
 
-export function useSize() {
+interface UseSize {
+  buttonSize: ComputedRef<'small' | 'default'>;
+  chipSize: ComputedRef<'small' | 'default'>;
+  iconSize: ComputedRef<'small' | 'default'>;
+  timelineSize: ComputedRef<'small' | 'default'>;
+}
+
+export function useSize(): UseSize {
   const { xs, smAndDown, mdAndDown } = useDisplay();
 
   const buttonSize = computed(() => (mdAndDown.value ? SM_SIZE : DEFAULT_SIZE));

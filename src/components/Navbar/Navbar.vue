@@ -76,8 +76,11 @@ function toggleMenu() {
   drawer.value = !drawer.value;
 }
 
-function scrollToSection(anchor) {
+function scrollToSection(anchor: string) {
   const link = document.querySelector(anchor);
+
+  if (!link) return;
+
   link.scrollIntoView({ behavior: 'smooth' });
 
   toggleMenu();

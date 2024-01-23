@@ -1,9 +1,22 @@
-import { ref } from 'vue';
+import {type Ref, ref} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useEmailJs } from '@/composables/email/emailjs';
 import { useSetInnerHTML } from '@/composables/email/inner-html';
 
-export function useEmailSender(formData) {
+interface FormData {
+  name: { value: string };
+  phone: { value: string };
+  email: { value: string };
+  message: { value: string };
+}
+
+interface UseEmailSender {
+  valid: Ref<boolean>;
+  loading: Ref<boolean>;
+  sendEmail: () => Promise<void>;
+}
+
+export function useEmailSender(formData: FormData): UseEmailSender {
   const { t } = useI18n();
   const valid = ref(false);
   const loading = ref(false);

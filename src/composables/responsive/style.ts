@@ -1,7 +1,12 @@
-import { computed } from 'vue';
+import { computed, ComputedRef } from 'vue';
 import { useDisplay } from 'vuetify';
 
-export function useStyle() {
+interface UseStyle {
+    appStyle: ComputedRef<string>;
+    gridStyle: ComputedRef<{} | { gridTemplateColumns: string }>
+}
+
+export function useStyle(): UseStyle {
   const { name, xs } = useDisplay();
 
   const appStyle = computed(() => {

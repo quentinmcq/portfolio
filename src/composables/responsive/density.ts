@@ -1,10 +1,14 @@
 import { useDisplay } from 'vuetify';
-import { computed } from 'vue';
+import { computed, ComputedRef } from 'vue';
+
+interface UseDensity {
+  timelineDensity: ComputedRef<"compact" | "default">;
+}
 
 const COMPACT_DENSITY = 'compact';
 const DEFAULT_DENSITY = 'default';
 
-export function useDensity() {
+export function useDensity(): UseDensity {
   const { smAndDown } = useDisplay();
 
   const timelineDensity = computed(() =>
