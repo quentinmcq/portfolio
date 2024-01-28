@@ -15,17 +15,17 @@
   </v-btn>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { computed } from 'vue';
 import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
 import { useResponsive } from '@/composables/responsive';
+import type { Presentation } from '@/types/Presentation';
 
-const props = defineProps({
-  presentation: {
-    type: Object,
-    required: true
-  }
-});
+interface Props {
+  presentation: Presentation
+}
+
+const props = defineProps<Props>();
 
 const { buttonSize } = useResponsive();
 

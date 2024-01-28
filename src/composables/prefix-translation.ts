@@ -6,5 +6,5 @@ export function usePrefixTranslation(label: Ref<String>, index: Ref<Number>): st
         - the index (ex: 0)
       This will allow you to retrieve the corresponding translations
    */
-  return `${label}[${index}]`;
+  return `${label.value}[${index.value}]`;
 }

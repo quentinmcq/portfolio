@@ -6,9 +6,10 @@
 
 <script setup lang="ts">
 import Timeline from '@/components/Timeline/Timeline.vue';
+import type { Experience } from '@/types/Experience';
 
 interface Props {
-  items: object[],
+  items: Experience[],
   label: string
 }
 

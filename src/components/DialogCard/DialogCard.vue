@@ -59,9 +59,12 @@ import DialogCardItem from '@/components/DialogCard/DialogCardItem/DialogCardIte
 import SkillChip from '@/components/SkillChip/SkillChip.vue';
 import Image from '@/components/Image/Image.vue';
 import ImageGallery from '@/components/Image/ImageGallery/ImageGallery.vue';
+import type { Hobby } from '@/types/Hobby';
+import type { Project } from '@/types/Project';
+import { toRefs } from 'vue';
 
 interface Props {
-  items: Array<Object>;
+  items: Project[] | Hobby[];
   label: string;
   customButtonText?: boolean;
   transition?: string;
@@ -71,6 +74,8 @@ const props = withDefaults(defineProps<Props>(), {
   customButtonText: null,
   transition: 'dialog-bottom-transition'
 });
+
+const { label } = toRefs(props);
 
 function linkImgPath(image) {
   const { path } = useImagePath({
@@ -84,8 +89,8 @@ function linkImgPath(image) {
 function sendDialogCardClickAnalyticsEvent() {
   useGoogleAnalyticsEvent({
     action: `dialog-card:click`,
-    category: props.label,
-    label: props.item.title
+    category: label,
+    label: item.value.title
   });
 }
 </script>

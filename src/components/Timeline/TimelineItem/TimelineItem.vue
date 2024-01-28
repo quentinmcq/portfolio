@@ -49,18 +49,22 @@ import { usePrefixTranslation } from '@/composables/prefix-translation';
 import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
 import { useDisplay } from 'vuetify';
 import Image from '../../Image/Image.vue';
+import { toRefs } from 'vue';
+import type { Experience } from '@/types/Experience';
+import type { Education } from '@/types/Education';
 
 interface Props {
-  item: TimelineItem;
+  item: Experience | Education;
   index: number;
   label: string;
 }
 
 const props = defineProps<Props>();
 
+const { label, item, index } = toRefs(props);
 const { timelineSize } = useResponsive();
 const { smAndDown, smAndUp } = useDisplay();
-const prefix = usePrefixTranslation(props.label, props.index);
+const prefix = usePrefixTranslation(label, index);
 const { path } = useImagePath({
   directory: props.label,
   image: props.item.cover

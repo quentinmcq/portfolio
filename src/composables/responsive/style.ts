@@ -8,7 +8,6 @@ interface UseStyle {
 
 export function useStyle(): UseStyle {
   const { name, xs } = useDisplay();
-  console.log(name.value);
 
   const appStyle = computed(() => {
     return (

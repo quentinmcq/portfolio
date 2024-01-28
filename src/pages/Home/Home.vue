@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import skills from '@/data/fr/skill';
 import educations from '@/data/fr/education';
 import experiences from '@/data/fr/experience';

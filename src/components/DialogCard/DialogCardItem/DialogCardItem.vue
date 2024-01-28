@@ -81,9 +81,10 @@ import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
 import { useAnimation } from '@/composables/animation';
 import Image from '../../Image/Image.vue';
 import type { Education } from '@/types/education';
+import type { Experience } from '@/types/Experience';
 
 interface Props {
-  item: Education,
+  item: Experience | Education,
   index: number,
   label: string,
   customButtonText?: boolean,
@@ -96,7 +97,7 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 let dialog = ref(false);
-const { index, label } = toRefs(props);
+const { label, item, index } = toRefs(props);
 
 const prefix = usePrefixTranslation(label, index);
 const { buttonSize } = useResponsive();
@@ -106,12 +107,12 @@ const buttonText = computed(() =>
 );
 
 const { path } = useImagePath({
-  directory: label,
+  directory: props.label,
   image: props.item.cover
 });
 
 const { animation } = useAnimation({
-  index: index,
+  index: props.index,
   componentType: 'dialog'
 });
 

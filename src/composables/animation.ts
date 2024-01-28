@@ -6,11 +6,11 @@ interface UseAnimation {
 }
 
 interface UseAnimationParameters {
-  index?: Ref<number>;
-  componentType?: Ref<'timeline' | 'dialog'>;
+  index?: number;
+  componentType?: 'timeline' | 'dialog';
 }
 
-export function useAnimation({ index = ref(0), componentType = ref('timeline') }: UseAnimationParameters): UseAnimation {
+export function useAnimation({ index = 0, componentType = 'timeline' }: UseAnimationParameters): UseAnimation {
   const { smAndDown } = useDisplay();
 
   const animation = computed(() => {

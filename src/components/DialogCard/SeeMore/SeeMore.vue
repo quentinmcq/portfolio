@@ -18,9 +18,11 @@ import { useDisplay } from 'vuetify';
 import { useResponsive } from '@/composables/responsive';
 import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
 import { useI18n } from 'vue-i18n';
+import type { Project } from '@/types/Project';
+import type { Hobby } from '@/types/Hobby';
 
 interface Props {
-  items?: Array<Object>;
+  items: Project[] |Hobby[];
   label: string;
 }
 

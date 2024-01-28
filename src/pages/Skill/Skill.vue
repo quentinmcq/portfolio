@@ -15,22 +15,21 @@
   </v-container>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue';
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue';
 import SkillItem from '@/pages/Skill/SkillItem/SkillItem.vue';
 import { useResponsive } from '@/composables/responsive';
+import type { Skill } from '@/types/Skill';
 
-const { gridStyle } = useResponsive();
+interface Props {
+  skills: Skill[]
+}
+
+defineProps<Props>();
 
 const label = ref('skill');
-
-defineProps({
-  skills: {
-    type: Array,
-    required: true
-  }
-});
+const { gridStyle } = useResponsive();
 </script>
 
 <style lang="scss" src="./skill.scss" scoped />

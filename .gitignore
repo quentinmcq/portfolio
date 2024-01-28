@@ -24,3 +24,6 @@ yarn-error.log*
 
 # Vitest directory
 coverage
+
+tsconfig.app.tsbuildinfo
+tsconfig.vitest.tsbuildinfo

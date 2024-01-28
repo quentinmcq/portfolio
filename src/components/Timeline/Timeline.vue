@@ -16,9 +16,11 @@
 import { useResponsive } from '@/composables/responsive';
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue';
 import TimelineItem from '@/components/Timeline/TimelineItem/TimelineItem.vue';
+import type { Experience } from '@/types/Experience';
+import type { Education } from '@/types/Education';
 
 interface Props {
-  items: Array<Object>;
+  items: Experience[] | Education[];
   label: string;
 }
 

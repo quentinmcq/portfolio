@@ -40,10 +40,7 @@
       color="white"
       icon="mdi-close"
       size="50"
-      @click="
-        toggleMenu();
-        sendMenuClickAnalyticsEvent;
-      "
+      @click="manageEvents()"
     />
 
     <ul class="navbar__link-list">
@@ -84,6 +81,11 @@ function scrollToSection(anchor: string) {
   link.scrollIntoView({ behavior: 'smooth' });
 
   toggleMenu();
+}
+
+function manageEvents() {
+  toggleMenu();
+  sendMenuClickAnalyticsEvent();
 }
 
 function sendMenuClickAnalyticsEvent() {

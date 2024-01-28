@@ -16,19 +16,15 @@
   </v-col>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import SkillChip from '@/components/SkillChip/SkillChip.vue';
 
-defineProps({
-  skill: {
-    type: Object,
-    required: true
-  },
-  index: {
-    type: Number,
-    required: true
-  }
-});
+interface Props {
+  skill: object,
+  index: number
+}
+
+defineProps<Props>();
 </script>
 
 <style lang="scss" src="./skill-item.scss" scoped />

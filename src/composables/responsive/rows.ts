@@ -1,5 +1,5 @@
 import { computed, type ComputedRef } from 'vue';
-import { useDisplay } from "vuetify";
+import { useDisplay } from 'vuetify';
 
 const XS_ROWS = 3;
 const DEFAULT_ROWS = 6;

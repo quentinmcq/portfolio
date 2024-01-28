@@ -18,9 +18,10 @@ import { useDisplay } from 'vuetify';
 import DialogCard from '@/components/DialogCard/DialogCard.vue';
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue';
 import SeeMore from '@/components/DialogCard/SeeMore/SeeMore.vue';
+import type { Hobby } from '@/types/Hobby';
 
 interface Props {
-  items: object[];
+  items: Hobby[];
   label: string;
 }
 
