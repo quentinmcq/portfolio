@@ -21,7 +21,7 @@ import { useI18n } from 'vue-i18n';
 
 interface Props {
   items?: Array<Object>;
-  label: String;
+  label: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {

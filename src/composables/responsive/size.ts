@@ -1,5 +1,5 @@
 import { useDisplay } from 'vuetify';
-import { computed, ComputedRef } from 'vue';
+import { computed, type ComputedRef } from 'vue';
 
 const SM_SIZE = 'small';
 const DEFAULT_SIZE = 'default';

@@ -1,4 +1,4 @@
-import { computed, ComputedRef } from 'vue';
+import { computed, type ComputedRef } from 'vue';
 import { useDisplay } from 'vuetify';
 
 interface UseStyle {
@@ -8,6 +8,7 @@ interface UseStyle {
 
 export function useStyle(): UseStyle {
   const { name, xs } = useDisplay();
+  console.log(name.value);
 
   const appStyle = computed(() => {
     return (

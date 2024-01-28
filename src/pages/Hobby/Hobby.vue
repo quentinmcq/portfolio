@@ -12,23 +12,19 @@
   </v-container>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, computed } from 'vue';
 import { useDisplay } from 'vuetify';
 import DialogCard from '@/components/DialogCard/DialogCard.vue';
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue';
 import SeeMore from '@/components/DialogCard/SeeMore/SeeMore.vue';
 
-const props = defineProps({
-  items: {
-    type: Array,
-    required: true
-  },
-  label: {
-    type: String,
-    required: true
-  }
-});
+interface Props {
+  items: object[];
+  label: string;
+}
+
+const props = defineProps<Props>();
 
 const { lgAndUp } = useDisplay();
 

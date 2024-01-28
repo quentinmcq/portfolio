@@ -19,7 +19,7 @@ import TimelineItem from '@/components/Timeline/TimelineItem/TimelineItem.vue';
 
 interface Props {
   items: Array<Object>;
-  label: String;
+  label: string;
 }
 
 defineProps<Props>();

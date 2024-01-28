@@ -73,18 +73,17 @@
   </v-container>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useAge } from '@/composables/age';
-import presentations from '@/data/fr/presentation.js';
+import presentations from '@/data/fr/presentation';
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue';
 import PresentationButton from '@/pages/Presentation/PresentationButton/PresentationButton.vue';
 
-defineProps({
-  label: {
-    type: String,
-    required: true
-  }
-});
+interface Props {
+  label: string
+}
+
+defineProps<Props>();
 
 const { age } = useAge();
 

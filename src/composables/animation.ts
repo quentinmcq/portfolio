@@ -1,4 +1,4 @@
-import {computed, type ComputedRef} from 'vue';
+import {computed, type ComputedRef, ref, type Ref} from 'vue';
 import { useDisplay } from 'vuetify';
 
 interface UseAnimation {
@@ -6,11 +6,11 @@ interface UseAnimation {
 }
 
 interface UseAnimationParameters {
-  index?: number;
-  componentType?: 'timeline' | 'dialog';
+  index?: Ref<number>;
+  componentType?: Ref<'timeline' | 'dialog'>;
 }
 
-export function useAnimation({ index = 0, componentType = 'timeline' }: UseAnimationParameters): UseAnimation {
+export function useAnimation({ index = ref(0), componentType = ref('timeline') }: UseAnimationParameters): UseAnimation {
   const { smAndDown } = useDisplay();
 
   const animation = computed(() => {

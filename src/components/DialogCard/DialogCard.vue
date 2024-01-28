@@ -62,9 +62,9 @@ import ImageGallery from '@/components/Image/ImageGallery/ImageGallery.vue';
 
 interface Props {
   items: Array<Object>;
-  label: String;
-  customButtonText?: Boolean;
-  transition?: String;
+  label: string;
+  customButtonText?: boolean;
+  transition?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {

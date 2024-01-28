@@ -49,9 +49,9 @@ import Image from '../Image.vue';
 import { useDisplay } from 'vuetify';
 
 interface Props {
-  images: Object;
-  label: String;
-  type: String;
+  images: object;
+  label: string;
+  type: string;
 }
 
 const props = defineProps<Props>();

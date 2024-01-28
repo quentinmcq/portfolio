@@ -1,5 +1,5 @@
 import { useDisplay } from 'vuetify';
-import { computed, ComputedRef } from 'vue';
+import { computed, type ComputedRef } from 'vue';
 
 interface UseWidth {
   menuWidth: ComputedRef<'100%' | '30%'| '40%'>

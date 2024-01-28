@@ -80,22 +80,23 @@ import { usePrefixTranslation } from '@/composables/prefix-translation';
 import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
 import { useAnimation } from '@/composables/animation';
 import Image from '../../Image/Image.vue';
+import type { Education } from '@/types/education';
 
 interface Props {
-  item: Object,
-  index: Number,
-  label: String,
-  customButtonText?: Boolean,
-  transition?: String
+  item: Education,
+  index: number,
+  label: string,
+  customButtonText?: boolean,
+  transition?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  customButtonText: null,
+  customButtonText: false,
   transition: 'dialog-bottom-transition'
 });
 
 let dialog = ref(false);
-const { item, index, label } = toRefs(props);
+const { index, label } = toRefs(props);
 
 const prefix = usePrefixTranslation(label, index);
 const { buttonSize } = useResponsive();
@@ -105,12 +106,12 @@ const buttonText = computed(() =>
 );
 
 const { path } = useImagePath({
-  directory: props.label,
+  directory: label,
   image: props.item.cover
 });
 
 const { animation } = useAnimation({
-  index: props.index,
+  index: index,
   componentType: 'dialog'
 });
 

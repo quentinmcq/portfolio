@@ -4,17 +4,13 @@
   </v-container>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import Timeline from '@/components/Timeline/Timeline.vue';
 
-defineProps({
-  items: {
-    type: Array,
-    required: true
-  },
-  label: {
-    type: String,
-    required: true
-  }
-});
+interface Props {
+  items: object[],
+  label: string
+}
+
+defineProps<Props>();
 </script>

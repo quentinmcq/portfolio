@@ -1,4 +1,4 @@
-import { Ref, ref } from 'vue';
+import {type Ref, ref } from 'vue';
 import { useEventListener } from '@/composables/event';
 import { useDisplay } from 'vuetify';
 

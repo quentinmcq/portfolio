@@ -3,7 +3,7 @@ import { useWidth } from '@/composables/responsive/width';
 import { useDensity } from '@/composables/responsive/density';
 import { useRows } from '@/composables/responsive/rows';
 import { useStyle } from '@/composables/responsive/style';
-import { ComputedRef } from 'vue';
+import type {ComputedRef} from 'vue';
 
 interface UseResponsive {
   buttonSize: ComputedRef<'small' | 'default'>;

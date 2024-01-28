@@ -1,12 +1,12 @@
-import { computed, ComputedRef } from 'vue';
+import { computed, type ComputedRef, type Ref } from 'vue';
 
 interface UseImagePath {
   path: ComputedRef<string>;
 }
 
 interface UseImagePathParameters {
-  directory: string;
-  image: string;
+  directory: Ref<string>;
+  image: Ref<string>;
 }
 
 export function useImagePath({ directory, image }: UseImagePathParameters): UseImagePath {
