@@ -1,4 +1,4 @@
-import {computed, type ComputedRef, ref, type Ref} from 'vue';
+import {computed, type ComputedRef } from 'vue';
 import { useDisplay } from 'vuetify';
 
 interface UseAnimation {

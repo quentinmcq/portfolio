@@ -20,15 +20,14 @@ import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
 import { useI18n } from 'vue-i18n';
 import type { Project } from '@/types/Project';
 import type { Hobby } from '@/types/Hobby';
+import { computed } from 'vue';
 
 interface Props {
   items: Project[] |Hobby[];
   label: string;
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  items: []
-});
+defineProps<Props>();
 
 const emit = defineEmits<{
   'see-more': []
@@ -38,10 +37,10 @@ const { lgAndUp } = useDisplay();
 const { buttonSize } = useResponsive();
 const { t } = useI18n();
 
-const numberOfItemsToDisplay = lgAndUp.value ? 4 : 2;
+const numberOfItemsToDisplay = computed(() => lgAndUp.value ? 4 : 2);
 
 function loadMore() {
-  emit('see-more', numberOfItemsToDisplay);
+  emit('see-more', numberOfItemsToDisplay.value);
   
   sendSeeMoreAnalyticsEvent();
 }
