@@ -1,7 +1,7 @@
 <template>
   <category-title :label="label" />
 
-  <v-timeline :density="timelineDensity" line-color="white">
+  <v-timeline class="timeline__container" :density="timelineDensity" line-color="white">
     <timeline-item
       v-for="(item, index) in items"
       :key="index"
@@ -28,3 +28,5 @@ defineProps<Props>();
 
 const { timelineDensity } = useResponsive();
 </script>
+
+<style lang="scss" src="./timeline.scss" />
