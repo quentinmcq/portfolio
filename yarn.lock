@@ -1081,17 +1081,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/shared@npm:3.4.15, @vue/shared@npm:^3.3.0":
+"@vue/shared@npm:3.4.15":
   version: 3.4.15
   resolution: "@vue/shared@npm:3.4.15"
   checksum: 10c0/eddcc1c82e8e550d9f3d622e33fd841c0c3b5c6f04f21f1cb10d3415068daabac0746279c88031861183d75d7a082fb599eec9201757d457de177d86989a9bc7
   languageName: node
   linkType: hard
 
-"@vue/shared@npm:3.4.16, @vue/shared@npm:^3.4.16":
+"@vue/shared@npm:3.4.16":
   version: 3.4.16
   resolution: "@vue/shared@npm:3.4.16"
   checksum: 10c0/c1e67b9f7553770c6ff77ab8fb27c959bb3fdbdd52b135412817df8b2d2d676ff1fa4c0adadc33beffa3c2842cf089eb576f3d4a7a796e91d51076cf96cab148
+  languageName: node
+  linkType: hard
+
+"@vue/shared@npm:^3.3.0, @vue/shared@npm:^3.4.16":
+  version: 3.4.17
+  resolution: "@vue/shared@npm:3.4.17"
+  checksum: 10c0/2b5f5dbbc58cc88019184ff79ac8237ab131cd7187acfd3660a7eb0acf0db48536a0776b10f06be7425ab5d61dda8971fe6d2cff61936987b91bdc4511790211
   languageName: node
   linkType: hard
 
