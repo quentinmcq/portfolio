@@ -18,32 +18,32 @@ interface ContactForm {
   resetForm: () => void;
 }
 
-const MESSAGE_MIN_LENGTH = 20;
+const messageMinLength: number = 20;
 
 export function useContactForm({ form }: Form): ContactForm {
   const { t } = useI18n();
 
-  const REQUIRED_FIELD = () => (v: any) => Boolean(v) || t('contact.required-field');
-  const INVALID_PHONE_NUMBER = t('contact.invalid-phone-number');
-  const INVALID_ADDRESS_FORMAT = t('contact.invalid-address-format');
-  const MIN_MESSAGE_LENGTH = () => (v: string | any[]) =>
-    (v && v.length >= MESSAGE_MIN_LENGTH) ||
-    t('contact.min-message-length', { MESSAGE_MIN_LENGTH });
+  const requiredField = () => (v: any) => Boolean(v) || t('contact.required-field');
+  const invalidPhoneNumber = t('contact.invalid-phone-number');
+  const invalidAddressFormat = t('contact.invalid-address-format');
+  const minMessageLength = () => (v: string | any[]) =>
+    (v && v.length >= messageMinLength) ||
+    t('contact.min-message-length', { minLength: messageMinLength });
 
   const name = ref('');
   const phone = ref('');
   const email = ref('');
   const message = ref('');
 
-  const nameRules = ref([REQUIRED_FIELD()]);
+  const nameRules = ref([requiredField()]);
   const phoneRules = ref([
-      (v: string) => !v || /^0[1-9]\d{8}$/.test(v) || INVALID_PHONE_NUMBER
+      (v: string) => !v || /^0[1-9]\d{8}$/.test(v) || invalidPhoneNumber
   ]);
   const emailRules = ref([
-    REQUIRED_FIELD(),
-      (v: string) => !v || /.+@.+\..+/.test(v) || INVALID_ADDRESS_FORMAT
+    requiredField(),
+      (v: string) => !v || /.+@.+\..+/.test(v) || invalidAddressFormat
   ]);
-  const messageRules = ref([REQUIRED_FIELD(), MIN_MESSAGE_LENGTH()]);
+  const messageRules = ref([requiredField(), minMessageLength()]);
 
   const validateForm = () => form.value.validate();
   const resetForm = () => form.value.reset();

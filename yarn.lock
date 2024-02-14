@@ -338,6 +338,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@neoconfetti/vue@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "@neoconfetti/vue@npm:2.2.1"
+  checksum: 10c0/2e0892ea5deb9784c9e0cd61f01fed549176f795e2aa7102e3e8aba204e3530490650142b303ed0378901b63cae0e5b010deace05d716ef30f09534df6df918f
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -3051,6 +3058,7 @@ __metadata:
   resolution: "portfolio@workspace:."
   dependencies:
     "@mdi/font": "npm:^7.4.47"
+    "@neoconfetti/vue": "npm:^2.2.1"
     "@rushstack/eslint-patch": "npm:^1.7.2"
     "@stylistic/eslint-plugin": "npm:^1.6.1"
     "@tsconfig/node20": "npm:^20.1.2"

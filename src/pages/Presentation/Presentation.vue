@@ -43,9 +43,9 @@
                 </a>
               </template>
 
-              <template #vuejs>
+              <template #nuxtjs>
                 <a
-                  :href="vuejsLink"
+                  :href="nuxtjsLink"
                   class="presentation__link"
                   target="_blank"
                   rel="noopener"
@@ -88,7 +88,7 @@ defineProps<Props>();
 const { age } = useAge();
 
 const symfonyLink = 'https://symfony.com/';
-const vuejsLink = 'https://vuejs.org/';
+const nuxtjsLink = 'https://nuxtjs.com/';
 </script>
 
 <style lang="scss" src="./presentation.scss" scoped />

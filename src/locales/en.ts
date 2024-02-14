@@ -30,16 +30,16 @@ export default {
 
   footer: {
     copyright: '© Copyright - {currentYear}',
-    credit: 'Developed with ❤️ by Quentin MACQ'
+    credit: 'Made with ❤️ by Quentin MACQ'
   },
 
   presentation: {
     'main-title': 'Presentation',
     'part-1': "Hi, I'm {name} and I'm {age} years old.",
     'part-2':
-      'Passionate web developer, my favorite technologies are {symfony} and {vuejs}.',
+      'Passionate web developer for several years now, I use the {symfony} and {nuxtjs} frameworks on a daily basis.',
     'part-3':
-      'Curious by nature, I try to keep up to date with the latest news by doing technological watch 💻'
+      'Curious by nature, I love doing technological watch and sharing my knowledge with others 🎉'
   },
 
   skill: {

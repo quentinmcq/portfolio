@@ -2,6 +2,8 @@
   <v-container :id="label" class="contact">
     <category-title :label="label" />
 
+    <div v-if="showConfettis" v-confetti="{ force: 0.9 }" />
+
     <v-row align="center" data-aos="zoom-in" justify="center">
       <v-col>
         <v-card class="contact__card">
@@ -25,7 +27,7 @@
 
             <v-text-field
               v-model="phone"
-              :counter="PHONE_NUMBER_MAX_LENGTH"
+              :counter="phoneNumberMaxLength"
               :label="$t('contact.phone-number')"
               :rules="phoneRules"
               class="contact__form__field"
@@ -93,6 +95,7 @@
 </template>
 
 <script setup lang="ts">
+import { vConfetti } from '@neoconfetti/vue';
 import { ref } from 'vue';
 import { useContactForm } from '@/composables/email/contact-form';
 import { useResponsive } from '@/composables/responsive';
@@ -105,7 +108,7 @@ interface Props {
 
 defineProps<Props>();
 
-const PHONE_NUMBER_MAX_LENGTH = 10;
+const phoneNumberMaxLength: number = 10;
 const { buttonSize, textAreaRows } = useResponsive();
 
 const form = ref<HTMLInputElement | null>(null);
@@ -122,7 +125,7 @@ const {
   resetForm
 } = useContactForm({ form });
 
-const { valid, loading, sendEmail } = useEmailSender({
+const { valid, loading, showConfettis, sendEmail } = useEmailSender({
   name,
   phone,
   email,

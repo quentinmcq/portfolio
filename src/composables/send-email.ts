@@ -13,6 +13,7 @@ interface FormData {
 interface UseEmailSender {
   valid: Ref<boolean>;
   loading: Ref<boolean>;
+  showConfettis: Ref<boolean>;
   sendEmail: () => Promise<void>;
 }
 
@@ -20,6 +21,7 @@ export function useEmailSender(formData: FormData): UseEmailSender {
   const { t } = useI18n();
   const valid = ref(false);
   const loading = ref(false);
+  const showConfettis = ref(false);
 
   const sendEmail = async () => {
     loading.value = true;
@@ -34,6 +36,7 @@ export function useEmailSender(formData: FormData): UseEmailSender {
 
       await useEmailJs(data);
       useSetInnerHTML({ content: t('contact.sent') });
+      showConfettis.value = true;
     } catch {
       useSetInnerHTML({ content: t('contact.error') });
     } finally {
@@ -46,5 +49,5 @@ export function useEmailSender(formData: FormData): UseEmailSender {
     setTimeout(() => useSetInnerHTML({ content: t('contact.send') }), 3000);
   };
 
-  return { valid, loading, sendEmail };
+  return { valid, loading, showConfettis, sendEmail };
 }
