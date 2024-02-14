@@ -1016,7 +1016,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/shared@npm:3.4.19, @vue/shared@npm:^3.3.0, @vue/shared@npm:^3.4.18":
+"@vue/shared@npm:3.4.19, @vue/shared@npm:^3.3.0, @vue/shared@npm:^3.4.19":
   version: 3.4.19
   resolution: "@vue/shared@npm:3.4.19"
   checksum: 10c0/bd4a060b0064f0e183e5bb8e346f3be6ff7046793b0765a407e5334860ffd646b28a4ef53652b644e83bd473cea91189377cd83c933bb638d1da143d28f779ff
@@ -3058,7 +3058,7 @@ __metadata:
     "@types/node": "npm:^20.11.17"
     "@vitejs/plugin-vue": "npm:^5.0.4"
     "@vue/eslint-config-typescript": "npm:^12.0.0"
-    "@vue/shared": "npm:^3.4.18"
+    "@vue/shared": "npm:^3.4.19"
     "@vue/test-utils": "npm:^2.4.4"
     "@vue/tsconfig": "npm:^0.5.1"
     aos: "npm:^2.3.4"
@@ -3074,12 +3074,12 @@ __metadata:
     vite: "npm:^5.1.1"
     vite-plugin-vuetify: "npm:^2.0.1"
     vitest: "npm:^1.2.2"
-    vue: "npm:^3.4.18"
+    vue: "npm:^3.4.19"
     vue-gtag: "npm:^2.0.1"
     vue-i18n: "npm:^9.9.1"
     vue-tsc: "npm:^1.8.27"
     vue-writer: "npm:^1.2.0"
-    vuetify: "npm:^3.5.3"
+    vuetify: "npm:^3.5.4"
     webfontloader: "npm:^1.6.28"
   languageName: unknown
   linkType: soft
@@ -3958,7 +3958,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue@npm:^3.4.18":
+"vue@npm:^3.4.19":
   version: 3.4.19
   resolution: "vue@npm:3.4.19"
   dependencies:
@@ -3976,9 +3976,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vuetify@npm:^3.5.3":
-  version: 3.5.3
-  resolution: "vuetify@npm:3.5.3"
+"vuetify@npm:^3.5.4":
+  version: 3.5.4
+  resolution: "vuetify@npm:3.5.4"
   peerDependencies:
     typescript: ">=4.7"
     vite-plugin-vuetify: ">=1.0.0-alpha.12"
@@ -3994,7 +3994,7 @@ __metadata:
       optional: true
     webpack-plugin-vuetify:
       optional: true
-  checksum: 10c0/592569c9f31193401d304106e581e3a09c762fadb7ed695224f710e764c53e057ce1a5368e6859544bfb58a01ffe3ee849b33d368c26341773295a9cbef85fbe
+  checksum: 10c0/e48745e6eafdc4a16cd5a09fb715c2c31c87a705cf7f3f3d94a0b125bc2e1c2d0b083f39912b7843b091f828bbd0b0b7f67a93b1c480ed3d33c1bf2e1d0b5a3a
   languageName: node
   linkType: hard
 
