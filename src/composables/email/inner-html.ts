@@ -1,24 +1,5 @@
-interface useSetInnerHtmlParameters {
-  selector?: string;
-  content: string;
-}
-
-interface useSetInnerHtml {
-  setInnerHTML: (element: Element | null) => void;
-}
-
-export function useSetInnerHTML({
-  selector = '#message-status .v-btn__content',
-  content
-}: useSetInnerHtmlParameters): useSetInnerHtml  {
-  const setInnerHTML = (element: Element | null) => {
-    if (element) {
-      element.innerHTML = content;
-    }
-  };
-
+export function useSetInnerHTML(selector: string, content: string) {
   const element = document.querySelector(selector);
-  setInnerHTML(element);
 
-  return { setInnerHTML };
+  if (element) element.innerHTML = content;
 }
