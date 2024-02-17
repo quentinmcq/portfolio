@@ -1,12 +1,12 @@
 <template>
-  <v-container :id="label">
-    <category-title :label="label" />
-    <dialog-card :items="allItems" :label="label" customButtonText />
+  <v-container :id="componentName">
+    <CategoryTitle :component-name="componentName" />
+    <DialogCard :items="allItems" :component-name="componentName" customButtonText />
 
-    <see-more
+    <SeeMore
       v-show="hasMoreItems"
-      :items="items"
-      :label="label"
+      :items="hobbies"
+      :component-name="componentName"
       @see-more="setNumberOfItemsToDisplay"
     />
   </v-container>
@@ -15,31 +15,22 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { useDisplay } from 'vuetify';
+import hobbies from '@/data/fr/hobby';
 import DialogCard from '@/components/DialogCard/DialogCard.vue';
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue';
 import SeeMore from '@/components/DialogCard/SeeMore/SeeMore.vue';
-import type { Hobby } from '@/types/Hobby';
+import { useComponentName } from '@/composables/common/component-name';
 
-interface Props {
-  items: Hobby[];
-  label: string;
-}
-
-const props = defineProps<Props>();
-
+const componentName = useComponentName();
 const { lgAndUp } = useDisplay();
 
 const DEFAULT_NUMBER_OF_ITEMS_TO_DISPLAY = lgAndUp.value ? 4 : 2;
 const numberOfDisplayedItems = ref(DEFAULT_NUMBER_OF_ITEMS_TO_DISPLAY);
 
-const allItems = computed(() =>
-  props.items.slice(0, numberOfDisplayedItems.value)
-);
-const hasMoreItems = computed(
-  () => numberOfDisplayedItems.value < props.items.length
-);
+const allItems = computed(() => hobbies.slice(0, numberOfDisplayedItems.value));
+const hasMoreItems = computed(() => numberOfDisplayedItems.value < hobbies.length);
 
-function setNumberOfItemsToDisplay(number) {
-  numberOfDisplayedItems.value += number;
+function setNumberOfItemsToDisplay(itemsNumber: number): void {
+  numberOfDisplayedItems.value += itemsNumber;
 }
 </script>

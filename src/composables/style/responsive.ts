@@ -1,8 +1,8 @@
-import { useSize } from '@/composables/responsive/size';
-import { useWidth } from '@/composables/responsive/width';
-import { useDensity } from '@/composables/responsive/density';
-import { useRows } from '@/composables/responsive/rows';
-import { useStyle } from '@/composables/responsive/style';
+import { useSize } from '@/composables/style/size';
+import { useWidth } from '@/composables/style/width';
+import { useDensity } from '@/composables/style/density';
+import { useRows } from '@/composables/style/rows';
+import { useStyle } from '@/composables/style/style';
 import type {ComputedRef} from 'vue';
 
 interface UseResponsive {
@@ -11,8 +11,8 @@ interface UseResponsive {
   iconSize: ComputedRef<'small' | 'default'>;
   timelineSize: ComputedRef<'small' | 'default'>;
   menuWidth: ComputedRef<'100%' | '30%' | '40%'>;
-  timelineDensity:  ComputedRef<'default' | 'compact'>;
-  textAreaRows:  ComputedRef<3 | 6>
+  timelineDensity: ComputedRef<'default' | 'compact'>;
+  textAreaRows: ComputedRef<3 | 6>
   appStyle: ComputedRef<string>;
   gridStyle: ComputedRef<{} | { gridTemplateColumns: string; }>
 }

@@ -28,15 +28,5 @@ export default [
     label: 'Gestion de données',
     color: '#e01f0f',
     content: ['Grafana', 'RabbitMQ', 'Elasticsearch']
-  },
-  // {
-  //   label: 'Langues',
-  //   color: '#a86147',
-  //   content: ['French (native)', 'English (B2)']
-  // },
-  // {
-  //   label: 'Personnelles',
-  //   color: '',
-  //   content: ['Autonomy', 'Teamwork', 'Organization']
-  // }
+  }
 ];

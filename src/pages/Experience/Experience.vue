@@ -1,17 +1,13 @@
 <template>
-  <v-container :id="label" class="experience">
-    <timeline :items="items" :label="label" />
+  <v-container :id="componentName" class="experience">
+    <Timeline :items="experiences" :componentName="componentName" />
   </v-container>
 </template>
 
 <script setup lang="ts">
+import experiences from '@/data/fr/experience';
 import Timeline from '@/components/Timeline/Timeline.vue';
-import type { Experience } from '@/types/Experience';
+import { useComponentName } from '@/composables/common/component-name';
 
-interface Props {
-  items: Experience[],
-  label: string
-}
-
-defineProps<Props>();
+const componentName = useComponentName();
 </script>

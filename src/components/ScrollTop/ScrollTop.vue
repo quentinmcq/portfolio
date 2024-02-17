@@ -11,8 +11,8 @@
 </template>
 
 <script setup lang="ts">
-import { useScroll } from '@/composables/scroll';
-import { useResponsive } from '@/composables/responsive';
+import { useScroll } from '@/composables/event/scroll';
+import { useResponsive } from '@/composables/style/responsive';
 
 const { iconSize } = useResponsive();
 const { visible, scrollToTop } = useScroll();

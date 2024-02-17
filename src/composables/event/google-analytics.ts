@@ -1,8 +1,9 @@
 import { event } from 'vue-gtag';
+import { type Ref } from 'vue';
 
 interface UseGoogleAnalyticsEvent {
     action: string;
-    category: string;
+    category: Ref<string> | string;
     label: string;
     value?: number;
 }

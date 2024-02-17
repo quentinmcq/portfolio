@@ -74,20 +74,20 @@
 
 <script setup lang="ts">
 import { ref, toRefs, computed } from 'vue';
-import { useResponsive } from '@/composables/responsive';
-import { useImagePath } from '@/composables/image-path';
-import { usePrefixTranslation } from '@/composables/prefix-translation';
-import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
-import { useAnimation } from '@/composables/animation';
+import { useResponsive } from '@/composables/style/responsive';
+import { useImagePath } from '@/composables/common/image-path';
+import { usePrefixTranslation } from '@/composables/common/prefix-translation';
+import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics';
+import { useAnimation } from '@/composables/style/animation';
 import Image from '../../Image/Image.vue';
-import type { Education } from '@/types/education';
-import type { Experience } from '@/types/Experience';
+import type { Project } from '@/types/Project';
+import type { Hobby } from '@/types/Hobby';
 
 interface Props {
-  item: Experience | Education,
-  index: number,
-  label: string,
-  customButtonText?: boolean,
+  item: Project | Hobby
+  index: number
+  componentName: string
+  customButtonText?: boolean
   transition?: string
 }
 
@@ -97,17 +97,17 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 let dialog = ref(false);
-const { label, item, index } = toRefs(props);
+const { componentName, item, index } = toRefs(props);
 
-const prefix = usePrefixTranslation(label, index);
+const prefix = usePrefixTranslation(componentName, index);
 const { buttonSize } = useResponsive();
 
 const buttonText = computed(() =>
-  props.customButtonText ? `${prefix}.button` : `${props.label}.find-out-more`
+  props.customButtonText ? `${prefix}.button` : `${props.componentName}.find-out-more`
 );
 
 const { path } = useImagePath({
-  directory: props.label,
+  directory: props.componentName,
   image: props.item.cover
 });
 
@@ -116,10 +116,10 @@ const { animation } = useAnimation({
   componentType: 'dialog'
 });
 
-function sendFindOutMoreButtonClickAnalyticsEvent() {
+function sendFindOutMoreButtonClickAnalyticsEvent(): void {
   useGoogleAnalyticsEvent({
     action: `find-out-more-button:click`,
-    category: props.label,
+    category: props.componentName,
     label: props.item.title
   });
 }

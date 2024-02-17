@@ -42,38 +42,37 @@
 </template>
 
 <script setup lang="ts">
-import { useResponsive } from '@/composables/responsive';
-import { useImagePath } from '@/composables/image-path';
-import { useAnimation } from '@/composables/animation';
-import { usePrefixTranslation } from '@/composables/prefix-translation';
-import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
+import { useResponsive } from '@/composables/style/responsive';
+import { useImagePath } from '@/composables/common/image-path';
+import { useAnimation } from '@/composables/style/animation';
+import { usePrefixTranslation } from '@/composables/common/prefix-translation';
+import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics';
 import { useDisplay } from 'vuetify';
 import Image from '../../Image/Image.vue';
 import { toRefs } from 'vue';
 import type { Experience } from '@/types/Experience';
 import type { Education } from '@/types/Education';
 
-interface Props {
-  item: Experience | Education;
-  index: number;
-  label: string;
-}
+const props = defineProps<{
+  item: Experience | Education
+  index: number
+  componentName: string
+}>();
 
-const props = defineProps<Props>();
-
-const { label, item, index } = toRefs(props);
+const { componentName, item, index } = toRefs(props);
 const { timelineSize } = useResponsive();
 const { smAndDown, smAndUp } = useDisplay();
-const prefix = usePrefixTranslation(label, index);
+const prefix = usePrefixTranslation(componentName, index);
+
 const { path } = useImagePath({
-  directory: props.label,
+  directory: props.componentName,
   image: props.item.cover
 });
 
-function sendTimelineCardClickAnalyticsEvent() {
+function sendTimelineCardClickAnalyticsEvent(): void {
   useGoogleAnalyticsEvent({
     action: `timeline-card:click`,
-    category: props.label,
+    category: props.componentName,
     label: props.item.title
   });
 }

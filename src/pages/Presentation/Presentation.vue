@@ -1,6 +1,6 @@
 <template>
-  <v-container :id="label" class="presentation">
-    <category-title :label="label" />
+  <v-container :id="componentName" class="presentation">
+    <CategoryTitle :component-name="componentName" />
 
     <v-row data-aos="zoom-in">
       <v-col>
@@ -22,7 +22,7 @@
               </template>
 
               <template #age>
-                {{ age }}
+                {{ useAge() }}
               </template>
             </i18n-t>
 
@@ -34,7 +34,7 @@
             >
               <template #symfony>
                 <a
-                  :href="symfonyLink"
+                  href="https://symfony.com"
                   class="presentation__link"
                   target="_blank"
                   rel="noopener"
@@ -45,7 +45,7 @@
 
               <template #nuxtjs>
                 <a
-                  :href="nuxtjsLink"
+                  href="https://nuxtjs.com"
                   class="presentation__link"
                   target="_blank"
                   rel="noopener"
@@ -74,21 +74,13 @@
 </template>
 
 <script setup lang="ts">
-import { useAge } from '@/composables/age';
+import { useAge } from '@/composables/common/age';
 import presentations from '@/data/fr/presentation';
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue';
 import PresentationButton from '@/pages/Presentation/PresentationButton/PresentationButton.vue';
+import { useComponentName } from '@/composables/common/component-name';
 
-interface Props {
-  label: string
-}
-
-defineProps<Props>();
-
-const { age } = useAge();
-
-const symfonyLink = 'https://symfony.com/';
-const nuxtjsLink = 'https://nuxtjs.com/';
+const componentName = useComponentName();
 </script>
 
 <style lang="scss" src="./presentation.scss" scoped />

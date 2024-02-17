@@ -1,5 +1,5 @@
 export interface Skill {
-    label: string;
+    componentName: string;
     color: string;
     content: string;
 }

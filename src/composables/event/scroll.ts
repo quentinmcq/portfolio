@@ -1,5 +1,5 @@
 import {type Ref, ref } from 'vue';
-import { useEventListener } from '@/composables/event';
+import { useEventListener } from '@/composables/event/event';
 import { useDisplay } from 'vuetify';
 
 const XS_WIDTH = 780;

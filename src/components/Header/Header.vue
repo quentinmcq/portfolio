@@ -5,7 +5,7 @@
       <span class="header__name">{{ $t('common.name') }}</span>
     </h1>
 
-    <vue-writer
+    <VueWriter
       class="header__typed"
       :array="[
         $t('header.developer'),

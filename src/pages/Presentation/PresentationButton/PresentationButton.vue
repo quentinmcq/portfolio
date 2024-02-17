@@ -17,15 +17,13 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
-import { useResponsive } from '@/composables/responsive';
+import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics';
+import { useResponsive } from '@/composables/style/responsive';
 import type { Presentation } from '@/types/Presentation';
 
-interface Props {
+const props = defineProps<{
   presentation: Presentation
-}
-
-const props = defineProps<Props>();
+}>();
 
 const { buttonSize } = useResponsive();
 
@@ -34,7 +32,7 @@ const target = computed(() =>
 );
 const icon = computed(() => props.presentation.icon || '');
 
-function sendEventOnButtonClick() {
+function sendEventOnButtonClick(): void {
   useGoogleAnalyticsEvent({
     action: 'presentation-button',
     category: 'trafic',

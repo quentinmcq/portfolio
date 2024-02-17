@@ -1,24 +1,19 @@
 <template>
   <div>
-    <loading-bar />
-    <scroll-top />
+    <LoadingBar />
+    <ScrollTop />
 
-    <presentation label="presentation" />
-    <skill :skills="skills" label="skill" />
-    <education :items="educations" label="education" />
-    <experience :items="experiences" label="experience" />
-    <project :items="projects" label="project" />
-    <hobby :items="hobbies" label="hobby" />
-    <contact label="contact" />
+    <Presentation />
+    <Skill />
+    <Education />
+    <Experience />
+    <Project />
+    <Hobby />
+    <Contact />
   </div>
 </template>
 
 <script setup lang="ts">
-import skills from '@/data/fr/skill';
-import educations from '@/data/fr/education';
-import experiences from '@/data/fr/experience';
-import projects from '@/data/fr/project';
-import hobbies from '@/data/fr/hobby';
 import LoadingBar from '@/components/LoadingBar/LoadingBar.vue';
 import ScrollTop from '@/components/ScrollTop/ScrollTop.vue';
 import Presentation from '@/pages/Presentation/Presentation.vue';

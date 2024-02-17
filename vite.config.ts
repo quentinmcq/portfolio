@@ -23,7 +23,7 @@ export default defineConfig({
       }
     }
   },
-  // Allow mdi fonts to be loaded in local
+  // Allow mdi fonts to be loaded during local development
   server: {
     fs: {
       allow: ['C:/Users/Quentin/']

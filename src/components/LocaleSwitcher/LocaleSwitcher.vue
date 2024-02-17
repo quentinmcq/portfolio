@@ -41,7 +41,7 @@ import { useI18n } from 'vue-i18n';
 const { locale, availableLocales } = useI18n();
 const selectedLocaleIndex = ref(1);
 
-function switchLocale(lang) {
+function switchLocale(lang: string): void {
   if (locale.value !== lang) {
     availableLocales.reverse();
   }
@@ -50,7 +50,7 @@ function switchLocale(lang) {
   storeLangToLocalStorage(lang);
 }
 
-function storeLangToLocalStorage(lang) {
+function storeLangToLocalStorage(lang: string): void {
   localStorage.setItem('lang', lang);
 }
 </script>

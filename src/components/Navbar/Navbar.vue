@@ -55,9 +55,9 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { useScroll } from '@/composables/scroll';
-import { useResponsive } from '@/composables/responsive';
-import { useGoogleAnalyticsEvent } from '@/composables/google-analytics';
+import { useScroll } from '@/composables/event/scroll';
+import { useResponsive } from '@/composables/style/responsive';
+import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics';
 import LocaleSwitcher from '@/components/LocaleSwitcher/LocaleSwitcher.vue';
 import menu from '@/data/fr/menu';
 
@@ -69,11 +69,11 @@ const fullName = [
 ];
 
 const drawer = ref(false);
-function toggleMenu() {
+function toggleMenu(): void {
   drawer.value = !drawer.value;
 }
 
-function scrollToSection(anchor: string) {
+function scrollToSection(anchor: string): void {
   const link = document.querySelector(anchor);
 
   if (!link) return;
@@ -83,12 +83,12 @@ function scrollToSection(anchor: string) {
   toggleMenu();
 }
 
-function manageEvents() {
+function manageEvents(): void {
   toggleMenu();
   sendMenuClickAnalyticsEvent();
 }
 
-function sendMenuClickAnalyticsEvent() {
+function sendMenuClickAnalyticsEvent(): void {
   useGoogleAnalyticsEvent({
     action: `timeline-card:click`,
     category: 'Menu',

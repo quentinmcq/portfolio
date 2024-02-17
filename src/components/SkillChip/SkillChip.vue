@@ -20,10 +20,10 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import { useResponsive } from '@/composables/responsive';
-import technology from '@/data/technology';
+import { useResponsive } from '@/composables/style/responsive';
+import tool from '@/data/tools';
 import Image from '@/components/Image/Image.vue';
-import { useImagePath } from '@/composables/image-path.js';
+import { useImagePath } from '@/composables/common/image-path.js';
 
 interface Props {
   label: string;
@@ -37,8 +37,8 @@ const props = withDefaults(defineProps<Props>(), {
 const { chipSize } = useResponsive();
 
 const chipConfig = computed(() => {
-  const label = props.label.toLowerCase();
-  const config = technology[label];
+  const labelLowercase = props.label.toLowerCase();
+  const config = tool[labelLowercase];
 
   if (config) return config;
 

@@ -43,26 +43,24 @@
 </template>
 
 <script setup lang="ts">
-import { useImagePath } from '@/composables/image-path';
+import { useImagePath } from '@/composables/common/image-path';
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
 import Image from '../Image.vue';
 import { useDisplay } from 'vuetify';
 
-interface Props {
-  images: object;
-  label: string;
-  type: string;
-}
-
-const props = defineProps<Props>();
+const props = defineProps<{
+  images: object
+  componentName: string
+  type: string
+}>();
 
 const dialog = ref(false);
 const clickedImagePath = ref('');
 const clickedYear = ref('');
 const { xs } = useDisplay();
 
-const dimensionOpenImageWidth = ref(undefined);
-const dimensionOpenImageHeight = ref(undefined);
+const dimensionOpenImageWidth = ref(0);
+const dimensionOpenImageHeight = ref(0);
 
 onMounted(() => {
   calculateMaxDimensionOpenImage();
@@ -76,7 +74,7 @@ onBeforeUnmount(() => {
 const dimensionGalleryImage = computed(() => (xs.value ? 110 : 160));
 const reversedYears = computed(() => Object.keys(props.images).reverse());
 
-function calculateMaxDimensionOpenImage() {
+function calculateMaxDimensionOpenImage(): void {
   const maxSizeRatio = 0.9;
   const { innerWidth: screenWidth, innerHeight: screenHeight } = window;
   const isScreenNarrow = screenWidth < screenHeight;
@@ -97,16 +95,16 @@ function calculateMaxDimensionOpenImage() {
   dimensionOpenImageHeight.value = Math.floor(maxHeight);
 }
 
-function linkImgPath(year, image) {
+function linkImgPath(year: string, image: string): string {
   const { path } = useImagePath({
-    directory: `${props.label}`,
+    directory: `${props.componentName}`,
     image: `${props.type}/${year}/${image}`
   });
 
   return path.value;
 }
 
-function openImage(year, path) {
+function openImage(year: string, path: string): void {
   clickedImagePath.value = path;
   clickedYear.value = year;
 

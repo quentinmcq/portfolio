@@ -1,10 +1,10 @@
 <template>
-  <v-container :id="label" class="skill">
-    <category-title :label="label" />
+  <v-container :id="componentName" class="skill">
+    <CategoryTitle :component-name="componentName" />
 
     <v-card class="card-animation skill__card" data-aos="zoom-in">
       <v-row :style="gridStyle" class="skill__grid">
-        <skill-item
+        <SkillItem
           v-for="(skill, index) in skills"
           :key="index"
           :index="index"
@@ -16,19 +16,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue';
 import SkillItem from '@/pages/Skill/SkillItem/SkillItem.vue';
-import { useResponsive } from '@/composables/responsive';
-import type { Skill } from '@/types/Skill';
+import { useResponsive } from '@/composables/style/responsive';
+import { useComponentName } from '@/composables/common/component-name';
+import skills from '@/data/fr/skill';
 
-interface Props {
-  skills: Skill[]
-}
-
-defineProps<Props>();
-
-const label = ref('skill');
+const componentName = useComponentName();
 const { gridStyle } = useResponsive();
 </script>
 

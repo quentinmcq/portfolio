@@ -1,15 +1,20 @@
 <template>
   <div class="category-title">
-    {{ $t(`${label}.main-title`) }}
+    {{ categoryTitle }}
   </div>
 </template>
 
 <script setup lang="ts">
-interface Props {
-  label: string;
-}
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 
-defineProps<Props>();
+const props = defineProps<{
+  componentName: string
+}>();
+
+const { t } = useI18n();
+
+const categoryTitle = computed(() => props.componentName !== '' ? t(`${props.componentName}.main-title`) : '');
 </script>
 
 <style lang="scss" src="./category-title.scss" scoped />

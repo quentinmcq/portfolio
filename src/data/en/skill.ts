@@ -16,11 +16,5 @@ export default [
   },
   {
     label: 'Data management'
-  },
-  // {
-  //   label: 'Languages'
-  // },
-  // {
-  //   label: 'Personal'
-  // }
+  }
 ];

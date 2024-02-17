@@ -18,13 +18,12 @@
 
 <script setup lang="ts">
 import SkillChip from '@/components/SkillChip/SkillChip.vue';
+import type { Skill } from '@/types/Skill';
 
-interface Props {
-  skill: object,
+defineProps<{
+  skill: Skill
   index: number
-}
-
-defineProps<Props>();
+}>();
 </script>
 
 <style lang="scss" src="./skill-item.scss" scoped />
