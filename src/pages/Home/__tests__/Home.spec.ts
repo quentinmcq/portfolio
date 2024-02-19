@@ -1,9 +1,5 @@
 import { shallowMount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
-import {
-  vuetifyInstanceTest,
-  i18nInstanceTest
-} from '@/plugins/test-configuration';
 import Home from '../Home.vue';
 import LoadingBar from '@/components/LoadingBar/LoadingBar.vue';
 import ScrollTop from '@/components/ScrollTop/ScrollTop.vue';
@@ -16,11 +12,7 @@ import Project from '@/pages/Project/Project.vue';
 import Contact from '@/pages/Contact/Contact.vue';
 
 describe('Home component', () => {
-  const wrapper = shallowMount(Home, {
-    global: {
-      plugins: [vuetifyInstanceTest, i18nInstanceTest]
-    }
-  });
+  const wrapper = shallowMount(Home);
 
   it('renders all the sections', () => {
     expect(wrapper.findComponent(LoadingBar).exists()).toBe(true);

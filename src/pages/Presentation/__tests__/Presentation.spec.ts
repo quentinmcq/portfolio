@@ -1,25 +1,14 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
-import {
-  vuetifyInstanceTest,
-  i18nInstanceTest
-} from '@/plugins/test-configuration';
 import Presentation from '../Presentation.vue';
 
 describe('Presentation component', () => {
-  const wrapper = mount(Presentation, {
-    global: {
-      plugins: [vuetifyInstanceTest, i18nInstanceTest]
-    },
-    props: {
-      label: 'test label'
-    }
-  });
+  const wrapper = mount(Presentation);
 
   it('renders the category title with the correct label', () => {
     const categoryTitle = wrapper.findComponent({ name: 'CategoryTitle' });
     expect(categoryTitle.exists()).toBe(true);
-    expect(categoryTitle.props('label')).toBe('test label');
+    expect(categoryTitle.props('componentName')).toBe('presentation');
   });
 
   it('renders four PresentationButton components', () => {
