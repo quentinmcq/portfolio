@@ -16,11 +16,5 @@ export default [
     location: 'Motoblouz, Carvin',
     description:
       '<ul><li>Redesign of an unpaid debt monitoring tool</li><li>Additional functionalities</li><li>Regular feedback with the business department</li></ul>'
-  },
-  {
-    title: 'Discovery internship',
-    location: 'Benedicta SA, Seclin',
-    description:
-      '<ul><li>Discovery of how an agri-food company works during a two-week internship </li></ul>'
   }
 ];
