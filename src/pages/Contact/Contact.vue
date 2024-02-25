@@ -81,7 +81,7 @@
                 :size="buttonSize"
                 class="ml-4"
                 color="#273142"
-                outlined
+                variant="outlined"
                 @click="resetForm"
               >
                 {{ $t('contact.erase') }}
