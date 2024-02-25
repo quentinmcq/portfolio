@@ -43,9 +43,9 @@
                 </a>
               </template>
 
-              <template #nuxtjs>
+              <template #vuejs>
                 <a
-                  href="https://nuxtjs.com"
+                  href="https://vuejs.com"
                   class="presentation__link"
                   target="_blank"
                   rel="noopener"
