@@ -37,7 +37,7 @@ export default {
     'main-title': 'Presentation',
     'part-1': "Hi, I'm {name} and I'm {age} years old.",
     'part-2':
-      'Passionate web developer for several years now, I use the {symfony} and {nuxtjs} frameworks on a daily basis.',
+      'Passionate web developer for several years now, I use the {symfony} and {vuejs} frameworks on a daily basis.',
     'part-3':
       'Curious by nature, I love doing technological watch and sharing my knowledge with others 🎉'
   },
