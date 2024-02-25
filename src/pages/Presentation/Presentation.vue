@@ -45,7 +45,7 @@
 
               <template #vuejs>
                 <a
-                  href="https://vuejs.com"
+                  href="https://vuejs.org"
                   class="presentation__link"
                   target="_blank"
                   rel="noopener"
