@@ -69,7 +69,7 @@
                 :aria-label="$t('contact.send')"
                 :loading="loading"
                 :size="buttonSize"
-                color="#273142"
+                color="#e52c4d"
                 type="submit"
                 @click="validateForm"
               >
@@ -80,7 +80,7 @@
                 :aria-label="$t('contact.erase')"
                 :size="buttonSize"
                 class="ml-4"
-                color="#e52c4d"
+                color="#273142"
                 outlined
                 @click="resetForm"
               >
