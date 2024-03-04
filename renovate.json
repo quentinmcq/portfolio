@@ -1,29 +1,11 @@
 {
   "extends": [
-    "config:base"
+    "config:recommended"
   ],
+  "rangeStrategy": "bump",
   "automerge": true,
   "automergeType": "branch",
   "automergeSchedule": [
     "every weekend"
-  ],
-  "major": {
-    "automerge": false
-  },
-  "lockFileMaintenance": {
-    "enabled": false
-  },
-  "packageRules": [
-    {
-      "groupName": "all non-major dependencies",
-      "groupSlug": "all-minor-patch",
-      "matchPackagePatterns": [
-        "*"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ]
-    }
   ]
 }

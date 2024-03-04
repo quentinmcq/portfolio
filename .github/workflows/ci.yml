@@ -1,0 +1,31 @@
+name: ci
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node: [20.11.1]
+
+    steps:
+    - uses: actions/checkout@v4
+    - run: corepack enable
+    - name: Use Node.js ${{ matrix.node }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node }}
+        cache: 'yarn'
+        
+    - name: Install dependencies
+      run: yarn install --immutable --immutable-cache
+
+    - name: Execute vitest tests
+      run: yarn test:unit
