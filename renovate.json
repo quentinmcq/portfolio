@@ -4,8 +4,5 @@
   ],
   "rangeStrategy": "bump",
   "automerge": true,
-  "automergeType": "branch",
-  "automergeSchedule": [
-    "every weekend"
-  ]
+  "automergeType": "branch"
 }
