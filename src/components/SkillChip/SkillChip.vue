@@ -6,7 +6,7 @@
     :href="chipConfig.link"
   >
     <template #prepend v-if="chipConfig.icon">
-      <Image
+      <GenericImage
         :src="path"
         :alt="chipConfig.label"
         :width="width"
@@ -22,7 +22,7 @@
 import { computed } from 'vue';
 import { useResponsive } from '@/composables/style/responsive';
 import tool from '@/data/tools';
-import Image from '@/components/Image/Image.vue';
+import GenericImage from '@/components/GenericImage/GenericImage.vue';
 import { useImagePath } from '@/composables/common/image-path.js';
 
 interface Props {

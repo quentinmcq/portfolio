@@ -1,0 +1,22 @@
+.contact-page {
+  &__card {
+    padding: 10px 30px;
+
+    @media (min-width: $md) {
+      padding: 25px 50px;
+    }
+  }
+
+  &__form {
+    &__field {
+      @media (min-width: $md) {
+        padding-bottom: 5px;
+      }
+    }
+
+    &__buttons {
+      text-align: center;
+      color: white;
+    }
+  }
+}

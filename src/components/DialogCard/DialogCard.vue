@@ -1,37 +1,37 @@
 <template>
   <v-row>
     <DialogCardItem
-        v-for="(item, index) in items"
-        :key="index"
-        :component-name="componentName"
-        :custom-button-text="customButtonText"
-        :index="index"
-        :item="item"
-        :transition="transition"
+      v-for="(item, index) in items"
+      :key="index"
+      :component-name="componentName"
+      :custom-button-text="customButtonText"
+      :index="index"
+      :item="item"
+      :transition="transition"
     >
       <template #chipsAndLinks>
         <v-row v-if="item?.chips" class="mt-4 mb-3" justify="center">
           <SkillChip
-              v-for="(label, index) in item?.chips"
-              :key="index"
-              :label="label"
-              target="_blank"
+            v-for="(label, index) in item?.chips"
+            :key="index"
+            :label="label"
+            target="_blank"
           />
         </v-row>
 
         <v-row v-if="item.links" class="dialog-card-item__logos">
           <v-col v-for="(link, index) in item.links" :key="index">
             <a
-                :href="link.url"
-                target="_blank"
-                @click="sendDialogCardClickAnalyticsEvent(item)"
+              :href="link.url"
+              target="_blank"
+              @click="sendDialogCardClickAnalyticsEvent(item)"
             >
-              <Image
-                  :alt="link.img"
-                  :src="linkImgPath(link.img)"
-                  class="image-animation"
-                  eager
-                  height="40"
+              <GenericImage
+                :alt="link.img"
+                :src="linkImgPath(link.img)"
+                class="image-animation"
+                eager
+                height="40"
               />
             </a>
           </v-col>
@@ -41,10 +41,10 @@
       <template #imageGallery>
         <v-card-text>
           <ImageGallery
-              v-if="item.images"
-              :component-name="componentName"
-              :images="item.images"
-              :type="item.type"
+            v-if="item.images"
+            :component-name="componentName"
+            :images="item.images"
+            :type="item.type"
           />
         </v-card-text>
       </template>
@@ -52,13 +52,13 @@
   </v-row>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import {useImagePath} from '@/composables/common/image-path.js';
 import {useGoogleAnalyticsEvent} from '@/composables/event/google-analytics.js';
 import DialogCardItem from '@/components/DialogCard/DialogCardItem/DialogCardItem.vue';
 import SkillChip from '@/components/SkillChip/SkillChip.vue';
-import Image from '@/components/Image/Image.vue';
-import ImageGallery from '@/components/Image/ImageGallery/ImageGallery.vue';
+import GenericImage from '@/components/GenericImage/GenericImage.vue';
+import ImageGallery from '@/components/ImageGallery/ImageGallery.vue';
 import type {Hobby} from '@/types/Hobby';
 import type {Project} from '@/types/Project';
 import {toRefs} from 'vue';
@@ -75,10 +75,10 @@ const props = withDefaults(defineProps<Props>(), {
   transition: 'dialog-bottom-transition'
 });
 
-const {componentName} = toRefs(props);
+const { componentName } = toRefs(props);
 
 function linkImgPath(image: string): string {
-  const { path } = useImagePath({
+  const {path} = useImagePath({
     directory: `${props.componentName}`,
     image: `logo/${image}`
   });

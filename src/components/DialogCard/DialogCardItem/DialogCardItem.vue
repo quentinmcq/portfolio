@@ -7,7 +7,7 @@
         :data-aos="animation"
       >
         <div @click="dialog = true">
-          <Image
+          <GenericImage
             :src="path"
             :lazy-src="path"
             :alt="item.cover"
@@ -79,7 +79,7 @@ import { useImagePath } from '@/composables/common/image-path';
 import { usePrefixTranslation } from '@/composables/common/prefix-translation';
 import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics';
 import { useAnimation } from '@/composables/style/animation';
-import Image from '../../Image/Image.vue';
+import GenericImage from '@/components/GenericImage/GenericImage.vue';
 import type { Project } from '@/types/Project';
 import type { Hobby } from '@/types/Hobby';
 

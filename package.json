@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "packageManager": "yarn@4.1.0",
-  "version": "3.5.2",
+  "version": "4.0.0",
   "type": "module",
   "author": "Quentin Macq",
   "private": true,

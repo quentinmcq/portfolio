@@ -1,0 +1,42 @@
+.presentation-page {
+  &__link {
+    color: #e52c4d;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  &__wrapper-button {
+    text-align: center;
+
+    @media (min-width: $md) {
+      margin-top: 18px;
+    }
+  }
+
+  &__card-spacing {
+    padding-bottom: 15px;
+
+    @media (min-width: $md) {
+      padding-bottom: 25px;
+    }
+  }
+
+  &__card-style {
+    padding: 30px;
+    font-size: 15px;
+    background: $whitesmoke;
+
+    @media (min-width: $md) {
+      font-size: 17px;
+    }
+
+    @media (min-width: $lg) {
+      font-size: 18px;
+    }
+
+    @media (min-width: $xl) {
+      padding: 55px;
+      font-size: 20px;
+    }
+  }
+}
