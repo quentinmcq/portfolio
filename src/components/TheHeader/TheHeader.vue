@@ -19,4 +19,8 @@
   </header>
 </template>
 
+<script setup lang="ts">
+import VueWriter from 'vue-writer';
+</script>
+
 <style lang="scss" src="./the-header.scss" scoped />
