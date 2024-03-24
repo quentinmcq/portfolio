@@ -14,7 +14,7 @@ export default mergeConfig(
       root: fileURLToPath(new URL('./', import.meta.url)),
       server: {
         deps: {
-          inline: ['vuetify']
+          inline: ['vuetify', 'vue-recaptcha']
         }
       }
     }

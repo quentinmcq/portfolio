@@ -3827,7 +3827,7 @@ __metadata:
     vue-i18n: "npm:^9.10.2"
     vue-recaptcha: "npm:3.0.0-alpha.2"
     vue-tsc: "npm:^2.0.7"
-    vue-writer: "npm:^1.2.0"
+    vue-writer: "npm:1.2.0"
     vuetify: "npm:^3.5.11"
     webfontloader: "npm:^1.6.28"
   languageName: unknown
@@ -4960,7 +4960,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-writer@npm:^1.2.0":
+"vue-writer@npm:1.2.0":
   version: 1.2.0
   resolution: "vue-writer@npm:1.2.0"
   peerDependencies:
