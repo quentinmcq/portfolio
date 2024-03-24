@@ -3,9 +3,6 @@
 
   &__credit {
     padding-top: 18px;
-    padding-right: 50px;
-    padding-left: 50px;
-
     text-align: center;
   }
 
@@ -14,7 +11,7 @@
   }
 
   &__credit-message {
-    margin-bottom: 30px;
+    margin-bottom: 5px;
     font-size: 16px;
 
     @media (min-width: $xl) {
@@ -30,10 +27,15 @@
     }
   }
 
-  &__version {
-    margin-top: 20px;
-    color: $white;
-    font-size: 16px;
-    letter-spacing: 1.5pt;
+  &__recaptcha {
+    font-size: 13px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+
+    @media (min-width: $xl) {
+      width: 30%;
+    }
   }
 }

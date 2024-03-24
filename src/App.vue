@@ -21,6 +21,9 @@ import TheNavbar from '@/components/TheNavbar/TheNavbar.vue';
 import TheHeader from '@/components/TheHeader/TheHeader.vue';
 import TheFooter from '@/components/TheFooter/TheFooter.vue';
 import HomePage from '@/pages/HomePage/HomePage.vue';
+import { useRecaptchaProvider } from 'vue-recaptcha/head';
+
+useRecaptchaProvider();
 
 onMounted(() => sendEventOnFirstPageLoading());
 const { appStyle } = useResponsive();

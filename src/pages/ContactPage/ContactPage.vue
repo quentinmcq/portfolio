@@ -14,7 +14,6 @@
             @submit.prevent="sendEmail"
           >
             <v-text-field
-              v-model="name"
               :label="$t('contact.name')"
               :rules="nameRules"
               class="contact-page__form__field"
@@ -22,11 +21,11 @@
               color="#273142"
               required
               type="text"
+              name="name"
               variant="underlined"
             />
 
             <v-text-field
-              v-model="phone"
               :counter="10"
               :label="$t('contact.phone-number')"
               :rules="phoneRules"
@@ -34,11 +33,11 @@
               clearable
               color="#273142"
               type="tel"
+              name="phone"
               variant="underlined"
             />
 
             <v-text-field
-              v-model="email"
               :label="$t('contact.mail-address')"
               :rules="emailRules"
               class="contact-page__form__field"
@@ -46,11 +45,11 @@
               color="#273142"
               required
               type="email"
+              name="email"
               variant="underlined"
             />
 
             <v-textarea
-              v-model="message"
               :label="$t('contact.message')"
               :rows="textAreaRows"
               :rules="messageRules"
@@ -60,6 +59,7 @@
               color="#273142"
               required
               type="text"
+              name="message"
               variant="underlined"
             />
 
@@ -71,7 +71,6 @@
                 :size="buttonSize"
                 color="#e52c4d"
                 type="submit"
-                @click="validateForm"
               >
                 {{ $t('contact.send') }}
               </v-btn>
@@ -96,35 +95,33 @@
 
 <script setup lang="ts">
 import { vConfetti } from '@neoconfetti/vue';
-import { ref, reactive } from 'vue';
+import {reactive, ref} from 'vue';
 import { useFieldRules } from '@/composables/form/field-rules';
 import { useResponsive } from '@/composables/style/responsive';
-import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue';
 import { useEmailJs } from '@/composables/form/emailjs';
 import { useSetInnerHTML } from '@/composables/common/inner-html';
 import { useI18n } from 'vue-i18n';
 import { useComponentName } from '@/composables/common/component-name';
+import { useChallengeV3 } from 'vue-recaptcha/head';
+import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue';
 
+const { execute } = useChallengeV3('submit');
 const componentName = useComponentName();
 const { buttonSize, textAreaRows } = useResponsive();
 const { nameRules, phoneRules, emailRules, messageRules } = useFieldRules();
-const form = ref<HTMLInputElement | null>(null);
 
 const { t } = useI18n();
-const name = ref('');
-const phone = ref('');
-const email = ref('');
-const message = ref('');
 const loading = ref(false);
 const showConfetti = ref(false);
+const form = ref<HTMLFormElement | null>(null);
 
 async function manageEmailSending(): Promise<void> {
-  const formData = reactive({ name, phone, email, message });
   const sendFormButtonSelector = '#message-status .v-btn__content';
 
   try {
     loading.value = true;
-    await useEmailJs(formData);
+    await execute();
+    await useEmailJs(form);
     useSetInnerHTML(sendFormButtonSelector, t('contact.sent'));
     showConfetti.value = true;
   } catch {
@@ -142,14 +139,10 @@ function resetSendFormButtonLabel(selector: string): void {
 const valid = ref(false);
 
 async function sendEmail(): Promise<void> {
-  if (valid.value) {
-    await manageEmailSending();
-    resetForm();
-  }
-}
+  if (!valid.value) { return; }
 
-function validateForm(): void {
-  form.value?.validate();
+  await manageEmailSending();
+  resetForm();
 }
 
 function resetForm(): void {

@@ -1,6 +1,7 @@
 import '@mdi/font/css/materialdesignicons.css';
 import 'vuetify/styles';
 import { createVuetify } from 'vuetify';
+import type { App } from 'vue';
 
 const global = {
   ripple: false
@@ -10,7 +11,7 @@ const icons = {
   iconfont: 'mdiSvg'
 };
 
-export function initVuetify(app) {
+export function initVuetify(app: App<Element>) {
   const vuetifyInstance = createVuetify({
     defaults: {
       global,

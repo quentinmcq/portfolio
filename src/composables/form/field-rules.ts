@@ -8,8 +8,8 @@ interface FieldRules {
   messageRules: Ref<((v: any) => string | true)[]>
 }
 
-const phoneRegex = /^0[1-9]\d{8}$/;
-const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+const phoneRegex: RegExp = /^0[1-9]\d{8}$/;
+const emailRegex: RegExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
 const minMessageLength = (t: any) => (v: string | any[]) => {
   const minLength: number = 20;
