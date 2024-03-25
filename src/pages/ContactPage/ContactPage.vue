@@ -95,7 +95,7 @@
 
 <script setup lang="ts">
 import { vConfetti } from '@neoconfetti/vue';
-import {reactive, ref} from 'vue';
+import { ref } from 'vue';
 import { useFieldRules } from '@/composables/form/field-rules';
 import { useResponsive } from '@/composables/style/responsive';
 import { useEmailJs } from '@/composables/form/emailjs';

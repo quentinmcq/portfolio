@@ -638,7 +638,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/kit@npm:^3.2.3":
+"@nuxt/kit@npm:^3.4.3":
   version: 3.11.1
   resolution: "@nuxt/kit@npm:3.11.1"
   dependencies:
@@ -664,7 +664,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/schema@npm:3.11.1, @nuxt/schema@npm:^3.2.3":
+"@nuxt/schema@npm:3.11.1, @nuxt/schema@npm:^3.4.3":
   version: 3.11.1
   resolution: "@nuxt/schema@npm:3.11.1"
   dependencies:
@@ -1424,12 +1424,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/shared@npm:^9.13.0":
-  version: 9.13.0
-  resolution: "@vueuse/shared@npm:9.13.0"
+"@vueuse/shared@npm:^10.1.0":
+  version: 10.9.0
+  resolution: "@vueuse/shared@npm:10.9.0"
   dependencies:
-    vue-demi: "npm:*"
-  checksum: 10c0/22c453dc3c9ccd389e32d4dcfb6e6facfbb29860376c0b1c4d40d2745edd733857d1a1f82835c1d698dedf0c9f697bd9d1265e4e70a6702c85b61cc295bd7352
+    vue-demi: "npm:>=0.14.7"
+  checksum: 10c0/55593c325b9dc15cfe9eaf84ca2a757a0c418491be56760f5560a641dfe2579c72cb55ccd04ead71217a97fc6b17ad7b7b7b9177b376bc6967174121707d1c49
   languageName: node
   linkType: hard
 
@@ -2241,11 +2241,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-vue@npm:^9.23.0":
-  version: 9.23.0
-  resolution: "eslint-plugin-vue@npm:9.23.0"
+"eslint-plugin-vue@npm:^9.24.0":
+  version: 9.24.0
+  resolution: "eslint-plugin-vue@npm:9.24.0"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.4.0"
+    globals: "npm:^13.24.0"
     natural-compare: "npm:^1.4.0"
     nth-check: "npm:^2.1.1"
     postcss-selector-parser: "npm:^6.0.15"
@@ -2254,7 +2255,7 @@ __metadata:
     xml-name-validator: "npm:^4.0.0"
   peerDependencies:
     eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
-  checksum: 10c0/aea38577d7b58eb987ef6ade61488168213c8680421c09fade6966bf4d696e640daf78342d7e4d0e6afe197361ca739fd155a993da27c952f321407827a3553a
+  checksum: 10c0/4b8a5ec008bd35fe26953c9a916fc285375cdc5fa3025f0c427a16c1032bf38b21c8dfed2d616fa7242efc84bbc133d4872f3fbe5ab0f25e9529370179746f7c
   languageName: node
   linkType: hard
 
@@ -2672,7 +2673,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:^13.19.0":
+"globals@npm:^13.19.0, globals@npm:^13.24.0":
   version: 13.24.0
   resolution: "globals@npm:13.24.0"
   dependencies:
@@ -3812,7 +3813,7 @@ __metadata:
     axios: "npm:^1.6.8"
     emailjs-com: "npm:^3.2.0"
     eslint: "npm:^8.57.0"
-    eslint-plugin-vue: "npm:^9.23.0"
+    eslint-plugin-vue: "npm:^9.24.0"
     jsdom: "npm:^24.0.0"
     resize-observer-polyfill: "npm:^1.5.1"
     roboto-fontface: "npm:^0.10.0"
@@ -3825,7 +3826,7 @@ __metadata:
     vue: "npm:^3.4.21"
     vue-gtag: "npm:^2.0.1"
     vue-i18n: "npm:^9.10.2"
-    vue-recaptcha: "npm:3.0.0-alpha.2"
+    vue-recaptcha: "npm:3.0.0-alpha.6"
     vue-tsc: "npm:^2.0.7"
     vue-writer: "npm:1.2.0"
     vuetify: "npm:^3.5.11"
@@ -4494,7 +4495,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-fest@npm:^3.6.1":
+"type-fest@npm:^3.9.0":
   version: 3.13.1
   resolution: "type-fest@npm:3.13.1"
   checksum: 10c0/547d22186f73a8c04590b70dcf63baff390078c75ea8acd366bbd510fd0646e348bd1970e47ecf795b7cff0b41d26e9c475c1fedd6ef5c45c82075fbf916b629
@@ -4843,7 +4844,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-demi@npm:*":
+"vue-demi@npm:>=0.14.7, vue-demi@npm:^0.14.0":
   version: 0.14.7
   resolution: "vue-demi@npm:0.14.7"
   peerDependencies:
@@ -4856,22 +4857,6 @@ __metadata:
     vue-demi-fix: bin/vue-demi-fix.js
     vue-demi-switch: bin/vue-demi-switch.js
   checksum: 10c0/303216e3e6ee3f6ab5631488dd00a767ef3760a0a14e580c0223b278d093dc9ada8164ecec6bf8d8e12034e0bdf8dbb947c0c6f83095c6a53030a4a6dcbd57ce
-  languageName: node
-  linkType: hard
-
-"vue-demi@npm:^0.13.11":
-  version: 0.13.11
-  resolution: "vue-demi@npm:0.13.11"
-  peerDependencies:
-    "@vue/composition-api": ^1.0.0-rc.1
-    vue: ^3.0.0-0 || ^2.6.0
-  peerDependenciesMeta:
-    "@vue/composition-api":
-      optional: true
-  bin:
-    vue-demi-fix: bin/vue-demi-fix.js
-    vue-demi-switch: bin/vue-demi-switch.js
-  checksum: 10c0/8f1a38e41e3dd0a4821c87231c664dcc00e6dbf5eecd3de397b7ddb6ae01f173aed5385c55a3c3239be36145742f1a5be407662fc67f9c4515ea691dd0ac93e1
   languageName: node
   linkType: hard
 
@@ -4914,24 +4899,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-recaptcha@npm:3.0.0-alpha.2":
-  version: 3.0.0-alpha.2
-  resolution: "vue-recaptcha@npm:3.0.0-alpha.2"
+"vue-recaptcha@npm:3.0.0-alpha.6":
+  version: 3.0.0-alpha.6
+  resolution: "vue-recaptcha@npm:3.0.0-alpha.6"
   dependencies:
-    "@nuxt/kit": "npm:^3.2.3"
-    "@nuxt/schema": "npm:^3.2.3"
-    "@vueuse/shared": "npm:^9.13.0"
+    "@nuxt/kit": "npm:^3.4.3"
+    "@nuxt/schema": "npm:^3.4.3"
+    "@vueuse/shared": "npm:^10.1.0"
     defu: "npm:^6.1.2"
     p-defer: "npm:^4.0.0"
     std-env: "npm:^3.3.2"
-    type-fest: "npm:^3.6.1"
-    vue-demi: "npm:^0.13.11"
+    type-fest: "npm:^3.9.0"
+    vue-demi: "npm:^0.14.0"
   peerDependencies:
     vue: ^3.0.0
   peerDependenciesMeta:
     "@vue/composition-api":
       optional: true
-  checksum: 10c0/84f18e29ecce55eae47333c61b46e0d87d765e7733f6a0415612f6b9d78f946b129e1ad9c93293af97b4d27c2a20f9ff1fc74b2ac31ba63377d974e68f7d9388
+  checksum: 10c0/fb67fe9f0680ad8c407bb8b9a6ff1a25fd997ca9197adc8d3ada4e008b670d42dadad97a75b154cfb4b87dad624236d5946aadb0d994c39c3703d3db7e084ac8
   languageName: node
   linkType: hard
 
