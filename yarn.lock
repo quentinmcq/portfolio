@@ -811,10 +811,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rushstack/eslint-patch@npm:^1.8.0":
-  version: 1.8.0
-  resolution: "@rushstack/eslint-patch@npm:1.8.0"
-  checksum: 10c0/b8cb64176fe6f0778fccb8294f98acd325625cf75968cf3537c4d51b5d9b7dc62e3cbb82165aa473830555070ff6cc0d01ca64da3d734a5d0ce1bd90b5f24d7e
+"@rushstack/eslint-patch@npm:^1.10.1":
+  version: 1.10.1
+  resolution: "@rushstack/eslint-patch@npm:1.10.1"
+  checksum: 10c0/db96bfdf83ededcd70de41876bfe7ecb2450b93e4c5e46bc0f2bc9dd0e0ea60e8bc5fc0d1d3b6addf902e640ea78855ed77b6c883d0d0d104269492141232995
   languageName: node
   linkType: hard
 
@@ -3799,7 +3799,7 @@ __metadata:
   dependencies:
     "@mdi/font": "npm:^7.4.47"
     "@neoconfetti/vue": "npm:^2.2.1"
-    "@rushstack/eslint-patch": "npm:^1.8.0"
+    "@rushstack/eslint-patch": "npm:^1.10.1"
     "@stylistic/eslint-plugin": "npm:^1.7.0"
     "@tsconfig/node20": "npm:^20.1.4"
     "@types/jsdom": "npm:^21.1.6"
