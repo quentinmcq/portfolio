@@ -29,7 +29,7 @@
     "vue-recaptcha": "3.0.0-alpha.6",
     "vue-tsc": "^2.0.7",
     "vue-writer": "1.2.0",
-    "vuetify": "^3.5.13",
+    "vuetify": "^3.5.14",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
