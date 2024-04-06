@@ -29,10 +29,7 @@ describe('TheFooter', () => {
     // Check if the copyright message is rendered correctly with the current year
     expect(wrapper.find('.footer__copyright').text()).toBe('footer.copyright');
 
-    // Check if version chip is rendered with correct props
-    expect(wrapper.find('.footer__version').text()).toBe(version);
-    // expect(wrapper.find('.footer__version').attributes('color')).toBe('#e52c4d');
-    // expect(wrapper.find('.footer__version').attributes('theme')).toBe('dark');
-    // expect(wrapper.find('.footer__version').attributes('size')).toBe('chipSize');
+    // Check if the recaptcha message is rendered correctly
+    expect(wrapper.find('.footer__recaptcha').text()).toBe('footer.recaptcha');
   });
 });
