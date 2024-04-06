@@ -1,5 +1,8 @@
 <template>
-  <v-container :id="componentName" class="presentation-page">
+  <v-container
+    :id="componentName"
+    class="presentation-page"
+  >
     <CategoryTitle :component-name="componentName" />
 
     <v-row data-aos="zoom-in">
@@ -17,7 +20,7 @@
                   :href="presentations[0].link"
                   class="presentation-page__link"
                   target="_blank"
-                  >{{ $t('common.firstname') }} {{ $t('common.name') }}
+                >{{ $t('common.firstname') }} {{ $t('common.name') }}
                 </a>
               </template>
 
@@ -50,8 +53,7 @@
                   target="_blank"
                   rel="noopener"
                 >
-                  {{ $t('common.vuejs') }}</a
-                >
+                  {{ $t('common.vuejs') }}</a>
               </template>
             </i18n-t>
 
@@ -60,7 +62,10 @@
             </div>
           </div>
 
-          <div class="presentation-page__wrapper-button" data-aos="fade-up">
+          <div
+            class="presentation-page__wrapper-button"
+            data-aos="fade-up"
+          >
             <PresentationPageButton
               v-for="(presentation, index) in presentations"
               :key="index"
@@ -74,13 +79,13 @@
 </template>
 
 <script setup lang="ts">
-import { useAge } from '@/composables/common/age';
-import presentations from '@/data/fr/presentation';
-import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue';
-import PresentationPageButton from './PresentationPageButton/PresentationPageButton.vue';
-import { useComponentName } from '@/composables/common/component-name';
+import { useAge } from '@/composables/common/age'
+import presentations from '@/data/fr/presentation'
+import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue'
+import PresentationPageButton from './PresentationPageButton/PresentationPageButton.vue'
+import { useComponentName } from '@/composables/common/component-name'
 
-const componentName = useComponentName();
+const componentName = useComponentName()
 </script>
 
 <style lang="scss" src="./presentation-page.scss" scoped />

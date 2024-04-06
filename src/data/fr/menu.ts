@@ -1,30 +1,30 @@
 export default [
   {
+    link: '#presentation',
     title: 'Présentation',
-    link: '#presentation'
   },
   {
+    link: '#skill',
     title: 'Compétences',
-    link: '#skill'
   },
   {
+    link: '#education',
     title: 'Éducation',
-    link: '#education'
   },
   {
+    link: '#experience',
     title: 'Expériences',
-    link: '#experience'
   },
   {
+    link: '#project',
     title: 'Projets',
-    link: '#project'
   },
   {
+    link: '#hobby',
     title: 'Loisirs',
-    link: '#hobby'
   },
   {
+    link: '#contact',
     title: 'Contact',
-    link: '#contact'
-  }
-];
+  },
+]

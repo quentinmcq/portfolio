@@ -1,23 +1,23 @@
-import { createI18n } from 'vue-i18n';
-import fr from '@/locales/fr';
-import en from '@/locales/en';
-import type { App } from 'vue';
+import { createI18n } from 'vue-i18n'
+import fr from '@/locales/fr'
+import en from '@/locales/en'
+import type { App } from 'vue'
 
 export function initI18n(app: App<Element>) {
   const i18nInstance = createI18n({
-    legacy: false, // Vuetify does not support the legacy mode of vue-i18n
-    locale: localStorage.getItem('lang') || 'fr',
+    allowComposition: true,
     fallbackLocale: 'fr',
-    missingWarn: false,
     fallbackWarn: false,
     globalInjection: true,
-    allowComposition: true,
-    warnHtmlMessage: false,
+    legacy: false, // Vuetify does not support the legacy mode of vue-i18n
+    locale: localStorage.getItem('lang') || 'fr',
     messages: {
+      en,
       fr,
-      en
-    }
-  });
+    },
+    missingWarn: false,
+    warnHtmlMessage: false,
+  })
 
-  app.use(i18nInstance);
+  app.use(i18nInstance)
 }

@@ -5,6 +5,9 @@
       :key="index"
       :component-name="componentName"
       :custom-button-text="customButtonText"
+
+
+
       :index="index"
       :item="item"
       :transition="transition"
@@ -13,7 +16,7 @@
         <v-row v-if="item?.chips" class="mt-4 mb-3" justify="center">
           <SkillChip
             v-for="(label, index) in item?.chips"
-            :key="index"
+                 :key="index"
             :label="label"
             target="_blank"
           />
@@ -53,15 +56,15 @@
 </template>
 
 <script setup lang="ts">
-import {useImagePath} from '@/composables/common/image-path.js';
-import {useGoogleAnalyticsEvent} from '@/composables/event/google-analytics.js';
+import { useImagePath } from '@/composables/common/image-path.js';
+import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics.js';
 import DialogCardItem from '@/components/DialogCard/DialogCardItem/DialogCardItem.vue';
 import SkillChip from '@/components/SkillChip/SkillChip.vue';
 import GenericImage from '@/components/GenericImage/GenericImage.vue';
 import ImageGallery from '@/components/ImageGallery/ImageGallery.vue';
-import type {Hobby} from '@/types/Hobby';
-import type {Project} from '@/types/Project';
-import {toRefs} from 'vue';
+import type { Hobby } from '@/types/Hobby';
+import type { Project } from '@/types/Project';
+import { toRefs } from 'vue';
 
 interface Props {
   items: Project[] | Hobby[]
@@ -78,7 +81,7 @@ const props = withDefaults(defineProps<Props>(), {
 const { componentName } = toRefs(props);
 
 function linkImgPath(image: string): string {
-  const {path} = useImagePath({
+  const { path} = useImagePath({
     directory: `${props.componentName}`,
     image: `logo/${image}`
   });

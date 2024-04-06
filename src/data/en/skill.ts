@@ -1,20 +1,20 @@
 export default [
   {
-    label: 'Web languages'
+    label: 'Web languages',
   },
   {
-    label: 'Database'
+    label: 'Database',
   },
   {
-    label: 'Front-end frameworks'
+    label: 'Front-end frameworks',
   },
   {
-    label: 'Back-end frameworks'
+    label: 'Back-end frameworks',
   },
   {
-    label: 'Continuous integration'
+    label: 'Continuous integration',
   },
   {
-    label: 'Data management'
-  }
-];
+    label: 'Data management',
+  },
+]

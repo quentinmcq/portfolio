@@ -11,7 +11,7 @@
         $t('header.developer'),
         $t('header.visit')
       ]"
-      :typeSpeed="80"
+      :type-speed="80"
       :erase-speed="80"
       :intervals="100"
       :delay="1300"
@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import VueWriter from 'vue-writer';
+import VueWriter from 'vue-writer'
 </script>
 
 <style lang="scss" src="./the-header.scss" scoped />

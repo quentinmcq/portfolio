@@ -1,23 +1,23 @@
 export default [
   {
-    title: 'Presentation'
+    title: 'Presentation',
   },
   {
-    title: 'Skills'
+    title: 'Skills',
   },
   {
-    title: 'Education'
+    title: 'Education',
   },
   {
-    title: 'Experience'
+    title: 'Experience',
   },
   {
-    title: 'Projects'
+    title: 'Projects',
   },
   {
-    title: 'Hobbies'
+    title: 'Hobbies',
   },
   {
-    title: 'Contact'
-  }
-];
+    title: 'Contact',
+  },
+]

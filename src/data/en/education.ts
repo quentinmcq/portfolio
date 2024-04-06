@@ -1,26 +1,26 @@
 export default [
   {
-    title: 'Computer engineer',
+    description:
+      '<ul><li>Deepening of technical and transversal skills</li><li>Acquisition of project and team management skills</li>',
     location: 'EPSI, Lille',
-    description:
-      '<ul><li>Deepening of technical and transversal skills</li><li>Acquisition of project and team management skills</li>'
+    title: 'Computer engineer',
   },
   {
-    title: 'Professional degree',
+    description:
+      '<ul><li>Strengthening web development skills (PHP, JS)</li></ul>',
     location: 'University institute of technology, Lens',
-    description:
-      '<ul><li>Strengthening web development skills (PHP, JS)</li></ul>'
+    title: 'Professional degree',
   },
   {
-    title: 'Two year degree',
+    description:
+      '<ul><li>Learning the basics of algorithms </li><li>Discovery of various IT fields </li></ul>',
     location: 'University Institute of Technology, Lens',
-    description:
-      '<ul><li>Learning the basics of algorithms </li><li>Discovery of various IT fields </li></ul>'
+    title: 'Two year degree',
   },
   {
-    title: 'Scientific baccalaureate',
-    location: 'Fernand Darchicourt high school, Hénin-Beaumont',
     description:
-      '<ul><li>Obtaining the “good honors” distinction (Physics-Chemistry specialty and European English section).</li></ul>'
-  }
-];
+      '<ul><li>Obtaining the “good honors” distinction (Physics-Chemistry specialty and European English section).</li></ul>',
+    location: 'Fernand Darchicourt high school, Hénin-Beaumont',
+    title: 'Scientific baccalaureate',
+  },
+]

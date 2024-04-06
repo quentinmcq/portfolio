@@ -1,32 +1,32 @@
 export default [
   {
-    label: 'Langages web',
     color: '#ec8d0a',
-    content: ['JS', 'PHP']
+    content: ['JS', 'PHP'],
+    label: 'Langages web',
   },
   {
-    label: 'Base de données',
     color: '#2196F3',
-    content: ['MySQL']
+    content: ['MySQL'],
+    label: 'Base de données',
   },
   {
-    label: 'Frameworks Front-end',
     color: '#41B883',
-    content: ['VueJS', 'NuxtJS', 'Vuetify']
+    content: ['VueJS', 'NuxtJS', 'Vuetify'],
+    label: 'Frameworks Front-end',
   },
   {
-    label: 'Frameworks Back-end',
     color: '#9C27b0',
-    content: ['Symfony']
+    content: ['Symfony'],
+    label: 'Frameworks Back-end',
   },
   {
-    label: 'Intégration continue',
     color: '#da4e76',
-    content: ['Git', 'Docker', 'Redmine', 'Jenkins']
+    content: ['Git', 'Docker', 'Redmine', 'Jenkins'],
+    label: 'Intégration continue',
   },
   {
-    label: 'Gestion de données',
     color: '#e01f0f',
-    content: ['Grafana', 'RabbitMQ', 'Elasticsearch']
-  }
-];
+    content: ['Grafana', 'RabbitMQ', 'Elasticsearch'],
+    label: 'Gestion de données',
+  },
+]
