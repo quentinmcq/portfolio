@@ -1,7 +1,4 @@
 {
-  "extends": [
-    "config:recommended"
-  ],
   "rangeStrategy": "bump",
   "automerge": true,
   "automergeType": "branch"
