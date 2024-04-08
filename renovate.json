@@ -1,5 +1,14 @@
 {
+  "timezone": "Europe/Paris",
+  "extends": [
+    "config:recommended",
+    "group:allNonMajor",
+    ":semanticCommitTypeAll(chore)",
+    ":automergeAll",
+    ":automergeBranch"
+  ],
   "rangeStrategy": "bump",
   "automerge": true,
-  "automergeType": "branch"
+  "automergeType": "branch",
+  "ignoreDeps": ["vue-writer"]
 }
