@@ -2,7 +2,7 @@
   "name": "portfolio",
   "packageManager": "yarn@4.1.1",
   "engines": {
-    "node": "^20.12.1"
+    "node": "^20.12.2"
   },
   "version": "4.0.0",
   "type": "module",
@@ -24,14 +24,14 @@
     "aos": "^2.3.4",
     "emailjs-com": "^3.2.0",
     "roboto-fontface": "^0.10.0",
-    "typescript": "^5.4.4",
+    "typescript": "^5.4.5",
     "vue": "^3.4.21",
     "vue-gtag": "^2.0.1",
-    "vue-i18n": "^9.11.0",
+    "vue-i18n": "^9.11.1",
     "vue-recaptcha": "3.0.0-alpha.6",
-    "vue-tsc": "^2.0.11",
+    "vue-tsc": "^2.0.12",
     "vue-writer": "1.2.0",
-    "vuetify": "^3.5.14",
+    "vuetify": "^3.5.15",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
@@ -39,7 +39,7 @@
     "@stylistic/eslint-plugin": "^1.7.0",
     "@types/aos": "^3.0.7",
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "^20.12.5",
+    "@types/node": "^20.12.7",
     "@typescript-eslint/parser": "^7.6.0",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/test-utils": "^2.4.5",
