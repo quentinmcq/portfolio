@@ -146,6 +146,14 @@ export default {
     label: 'Symfony',
     link: 'https://symfony.com/',
   },
+  ts: {
+    color: '#FF9B02',
+    height: 15,
+    icon: 'typescript.svg',
+    label: 'Typescript',
+    link: 'https://www.typescriptlang.org/',
+    width: 15,
+  },
   vuejs: {
     color: '#41B883',
     icon: 'vuejs.svg',

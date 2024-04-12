@@ -5,8 +5,8 @@
 
     <PresentationPage />
     <SkillPage />
-    <EducationPage />
     <ExperiencePage />
+    <EducationPage />
     <ProjectPage />
     <HobbyPage />
     <ContactPage />

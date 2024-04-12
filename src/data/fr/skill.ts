@@ -1,7 +1,7 @@
 export default [
   {
     color: '#ec8d0a',
-    content: ['JS', 'PHP'],
+    content: ['JS', 'TS', 'PHP'],
     label: 'Langages web',
   },
   {
