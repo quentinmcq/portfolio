@@ -483,30 +483,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@intlify/core-base@npm:9.11.1":
-  version: 9.11.1
-  resolution: "@intlify/core-base@npm:9.11.1"
+"@intlify/core-base@npm:9.12.0":
+  version: 9.12.0
+  resolution: "@intlify/core-base@npm:9.12.0"
   dependencies:
-    "@intlify/message-compiler": "npm:9.11.1"
-    "@intlify/shared": "npm:9.11.1"
-  checksum: 10c0/acb3bf91c2373243cac0408b0abf283ace620e4b355cdec0d213e6c3b90ca6efedffe56211cf915db6142fb57ebd4e7177bd1f14a9cc7726deb1da033593482e
+    "@intlify/message-compiler": "npm:9.12.0"
+    "@intlify/shared": "npm:9.12.0"
+  checksum: 10c0/3d623b3a6f09ae7e6dfb1e12e920de41775c01cd4e14e7b461cf3e63f1126fb0c4a3fa82e79b7f0b0b9efadbbb6e1fc427fbb5f02549a765155273b6a9e312f5
   languageName: node
   linkType: hard
 
-"@intlify/message-compiler@npm:9.11.1":
-  version: 9.11.1
-  resolution: "@intlify/message-compiler@npm:9.11.1"
+"@intlify/message-compiler@npm:9.12.0":
+  version: 9.12.0
+  resolution: "@intlify/message-compiler@npm:9.12.0"
   dependencies:
-    "@intlify/shared": "npm:9.11.1"
+    "@intlify/shared": "npm:9.12.0"
     source-map-js: "npm:^1.0.2"
-  checksum: 10c0/f35250e52ddb7cf9622148eea101fb502f1628a0252764651befdf8918560474aee2ab250f1a29e4783efa6a26360a76c19bc2df65042cc4871bb2f6664a3a50
+  checksum: 10c0/7d148498c0682647408f12a6a795d3b1150cfd532e482dd173624ace197020a99bf962c5655502cf5801c72571c5b52a669c0eb6e6f52c228a5c5ebe5c1e9adf
   languageName: node
   linkType: hard
 
-"@intlify/shared@npm:9.11.1":
-  version: 9.11.1
-  resolution: "@intlify/shared@npm:9.11.1"
-  checksum: 10c0/6e8adc2fda73c5a3c8c898e66fcd979ee070aeb860577ec81a28cee54c15e0042cf555023a92d0b7fbefe8ce37c3a226390b50b372499c9aea4ad68ed500afee
+"@intlify/shared@npm:9.12.0":
+  version: 9.12.0
+  resolution: "@intlify/shared@npm:9.12.0"
+  checksum: 10c0/ab284046557272f95ec5f3b5c86bf62e19384bb316b6b6f5045e2f6365a7634769846fb30a5c789172f002e86c17a2d988b910adbe9267150480850fbe7dfd18
   languageName: node
   linkType: hard
 
@@ -1214,31 +1214,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@volar/language-core@npm:2.2.0-alpha.7":
-  version: 2.2.0-alpha.7
-  resolution: "@volar/language-core@npm:2.2.0-alpha.7"
+"@volar/language-core@npm:2.2.0-alpha.8":
+  version: 2.2.0-alpha.8
+  resolution: "@volar/language-core@npm:2.2.0-alpha.8"
   dependencies:
-    "@volar/source-map": "npm:2.2.0-alpha.7"
-  checksum: 10c0/f47c31637cb9effadca33b5acf47c7e168affb445a517648d45be998bb526dd32b5db0f50b51ca0bf1dc1a6c7dad240eae7b0b7e0217f8d0370eed2bddc8d0b6
+    "@volar/source-map": "npm:2.2.0-alpha.8"
+  checksum: 10c0/6475ac60ace1ea6dadf2783e512a527fed538a6aadd85f3e00207a8e5f3dc2d7a1fac9812c3c429685c64c96dc291e290e261fbc51eac49eb7efaaee32fc8d48
   languageName: node
   linkType: hard
 
-"@volar/source-map@npm:2.2.0-alpha.7":
-  version: 2.2.0-alpha.7
-  resolution: "@volar/source-map@npm:2.2.0-alpha.7"
+"@volar/source-map@npm:2.2.0-alpha.8":
+  version: 2.2.0-alpha.8
+  resolution: "@volar/source-map@npm:2.2.0-alpha.8"
   dependencies:
     muggle-string: "npm:^0.4.0"
-  checksum: 10c0/e9ee8a5fdf3e798e05e167802e04e893a507f031f87545d2b043cd7229fdf673e8cef43b7f9b16a99141440bf8d77cff1fa3e5ac32dd84d93541795bc7f668bd
+  checksum: 10c0/1ce32a0a52851e15c58ce2ac7d5b9aa2daf8f42a037f57cfdc887c655c6394853900735855cc221cda76373e4868023fa140582a66915f2d2271bcbfd84c0c13
   languageName: node
   linkType: hard
 
-"@volar/typescript@npm:2.2.0-alpha.7":
-  version: 2.2.0-alpha.7
-  resolution: "@volar/typescript@npm:2.2.0-alpha.7"
+"@volar/typescript@npm:2.2.0-alpha.8":
+  version: 2.2.0-alpha.8
+  resolution: "@volar/typescript@npm:2.2.0-alpha.8"
   dependencies:
-    "@volar/language-core": "npm:2.2.0-alpha.7"
+    "@volar/language-core": "npm:2.2.0-alpha.8"
     path-browserify: "npm:^1.0.1"
-  checksum: 10c0/4f1a04daafccb9f6d20a117e1060e632fe5429c54aea8d116d4c535df2534a1ad173ca6102ab93f4c0ce2588627e2560de2d2953d9c86105c73b73b0a4b8f74e
+  checksum: 10c0/9dbc1f7e4d0417cb468b4719ea97760f954c614f117cae50d86d267403f3836a5fed1e92c4954372cd9168a5a465f267e00e2f52345b751f3a8426724316a4c1
   languageName: node
   linkType: hard
 
@@ -1299,11 +1299,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/language-core@npm:2.0.12":
-  version: 2.0.12
-  resolution: "@vue/language-core@npm:2.0.12"
+"@vue/language-core@npm:2.0.13":
+  version: 2.0.13
+  resolution: "@vue/language-core@npm:2.0.13"
   dependencies:
-    "@volar/language-core": "npm:2.2.0-alpha.7"
+    "@volar/language-core": "npm:2.2.0-alpha.8"
     "@vue/compiler-dom": "npm:^3.4.0"
     "@vue/shared": "npm:^3.4.0"
     computeds: "npm:^0.0.1"
@@ -1315,7 +1315,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/e20203eec3c94a046df85c4feb5c3892851bdfc79c5b8fbe5ca240b98234aa6c5128a69395648aaed8aace290fd90738a143526f3ab9eac12a56577ee7f37a06
+  checksum: 10c0/0d3edd6bea45f43a08b95f0b8a5e63992a22f251a0dc7c5a0e06ab743a118a38278fd508eda829877b9b904d303e8c9b678611b4eafff5e81975ffcd8140553b
   languageName: node
   linkType: hard
 
@@ -3647,7 +3647,7 @@ __metadata:
     happy-dom: "npm:^14.7.1"
     resize-observer-polyfill: "npm:^1.5.1"
     roboto-fontface: "npm:^0.10.0"
-    sass: "npm:^1.74.1"
+    sass: "npm:^1.75.0"
     sass-loader: "npm:^14.2.0"
     typescript: "npm:^5.4.5"
     typescript-eslint: "npm:^7.6.0"
@@ -3657,9 +3657,9 @@ __metadata:
     vue: "npm:^3.4.21"
     vue-eslint-parser: "npm:^9.4.2"
     vue-gtag: "npm:^2.0.1"
-    vue-i18n: "npm:^9.11.1"
+    vue-i18n: "npm:^9.12.0"
     vue-recaptcha: "npm:3.0.0-alpha.6"
-    vue-tsc: "npm:^2.0.12"
+    vue-tsc: "npm:^2.0.13"
     vue-writer: "npm:1.2.0"
     vuetify: "npm:^3.5.15"
     webfontloader: "npm:^1.6.28"
@@ -3907,16 +3907,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.74.1":
-  version: 1.74.1
-  resolution: "sass@npm:1.74.1"
+"sass@npm:^1.75.0":
+  version: 1.75.0
+  resolution: "sass@npm:1.75.0"
   dependencies:
     chokidar: "npm:>=3.0.0 <4.0.0"
     immutable: "npm:^4.0.0"
     source-map-js: "npm:>=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 10c0/4610257ee27823276ce4998a534b4ee9f313e5a0b3d3899e70e0f87096feeae4cd8dd3c2f765b52f57dd87f5dab22370ef63f95a837a189fbb9401396d5ce717
+  checksum: 10c0/1564ab2c8041c99a330cec93127fe8abcf65ac63eecb471610ed7f3126a2599a58b788a3a98eb8719f7f40b9b04e00c92bc9e11a9c2180ad582b8cba9fb030b0
   languageName: node
   linkType: hard
 
@@ -4586,16 +4586,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-i18n@npm:^9.11.1":
-  version: 9.11.1
-  resolution: "vue-i18n@npm:9.11.1"
+"vue-i18n@npm:^9.12.0":
+  version: 9.12.0
+  resolution: "vue-i18n@npm:9.12.0"
   dependencies:
-    "@intlify/core-base": "npm:9.11.1"
-    "@intlify/shared": "npm:9.11.1"
+    "@intlify/core-base": "npm:9.12.0"
+    "@intlify/shared": "npm:9.12.0"
     "@vue/devtools-api": "npm:^6.5.0"
   peerDependencies:
     vue: ^3.0.0
-  checksum: 10c0/2187b7ee75528104c4484946878bf0922feff44d85c805ba9c3d39f0d8095aafe3238c9fd0a3b4b13791c23715fa7d01ed5fab7968b680ec411d9506526c7360
+  checksum: 10c0/53dbb0df1951a0882789a6df04269c4c21c13431ae50ef1bcdc1de8707434821638d7dde1d9d29635c4ab182d0992d72ed0d9b21bdace00c38ed0cb062f3b662
   languageName: node
   linkType: hard
 
@@ -4630,18 +4630,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-tsc@npm:^2.0.12":
-  version: 2.0.12
-  resolution: "vue-tsc@npm:2.0.12"
+"vue-tsc@npm:^2.0.13":
+  version: 2.0.13
+  resolution: "vue-tsc@npm:2.0.13"
   dependencies:
-    "@volar/typescript": "npm:2.2.0-alpha.7"
-    "@vue/language-core": "npm:2.0.12"
+    "@volar/typescript": "npm:2.2.0-alpha.8"
+    "@vue/language-core": "npm:2.0.13"
     semver: "npm:^7.5.4"
   peerDependencies:
     typescript: "*"
   bin:
     vue-tsc: bin/vue-tsc.js
-  checksum: 10c0/f34b4214102fc696cd5196bfda8fb9ae16bdd2b94563f4d4c88faa1bbc3ed09a09237bff507729c1a0a8b260b089f7e490628c845a6a3be650e4aba20e9bd789
+  checksum: 10c0/248127efb21c3929147a5226f4bbd1726e11e8c0eed301d9c96c3c1fa0c49b432cbfcaa73dc137c8c2c6d7dbef16d125d87e353265fe69d4311106b66fd3aa77
   languageName: node
   linkType: hard
 
