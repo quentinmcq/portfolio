@@ -2145,9 +2145,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-perfectionist@npm:^2.8.0":
-  version: 2.8.0
-  resolution: "eslint-plugin-perfectionist@npm:2.8.0"
+"eslint-plugin-perfectionist@npm:^2.9.0":
+  version: 2.9.0
+  resolution: "eslint-plugin-perfectionist@npm:2.9.0"
   dependencies:
     "@typescript-eslint/utils": "npm:^6.13.0"
     minimatch: "npm:^9.0.3"
@@ -2167,7 +2167,7 @@ __metadata:
       optional: true
     vue-eslint-parser:
       optional: true
-  checksum: 10c0/707236c7c144206808a86a82dd1441a5c9eb435427b6ef7f07316ab7847aadd046637e1ff35667e71e4aba2aa9c9c874d47d316dedd3a236ff572736916783b0
+  checksum: 10c0/f323d983fa1d4805c68b03ad0b7174f1784678766be4679dd43281d28f1557b8c48ed6d3bd76e7812ad6505e29fd241d5f31c3269ce40bc05692d0ce4a8aa6ed
   languageName: node
   linkType: hard
 
@@ -3642,7 +3642,7 @@ __metadata:
     aos: "npm:^2.3.4"
     emailjs-com: "npm:^3.2.0"
     eslint: "npm:^9.0.0"
-    eslint-plugin-perfectionist: "npm:^2.8.0"
+    eslint-plugin-perfectionist: "npm:^2.9.0"
     eslint-plugin-vue: "npm:^9.24.1"
     happy-dom: "npm:^14.7.1"
     resize-observer-polyfill: "npm:^1.5.1"
