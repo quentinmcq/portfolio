@@ -1,0 +1,41 @@
+name: release
+
+on:
+  push:
+    branches:
+      - 'main'
+    paths-ignore:
+      - 'README.md'
+
+jobs:
+  release:
+    if: ${{ !contains(github.event.head_commit.message, 'chore(deps)') }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run actions/checkout
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 0
+
+      - name: Enable corepack (allow to use yarn)
+        run: corepack enable
+
+      - name: Run actions/setup-node
+        uses: actions/setup-node@master
+        with:
+          node-version: 20
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Initialize Git user
+        run: |
+          git config --global user.email "quentin.macq@outlook.fr"
+          git config --global user.name "Release Workflow"
+
+      - name: Run release
+        run: yarn release --ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

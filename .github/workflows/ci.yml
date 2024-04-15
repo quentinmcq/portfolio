@@ -2,30 +2,31 @@ name: ci
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - 'main'
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - 'main'
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node: [20.12.2]
-
     steps:
-    - uses: actions/checkout@v4
-    - run: corepack enable
-    - name: Use Node.js ${{ matrix.node }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node }}
-        cache: 'yarn'
-        
-    - name: Install dependencies
-      run: yarn install
+      - name: Run actions/checkout@master
+        uses: actions/checkout@master
 
-    - name: Execute vitest tests
-      run: yarn test:unit
+      - name: Enable corepack (allow to use yarn)
+        run: corepack enable
+
+      - name: actions/setup-node@master
+        uses: actions/setup-node@master
+        with:
+          node-version: 20
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Execute vitest tests
+        run: yarn test:unit
