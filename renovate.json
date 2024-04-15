@@ -2,8 +2,7 @@
   "timezone": "Europe/Paris",
   "extends": [
     "config:recommended",
-    "group:allNonMajor",
-    ":semanticCommitTypeAll(chore)"
+    "group:allNonMajor"
   ],
   "rangeStrategy": "bump",
   "ignoreDeps": ["vue-writer"]
