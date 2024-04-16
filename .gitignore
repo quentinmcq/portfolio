@@ -7,7 +7,7 @@ node_modules
 # Vue generate
 dist
 
-# dotenv environment variables files
+# Local env file
 .env.local
 
 # Logs
@@ -22,5 +22,9 @@ yarn-error.log*
 # Coverage reports
 coverage
 
-tsconfig.app.tsbuildinfo
-tsconfig.vitest.tsbuildinfo
+# Tsconfig
+tsconfig.tsbuildinfo
+
+# Eslint
+eslint-typegen.d.ts
+.eslintcache
