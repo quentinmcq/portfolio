@@ -16,29 +16,30 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
-import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics';
-import { useResponsive } from '@/composables/style/responsive';
-import type { Presentation } from '@/types/Presentation';
+import type { Presentation } from '@/types/Presentation'
+
+import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics'
+import { useResponsive } from '@/composables/style/responsive'
+import { computed } from 'vue'
 
 const props = defineProps<{
   presentation: Presentation
-}>();
+}>()
 
-const { buttonSize } = useResponsive();
+const { buttonSize } = useResponsive()
 
 const target = computed(() =>
-  !props.presentation.link.startsWith('#') ? '_blank' : ''
-);
-const icon = computed(() => props.presentation.icon || '');
+  !props.presentation.link.startsWith('#') ? '_blank' : '',
+)
+const icon = computed(() => props.presentation.icon || '')
 
 function sendEventOnButtonClick(): void {
   useGoogleAnalyticsEvent({
     action: 'presentation-button',
     category: 'trafic',
     label: 'A user clicked on a presentation button',
-    value: 2
-  });
+    value: 2,
+  })
 }
 </script>
 

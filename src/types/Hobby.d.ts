@@ -1,11 +1,11 @@
 export interface Hobby {
-  title: string
   button: string
-  description: string
   cover: string
-  link?: string
-  links?: string
+  description: string
   images?: {
     [year: number]: string[]
   }
+  link?: string
+  links?: string
+  title: string
 }

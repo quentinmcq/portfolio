@@ -1,5 +1,5 @@
 export interface Skill {
-  componentName: string
   color: string
+  componentName: string
   content: string
 }

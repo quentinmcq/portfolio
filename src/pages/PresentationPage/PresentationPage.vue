@@ -79,11 +79,12 @@
 </template>
 
 <script setup lang="ts">
-import { useAge } from '@/composables/common/age'
-import presentations from '@/data/fr/presentation'
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue'
-import PresentationPageButton from './PresentationPageButton/PresentationPageButton.vue'
+import { useAge } from '@/composables/common/age'
 import { useComponentName } from '@/composables/common/component-name'
+import presentations from '@/data/fr/presentation'
+
+import PresentationPageButton from './PresentationPageButton/PresentationPageButton.vue'
 
 const componentName = useComponentName()
 </script>

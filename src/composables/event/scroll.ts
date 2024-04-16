@@ -1,5 +1,5 @@
-import { type Ref, ref } from 'vue'
 import { useEventListener } from '@/composables/event/event'
+import { type Ref, ref } from 'vue'
 import { useDisplay } from 'vuetify'
 
 const XS_WIDTH = 780
@@ -8,8 +8,8 @@ const MD_WIDTH = 760
 const LG_AND_UP_WIDTH = 630
 
 interface UseScroll {
-  visible: Ref<boolean>
   scrollToTop: () => void
+  visible: Ref<boolean>
 }
 
 export function useScroll(): UseScroll {

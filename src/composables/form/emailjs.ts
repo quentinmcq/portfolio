@@ -1,5 +1,6 @@
-import emailJS from 'emailjs-com'
 import type { Ref } from 'vue'
+
+import emailJS from 'emailjs-com'
 
 const USER_ID: string = import.meta.env.VITE_APP_EMAILJS_USER_ID
 const SERVICE_ID: string = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID

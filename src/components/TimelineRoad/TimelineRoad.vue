@@ -1,7 +1,11 @@
 <template>
   <CategoryTitle :component-name="componentName" />
 
-  <v-timeline class="timeline__container" :density="timelineDensity" line-color="white">
+  <v-timeline
+    :density="timelineDensity"
+    class="timeline__container"
+    line-color="white"
+  >
     <TimelineRoadItem
       v-for="(item, index) in items"
       :key="index"
@@ -13,20 +17,21 @@
 </template>
 
 <script setup lang="ts">
-import { useResponsive } from '@/composables/style/responsive';
-import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue';
-import TimelineRoadItem from '@/components/TimelineRoad/TimelineRoadItem/TimelineRoadItem.vue';
-import type { Experience } from '@/types/Experience';
-import type { Education } from '@/types/Education';
+import type { Education } from '@/types/Education'
+import type { Experience } from '@/types/Experience'
+
+import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue'
+import TimelineRoadItem from '@/components/TimelineRoad/TimelineRoadItem/TimelineRoadItem.vue'
+import { useResponsive } from '@/composables/style/responsive'
 
 interface Props {
-  items: Experience[] | Education[]
   componentName: string
+  items: Education[] | Experience[]
 }
 
-defineProps<Props>();
+defineProps<Props>()
 
-const { timelineDensity } = useResponsive();
+const { timelineDensity } = useResponsive()
 </script>
 
 <style lang="scss" src="./timeline-road.scss" />

@@ -1,10 +1,11 @@
-import { mount } from '@vue/test-utils'
-import { describe, it, expect } from 'vitest'
-import HobbyPage from '../HobbyPage.vue'
-import DialogCard from '@/components/DialogCard/DialogCard.vue'
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue'
+import DialogCard from '@/components/DialogCard/DialogCard.vue'
 import SeeMore from '@/components/DialogCard/SeeMore/SeeMore.vue'
 import hobbies from '@/data/fr/hobby'
+import { mount } from '@vue/test-utils'
+import { describe, expect, it } from 'vitest'
+
+import HobbyPage from '../HobbyPage.vue'
 
 global.ResizeObserver = require('resize-observer-polyfill')
 

@@ -1,5 +1,6 @@
-import { VueRecaptchaPlugin } from 'vue-recaptcha/head'
 import type { App } from 'vue'
+
+import { VueRecaptchaPlugin } from 'vue-recaptcha/head'
 
 export function initRecaptcha(app: App<Element>) {
   app.use(VueRecaptchaPlugin, {

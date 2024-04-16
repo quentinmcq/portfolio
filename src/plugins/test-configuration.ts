@@ -1,6 +1,6 @@
+import { config } from '@vue/test-utils'
 import { createI18n } from 'vue-i18n'
 import { createVuetify } from 'vuetify'
-import { config } from '@vue/test-utils'
 // import fr from '@/locales/fr';
 // import en from '@/locales/en';
 

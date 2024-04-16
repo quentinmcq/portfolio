@@ -1,14 +1,14 @@
+import { type ComputedRef, computed } from 'vue'
 import { useDisplay } from 'vuetify'
-import { computed, type ComputedRef } from 'vue'
 
 const SM_SIZE = 'small'
 const DEFAULT_SIZE = 'default'
 
 interface UseSize {
-  buttonSize: ComputedRef<'small' | 'default'>
-  chipSize: ComputedRef<'small' | 'default'>
-  iconSize: ComputedRef<'small' | 'default'>
-  timelineSize: ComputedRef<'small' | 'default'>
+  buttonSize: ComputedRef<'default' | 'small'>
+  chipSize: ComputedRef<'default' | 'small'>
+  iconSize: ComputedRef<'default' | 'small'>
+  timelineSize: ComputedRef<'default' | 'small'>
 }
 
 export function useSize(): UseSize {

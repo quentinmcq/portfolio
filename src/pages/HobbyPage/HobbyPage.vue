@@ -1,7 +1,11 @@
 <template>
   <v-container :id="componentName">
     <CategoryTitle :component-name="componentName" />
-    <DialogCard :items="allItems" :component-name="componentName" customButtonText />
+    <DialogCard
+      :items="allItems"
+      :component-name="componentName"
+      custom-button-text
+    />
 
     <SeeMore
       v-show="hasMoreItems"
@@ -13,24 +17,24 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
-import { useDisplay } from 'vuetify';
-import hobbies from '@/data/fr/hobby';
-import DialogCard from '@/components/DialogCard/DialogCard.vue';
-import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue';
-import SeeMore from '@/components/DialogCard/SeeMore/SeeMore.vue';
-import { useComponentName } from '@/composables/common/component-name';
+import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue'
+import DialogCard from '@/components/DialogCard/DialogCard.vue'
+import SeeMore from '@/components/DialogCard/SeeMore/SeeMore.vue'
+import { useComponentName } from '@/composables/common/component-name'
+import hobbies from '@/data/fr/hobby'
+import { computed, ref } from 'vue'
+import { useDisplay } from 'vuetify'
 
-const componentName = useComponentName();
-const { lgAndUp } = useDisplay();
+const componentName = useComponentName()
+const { lgAndUp } = useDisplay()
 
-const DEFAULT_NUMBER_OF_ITEMS_TO_DISPLAY = lgAndUp.value ? 4 : 2;
-const numberOfDisplayedItems = ref(DEFAULT_NUMBER_OF_ITEMS_TO_DISPLAY);
+const DEFAULT_NUMBER_OF_ITEMS_TO_DISPLAY = lgAndUp.value ? 4 : 2
+const numberOfDisplayedItems = ref(DEFAULT_NUMBER_OF_ITEMS_TO_DISPLAY)
 
-const allItems = computed(() => hobbies.slice(0, numberOfDisplayedItems.value));
-const hasMoreItems = computed(() => numberOfDisplayedItems.value < hobbies.length);
+const allItems = computed(() => hobbies.slice(0, numberOfDisplayedItems.value))
+const hasMoreItems = computed(() => numberOfDisplayedItems.value < hobbies.length)
 
 function setNumberOfItemsToDisplay(itemsNumber: number): void {
-  numberOfDisplayedItems.value += itemsNumber;
+  numberOfDisplayedItems.value += itemsNumber
 }
 </script>

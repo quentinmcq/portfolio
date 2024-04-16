@@ -1,6 +1,6 @@
 import {
-  GITHUB_USERNAME,
   GITHUB_URL,
+  GITHUB_USERNAME,
   LINKEDIN_URL,
   LINKEDIN_USERNAME,
 } from '@/misc/constants'

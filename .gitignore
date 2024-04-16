@@ -1,5 +1,4 @@
-### Node template
-# IDE / Editor
+# PhpStorm idea
 .idea
 
 # Dependency directories
@@ -7,13 +6,11 @@ node_modules
 
 # Vue generate
 dist
-dist-ssr
 
 # dotenv environment variables files
 .env.local
 
 # Logs
-logs
 *.log
 yarn-debug.log*
 yarn-error.log*
@@ -22,7 +19,7 @@ yarn-error.log*
 !.yarn/plugins
 .pnp.*
 
-# Vitest directory
+# Coverage reports
 coverage
 
 tsconfig.app.tsbuildinfo

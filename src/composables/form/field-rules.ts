@@ -2,16 +2,16 @@ import { type Ref, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 interface FieldRules {
-  nameRules: Ref<((v: any) => string | true)[]>
-  phoneRules: Ref<((v: any) => string | true)[]>
   emailRules: Ref<((v: any) => string | true)[]>
   messageRules: Ref<((v: any) => string | true)[]>
+  nameRules: Ref<((v: any) => string | true)[]>
+  phoneRules: Ref<((v: any) => string | true)[]>
 }
 
 const phoneRegex: RegExp = /^0[1-9]\d{8}$/
 const emailRegex: RegExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
 
-const minMessageLength = (t: any) => (v: string | any[]) => {
+const minMessageLength = (t: any) => (v: any[] | string) => {
   const minLength: number = 20
 
   return (v && v.length >= minLength) || t('contact.min-message-length', { minLength })

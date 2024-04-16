@@ -26,10 +26,11 @@
 
 <script setup lang="ts">
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue'
-import SkillPageItem from './SkillPageItem/SkillPageItem.vue'
-import { useResponsive } from '@/composables/style/responsive'
 import { useComponentName } from '@/composables/common/component-name'
+import { useResponsive } from '@/composables/style/responsive'
 import skills from '@/data/fr/skill'
+
+import SkillPageItem from './SkillPageItem/SkillPageItem.vue'
 
 const componentName = useComponentName()
 const { gridStyle } = useResponsive()

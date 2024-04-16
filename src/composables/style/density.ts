@@ -1,5 +1,5 @@
+import { type ComputedRef, computed } from 'vue'
 import { useDisplay } from 'vuetify'
-import { computed, type ComputedRef } from 'vue'
 
 interface UseDensity {
   timelineDensity: ComputedRef<'compact' | 'default'>

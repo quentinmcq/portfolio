@@ -1,9 +1,9 @@
-import { computed, type ComputedRef } from 'vue'
+import { type ComputedRef, computed } from 'vue'
 import { useDisplay } from 'vuetify'
 
 interface UseStyle {
   appStyle: ComputedRef<string>
-  gridStyle: ComputedRef<object | { gridTemplateColumns: string }>
+  gridStyle: ComputedRef<{ gridTemplateColumns: string } | object>
 }
 
 export function useStyle(): UseStyle {

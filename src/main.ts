@@ -1,11 +1,12 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import { initWebFontLoader } from '@/plugins/webfontloader'
-import { initGoogleAnalytics } from '@/plugins/google-analytics'
-import { initVuetify } from '@/plugins/vuetify'
-import { initI18n } from '@/plugins/v-i18n'
 import { initAos } from '@/plugins/aos'
+import { initGoogleAnalytics } from '@/plugins/google-analytics'
 import { initRecaptcha } from '@/plugins/recaptcha'
+import { initI18n } from '@/plugins/v-i18n'
+import { initVuetify } from '@/plugins/vuetify'
+import { initWebFontLoader } from '@/plugins/webfontloader'
+import { createApp } from 'vue'
+
+import App from './App.vue'
 
 const app = createApp(App)
 

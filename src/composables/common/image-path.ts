@@ -1,4 +1,4 @@
-import { computed, type ComputedRef } from 'vue'
+import { type ComputedRef, computed } from 'vue'
 
 interface UseImagePath {
   path: ComputedRef<string>

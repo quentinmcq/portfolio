@@ -1,20 +1,21 @@
-import { useSize } from '@/composables/style/size'
-import { useWidth } from '@/composables/style/width'
-import { useDensity } from '@/composables/style/density'
-import { useRows } from '@/composables/style/rows'
-import { useStyle } from '@/composables/style/style'
 import type { ComputedRef } from 'vue'
 
+import { useDensity } from '@/composables/style/density'
+import { useRows } from '@/composables/style/rows'
+import { useSize } from '@/composables/style/size'
+import { useStyle } from '@/composables/style/style'
+import { useWidth } from '@/composables/style/width'
+
 interface UseResponsive {
-  buttonSize: ComputedRef<'small' | 'default'>
-  chipSize: ComputedRef<'small' | 'default'>
-  iconSize: ComputedRef<'small' | 'default'>
-  timelineSize: ComputedRef<'small' | 'default'>
-  menuWidth: ComputedRef<'100%' | '30%' | '40%'>
-  timelineDensity: ComputedRef<'default' | 'compact'>
-  textAreaRows: ComputedRef<3 | 6>
   appStyle: ComputedRef<string>
-  gridStyle: ComputedRef<object | { gridTemplateColumns: string }>
+  buttonSize: ComputedRef<'default' | 'small'>
+  chipSize: ComputedRef<'default' | 'small'>
+  gridStyle: ComputedRef<{ gridTemplateColumns: string } | object>
+  iconSize: ComputedRef<'default' | 'small'>
+  menuWidth: ComputedRef<'30%' | '40%' | '100%'>
+  textAreaRows: ComputedRef<3 | 6>
+  timelineDensity: ComputedRef<'compact' | 'default'>
+  timelineSize: ComputedRef<'default' | 'small'>
 }
 
 export function useResponsive(): UseResponsive {

@@ -1,42 +1,40 @@
-// @ts-check
 import eslint from '@eslint/js'
-// @ts-expect-error missing types
-// import pluginVue from 'eslint-plugin-vue'
 import stylistic from '@stylistic/eslint-plugin'
-// import vueParser from 'vue-eslint-parser'
+import tsParser from '@typescript-eslint/parser'
+import perfectionistNatural from 'eslint-plugin-perfectionist/configs/recommended-natural'
+import pluginVue from 'eslint-plugin-vue'
+import typegen from 'eslint-typegen'
 import tseslint from 'typescript-eslint'
-// @ts-expect-error missing types
-import perfectionist from 'eslint-plugin-perfectionist'
+import vueParser from 'vue-eslint-parser'
 
-export default [
+export default typegen([
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
-  // ...pluginVue.configs['flat/strongly-recommended'],
+  ...pluginVue.configs['flat/strongly-recommended'],
   stylistic.configs['recommended-flat'],
   stylistic.configs['disable-legacy'],
+  perfectionistNatural,
   {
     languageOptions: {
-      // parser: vueParser,
-      // parserOptions: {
-      //   project: true,
-      //   tsconfigRootDir: import.meta.dirname,
-      // },
+      parser: vueParser,
+      parserOptions: {
+        parser: tsParser,
+      },
     },
     plugins: {
-      perfectionist,
       stylistic,
     },
     rules: {
-      '@typescript-eslint/no-explicit-any': 'off',
-      'no-console': 'off',
-      'perfectionist/sort-objects': 'error',
-      'stylistic/comma-dangle': ['error', 'always-multiline'],
-      'stylistic/object-curly-spacing': ['error', 'always'],
-      'stylistic/quote-props': ['error', 'consistent'],
-      'stylistic/space-before-function-paren': ['error', {
+      '@stylistic/comma-dangle': ['error', 'always-multiline'],
+      '@stylistic/object-curly-spacing': ['error', 'always'],
+      '@stylistic/quote-props': ['error', 'consistent'],
+      '@stylistic/space-before-function-paren': ['error', {
         anonymous: 'never',
         named: 'never',
       }],
+      '@typescript-eslint/no-explicit-any': 'off',
+      'no-console': 'off',
+      'perfectionist/sort-vue-attributes': 'off',
     },
   },
-]
+])

@@ -14,41 +14,42 @@
 </template>
 
 <script setup lang="ts">
-import { useDisplay } from 'vuetify';
-import { useResponsive } from '@/composables/style/responsive';
-import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics';
-import { useI18n } from 'vue-i18n';
-import type { Project } from '@/types/Project';
-import type { Hobby } from '@/types/Hobby';
-import { computed } from 'vue';
+import type { Hobby } from '@/types/Hobby'
+import type { Project } from '@/types/Project'
+
+import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics'
+import { useResponsive } from '@/composables/style/responsive'
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useDisplay } from 'vuetify'
 
 const props = defineProps<{
-  items: Project[] | Hobby[]
   componentName: string
-}>();
+  items: Hobby[] | Project[]
+}>()
 
 const emit = defineEmits<{
   'see-more': [itemsNumber: number]
-}>();
+}>()
 
-const { lgAndUp } = useDisplay();
-const { buttonSize } = useResponsive();
-const { t } = useI18n();
+const { lgAndUp } = useDisplay()
+const { buttonSize } = useResponsive()
+const { t } = useI18n()
 
-const numberOfItemsToDisplay = computed(() => lgAndUp.value ? 4 : 2);
+const numberOfItemsToDisplay = computed(() => lgAndUp.value ? 4 : 2)
 
 function loadMore(): void {
-  emit('see-more', numberOfItemsToDisplay.value);
-  
-  sendSeeMoreAnalyticsEvent();
+  emit('see-more', numberOfItemsToDisplay.value)
+
+  sendSeeMoreAnalyticsEvent()
 }
 
 function sendSeeMoreAnalyticsEvent(): void {
   useGoogleAnalyticsEvent({
     action: `see-more-button:click`,
     category: props.componentName,
-    label: t('common.see-more')
-  });
+    label: t('common.see-more'),
+  })
 }
 </script>
 

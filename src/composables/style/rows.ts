@@ -1,4 +1,4 @@
-import { computed, type ComputedRef } from 'vue'
+import { type ComputedRef, computed } from 'vue'
 import { useDisplay } from 'vuetify'
 
 const XS_ROWS = 3

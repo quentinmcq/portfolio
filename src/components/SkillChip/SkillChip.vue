@@ -5,7 +5,10 @@
     :size="chipSize"
     :href="chipConfig.link"
   >
-    <template #prepend v-if="chipConfig.icon">
+    <template
+      #prepend
+      v-if="chipConfig.icon"
+    >
       <GenericImage
         :src="path"
         :alt="chipConfig.label"
@@ -14,48 +17,50 @@
         eager
       />
     </template>
-    <div class="ml-1">{{ chipConfig.label }}</div>
+    <div class="ml-1">
+      {{ chipConfig.label }}
+    </div>
   </v-chip>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
-import { useResponsive } from '@/composables/style/responsive';
-import tool from '@/data/tools';
-import GenericImage from '@/components/GenericImage/GenericImage.vue';
-import { useImagePath } from '@/composables/common/image-path.js';
+import GenericImage from '@/components/GenericImage/GenericImage.vue'
+import { useImagePath } from '@/composables/common/image-path.js'
+import { useResponsive } from '@/composables/style/responsive'
+import tool from '@/data/tools'
+import { computed } from 'vue'
 
 interface Props {
-  label: string;
-  color?: string;
+  color?: string
+  label: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  color: undefined
-});
+  color: undefined,
+})
 
-const { chipSize } = useResponsive();
+const { chipSize } = useResponsive()
 
 const chipConfig = computed(() => {
-  const labelLowercase = props.label.toLowerCase();
-  const config = tool[labelLowercase];
+  const labelLowercase = props.label.toLowerCase()
+  const config = tool[labelLowercase]
 
-  if (config) return config;
+  if (config) return config
 
   return {
-    label: props.label,
     color: '',
-    link: ''
-  };
-});
+    label: props.label,
+    link: '',
+  }
+})
 
 const { path } = useImagePath({
   directory: 'skill',
-  image: `icons/${chipConfig.value.icon}`
-});
+  image: `icons/${chipConfig.value.icon}`,
+})
 
-const width = computed(() => chipConfig.value.width ?? 15);
-const height = computed(() => chipConfig.value.height ?? 15);
+const width = computed(() => chipConfig.value.width ?? 15)
+const height = computed(() => chipConfig.value.height ?? 15)
 </script>
 
 <style lang="scss" src="./skill-chip.scss" scoped />

@@ -1,8 +1,8 @@
 export interface Education {
-  title: string
-  location: string
-  description: string
   cover: string
-  year: string
+  description: string
   link: string
+  location: string
+  title: string
+  year: string
 }

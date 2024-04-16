@@ -1,6 +1,9 @@
 <template>
   <v-col class="grid-list-sm">
-    <h3 class="skill-page-item__title" data-aos="zoom-in">
+    <h3
+      class="skill-page-item__title"
+      data-aos="zoom-in"
+    >
       {{ $t(`skill[${index}].label`) }}
     </h3>
 
@@ -17,13 +20,14 @@
 </template>
 
 <script setup lang="ts">
-import SkillChip from '@/components/SkillChip/SkillChip.vue';
-import type { Skill } from '@/types/Skill';
+import type { Skill } from '@/types/Skill'
+
+import SkillChip from '@/components/SkillChip/SkillChip.vue'
 
 defineProps<{
-  skill: Skill
   index: number
-}>();
+  skill: Skill
+}>()
 </script>
 
 <style lang="scss" src="./skill-page-item.scss" scoped />

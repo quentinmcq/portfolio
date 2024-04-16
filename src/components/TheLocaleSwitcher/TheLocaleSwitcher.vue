@@ -1,9 +1,22 @@
 <template>
   <div class="locale-switcher">
-    <v-menu bottom offset-y transition="slide-y-transition" rounded="md">
+    <v-menu
+      bottom
+      offset-y
+      transition="slide-y-transition"
+      rounded="md"
+    >
       <template #activator="{ props }">
-        <v-btn color="#e52c4d" v-bind="props" aria-label="Choix de la langue">
-          <v-icon color="white" dense icon="mdi-translate" />
+        <v-btn
+          color="#e52c4d"
+          v-bind="props"
+          aria-label="Choix de la langue"
+        >
+          <v-icon
+            color="white"
+            dense
+            icon="mdi-translate"
+          />
           <v-icon
             color="white"
             class="hidden-sm-and-down"
@@ -13,7 +26,12 @@
         </v-btn>
       </template>
 
-      <v-list nav density="compact" width="108" class="text-center">
+      <v-list
+        nav
+        density="compact"
+        width="108"
+        class="text-center"
+      >
         <v-list-item-subtitle class="locale-switcher__label">
           {{ $t('languages.title') }}
         </v-list-item-subtitle>
@@ -21,12 +39,12 @@
         <v-list-item
           class="locale-switcher__item"
           v-model="selectedLocaleIndex"
-          v-for="locale in availableLocales"
-          :key="locale"
-          @click="switchLocale(locale)"
+          v-for="availableLocale in availableLocales"
+          :key="availableLocale"
+          @click="switchLocale(availableLocale)"
         >
           <v-list-item-title>
-            {{ $t(`languages.${locale}`) }}
+            {{ $t(`languages.${availableLocale}`) }}
           </v-list-item-title>
         </v-list-item>
       </v-list>
@@ -35,23 +53,23 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useI18n } from 'vue-i18n';
+import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
-const { locale, availableLocales } = useI18n();
-const selectedLocaleIndex = ref(1);
+const { availableLocales, locale } = useI18n()
+const selectedLocaleIndex = ref(1)
 
 function switchLocale(lang: string): void {
   if (locale.value !== lang) {
-    availableLocales.reverse();
+    availableLocales.reverse()
   }
 
-  locale.value = lang;
-  storeLangToLocalStorage(lang);
+  locale.value = lang
+  storeLangToLocalStorage(lang)
 }
 
 function storeLangToLocalStorage(lang: string): void {
-  localStorage.setItem('lang', lang);
+  localStorage.setItem('lang', lang)
 }
 </script>
 

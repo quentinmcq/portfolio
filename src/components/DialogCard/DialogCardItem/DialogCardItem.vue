@@ -1,5 +1,8 @@
 <template>
-  <v-col class="dialog-card-item" md="6">
+  <v-col
+    class="dialog-card-item"
+    md="6"
+  >
     <div class="card-animation">
       <v-card
         color="#f4f4f4"
@@ -30,8 +33,15 @@
         </div>
       </v-card>
 
-      <v-dialog v-model="dialog" :transition="transition" width="auto">
-        <v-card class="dialog-card-item__popin" color="#f4f4f4">
+      <v-dialog
+        v-model="dialog"
+        :transition="transition"
+        width="auto"
+      >
+        <v-card
+          class="dialog-card-item__popin"
+          color="#f4f4f4"
+        >
           <div class="dialog-card-item__popin__cross-icon">
             <v-icon
               class="cross-icon"
@@ -50,7 +60,10 @@
             <slot name="chipsAndLinks" />
           </v-card-text>
 
-          <v-card-actions class="dialog-card-item__see-more" v-if="!item.links">
+          <v-card-actions
+            class="dialog-card-item__see-more"
+            v-if="!item.links"
+          >
             <v-btn
               :disabled="!item.link"
               :href="item.link"
@@ -73,55 +86,56 @@
 </template>
 
 <script setup lang="ts">
-import { ref, toRefs, computed } from 'vue';
-import { useResponsive } from '@/composables/style/responsive';
-import { useImagePath } from '@/composables/common/image-path';
-import { usePrefixTranslation } from '@/composables/common/prefix-translation';
-import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics';
-import { useAnimation } from '@/composables/style/animation';
-import GenericImage from '@/components/GenericImage/GenericImage.vue';
-import type { Project } from '@/types/Project';
-import type { Hobby } from '@/types/Hobby';
+import type { Hobby } from '@/types/Hobby'
+import type { Project } from '@/types/Project'
+
+import GenericImage from '@/components/GenericImage/GenericImage.vue'
+import { useImagePath } from '@/composables/common/image-path'
+import { usePrefixTranslation } from '@/composables/common/prefix-translation'
+import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics'
+import { useAnimation } from '@/composables/style/animation'
+import { useResponsive } from '@/composables/style/responsive'
+import { computed, ref, toRefs } from 'vue'
 
 interface Props {
-  item: Project | Hobby
-  index: number
   componentName: string
   customButtonText?: boolean
+  index: number
+  item: Hobby | Project
   transition?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
   customButtonText: false,
-  transition: 'dialog-bottom-transition'
-});
+  transition: 'dialog-bottom-transition',
+})
 
-let dialog = ref(false);
-const { componentName, item, index } = toRefs(props);
+let dialog = ref(false)
+const { componentName, index, item } = toRefs(props)
 
-const prefix = usePrefixTranslation(componentName, index);
-const { buttonSize } = useResponsive();
+const prefix = usePrefixTranslation(componentName, index)
+const { buttonSize } = useResponsive()
 
 const buttonText = computed(() =>
-  props.customButtonText ? `${prefix}.button` : `${props.componentName}.find-out-more`
-);
+  props.customButtonText ? `${prefix}.button` : `${props.componentName}.find-out-more`,
+)
 
 const { path } = useImagePath({
   directory: props.componentName,
-  image: props.item.cover
-});
+  image: props.item.cover,
+})
 
 const { animation } = useAnimation({
+  componentType: 'dialog',
   index: props.index,
-  componentType: 'dialog'
-});
+})
 
 function sendFindOutMoreButtonClickAnalyticsEvent(): void {
   useGoogleAnalyticsEvent({
     action: `find-out-more-button:click`,
     category: props.componentName,
-    label: props.item.title
-  });
+    label: props.item.title,
+  })
 }
 </script>
 

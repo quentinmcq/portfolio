@@ -1,13 +1,13 @@
-import { computed, type ComputedRef } from 'vue'
+import { type ComputedRef, computed } from 'vue'
 import { useDisplay } from 'vuetify'
 
 interface UseAnimation {
-  animation: ComputedRef<'zoom-in' | 'fade-right' | 'fade-left'>
+  animation: ComputedRef<'fade-left' | 'fade-right' | 'zoom-in'>
 }
 
 interface UseAnimationParameters {
+  componentType?: 'dialog' | 'timeline'
   index?: number
-  componentType?: 'timeline' | 'dialog'
 }
 
 export function useAnimation({ componentType = 'timeline', index = 0 }: UseAnimationParameters): UseAnimation {

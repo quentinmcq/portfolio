@@ -1,4 +1,4 @@
-import { GITHUB_USERNAME, GITHUB_URL } from '@/misc/constants'
+import { GITHUB_URL, GITHUB_USERNAME } from '@/misc/constants'
 
 export default [
   {

@@ -11,9 +11,9 @@
 </template>
 
 <script setup lang="ts">
-import experiences from '@/data/fr/experience'
 import TimelineRoad from '@/components/TimelineRoad/TimelineRoad.vue'
 import { useComponentName } from '@/composables/common/component-name'
+import experiences from '@/data/fr/experience'
 
 const componentName = useComponentName()
 </script>

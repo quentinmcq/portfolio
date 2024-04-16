@@ -44,8 +44,14 @@
     />
 
     <ul class="navbar__link-list">
-      <li v-for="(item, index) in menu" :key="index">
-        <a class="navbar__link" @click="scrollToSection(item.link)">
+      <li
+        v-for="(item, index) in menu"
+        :key="index"
+      >
+        <a
+          class="navbar__link"
+          @click="scrollToSection(item.link)"
+        >
           {{ $t(`menu[${index}].title`) }}
         </a>
       </li>
@@ -54,43 +60,43 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useScroll } from '@/composables/event/scroll';
-import { useResponsive } from '@/composables/style/responsive';
-import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics';
-import TheLocaleSwitcher from '@/components/TheLocaleSwitcher/TheLocaleSwitcher.vue';
-import menu from '@/data/fr/menu';
+import TheLocaleSwitcher from '@/components/TheLocaleSwitcher/TheLocaleSwitcher.vue'
+import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics'
+import { useScroll } from '@/composables/event/scroll'
+import { useResponsive } from '@/composables/style/responsive'
+import menu from '@/data/fr/menu'
+import { ref } from 'vue'
 
-const { visible, scrollToTop } = useScroll();
-const { menuWidth } = useResponsive();
-const fullName = ['Quentin', 'Macq'];
+const { scrollToTop, visible } = useScroll()
+const { menuWidth } = useResponsive()
+const fullName = ['Quentin', 'Macq']
 
-const drawer = ref(false);
+const drawer = ref(false)
 function toggleMenu(): void {
-  drawer.value = !drawer.value;
+  drawer.value = !drawer.value
 }
 
 function scrollToSection(anchor: string): void {
-  const link = document.querySelector(anchor);
+  const link = document.querySelector(anchor)
 
-  if (!link) return;
+  if (!link) return
 
-  link.scrollIntoView({ behavior: 'smooth' });
+  link.scrollIntoView({ behavior: 'smooth' })
 
-  toggleMenu();
+  toggleMenu()
 }
 
 function manageEvents(): void {
-  toggleMenu();
-  sendMenuClickAnalyticsEvent();
+  toggleMenu()
+  sendMenuClickAnalyticsEvent()
 }
 
 function sendMenuClickAnalyticsEvent(): void {
   useGoogleAnalyticsEvent({
     action: `timeline-card:click`,
     category: 'Menu',
-    label: 'Menu'
-  });
+    label: 'Menu',
+  })
 }
 </script>
 

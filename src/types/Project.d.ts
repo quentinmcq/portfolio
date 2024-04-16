@@ -1,9 +1,9 @@
 export interface Project {
-  title: string
-  subtitle: string
-  description: string
-  cover: string
-  year: string
   chips: string[]
+  cover: string
+  description: string
   link: string
+  subtitle: string
+  title: string
+  year: string
 }

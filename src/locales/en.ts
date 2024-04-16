@@ -1,9 +1,9 @@
+import education from '@/data/en/education'
+import experience from '@/data/en/experience'
+import hobby from '@/data/en/hobby'
 import menu from '@/data/en/menu'
 import project from '@/data/en/project'
 import skill from '@/data/en/skill'
-import hobby from '@/data/en/hobby'
-import education from '@/data/en/education'
-import experience from '@/data/en/experience'
 
 export default {
   common: {

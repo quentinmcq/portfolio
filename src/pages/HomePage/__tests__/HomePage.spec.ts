@@ -1,15 +1,16 @@
 import { shallowMount } from '@vue/test-utils'
-import { describe, it, expect } from 'vitest'
-import HomePage from '../HomePage.vue'
+import { describe, expect, it } from 'vitest'
+
 import TheLoadingBar from '../../../components/TheLoadingBar/TheLoadingBar.vue'
 import TheScrollTop from '../../../components/TheScrollTop/TheScrollTop.vue'
-import PresentationPage from '../../PresentationPage/PresentationPage.vue'
-import SkillPage from '../../SkillPage/SkillPage.vue'
-import EducationPage from '../../EducationPage/EducationPage.vue'
-import HobbyPage from '../../HobbyPage/HobbyPage.vue'
-import ExperiencePage from '../../ExperiencePage/ExperiencePage.vue'
-import ProjectPage from '../../ProjectPage/ProjectPage.vue'
 import ContactPage from '../../ContactPage/ContactPage.vue'
+import EducationPage from '../../EducationPage/EducationPage.vue'
+import ExperiencePage from '../../ExperiencePage/ExperiencePage.vue'
+import HobbyPage from '../../HobbyPage/HobbyPage.vue'
+import PresentationPage from '../../PresentationPage/PresentationPage.vue'
+import ProjectPage from '../../ProjectPage/ProjectPage.vue'
+import SkillPage from '../../SkillPage/SkillPage.vue'
+import HomePage from '../HomePage.vue'
 
 describe('Home component', () => {
   const wrapper = shallowMount(HomePage)

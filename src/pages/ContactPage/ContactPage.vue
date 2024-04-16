@@ -1,10 +1,20 @@
 <template>
-  <v-container :id="componentName" class="contact-page">
+  <v-container
+    :id="componentName"
+    class="contact-page"
+  >
     <CategoryTitle :component-name="componentName" />
 
-    <div v-if="showConfetti" v-confetti="{ force: 1, particleCount: 300, duration: 5000 }"/>
+    <div
+      v-if="showConfetti"
+      v-confetti="{ force: 1, particleCount: 300, duration: 5000 }"
+    />
 
-    <v-row align="center" data-aos="zoom-in" justify="center">
+    <v-row
+      align="center"
+      data-aos="zoom-in"
+      justify="center"
+    >
       <v-col>
         <v-card class="contact-page__card">
           <v-form
@@ -94,60 +104,64 @@
 </template>
 
 <script setup lang="ts">
-import { vConfetti } from '@neoconfetti/vue';
-import { ref } from 'vue';
-import { useFieldRules } from '@/composables/form/field-rules';
-import { useResponsive } from '@/composables/style/responsive';
-import { useEmailJs } from '@/composables/form/emailjs';
-import { useSetInnerHTML } from '@/composables/common/inner-html';
-import { useI18n } from 'vue-i18n';
-import { useComponentName } from '@/composables/common/component-name';
-import { useChallengeV3 } from 'vue-recaptcha/head';
-import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue';
+import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue'
+import { useComponentName } from '@/composables/common/component-name'
+import { useSetInnerHTML } from '@/composables/common/inner-html'
+import { useEmailJs } from '@/composables/form/emailjs'
+import { useFieldRules } from '@/composables/form/field-rules'
+import { useResponsive } from '@/composables/style/responsive'
+import { vConfetti } from '@neoconfetti/vue'
+import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useChallengeV3 } from 'vue-recaptcha/head'
 
-const { execute } = useChallengeV3('submit');
-const componentName = useComponentName();
-const { buttonSize, textAreaRows } = useResponsive();
-const { nameRules, phoneRules, emailRules, messageRules } = useFieldRules();
+const { execute } = useChallengeV3('submit')
+const componentName = useComponentName()
+const { buttonSize, textAreaRows } = useResponsive()
+const { emailRules, messageRules, nameRules, phoneRules } = useFieldRules()
 
-const { t } = useI18n();
-const loading = ref(false);
-const showConfetti = ref(false);
-const form = ref<HTMLFormElement | null>(null);
+const { t } = useI18n()
+const loading = ref(false)
+const showConfetti = ref(false)
+const form = ref<HTMLFormElement | null>(null)
 
 async function manageEmailSending(): Promise<void> {
-  const sendFormButtonSelector = '#message-status .v-btn__content';
+  const sendFormButtonSelector = '#message-status .v-btn__content'
 
   try {
-    loading.value = true;
-    await execute();
-    await useEmailJs(form);
-    useSetInnerHTML(sendFormButtonSelector, t('contact.sent'));
-    showConfetti.value = true;
-  } catch {
-    useSetInnerHTML(sendFormButtonSelector, t('contact.error'));
-  } finally {
-    loading.value = false;
-    resetSendFormButtonLabel(sendFormButtonSelector);
+    loading.value = true
+    await execute()
+    await useEmailJs(form)
+    useSetInnerHTML(sendFormButtonSelector, t('contact.sent'))
+    showConfetti.value = true
+  }
+  catch {
+    useSetInnerHTML(sendFormButtonSelector, t('contact.error'))
+  }
+  finally {
+    loading.value = false
+    resetSendFormButtonLabel(sendFormButtonSelector)
   }
 }
 
 function resetSendFormButtonLabel(selector: string): void {
-  setTimeout(() => useSetInnerHTML(selector, t('contact.send')), 5000);
+  setTimeout(() => useSetInnerHTML(selector, t('contact.send')), 5000)
 }
 
-const valid = ref(false);
+const valid = ref(false)
 
 async function sendEmail(): Promise<void> {
-  if (!valid.value) { return; }
+  if (!valid.value) {
+    return
+  }
 
-  await manageEmailSending();
-  resetForm();
+  await manageEmailSending()
+  resetForm()
 }
 
 function resetForm(): void {
-  form.value?.reset();
+  form.value?.reset()
 }
 </script>
 
-<style lang="scss" src="./contact-page.scss"/>
+<style lang="scss" src="./contact-page.scss" />

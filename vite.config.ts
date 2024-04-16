@@ -1,6 +1,6 @@
-import { fileURLToPath, URL } from 'node:url'
-import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import { URL, fileURLToPath } from 'node:url'
+import { defineConfig } from 'vite'
 import vuetify from 'vite-plugin-vuetify'
 
 export default defineConfig({

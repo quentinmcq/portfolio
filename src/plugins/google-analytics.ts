@@ -1,5 +1,6 @@
-import VueGtag from 'vue-gtag'
 import type { App } from 'vue'
+
+import VueGtag from 'vue-gtag'
 
 export function initGoogleAnalytics(app: App<Element>) {
   const initOptions = {
