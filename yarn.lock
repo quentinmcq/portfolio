@@ -488,10 +488,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:9.0.0, @eslint/js@npm:^9.0.0":
+"@eslint/js@npm:9.0.0":
   version: 9.0.0
   resolution: "@eslint/js@npm:9.0.0"
   checksum: 10c0/ec3242a60a2525d2785d96d1e95b8060235f47f3b953aa81626968591ef8c1eb4f7f8b3647db2c97fdfa524eace949a5695be50521f64b8dcc4ed3b493ee409e
+  languageName: node
+  linkType: hard
+
+"@eslint/js@npm:^9.1.0":
+  version: 9.1.0
+  resolution: "@eslint/js@npm:9.1.0"
+  checksum: 10c0/1adc51c9cf75ddbb43eea237c5e71c699e50e43077ced82e378e2122b6fd24367ec200411af03a617dc62e62c6ffa48d7ffe259ce3c6b4260dee4971ba2119f6
   languageName: node
   linkType: hard
 
@@ -6269,7 +6276,7 @@ __metadata:
   resolution: "portfolio@workspace:."
   dependencies:
     "@eslint/config-inspector": "npm:^0.4.6"
-    "@eslint/js": "npm:^9.0.0"
+    "@eslint/js": "npm:^9.1.0"
     "@mdi/font": "npm:^7.4.47"
     "@neoconfetti/vue": "npm:^2.2.1"
     "@release-it/conventional-changelog": "npm:^8.0.1"
