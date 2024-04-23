@@ -6321,7 +6321,7 @@ __metadata:
     vue-recaptcha: "npm:3.0.0-alpha.6"
     vue-tsc: "npm:^2.0.14"
     vue-writer: "npm:1.2.0"
-    vuetify: "npm:^3.5.16"
+    vuetify: "npm:^3.5.17"
     webfontloader: "npm:^1.6.28"
   languageName: unknown
   linkType: soft
@@ -8125,9 +8125,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vuetify@npm:^3.5.16":
-  version: 3.5.16
-  resolution: "vuetify@npm:3.5.16"
+"vuetify@npm:^3.5.17":
+  version: 3.5.17
+  resolution: "vuetify@npm:3.5.17"
   peerDependencies:
     typescript: ">=4.7"
     vite-plugin-vuetify: ">=1.0.0"
@@ -8143,7 +8143,7 @@ __metadata:
       optional: true
     webpack-plugin-vuetify:
       optional: true
-  checksum: 10c0/623a77cfe9e0b8ddc1b5928eb3107ba85e6d376552c4f3e4eec8dc35276e283bd4749f7ff52618da8d0b1f862041e20601180057403d6cfa77c4e99551893ce5
+  checksum: 10c0/19f590a3ee52ef297d966c90e3a599ab36085dfceed3d60c59311d22f1e51a5a6f90f97fb174405e0c0c3452ac8cb2ddf34f744725f422b1b1d824d95488eb80
   languageName: node
   linkType: hard
 
