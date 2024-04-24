@@ -20,12 +20,12 @@
   "dependencies": {
     "@mdi/font": "^7.4.47",
     "@neoconfetti/vue": "^2.2.1",
-    "@vue/shared": "^3.4.24",
+    "@vue/shared": "^3.4.25",
     "aos": "^2.3.4",
     "emailjs-com": "^3.2.0",
     "roboto-fontface": "^0.10.0",
     "typescript": "^5.4.5",
-    "vue": "^3.4.24",
+    "vue": "^3.4.25",
     "vue-gtag": "^2.0.1",
     "vue-i18n": "^9.13.1",
     "vue-recaptcha": "3.0.0-alpha.6",
@@ -58,7 +58,7 @@
     "typescript-eslint": "^7.7.1",
     "vite": "^5.2.10",
     "vite-plugin-vuetify": "^2.0.3",
-    "vitest": "^1.5.0",
+    "vitest": "^1.5.1",
     "vue-eslint-parser": "^9.4.2"
   }
 }
