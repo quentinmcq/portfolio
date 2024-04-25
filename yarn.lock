@@ -1409,7 +1409,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:7.7.1":
+"@typescript-eslint/utils@npm:7.7.1, @typescript-eslint/utils@npm:^6.13.0 || ^7.0.0":
   version: 7.7.1
   resolution: "@typescript-eslint/utils@npm:7.7.1"
   dependencies:
@@ -1426,7 +1426,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:^6.13.0, @typescript-eslint/utils@npm:^6.21.0":
+"@typescript-eslint/utils@npm:^6.21.0":
   version: 6.21.0
   resolution: "@typescript-eslint/utils@npm:6.21.0"
   dependencies:
@@ -3362,11 +3362,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-perfectionist@npm:^2.9.0":
-  version: 2.9.0
-  resolution: "eslint-plugin-perfectionist@npm:2.9.0"
+"eslint-plugin-perfectionist@npm:^2.10.0":
+  version: 2.10.0
+  resolution: "eslint-plugin-perfectionist@npm:2.10.0"
   dependencies:
-    "@typescript-eslint/utils": "npm:^6.13.0"
+    "@typescript-eslint/utils": "npm:^6.13.0 || ^7.0.0"
     minimatch: "npm:^9.0.3"
     natural-compare-lite: "npm:^1.4.0"
   peerDependencies:
@@ -3384,7 +3384,7 @@ __metadata:
       optional: true
     vue-eslint-parser:
       optional: true
-  checksum: 10c0/f323d983fa1d4805c68b03ad0b7174f1784678766be4679dd43281d28f1557b8c48ed6d3bd76e7812ad6505e29fd241d5f31c3269ce40bc05692d0ce4a8aa6ed
+  checksum: 10c0/44927a58e2a21f9ba014ea85a49791c481dce8f10321e7df4d11a9de030821e4ab94e486085f8901f28083a58241558e7e4df7063ed1ff2544619bd2056d8ad9
   languageName: node
   linkType: hard
 
@@ -6300,7 +6300,7 @@ __metadata:
     aos: "npm:^2.3.4"
     emailjs-com: "npm:^3.2.0"
     eslint: "npm:^9.1.1"
-    eslint-plugin-perfectionist: "npm:^2.9.0"
+    eslint-plugin-perfectionist: "npm:^2.10.0"
     eslint-plugin-vue: "npm:^9.25.0"
     eslint-typegen: "npm:^0.2.4"
     happy-dom: "npm:^14.7.1"
