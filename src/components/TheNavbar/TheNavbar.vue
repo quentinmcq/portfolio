@@ -30,7 +30,7 @@
 
   <v-navigation-drawer
     v-model="drawer"
-    :style="{ width: menuWidth }"
+    :style="{ width: drawer ? menuWidth : 0 }"
     color="#333333"
     location="right"
     temporary
