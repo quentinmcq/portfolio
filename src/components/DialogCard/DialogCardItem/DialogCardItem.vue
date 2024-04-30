@@ -61,7 +61,7 @@
           </v-card-text>
 
           <v-card-actions
-            class="dialog-card-item__see-more"
+            class="dialog-card-item__see-more justify-center"
             v-if="!item.links"
           >
             <v-btn
