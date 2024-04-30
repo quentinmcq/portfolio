@@ -1,11 +1,8 @@
 .dialog-card-item {
-  scroll-behavior: unset;
   padding: 15px;
   flex-basis: auto;
 
   &__card {
-    cursor: pointer;
-
     &__title {
       font-size: 18px;
 
@@ -25,10 +22,6 @@
         margin-top: -8px;
       }
     }
-  }
-
-  &__see-more {
-    margin-top: 5px;
   }
 
   &__popin {

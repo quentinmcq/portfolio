@@ -5,7 +5,6 @@
       :key="index"
       :component-name="componentName"
       :custom-button-text="customButtonText"
-
       :index="index"
       :item="item"
       :transition="transition"

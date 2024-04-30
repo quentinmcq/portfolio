@@ -6,8 +6,6 @@
   }
 
   &__wrapper-button {
-    text-align: center;
-
     @media (min-width: $md) {
       margin-top: 18px;
     }
@@ -23,7 +21,8 @@
 
   &__card-style {
     padding: 30px;
-    font-size: 15px;
+    font-size: 16px;
+    text-align: justify;
     background: $whitesmoke;
 
     @media (min-width: $md) {

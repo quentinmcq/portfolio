@@ -63,7 +63,7 @@
           </div>
 
           <div
-            class="presentation-page__wrapper-button"
+            class="text-center mt-4"
             data-aos="fade-up"
           >
             <PresentationPageButton

@@ -73,7 +73,7 @@
               variant="underlined"
             />
 
-            <v-container class="contact-page__form__buttons">
+            <v-container class="text-center">
               <v-btn
                 id="message-status"
                 :aria-label="$t('contact.send')"

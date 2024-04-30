@@ -8,6 +8,7 @@
         color="#f4f4f4"
         class="dialog-card-item__card"
         :data-aos="animation"
+        link
       >
         <div @click="dialog = true">
           <GenericImage
@@ -61,7 +62,7 @@
           </v-card-text>
 
           <v-card-actions
-            class="dialog-card-item__see-more justify-center"
+            class="justify-center mt-2"
             v-if="!item.links"
           >
             <v-btn
