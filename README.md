@@ -3,21 +3,21 @@
 ## Project Setup
 
 ```sh
-$ yarn install
+$ pnpm install
 
 # Compile and Hot-Reload for Development
-$ yarn dev
+$ pnpm dev
 
 
 # Compile and Minify for Production
-$ yarn build
+$ pnpm build
 
 
 # Lint with ESLint
-$ yarn lint
+$ pnpm lint
 
 # Run vitest tests
-$ yarn test:unit
+$ pnpm test:unit
 ```
 
 For a detailed explanation on how things work, checkout [Vue.js docs](https://vuejs.org/).

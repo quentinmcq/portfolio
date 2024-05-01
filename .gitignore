@@ -12,12 +12,6 @@ dist
 
 # Logs
 *.log
-yarn-debug.log*
-yarn-error.log*
-.yarn/*
-!.yarn/releases
-!.yarn/plugins
-.pnp.*
 
 # Coverage reports
 coverage

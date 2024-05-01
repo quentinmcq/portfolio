@@ -18,17 +18,17 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Enable corepack (allow to use yarn)
+      - name: Enable corepack (allow to use pnpm)
         run: corepack enable
 
       - name: Run actions/setup-node
         uses: actions/setup-node@master
         with:
           node-version: 20
-          cache: 'yarn'
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: yarn install
+        run: pnpm install
 
       - name: Initialize Git user
         run: |
@@ -36,6 +36,6 @@ jobs:
           git config --global user.name "Release Workflow"
 
       - name: Run release
-        run: yarn release --ci
+        run: pnpm release --ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -16,17 +16,17 @@ jobs:
       - name: Run actions/checkout@master
         uses: actions/checkout@master
 
-      - name: Enable corepack (allow to use yarn)
+      - name: Enable corepack (allow to use pnpm)
         run: corepack enable
 
       - name: actions/setup-node@master
         uses: actions/setup-node@master
         with:
           node-version: 20
-          cache: 'yarn'
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: yarn install
+        run: pnpm install
 
       - name: Execute vitest tests
-        run: yarn test:unit
+        run: pnpm test:unit

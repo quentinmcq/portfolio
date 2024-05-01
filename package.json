@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "packageManager": "yarn@4.1.1",
+  "packageManager": "pnpm@9.0.6",
   "engines": {
     "node": "^20.12.2"
   },
