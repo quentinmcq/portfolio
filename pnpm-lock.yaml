@@ -42,7 +42,7 @@ importers:
         specifier: 3.0.0-alpha.6
         version: 3.0.0-alpha.6(rollup@4.17.2)(vue@3.4.26(typescript@5.4.5))
       vue-tsc:
-        specifier: ^2.0.15
+        specifier: ^2.0.16
         version: 2.0.16(typescript@5.4.5)
       vue-writer:
         specifier: 1.2.0
@@ -109,7 +109,7 @@ importers:
         specifier: ^1.5.1
         version: 1.5.1
       sass:
-        specifier: ^1.75.0
+        specifier: ^1.76.0
         version: 1.76.0
       sass-loader:
         specifier: ^14.2.1
