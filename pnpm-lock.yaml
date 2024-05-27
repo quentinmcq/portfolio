@@ -100,8 +100,8 @@ importers:
         specifier: ^0.2.4
         version: 0.2.4(eslint@9.3.0)
       happy-dom:
-        specifier: ^14.11.0
-        version: 14.11.0
+        specifier: ^14.11.1
+        version: 14.11.1
       release-it:
         specifier: ^17.3.0
         version: 17.3.0(typescript@5.4.5)
@@ -125,7 +125,7 @@ importers:
         version: 2.0.3(vite@5.2.11(@types/node@20.12.12)(sass@1.77.2))(vue@3.4.27(typescript@5.4.5))(vuetify@3.6.7)
       vitest:
         specifier: ^1.6.0
-        version: 1.6.0(@types/node@20.12.12)(happy-dom@14.11.0)(sass@1.77.2)
+        version: 1.6.0(@types/node@20.12.12)(happy-dom@14.11.1)(sass@1.77.2)
       vue-eslint-parser:
         specifier: ^9.4.2
         version: 9.4.2(eslint@9.3.0)
@@ -1772,6 +1772,7 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   global-dirs@3.0.1:
     resolution: {integrity: sha512-NBcGGFbBA9s1VzD41QXDG+3++t9Mn5t1FpLdhESY6oKY4gYTFpX4wO3sqGUa0Srjtbfj3szX0RnemmrVRUdULA==}
@@ -1829,8 +1830,8 @@ packages:
     engines: {node: '>=0.4.7'}
     hasBin: true
 
-  happy-dom@14.11.0:
-    resolution: {integrity: sha512-vu25dY7YJqLuTG/3ADC0FZRRF0yNBp3q2K0YTN08opXdZi8V/YzIJDNJWFiCnDIuyc+RrCIE093+H5fa9Trlxg==}
+  happy-dom@14.11.1:
+    resolution: {integrity: sha512-JuaGMxD3QlQei6LdAM9mMY9am/cHa978uFbkOpjN5x83DG+QQp/NLyVV4Ru7KOjs70XYZ4KbI0TNiO81nM7uQQ==}
     engines: {node: '>=16.0.0'}
 
   has-bigints@1.0.2:
@@ -1928,6 +1929,7 @@ packages:
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
+    deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
 
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
@@ -5478,7 +5480,7 @@ snapshots:
     optionalDependencies:
       uglify-js: 3.17.4
 
-  happy-dom@14.11.0:
+  happy-dom@14.11.1:
     dependencies:
       entities: 4.5.0
       webidl-conversions: 7.0.0
@@ -6908,7 +6910,7 @@ snapshots:
       fsevents: 2.3.3
       sass: 1.77.2
 
-  vitest@1.6.0(@types/node@20.12.12)(happy-dom@14.11.0)(sass@1.77.2):
+  vitest@1.6.0(@types/node@20.12.12)(happy-dom@14.11.1)(sass@1.77.2):
     dependencies:
       '@vitest/expect': 1.6.0
       '@vitest/runner': 1.6.0
@@ -6932,7 +6934,7 @@ snapshots:
       why-is-node-running: 2.2.2
     optionalDependencies:
       '@types/node': 20.12.12
-      happy-dom: 14.11.0
+      happy-dom: 14.11.1
     transitivePeerDependencies:
       - less
       - lightningcss
