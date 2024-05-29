@@ -31,7 +31,7 @@
     "vue-recaptcha": "3.0.0-alpha.6",
     "vue-tsc": "^2.0.19",
     "vue-writer": "1.2.0",
-    "vuetify": "^3.6.7",
+    "vuetify": "^3.6.8",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
@@ -41,7 +41,7 @@
     "@stylistic/eslint-plugin": "^2.1.0",
     "@types/aos": "^3.0.7",
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "^20.12.12",
+    "@types/node": "^20.12.13",
     "@typescript-eslint/parser": "^7.11.0",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/test-utils": "^2.4.6",
@@ -50,7 +50,7 @@
     "eslint-plugin-perfectionist": "^2.10.0",
     "eslint-plugin-vue": "^9.26.0",
     "eslint-typegen": "^0.2.4",
-    "happy-dom": "^14.11.2",
+    "happy-dom": "^14.11.4",
     "release-it": "^17.3.0",
     "resize-observer-polyfill": "^1.5.1",
     "sass": "^1.77.2",
