@@ -31,7 +31,7 @@
     "vue-recaptcha": "3.0.0-alpha.6",
     "vue-tsc": "^2.0.21",
     "vue-writer": "1.2.0",
-    "vuetify": "^3.6.9",
+    "vuetify": "^3.6.10",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
