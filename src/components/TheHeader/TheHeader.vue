@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import VueWriter from 'vue-writer'
+import VueWriter from '@/components/VueWriter/VueWriter.vue'
 </script>
 
 <style lang="scss" src="./the-header.scss" scoped />
