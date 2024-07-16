@@ -30,7 +30,7 @@
     "vue-i18n": "^9.13.1",
     "vue-recaptcha": "3.0.0-alpha.6",
     "vue-tsc": "^2.0.26",
-    "vuetify": "^3.6.12",
+    "vuetify": "^3.6.13",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
@@ -40,7 +40,7 @@
     "@stylistic/eslint-plugin": "^2.3.0",
     "@types/aos": "^3.0.7",
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "^20.14.10",
+    "@types/node": "^20.14.11",
     "@typescript-eslint/parser": "^7.16.1",
     "@vitejs/plugin-vue": "^5.0.5",
     "@vue/test-utils": "^2.4.6",
