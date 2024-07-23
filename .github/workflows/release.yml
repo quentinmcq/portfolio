@@ -24,7 +24,7 @@ jobs:
       - name: Run actions/setup-node
         uses: actions/setup-node@master
         with:
-          node-version: 20
+          node-version: 22
           cache: 'pnpm'
 
       - name: Install dependencies
