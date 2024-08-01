@@ -15,6 +15,8 @@ const icons = {
 export function initVuetify(app: App<Element>) {
   const vuetifyInstance = createVuetify({
     defaults: {
+      global,
+      icons,
       VBtn: {
         style: 'transition: transform 0.6s',
       },
@@ -24,8 +26,6 @@ export function initVuetify(app: App<Element>) {
       VContainer: {
         style: 'padding: 14px',
       },
-      global,
-      icons,
     },
   })
 

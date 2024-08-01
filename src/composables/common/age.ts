@@ -1,4 +1,4 @@
-import { type ComputedRef, computed } from 'vue'
+import { computed, type ComputedRef } from 'vue'
 
 export function useAge(): ComputedRef<number> {
   const ageDifferenceInMilliseconds = Date.now() - new Date('2000/09/20').getTime()

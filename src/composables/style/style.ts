@@ -1,4 +1,4 @@
-import { type ComputedRef, computed } from 'vue'
+import { computed, type ComputedRef } from 'vue'
 import { useDisplay } from 'vuetify'
 
 interface UseStyle {

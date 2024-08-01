@@ -50,7 +50,7 @@ export default [
       2022: [
         'picture_1.webp',
         'picture_2.webp',
-        'picture_3.webp'
+        'picture_3.webp',
       ],
       2023: [
         'picture_1.webp',
@@ -61,7 +61,7 @@ export default [
         'picture_1.webp',
         'picture_2.webp',
         'picture_3.webp',
-        'picture_4.webp'
+        'picture_4.webp',
       ],
     },
     link: 'https://escalade-rouvroy.fr/',

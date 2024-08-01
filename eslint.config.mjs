@@ -1,7 +1,7 @@
 import eslint from '@eslint/js'
 import stylistic from '@stylistic/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
-import perfectionistNatural from 'eslint-plugin-perfectionist/configs/recommended-natural'
+import perfectionist from 'eslint-plugin-perfectionist'
 import pluginVue from 'eslint-plugin-vue'
 import typegen from 'eslint-typegen'
 import tseslint from 'typescript-eslint'
@@ -13,7 +13,7 @@ export default typegen([
   ...pluginVue.configs['flat/strongly-recommended'],
   stylistic.configs['recommended-flat'],
   stylistic.configs['disable-legacy'],
-  perfectionistNatural,
+  perfectionist.configs['recommended-natural'],
   {
     languageOptions: {
       parser: vueParser,
