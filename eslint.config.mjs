@@ -15,6 +15,9 @@ export default typegen([
   stylistic.configs['disable-legacy'],
   perfectionist.configs['recommended-natural'],
   {
+    ignores: ['dist'],
+  },
+  {
     languageOptions: {
       parser: vueParser,
       parserOptions: {
