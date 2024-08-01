@@ -47,13 +47,21 @@ export default [
     description:
       'Discipline qui m\'a captivé lorsque j\'étais au lycée et que j\'ai décidé de reprendre quelques années plus tard 🧗🏻‍♂️',
     images: {
+      2022: [
+        'picture_1.webp',
+        'picture_2.webp',
+        'picture_3.webp'
+      ],
       2023: [
         'picture_1.webp',
         'picture_2.webp',
         'picture_3.webp',
-        'picture_4.webp',
-        'picture_5.webp',
-        'picture_6.webp',
+      ],
+      2024: [
+        'picture_1.webp',
+        'picture_2.webp',
+        'picture_3.webp',
+        'picture_4.webp'
       ],
     },
     link: 'https://escalade-rouvroy.fr/',
