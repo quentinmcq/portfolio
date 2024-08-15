@@ -1,15 +1,12 @@
 .image-gallery {
-  margin-top: 10px;
+  @media (min-width: $lg) {
+    margin-top: 10px;
+  }
 
   &__wrapper {
     &:not(:first-child) {
-      margin-top: 20px;
+      margin-top: 10px;
     }
-  }
-
-  @media (min-width: $lg) {
-    margin-top: 20px;
-    margin-bottom: 5px;
   }
 
   img {

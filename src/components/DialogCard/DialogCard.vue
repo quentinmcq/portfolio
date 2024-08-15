@@ -51,7 +51,6 @@
       <template #imageGallery>
         <v-card-text>
           <ImageGallery
-            v-if="item.images"
             :component-name="componentName"
             :images="item.images"
             :type="item.type"

@@ -62,7 +62,7 @@
           </v-card-text>
 
           <v-card-actions
-            class="justify-center mt-2"
+            class="justify-center"
             v-if="!item.links"
           >
             <v-btn
@@ -79,7 +79,10 @@
             </v-btn>
           </v-card-actions>
 
-          <slot name="imageGallery" />
+          <slot
+            name="imageGallery"
+            v-if="item.images"
+          />
         </v-card>
       </v-dialog>
     </div>
