@@ -37,7 +37,7 @@
     "@eslint/config-inspector": "^0.5.3",
     "@eslint/js": "^9.9.0",
     "@release-it/conventional-changelog": "^8.0.1",
-    "@stylistic/eslint-plugin": "^2.6.3",
+    "@stylistic/eslint-plugin": "^2.6.4",
     "@types/aos": "^3.0.7",
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^22.3.0",
