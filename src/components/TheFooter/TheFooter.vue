@@ -11,14 +11,16 @@
         <div class="footer__information">
           <div class="footer__credit-message">
             {{ $t('footer.credit') }}
+            <br>
+            {{ $t('footer.tools') }}
           </div>
           <div class="footer__copyright">
             {{ $t('footer.copyright', { currentYear }) }}
           </div>
-          <div
-            class="footer__recaptcha"
-            v-html="$t('footer.recaptcha')"
-          />
+          <!--          <div-->
+          <!--            class="footer__recaptcha"-->
+          <!--            v-html="$t('footer.recaptcha')"-->
+          <!--          />-->
         </div>
       </v-col>
     </v-footer>

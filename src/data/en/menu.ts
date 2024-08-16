@@ -5,9 +5,9 @@ export default [
   {
     title: 'Skills',
   },
-  {
-    title: 'Education',
-  },
+  // {
+  //   title: 'Education',
+  // },
   {
     title: 'Experience',
   },

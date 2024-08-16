@@ -6,7 +6,7 @@
     <PresentationPage />
     <SkillPage />
     <ExperiencePage />
-    <EducationPage />
+    <!--    <EducationPage />-->
     <ProjectPage />
     <HobbyPage />
     <ContactPage />
@@ -17,7 +17,7 @@
 import TheLoadingBar from '@/components/TheLoadingBar/TheLoadingBar.vue'
 import TheScrollTop from '@/components/TheScrollTop/TheScrollTop.vue'
 import ContactPage from '@/pages/ContactPage/ContactPage.vue'
-import EducationPage from '@/pages/EducationPage/EducationPage.vue'
+// import EducationPage from '@/pages/EducationPage/EducationPage.vue'
 import ExperiencePage from '@/pages/ExperiencePage/ExperiencePage.vue'
 import HobbyPage from '@/pages/HobbyPage/HobbyPage.vue'
 import PresentationPage from '@/pages/PresentationPage/PresentationPage.vue'

@@ -11,31 +11,31 @@
   }
 
   &__credit-message {
-    margin-bottom: 5px;
-    font-size: 16px;
-
-    @media (min-width: $xl) {
-      font-size: 18px;
-    }
-  }
-
-  &__copyright {
     font-size: 14px;
+    margin-bottom: 25px;
 
     @media (min-width: $xl) {
       font-size: 16px;
     }
   }
 
-  &__recaptcha {
+  &__copyright {
     font-size: 13px;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
 
     @media (min-width: $xl) {
-      width: 30%;
+      font-size: 15px;
     }
   }
+
+  //&__recaptcha {
+  //  font-size: 12px;
+  //  margin-top: 30px;
+  //  margin-left: auto;
+  //  margin-right: auto;
+  //  width: 80%;
+  //
+  //  @media (min-width: $xl) {
+  //    width: 30%;
+  //  }
+  //}
 }

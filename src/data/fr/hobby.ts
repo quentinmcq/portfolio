@@ -69,7 +69,7 @@ export default [
     type: 'climbing',
   },
   {
-    button: 'Mes trajets',
+    button: 'Mes parcours',
     cover: 'bike.webp',
     description:
       'VTTiste depuis plusieurs années maintenant, j\'adore découvrir de nouveaux paysages, tester de nouveaux parcours et repousser mes limites 🚵🏻‍♂️',

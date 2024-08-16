@@ -7,10 +7,10 @@ export default [
     link: '#skill',
     title: 'Compétences',
   },
-  {
-    link: '#education',
-    title: 'Éducation',
-  },
+  // {
+  //   link: '#education',
+  //   title: 'Éducation',
+  // },
   {
     link: '#experience',
     title: 'Expériences',

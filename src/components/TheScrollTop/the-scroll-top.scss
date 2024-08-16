@@ -30,8 +30,12 @@
   }
 
   &__icon {
-    padding: 10px;
+    padding: 8px;
     background: $cherry-red;
     border-radius: 8px;
+
+    @media (min-width: $lg) {
+      padding: 10px;
+    }
   }
 }

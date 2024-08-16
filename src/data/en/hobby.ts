@@ -18,7 +18,7 @@ export default [
     title: 'Climbing',
   },
   {
-    button: 'My walks',
+    button: 'My journeys',
     description:
       'Mountain biker for several years now, I love discovering new landscapes, testing new routes and pushing my limits 🚵🏻‍♂️',
     title: 'VTT',
