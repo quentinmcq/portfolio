@@ -4,7 +4,7 @@
   "engines": {
     "node": "^22.6.0"
   },
-  "version": "2.6.2",
+  "version": "2.7.0",
   "type": "module",
   "author": "Quentin Macq",
   "private": true,
@@ -27,7 +27,7 @@
     "typescript": "^5.5.4",
     "vue": "^3.4.38",
     "vue-gtag": "^2.0.1",
-    "vue-i18n": "^9.13.1",
+    "vue-i18n": "^9.14.0",
     "vue-recaptcha": "3.0.0-alpha.6",
     "vue-tsc": "^2.0.29",
     "vuetify": "^3.7.0",
@@ -40,7 +40,7 @@
     "@stylistic/eslint-plugin": "^2.6.4",
     "@types/aos": "^3.0.7",
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "^22.3.0",
+    "@types/node": "^22.4.0",
     "@typescript-eslint/parser": "^8.1.0",
     "@vitejs/plugin-vue": "^5.1.2",
     "@vue/test-utils": "^2.4.6",
