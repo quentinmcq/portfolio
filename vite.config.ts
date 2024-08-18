@@ -22,10 +22,4 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-  // Allow mdi fonts to be loaded during local development
-  server: {
-    fs: {
-      allow: ['C:/Users/Quentin/'],
-    },
-  },
 })
