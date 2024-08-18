@@ -3,8 +3,6 @@ import { describe, expect, it } from 'vitest'
 
 import TheFooter from '../TheFooter.vue'
 
-global.ResizeObserver = require('resize-observer-polyfill')
-
 describe('TheFooter', () => {
   it('renders footer with correct content and props', async () => {
     const wrapper = mount(TheFooter)

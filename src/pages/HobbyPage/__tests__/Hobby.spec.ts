@@ -6,9 +6,6 @@ import { mount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
 
 import HobbyPage from '../HobbyPage.vue'
-
-global.ResizeObserver = require('resize-observer-polyfill')
-
 describe('Hobby component', () => {
   it('renders correctly with the given props', async () => {
     const componentName = 'hobby'
@@ -29,11 +26,8 @@ describe('Hobby component', () => {
     expect(seeMore.props('componentName')).toBe(componentName)
     expect(seeMore.isVisible()).toBe(true)
 
-    // expect(dialogCard.text().split('dialog-card-item').length - 1).toEqual(2);
-    // click see more button
     seeMore.vm.$emit('see-more')
 
     expect(dialogCard.props('items')).toEqual(items.slice(0, 2))
-    // expect(seeMore.isVisible()).toBe(false);
   })
 })

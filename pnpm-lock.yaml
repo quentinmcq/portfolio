@@ -102,9 +102,6 @@ importers:
       release-it:
         specifier: ^17.6.0
         version: 17.6.0(typescript@5.5.4)
-      resize-observer-polyfill:
-        specifier: ^1.5.1
-        version: 1.5.1
       sass:
         specifier: ^1.77.8
         version: 1.77.8
@@ -2546,9 +2543,6 @@ packages:
     resolution: {integrity: sha512-EE34dtRPL7BHpYQC7E+zAU8kjkyxFHxLk5Iqnmn/5nGcjgOQu34Au29M2V9YvxiP3tZbIlEn4gItEzu7vAPRbw==}
     engines: {node: ^18.18.0 || ^20.9.0 || ^22.0.0}
     hasBin: true
-
-  resize-observer-polyfill@1.5.1:
-    resolution: {integrity: sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==}
 
   resolve-alpn@1.2.1:
     resolution: {integrity: sha512-0a1F4l73/ZFZOakJnQ3FvkJ2+gSTQWz/r2KE5OdDY0TxPm5h4GkqkWWfM47T7HsbnOtcJVEF4epCVy6u7Q3K+g==}
@@ -5781,8 +5775,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
-
-  resize-observer-polyfill@1.5.1: {}
 
   resolve-alpn@1.2.1: {}
 
