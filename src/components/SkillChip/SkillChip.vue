@@ -14,7 +14,6 @@
         :alt="chipConfig.label"
         :width="width"
         :height="height"
-        eager
       />
     </template>
     <div class="ml-1">

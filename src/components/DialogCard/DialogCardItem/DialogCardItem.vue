@@ -17,7 +17,6 @@
             :alt="item.cover"
             height="180"
             cover
-            eager
           />
 
           <v-card-title class="dialog-card-item__card__title pt-3">

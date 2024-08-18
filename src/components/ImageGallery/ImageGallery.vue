@@ -26,7 +26,6 @@
               :height="dimensionGalleryImage"
               aspect-ratio="1"
               cover
-              eager
             />
           </v-col>
         </div>
@@ -45,7 +44,6 @@
         :alt="clickedImagePath"
         :width="dimensionOpenImageWidth"
         :height="dimensionOpenImageHeight"
-        eager
       />
     </v-dialog>
   </div>

@@ -24,7 +24,6 @@
             :lazy-src="path"
             :alt="item.cover"
             cover
-            eager
           />
         </a>
       </div>

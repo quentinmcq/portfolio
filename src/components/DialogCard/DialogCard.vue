@@ -40,7 +40,6 @@
                 :alt="link.img"
                 :src="linkImgPath(link.img)"
                 class="image-animation"
-                eager
                 height="40"
               />
             </a>
