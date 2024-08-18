@@ -5,8 +5,10 @@ import { createVuetify } from 'vuetify'
 // import en from '@/locales/en';
 
 export const vuetifyInstanceTest = createVuetify({
-  global: { ripple: false },
-  icons: { iconfont: 'mdiSvg' },
+  defaults: {
+    global: { ripple: false },
+    icons: { iconfont: 'mdiSvg' },
+  },
 })
 
 export const i18nInstanceTest = createI18n({
