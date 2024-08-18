@@ -46,7 +46,7 @@ export default {
     copyright: '© Copyright - {currentYear}',
     credit: 'Made with ❤️ in France',
     // recaptcha: 'This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.',
-    tools: 'using Vue, Vuetify et TypeScript.',
+    tools: 'using Vue, Vuetify and TypeScript.',
   },
 
   header: {
