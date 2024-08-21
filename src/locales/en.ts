@@ -10,6 +10,7 @@ export default {
     'and': 'et',
     'firstname': 'Quentin',
     'name': 'MACQ',
+    'rotate-device': 'Please rotate device',
     'see-more': 'See more',
     'symfony': 'Symfony',
     'vuejs': 'Vue.js',

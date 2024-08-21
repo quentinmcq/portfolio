@@ -25,7 +25,7 @@ import TheNavbar from '@/components/TheNavbar/TheNavbar.vue'
 import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics'
 import { useResponsive } from '@/composables/style/responsive'
 import HomePage from '@/pages/HomePage/HomePage.vue'
-import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
+import { onMounted } from 'vue'
 import { useRecaptchaProvider } from 'vue-recaptcha/head'
 
 useRecaptchaProvider()
@@ -40,12 +40,6 @@ function sendEventOnFirstPageLoading(): void {
     label: 'A user has entered the site',
   })
 }
-
-let isLandscape = ref(window.screen.orientation === 'landscape')
-watch(isLandscape, (newVal, oldVal) => {
-  console.log(`Orientation changed: was ${oldVal ? 'Landscape' : 'Portrait'}, now ${newVal ? 'Landscape' : 'Portrait'}`)
-  // Vous pouvez exécuter d'autres actions ici si nécessaire
-})
 </script>
 
 <style lang="scss" src="./app.scss" />

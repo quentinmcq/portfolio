@@ -2,7 +2,7 @@
   <div class="rotate-device">
     <div class="phone" />
     <div class="message">
-      Please rotate device
+      {{ $t('common.rotate-device') }}
     </div>
   </div>
 </template>
