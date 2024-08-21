@@ -94,8 +94,8 @@ importers:
         specifier: ^0.3.1
         version: 0.3.1(eslint@9.9.0(jiti@1.21.0))
       happy-dom:
-        specifier: ^14.12.3
-        version: 14.12.3
+        specifier: ^15.0.0
+        version: 15.0.0
       release-it:
         specifier: ^17.6.0
         version: 17.6.0(typescript@5.5.4)
@@ -116,7 +116,7 @@ importers:
         version: 2.0.4(vite@5.4.2(@types/node@22.5.0)(sass@1.77.8))(vue@3.4.38(typescript@5.5.4))(vuetify@3.7.0)
       vitest:
         specifier: ^2.0.5
-        version: 2.0.5(@types/node@22.5.0)(happy-dom@14.12.3)(sass@1.77.8)
+        version: 2.0.5(@types/node@22.5.0)(happy-dom@15.0.0)(sass@1.77.8)
       vue-eslint-parser:
         specifier: ^9.4.3
         version: 9.4.3(eslint@9.9.0(jiti@1.21.0))
@@ -1707,9 +1707,9 @@ packages:
     engines: {node: '>=0.4.7'}
     hasBin: true
 
-  happy-dom@14.12.3:
-    resolution: {integrity: sha512-vsYlEs3E9gLwA1Hp+w3qzu+RUDFf4VTT8cyKqVICoZ2k7WM++Qyd2LwzyTi5bqMJFiIC/vNpTDYuxdreENRK/g==}
-    engines: {node: '>=16.0.0'}
+  happy-dom@15.0.0:
+    resolution: {integrity: sha512-DsvANUcxxY20iCo3Yllm7dqwzPVPduGfVFxa7mONwMBLczFeQgkN0LpDir1kIY322JMh+hrcPV3aGLyHCESDlA==}
+    engines: {node: '>=18.0.0'}
 
   has-flag@3.0.0:
     resolution: {integrity: sha512-sKJf1+ceQBr4SMkvQnBDNDtf4TXpVhVGateu0t918bl30FnbE2m4vNLX+VWe/dpjlb+HugGYzW7uQXH98HPEYw==}
@@ -4900,7 +4900,7 @@ snapshots:
     optionalDependencies:
       uglify-js: 3.17.4
 
-  happy-dom@14.12.3:
+  happy-dom@15.0.0:
     dependencies:
       entities: 4.5.0
       webidl-conversions: 7.0.0
@@ -6087,7 +6087,7 @@ snapshots:
       fsevents: 2.3.3
       sass: 1.77.8
 
-  vitest@2.0.5(@types/node@22.5.0)(happy-dom@14.12.3)(sass@1.77.8):
+  vitest@2.0.5(@types/node@22.5.0)(happy-dom@15.0.0)(sass@1.77.8):
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@vitest/expect': 2.0.5
@@ -6110,7 +6110,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 22.5.0
-      happy-dom: 14.12.3
+      happy-dom: 15.0.0
     transitivePeerDependencies:
       - less
       - lightningcss
