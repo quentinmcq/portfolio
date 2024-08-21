@@ -150,7 +150,7 @@ export default {
     color: '#FF9B02',
     height: 15,
     icon: 'typescript.svg',
-    label: 'Typescript',
+    label: 'TypeScript',
     link: 'https://www.typescriptlang.org/',
     width: 15,
   },
