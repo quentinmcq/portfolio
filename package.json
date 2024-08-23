@@ -34,7 +34,7 @@
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
-    "@eslint/js": "^9.9.0",
+    "@eslint/js": "^9.9.1",
     "@release-it/conventional-changelog": "^8.0.1",
     "@stylistic/eslint-plugin": "^2.6.4",
     "@types/aos": "^3.0.7",
@@ -44,7 +44,7 @@
     "@vitejs/plugin-vue": "^5.1.2",
     "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.5.1",
-    "eslint": "^9.9.0",
+    "eslint": "^9.9.1",
     "eslint-plugin-perfectionist": "^3.2.0",
     "eslint-plugin-vue": "^9.27.0",
     "eslint-typegen": "^0.3.1",
