@@ -22,18 +22,32 @@
         "types": [
           {
             "type": "feat",
-            "section": "🚀 Features"
+            "section": "🚀 Enhancements"
           },
           {
             "type": "fix",
-            "section": "🔧 Bug Fixes"
+            "section": "🩹 Fixes"
+          },
+          {
+            "type": "perf",
+            "section": "🔥 Performance"
+          },
+          {
+            "type": "test",
+            "section": "✅ Tests"
+          },
+          {
+            "type": "ci",
+            "section": "🤖 CI"
           },
           {
             "type": "chore",
-            "section": "➕ Other",
-            "hidden": true
+            "section": "➕ Other"
           }
         ]
+      },
+      "context": {
+        "hideAuthor": "renovate[bot]"
       }
     }
   }
