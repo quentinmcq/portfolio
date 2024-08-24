@@ -42,12 +42,10 @@
           },
           {
             "type": "chore",
-            "section": "➕ Other"
+            "section": "🏡 Chore",
+            "hidden": true
           }
         ]
-      },
-      "context": {
-        "hideAuthor": "renovate[bot]"
       }
     }
   }
