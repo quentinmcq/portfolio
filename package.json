@@ -39,7 +39,7 @@
     "@stylistic/eslint-plugin": "^2.6.4",
     "@types/aos": "^3.0.7",
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "^22.5.0",
+    "@types/node": "^22.5.1",
     "@typescript-eslint/parser": "^8.3.0",
     "@vitejs/plugin-vue": "^5.1.2",
     "@vue/test-utils": "^2.4.6",
