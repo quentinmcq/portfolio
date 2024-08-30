@@ -58,8 +58,8 @@ importers:
         specifier: ^8.0.1
         version: 8.0.1(release-it@17.6.0(typescript@5.5.4))
       '@stylistic/eslint-plugin':
-        specifier: ^2.7.1
-        version: 2.7.1(eslint@9.9.1(jiti@1.21.0))(typescript@5.5.4)
+        specifier: ^2.7.2
+        version: 2.7.2(eslint@9.9.1(jiti@1.21.0))(typescript@5.5.4)
       '@types/aos':
         specifier: ^3.0.7
         version: 3.0.7
@@ -94,8 +94,8 @@ importers:
         specifier: ^0.3.1
         version: 0.3.1(eslint@9.9.1(jiti@1.21.0))
       happy-dom:
-        specifier: ^15.6.0
-        version: 15.6.0
+        specifier: ^15.7.0
+        version: 15.7.0
       release-it:
         specifier: ^17.6.0
         version: 17.6.0(typescript@5.5.4)
@@ -116,7 +116,7 @@ importers:
         version: 2.0.4(vite@5.4.2(@types/node@22.5.1)(sass@1.77.8))(vue@3.4.38(typescript@5.5.4))(vuetify@3.7.1)
       vitest:
         specifier: ^2.0.5
-        version: 2.0.5(@types/node@22.5.1)(happy-dom@15.6.0)(sass@1.77.8)
+        version: 2.0.5(@types/node@22.5.1)(happy-dom@15.7.0)(sass@1.77.8)
       vue-eslint-parser:
         specifier: ^9.4.3
         version: 9.4.3(eslint@9.9.1(jiti@1.21.0))
@@ -649,8 +649,8 @@ packages:
     resolution: {integrity: sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg==}
     engines: {node: '>=18'}
 
-  '@stylistic/eslint-plugin@2.7.1':
-    resolution: {integrity: sha512-JqnHom8CP14oOgPhwTPbn0QgsBJwgNySQSe00V9GQQDlY1tEqZUlK4jM2DIOJ5nE+oXoy51vZWHnHkfZ6rEruw==}
+  '@stylistic/eslint-plugin@2.7.2':
+    resolution: {integrity: sha512-3DVLU5HEuk2pQoBmXJlzvrxbKNpu2mJ0SRqz5O/CJjyNCr12ZiPcYMEtuArTyPOk5i7bsAU44nywh1rGfe3gKQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.40.0'
@@ -1635,8 +1635,8 @@ packages:
     engines: {node: '>=0.4.7'}
     hasBin: true
 
-  happy-dom@15.6.0:
-    resolution: {integrity: sha512-M2ikOwrC5+KVofexnA0DZbQ0/hSHm2ZFKCmS3Ora11KGNHgHBdlRzZ/dzpDDPxQyqko3yNohFepJclG2T0GeZQ==}
+  happy-dom@15.7.0:
+    resolution: {integrity: sha512-tH48xarc37FLrtpNWuA89xw4IS1dxNrfzI8ehiafkj3kM3JSCMknuigKv2unDPRzd2C9Hv7ZDPkqPiBCvIz2Dg==}
     engines: {node: '>=18.0.0'}
 
   has-flag@3.0.0:
@@ -3568,7 +3568,7 @@ snapshots:
 
   '@sindresorhus/merge-streams@2.3.0': {}
 
-  '@stylistic/eslint-plugin@2.7.1(eslint@9.9.1(jiti@1.21.0))(typescript@5.5.4)':
+  '@stylistic/eslint-plugin@2.7.2(eslint@9.9.1(jiti@1.21.0))(typescript@5.5.4)':
     dependencies:
       '@types/eslint': 9.6.1
       '@typescript-eslint/utils': 8.3.0(eslint@9.9.1(jiti@1.21.0))(typescript@5.5.4)
@@ -4720,7 +4720,7 @@ snapshots:
     optionalDependencies:
       uglify-js: 3.17.4
 
-  happy-dom@15.6.0:
+  happy-dom@15.7.0:
     dependencies:
       entities: 4.5.0
       webidl-conversions: 7.0.0
@@ -5903,7 +5903,7 @@ snapshots:
       fsevents: 2.3.3
       sass: 1.77.8
 
-  vitest@2.0.5(@types/node@22.5.1)(happy-dom@15.6.0)(sass@1.77.8):
+  vitest@2.0.5(@types/node@22.5.1)(happy-dom@15.7.0)(sass@1.77.8):
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@vitest/expect': 2.0.5
@@ -5926,7 +5926,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 22.5.1
-      happy-dom: 15.6.0
+      happy-dom: 15.7.0
     transitivePeerDependencies:
       - less
       - lightningcss
