@@ -47,7 +47,7 @@
     "eslint": "^9.10.0",
     "eslint-plugin-perfectionist": "^3.5.0",
     "eslint-plugin-vue": "^9.28.0",
-    "eslint-typegen": "^0.3.1",
+    "eslint-typegen": "^0.3.2",
     "happy-dom": "^15.7.3",
     "release-it": "^17.6.0",
     "sass": "^1.78.0",
