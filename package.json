@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "packageManager": "pnpm@9.9.0",
+  "packageManager": "pnpm@9.10.0",
   "engines": {
     "node": "^22.8.0"
   },
@@ -24,7 +24,7 @@
     "@vue/shared": "^3.5.3",
     "aos": "^2.3.4",
     "roboto-fontface": "^0.10.0",
-    "typescript": "^5.5.4",
+    "typescript": "^5.6.2",
     "vue": "^3.5.3",
     "vue-gtag": "^2.0.1",
     "vue-i18n": "^9.14.0",
