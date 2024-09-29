@@ -12,11 +12,6 @@ export default defineConfig({
       },
     },
   },
-  define: {
-    __INTLIFY_PROD_DEVTOOLS__: false,
-    __VUE_I18N_FULL_INSTALL__: true,
-    __VUE_I18N_LEGACY_API__: false,
-  },
   plugins: [vue(), vuetify({ autoImport: true })],
   resolve: {
     alias: {
