@@ -1,11 +1,12 @@
+import type { Image } from '@/types/Image'
+
 export interface Hobby {
   button: string
   cover: string
   description: string
-  images?: {
-    [year: number]: string[]
-  }
+  images?: Image[]
   link?: string
-  links?: string
+  links?: { img: string, url: string }[]
   title: string
+  type?: string
 }

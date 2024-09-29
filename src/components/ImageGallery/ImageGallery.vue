@@ -12,7 +12,7 @@
 
         <div class="image-gallery__img-wrapper">
           <v-col
-            v-for="image in images[year]"
+            v-for="image in images[+year]"
             :key="image"
             cols="auto"
           >
@@ -50,6 +50,8 @@
 </template>
 
 <script setup lang="ts">
+import type { Image } from '@/types/Image'
+
 import GenericImage from '@/components/GenericImage/GenericImage.vue'
 import { useImagePath } from '@/composables/common/image-path'
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
@@ -57,7 +59,7 @@ import { useDisplay } from 'vuetify'
 
 const props = defineProps<{
   componentName: string
-  images: object
+  images: Image[]
   type: string
 }>()
 
