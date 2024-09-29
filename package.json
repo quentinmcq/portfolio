@@ -4,7 +4,7 @@
   "engines": {
     "node": "^22.9.0"
   },
-  "version": "2.11.1",
+  "version": "2.11.2",
   "type": "module",
   "author": "Quentin Macq",
   "private": true,
