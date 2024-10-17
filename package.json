@@ -4,13 +4,12 @@
   "engines": {
     "node": "^23.0.0"
   },
-  "version": "2.11.2",
+  "version": "2.11.3",
   "type": "module",
   "author": "Quentin Macq",
   "private": true,
   "scripts": {
     "dev": "vite --open",
-
     "build": "vite build",
     "preview": "vite preview",
     "test:unit": "vitest",
