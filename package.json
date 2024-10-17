@@ -2,7 +2,7 @@
   "name": "portfolio",
   "packageManager": "pnpm@9.12.1",
   "engines": {
-    "node": "^22.9.0"
+    "node": "^23.0.0"
   },
   "version": "2.11.2",
   "type": "module",
@@ -10,6 +10,7 @@
   "private": true,
   "scripts": {
     "dev": "vite --open",
+
     "build": "vite build",
     "preview": "vite preview",
     "test:unit": "vitest",
