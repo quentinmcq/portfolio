@@ -132,8 +132,8 @@ const { animation } = useAnimation({
 function sendFindOutMoreButtonClickAnalyticsEvent(): void {
   useGoogleAnalyticsEvent({
     action: `find-out-more-button:click`,
-    category: props.componentName,
-    label: props.item.title,
+    category: componentName,
+    label: item.title,
   })
 }
 </script>
