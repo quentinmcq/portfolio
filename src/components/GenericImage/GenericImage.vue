@@ -32,10 +32,5 @@ interface Props {
   width?: number | string
 }
 
-withDefaults(defineProps<Props>(), {
-  cover: false,
-  height: undefined,
-  lazySrc: undefined,
-  width: undefined,
-})
+const { cover = false, height = undefined, lazySrc = undefined, width = undefined } = defineProps<Props>()
 </script>

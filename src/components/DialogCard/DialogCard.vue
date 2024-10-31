@@ -70,7 +70,6 @@ import ImageGallery from '@/components/ImageGallery/ImageGallery.vue'
 import SkillChip from '@/components/SkillChip/SkillChip.vue'
 import { useImagePath } from '@/composables/common/image-path.js'
 import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics.js'
-import { toRefs } from 'vue'
 
 interface Props {
   componentName: string
@@ -79,16 +78,11 @@ interface Props {
   transition?: string
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  customButtonText: false,
-  transition: 'dialog-bottom-transition',
-})
-
-const { componentName } = toRefs(props)
+const { componentName, customButtonText = false, items, transition = 'dialog-bottom-transition' } = defineProps<Props>()
 
 function linkImgPath(image: string): string {
   const { path } = useImagePath({
-    directory: `${props.componentName}`,
+    directory: `${componentName}`,
     image: `logo/${image}`,
   })
 

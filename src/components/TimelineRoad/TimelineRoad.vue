@@ -24,12 +24,10 @@ import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue'
 import TimelineRoadItem from '@/components/TimelineRoad/TimelineRoadItem/TimelineRoadItem.vue'
 import { useResponsive } from '@/composables/style/responsive'
 
-interface Props {
+defineProps<{
   componentName: string
   items: Education[] | Experience[]
-}
-
-defineProps<Props>()
+}>()
 
 const { timelineDensity } = useResponsive()
 </script>

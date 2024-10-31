@@ -98,7 +98,7 @@ import { usePrefixTranslation } from '@/composables/common/prefix-translation'
 import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics'
 import { useAnimation } from '@/composables/style/animation'
 import { useResponsive } from '@/composables/style/responsive'
-import { computed, ref, toRefs } from 'vue'
+import { computed, ref, toRef } from 'vue'
 
 interface Props {
   componentName: string
@@ -108,29 +108,25 @@ interface Props {
   transition?: string
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  customButtonText: false,
-  transition: 'dialog-bottom-transition',
-})
+const { componentName, customButtonText = false, index, item, transition = 'dialog-bottom-transition' } = defineProps<Props>()
 
 let dialog = ref(false)
-const { componentName, index, item } = toRefs(props)
 
-const prefix = usePrefixTranslation(componentName, index)
+const prefix = usePrefixTranslation(toRef(() => componentName), toRef(() => index))
 const { buttonSize } = useResponsive()
 
 const buttonText = computed(() =>
-  props.customButtonText ? `${prefix}.button` : `${props.componentName}.find-out-more`,
+  customButtonText ? `${prefix}.button` : `${componentName}.find-out-more`,
 )
 
 const { path } = useImagePath({
-  directory: props.componentName,
-  image: props.item.cover,
+  directory: componentName,
+  image: item.cover,
 })
 
 const { animation } = useAnimation({
   componentType: 'dialog',
-  index: props.index,
+  index: index,
 })
 
 function sendFindOutMoreButtonClickAnalyticsEvent(): void {

@@ -111,7 +111,7 @@ import { useEmailJs } from '@/composables/form/emailjs'
 import { useFieldRules } from '@/composables/form/field-rules'
 import { useResponsive } from '@/composables/style/responsive'
 import { vConfetti } from '@neoconfetti/vue'
-import { ref } from 'vue'
+import { ref, useTemplateRef } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useChallengeV3 } from 'vue-recaptcha/head'
 
@@ -123,7 +123,7 @@ const { emailRules, messageRules, nameRules, phoneRules } = useFieldRules()
 const { t } = useI18n()
 const loading = ref(false)
 const showConfetti = ref(false)
-const form = ref<HTMLFormElement | null>(null)
+const formRef = useTemplateRef('form')
 
 async function manageEmailSending(): Promise<void> {
   const sendFormButtonSelector = '#message-status .v-btn__content'
@@ -131,7 +131,7 @@ async function manageEmailSending(): Promise<void> {
   try {
     loading.value = true
     await execute()
-    await useEmailJs(form)
+    await useEmailJs(formRef)
     useSetInnerHTML(sendFormButtonSelector, t('contact.sent'))
     showConfetti.value = true
   }
@@ -160,7 +160,7 @@ async function sendEmail(): Promise<void> {
 }
 
 function resetForm(): void {
-  form.value?.reset()
+  formRef.value?.reset()
 }
 </script>
 

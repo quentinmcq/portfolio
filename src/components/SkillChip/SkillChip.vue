@@ -29,26 +29,22 @@ import { useResponsive } from '@/composables/style/responsive'
 import tool from '@/data/tools'
 import { computed } from 'vue'
 
-interface Props {
+const { color = undefined, label } = defineProps<{
   color?: string
   label: string
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  color: undefined,
-})
+}>()
 
 const { chipSize } = useResponsive()
 
 const chipConfig = computed(() => {
-  const labelLowercase = props.label.toLowerCase()
+  const labelLowercase = label.toLowerCase()
   const config = tool[labelLowercase]
 
   if (config) return config
 
   return {
     color: '',
-    label: props.label,
+    label,
     link: '',
   }
 })

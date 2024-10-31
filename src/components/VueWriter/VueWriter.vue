@@ -20,17 +20,11 @@ type Props = {
   typeSpeed?: number
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  caret: 'cursor',
-  delay: 2000,
-  eraseSpeed: 100,
-  intervals: 500,
-  iterations: 0,
-  start: 0,
-  typeSpeed: 200,
-})
+const { array, caret = 'cursor', delay = 2000, eraseSpeed = 100, intervals = 500, iterations = 0, start = 0, typeSpeed = 200 } = defineProps<Props>()
 
-const emit = defineEmits(['typed'])
+const emit = defineEmits<{
+  'typed': [typedString: string]
+}>()
 
 const typeValue = ref('')
 const count = ref(0)
@@ -41,45 +35,45 @@ const charIndex = ref(0)
 function typewriter(): boolean | undefined {
   let loop = 0
 
-  if (charIndex.value < props.array[arrayIndex.value].length) {
+  if (charIndex.value < array[arrayIndex.value].length) {
     if (!typeStatus.value) {
       typeStatus.value = true
     }
 
-    typeValue.value += props.array[arrayIndex.value].charAt(charIndex.value)
+    typeValue.value += array[arrayIndex.value].charAt(charIndex.value)
     charIndex.value += 1
-    setTimeout(typewriter, props.typeSpeed)
+    setTimeout(typewriter, typeSpeed)
   }
   else {
     count.value += 1
 
-    onTyped(props.array[arrayIndex.value])
+    onTyped(array[arrayIndex.value])
 
-    if (count.value === props.array.length) {
+    if (count.value === array.length) {
       loop += 1
-      if (loop === props.iterations) {
+      if (loop === iterations) {
         return (typeStatus.value = false)
       }
     }
 
     typeStatus.value = false
 
-    setTimeout(eraser, props.delay)
+    setTimeout(eraser, delay)
   }
 }
 
 function eraser(): void {
   if (charIndex.value > 0) {
     if (!typeStatus.value) typeStatus.value = true
-    typeValue.value = props.array[arrayIndex.value].substring(0, charIndex.value - 1)
+    typeValue.value = array[arrayIndex.value].substring(0, charIndex.value - 1)
     charIndex.value -= 1
-    setTimeout(eraser, props.eraseSpeed)
+    setTimeout(eraser, eraseSpeed)
   }
   else {
     typeStatus.value = false
     arrayIndex.value += 1
-    if (arrayIndex.value >= props.array.length) arrayIndex.value = 0
-    setTimeout(typewriter, props.typeSpeed + props.intervals)
+    if (arrayIndex.value >= array.length) arrayIndex.value = 0
+    setTimeout(typewriter, typeSpeed + intervals)
   }
 }
 
@@ -87,5 +81,5 @@ function onTyped(typedString: string): void {
   emit('typed', typedString)
 }
 
-setTimeout(typewriter, props.start)
+setTimeout(typewriter, start)
 </script>
