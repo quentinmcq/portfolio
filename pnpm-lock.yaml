@@ -94,8 +94,8 @@ importers:
         specifier: ^0.3.2
         version: 0.3.2(eslint@9.14.0(jiti@1.21.0))
       happy-dom:
-        specifier: ^15.8.0
-        version: 15.8.0
+        specifier: ^15.8.3
+        version: 15.8.3
       release-it:
         specifier: ^17.10.0
         version: 17.10.0(typescript@5.6.3)
@@ -116,7 +116,7 @@ importers:
         version: 2.0.4(vite@5.4.10(@types/node@22.8.7)(sass@1.80.6))(vue@3.5.12(typescript@5.6.3))(vuetify@3.7.3)
       vitest:
         specifier: ^2.1.4
-        version: 2.1.4(@types/node@22.8.7)(happy-dom@15.8.0)(sass@1.80.6)
+        version: 2.1.4(@types/node@22.8.7)(happy-dom@15.8.3)(sass@1.80.6)
       vue-eslint-parser:
         specifier: ^9.4.3
         version: 9.4.3(eslint@9.14.0(jiti@1.21.0))
@@ -1759,8 +1759,8 @@ packages:
     engines: {node: '>=0.4.7'}
     hasBin: true
 
-  happy-dom@15.8.0:
-    resolution: {integrity: sha512-LwBvPvR4MQ1xfrf4gbWRJzeL2xQqWiEiHvZF5uA1AwlCCgjH9ht0fGVXciRGQCghdHAIXw1zGX1mJ6a3O0fpeA==}
+  happy-dom@15.8.3:
+    resolution: {integrity: sha512-YR9nUWN/T2bH7pPLEYMhTp4DQExPH+mC4KulJDgimCb+FY3Er0Vp6SOOcBXrNfMTri3lAk9uSZqUTG2hgZOYwg==}
     engines: {node: '>=18.0.0'}
 
   has-flag@3.0.0:
@@ -4836,7 +4836,7 @@ snapshots:
     optionalDependencies:
       uglify-js: 3.17.4
 
-  happy-dom@15.8.0:
+  happy-dom@15.8.3:
     dependencies:
       entities: 4.5.0
       webidl-conversions: 7.0.0
@@ -5935,7 +5935,7 @@ snapshots:
       fsevents: 2.3.3
       sass: 1.80.6
 
-  vitest@2.1.4(@types/node@22.8.7)(happy-dom@15.8.0)(sass@1.80.6):
+  vitest@2.1.4(@types/node@22.8.7)(happy-dom@15.8.3)(sass@1.80.6):
     dependencies:
       '@vitest/expect': 2.1.4
       '@vitest/mocker': 2.1.4(vite@5.4.10(@types/node@22.8.7)(sass@1.80.6))
@@ -5959,7 +5959,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 22.8.7
-      happy-dom: 15.8.0
+      happy-dom: 15.8.3
     transitivePeerDependencies:
       - less
       - lightningcss
