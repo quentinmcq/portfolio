@@ -1,3 +1,4 @@
+@use "sass:list";
 $colors: #8cc271, #69beeb, #f5aa39, #e9643b;
 
 .loading-bar {
@@ -17,9 +18,9 @@ $colors: #8cc271, #69beeb, #f5aa39, #e9643b;
   width: 40px;
   height: 40px;
   margin-right: 10px;
-  @for $i from 1 through length($colors) {
+  @for $i from 1 through list.length($colors) {
     &:nth-child(#{$i}) {
-      background: nth($colors, $i);
+      background: list.nth($colors, $i);
     }
   }
 

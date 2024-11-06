@@ -1,3 +1,6 @@
+@use "breakpoints";
+@use "colors";
+
 html,
 body {
   width: 100%;
@@ -21,7 +24,7 @@ img {
 .card-animation {
   border-radius: 10px;
 
-  @media (min-width: $lg) {
+  @media (min-width: breakpoints.$lg) {
     position: relative;
     object-fit: contain;
     transition: 0.5s all ease 0s !important;
@@ -34,7 +37,7 @@ img {
 }
 
 .image-animation  {
-  @media (min-width: $lg) {
+  @media (min-width: breakpoints.$lg) {
     transition: transform 0.4s;
 
     &:hover {
@@ -47,7 +50,7 @@ img {
   margin: 5px !important;
 
   &:hover {
-    color: $cherry-red !important;
+    color: colors.$cherry-red !important;
     transform: scale(1.06);
   }
 }

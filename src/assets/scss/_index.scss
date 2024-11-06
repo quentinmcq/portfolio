@@ -1,4 +1,4 @@
-@import 'generic/colors';
-@import 'generic/breakpoints';
-@import 'generic/vuetify';
-@import 'generic/global';
+@forward 'generic/colors';
+@forward 'generic/breakpoints';
+@forward 'generic/vuetify';
+@forward 'generic/global';
