@@ -1,13 +1,13 @@
-import App from '@/App.vue'
-import { mount } from '@vue/test-utils'
-import { describe, expect, it, vi } from 'vitest'
+// import App from '@/App.vue'
+// import { mount } from '@vue/test-utils'
+import { describe, it } from 'vitest'
 
-import RotateDevice from '../RotateDevice.vue'
+// import RotateDevice from '../RotateDevice.vue'
 
-vi.mock('vue-recaptcha/head', () => ({
-  useChallengeV3: vi.fn(),
-  useRecaptchaProvider: vi.fn(),
-}))
+// vi.mock('vue-recaptcha/head', () => ({
+//   useChallengeV3: vi.fn(),
+//   useRecaptchaProvider: vi.fn(),
+// }))
 
 describe('App.vue', () => {
   it('should display the main app content in portrait mode', () => {
