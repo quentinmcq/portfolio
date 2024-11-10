@@ -14,8 +14,9 @@
     "preview": "vite preview",
     "test:unit": "vitest",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint . --fix",
-    "release": "release-it"
+    "lint": "eslint --fix --cache",
+    "release": "release-it",
+    "prepare": "husky"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -49,6 +50,7 @@
     "eslint-plugin-vue": "^9.30.0",
     "eslint-typegen": "^0.3.2",
     "happy-dom": "^15.11.0",
+    "husky": "^9.1.6",
     "release-it": "^17.10.0",
     "sass-embedded": "^1.80.6",
     "sass-loader": "^16.0.3",
