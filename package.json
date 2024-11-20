@@ -2,7 +2,7 @@
   "name": "portfolio",
   "packageManager": "pnpm@9.14.2",
   "engines": {
-    "node": "^23.2.0"
+    "node": "^23.3.0"
   },
   "version": "2.15.1",
   "type": "module",
