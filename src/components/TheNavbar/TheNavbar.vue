@@ -72,8 +72,9 @@ const { menuWidth } = useResponsive()
 const fullName = ['Quentin', 'Macq']
 
 const drawer = ref(false)
-function toggleMenu(): void {
-  drawer.value = !drawer.value
+function manageEvents(): void {
+  toggleMenu()
+  sendMenuClickAnalyticsEvent()
 }
 
 function scrollToSection(anchor: string): void {
@@ -86,17 +87,16 @@ function scrollToSection(anchor: string): void {
   toggleMenu()
 }
 
-function manageEvents(): void {
-  toggleMenu()
-  sendMenuClickAnalyticsEvent()
-}
-
 function sendMenuClickAnalyticsEvent(): void {
   useGoogleAnalyticsEvent({
     action: `timeline-card:click`,
     category: 'Menu',
     label: 'Menu',
   })
+}
+
+function toggleMenu(): void {
+  drawer.value = !drawer.value
 }
 </script>
 

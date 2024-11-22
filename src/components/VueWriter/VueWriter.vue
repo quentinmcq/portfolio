@@ -32,6 +32,25 @@ const typeStatus = ref(false)
 const arrayIndex = ref(0)
 const charIndex = ref(0)
 
+function eraser(): void {
+  if (charIndex.value > 0) {
+    if (!typeStatus.value) typeStatus.value = true
+    typeValue.value = array[arrayIndex.value].substring(0, charIndex.value - 1)
+    charIndex.value -= 1
+    setTimeout(eraser, eraseSpeed)
+  }
+  else {
+    typeStatus.value = false
+    arrayIndex.value += 1
+    if (arrayIndex.value >= array.length) arrayIndex.value = 0
+    setTimeout(typewriter, typeSpeed + intervals)
+  }
+}
+
+function onTyped(typedString: string): void {
+  emit('typed', typedString)
+}
+
 function typewriter(): boolean | undefined {
   let loop = 0
 
@@ -60,25 +79,6 @@ function typewriter(): boolean | undefined {
 
     setTimeout(eraser, delay)
   }
-}
-
-function eraser(): void {
-  if (charIndex.value > 0) {
-    if (!typeStatus.value) typeStatus.value = true
-    typeValue.value = array[arrayIndex.value].substring(0, charIndex.value - 1)
-    charIndex.value -= 1
-    setTimeout(eraser, eraseSpeed)
-  }
-  else {
-    typeStatus.value = false
-    arrayIndex.value += 1
-    if (arrayIndex.value >= array.length) arrayIndex.value = 0
-    setTimeout(typewriter, typeSpeed + intervals)
-  }
-}
-
-function onTyped(typedString: string): void {
-  emit('typed', typedString)
 }
 
 setTimeout(typewriter, start)

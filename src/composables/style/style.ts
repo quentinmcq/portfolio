@@ -3,7 +3,7 @@ import { useDisplay } from 'vuetify'
 
 interface UseStyle {
   appStyle: ComputedRef<string>
-  gridStyle: ComputedRef<{ gridTemplateColumns: string } | object>
+  gridStyle: ComputedRef<object | { gridTemplateColumns: string }>
 }
 
 export function useStyle(): UseStyle {

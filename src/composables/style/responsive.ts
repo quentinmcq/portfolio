@@ -10,7 +10,7 @@ interface UseResponsive {
   appStyle: ComputedRef<string>
   buttonSize: ComputedRef<'default' | 'small'>
   chipSize: ComputedRef<'default' | 'small'>
-  gridStyle: ComputedRef<{ gridTemplateColumns: string } | object>
+  gridStyle: ComputedRef<object | { gridTemplateColumns: string }>
   iconSize: ComputedRef<'default' | 'small'>
   menuWidth: ComputedRef<'30%' | '40%' | '100%'>
   textAreaRows: ComputedRef<3 | 6>

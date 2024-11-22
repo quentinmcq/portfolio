@@ -150,6 +150,10 @@ function resetSendFormButtonLabel(selector: string): void {
 
 const valid = ref(false)
 
+function resetForm(): void {
+  formRef.value?.reset()
+}
+
 async function sendEmail(): Promise<void> {
   if (!valid.value) {
     return
@@ -157,10 +161,6 @@ async function sendEmail(): Promise<void> {
 
   await manageEmailSending()
   resetForm()
-}
-
-function resetForm(): void {
-  formRef.value?.reset()
 }
 </script>
 
