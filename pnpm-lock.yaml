@@ -85,8 +85,8 @@ importers:
         specifier: ^9.17.0
         version: 9.17.0(jiti@1.21.0)
       eslint-plugin-perfectionist:
-        specifier: ^4.3.0
-        version: 4.3.0(eslint@9.17.0(jiti@1.21.0))(typescript@5.7.2)
+        specifier: ^4.4.0
+        version: 4.4.0(eslint@9.17.0(jiti@1.21.0))(typescript@5.7.2)
       eslint-plugin-vue:
         specifier: ^9.32.0
         version: 9.32.0(eslint@9.17.0(jiti@1.21.0))
@@ -1671,8 +1671,8 @@ packages:
     engines: {node: '>=6.0'}
     hasBin: true
 
-  eslint-plugin-perfectionist@4.3.0:
-    resolution: {integrity: sha512-8tQ/wn1dFelul2WoXL/NQOEwvWO8H4Vjmsqpt3fDQrfgybr8kQ5Vgb9BQyVRB33ywQqjUApsiwi5Ci7grMPPRA==}
+  eslint-plugin-perfectionist@4.4.0:
+    resolution: {integrity: sha512-B78pWxCsA2sClourpWEmWziCcjEsAEyxsNV5G6cxxteu/NI0/2en9XZUONf5e/+O+dgoLZsEPHQEhnIxJcnUvA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       eslint: '>=8.0.0'
@@ -4968,10 +4968,10 @@ snapshots:
     optionalDependencies:
       source-map: 0.6.1
 
-  eslint-plugin-perfectionist@4.3.0(eslint@9.17.0(jiti@1.21.0))(typescript@5.7.2):
+  eslint-plugin-perfectionist@4.4.0(eslint@9.17.0(jiti@1.21.0))(typescript@5.7.2):
     dependencies:
-      '@typescript-eslint/types': 8.18.0
-      '@typescript-eslint/utils': 8.18.0(eslint@9.17.0(jiti@1.21.0))(typescript@5.7.2)
+      '@typescript-eslint/types': 8.18.1
+      '@typescript-eslint/utils': 8.18.1(eslint@9.17.0(jiti@1.21.0))(typescript@5.7.2)
       eslint: 9.17.0(jiti@1.21.0)
       natural-orderby: 5.0.0
     transitivePeerDependencies:
