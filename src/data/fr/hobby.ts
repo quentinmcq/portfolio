@@ -76,12 +76,4 @@ export default [
     link: 'https://strava.com/athletes/61088761',
     title: 'VTT',
   },
-  {
-    button: 'Mes albums',
-    cover: 'music.webp',
-    description:
-      'Un de mes passe-temps favoris. J\'écoute des genres assez variés et j\'adore découvrir de nouveaux artistes 🎵',
-    link: 'https://open.spotify.com/user/3lefkr5qkab0fpvg88w7ou80u?si=2d561e3457384487',
-    title: 'Musique',
-  },
 ]

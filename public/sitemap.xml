@@ -3,51 +3,51 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+            https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
 >
     <url>
         <loc>https://qmacq.netlify.app/</loc>
-        <lastmod>2024-01-20</lastmod>
+        <lastmod>2024-12-23</lastmod>
     </url>
     <url>
         <loc>https://qmacq.netlify.app/#presentation</loc>
-        <lastmod>2024-01-20</lastmod>
+        <lastmod>2024-12-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://qmacq.netlify.app/#skill</loc>
-        <lastmod>2024-01-20</lastmod>
+        <lastmod>2024-12-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://qmacq.netlify.app/#education</loc>
-        <lastmod>2024-01-20</lastmod>
+        <lastmod>2024-12-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://qmacq.netlify.app/#experience</loc>
-        <lastmod>2024-01-20</lastmod>
+        <lastmod>2024-12-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://qmacq.netlify.app/#project</loc>
-        <lastmod>2024-01-20</lastmod>
+        <lastmod>2024-12-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://qmacq.netlify.app/#hobby</loc>
-        <lastmod>2024-01-20</lastmod>
+        <lastmod>2024-12-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://qmacq.netlify.app/#contact</loc>
-        <lastmod>2024-01-20</lastmod>
+        <lastmod>2024-12-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
