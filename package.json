@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
-    "@release-it/conventional-changelog": "^9.0.3",
+    "@release-it/conventional-changelog": "^9.0.4",
     "@stylistic/eslint-plugin": "^2.12.1",
     "@types/aos": "^3.0.7",
     "@types/eslint__js": "^8.42.3",
@@ -51,7 +51,7 @@
     "eslint-typegen": "^0.3.2",
     "happy-dom": "^15.11.7",
     "husky": "^9.1.7",
-    "release-it": "^17.10.0",
+    "release-it": "^17.11.0",
     "sass-embedded": "^1.83.0",
     "sass-loader": "^16.0.4",
     "typescript-eslint": "^8.18.1",
