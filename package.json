@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "packageManager": "pnpm@9.15.3",
+  "packageManager": "pnpm@10.0.0",
   "engines": {
     "node": "^23.6.0"
   },
