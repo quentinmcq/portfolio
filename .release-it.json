@@ -42,8 +42,7 @@
           },
           {
             "type": "chore",
-            "section": "🏡 Chore",
-            "hidden": true
+            "section": "🏡 Chore"
           }
         ]
       }
