@@ -1,4 +1,3 @@
-import education from '@/data/fr/education'
 import experience from '@/data/fr/experience'
 import hobby from '@/data/fr/hobby'
 import menu from '@/data/fr/menu'
@@ -31,11 +30,6 @@ export default {
     'required-field': 'Ce champ est requis',
     'send': 'Envoyer',
     'sent': 'Envoyé ! 😄',
-  },
-
-  education: {
-    'main-title': 'Parcours universitaire',
-    ...education,
   },
 
   experience: {

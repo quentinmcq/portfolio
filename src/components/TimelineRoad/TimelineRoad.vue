@@ -17,7 +17,6 @@
 </template>
 
 <script setup lang="ts">
-import type { Education } from '@/types/Education'
 import type { Experience } from '@/types/Experience'
 
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue'
@@ -26,7 +25,7 @@ import { useResponsive } from '@/composables/style/responsive'
 
 defineProps<{
   componentName: string
-  items: Education[] | Experience[]
+  items: Experience[]
 }>()
 
 const { timelineDensity } = useResponsive()

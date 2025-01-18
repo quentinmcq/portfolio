@@ -54,7 +54,6 @@
 </template>
 
 <script setup lang="ts">
-import type { Education } from '@/types/Education'
 import type { Experience } from '@/types/Experience'
 
 import GenericImage from '@/components/GenericImage/GenericImage.vue'
@@ -69,7 +68,7 @@ import { useDisplay } from 'vuetify'
 const props = defineProps<{
   componentName: string
   index: number
-  item: Education | Experience
+  item: Experience
 }>()
 
 const { componentName, index, item } = toRefs(props)

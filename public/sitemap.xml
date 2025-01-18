@@ -22,12 +22,6 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://qmacq.netlify.app/#education</loc>
-        <lastmod>2024-12-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://qmacq.netlify.app/#experience</loc>
         <lastmod>2024-12-23</lastmod>
         <changefreq>monthly</changefreq>

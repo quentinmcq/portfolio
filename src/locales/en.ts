@@ -1,4 +1,3 @@
-import education from '@/data/en/education'
 import experience from '@/data/en/experience'
 import hobby from '@/data/en/hobby'
 import menu from '@/data/en/menu'
@@ -31,11 +30,6 @@ export default {
     'required-field': 'This field is required',
     'send': 'Send',
     'sent': 'Sent! 😄',
-  },
-
-  education: {
-    'main-title': 'Academic background',
-    ...education,
   },
 
   experience: {
