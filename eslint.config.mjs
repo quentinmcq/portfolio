@@ -1,6 +1,7 @@
 import eslint from '@eslint/js'
 import stylistic from '@stylistic/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
+import oxlint from 'eslint-plugin-oxlint'
 import perfectionist from 'eslint-plugin-perfectionist'
 import pluginVue from 'eslint-plugin-vue'
 import typegen from 'eslint-typegen'
@@ -14,6 +15,7 @@ export default typegen([
   stylistic.configs['recommended-flat'],
   stylistic.configs['disable-legacy'],
   perfectionist.configs['recommended-natural'],
+  oxlint.configs['flat/recommended'],
   {
     ignores: ['dist'],
   },
@@ -26,6 +28,7 @@ export default typegen([
     },
     plugins: {
       stylistic,
+      // ...oxlint.buildFromOxlintConfigFile('.oxlint.json'),
     },
     rules: {
       '@stylistic/comma-dangle': ['error', 'always-multiline'],
