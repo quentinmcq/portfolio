@@ -28,7 +28,7 @@ export default typegen([
     },
     plugins: {
       stylistic,
-      ...oxlint.buildFromOxlintConfigFile('.oxlint.json'),
+      // ...oxlint.buildFromOxlintConfigFile('.oxlint.json'),
     },
     rules: {
       '@stylistic/comma-dangle': ['error', 'always-multiline'],
