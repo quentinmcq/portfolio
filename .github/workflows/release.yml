@@ -19,7 +19,7 @@ jobs:
           fetch-depth: 0
 
       - name: Enable corepack (allow to use pnpm)
-        run: npm install -g corepack@latest && corepack enable
+        run: corepack enable
 
       - name: Run actions/setup-node
         uses: actions/setup-node@master
