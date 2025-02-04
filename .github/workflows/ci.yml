@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@master
 
       - name: Enable corepack (allow to use pnpm)
-        run: npm install -g corepack@latest && corepack enable
+        run: corepack enable
 
       - name: actions/setup-node@master
         uses: actions/setup-node@master
