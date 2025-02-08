@@ -50,7 +50,7 @@
     "eslint-plugin-perfectionist": "^4.8.0",
     "eslint-plugin-vue": "^9.32.0",
     "eslint-typegen": "^1.0.0",
-    "happy-dom": "^17.0.1",
+    "happy-dom": "^17.0.2",
     "husky": "^9.1.7",
     "oxlint": "^0.15.10",
     "release-it": "^18.1.2",
