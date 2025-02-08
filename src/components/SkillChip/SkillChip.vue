@@ -12,8 +12,8 @@
       <GenericImage
         :src="path"
         :alt="chipConfig.label"
-        :width="width"
-        :height="height"
+        :width
+        :height
       />
     </template>
     <div class="ml-1">

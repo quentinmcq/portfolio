@@ -1,16 +1,16 @@
 <template>
   <v-container :id="componentName">
-    <CategoryTitle :component-name="componentName" />
+    <CategoryTitle :component-name />
     <DialogCard
       :items="allItems"
-      :component-name="componentName"
+      :component-name
       custom-button-text
     />
 
     <SeeMore
       v-show="hasMoreItems"
       :items="hobbies"
-      :component-name="componentName"
+      :component-name
       @see-more="setNumberOfItemsToDisplay"
     />
   </v-container>

@@ -3,7 +3,7 @@
     :id="componentName"
     class="presentation-page"
   >
-    <CategoryTitle :component-name="componentName" />
+    <CategoryTitle :component-name />
 
     <v-row data-aos="zoom-in">
       <v-col>
@@ -69,7 +69,7 @@
             <PresentationPageButton
               v-for="(presentation, index) in presentations"
               :key="index"
-              :presentation="presentation"
+              :presentation
             />
           </div>
         </v-card>

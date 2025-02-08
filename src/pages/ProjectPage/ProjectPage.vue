@@ -3,16 +3,16 @@
     :id="componentName"
     class="project"
   >
-    <CategoryTitle :component-name="componentName" />
+    <CategoryTitle :component-name />
     <DialogCard
       :items="allItems"
-      :component-name="componentName"
+      :component-name
     />
 
     <SeeMore
       v-show="hasMoreItems"
       :items="projects"
-      :component-name="componentName"
+      :component-name
       @see-more="setNumberOfItemsToDisplay"
     />
   </v-container>

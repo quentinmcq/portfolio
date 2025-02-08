@@ -9,8 +9,8 @@
 
     <SkillChip
       v-for="(label, key) in skill.content"
-      :key="key"
-      :label="label"
+      :key
+      :label
       :color="skill.color"
       class="skill-page-item__config"
       target="_blank"

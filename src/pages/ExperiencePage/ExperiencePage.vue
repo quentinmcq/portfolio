@@ -5,7 +5,7 @@
   >
     <TimelineRoad
       :items="experiences"
-      :component-name="componentName"
+      :component-name
     />
   </v-container>
 </template>

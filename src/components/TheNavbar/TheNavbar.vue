@@ -69,7 +69,7 @@ import { ref } from 'vue'
 
 const { scrollToTop, visible } = useScroll()
 const { menuWidth } = useResponsive()
-const fullName = ['Quentin', 'Macq']
+const fullName: [x: string, y: string] = ['Quentin', 'Macq']
 
 const drawer = ref(false)
 function manageEvents(): void {

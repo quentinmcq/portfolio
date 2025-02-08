@@ -1,5 +1,5 @@
 <template>
-  <CategoryTitle :component-name="componentName" />
+  <CategoryTitle :component-name />
 
   <v-timeline
     :density="timelineDensity"
@@ -9,9 +9,9 @@
     <TimelineRoadItem
       v-for="(item, index) in items"
       :key="index"
-      :index="index"
-      :item="item"
-      :component-name="componentName"
+      :index
+      :item
+      :component-name
     />
   </v-timeline>
 </template>

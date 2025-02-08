@@ -1,11 +1,11 @@
 <template>
   <v-img
-    :src="src"
-    :lazy-src="lazySrc"
-    :cover="cover"
-    :width="width"
-    :height="height"
-    :alt="alt"
+    :src
+    :lazy-src
+    :cover
+    :width
+    :height
+    :alt
   >
     <template #placeholder>
       <v-row

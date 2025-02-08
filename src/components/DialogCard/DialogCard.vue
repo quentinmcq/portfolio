@@ -3,11 +3,11 @@
     <DialogCardItem
       v-for="(item, index) in items"
       :key="index"
-      :component-name="componentName"
-      :custom-button-text="customButtonText"
-      :index="index"
-      :item="item"
-      :transition="transition"
+      :component-name
+      :custom-button-text
+      :index
+      :item
+      :transition
     >
       <template #chipsAndLinks>
         <v-row
@@ -18,7 +18,7 @@
           <SkillChip
             v-for="(label, chipIndex) in item?.chips"
             :key="chipIndex"
-            :label="label"
+            :label
             target="_blank"
           />
         </v-row>
@@ -50,7 +50,7 @@
       <template #imageGallery>
         <v-card-text>
           <ImageGallery
-            :component-name="componentName"
+            :component-name
             :images="item.images"
             :type="item.type"
           />

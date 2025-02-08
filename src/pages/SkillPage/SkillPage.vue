@@ -3,7 +3,7 @@
     :id="componentName"
     class="skill-page"
   >
-    <CategoryTitle :component-name="componentName" />
+    <CategoryTitle :component-name />
 
     <v-card
       class="card-animation skill-page__card"
@@ -16,8 +16,8 @@
         <SkillPageItem
           v-for="(skill, index) in skills"
           :key="index"
-          :index="index"
-          :skill="skill"
+          :index
+          :skill
         />
       </v-row>
     </v-card>

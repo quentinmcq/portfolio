@@ -3,7 +3,7 @@
     :id="componentName"
     class="contact-page"
   >
-    <CategoryTitle :component-name="componentName" />
+    <CategoryTitle :component-name />
 
     <div
       v-if="showConfetti"
@@ -77,7 +77,7 @@
               <v-btn
                 id="message-status"
                 :aria-label="$t('contact.send')"
-                :loading="loading"
+                :loading
                 :size="buttonSize"
                 color="#e52c4d"
                 type="submit"

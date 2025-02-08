@@ -35,7 +35,7 @@
 
       <v-dialog
         v-model="dialog"
-        :transition="transition"
+        :transition
         width="auto"
       >
         <v-card
