@@ -23,7 +23,7 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useDisplay } from 'vuetify'
 
-const props = defineProps<{
+const { componentName, items } = defineProps<{
   componentName: string
   items: Hobby[] | Project[]
 }>()
@@ -47,7 +47,7 @@ function loadMore(): void {
 function sendSeeMoreAnalyticsEvent(): void {
   useGoogleAnalyticsEvent({
     action: `see-more-button:click`,
-    category: props.componentName,
+    category: componentName,
     label: t('common.see-more'),
   })
 }

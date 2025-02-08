@@ -71,18 +71,16 @@ import SkillChip from '@/components/SkillChip/SkillChip.vue'
 import { useImagePath } from '@/composables/common/image-path.js'
 import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics.js'
 
-interface Props {
+const { componentName, customButtonText = false, items, transition = 'dialog-bottom-transition' } = defineProps<{
   componentName: string
   customButtonText?: boolean
   items: Hobby[] | Project[]
   transition?: string
-}
-
-const { componentName, customButtonText = false, items, transition = 'dialog-bottom-transition' } = defineProps<Props>()
+}>()
 
 function linkImgPath(image: string): string {
   const { path } = useImagePath({
-    directory: `${componentName}`,
+    directory: componentName,
     image: `logo/${image}`,
   })
 

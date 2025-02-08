@@ -9,7 +9,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-type Props = {
+const { array, caret = 'cursor', delay = 2000, eraseSpeed = 100, intervals = 500, iterations = 0, start = 0, typeSpeed = 200 } = defineProps<{
   array: string[]
   caret?: string
   delay?: number
@@ -18,9 +18,7 @@ type Props = {
   iterations?: number
   start?: number
   typeSpeed?: number
-}
-
-const { array, caret = 'cursor', delay = 2000, eraseSpeed = 100, intervals = 500, iterations = 0, start = 0, typeSpeed = 200 } = defineProps<Props>()
+}>()
 
 const emit = defineEmits<{
   'typed': [typedString: string]

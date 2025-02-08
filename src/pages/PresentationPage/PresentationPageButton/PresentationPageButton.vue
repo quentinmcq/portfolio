@@ -22,16 +22,16 @@ import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics'
 import { useResponsive } from '@/composables/style/responsive'
 import { computed } from 'vue'
 
-const props = defineProps<{
+const { presentation } = defineProps<{
   presentation: Presentation
 }>()
 
 const { buttonSize } = useResponsive()
 
 const target = computed(() =>
-  !props.presentation.link.startsWith('#') ? '_blank' : '',
+  !presentation.link.startsWith('#') ? '_blank' : '',
 )
-const icon = computed(() => props.presentation.icon || '')
+const icon = computed(() => presentation.icon || '')
 
 function sendEventOnButtonClick(): void {
   useGoogleAnalyticsEvent({

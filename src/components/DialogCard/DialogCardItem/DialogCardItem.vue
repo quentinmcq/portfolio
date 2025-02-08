@@ -100,15 +100,13 @@ import { useAnimation } from '@/composables/style/animation'
 import { useResponsive } from '@/composables/style/responsive'
 import { computed, ref, toRef } from 'vue'
 
-interface Props {
+const { componentName, customButtonText = false, index, item, transition = 'dialog-bottom-transition' } = defineProps<{
   componentName: string
   customButtonText?: boolean
   index: number
   item: Hobby | Project
   transition?: string
-}
-
-const { componentName, customButtonText = false, index, item, transition = 'dialog-bottom-transition' } = defineProps<Props>()
+}>()
 
 let dialog = ref(false)
 

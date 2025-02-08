@@ -57,7 +57,7 @@ import { useImagePath } from '@/composables/common/image-path'
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useDisplay } from 'vuetify'
 
-const props = defineProps<{
+const { componentName, images, type } = defineProps<{
   componentName: string
   images: Image[]
   type: string
@@ -81,7 +81,7 @@ onBeforeUnmount(() => {
 })
 
 const dimensionGalleryImage = computed(() => (xs.value ? 110 : 160))
-const reversedYears = computed(() => Object.keys(props.images).reverse())
+const reversedYears = computed(() => Object.keys(images).reverse())
 
 function calculateMaxDimensionOpenImage(): void {
   const maxSizeRatio = 0.9
@@ -106,8 +106,8 @@ function calculateMaxDimensionOpenImage(): void {
 
 function linkImgPath(year: string, image: string): string {
   const { path } = useImagePath({
-    directory: `${props.componentName}`,
-    image: `${props.type}/${year}/${image}`,
+    directory: componentName,
+    image: `${type}/${year}/${image}`,
   })
 
   return path.value

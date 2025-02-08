@@ -23,14 +23,12 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
+const { cover = false, height = undefined, lazySrc = undefined, width = undefined } = defineProps<{
   alt: string
   cover?: boolean
   height?: number | string
   lazySrc?: string
   src: string
   width?: number | string
-}
-
-const { cover = false, height = undefined, lazySrc = undefined, width = undefined } = defineProps<Props>()
+}>()
 </script>

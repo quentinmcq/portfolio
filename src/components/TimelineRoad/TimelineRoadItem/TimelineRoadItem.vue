@@ -62,36 +62,35 @@ import { usePrefixTranslation } from '@/composables/common/prefix-translation'
 import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics'
 import { useAnimation } from '@/composables/style/animation'
 import { useResponsive } from '@/composables/style/responsive'
-import { toRefs } from 'vue'
+import { toRef } from 'vue'
 import { useDisplay } from 'vuetify'
 
-const props = defineProps<{
+const { componentName, index, item } = defineProps<{
   componentName: string
   index: number
   item: Experience
 }>()
 
-const { componentName, index, item } = toRefs(props)
 const { timelineSize } = useResponsive()
 const { smAndDown, smAndUp } = useDisplay()
-const prefix = usePrefixTranslation(componentName, index)
+const prefix = usePrefixTranslation(toRef(() => componentName), toRef(() => index))
 
 const { path } = useImagePath({
-  directory: props.componentName,
-  image: props.item.cover,
+  directory: componentName,
+  image: item.cover,
 })
 
 function sendTimelineCardClickAnalyticsEvent(): void {
   useGoogleAnalyticsEvent({
     action: `timeline-card:click`,
-    category: props.componentName,
-    label: props.item.title,
+    category: componentName,
+    label: item.title,
   })
 }
 
 const { animation } = useAnimation({
   componentType: 'timeline',
-  index: props.index,
+  index,
 })
 </script>
 
