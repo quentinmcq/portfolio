@@ -87,18 +87,17 @@ function calculateMaxDimensionOpenImage(): void {
   const maxSizeRatio = 0.9
   const { innerHeight: screenHeight, innerWidth: screenWidth } = window
   const isScreenNarrow = screenWidth < screenHeight
-
-  const maxDimension = isScreenNarrow ? screenWidth : screenHeight
+  const maxDimension = Math.min(screenWidth, screenHeight)
   const maxImageDimension = maxDimension * maxSizeRatio
   const imageRatio = screenWidth / screenHeight
 
-  let maxWidth = maxImageDimension
-  let maxHeight = maxImageDimension / imageRatio
+  const maxWidth = isScreenNarrow
+    ? maxImageDimension
+    : maxImageDimension * imageRatio
 
-  if (!isScreenNarrow && maxImageDimension < screenHeight) {
-    maxWidth = maxImageDimension * imageRatio
-    maxHeight = maxImageDimension
-  }
+  const maxHeight = isScreenNarrow
+    ? maxImageDimension / imageRatio
+    : maxImageDimension
 
   dimensionOpenImageWidth.value = Math.floor(maxWidth)
   dimensionOpenImageHeight.value = Math.floor(maxHeight)
