@@ -2,7 +2,7 @@ export default [
   {
     button: 'My sources',
     description:
-      'I started this activity as soon as I became a developer. Here you will find some of my favorite sources 👨🏻‍💻',
+      'I started this activity when I was just starting out as a developer. Here are some of my favorite sources 👨🏻‍💻',
     title: 'Technological watch',
   },
   {
@@ -14,7 +14,7 @@ export default [
   {
     button: 'My club',
     description:
-      'A discipline that captivated me when I was in high school and which I decided to return to a few years later 🧗🏻‍♂️',
+      'A discipline that captivated me during my studies and that I chose to take up again a few years later 🧗🏻',
     title: 'Climbing',
   },
   {

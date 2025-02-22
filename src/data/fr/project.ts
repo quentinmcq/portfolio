@@ -5,7 +5,7 @@ export default [
     chips: ['Symfony', 'VueJS', 'PHP', 'JS', 'Vuetify', 'Docker', 'API'],
     cover: 'unpaid.webp',
     description:
-      'Permet de lister les impayés, où des mensualités n’ont pas été réglées. Un processus de relance est alors entamé : SMS/mail de relance, mise en demeure puis recouvrement.',
+      'L\'application permet de lister les impayés correspondant aux mensualités non réglées. Un processus de relance est alors déclenché, incluant l\'envoi de SMS et d\'e-mails de rappel, suivi d\'une mise en demeure et d\'une procédure de recouvrement.',
     link: '',
     subtitle: 'Outil de suivi des impayés',
     title: 'Unpaid Tracking',
@@ -15,7 +15,7 @@ export default [
     chips: ['Laravel', 'PHP', 'JS', 'Livewire', 'Bootstrap'],
     cover: 'couteau-suisse.webp',
     description:
-      'L\'utilisateur peut créer un compte et choisir son type de handicap (daltonisme, malvoyance, etc). Il a également des outils à sa disposition permettant de l\'aider au quotidien comme un assistant vocal.',
+      'L\'application permet de créer un compte et de sélectionner un type de handicap (daltonisme, malvoyance, etc.). Elle propose également des outils d’assistance, tels qu’un assistant vocal, pour faciliter le quotidien.',
     link: `${GITHUB_URL}/${GITHUB_USERNAME}/teach-me`,
     subtitle: 'Site pour les étudiants handicapés',
     title: 'Couteau Suisse',
@@ -25,7 +25,7 @@ export default [
     chips: ['Laravel', 'PHP', 'JS', 'InertiaJS', 'Bootstrap'],
     cover: 'teachme.webp',
     description:
-      'L\'utilisateur peut créer un compte, modifier ses informations personnelles et parcourir les cours proposés sur le site. Un système de rôles permet également de gérer leurs accès (admin, professeur, etc).',
+      'L\'application permet de créer un compte, de modifier ses informations personnelles et de parcourir les cours disponibles sur le site. Un système de rôles gère les niveaux d\'accès, notamment pour les administrateurs et les professeurs.',
     link: `${GITHUB_URL}/${GITHUB_USERNAME}/swiss-knife`,
     subtitle: 'Site de cours en ligne',
     title: 'TeachMe',
@@ -34,8 +34,7 @@ export default [
   {
     chips: ['VueJS', 'JS', 'Bootstrap'],
     cover: 'edt.webp',
-    description:
-      'L\'utilisateur peut visualiser l\'emploi du temps des étudiants de l\'IUT sur plusieurs semaines. Il a également la possibilité de voir les disponibilités d\'un professeur avec un groupe et d\'ajouter des cours en conséquence.',
+    description: 'L\'application permet de consulter l\'emploi du temps des étudiants de l\'IUT sur plusieurs semaines. Elle permet également de vérifier les disponibilités d\'un professeur avec un groupe et d\'ajouter des cours en fonction des créneaux libres.',
     link: `${GITHUB_URL}/${GITHUB_USERNAME}/university-schedule`,
     subtitle: 'Emploi du temps universitaire',
     title: 'Interface EDT',
@@ -45,7 +44,7 @@ export default [
     chips: ['Laravel', 'Angular', 'PHP', 'JS', 'Phaser', 'Bootstrap'],
     cover: 'slay-the-demon.webp',
     description:
-      'Dans un thème fantastique, le joueur doit affronter des démons afin de passer au niveau suivant et ainsi sauver son village. Il peut également créer un compte afin de regarder le classement de chaque les joueurs.',
+      'Dans un univers fantastique, le joueur affronte des démons pour progresser de niveau et sauver son village. Un système de compte permet également de consulter le classement des autres joueurs.',
     link: `${GITHUB_URL}/${GITHUB_USERNAME}/slay-the-demons`,
     subtitle: 'Jeu vidéo intégré à une page web',
     title: 'Slay the Demons',
@@ -55,7 +54,7 @@ export default [
     chips: ['Laravel', 'PHP', 'Bootstrap'],
     cover: 'tv-time.webp',
     description:
-      'L\'utilisateur peut créer un compte et parcourir le catalogue de séries proposé. Il a la possibilité d\'attribuer une note aux épisodes, de rédiger des commentaires ou encore d\'ajouter une série dans sa \'watchlist\'.',
+      'L\'application permet de créer un compte et d\'explorer le catalogue de séries disponible. Il est possible de noter les épisodes, de rédiger des commentaires et d\'ajouter des séries à une watchlist.',
     link: `${GITHUB_URL}/${GITHUB_USERNAME}/tv-inside`,
     subtitle: 'Plateforme de suivi de séries',
     title: 'TV Inside',
@@ -65,7 +64,7 @@ export default [
     chips: ['Python', 'PyQt'],
     cover: 'bomberman.webp',
     description:
-      'Les joueurs doivent éliminer les adversaires avec des bombes. Des power-ups sont dispersés sur toute la carte dans des blocs. Attention, ces bonus peuvent aussi bien être des atouts que des pénalités !',
+      'Les joueurs doivent éliminer leurs adversaires à l’aide de bombes. Des power-ups, cachés dans les blocs répartis sur la carte, offrent des bonus ou des pénalités, influençant ainsi le cours de la partie.',
     link: `${GITHUB_URL}/${GITHUB_USERNAME}/bomberman`,
     subtitle: 'Jeu vidéo avec interface graphique',
     title: 'Bomberman',
@@ -74,8 +73,7 @@ export default [
   {
     chips: ['JS', 'HTML'],
     cover: 'site.webp',
-    description:
-      'Projet de création d\'un nouveau site pour mon université. Le but était de réaliser une interface moderne et plus élégante que le site de l\'époque.',
+    description: 'Projet de refonte du site web de mon université, avec pour objectif de proposer une interface moderne et élégante, en remplacement de l’ancienne version.',
     link: `${GITHUB_URL}/${GITHUB_USERNAME}/university-website`,
     subtitle: 'Refonte du site web de l\'IUT',
     title: 'Site web de l\'IUT',

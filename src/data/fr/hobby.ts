@@ -3,7 +3,7 @@ export default [
     button: 'Mes sources',
     cover: 'news.webp',
     description:
-      'J\'ai commencé cette activité dès que je suis devenu développeur. Vous retrouverez ici quelques-unes de mes sources préférées 👨🏻‍💻',
+      'J’ai commencé cette activité dès mes débuts en tant que développeur. Voici quelques-unes de mes sources préférées 👨🏻‍💻',
     links: [
       { img: 'nuxtjs.webp', url: 'https://nuxt.com/blog/' },
       { img: 'omglinux.webp', url: 'https://www.omglinux.com/' },
@@ -12,6 +12,7 @@ export default [
       { img: 'css_tricks.webp', url: 'https://css-tricks.com/' },
     ],
     title: 'Veille technologique',
+
   },
   {
     button: 'Ma collection',
@@ -45,7 +46,7 @@ export default [
     button: 'Mon club',
     cover: 'climbing.webp',
     description:
-      'Discipline qui m\'a captivé lorsque j\'étais au lycée et que j\'ai décidé de reprendre quelques années plus tard 🧗🏻‍♂️',
+      'Discipline qui m’a captivé lors de mes études et que j’ai choisi de reprendre quelques années plus tard 🧗🏻',
     images: {
       2022: [
         'picture_1.webp',

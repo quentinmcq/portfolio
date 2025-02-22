@@ -23,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-const { cover = false, height = undefined, lazySrc = undefined, width = undefined, src } = defineProps<{
+const { cover = false, height = undefined, lazySrc = undefined, src, width = undefined } = defineProps<{
   alt: string
   cover?: boolean
   height?: number | string

@@ -6,6 +6,7 @@ import { initVuetify } from '@/plugins/vuetify'
 import { initWebFontLoader } from '@/plugins/webfontloader'
 import { createApp } from 'vue'
 
+// @ts-expect-error cannot find module or its corresponding type declarations.
 import App from './App.vue'
 
 const app = createApp(App)

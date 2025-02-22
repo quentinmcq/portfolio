@@ -64,11 +64,11 @@ export default {
 
   presentation: {
     'main-title': 'Présentation',
-    'part-1': 'Salut, moi c\'est {name} et j\'ai {age} ans.',
+    'part-1': 'Salut, moi c\'est {name}, j\'ai {age} ans.',
     'part-2':
-      'Développeur web passionné depuis plusieurs années maintenant, j\'utilise quotidiennement les frameworks {symfony} et {vuejs}.',
+      'Je suis développeur web et je travaille au quotidien avec {symfony} et {vuejs}.',
     'part-3':
-      'Curieux de nature, j\'adore faire de la veille technologique et partager mes connaissances avec les autres 🎉',
+      'Passionné par le web depuis plusieurs années, j\'adore découvrir de nouvelles technos et partager ce que j\'apprends 🚀',
   },
 
   project: {

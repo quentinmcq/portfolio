@@ -59,7 +59,7 @@ import { useDisplay } from 'vuetify'
 
 const { componentName, images, type } = defineProps<{
   componentName: string
-  images: Image[]
+  images: Image
   type: string
 }>()
 

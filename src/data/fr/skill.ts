@@ -10,7 +10,7 @@ export default [
     label: 'Base de données',
   },
   {
-    color: '#41B883',
+    color: '#4FC08D',
     content: ['VueJS', 'NuxtJS', 'Vuetify'],
     label: 'Frameworks Front-end',
   },

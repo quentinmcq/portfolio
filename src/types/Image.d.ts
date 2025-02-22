@@ -1,3 +1,3 @@
 export interface Image {
-  [year: number]: string
+  [year: number]: string[]
 }

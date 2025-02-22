@@ -1,49 +1,47 @@
 export default [
   {
-    description:
-      'Allows you to list unpaid bills, where monthly payments have not been paid. A reminder process is then initiated : reminder SMS/email, formal notice then recovery.',
+    description: 'The application allows you to list unpaid amounts corresponding to unpaid monthly payments. A reminder process is then triggered, including sending reminder SMS and emails, followed by a formal notice and a recovery procedure.',
     subtitle: 'Unpaid follow-up tool',
     title: 'Unpaid Tracking',
   },
   {
     description:
-      'The user can create an account and choose his type of handicap (color blindness, visually impaired, etc). He also has tools at his disposal to help him on a daily basis like voice assistant.',
+      'The application allows you to create an account and select a type of disability (color blindness, low vision, etc.). It also offers assistance tools, such as a voice assistant, to make everyday life easier.',
     subtitle: 'Site for disabled students',
     title: 'Swiss Knife',
   },
   {
     description:
-      'The user can create an account, modify his personal information and browse the courses offered on the site. In addition, a role system allows user access (admin, teacher, etc) to be managed.',
+      'The application allows you to create an account, modify your personal information and browse the courses available on the site. A role system manages access levels, particularly for administrators and teachers.',
     subtitle: 'Online course site',
     title: 'TeachMe',
   },
   {
-    description:
-      'The user can visualize the timetable of the students of the university over several weeks. It also has the ability to see the availability of a teacher with a group and add classes accordingly.',
+    description: 'The application allows you to consult the timetable of IUT students over several weeks. It also allows you to check the availability of a teacher with a group and to add courses according to free slots',
     subtitle: 'University timetable',
     title: 'University timetable',
   },
   {
     description:
-      'In a fantasy theme, the player must face demons in order to move to the next level and thus save his village. He can also create an account in order to view the ranking of all players.',
+      'In a fantasy universe, the player fights demons to progress in level and save his village. An account system also allows you to consult the ranking of other players.',
     subtitle: 'Video game integrated into a web page',
     title: 'Slay the Demons',
   },
   {
     description:
-      'The user can create an account and browse the proposed series catalog. He can assign a rating to episodes and write comments, or even add a series to his \'watchlist\'.',
+      'The application allows you to create an account and explore the available catalog of series. It is possible to rate episodes, write comments and add series to a watchlist.',
     subtitle: 'Series monitoring platform',
     title: 'TV Inside',
   },
   {
     description:
-      'The players have to eliminate the opponents with bombs. Power-ups are scattered throughout the map in blocks. Be careful, these bonuses can be advantages as well as penalties!',
+      'Players must eliminate their opponents using bombs. Power-ups, hidden in blocks spread across the map, offer bonuses or penalties, thus influencing the course of the game.',
     subtitle: 'Video game with graphical interface',
     title: 'Bomberman',
   },
   {
     description:
-      'Project to create a new site for my university. The goal was to achieve a modern and more elegant interface than the site of the time.',
+      'Project to redesign my university\'s website, with the aim of offering a modern and elegant interface, replacing the old version.',
     subtitle: 'Redesign of the university website',
     title: 'University website',
   },
