@@ -31,7 +31,7 @@
     "vue-i18n": "^11.1.1",
     "vue-recaptcha": "3.0.0-alpha.6",
     "vue-tsc": "^2.2.8",
-    "vuetify": "^3.7.14",
+    "vuetify": "^3.7.15",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
@@ -49,9 +49,9 @@
     "eslint": "^9.21.0",
     "eslint-plugin-oxlint": "^0.15.13",
     "eslint-plugin-perfectionist": "^4.9.0",
-    "eslint-plugin-vue": "^9.32.0",
+    "eslint-plugin-vue": "^9.33.0",
     "eslint-typegen": "^2.0.0",
-    "happy-dom": "^17.1.9",
+    "happy-dom": "^17.2.2",
     "husky": "^9.1.7",
     "oxlint": "^0.15.13",
     "release-it": "^18.1.2",
