@@ -11,7 +11,6 @@
 
     <SeeMore
       v-show="hasMoreItems"
-      :items="projects"
       :component-name
       @see-more="setNumberOfItemsToDisplay"
     />

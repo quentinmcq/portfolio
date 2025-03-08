@@ -14,18 +14,14 @@
 </template>
 
 <script setup lang="ts">
-import type { Hobby } from '@/types/Hobby'
-import type { Project } from '@/types/Project'
-
 import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics'
 import { useResponsive } from '@/composables/style/responsive'
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useDisplay } from 'vuetify'
 
-const { componentName, items } = defineProps<{
+const { componentName } = defineProps<{
   componentName: string
-  items: Hobby[] | Project[]
 }>()
 
 const emit = defineEmits<{

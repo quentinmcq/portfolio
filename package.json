@@ -24,6 +24,7 @@
     "@neoconfetti/vue": "^2.2.1",
     "@vue/shared": "^3.5.13",
     "aos": "^2.3.4",
+    "globals": "^16.0.0",
     "roboto-fontface": "^0.10.0",
     "typescript": "^5.8.2",
     "vue": "^3.5.13",

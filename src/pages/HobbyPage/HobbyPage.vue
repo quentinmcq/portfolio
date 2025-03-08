@@ -9,7 +9,6 @@
 
     <SeeMore
       v-show="hasMoreItems"
-      :items="hobbies"
       :component-name
       @see-more="setNumberOfItemsToDisplay"
     />
