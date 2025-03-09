@@ -1,38 +1,10 @@
 # Changelog
 
-## [2.20.0](https://github.com/quentinmcq/portfolio/compare/2.19.7...2.20.0) (2025-03-08)
-
-### 🚀 Enhancements
-
-* reactivate oxlint plugin (fix was released) + minor fixes ([d3bb133](https://github.com/quentinmcq/portfolio/commit/d3bb133e77618101362f5f060d9d570722551094))
+## [2.20.1](https://github.com/quentinmcq/portfolio/compare/2.20.0...2.20.1) (2025-03-09)
 
 ### 🩹 Fixes
 
-* improve dimension calculation img function ([650f8c6](https://github.com/quentinmcq/portfolio/commit/650f8c6157b7e095fe6b59bfac31ade62362377f))
-
-### 🏡 Chore
-
-* **deps:** update all non-major dependencies ([#445](https://github.com/quentinmcq/portfolio/issues/445)) ([05b00a5](https://github.com/quentinmcq/portfolio/commit/05b00a52eae12de73b66a5e0115b1d450ec83e33))
-* **deps:** update all non-major dependencies ([#446](https://github.com/quentinmcq/portfolio/issues/446)) ([70a87a6](https://github.com/quentinmcq/portfolio/commit/70a87a61f37db5be448cb88dbd68d8089b9b94a1))
-* **deps:** update all non-major dependencies ([#447](https://github.com/quentinmcq/portfolio/issues/447)) ([24a0463](https://github.com/quentinmcq/portfolio/commit/24a0463b4bd9077dbfba4fc1fd79cc5ce2d1e6ce))
-* **deps:** update all non-major dependencies ([#450](https://github.com/quentinmcq/portfolio/issues/450)) ([da2caf7](https://github.com/quentinmcq/portfolio/commit/da2caf7862987d80284b8438233da7a8ac3a30c8))
-* **deps:** update all non-major dependencies ([#452](https://github.com/quentinmcq/portfolio/issues/452)) ([55399f3](https://github.com/quentinmcq/portfolio/commit/55399f3712433d0359627a16c83a374566983ab0))
-* **deps:** update all non-major dependencies ([#453](https://github.com/quentinmcq/portfolio/issues/453)) ([300eb56](https://github.com/quentinmcq/portfolio/commit/300eb565ae5982d033fb0e289bc225555eec3afd))
-* **deps:** update all non-major dependencies ([#456](https://github.com/quentinmcq/portfolio/issues/456)) ([9a1c7e0](https://github.com/quentinmcq/portfolio/commit/9a1c7e024b326a33961a457c4c5a0e3bf55ae99b))
-* **deps:** update all non-major dependencies ([#457](https://github.com/quentinmcq/portfolio/issues/457)) ([7f949d1](https://github.com/quentinmcq/portfolio/commit/7f949d1229913d4452ab0d282b82424e84a1d339))
-* **deps:** update all non-major dependencies ([#460](https://github.com/quentinmcq/portfolio/issues/460)) ([80d5de1](https://github.com/quentinmcq/portfolio/commit/80d5de1b8864cf1af91e232a410153ad8a7af87b))
-* **deps:** update all non-major dependencies ([#461](https://github.com/quentinmcq/portfolio/issues/461)) ([b342ee9](https://github.com/quentinmcq/portfolio/commit/b342ee97cae0907aa6b595e1ebb81f5565f8cfcd))
-* **deps:** update all non-major dependencies ([#462](https://github.com/quentinmcq/portfolio/issues/462)) ([64661b5](https://github.com/quentinmcq/portfolio/commit/64661b59630a235b6150101cb16d1c94f58729bf))
-* **deps:** update all non-major dependencies ([#464](https://github.com/quentinmcq/portfolio/issues/464)) ([63a3120](https://github.com/quentinmcq/portfolio/commit/63a31209613da3e9bc92db06133ced045582138b))
-* **deps:** update dependency @stylistic/eslint-plugin to ^4.2.0 ([#455](https://github.com/quentinmcq/portfolio/issues/455)) ([7bc50fa](https://github.com/quentinmcq/portfolio/commit/7bc50fa3c6c120c2a832f7d1159b2c36fa8b70c1))
-* **deps:** update dependency @types/node to ^22.13.10 ([#463](https://github.com/quentinmcq/portfolio/issues/463)) ([49429d0](https://github.com/quentinmcq/portfolio/commit/49429d071fcdedd483a11d81a975e3785bd78f34))
-* **deps:** update dependency eslint-plugin-vue to v10 ([#458](https://github.com/quentinmcq/portfolio/issues/458)) ([de167de](https://github.com/quentinmcq/portfolio/commit/de167de50726e1dc18be76598411c5687fe17b2a))
-* **deps:** update dependency happy-dom to ^17.1.3 ([#444](https://github.com/quentinmcq/portfolio/issues/444)) ([3e7a349](https://github.com/quentinmcq/portfolio/commit/3e7a349e22d9285f34e74f4499c23b9c159949ce))
-* **deps:** update dependency vue-eslint-parser to v10 ([#459](https://github.com/quentinmcq/portfolio/issues/459)) ([2736f79](https://github.com/quentinmcq/portfolio/commit/2736f799f269b525b5ad0c50e49a89c3e810858b))
-* **deps:** update dependency vue-tsc to ^2.2.8 ([#454](https://github.com/quentinmcq/portfolio/issues/454)) ([c24373a](https://github.com/quentinmcq/portfolio/commit/c24373a46f3675556387db5b8e642891f01c2529))
-* **deps:** update dependency vuetify to ^3.7.14 ([#449](https://github.com/quentinmcq/portfolio/issues/449)) ([af52451](https://github.com/quentinmcq/portfolio/commit/af52451ac073b1277579778df421eb6f4906dbf1))
-* **deps:** update pnpm to v10.5.0 ([#448](https://github.com/quentinmcq/portfolio/issues/448)) ([77a9707](https://github.com/quentinmcq/portfolio/commit/77a970769c69aec4449409e3a63bfab7bde1bae7))
-* **deps:** update pnpm to v10.5.2 ([#451](https://github.com/quentinmcq/portfolio/issues/451)) ([2d72a51](https://github.com/quentinmcq/portfolio/commit/2d72a51f22ca9749c762fc95504202715572d814))
+* tests ([47ca4ef](https://github.com/quentinmcq/portfolio/commit/47ca4efe794709bbf6fd971460d054035645cc8d))
 
 ##
 
@@ -40,8 +12,15 @@ All notable changes to this project will be documented in this file. Dates are d
 
 Generated by [`auto-changelog`](https://github.com/CookPete/auto-changelog).
 
+#### [2.20.1](https://github.com/quentinmcq/portfolio/compare/2.20.0...2.20.1)
+
+- fix: tests [`47ca4ef`](https://github.com/quentinmcq/portfolio/commit/47ca4efe794709bbf6fd971460d054035645cc8d)
+
 #### [2.20.0](https://github.com/quentinmcq/portfolio/compare/2.19.7...2.20.0)
 
+> 8 March 2025
+
+- chore: release v2.20.0 [`5c4bf60`](https://github.com/quentinmcq/portfolio/commit/5c4bf60ea86bef4e10cf4c4e553d223d5274f801)
 - feat: reactivate oxlint plugin (fix was released) + minor fixes [`d3bb133`](https://github.com/quentinmcq/portfolio/commit/d3bb133e77618101362f5f060d9d570722551094)
 - fix: improve dimension calculation img function [`650f8c6`](https://github.com/quentinmcq/portfolio/commit/650f8c6157b7e095fe6b59bfac31ade62362377f)
 
