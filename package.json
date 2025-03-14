@@ -2,7 +2,7 @@
   "name": "portfolio",
   "packageManager": "pnpm@10.6.3",
   "engines": {
-    "node": "^23.9.0"
+    "node": "^23.10.0"
   },
   "version": "2.20.1",
   "type": "module",
@@ -51,7 +51,7 @@
     "eslint-plugin-oxlint": "^0.15.15",
     "eslint-plugin-perfectionist": "^4.10.1",
     "eslint-plugin-vue": "^10.0.0",
-    "eslint-typegen": "^2.0.0",
+    "eslint-typegen": "^2.1.0",
     "happy-dom": "^17.4.4",
     "husky": "^9.1.7",
     "oxlint": "^0.15.15",
@@ -59,7 +59,7 @@
     "sass-embedded": "^1.85.1",
     "sass-loader": "^16.0.5",
     "typescript-eslint": "^8.26.1",
-    "vite": "^6.2.1",
+    "vite": "^6.2.2",
     "vite-plugin-vuetify": "^2.1.0",
     "vitest": "^3.0.8",
     "vue-eslint-parser": "^10.1.1"
