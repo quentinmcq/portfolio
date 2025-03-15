@@ -1,5 +1,5 @@
 import { type Ref } from 'vue'
-import { event } from 'vue-gtag'
+import { event } from 'vue-gtag/dist/vue-gtag.cjs'
 
 interface UseGoogleAnalyticsEvent {
   action: string
