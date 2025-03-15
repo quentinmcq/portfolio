@@ -1,5 +1,6 @@
 import { type Ref } from 'vue'
-import { event } from 'vue-gtag/dist/vue-gtag.cjs'
+// @ts-expect-error could not find a declaration file for module
+import { event } from 'vue-gtag/dist/vue-gtag.es'
 
 interface UseGoogleAnalyticsEvent {
   action: string
