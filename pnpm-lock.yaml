@@ -36,8 +36,8 @@ importers:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.8.2)
       vue-gtag:
-        specifier: ^2.1.1
-        version: 2.1.1(vue@3.5.13(typescript@5.8.2))
+        specifier: ^2.1.2
+        version: 2.1.2(vue@3.5.13(typescript@5.8.2))
       vue-i18n:
         specifier: ^11.1.2
         version: 11.1.2(vue@3.5.13(typescript@5.8.2))
@@ -3052,8 +3052,8 @@ packages:
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
 
-  vue-gtag@2.1.1:
-    resolution: {integrity: sha512-FKtxgM8/95R2tDwUsArmmyI+MUnyRBUnDrVv1gqOb9famGZMLNo09PgxSL1iEcsFHtWWJokuEdpgb9VCEr/2Ig==}
+  vue-gtag@2.1.2:
+    resolution: {integrity: sha512-9eTGfIApQ3XpsxJjLNiRP51x0v3c93YJxVO8rKWSLJwbUuICwTMGGfB7x0RLEijFoK3lakgFvR5pR+JF5la2KA==}
     peerDependencies:
       vue: ^3.0.0
 
@@ -6155,7 +6155,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vue-gtag@2.1.1(vue@3.5.13(typescript@5.8.2)):
+  vue-gtag@2.1.2(vue@3.5.13(typescript@5.8.2)):
     dependencies:
       vue: 3.5.13(typescript@5.8.2)
 
