@@ -17,9 +17,6 @@ importers:
       '@neoconfetti/vue':
         specifier: ^2.2.1
         version: 2.2.1
-      '@vue/shared':
-        specifier: ^3.5.13
-        version: 3.5.13
       aos:
         specifier: ^2.3.4
         version: 2.3.4
@@ -36,8 +33,8 @@ importers:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.8.2)
       vue-gtag:
-        specifier: ^3.0.0
-        version: 3.0.0(vue@3.5.13(typescript@5.8.2))
+        specifier: ^3.1.1
+        version: 3.1.1(vue@3.5.13(typescript@5.8.2))
       vue-i18n:
         specifier: ^11.1.2
         version: 11.1.2(vue@3.5.13(typescript@5.8.2))
@@ -3021,8 +3018,8 @@ packages:
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
 
-  vue-gtag@3.0.0:
-    resolution: {integrity: sha512-FS26JKNxoSBwR1J61afE9bP85YiwGpgiM35hxdguLtx4JigsQAXpjYJhV9No76kF1JKdnAq3EkL5ButpLVXarQ==}
+  vue-gtag@3.1.1:
+    resolution: {integrity: sha512-8n31qQ4Qiyn8IenzDWp6A9oq9dPhHUCxFtXJHK0smq+sftiW4S4jTfZeGNCRJZrHLo8ybpso7Br6Go7GB5CmPQ==}
     peerDependencies:
       vue: ^3.5.13
       vue-router: ^4.5.0
@@ -6103,7 +6100,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vue-gtag@3.0.0(vue@3.5.13(typescript@5.8.2)):
+  vue-gtag@3.1.1(vue@3.5.13(typescript@5.8.2)):
     dependencies:
       vue: 3.5.13(typescript@5.8.2)
 
