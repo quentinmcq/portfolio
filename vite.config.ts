@@ -20,7 +20,6 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
       '@neoconfetti/vue': '/node_modules/@neoconfetti/vue/dist/index.js',
-      'vue-gtag': 'vue-gtag/dist/vue-gtag.esm',
     },
   },
 })

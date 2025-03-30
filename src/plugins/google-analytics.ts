@@ -1,13 +1,12 @@
 import type { App } from 'vue'
 
-import VueGtag from 'vue-gtag'
+import { createGtag } from 'vue-gtag'
 
 export function initGoogleAnalytics(app: App<Element>) {
-  const initOptions = {
-    config: {
-      id: import.meta.env.VITE_APP_GA_ID,
-    },
-  }
+  const gtag = createGtag({
+    initMode: 'manual',
+    tagId: import.meta.env.VITE_APP_GA_ID,
+  })
 
-  app.use(VueGtag, initOptions)
+  app.use(gtag)
 }
