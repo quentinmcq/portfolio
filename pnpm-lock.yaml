@@ -17,9 +17,6 @@ importers:
       '@neoconfetti/vue':
         specifier: ^2.2.1
         version: 2.2.1
-      '@vue/shared':
-        specifier: ^3.5.13
-        version: 3.5.13
       aos:
         specifier: ^2.3.4
         version: 2.3.4
