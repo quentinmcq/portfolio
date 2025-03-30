@@ -108,7 +108,7 @@ const { componentName, customButtonText = false, index, item, transition = 'dial
   transition?: string
 }>()
 
-let dialog = ref(false)
+const dialog = ref(false)
 
 const prefix = usePrefixTranslation(toRef(() => componentName), toRef(() => index))
 const { buttonSize } = useResponsive()

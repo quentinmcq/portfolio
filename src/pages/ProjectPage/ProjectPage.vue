@@ -30,7 +30,7 @@ const componentName = useComponentName()
 
 const { lgAndUp } = useDisplay()
 const numberOfItemsToDisplay = lgAndUp.value ? 4 : 2
-let displayedItems = ref(numberOfItemsToDisplay)
+const displayedItems = ref(numberOfItemsToDisplay)
 
 const allItems = computed(() => projects.slice(0, displayedItems.value))
 const hasMoreItems = computed(() => displayedItems.value < projects.length)

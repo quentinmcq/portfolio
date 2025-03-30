@@ -10,13 +10,13 @@ export function initI18n(app: App<Element>) {
     fallbackLocale: 'fr',
     fallbackWarn: false,
     globalInjection: true,
-    legacy: false, // Vuetify does not support the legacy mode of vue-i18n
     locale: localStorage.getItem('lang') || 'fr',
     messages: {
       en,
       fr,
     },
     missingWarn: false,
+    mode: 'composition',
     warnHtmlMessage: false,
   })
 

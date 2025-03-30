@@ -39,7 +39,6 @@
 import { useResponsive } from '@/composables/style/responsive'
 import { computed } from 'vue'
 
-// eslint-disable-next-line no-undef
 const version = APP_VERSION
 const { chipSize } = useResponsive()
 const currentYear = computed(() => new Date().getFullYear())
