@@ -1,14 +1,34 @@
 # Changelog
 
-## [2.20.5](https://github.com/quentinmcq/portfolio/compare/2.20.4...2.20.5) (2025-03-16)
+## [2.21.0](https://github.com/quentinmcq/portfolio/compare/2.20.5...2.21.0) (2025-03-31)
 
-### 🩹 Fixes
+### 🚀 Enhancements
 
-* add alias for vue-gtag import ([3824f62](https://github.com/quentinmcq/portfolio/commit/3824f62c79fa5c084784adcaa476ccac1d32011c))
+* remove optional/useless package + resolve minor deprecations ([d6e7ea8](https://github.com/quentinmcq/portfolio/commit/d6e7ea8dc27bef87ab34a72f7a37aca72c4c1ddf))
+* update pnpm lock file ([eb0c76f](https://github.com/quentinmcq/portfolio/commit/eb0c76fad8bd939fd0fae6d4f2d251152b8b5682))
+* update pnpm lock file ([e5b5e82](https://github.com/quentinmcq/portfolio/commit/e5b5e825c1cf01c296c3610cdf248e2675f68c9b))
+* update vue-gtag to v3 ([ed0d3bd](https://github.com/quentinmcq/portfolio/commit/ed0d3bd55f19a57f3cc8b76cbabbae95da923997))
 
 ### 🏡 Chore
 
-* **deps:** update dependency vue-gtag to ^2.1.1 ([#473](https://github.com/quentinmcq/portfolio/issues/473)) ([73f6941](https://github.com/quentinmcq/portfolio/commit/73f6941b53da2a0e6c3c5e3120a9707c787b350b))
+* **deps:** update all non-major dependencies ([#476](https://github.com/quentinmcq/portfolio/issues/476)) ([0f1ba27](https://github.com/quentinmcq/portfolio/commit/0f1ba279672113e9c8209fdcbc13fdd7181c8611))
+* **deps:** update all non-major dependencies ([#480](https://github.com/quentinmcq/portfolio/issues/480)) ([7f3095c](https://github.com/quentinmcq/portfolio/commit/7f3095c7a2381ef955a8d491005484e526fdd7b4))
+* **deps:** update all non-major dependencies ([#481](https://github.com/quentinmcq/portfolio/issues/481)) ([e10fc72](https://github.com/quentinmcq/portfolio/commit/e10fc7260e7313b9e67af2c37a1c8b8437acb5d4))
+* **deps:** update all non-major dependencies ([#482](https://github.com/quentinmcq/portfolio/issues/482)) ([1036864](https://github.com/quentinmcq/portfolio/commit/1036864cb8f0df38f6d78c7332a3cc21aeda4063))
+* **deps:** update all non-major dependencies ([#490](https://github.com/quentinmcq/portfolio/issues/490)) ([e3775a2](https://github.com/quentinmcq/portfolio/commit/e3775a26221c22402467e138426351276acdfb45))
+* **deps:** update all non-major dependencies to ^0.16.0 ([#474](https://github.com/quentinmcq/portfolio/issues/474)) ([7350169](https://github.com/quentinmcq/portfolio/commit/7350169b34241c716d12bfd4d8a3dbcd245450c6))
+* **deps:** update all non-major dependencies to ^0.16.3 ([#484](https://github.com/quentinmcq/portfolio/issues/484)) ([a07324f](https://github.com/quentinmcq/portfolio/commit/a07324fa8ea1c5f9f3f655907a1ed6a4fa03d317))
+* **deps:** update all non-major dependencies to ^8.28.0 ([#483](https://github.com/quentinmcq/portfolio/issues/483)) ([bb7642d](https://github.com/quentinmcq/portfolio/commit/bb7642d83830b6a55009fac6f3409e746868677d))
+* **deps:** update dependency @types/node to ^22.13.14 ([#487](https://github.com/quentinmcq/portfolio/issues/487)) ([59bff55](https://github.com/quentinmcq/portfolio/commit/59bff55dcc1b48cf48d49d76f54879cb0d8f5555))
+* **deps:** update dependency @vitejs/plugin-vue to ^5.2.2 ([#475](https://github.com/quentinmcq/portfolio/issues/475)) ([61da6cb](https://github.com/quentinmcq/portfolio/commit/61da6cb220daa9df89d776da64ad60276a429564))
+* **deps:** update dependency typescript-eslint to ^8.29.0 ([#491](https://github.com/quentinmcq/portfolio/issues/491)) ([8b3d321](https://github.com/quentinmcq/portfolio/commit/8b3d32194c4d0b6e3d9671409fdd032486fbb77f))
+* **deps:** update dependency vue-gtag to ^2.1.2 ([#478](https://github.com/quentinmcq/portfolio/issues/478)) ([674cf96](https://github.com/quentinmcq/portfolio/commit/674cf96f7c5a525e9180a57a65223ec4964f0aa9))
+* **deps:** update dependency vue-gtag to ^3.1.1 ([#489](https://github.com/quentinmcq/portfolio/issues/489)) ([701048e](https://github.com/quentinmcq/portfolio/commit/701048ead25748dc64c9d0667bfc8773992f36b9))
+* **deps:** update dependency vue-gtag to v3 ([#488](https://github.com/quentinmcq/portfolio/issues/488)) ([1ef5054](https://github.com/quentinmcq/portfolio/commit/1ef50549d0f8cc569425459ae64807b619fb453d))
+* **deps:** update dependency vuetify to ^3.7.18 ([#477](https://github.com/quentinmcq/portfolio/issues/477)) ([70d2069](https://github.com/quentinmcq/portfolio/commit/70d2069fb5501d9eabbb1704b6e1dbb940c9a972))
+* **deps:** update dependency vuetify to ^3.7.19 ([#485](https://github.com/quentinmcq/portfolio/issues/485)) ([41003d3](https://github.com/quentinmcq/portfolio/commit/41003d3574c332531619b0f10e63a8adfa27fe67))
+* **deps:** update pnpm to v10.6.5 ([#479](https://github.com/quentinmcq/portfolio/issues/479)) ([2055230](https://github.com/quentinmcq/portfolio/commit/2055230de5137771d85f2adb8b85f41adf05697a))
+* **deps:** update pnpm to v10.7.0 ([#486](https://github.com/quentinmcq/portfolio/issues/486)) ([2c92c85](https://github.com/quentinmcq/portfolio/commit/2c92c85a0cc4c4ccc7bd4852999e8d34aa681c97))
 
 ##
 
@@ -16,8 +36,17 @@ All notable changes to this project will be documented in this file. Dates are d
 
 Generated by [`auto-changelog`](https://github.com/CookPete/auto-changelog).
 
+#### [2.21.0](https://github.com/quentinmcq/portfolio/compare/2.20.5...2.21.0)
+
+- feat: remove optional/useless package + resolve minor deprecations [`d6e7ea8`](https://github.com/quentinmcq/portfolio/commit/d6e7ea8dc27bef87ab34a72f7a37aca72c4c1ddf)
+- feat: update vue-gtag to v3 [`ed0d3bd`](https://github.com/quentinmcq/portfolio/commit/ed0d3bd55f19a57f3cc8b76cbabbae95da923997)
+- feat: update pnpm lock file [`eb0c76f`](https://github.com/quentinmcq/portfolio/commit/eb0c76fad8bd939fd0fae6d4f2d251152b8b5682)
+
 #### [2.20.5](https://github.com/quentinmcq/portfolio/compare/2.20.4...2.20.5)
 
+> 16 March 2025
+
+- chore: release v2.20.5 [`384a113`](https://github.com/quentinmcq/portfolio/commit/384a11368f8dcea01d0242e2245531d684000e9e)
 - fix: add alias for vue-gtag import [`3824f62`](https://github.com/quentinmcq/portfolio/commit/3824f62c79fa5c084784adcaa476ccac1d32011c)
 
 #### [2.20.4](https://github.com/quentinmcq/portfolio/compare/2.20.3...2.20.4)
