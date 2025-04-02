@@ -46,7 +46,7 @@
     "@vue/tsconfig": "^0.7.0",
     "eslint": "^9.23.0",
     "eslint-plugin-oxlint": "^0.16.4",
-    "eslint-plugin-perfectionist": "^4.10.1",
+    "eslint-plugin-perfectionist": "^4.11.0",
     "eslint-plugin-vue": "^10.0.0",
     "happy-dom": "^17.4.4",
     "husky": "^9.1.7",
