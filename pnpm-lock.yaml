@@ -33,8 +33,8 @@ importers:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.8.3)
       vue-gtag:
-        specifier: ^3.2.0
-        version: 3.2.0(vue@3.5.13(typescript@5.8.3))
+        specifier: ^3.3.0
+        version: 3.3.0(vue@3.5.13(typescript@5.8.3))
       vue-i18n:
         specifier: ^11.1.3
         version: 11.1.3(vue@3.5.13(typescript@5.8.3))
@@ -45,8 +45,8 @@ importers:
         specifier: ^2.2.8
         version: 2.2.8(typescript@5.8.3)
       vuetify:
-        specifier: ^3.8.0
-        version: 3.8.0(typescript@5.8.3)(vite-plugin-vuetify@2.1.1)(vue@3.5.13(typescript@5.8.3))
+        specifier: ^3.8.1
+        version: 3.8.1(typescript@5.8.3)(vite-plugin-vuetify@2.1.1)(vue@3.5.13(typescript@5.8.3))
       webfontloader:
         specifier: ^1.6.28
         version: 1.6.28
@@ -82,8 +82,8 @@ importers:
         specifier: ^9.24.0
         version: 9.24.0(jiti@2.4.2)
       eslint-plugin-oxlint:
-        specifier: ^0.16.4
-        version: 0.16.4
+        specifier: ^0.16.5
+        version: 0.16.5
       eslint-plugin-perfectionist:
         specifier: ^4.11.0
         version: 4.11.0(eslint@9.24.0(jiti@2.4.2))(typescript@5.8.3)
@@ -97,8 +97,8 @@ importers:
         specifier: ^9.1.7
         version: 9.1.7
       oxlint:
-        specifier: ^0.16.4
-        version: 0.16.4
+        specifier: ^0.16.5
+        version: 0.16.5
       release-it:
         specifier: ^18.1.2
         version: 18.1.2(@types/node@22.14.0)(typescript@5.8.3)
@@ -116,7 +116,7 @@ importers:
         version: 6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass-embedded@1.86.3)
       vite-plugin-vuetify:
         specifier: ^2.1.1
-        version: 2.1.1(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass-embedded@1.86.3))(vue@3.5.13(typescript@5.8.3))(vuetify@3.8.0)
+        version: 2.1.1(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass-embedded@1.86.3))(vue@3.5.13(typescript@5.8.3))(vuetify@3.8.1)
       vitest:
         specifier: ^3.1.1
         version: 3.1.1(@types/node@22.14.0)(happy-dom@17.4.4)(jiti@2.4.2)(sass-embedded@1.86.3)
@@ -634,43 +634,43 @@ packages:
   '@one-ini/wasm@0.1.1':
     resolution: {integrity: sha512-XuySG1E38YScSJoMlqovLru4KTUNSjgVTIjyh7qMX6aNN5HY5Ct5LhRJdxO79JtTzKfzV/bnWpz+zquYrISsvw==}
 
-  '@oxlint/darwin-arm64@0.16.4':
-    resolution: {integrity: sha512-lxwzCWM8zkSsv+JMEAvhHoS5X+5ICq/Vupb4RAalozX2V39Y/JXNol6RBxIGD7EEmitxWBghMIMdmqW9Y0wChA==}
+  '@oxlint/darwin-arm64@0.16.5':
+    resolution: {integrity: sha512-syGjqZ9ES2CZSxL2hJivZNhlaZG/H9EjW1kyup77cSzTqEoaf/wEgiqIEyb1nvkvA2/HexIOkgsL+MsQZ2b04Q==}
     cpu: [arm64]
     os: [darwin]
 
-  '@oxlint/darwin-x64@0.16.4':
-    resolution: {integrity: sha512-wRUxqisY7X1N88xoAFRcR3K7bPw6xqtNhaxVOaRhu5F3NIt85D80WBayoPl7TZKWTACUX55SGvAJBnOYmE7+zg==}
+  '@oxlint/darwin-x64@0.16.5':
+    resolution: {integrity: sha512-JczXMFNRwcKYivi4OGaUKfOeugxMF5yMS4oELbSVeP2FQgEPoH/l1WErb+aYNSRuvr5QZiGZST0lGgWy/RPl7A==}
     cpu: [x64]
     os: [darwin]
 
-  '@oxlint/linux-arm64-gnu@0.16.4':
-    resolution: {integrity: sha512-veM/ve9kqTU7Qei3qjvGzXPZLT8L1vQ2nE8U78DbjrmP9i5MC1QB5ynBB9oQDJ1yce9ExmjTpIor2SF3phfXXQ==}
+  '@oxlint/linux-arm64-gnu@0.16.5':
+    resolution: {integrity: sha512-II1U6+IZeNRZ+BIPlOQ30cwkzBusF9bx4icx8Pxq7jAbtGKNFMEej9+sp4oXv2b8LU5bWVTQEvH/vuIwusMtmw==}
     cpu: [arm64]
     os: [linux]
 
-  '@oxlint/linux-arm64-musl@0.16.4':
-    resolution: {integrity: sha512-QojvKDSA43gbt3pjua+zgX0jfpyWLU6xXEBgA/Ww7HPR7Ec1pbs8lhL1Or7BQl8jywkMdzWiicPtd65+DBw/IQ==}
+  '@oxlint/linux-arm64-musl@0.16.5':
+    resolution: {integrity: sha512-2BVhlqspH6Mtqs2jONV6Eu/z+PaDxqPgcFxKV95RJVPHZv3+H6+rElwbCKx73b5IsHZa0SIj/nG1QKYb+GfKiw==}
     cpu: [arm64]
     os: [linux]
 
-  '@oxlint/linux-x64-gnu@0.16.4':
-    resolution: {integrity: sha512-rVZhsnzQzfhQSEVc+aGoLlWdzhyuXrKxrwv0h1R9rJSB7vzBx2+D2k9LQSW1WkuhUd3Bn4CIDPakT8XUKYxvXQ==}
+  '@oxlint/linux-x64-gnu@0.16.5':
+    resolution: {integrity: sha512-4z8eAvwJq7EYM9jUSjw1eL/RsP6Z6mB9e1leKUBY0B1/nRxivDPMA3ryOdJ6ZKTIxWUkJhMshKDP9qa5V8KoEA==}
     cpu: [x64]
     os: [linux]
 
-  '@oxlint/linux-x64-musl@0.16.4':
-    resolution: {integrity: sha512-ZLc+jh8+HF5ftnvVfWA3jl1/Rq45naakC96MlmRIxHhDNsClo41ssSeANJ15shk1MbCOdEnJh7foHPvU6QmGpQ==}
+  '@oxlint/linux-x64-musl@0.16.5':
+    resolution: {integrity: sha512-dfswyGsukAJ291Z+Yu7HLZV3JT66B31sCOauPZUqI7MKKqZaYH/2gVKAp/kTq0h94ENIME6jkPLNwJkYmNpYnw==}
     cpu: [x64]
     os: [linux]
 
-  '@oxlint/win32-arm64@0.16.4':
-    resolution: {integrity: sha512-/KvI2fLK5V9cPuR7rfomchRJmHBJDH7PFZINNm5o3ivmjstUVsIT2HoArjitwoVdionKKJ0Ac8Vc0xqS/Vvbcg==}
+  '@oxlint/win32-arm64@0.16.5':
+    resolution: {integrity: sha512-YTtBQObOays+OyT31du5WGNhl+I9yWyogTcn9RpKUapoA3XY9q3lS1DNuqTTEOC08+KDDygFGT7fIraMQjehVg==}
     cpu: [arm64]
     os: [win32]
 
-  '@oxlint/win32-x64@0.16.4':
-    resolution: {integrity: sha512-KS2ztiU039dooBi82i24QL6aa/4PROwg9fEcZc4o3N2BueO01a0s4nKlz/AJL+1Twa6LZJgGsQ87EcAzlj3DUA==}
+  '@oxlint/win32-x64@0.16.5':
+    resolution: {integrity: sha512-cHJJRyVA2XlsGjIVKqw2DC5dkzWGOH6gxQwf6StTHn8F4i5P8gksV70VoNW5mwEXefF2USDX7H43YVIDG5E/Yw==}
     cpu: [x64]
     os: [win32]
 
@@ -1465,8 +1465,8 @@ packages:
     engines: {node: '>=6.0'}
     hasBin: true
 
-  eslint-plugin-oxlint@0.16.4:
-    resolution: {integrity: sha512-0H0V+eSW+hIQSoXEtD1PAH0WIBTVPrh4cHsZe9flDH/GxnA4bsfoqTyl3fUBCV3MvLsDJFHguj7F5frkgkme9Q==}
+  eslint-plugin-oxlint@0.16.5:
+    resolution: {integrity: sha512-Hzj4jpPw+eESux/r9bC8qozc4PVh25S2JGLXit1BrlghfAHQJWNU1Yhz56p0Tj4Zd+xLA79NimpwbOmLI2isgg==}
 
   eslint-plugin-perfectionist@4.11.0:
     resolution: {integrity: sha512-5s+ehXydnLPQpLDj5mJ0CnYj2fQe6v6gKA3tS+FZVBLzwMOh8skH+l+1Gni08rG0SdEcNhJyjQp/mEkDYK8czw==}
@@ -2198,8 +2198,8 @@ packages:
     resolution: {integrity: sha512-D2FR03Vir7FIu45XBY20mTb+/ZSWB00sjU9jdQXt83gDrI4Ztz5Fs7/yy74g2N5SVQY4xY1qDr4rNddwYRVX0g==}
     engines: {node: '>=0.10.0'}
 
-  oxlint@0.16.4:
-    resolution: {integrity: sha512-zi/a8i2R3OJcAUx1KHGy4B8UWWCN3YLDYzlYSNX9uknfX0PJSzv632Xrw9V0Ty5Y1biD6ZuLyO+5Yy2yeG2ySA==}
+  oxlint@0.16.5:
+    resolution: {integrity: sha512-z5MX2v4KUqzZQTnRkHHBPE4qEo08f5mJ4dQxi+r5t3xpGspVH/pBzWQ0UUy2xO3JHO8H6wpoeoh8bGs6jEygvQ==}
     engines: {node: '>=8.*'}
     hasBin: true
 
@@ -2988,8 +2988,8 @@ packages:
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
 
-  vue-gtag@3.2.0:
-    resolution: {integrity: sha512-bd3tgSr9DosDXJAeVjqOa6vJfIZiNkWegOfIvsra4ldATHNdf+T9oyXyqXXmX8CERAk9FVqaOVzIKmmv4E2vbA==}
+  vue-gtag@3.3.0:
+    resolution: {integrity: sha512-UabyirzO6TUF6SgStwLOyou1iSSC1ZEIdm+7TODyGZbEtzEGRvSPT5KGWKoCyBrQZqjKI17rZNjsW3v8nExX7g==}
     peerDependencies:
       vue: ^3.5.13
       vue-router: ^4.5.0
@@ -3026,8 +3026,8 @@ packages:
       typescript:
         optional: true
 
-  vuetify@3.8.0:
-    resolution: {integrity: sha512-ROC0Xq2G/25ZyUpQMhaynMyXZBJY1WbOGlqOB810yubp8hfY8RlrOw+mzXJonOq6jylCY32muQ9xiJF1JPTLVA==}
+  vuetify@3.8.1:
+    resolution: {integrity: sha512-3qReKBBWIIdJJmwnFU1blVIKHDtnLfIP7kk0MwUrrfjYkWmsDpsymtDnsukkTCnlJ1WvhLr64eQFosr0RVbj9w==}
     engines: {node: ^12.20 || >=14.13}
     peerDependencies:
       typescript: '>=4.7'
@@ -3655,28 +3655,28 @@ snapshots:
 
   '@one-ini/wasm@0.1.1': {}
 
-  '@oxlint/darwin-arm64@0.16.4':
+  '@oxlint/darwin-arm64@0.16.5':
     optional: true
 
-  '@oxlint/darwin-x64@0.16.4':
+  '@oxlint/darwin-x64@0.16.5':
     optional: true
 
-  '@oxlint/linux-arm64-gnu@0.16.4':
+  '@oxlint/linux-arm64-gnu@0.16.5':
     optional: true
 
-  '@oxlint/linux-arm64-musl@0.16.4':
+  '@oxlint/linux-arm64-musl@0.16.5':
     optional: true
 
-  '@oxlint/linux-x64-gnu@0.16.4':
+  '@oxlint/linux-x64-gnu@0.16.5':
     optional: true
 
-  '@oxlint/linux-x64-musl@0.16.4':
+  '@oxlint/linux-x64-musl@0.16.5':
     optional: true
 
-  '@oxlint/win32-arm64@0.16.4':
+  '@oxlint/win32-arm64@0.16.5':
     optional: true
 
-  '@oxlint/win32-x64@0.16.4':
+  '@oxlint/win32-x64@0.16.5':
     optional: true
 
   '@pkgjs/parseargs@0.11.0':
@@ -4062,11 +4062,11 @@ snapshots:
       typescript: 5.8.3
       vue: 3.5.13(typescript@5.8.3)
 
-  '@vuetify/loader-shared@2.1.0(vue@3.5.13(typescript@5.8.3))(vuetify@3.8.0)':
+  '@vuetify/loader-shared@2.1.0(vue@3.5.13(typescript@5.8.3))(vuetify@3.8.1)':
     dependencies:
       upath: 2.0.1
       vue: 3.5.13(typescript@5.8.3)
-      vuetify: 3.8.0(typescript@5.8.3)(vite-plugin-vuetify@2.1.1)(vue@3.5.13(typescript@5.8.3))
+      vuetify: 3.8.1(typescript@5.8.3)(vite-plugin-vuetify@2.1.1)(vue@3.5.13(typescript@5.8.3))
 
   '@vueuse/shared@10.11.1(vue@3.5.13(typescript@5.8.3))':
     dependencies:
@@ -4506,7 +4506,7 @@ snapshots:
     optionalDependencies:
       source-map: 0.6.1
 
-  eslint-plugin-oxlint@0.16.4:
+  eslint-plugin-oxlint@0.16.5:
     dependencies:
       jsonc-parser: 3.3.1
 
@@ -5243,16 +5243,16 @@ snapshots:
 
   os-tmpdir@1.0.2: {}
 
-  oxlint@0.16.4:
+  oxlint@0.16.5:
     optionalDependencies:
-      '@oxlint/darwin-arm64': 0.16.4
-      '@oxlint/darwin-x64': 0.16.4
-      '@oxlint/linux-arm64-gnu': 0.16.4
-      '@oxlint/linux-arm64-musl': 0.16.4
-      '@oxlint/linux-x64-gnu': 0.16.4
-      '@oxlint/linux-x64-musl': 0.16.4
-      '@oxlint/win32-arm64': 0.16.4
-      '@oxlint/win32-x64': 0.16.4
+      '@oxlint/darwin-arm64': 0.16.5
+      '@oxlint/darwin-x64': 0.16.5
+      '@oxlint/linux-arm64-gnu': 0.16.5
+      '@oxlint/linux-arm64-musl': 0.16.5
+      '@oxlint/linux-x64-gnu': 0.16.5
+      '@oxlint/linux-x64-musl': 0.16.5
+      '@oxlint/win32-arm64': 0.16.5
+      '@oxlint/win32-x64': 0.16.5
 
   p-defer@4.0.1: {}
 
@@ -5942,14 +5942,14 @@ snapshots:
       - tsx
       - yaml
 
-  vite-plugin-vuetify@2.1.1(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass-embedded@1.86.3))(vue@3.5.13(typescript@5.8.3))(vuetify@3.8.0):
+  vite-plugin-vuetify@2.1.1(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass-embedded@1.86.3))(vue@3.5.13(typescript@5.8.3))(vuetify@3.8.1):
     dependencies:
-      '@vuetify/loader-shared': 2.1.0(vue@3.5.13(typescript@5.8.3))(vuetify@3.8.0)
+      '@vuetify/loader-shared': 2.1.0(vue@3.5.13(typescript@5.8.3))(vuetify@3.8.1)
       debug: 4.4.0
       upath: 2.0.1
       vite: 6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass-embedded@1.86.3)
       vue: 3.5.13(typescript@5.8.3)
-      vuetify: 3.8.0(typescript@5.8.3)(vite-plugin-vuetify@2.1.1)(vue@3.5.13(typescript@5.8.3))
+      vuetify: 3.8.1(typescript@5.8.3)(vite-plugin-vuetify@2.1.1)(vue@3.5.13(typescript@5.8.3))
     transitivePeerDependencies:
       - supports-color
 
@@ -6024,7 +6024,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vue-gtag@3.2.0(vue@3.5.13(typescript@5.8.3)):
+  vue-gtag@3.3.0(vue@3.5.13(typescript@5.8.3)):
     dependencies:
       vue: 3.5.13(typescript@5.8.3)
 
@@ -6067,12 +6067,12 @@ snapshots:
     optionalDependencies:
       typescript: 5.8.3
 
-  vuetify@3.8.0(typescript@5.8.3)(vite-plugin-vuetify@2.1.1)(vue@3.5.13(typescript@5.8.3)):
+  vuetify@3.8.1(typescript@5.8.3)(vite-plugin-vuetify@2.1.1)(vue@3.5.13(typescript@5.8.3)):
     dependencies:
       vue: 3.5.13(typescript@5.8.3)
     optionalDependencies:
       typescript: 5.8.3
-      vite-plugin-vuetify: 2.1.1(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass-embedded@1.86.3))(vue@3.5.13(typescript@5.8.3))(vuetify@3.8.0)
+      vite-plugin-vuetify: 2.1.1(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass-embedded@1.86.3))(vue@3.5.13(typescript@5.8.3))(vuetify@3.8.1)
 
   webfontloader@1.6.28: {}
 
