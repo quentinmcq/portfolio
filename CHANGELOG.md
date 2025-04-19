@@ -1,37 +1,10 @@
 # Changelog
 
-## [2.22.0](https://github.com/quentinmcq/portfolio/compare/2.21.0...2.22.0) (2025-04-19)
-
-### 🚀 Enhancements
-
-* remove husky and use simple-git-hooks and lint-staged ([547959b](https://github.com/quentinmcq/portfolio/commit/547959b4a20b3b0157fab87d732e0937e4df7df6))
+## [2.22.1](https://github.com/quentinmcq/portfolio/compare/2.22.0...2.22.1) (2025-04-19)
 
 ### 🩹 Fixes
 
-* run simple hooks command to add hooks in .git folder ([3cd2990](https://github.com/quentinmcq/portfolio/commit/3cd29909e34d879879f3ee4ce2a99116c4ff8719))
-
-### 🏡 Chore
-
-* **deps:** update all non-major dependencies ([#492](https://github.com/quentinmcq/portfolio/issues/492)) ([a6afee7](https://github.com/quentinmcq/portfolio/commit/a6afee7a58ae0202c7186ef8913b40030103af21))
-* **deps:** update all non-major dependencies ([#496](https://github.com/quentinmcq/portfolio/issues/496)) ([1d1647a](https://github.com/quentinmcq/portfolio/commit/1d1647a3c3b0fb63aa94d4276f282d9b52242d5a))
-* **deps:** update all non-major dependencies ([#497](https://github.com/quentinmcq/portfolio/issues/497)) ([36ff4f2](https://github.com/quentinmcq/portfolio/commit/36ff4f2fa1b379d7c59088805be38017cf525d83))
-* **deps:** update all non-major dependencies ([#498](https://github.com/quentinmcq/portfolio/issues/498)) ([a44ae8b](https://github.com/quentinmcq/portfolio/commit/a44ae8b67bf919b075798792e20d0cc8d8d59630))
-* **deps:** update all non-major dependencies ([#499](https://github.com/quentinmcq/portfolio/issues/499)) ([48abc65](https://github.com/quentinmcq/portfolio/commit/48abc6554ee0199fe635b2a2ff3d0b0aaddba520))
-* **deps:** update all non-major dependencies ([#501](https://github.com/quentinmcq/portfolio/issues/501)) ([9c17519](https://github.com/quentinmcq/portfolio/commit/9c17519bd4a4bb88666739a9486c4b56d1e56a24))
-* **deps:** update all non-major dependencies ([#502](https://github.com/quentinmcq/portfolio/issues/502)) ([e3f0222](https://github.com/quentinmcq/portfolio/commit/e3f022297b271fa66100f69bf16406c193f94e5f))
-* **deps:** update all non-major dependencies ([#505](https://github.com/quentinmcq/portfolio/issues/505)) ([8f221b7](https://github.com/quentinmcq/portfolio/commit/8f221b75a31206ad44a7a128c43e41d161336944))
-* **deps:** update all non-major dependencies ([#507](https://github.com/quentinmcq/portfolio/issues/507)) ([399282d](https://github.com/quentinmcq/portfolio/commit/399282d87eb6e45d40ebec3342b2af4f1c0a6510))
-* **deps:** update all non-major dependencies ([#509](https://github.com/quentinmcq/portfolio/issues/509)) ([605ea4c](https://github.com/quentinmcq/portfolio/commit/605ea4c025c050e0690e7ee55004c52ee9c58018))
-* **deps:** update all non-major dependencies to ^9.25.0 ([#511](https://github.com/quentinmcq/portfolio/issues/511)) ([b4b9f9a](https://github.com/quentinmcq/portfolio/commit/b4b9f9a5cc50ed02d18079c38961653f51a1223a))
-* **deps:** update dependency @types/node to ^22.13.17 ([#494](https://github.com/quentinmcq/portfolio/issues/494)) ([dc7f2bb](https://github.com/quentinmcq/portfolio/commit/dc7f2bb63a9c445e6e76912583b102d80c0036a2))
-* **deps:** update dependency @types/node to ^22.14.1 ([#504](https://github.com/quentinmcq/portfolio/issues/504)) ([e0ebae1](https://github.com/quentinmcq/portfolio/commit/e0ebae1e27c7a018b6d5f820c8a5e38389c02bbd))
-* **deps:** update dependency eslint-plugin-perfectionist to ^4.11.0 ([#495](https://github.com/quentinmcq/portfolio/issues/495)) ([3dfacdf](https://github.com/quentinmcq/portfolio/commit/3dfacdfb73feb9dcf01bd5f81763fe42f5ad3d5c))
-* **deps:** update dependency release-it to v19 ([#510](https://github.com/quentinmcq/portfolio/issues/510)) ([f76c26f](https://github.com/quentinmcq/portfolio/commit/f76c26f647236a1f4887c2e7abdb9db605b26772))
-* **deps:** update dependency typescript-eslint to ^8.30.1 ([#506](https://github.com/quentinmcq/portfolio/issues/506)) ([3269095](https://github.com/quentinmcq/portfolio/commit/32690956c41b703d087cc4f95cdf6894e31a316d))
-* **deps:** update dependency vite to ^6.2.6 ([#503](https://github.com/quentinmcq/portfolio/issues/503)) ([7155219](https://github.com/quentinmcq/portfolio/commit/7155219e0b33984a27dd7f00b6fc5f50e7f05c00))
-* **deps:** update dependency vite to ^6.3.1 ([#508](https://github.com/quentinmcq/portfolio/issues/508)) ([9c54f6f](https://github.com/quentinmcq/portfolio/commit/9c54f6fffdc3e8b716bef5c66c2e2a132a602d0c))
-* **deps:** update dependency vue-i18n to ^11.1.3 ([#500](https://github.com/quentinmcq/portfolio/issues/500)) ([972f589](https://github.com/quentinmcq/portfolio/commit/972f589f24472f709fbb1ac51f59bf92b62bcfd4))
-* **deps:** update node.js to ^23.11.0 ([#493](https://github.com/quentinmcq/portfolio/issues/493)) ([1a2f2a5](https://github.com/quentinmcq/portfolio/commit/1a2f2a56b5c8a86a7f07347b7b05f70b040247bc))
+* remove useless ts comment error ([6bae82a](https://github.com/quentinmcq/portfolio/commit/6bae82a01eea4f57e1b70b83a5cadbb40915ca66))
 
 ##
 
@@ -39,10 +12,17 @@ All notable changes to this project will be documented in this file. Dates are d
 
 Generated by [`auto-changelog`](https://github.com/CookPete/auto-changelog).
 
+#### [2.22.1](https://github.com/quentinmcq/portfolio/compare/2.22.0...2.22.1)
+
+- fix: remove useless ts comment error [`6bae82a`](https://github.com/quentinmcq/portfolio/commit/6bae82a01eea4f57e1b70b83a5cadbb40915ca66)
+
 #### [2.22.0](https://github.com/quentinmcq/portfolio/compare/2.21.0...2.22.0)
+
+> 19 April 2025
 
 - fix: run simple hooks command to add hooks in .git folder [`3cd2990`](https://github.com/quentinmcq/portfolio/commit/3cd29909e34d879879f3ee4ce2a99116c4ff8719)
 - feat: remove husky and use simple-git-hooks and lint-staged [`547959b`](https://github.com/quentinmcq/portfolio/commit/547959b4a20b3b0157fab87d732e0937e4df7df6)
+- chore: release v2.22.0 [`ff266af`](https://github.com/quentinmcq/portfolio/commit/ff266af20096e1a72294efa5bbe8bf44cf2efd47)
 
 #### [2.21.0](https://github.com/quentinmcq/portfolio/compare/2.20.5...2.21.0)
 
