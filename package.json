@@ -15,7 +15,8 @@
     "test:unit": "vitest",
     "typecheck": "tsc --noEmit",
     "lint": "oxlint && eslint --fix --cache",
-    "release": "release-it"
+    "release": "release-it",
+    "prepare": "husky"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -48,26 +49,15 @@
     "eslint-plugin-perfectionist": "^4.11.0",
     "eslint-plugin-vue": "^10.0.0",
     "happy-dom": "^17.4.4",
-    "lint-staged": "^15.5.1",
+    "husky": "^9.1.7",
     "oxlint": "^0.16.6",
     "release-it": "^19.0.1",
     "sass-embedded": "^1.86.3",
     "sass-loader": "^16.0.5",
-    "simple-git-hooks": "^2.12.1",
     "typescript-eslint": "^8.30.1",
     "vite": "^6.3.2",
     "vite-plugin-vuetify": "^2.1.1",
     "vitest": "^3.1.1",
     "vue-eslint-parser": "^10.1.3"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "lint-staged",
-    "pre-push": "test:unit"
-  },
-  "lint-staged": {
-    "*": [
-      "lint --max-warnings=0 --no-warn-ignored",
-      "typecheck"
-    ]
   }
 }

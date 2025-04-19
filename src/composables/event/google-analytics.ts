@@ -14,7 +14,6 @@ export function useGoogleAnalyticsEvent({
   value = 0,
 }: UseGoogleAnalyticsEvent): void {
   try {
-    // @ts-expect-error argument of type string is not assignable to parameter of type GtagEventNames
     event(action, {
       category,
       label,
