@@ -36,6 +36,7 @@
               target="_blank"
               @click="sendDialogCardClickAnalyticsEvent(item)"
             >
+              {{ linkImgPath(link.img) }}
               <GenericImage
                 :alt="link.img"
                 :src="linkImgPath(link.img)"
