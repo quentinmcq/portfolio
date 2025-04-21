@@ -25,10 +25,6 @@
           >
             {{ version }}
           </v-chip>
-          <!--          <div-->
-          <!--            class="footer__recaptcha"-->
-          <!--            v-html="$t('footer.recaptcha')"-->
-          <!--          />-->
         </div>
       </v-col>
     </v-footer>

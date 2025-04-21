@@ -45,14 +45,14 @@
 
     <ul class="navbar__link-list">
       <li
-        v-for="(item, index) in menu"
+        v-for="(item, index) in $tm('menu')"
         :key="index"
       >
         <a
           class="navbar__link"
           @click="scrollToSection(item.link)"
         >
-          {{ $t(`menu[${index}].title`) }}
+          {{ item.title }}
         </a>
       </li>
     </ul>
@@ -64,7 +64,6 @@ import TheLocaleSwitcher from '@/components/TheLocaleSwitcher/TheLocaleSwitcher.
 import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics'
 import { useScroll } from '@/composables/event/scroll'
 import { useResponsive } from '@/composables/style/responsive'
-import menu from '@/data/fr/menu'
 import { ref } from 'vue'
 
 const { scrollToTop, visible } = useScroll()

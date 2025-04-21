@@ -16,7 +16,7 @@ export default [
     cover: 'couteau-suisse.webp',
     description:
       'L\'application permet de créer un compte et de sélectionner un type de handicap (daltonisme, malvoyance, etc.). Elle propose également des outils d’assistance, tels qu’un assistant vocal, pour faciliter le quotidien.',
-    link: `${GITHUB_URL}/${GITHUB_USERNAME}/teach-me`,
+    link: `${GITHUB_URL}/${GITHUB_USERNAME}/swiss-knife`,
     subtitle: 'Site pour les étudiants handicapés',
     title: 'Couteau Suisse',
     year: '2020',
@@ -26,7 +26,7 @@ export default [
     cover: 'teachme.webp',
     description:
       'L\'application permet de créer un compte, de modifier ses informations personnelles et de parcourir les cours disponibles sur le site. Un système de rôles gère les niveaux d\'accès, notamment pour les administrateurs et les professeurs.',
-    link: `${GITHUB_URL}/${GITHUB_USERNAME}/swiss-knife`,
+    link: `${GITHUB_URL}/${GITHUB_USERNAME}/teach-me`,
     subtitle: 'Site de cours en ligne',
     title: 'TeachMe',
     year: '2020',

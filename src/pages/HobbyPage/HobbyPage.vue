@@ -20,8 +20,8 @@ import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue'
 import DialogCard from '@/components/DialogCard/DialogCard.vue'
 import SeeMore from '@/components/DialogCard/SeeMore/SeeMore.vue'
 import { useComponentName } from '@/composables/common/component-name'
-import hobbies from '@/data/fr/hobby'
 import { computed, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useDisplay } from 'vuetify'
 
 const componentName = useComponentName()
@@ -30,8 +30,10 @@ const { lgAndUp } = useDisplay()
 const DEFAULT_NUMBER_OF_ITEMS_TO_DISPLAY = lgAndUp.value ? 4 : 2
 const numberOfDisplayedItems = ref(DEFAULT_NUMBER_OF_ITEMS_TO_DISPLAY)
 
-const allItems = computed(() => hobbies.slice(0, numberOfDisplayedItems.value))
-const hasMoreItems = computed(() => numberOfDisplayedItems.value < hobbies.length)
+const { tm } = useI18n()
+const hobbies = computed(() => tm('hobby.list'))
+const allItems = computed(() => hobbies.value.slice(0, numberOfDisplayedItems.value))
+const hasMoreItems = computed(() => numberOfDisplayedItems.value < hobbies.value.length)
 
 function setNumberOfItemsToDisplay(itemsNumber: number): void {
   numberOfDisplayedItems.value += itemsNumber

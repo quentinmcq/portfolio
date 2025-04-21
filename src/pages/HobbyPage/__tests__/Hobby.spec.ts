@@ -3,6 +3,14 @@ import DialogCard from '@/components/DialogCard/DialogCard.vue'
 import SeeMore from '@/components/DialogCard/SeeMore/SeeMore.vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
+import { vi } from 'vitest'
+
+vi.mock('vue-i18n', () => ({
+  useI18n: () => ({
+    t: (key: string) => key,
+    tm: () => ['mock1', 'mock2', 'mock3'],
+  }),
+}))
 
 import HobbyPage from '../HobbyPage.vue'
 describe('Hobby component', () => {

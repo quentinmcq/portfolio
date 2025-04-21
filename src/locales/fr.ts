@@ -1,4 +1,4 @@
-import experience from '@/data/fr/experience'
+import experience from '@/data/fr/experience.ts'
 import hobby from '@/data/fr/hobby'
 import menu from '@/data/fr/menu'
 import project from '@/data/fr/project'
@@ -23,8 +23,7 @@ export default {
     'mail-address': 'Adresse mail',
     'main-title': 'Contact',
     'message': 'Message',
-    'min-message-length':
-      'Le message doit comporter {minLength} caractères minimum',
+    'min-message-length': 'Le message doit comporter {minLength} caractères minimum',
     'name': 'Nom',
     'phone-number': 'Numéro de téléphone',
     'required-field': 'Ce champ est requis',
@@ -33,14 +32,13 @@ export default {
   },
 
   experience: {
+    'list': experience,
     'main-title': 'Parcours professionnel',
-    ...experience,
   },
 
   footer: {
     copyright: '© Copyright - {currentYear}',
     credit: 'Made with ❤️ in France',
-    // recaptcha: 'This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.',
     tools: 'using Vue, Vuetify and TypeScript.',
   },
 
@@ -50,8 +48,8 @@ export default {
   },
 
   hobby: {
+    'list': hobby,
     'main-title': 'Loisirs',
-    ...hobby,
   },
 
   languages: {
@@ -65,21 +63,19 @@ export default {
   presentation: {
     'main-title': 'Présentation',
     'part-1': 'Salut, moi c\'est {name}, j\'ai {age} ans.',
-    'part-2':
-      'Je suis développeur web et je travaille au quotidien avec {symfony} et {vuejs}.',
-    'part-3':
-      'Passionné par le web depuis plusieurs années, j\'adore découvrir de nouvelles technos et partager ce que j\'apprends 🚀',
+    'part-2': 'Je suis développeur web et je travaille au quotidien avec {symfony} et {vuejs}.',
+    'part-3': 'Passionné par le web depuis plusieurs années, j\'adore découvrir de nouvelles technos et partager ce que j\'apprends 🚀',
   },
 
   project: {
     'find-out-more': 'En savoir plus',
+    'list': project,
     'main-title': 'Projets',
     'private-project': 'Projet privé',
-    ...project,
   },
 
   skill: {
+    'list': skill,
     'main-title': 'Compétences',
-    ...skill,
   },
 }

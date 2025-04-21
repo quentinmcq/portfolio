@@ -6,7 +6,6 @@
     <template #opposite>
       <span class="timeline-item__year">{{ item.year }}</span>
     </template>
-
     <v-card
       class="timeline-item__card"
       color="#f4f4f4"
@@ -29,25 +28,32 @@
       </div>
 
       <v-card-title class="timeline-item__title">
-        {{ $t(`${prefix}.title`) }}
+        {{ item.title }}
       </v-card-title>
 
       <v-card-subtitle
         class="timeline-item__year"
         v-if="smAndDown"
       >
-        {{ $t(`${prefix}.year`) }}
+        {{ item.year }}
       </v-card-subtitle>
 
       <v-card-subtitle class="timeline-item__location">
-        {{ $t(`${prefix}.location`) }}
+        {{ item.location }}
       </v-card-subtitle>
 
       <v-card-subtitle
         class="timeline-item__description"
         v-if="smAndUp"
       >
-        <div v-html="$t(`${prefix}.description`)" />
+        <ul>
+          <li
+            v-for="(task, key) in item.tasks"
+            :key
+          >
+            {{ task }}
+          </li>
+        </ul>
       </v-card-subtitle>
     </v-card>
   </v-timeline-item>
@@ -58,11 +64,9 @@ import type { Experience } from '@/types/Experience'
 
 import GenericImage from '@/components/GenericImage/GenericImage.vue'
 import { useImagePath } from '@/composables/common/image-path'
-import { usePrefixTranslation } from '@/composables/common/prefix-translation'
 import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics'
 import { useAnimation } from '@/composables/style/animation'
 import { useResponsive } from '@/composables/style/responsive'
-import { toRef } from 'vue'
 import { useDisplay } from 'vuetify'
 
 const { componentName, index, item } = defineProps<{
@@ -73,7 +77,6 @@ const { componentName, index, item } = defineProps<{
 
 const { timelineSize } = useResponsive()
 const { smAndDown, smAndUp } = useDisplay()
-const prefix = usePrefixTranslation(toRef(() => componentName), toRef(() => index))
 
 const { path } = useImagePath({
   directory: componentName,

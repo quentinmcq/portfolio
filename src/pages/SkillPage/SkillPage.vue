@@ -14,7 +14,7 @@
         class="skill-page__grid"
       >
         <SkillPageItem
-          v-for="(skill, index) in skills"
+          v-for="(skill, index) in $tm('skill.list')"
           :key="index"
           :index
           :skill
@@ -28,7 +28,6 @@
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue'
 import { useComponentName } from '@/composables/common/component-name'
 import { useResponsive } from '@/composables/style/responsive'
-import skills from '@/data/fr/skill'
 
 import SkillPageItem from './SkillPageItem/SkillPageItem.vue'
 

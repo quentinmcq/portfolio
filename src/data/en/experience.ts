@@ -1,20 +1,39 @@
 export default [
   {
-    description:
-      '<ul><li>Development of new projects</li><li>Maintenance/redesign of internal tools</li><li>Participation in agile rituals</li><li>Participation in the information system strategy </li></ul>',
+    cover: 'motoblouz_cdi.webp',
+    link: 'https://www.motoblouz.com/',
     location: 'Motoblouz, Carvin',
+    tasks: [
+      'Development of new projects',
+      'Maintenance/redesign of internal tools',
+      'Participation in agile rituals',
+      'Participation in the information system strategy',
+    ],
     title: 'Sandwich course IT department',
+    year: '2023',
   },
   {
-    description:
-      '<ul><li>Involvement in impactful projects</li><li>Participation in team sprints</li><li>Contribution to corporate life </li></ul>',
+    cover: 'motoblouz_alternance.webp',
+    link: 'https://www.motoblouz.com/',
     location: 'Motoblouz, Carvin',
+    tasks: [
+      'Involvement in impactful projects',
+      'Participation in team sprints',
+      'Contribution to corporate life',
+    ],
     title: 'Sandwich course IT department',
+    year: '2021 - 2023',
   },
   {
-    description:
-      '<ul><li>Redesign of an unpaid debt monitoring tool</li><li>Additional functionalities</li><li>Regular feedback with the business department</li></ul>',
+    cover: 'motoblouz_stage.webp',
+    link: 'https://www.motoblouz.com/',
     location: 'Motoblouz, Carvin',
+    tasks: [
+      'Redesign of an unpaid debt monitoring tool',
+      'Additional functionalities',
+      'Regular feedback with the business department',
+    ],
     title: 'Internship IT department',
+    year: '2021',
   },
 ]

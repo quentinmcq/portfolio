@@ -12,7 +12,6 @@ export default [
       { img: 'css_tricks.webp', url: 'https://css-tricks.com/' },
     ],
     title: 'Veille technologique',
-
   },
   {
     button: 'Ma collection',

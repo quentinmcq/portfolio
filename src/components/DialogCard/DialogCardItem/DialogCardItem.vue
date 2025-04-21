@@ -20,7 +20,7 @@
           />
 
           <v-card-title class="dialog-card-item__card__title pt-3">
-            {{ $t(`${prefix}.title`) }}
+            {{ item.title }}
             <span v-if="item.year">({{ item.year }})</span>
           </v-card-title>
 
@@ -28,7 +28,7 @@
             v-if="item.subtitle"
             class="dialog-card-item__card__subtitle"
           >
-            {{ $t(`${prefix}.subtitle`) }}
+            {{ item.subtitle }}
           </v-card-text>
         </div>
       </v-card>
@@ -54,7 +54,7 @@
           </div>
 
           <v-card-text>
-            {{ $t(`${prefix}.description`) }}
+            {{ item.description }}
 
             <!-- Overloads the component with additional custom content (chips, logos, ...) -->
             <slot name="chipsAndLinks" />
@@ -94,11 +94,10 @@ import type { Project } from '@/types/Project'
 
 import GenericImage from '@/components/GenericImage/GenericImage.vue'
 import { useImagePath } from '@/composables/common/image-path'
-import { usePrefixTranslation } from '@/composables/common/prefix-translation'
 import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics'
 import { useAnimation } from '@/composables/style/animation'
 import { useResponsive } from '@/composables/style/responsive'
-import { computed, ref, toRef } from 'vue'
+import { computed, ref } from 'vue'
 
 const { componentName, customButtonText = false, index, item, transition = 'dialog-bottom-transition' } = defineProps<{
   componentName: string
@@ -110,11 +109,10 @@ const { componentName, customButtonText = false, index, item, transition = 'dial
 
 const dialog = ref(false)
 
-const prefix = usePrefixTranslation(toRef(() => componentName), toRef(() => index))
 const { buttonSize } = useResponsive()
 
 const buttonText = computed(() =>
-  customButtonText ? `${prefix}.button` : `${componentName}.find-out-more`,
+  customButtonText ? item.button : 'project.find-out-more',
 )
 
 const { path } = useImagePath({
@@ -124,7 +122,7 @@ const { path } = useImagePath({
 
 const { animation } = useAnimation({
   componentType: 'dialog',
-  index: index,
+  index,
 })
 
 function sendFindOutMoreButtonClickAnalyticsEvent(): void {

@@ -14,15 +14,12 @@ export function useAnimation({ componentType = 'timeline', index = 0 }: UseAnima
   const { smAndDown } = useDisplay()
 
   const animation = computed(() => {
-    if (smAndDown.value) {
-      return 'zoom-in'
-    }
+    if (smAndDown.value) return 'zoom-in'
 
-    if (componentType === 'timeline') {
-      return index % 2 ? 'fade-right' : 'fade-left'
-    }
+    const left = componentType === 'timeline' ? 'fade-left' : 'fade-right'
+    const right = componentType === 'timeline' ? 'fade-right' : 'fade-left'
 
-    return index % 2 ? 'fade-left' : 'fade-right'
+    return index % 2 ? left : right
   })
 
   return { animation }

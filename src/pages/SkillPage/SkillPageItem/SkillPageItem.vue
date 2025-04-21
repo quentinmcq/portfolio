@@ -4,7 +4,7 @@
       class="skill-page-item__title"
       data-aos="zoom-in"
     >
-      {{ $t(`skill[${index}].label`) }}
+      {{ skill.label }}
     </h3>
 
     <SkillChip

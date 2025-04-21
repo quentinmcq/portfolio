@@ -7,7 +7,7 @@
     line-color="white"
   >
     <TimelineRoadItem
-      v-for="(item, index) in items"
+      v-for="(item, index) in $tm('experience.list')"
       :key="index"
       :index
       :item

@@ -33,14 +33,13 @@ export default {
   },
 
   experience: {
+    'list': experience,
     'main-title': 'Professional background',
-    ...experience,
   },
 
   footer: {
     copyright: '© Copyright - {currentYear}',
     credit: 'Made with ❤️ in France',
-    // recaptcha: 'This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.',
     tools: 'using Vue, Vuetify and TypeScript.',
   },
 
@@ -50,8 +49,8 @@ export default {
   },
 
   hobby: {
+    'list': hobby,
     'main-title': 'Hobbies',
-    ...hobby,
   },
 
   languages: {
@@ -73,13 +72,13 @@ export default {
 
   project: {
     'find-out-more': 'Find out more',
+    'list': project,
     'main-title': 'Projects',
     'private-project': 'Private project',
-    ...project,
   },
 
   skill: {
+    'list': skill,
     'main-title': 'Skills',
-    ...skill,
   },
 }

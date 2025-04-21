@@ -1,8 +1,8 @@
 export interface Experience {
   cover: string
-  description: string
   link: string
   location: string
+  tasks: string[]
   title: string
   year: string
 }
