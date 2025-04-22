@@ -80,7 +80,7 @@
 
           <slot
             name="imageGallery"
-            v-if="item.images"
+            v-if="item.hasImages"
           />
         </v-card>
       </v-dialog>

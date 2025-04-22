@@ -20,7 +20,7 @@
               :key="image"
               class="image-animation image-gallery__rounded"
               @click="openImage(year, image)"
-              :src="linkImgPath(year, image)"
+              :src="image"
               :alt="image"
               :width="dimensionGalleryImage"
               :height="dimensionGalleryImage"
@@ -54,12 +54,12 @@ import type { Image } from '@/types/Image'
 
 import GenericImage from '@/components/GenericImage/GenericImage.vue'
 import { useImagePath } from '@/composables/common/image-path'
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { filename } from 'pathe/utils'
+import { computed, onBeforeUnmount, onMounted, reactive, ref } from 'vue'
 import { useDisplay } from 'vuetify'
 
-const { componentName, images, type } = defineProps<{
+const { componentName, type } = defineProps<{
   componentName: string
-  images: Image
   type: string
 }>()
 
@@ -70,6 +70,29 @@ const { xs } = useDisplay()
 
 const dimensionOpenImageWidth = ref(0)
 const dimensionOpenImageHeight = ref(0)
+const glob = ref('')
+
+switch (type) {
+  case 'climbing':
+    glob.value = import.meta.glob('@/assets/img/hobby/climbing/*/*.webp', { eager: true })
+    break
+  case 'manga':
+    glob.value = import.meta.glob('@/assets/img/hobby/manga/*/*.webp', { eager: true })
+    break
+  default: glob.value = ''
+}
+
+const images = computed(() => {
+  const result = {}
+
+  Object.entries(glob.value).forEach(([path, mod]) => {
+    const year = path.split('/').at(-2)
+
+    result[year] ||= []
+    result[year].push(mod.default)
+  })
+  return result
+})
 
 onMounted(() => {
   calculateMaxDimensionOpenImage()
@@ -81,7 +104,7 @@ onBeforeUnmount(() => {
 })
 
 const dimensionGalleryImage = computed(() => (xs.value ? 110 : 160))
-const reversedYears = computed(() => Object.keys(images).reverse())
+const reversedYears = computed(() => Object.keys(images.value).sort().reverse())
 
 function calculateMaxDimensionOpenImage(): void {
   const maxSizeRatio = 0.9
