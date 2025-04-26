@@ -31,7 +31,6 @@
             v-for="(link, colIndex) in item.links"
             :key="colIndex"
           >
-            {{ linkImgPath(link.img) }}
             <a
               :href="link.url"
               target="_blank"
