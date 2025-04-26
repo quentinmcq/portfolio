@@ -4,7 +4,7 @@
       v-for="(item, index) in items"
       :key="index"
       :component-name
-      :custom-button-text
+      :custom-button-text="customButtonText"
       :index
       :item
       :transition
@@ -31,6 +31,7 @@
             v-for="(link, colIndex) in item.links"
             :key="colIndex"
           >
+            {{ linkImgPath(link.img) }}
             <a
               :href="link.url"
               target="_blank"
@@ -50,8 +51,6 @@
       <template #imageGallery>
         <v-card-text>
           <ImageGallery
-            :component-name
-            :images="item.images"
             :type="item.type"
           />
         </v-card-text>

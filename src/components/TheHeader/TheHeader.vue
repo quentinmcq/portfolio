@@ -28,10 +28,7 @@
 import VueWriter from '@/components/VueWriter/VueWriter.vue'
 import { useImagePath } from '@/composables/common/image-path'
 
-const { path } = useImagePath({
-  directory: '',
-  image: 'header.webp',
-})
+const { path } = useImagePath({ image: 'header.webp' })
 </script>
 
 <style lang="scss" src="./the-header.scss" scoped />

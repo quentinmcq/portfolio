@@ -1,7 +1,6 @@
 <template>
   <v-img
     :src
-    :lazy-src
     :cover
     :width
     :height
@@ -23,11 +22,10 @@
 </template>
 
 <script setup lang="ts">
-const { cover = false, height = undefined, lazySrc = undefined, src, width = undefined } = defineProps<{
+const { cover = false, height = undefined, src, width = undefined } = defineProps<{
   alt: string
   cover?: boolean
   height?: number | string
-  lazySrc?: string
   src: string
   width?: number | string
 }>()

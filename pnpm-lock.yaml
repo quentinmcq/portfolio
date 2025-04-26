@@ -23,6 +23,9 @@ importers:
       globals:
         specifier: ^16.0.0
         version: 16.0.0
+      pathe:
+        specifier: ^2.0.3
+        version: 2.0.3
       roboto-fontface:
         specifier: ^0.10.0
         version: 0.10.0
