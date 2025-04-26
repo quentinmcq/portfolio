@@ -4,7 +4,7 @@
       v-for="(item, index) in items"
       :key="index"
       :component-name
-      :custom-button-text
+      :custom-button-text="customButtonText"
       :index
       :item
       :transition
@@ -51,7 +51,6 @@
       <template #imageGallery>
         <v-card-text>
           <ImageGallery
-            :component-name
             :type="item.type"
           />
         </v-card-text>

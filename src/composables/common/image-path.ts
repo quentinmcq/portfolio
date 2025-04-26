@@ -5,13 +5,14 @@ interface UseImagePath {
 }
 
 interface UseImagePathParameters {
-  directory: string
+  directory?: string
   image: string
 }
 
-export function useImagePath({ directory, image }: UseImagePathParameters): UseImagePath {
+export function useImagePath({ directory = '', image }: UseImagePathParameters): UseImagePath {
   const path = computed(() => {
-    const location = `@/assets/img/${directory}/${image}`
+    const location = `/src/assets/img/${directory}/${image}`
+
     return new URL(location, import.meta.url).href
   })
 

@@ -19,7 +19,7 @@
             <GenericImage
               :key="image"
               class="image-animation image-gallery__rounded"
-              @click="openImage(year, image)"
+              @click="openImage(image)"
               :src="image"
               :alt="image"
               :width="dimensionGalleryImage"
@@ -40,7 +40,7 @@
     >
       <GenericImage
         @click="dialog = false"
-        :src="linkImgPath(clickedYear, clickedImagePath)"
+        :src="clickedImagePath"
         :alt="clickedImagePath"
         :width="dimensionOpenImageWidth"
         :height="dimensionOpenImageHeight"
@@ -50,22 +50,14 @@
 </template>
 
 <script setup lang="ts">
-import type { Image } from '@/types/Image'
-
 import GenericImage from '@/components/GenericImage/GenericImage.vue'
-import { useImagePath } from '@/composables/common/image-path'
-import { filename } from 'pathe/utils'
-import { computed, onBeforeUnmount, onMounted, reactive, ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useDisplay } from 'vuetify'
 
-const { componentName, type } = defineProps<{
-  componentName: string
-  type: string
-}>()
+const { type } = defineProps<{ type: string }>()
 
 const dialog = ref(false)
 const clickedImagePath = ref('')
-const clickedYear = ref('')
 const { xs } = useDisplay()
 
 const dimensionOpenImageWidth = ref(0)
@@ -83,14 +75,15 @@ switch (type) {
 }
 
 const images = computed(() => {
-  const result = {}
+  const result: Record<string, string[]> = {}
 
-  Object.entries(glob.value).forEach(([path, mod]) => {
-    const year = path.split('/').at(-2)
+  Object.entries(glob.value).forEach(([path]) => {
+    const year: string = path.split('/').at(-2) ?? ''
 
     result[year] ||= []
-    result[year].push(mod.default)
+    result[year].push(path)
   })
+
   return result
 })
 
@@ -107,38 +100,17 @@ const dimensionGalleryImage = computed(() => (xs.value ? 110 : 160))
 const reversedYears = computed(() => Object.keys(images.value).sort().reverse())
 
 function calculateMaxDimensionOpenImage(): void {
-  const maxSizeRatio = 0.9
-  const { innerHeight: screenHeight, innerWidth: screenWidth } = window
-  const isScreenNarrow = screenWidth < screenHeight
-  const maxDimension = Math.min(screenWidth, screenHeight)
-  const maxImageDimension = maxDimension * maxSizeRatio
-  const imageRatio = screenWidth / screenHeight
+  const { innerHeight, innerWidth } = window
+  const isScreenNarrow = innerWidth < innerHeight
+  const maxImageDimension = Math.min(innerWidth, innerHeight) * 0.9
+  const imageRatio = innerWidth / innerHeight
 
-  const maxWidth = isScreenNarrow
-    ? maxImageDimension
-    : maxImageDimension * imageRatio
-
-  const maxHeight = isScreenNarrow
-    ? maxImageDimension / imageRatio
-    : maxImageDimension
-
-  dimensionOpenImageWidth.value = Math.floor(maxWidth)
-  dimensionOpenImageHeight.value = Math.floor(maxHeight)
+  dimensionOpenImageWidth.value = Math.floor(isScreenNarrow ? maxImageDimension : maxImageDimension * imageRatio)
+  dimensionOpenImageHeight.value = Math.floor(isScreenNarrow ? maxImageDimension / imageRatio : maxImageDimension)
 }
 
-function linkImgPath(year: string, image: string): string {
-  const { path } = useImagePath({
-    directory: componentName,
-    image: `${type}/${year}/${image}`,
-  })
-
-  return path.value
-}
-
-function openImage(year: string, path: string): void {
+function openImage(path: string): void {
   clickedImagePath.value = path
-  clickedYear.value = year
-
   dialog.value = true
 }
 </script>
