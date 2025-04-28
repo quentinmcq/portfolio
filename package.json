@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "packageManager": "pnpm@10.9.0",
+  "packageManager": "pnpm@10.10.0",
   "engines": {
     "node": "^23.11.0"
   },
@@ -41,17 +41,17 @@
     "@release-it/conventional-changelog": "^10.0.1",
     "@stylistic/eslint-plugin": "^4.2.0",
     "@types/aos": "^3.0.7",
-    "@types/node": "^22.15.2",
+    "@types/node": "^22.15.3",
     "@vitejs/plugin-vue": "^5.2.3",
     "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.7.0",
     "eslint": "^9.25.1",
-    "eslint-plugin-oxlint": "^0.16.7",
+    "eslint-plugin-oxlint": "^0.16.8",
     "eslint-plugin-perfectionist": "^4.12.3",
     "eslint-plugin-vue": "^10.0.0",
     "happy-dom": "^17.4.4",
     "husky": "^9.1.7",
-    "oxlint": "^0.16.7",
+    "oxlint": "^0.16.8",
     "release-it": "^19.0.1",
     "sass-embedded": "^1.87.0",
     "sass-loader": "^16.0.5",
