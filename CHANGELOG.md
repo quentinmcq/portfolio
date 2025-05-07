@@ -1,21 +1,27 @@
 # Changelog
 
-## [2.23.3](https://github.com/quentinmcq/portfolio/compare/2.23.2...2.23.3) (2025-04-26)
+## [2.24.0](https://github.com/quentinmcq/portfolio/compare/2.23.3...2.24.0) (2025-05-07)
 
-### 🩹 Fixes
+### 🚀 Enhancements
 
-* remove log ([ed8ca45](https://github.com/quentinmcq/portfolio/commit/ed8ca45dc419c42c511871ae9d844331c437fc54))
-* tests --no-verify ([fdf3a72](https://github.com/quentinmcq/portfolio/commit/fdf3a725b016233e4f87ba5a0bf9f67970737262))
+* upgrade to node 24 ([49e1a0a](https://github.com/quentinmcq/portfolio/commit/49e1a0afda0274c988cbadadc3738ecf05d7ea5b))
 
 ### 🏡 Chore
 
-* **deps:** update all non-major dependencies ([#513](https://github.com/quentinmcq/portfolio/issues/513)) ([9d7d692](https://github.com/quentinmcq/portfolio/commit/9d7d69243439d171936a5d887d7ba852bad2643e))
-* **deps:** update all non-major dependencies ([#514](https://github.com/quentinmcq/portfolio/issues/514)) ([8cb7285](https://github.com/quentinmcq/portfolio/commit/8cb72852d62671a5c84f2c6cbd4a672ba529649a))
-* **deps:** update all non-major dependencies ([#517](https://github.com/quentinmcq/portfolio/issues/517)) ([26151bd](https://github.com/quentinmcq/portfolio/commit/26151bd2db8078b9335dc7e4553ac5b32e212c0b))
-* **deps:** update dependency @types/node to ^22.15.1 ([#518](https://github.com/quentinmcq/portfolio/issues/518)) ([73e98fe](https://github.com/quentinmcq/portfolio/commit/73e98fe50ebf848be98b2e0ec2ec6455056558f8))
-* **deps:** update dependency @types/node to ^22.15.2 ([#519](https://github.com/quentinmcq/portfolio/issues/519)) ([f908e72](https://github.com/quentinmcq/portfolio/commit/f908e720e3c437734193481747c31d7c4f9e2eb2))
-* **deps:** update dependency eslint-plugin-perfectionist to ^4.12.2 ([#515](https://github.com/quentinmcq/portfolio/issues/515)) ([686d8bf](https://github.com/quentinmcq/portfolio/commit/686d8bf326b08192cf0b6f628c54089c65f9e861))
-* **deps:** update dependency vite to ^6.3.3 ([#516](https://github.com/quentinmcq/portfolio/issues/516)) ([78ac3de](https://github.com/quentinmcq/portfolio/commit/78ac3de220532da1f3d35918c910bfa1b92b9d96))
+* **deps:** update all non-major dependencies ([#521](https://github.com/quentinmcq/portfolio/issues/521)) ([bd361f9](https://github.com/quentinmcq/portfolio/commit/bd361f94b0087ba0763a1f94568e330f931f7736))
+* **deps:** update all non-major dependencies ([#522](https://github.com/quentinmcq/portfolio/issues/522)) ([586ea1f](https://github.com/quentinmcq/portfolio/commit/586ea1ff1eb8d95f73780fb48b9b5af7b8dc91d2))
+* **deps:** update all non-major dependencies ([#523](https://github.com/quentinmcq/portfolio/issues/523)) ([2750e4b](https://github.com/quentinmcq/portfolio/commit/2750e4b854a50aa95b0575b8f102d63ad7128df4))
+* **deps:** update all non-major dependencies ([#527](https://github.com/quentinmcq/portfolio/issues/527)) ([a5a167b](https://github.com/quentinmcq/portfolio/commit/a5a167b763dff01917be28bfd78a95af6397fc84))
+* **deps:** update all non-major dependencies ([#529](https://github.com/quentinmcq/portfolio/issues/529)) ([04f78d3](https://github.com/quentinmcq/portfolio/commit/04f78d34aedd302ecca70f88935331e1e97560e8))
+* **deps:** update all non-major dependencies ([#530](https://github.com/quentinmcq/portfolio/issues/530)) ([69227a5](https://github.com/quentinmcq/portfolio/commit/69227a5ae210701dba10de9840e0ad6d1cf1ea32))
+* **deps:** update all non-major dependencies to ^9.26.0 ([#525](https://github.com/quentinmcq/portfolio/issues/525)) ([ed63a63](https://github.com/quentinmcq/portfolio/commit/ed63a63a87fb8b6179f12319afc044908845e1fd))
+* **deps:** update dependency @iconify/vue to v5 ([#524](https://github.com/quentinmcq/portfolio/issues/524)) ([a1db7d2](https://github.com/quentinmcq/portfolio/commit/a1db7d25c591ec757bcf0873d5bd41ccbda3ce7f))
+* **deps:** update dependency @types/node to ^22.15.14 ([#531](https://github.com/quentinmcq/portfolio/issues/531)) ([7bf5621](https://github.com/quentinmcq/portfolio/commit/7bf56214a8ccee2e8b80a863e9253bba1e62ef08))
+* **deps:** update dependency globals to ^16.1.0 ([#532](https://github.com/quentinmcq/portfolio/issues/532)) ([0cb28ee](https://github.com/quentinmcq/portfolio/commit/0cb28eec04cc72808c8a9a3eddf0c38652875a02))
+* **deps:** update dependency oxlint to ^0.16.9 ([#526](https://github.com/quentinmcq/portfolio/issues/526)) ([05aa707](https://github.com/quentinmcq/portfolio/commit/05aa70779e19c323821aee67c0e982b2dd027847))
+* **deps:** update dependency vue-gtag to ^3.4.0 ([#520](https://github.com/quentinmcq/portfolio/issues/520)) ([a047a79](https://github.com/quentinmcq/portfolio/commit/a047a79f5323373668978768a0ec9726e38c322e))
+* **deps:** update dependency vue-gtag to ^3.5.0 ([#528](https://github.com/quentinmcq/portfolio/issues/528)) ([772d83e](https://github.com/quentinmcq/portfolio/commit/772d83ee613c8348350efa603eebd8a92130d689))
+* **deps:** update dependency vuetify to ^3.8.4 ([#533](https://github.com/quentinmcq/portfolio/issues/533)) ([f8851b8](https://github.com/quentinmcq/portfolio/commit/f8851b8b55996131d32235c6038923eaaa88d6a4))
 
 ##
 
@@ -23,11 +29,17 @@ All notable changes to this project will be documented in this file. Dates are d
 
 Generated by [`auto-changelog`](https://github.com/CookPete/auto-changelog).
 
+#### [2.24.0](https://github.com/quentinmcq/portfolio/compare/2.23.3...2.24.0)
+
+- feat: upgrade to node 24 [`49e1a0a`](https://github.com/quentinmcq/portfolio/commit/49e1a0afda0274c988cbadadc3738ecf05d7ea5b)
+
 #### [2.23.3](https://github.com/quentinmcq/portfolio/compare/2.23.2...2.23.3)
+
+> 26 April 2025
 
 - fix: tests --no-verify [`fdf3a72`](https://github.com/quentinmcq/portfolio/commit/fdf3a725b016233e4f87ba5a0bf9f67970737262)
 - Draft: glob import [`e703dca`](https://github.com/quentinmcq/portfolio/commit/e703dca0b09d984f69e3210a98cf650c09a9c4a1)
-- fix: remove log [`ed8ca45`](https://github.com/quentinmcq/portfolio/commit/ed8ca45dc419c42c511871ae9d844331c437fc54)
+- chore: release v2.23.3 [`c6f02fc`](https://github.com/quentinmcq/portfolio/commit/c6f02fc887a40905ff94d8f7903ffbb53d626c71)
 
 #### [2.23.2](https://github.com/quentinmcq/portfolio/compare/2.23.1...2.23.2)
 
