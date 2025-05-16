@@ -1,27 +1,26 @@
 # Changelog
 
-## [2.24.0](https://github.com/quentinmcq/portfolio/compare/2.23.3...2.24.0) (2025-05-07)
+## [2.24.1](https://github.com/quentinmcq/portfolio/compare/2.24.0...2.24.1) (2025-05-16)
 
-### 🚀 Enhancements
+### 🩹 Fixes
 
-* upgrade to node 24 ([49e1a0a](https://github.com/quentinmcq/portfolio/commit/49e1a0afda0274c988cbadadc3738ecf05d7ea5b))
+* regression on img displaying ([3126228](https://github.com/quentinmcq/portfolio/commit/3126228d4429d7644f9f93f84a842a9884db2c3c))
 
 ### 🏡 Chore
 
-* **deps:** update all non-major dependencies ([#521](https://github.com/quentinmcq/portfolio/issues/521)) ([bd361f9](https://github.com/quentinmcq/portfolio/commit/bd361f94b0087ba0763a1f94568e330f931f7736))
-* **deps:** update all non-major dependencies ([#522](https://github.com/quentinmcq/portfolio/issues/522)) ([586ea1f](https://github.com/quentinmcq/portfolio/commit/586ea1ff1eb8d95f73780fb48b9b5af7b8dc91d2))
-* **deps:** update all non-major dependencies ([#523](https://github.com/quentinmcq/portfolio/issues/523)) ([2750e4b](https://github.com/quentinmcq/portfolio/commit/2750e4b854a50aa95b0575b8f102d63ad7128df4))
-* **deps:** update all non-major dependencies ([#527](https://github.com/quentinmcq/portfolio/issues/527)) ([a5a167b](https://github.com/quentinmcq/portfolio/commit/a5a167b763dff01917be28bfd78a95af6397fc84))
-* **deps:** update all non-major dependencies ([#529](https://github.com/quentinmcq/portfolio/issues/529)) ([04f78d3](https://github.com/quentinmcq/portfolio/commit/04f78d34aedd302ecca70f88935331e1e97560e8))
-* **deps:** update all non-major dependencies ([#530](https://github.com/quentinmcq/portfolio/issues/530)) ([69227a5](https://github.com/quentinmcq/portfolio/commit/69227a5ae210701dba10de9840e0ad6d1cf1ea32))
-* **deps:** update all non-major dependencies to ^9.26.0 ([#525](https://github.com/quentinmcq/portfolio/issues/525)) ([ed63a63](https://github.com/quentinmcq/portfolio/commit/ed63a63a87fb8b6179f12319afc044908845e1fd))
-* **deps:** update dependency @iconify/vue to v5 ([#524](https://github.com/quentinmcq/portfolio/issues/524)) ([a1db7d2](https://github.com/quentinmcq/portfolio/commit/a1db7d25c591ec757bcf0873d5bd41ccbda3ce7f))
-* **deps:** update dependency @types/node to ^22.15.14 ([#531](https://github.com/quentinmcq/portfolio/issues/531)) ([7bf5621](https://github.com/quentinmcq/portfolio/commit/7bf56214a8ccee2e8b80a863e9253bba1e62ef08))
-* **deps:** update dependency globals to ^16.1.0 ([#532](https://github.com/quentinmcq/portfolio/issues/532)) ([0cb28ee](https://github.com/quentinmcq/portfolio/commit/0cb28eec04cc72808c8a9a3eddf0c38652875a02))
-* **deps:** update dependency oxlint to ^0.16.9 ([#526](https://github.com/quentinmcq/portfolio/issues/526)) ([05aa707](https://github.com/quentinmcq/portfolio/commit/05aa70779e19c323821aee67c0e982b2dd027847))
-* **deps:** update dependency vue-gtag to ^3.4.0 ([#520](https://github.com/quentinmcq/portfolio/issues/520)) ([a047a79](https://github.com/quentinmcq/portfolio/commit/a047a79f5323373668978768a0ec9726e38c322e))
-* **deps:** update dependency vue-gtag to ^3.5.0 ([#528](https://github.com/quentinmcq/portfolio/issues/528)) ([772d83e](https://github.com/quentinmcq/portfolio/commit/772d83ee613c8348350efa603eebd8a92130d689))
-* **deps:** update dependency vuetify to ^3.8.4 ([#533](https://github.com/quentinmcq/portfolio/issues/533)) ([f8851b8](https://github.com/quentinmcq/portfolio/commit/f8851b8b55996131d32235c6038923eaaa88d6a4))
+* **deps:** update all non-major dependencies ([#538](https://github.com/quentinmcq/portfolio/issues/538)) ([30759f5](https://github.com/quentinmcq/portfolio/commit/30759f55d3b2fc83c823611c98f8c1f8d0be6416))
+* **deps:** update all non-major dependencies ([#542](https://github.com/quentinmcq/portfolio/issues/542)) ([adcc7e0](https://github.com/quentinmcq/portfolio/commit/adcc7e0d1ee397a83f3b99ef2786aa70d7ce76fa))
+* **deps:** update all non-major dependencies ([#543](https://github.com/quentinmcq/portfolio/issues/543)) ([3c3f16b](https://github.com/quentinmcq/portfolio/commit/3c3f16b9ce1f7031cbfd5e8f43a2cd3de4f3ea4b))
+* **deps:** update dependency @types/node to ^22.15.15 ([#534](https://github.com/quentinmcq/portfolio/issues/534)) ([02d5c26](https://github.com/quentinmcq/portfolio/commit/02d5c26206123018a2acd7590d31909d87efd728))
+* **deps:** update dependency @types/node to ^22.15.16 ([#535](https://github.com/quentinmcq/portfolio/issues/535)) ([c654ce4](https://github.com/quentinmcq/portfolio/commit/c654ce47c07c1c65b9116acf8a001c59ce0f2f54))
+* **deps:** update dependency @types/node to ^22.15.17 ([#536](https://github.com/quentinmcq/portfolio/issues/536)) ([ec16c2c](https://github.com/quentinmcq/portfolio/commit/ec16c2c9b47aae57832a530d1c6452638272eafe))
+* **deps:** update dependency happy-dom to ^17.4.7 ([#539](https://github.com/quentinmcq/portfolio/issues/539)) ([0bdd387](https://github.com/quentinmcq/portfolio/commit/0bdd38794494e6519f0f42329b83d86981933bb3))
+* **deps:** update dependency sass-embedded to ^1.88.0 ([#540](https://github.com/quentinmcq/portfolio/issues/540)) ([c8e2af1](https://github.com/quentinmcq/portfolio/commit/c8e2af156bbb181f2c9055f51ddf280d4343fde2))
+* **deps:** update dependency sass-embedded to ^1.89.0 ([#546](https://github.com/quentinmcq/portfolio/issues/546)) ([03c7e93](https://github.com/quentinmcq/portfolio/commit/03c7e933da335f62305178a7b8382be553f0494d))
+* **deps:** update dependency typescript-eslint to ^8.32.1 ([#541](https://github.com/quentinmcq/portfolio/issues/541)) ([8fb5378](https://github.com/quentinmcq/portfolio/commit/8fb537805ba5cd377bc494c89b32f396ec00d7b1))
+* **deps:** update dependency vue to ^3.5.14 ([#545](https://github.com/quentinmcq/portfolio/issues/545)) ([645e63d](https://github.com/quentinmcq/portfolio/commit/645e63db4dba7caa6e8fa3c274bb7de71142afee))
+* **deps:** update node.js to ^24.0.1 ([#537](https://github.com/quentinmcq/portfolio/issues/537)) ([6d59d87](https://github.com/quentinmcq/portfolio/commit/6d59d872ac49d11fe6da9bdaf0c384197ed6db78))
+* **deps:** update node.js to ^24.0.2 ([#544](https://github.com/quentinmcq/portfolio/issues/544)) ([3208fae](https://github.com/quentinmcq/portfolio/commit/3208fae5838e2268f54013659791ad81641692a8))
 
 ##
 
@@ -29,8 +28,15 @@ All notable changes to this project will be documented in this file. Dates are d
 
 Generated by [`auto-changelog`](https://github.com/CookPete/auto-changelog).
 
+#### [2.24.1](https://github.com/quentinmcq/portfolio/compare/2.24.0...2.24.1)
+
+- fix: regression on img displaying [`3126228`](https://github.com/quentinmcq/portfolio/commit/3126228d4429d7644f9f93f84a842a9884db2c3c)
+
 #### [2.24.0](https://github.com/quentinmcq/portfolio/compare/2.23.3...2.24.0)
 
+> 7 May 2025
+
+- chore: release v2.24.0 [`7f26783`](https://github.com/quentinmcq/portfolio/commit/7f2678322d6c094abd71cccd5bbc0944f19c0193)
 - feat: upgrade to node 24 [`49e1a0a`](https://github.com/quentinmcq/portfolio/commit/49e1a0afda0274c988cbadadc3738ecf05d7ea5b)
 
 #### [2.23.3](https://github.com/quentinmcq/portfolio/compare/2.23.2...2.23.3)
