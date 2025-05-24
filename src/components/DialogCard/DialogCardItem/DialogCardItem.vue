@@ -89,6 +89,8 @@
 </template>
 
 <script setup lang="ts">
+import { computed, ref } from 'vue'
+
 import type { Hobby } from '@/types/Hobby'
 import type { Project } from '@/types/Project'
 
@@ -97,7 +99,6 @@ import { useImagePath } from '@/composables/common/image-path'
 import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics'
 import { useAnimation } from '@/composables/style/animation'
 import { useResponsive } from '@/composables/style/responsive'
-import { computed, ref } from 'vue'
 
 const { componentName, customButtonText = false, index, item, transition = 'dialog-bottom-transition' } = defineProps<{
   componentName: string

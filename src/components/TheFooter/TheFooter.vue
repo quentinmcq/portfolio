@@ -32,8 +32,9 @@
 </template>
 
 <script setup lang="ts">
-import { useResponsive } from '@/composables/style/responsive'
 import { computed } from 'vue'
+
+import { useResponsive } from '@/composables/style/responsive'
 
 const version = APP_VERSION
 const { chipSize } = useResponsive()

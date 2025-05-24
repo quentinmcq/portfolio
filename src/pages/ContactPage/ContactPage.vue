@@ -104,16 +104,17 @@
 </template>
 
 <script setup lang="ts">
+import { vConfetti } from '@neoconfetti/vue'
+import { ref, useTemplateRef } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useChallengeV3 } from 'vue-recaptcha/head'
+
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue'
 import { useComponentName } from '@/composables/common/component-name'
 import { useSetInnerHTML } from '@/composables/common/inner-html'
 import { useEmailJs } from '@/composables/form/emailjs'
 import { useFieldRules } from '@/composables/form/field-rules'
 import { useResponsive } from '@/composables/style/responsive'
-import { vConfetti } from '@neoconfetti/vue'
-import { ref, useTemplateRef } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { useChallengeV3 } from 'vue-recaptcha/head'
 
 const { execute } = useChallengeV3('submit')
 const componentName = useComponentName()

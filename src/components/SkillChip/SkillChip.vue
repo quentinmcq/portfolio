@@ -21,10 +21,11 @@
 </template>
 
 <script setup lang="ts">
-import { useResponsive } from '@/composables/style/responsive'
-import tool from '@/data/tools'
 import { Icon } from '@iconify/vue'
 import { computed } from 'vue'
+
+import { useResponsive } from '@/composables/style/responsive'
+import tool from '@/data/tools'
 
 const { color = undefined, label } = defineProps<{
   color?: string

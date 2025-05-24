@@ -50,9 +50,10 @@
 </template>
 
 <script setup lang="ts">
-import GenericImage from '@/components/GenericImage/GenericImage.vue'
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useDisplay } from 'vuetify'
+
+import GenericImage from '@/components/GenericImage/GenericImage.vue'
 
 const { type } = defineProps<{ type: string }>()
 

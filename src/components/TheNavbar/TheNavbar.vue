@@ -60,11 +60,12 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
+
 import TheLocaleSwitcher from '@/components/TheLocaleSwitcher/TheLocaleSwitcher.vue'
 import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics'
 import { useScroll } from '@/composables/event/scroll'
 import { useResponsive } from '@/composables/style/responsive'
-import { ref } from 'vue'
 
 const { scrollToTop, visible } = useScroll()
 const { menuWidth } = useResponsive()

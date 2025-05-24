@@ -60,6 +60,8 @@
 </template>
 
 <script setup lang="ts">
+import { useDisplay } from 'vuetify'
+
 import type { Experience } from '@/types/Experience'
 
 import GenericImage from '@/components/GenericImage/GenericImage.vue'
@@ -67,7 +69,6 @@ import { useImagePath } from '@/composables/common/image-path'
 import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics'
 import { useAnimation } from '@/composables/style/animation'
 import { useResponsive } from '@/composables/style/responsive'
-import { useDisplay } from 'vuetify'
 
 const { componentName, index, item } = defineProps<{
   componentName: string

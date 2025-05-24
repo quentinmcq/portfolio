@@ -14,11 +14,12 @@
 </template>
 
 <script setup lang="ts">
-import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics'
-import { useResponsive } from '@/composables/style/responsive'
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useDisplay } from 'vuetify'
+
+import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics'
+import { useResponsive } from '@/composables/style/responsive'
 
 const { componentName } = defineProps<{
   componentName: string

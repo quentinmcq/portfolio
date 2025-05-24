@@ -1,9 +1,10 @@
-import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue'
-import DialogCard from '@/components/DialogCard/DialogCard.vue'
-import SeeMore from '@/components/DialogCard/SeeMore/SeeMore.vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
 import { vi } from 'vitest'
+
+import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue'
+import DialogCard from '@/components/DialogCard/DialogCard.vue'
+import SeeMore from '@/components/DialogCard/SeeMore/SeeMore.vue'
 
 vi.mock('vue-i18n', () => ({
   useI18n: () => ({

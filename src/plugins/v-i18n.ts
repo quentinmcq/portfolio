@@ -1,8 +1,9 @@
 import type { App } from 'vue'
 
+import { createI18n } from 'vue-i18n'
+
 import en from '@/locales/en'
 import fr from '@/locales/fr'
-import { createI18n } from 'vue-i18n'
 
 export function initI18n(app: App<Element>) {
   const i18nInstance = createI18n({

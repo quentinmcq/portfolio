@@ -16,13 +16,14 @@
 </template>
 
 <script setup lang="ts">
+import { computed, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useDisplay } from 'vuetify'
+
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue'
 import DialogCard from '@/components/DialogCard/DialogCard.vue'
 import SeeMore from '@/components/DialogCard/SeeMore/SeeMore.vue'
 import { useComponentName } from '@/composables/common/component-name'
-import { computed, ref } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { useDisplay } from 'vuetify'
 
 const componentName = useComponentName()
 const { lgAndUp } = useDisplay()

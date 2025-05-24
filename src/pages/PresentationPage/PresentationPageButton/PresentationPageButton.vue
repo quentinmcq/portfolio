@@ -16,11 +16,12 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
+
 import type { Presentation } from '@/types/Presentation'
 
 import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics'
 import { useResponsive } from '@/composables/style/responsive'
-import { computed } from 'vue'
 
 const { presentation } = defineProps<{
   presentation: Presentation

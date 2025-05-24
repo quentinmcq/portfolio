@@ -1,6 +1,7 @@
-import { useEventListener } from '@/composables/event/event'
 import { type Ref, ref } from 'vue'
 import { useDisplay } from 'vuetify'
+
+import { useEventListener } from '@/composables/event/event'
 
 const XS_WIDTH = 780
 const SM_WIDTH = 1000
