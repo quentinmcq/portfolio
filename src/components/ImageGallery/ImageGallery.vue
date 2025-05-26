@@ -50,7 +50,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref, shallowRef } from 'vue'
 import { useDisplay } from 'vuetify'
 
 import GenericImage from '@/components/GenericImage/GenericImage.vue'
@@ -63,26 +63,26 @@ const { xs } = useDisplay()
 
 const dimensionOpenImageWidth = ref(0)
 const dimensionOpenImageHeight = ref(0)
-const glob = ref('')
+const glob = shallowRef<Record<string, any>>({})
 
 switch (type) {
   case 'climbing':
-    glob.value = import.meta.glob('/public/assets/img/hobby/climbing/*/*.webp', { eager: true })
+    glob.value = import.meta.glob('@/assets/img/hobby/climbing/*/*.webp', { eager: true })
     break
   case 'manga':
-    glob.value = import.meta.glob('/public/assets/img/hobby/manga/*/*.webp', { eager: true })
+    glob.value = import.meta.glob('@/assets/img/hobby/manga/*/*.webp', { eager: true })
     break
-  default: glob.value = ''
+  default: glob.value = {}
 }
 
 const images = computed(() => {
   const result: Record<string, string[]> = {}
 
-  Object.entries(glob.value).forEach(([path]) => {
+  Object.entries(glob.value).forEach(([path, mod]) => {
     const year: string = path.split('/').at(-2) ?? ''
 
     result[year] ||= []
-    result[year].push(path)
+    result[year].push(mod.default)
   })
 
   return result
