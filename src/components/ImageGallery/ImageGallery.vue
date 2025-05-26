@@ -67,10 +67,10 @@ const glob = ref('')
 
 switch (type) {
   case 'climbing':
-    glob.value = import.meta.glob('@/assets/img/hobby/climbing/*/*.webp', { eager: true })
+    glob.value = import.meta.glob('/public/assets/img/hobby/climbing/*/*.webp', { eager: true })
     break
   case 'manga':
-    glob.value = import.meta.glob('@/assets/img/hobby/manga/*/*.webp', { eager: true })
+    glob.value = import.meta.glob('/public/assets/img/hobby/manga/*/*.webp', { eager: true })
     break
   default: glob.value = ''
 }
