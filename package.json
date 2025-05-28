@@ -41,7 +41,7 @@
     "@release-it/conventional-changelog": "^10.0.1",
     "@stylistic/eslint-plugin": "^4.4.0",
     "@types/aos": "^3.0.7",
-    "@types/node": "^22.15.23",
+    "@types/node": "^22.15.24",
     "@vitejs/plugin-vue": "^5.2.4",
     "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.7.0",
