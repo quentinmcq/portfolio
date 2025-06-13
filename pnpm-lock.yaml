@@ -85,8 +85,8 @@ importers:
         specifier: ^9.29.0
         version: 9.29.0(jiti@2.4.2)
       eslint-plugin-oxlint:
-        specifier: ^0.18.1
-        version: 0.18.1
+        specifier: ^1.1.0
+        version: 1.1.0
       eslint-plugin-perfectionist:
         specifier: ^4.14.0
         version: 4.14.0(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3)
@@ -115,7 +115,7 @@ importers:
         specifier: ^8.34.0
         version: 8.34.0(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3)
       vite:
-        specifier: ^7.0.0-beta.1
+        specifier: 7.0.0-beta.1
         version: 7.0.0-beta.1(@types/node@22.15.31)(jiti@2.4.2)(sass-embedded@1.89.2)(yaml@2.7.1)
       vite-plugin-vuetify:
         specifier: ^2.1.1
@@ -1403,8 +1403,8 @@ packages:
     engines: {node: '>=6.0'}
     hasBin: true
 
-  eslint-plugin-oxlint@0.18.1:
-    resolution: {integrity: sha512-QmwUWiihxS4MimFTzJQqrC5H8os8s1ZIiWj290dvAkIlhCP/CIBJdauYZRE7kNAPeLGJoR7DZGRX1Bcn2JHYbQ==}
+  eslint-plugin-oxlint@1.1.0:
+    resolution: {integrity: sha512-spDWxcsAfoUDjSwxPrP2gfuOJ2Hrv8faqQ5Vkm90lURp4no5aWJQ09xRKmZroIPTuQCKYgG9nvnakdIbXGlijg==}
 
   eslint-plugin-perfectionist@4.14.0:
     resolution: {integrity: sha512-BkhiOqzdum8vQSFgj1/q5+6UUWPMn4GELdxuX7uIsGegmAeH/+LnWsiVxgMrxalD0p68sYfMeKaHF1NfrpI/mg==}
@@ -4060,7 +4060,7 @@ snapshots:
     optionalDependencies:
       source-map: 0.6.1
 
-  eslint-plugin-oxlint@0.18.1:
+  eslint-plugin-oxlint@1.1.0:
     dependencies:
       jsonc-parser: 3.3.1
 
