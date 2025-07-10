@@ -1,8 +1,8 @@
 {
   "name": "portfolio",
-  "packageManager": "pnpm@10.12.4",
+  "packageManager": "pnpm@10.13.1",
   "engines": {
-    "node": "^24.3.0"
+    "node": "^24.4.0"
   },
   "version": "2.25.1",
   "type": "module",
@@ -28,7 +28,7 @@
     "roboto-fontface": "^0.10.0",
     "typescript": "^5.8.3",
     "vue": "^3.5.17",
-    "vue-gtag": "^3.5.1",
+    "vue-gtag": "^3.5.2",
     "vue-i18n": "^11.1.9",
     "vue-recaptcha": "3.0.0-alpha.6",
     "vue-tsc": "^3.0.1",
