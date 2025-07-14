@@ -1,20 +1,42 @@
 # Changelog
 
-## [2.25.1](https://github.com/quentinmcq/portfolio/compare/2.25.0...2.25.1) (2025-06-13)
-
-### 🩹 Fixes
-
-* update dependencies ([5f09177](https://github.com/quentinmcq/portfolio/commit/5f091774e24f3124c3d374e38a6cfd4f2735997e))
-* update dependencies ([8195b57](https://github.com/quentinmcq/portfolio/commit/8195b574259ab71c2268b2316d8fd5f338af40a5))
+## [2.25.2](https://github.com/quentinmcq/portfolio/compare/2.25.1...2.25.2) (2025-07-14)
 
 ### 🏡 Chore
 
-* **deps:** update all non-major dependencies ([#563](https://github.com/quentinmcq/portfolio/issues/563)) ([676d386](https://github.com/quentinmcq/portfolio/commit/676d386c642f26e844aa7a2f7cb1484b21180004))
-* **deps:** update all non-major dependencies ([#565](https://github.com/quentinmcq/portfolio/issues/565)) ([259b858](https://github.com/quentinmcq/portfolio/commit/259b858276f1ffff11329a408edb5313e13a56ca))
-* **deps:** update all non-major dependencies to ^0.17.0 ([#562](https://github.com/quentinmcq/portfolio/issues/562)) ([29f8e3e](https://github.com/quentinmcq/portfolio/commit/29f8e3e6b3a9e63c822b711f1d5073d06ed41abe))
-* **deps:** update dependency happy-dom to v18 ([#568](https://github.com/quentinmcq/portfolio/issues/568)) ([f1d3910](https://github.com/quentinmcq/portfolio/commit/f1d3910a14820ba5eae85351ac28ef03d21c840b))
-* **deps:** update dependency oxlint to v1 ([#567](https://github.com/quentinmcq/portfolio/issues/567)) ([b647687](https://github.com/quentinmcq/portfolio/commit/b64768707edf9cf90228fc52633bbc2539326769))
-* **deps:** update pnpm to v10.12.1 ([#564](https://github.com/quentinmcq/portfolio/issues/564)) ([6af0436](https://github.com/quentinmcq/portfolio/commit/6af043662e66cdbf3b62c17c6b86bb56bd5452a9))
+* **deps:** update all non-major dependencies ([#570](https://github.com/quentinmcq/portfolio/issues/570)) ([c4d59a5](https://github.com/quentinmcq/portfolio/commit/c4d59a5c11de56408650b9cf7f98884d1485892d))
+* **deps:** update all non-major dependencies ([#571](https://github.com/quentinmcq/portfolio/issues/571)) ([4b89f4e](https://github.com/quentinmcq/portfolio/commit/4b89f4e081b6188489d555c81efc69cc59284bb2))
+* **deps:** update all non-major dependencies ([#574](https://github.com/quentinmcq/portfolio/issues/574)) ([d02af8b](https://github.com/quentinmcq/portfolio/commit/d02af8ba376a4900eec475a3843c46e0aeba8192))
+* **deps:** update all non-major dependencies ([#577](https://github.com/quentinmcq/portfolio/issues/577)) ([95de926](https://github.com/quentinmcq/portfolio/commit/95de926f7bd1c89920f41ed41d90552d438f57fa))
+* **deps:** update all non-major dependencies ([#580](https://github.com/quentinmcq/portfolio/issues/580)) ([0f58209](https://github.com/quentinmcq/portfolio/commit/0f58209fb90a75ac4ec971fd14530ecd494636ef))
+* **deps:** update all non-major dependencies ([#588](https://github.com/quentinmcq/portfolio/issues/588)) ([2d96d8f](https://github.com/quentinmcq/portfolio/commit/2d96d8ff0f396abf539bb7b4304f2ba076531ada))
+* **deps:** update all non-major dependencies ([#589](https://github.com/quentinmcq/portfolio/issues/589)) ([402b0b4](https://github.com/quentinmcq/portfolio/commit/402b0b42ee14f0ef5ccc92fd724c814d7fbe7f58))
+* **deps:** update all non-major dependencies ([#591](https://github.com/quentinmcq/portfolio/issues/591)) ([e25fae2](https://github.com/quentinmcq/portfolio/commit/e25fae243d2da1794b5459f012f98dbf318e0d3b))
+* **deps:** update all non-major dependencies ([#595](https://github.com/quentinmcq/portfolio/issues/595)) ([2042fb1](https://github.com/quentinmcq/portfolio/commit/2042fb13ced651aa1f60f6df63f24a7ae217aade))
+* **deps:** update all non-major dependencies ([#598](https://github.com/quentinmcq/portfolio/issues/598)) ([a42e0fc](https://github.com/quentinmcq/portfolio/commit/a42e0fcb0144546879b728be0104bdd55a4faea9))
+* **deps:** update all non-major dependencies ([#599](https://github.com/quentinmcq/portfolio/issues/599)) ([60ac53e](https://github.com/quentinmcq/portfolio/commit/60ac53e0effd072c60ea54866b4d70d2cc60d4a9))
+* **deps:** update all non-major dependencies to ^1.2.0 ([#575](https://github.com/quentinmcq/portfolio/issues/575)) ([10f576a](https://github.com/quentinmcq/portfolio/commit/10f576a1ebcf2a0cc4fae9a103d26bada5c453f6))
+* **deps:** update all non-major dependencies to ^1.6.0 ([#593](https://github.com/quentinmcq/portfolio/issues/593)) ([4132932](https://github.com/quentinmcq/portfolio/commit/4132932ed10bf79b943c8bddc0f983e09ed8ec45))
+* **deps:** update all non-major dependencies to ^9.30.0 ([#585](https://github.com/quentinmcq/portfolio/issues/585)) ([7d082fc](https://github.com/quentinmcq/portfolio/commit/7d082fc4ea87f4b25eac4663f6079fd0a0635c64))
+* **deps:** update all non-major dependencies to ^9.31.0 ([#600](https://github.com/quentinmcq/portfolio/issues/600)) ([072694e](https://github.com/quentinmcq/portfolio/commit/072694ebd3daaf1e7dfb52300307ed8e65726873))
+* **deps:** update dependency @stylistic/eslint-plugin to ^5.1.0 ([#587](https://github.com/quentinmcq/portfolio/issues/587)) ([904e457](https://github.com/quentinmcq/portfolio/commit/904e4574c28d8715ed67ae716b92bacb13cfe91b))
+* **deps:** update dependency @stylistic/eslint-plugin to v5 ([#578](https://github.com/quentinmcq/portfolio/issues/578)) ([17879f0](https://github.com/quentinmcq/portfolio/commit/17879f0da19bfa48b5210dae5b774eb60d45612b))
+* **deps:** update dependency @types/node to ^22.15.33 ([#582](https://github.com/quentinmcq/portfolio/issues/582)) ([075f102](https://github.com/quentinmcq/portfolio/commit/075f10222ebd0f4df7c27cf9310295fc812be1f6))
+* **deps:** update dependency @types/node to ^22.15.34 ([#586](https://github.com/quentinmcq/portfolio/issues/586)) ([727989e](https://github.com/quentinmcq/portfolio/commit/727989ef1c9849b6fb6486dcc7bc5a150291d711))
+* **deps:** update dependency @types/node to ^22.16.1 ([#596](https://github.com/quentinmcq/portfolio/issues/596)) ([5a9d4d9](https://github.com/quentinmcq/portfolio/commit/5a9d4d9fe249a133200bcb277974c1df9e32f5ef))
+* **deps:** update dependency @types/node to ^22.16.2 ([#597](https://github.com/quentinmcq/portfolio/issues/597)) ([dc32991](https://github.com/quentinmcq/portfolio/commit/dc329915b09283724ba8be5673a7a381a9e9a6e3))
+* **deps:** update dependency @vitejs/plugin-vue to v6 ([#581](https://github.com/quentinmcq/portfolio/issues/581)) ([a316981](https://github.com/quentinmcq/portfolio/commit/a316981bb9303a172e3228bfb9ca73571fbfb606))
+* **deps:** update dependency eslint-plugin-perfectionist to ^4.15.0 ([#573](https://github.com/quentinmcq/portfolio/issues/573)) ([6ea0504](https://github.com/quentinmcq/portfolio/commit/6ea0504b1028df693726f52ce79179ddb6086802))
+* **deps:** update dependency typescript-eslint to ^8.36.0 ([#594](https://github.com/quentinmcq/portfolio/issues/594)) ([6ca3c3b](https://github.com/quentinmcq/portfolio/commit/6ca3c3b60df968fc7353e71e835949a65e603bdb))
+* **deps:** update dependency vite to v7.0.2 ([#592](https://github.com/quentinmcq/portfolio/issues/592)) ([8482131](https://github.com/quentinmcq/portfolio/commit/84821310e1c40fbb78951b5556b3daea4e1fceda))
+* **deps:** update dependency vitest to ^3.2.4 ([#572](https://github.com/quentinmcq/portfolio/issues/572)) ([510550a](https://github.com/quentinmcq/portfolio/commit/510550a2255177e1ad114ae297664121ba572412))
+* **deps:** update dependency vue-eslint-parser to ^10.1.4 ([#579](https://github.com/quentinmcq/portfolio/issues/579)) ([121827a](https://github.com/quentinmcq/portfolio/commit/121827a3f4f88ca19afefb9b1a59890cd751f8f1))
+* **deps:** update dependency vue-i18n to ^11.1.7 ([#576](https://github.com/quentinmcq/portfolio/issues/576)) ([a0ea81f](https://github.com/quentinmcq/portfolio/commit/a0ea81ff3da9855a507fac58fa697cb2c36087d0))
+* **deps:** update dependency vue-tsc to v3 ([#590](https://github.com/quentinmcq/portfolio/issues/590)) ([e640e1b](https://github.com/quentinmcq/portfolio/commit/e640e1b681135e74624d9fadb94bbbc7c1d1dbb9))
+* **deps:** update node.js to ^24.2.0 ([#569](https://github.com/quentinmcq/portfolio/issues/569)) ([c7736aa](https://github.com/quentinmcq/portfolio/commit/c7736aaed7d1e441a34d049df319f7e596db7e3c))
+* **deps:** update node.js to ^24.3.0 ([#583](https://github.com/quentinmcq/portfolio/issues/583)) ([4ca7a6d](https://github.com/quentinmcq/portfolio/commit/4ca7a6d4e08380ca1fe8db90420fa5dac43e7e21))
+* **deps:** update pnpm to v10.12.4 ([#584](https://github.com/quentinmcq/portfolio/issues/584)) ([e0c5755](https://github.com/quentinmcq/portfolio/commit/e0c5755bd7c2dda39088264aac1512eef7f1fa43))
+* use vue 3.6 and minor enhancements ([87beca5](https://github.com/quentinmcq/portfolio/commit/87beca5d292e0816cecbce97f6af1a17c9793b1d))
 
 ##
 
@@ -22,8 +44,15 @@ All notable changes to this project will be documented in this file. Dates are d
 
 Generated by [`auto-changelog`](https://github.com/CookPete/auto-changelog).
 
+#### [2.25.2](https://github.com/quentinmcq/portfolio/compare/2.25.1...2.25.2)
+
+- chore: use vue 3.6 and minor enhancements [`87beca5`](https://github.com/quentinmcq/portfolio/commit/87beca5d292e0816cecbce97f6af1a17c9793b1d)
+
 #### [2.25.1](https://github.com/quentinmcq/portfolio/compare/2.25.0...2.25.1)
 
+> 13 June 2025
+
+- chore: release v2.25.1 [`6ec3308`](https://github.com/quentinmcq/portfolio/commit/6ec330842010f6fcdaac6ee81298422ff15455b6)
 - fix: update dependencies [`5f09177`](https://github.com/quentinmcq/portfolio/commit/5f091774e24f3124c3d374e38a6cfd4f2735997e)
 - fix: update dependencies [`8195b57`](https://github.com/quentinmcq/portfolio/commit/8195b574259ab71c2268b2316d8fd5f338af40a5)
 
