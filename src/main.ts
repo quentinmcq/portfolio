@@ -19,4 +19,5 @@ initRecaptcha(app)
 initVuetify(app)
 initI18n(app)
 
-app.mount('#app')
+app.config.performance = true
+app.mount('#app', true)

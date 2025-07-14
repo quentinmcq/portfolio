@@ -8,3 +8,5 @@
 </template>
 
 <style lang="scss" src="./rotate-device.scss" />
+
+<script setup lang="ts" />
