@@ -27,12 +27,12 @@
     "pathe": "^2.0.3",
     "roboto-fontface": "^0.10.0",
     "typescript": "^5.8.3",
-    "vue": "^3.6.0-alpha.1",
+    "vue": "^3.6.0-alpha.2",
     "vue-gtag": "^3.5.2",
     "vue-i18n": "^11.1.10",
     "vue-recaptcha": "3.0.0-alpha.6",
     "vue-tsc": "^3.0.2",
-    "vuetify": "^3.9.1",
+    "vuetify": "^3.9.2",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
