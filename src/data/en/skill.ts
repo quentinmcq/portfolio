@@ -1,7 +1,7 @@
 export default [
   {
     color: '#ec8d0a',
-    content: ['JS', 'TS', 'PHP'],
+    content: ['TS', 'PHP'],
     label: 'Web languages',
   },
   {
@@ -11,7 +11,7 @@ export default [
   },
   {
     color: '#4FC08D',
-    content: ['VueJS', 'NuxtJS', 'Vuetify'],
+    content: ['Nuxt', 'Vuetify'],
     label: 'Front-end frameworks',
   },
   {
@@ -21,7 +21,7 @@ export default [
   },
   {
     color: '#da4e76',
-    content: ['Git', 'Docker', 'Redmine', 'Jenkins'],
+    content: ['Git', 'Docker', 'Jenkins'],
     label: 'Continuous integration',
   },
   {

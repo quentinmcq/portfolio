@@ -60,10 +60,7 @@
             <slot name="chipsAndLinks" />
           </v-card-text>
 
-          <v-card-actions
-            class="justify-center"
-            v-if="!item.links"
-          >
+          <v-card-actions class="justify-center">
             <v-btn
               :disabled="!item.link"
               :href="item.link"

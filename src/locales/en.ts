@@ -9,10 +9,10 @@ export default {
     'and': 'et',
     'firstname': 'Quentin',
     'name': 'MACQ',
+    'nuxt': 'Nuxt',
     'rotate-device': 'Please rotate device',
     'see-more': 'See more',
     'symfony': 'Symfony',
-    'vuejs': 'Vue.js',
   },
 
   contact: {
@@ -50,7 +50,7 @@ export default {
 
   hobby: {
     'list': hobby,
-    'main-title': 'Hobbies',
+    'main-title': 'Loisirs',
   },
 
   languages: {
@@ -65,7 +65,7 @@ export default {
     'main-title': 'Presentation',
     'part-1': 'Hi, I\'m {name}, I\'m {age} years old.',
     'part-2':
-      'I\'m a web developer and I work daily with {symfony} and {vuejs}.',
+      'I\'m a full stack developer and I work daily with {symfony} and {nuxt}.',
     'part-3':
       'Passionate about the web for several years, I love discovering new technologies and sharing what I learn 🚀',
   },

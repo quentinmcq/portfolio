@@ -37,7 +37,7 @@
             >
               <template #symfony>
                 <a
-                  href="https://symfony.com"
+                  href="https://symfony.com/"
                   class="presentation-page__link"
                   target="_blank"
                   rel="noopener"
@@ -46,14 +46,14 @@
                 </a>
               </template>
 
-              <template #vuejs>
+              <template #nuxt>
                 <a
-                  href="https://vuejs.org"
+                  href="https://nuxt.com/"
                   class="presentation-page__link"
                   target="_blank"
                   rel="noopener"
                 >
-                  {{ $t('common.vuejs') }}</a>
+                  {{ $t('common.nuxt') }}</a>
               </template>
             </i18n-t>
 

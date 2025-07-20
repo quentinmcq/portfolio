@@ -9,10 +9,10 @@ export default {
     'and': 'et',
     'firstname': 'Quentin',
     'name': 'MACQ',
+    'nuxt': 'Nuxt',
     'rotate-device': 'Veuillez faire pivoter l\'appareil',
     'see-more': 'Voir plus',
     'symfony': 'Symfony',
-    'vuejs': 'Vue.js',
   },
 
   contact: {
@@ -63,7 +63,7 @@ export default {
   presentation: {
     'main-title': 'Présentation',
     'part-1': 'Salut, moi c\'est {name}, j\'ai {age} ans.',
-    'part-2': 'Je suis développeur web et je travaille au quotidien avec {symfony} et {vuejs}.',
+    'part-2': 'Je suis développeur full stack et je travaille au quotidien avec {symfony} et {nuxt}.',
     'part-3': 'Passionné par le web depuis plusieurs années, j\'adore découvrir de nouvelles technos et partager ce que j\'apprends 🚀',
   },
 

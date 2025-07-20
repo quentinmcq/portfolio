@@ -4,7 +4,7 @@ export interface Hobby {
   description: string
   hasImages?: boolean
   link?: string
-  links?: { img: string, url: string }[]
+  showButtonText?: boolean
   title: string
   type?: string
 }

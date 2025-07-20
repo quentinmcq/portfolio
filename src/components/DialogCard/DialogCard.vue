@@ -22,29 +22,6 @@
             target="_blank"
           />
         </v-row>
-
-        <v-row
-          v-if="item.links"
-          class="dialog-card-item__logos"
-        >
-          <v-col
-            v-for="(link, colIndex) in item.links"
-            :key="colIndex"
-          >
-            <a
-              :href="link.url"
-              target="_blank"
-              @click="sendDialogCardClickAnalyticsEvent(item)"
-            >
-              <GenericImage
-                :alt="link.img"
-                :src="linkImgPath(link.img)"
-                class="image-animation"
-                height="40"
-              />
-            </a>
-          </v-col>
-        </v-row>
       </template>
 
       <template #imageGallery>
@@ -63,11 +40,8 @@ import type { Hobby } from '@/types/Hobby'
 import type { Project } from '@/types/Project'
 
 import DialogCardItem from '@/components/DialogCard/DialogCardItem/DialogCardItem.vue'
-import GenericImage from '@/components/GenericImage/GenericImage.vue'
 import ImageGallery from '@/components/ImageGallery/ImageGallery.vue'
 import SkillChip from '@/components/SkillChip/SkillChip.vue'
-import { useImagePath } from '@/composables/common/image-path.js'
-import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics.js'
 
 const { componentName, customButtonText = false, items, transition = 'dialog-bottom-transition' } = defineProps<{
   componentName: string
@@ -75,21 +49,4 @@ const { componentName, customButtonText = false, items, transition = 'dialog-bot
   items: Hobby[] | Project[]
   transition?: string
 }>()
-
-function linkImgPath(image: string): string {
-  const { path } = useImagePath({
-    directory: componentName,
-    image: `logo/${image}`,
-  })
-
-  return path.value
-}
-
-function sendDialogCardClickAnalyticsEvent(item: Hobby | Project): void {
-  useGoogleAnalyticsEvent({
-    action: `dialog-card:click`,
-    category: componentName,
-    label: item.title,
-  })
-}
 </script>

@@ -2,7 +2,7 @@ import { GITHUB_URL, GITHUB_USERNAME } from '@/misc/constants'
 
 export default [
   {
-    chips: ['Symfony', 'VueJS', 'PHP', 'JS', 'Vuetify', 'Docker', 'API'],
+    chips: ['Symfony', 'VueJS', 'PHP', 'JavaScript', 'Vuetify', 'Docker', 'API'],
     cover: 'unpaid.webp',
     description:
       'L\'application permet de lister les impayés correspondant aux mensualités non réglées. Un processus de relance est alors déclenché, incluant l\'envoi de SMS et d\'e-mails de rappel, suivi d\'une mise en demeure et d\'une procédure de recouvrement.',
@@ -12,7 +12,7 @@ export default [
     year: '2021',
   },
   {
-    chips: ['Laravel', 'PHP', 'JS', 'Livewire', 'Bootstrap'],
+    chips: ['Laravel', 'PHP', 'JavaScript', 'Livewire', 'Bootstrap'],
     cover: 'couteau-suisse.webp',
     description:
       'L\'application permet de créer un compte et de sélectionner un type de handicap (daltonisme, malvoyance, etc.). Elle propose également des outils d’assistance, tels qu’un assistant vocal, pour faciliter le quotidien.',
@@ -22,7 +22,7 @@ export default [
     year: '2020',
   },
   {
-    chips: ['Laravel', 'PHP', 'JS', 'InertiaJS', 'Bootstrap'],
+    chips: ['Laravel', 'PHP', 'JavaScript', 'InertiaJS', 'Bootstrap'],
     cover: 'teachme.webp',
     description:
       'L\'application permet de créer un compte, de modifier ses informations personnelles et de parcourir les cours disponibles sur le site. Un système de rôles gère les niveaux d\'accès, notamment pour les administrateurs et les professeurs.',
@@ -32,7 +32,7 @@ export default [
     year: '2020',
   },
   {
-    chips: ['VueJS', 'JS', 'Bootstrap'],
+    chips: ['VueJS', 'JavaScript', 'Bootstrap'],
     cover: 'edt.webp',
     description: 'L\'application permet de consulter l\'emploi du temps des étudiants de l\'IUT sur plusieurs semaines. Elle permet également de vérifier les disponibilités d\'un professeur avec un groupe et d\'ajouter des cours en fonction des créneaux libres.',
     link: `${GITHUB_URL}/${GITHUB_USERNAME}/university-schedule`,
@@ -41,7 +41,7 @@ export default [
     year: '2020',
   },
   {
-    chips: ['Laravel', 'Angular', 'PHP', 'JS', 'Phaser', 'Bootstrap'],
+    chips: ['Laravel', 'Angular', 'PHP', 'JavaScript', 'Phaser', 'Bootstrap'],
     cover: 'slay-the-demon.webp',
     description:
       'Dans un univers fantastique, le joueur affronte des démons pour progresser de niveau et sauver son village. Un système de compte permet également de consulter le classement des autres joueurs.',
@@ -71,7 +71,7 @@ export default [
     year: '2019',
   },
   {
-    chips: ['JS', 'HTML'],
+    chips: ['JavaScript', 'HTML'],
     cover: 'site.webp',
     description: 'Projet de refonte du site web de mon université, avec pour objectif de proposer une interface moderne et élégante, en remplacement de l’ancienne version.',
     link: `${GITHUB_URL}/${GITHUB_USERNAME}/university-website`,

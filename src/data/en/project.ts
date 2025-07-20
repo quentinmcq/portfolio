@@ -2,7 +2,7 @@ import { GITHUB_URL, GITHUB_USERNAME } from '@/misc/constants.ts'
 
 export default [
   {
-    chips: ['Symfony', 'VueJS', 'PHP', 'JS', 'Vuetify', 'Docker', 'API'],
+    chips: ['Symfony', 'VueJS', 'PHP', 'JavaScript', 'Vuetify', 'Docker', 'API'],
     cover: 'unpaid.webp',
     description: 'The application allows you to list unpaid amounts corresponding to unpaid monthly payments. A reminder process is then triggered, including sending reminder SMS and emails, followed by a formal notice and a recovery procedure.',
     link: '',
@@ -11,7 +11,7 @@ export default [
     year: '2021',
   },
   {
-    chips: ['Laravel', 'PHP', 'JS', 'Livewire', 'Bootstrap'],
+    chips: ['Laravel', 'PHP', 'JavaScript', 'Livewire', 'Bootstrap'],
     cover: 'couteau-suisse.webp',
     description:
       'The application allows you to create an account and select a type of disability (color blindness, low vision, etc.). It also offers assistance tools, such as a voice assistant, to make everyday life easier.',
@@ -21,7 +21,7 @@ export default [
     year: '2020',
   },
   {
-    chips: ['Laravel', 'PHP', 'JS', 'InertiaJS', 'Bootstrap'],
+    chips: ['Laravel', 'PHP', 'JavaScript', 'InertiaJS', 'Bootstrap'],
     cover: 'teachme.webp',
     description:
       'The application allows you to create an account, modify your personal information and browse the courses available on the site. A role system manages access levels, particularly for administrators and teachers.',
@@ -31,7 +31,7 @@ export default [
     year: '2020',
   },
   {
-    chips: ['VueJS', 'JS', 'Bootstrap'],
+    chips: ['VueJS', 'JavaScript', 'Bootstrap'],
     cover: 'edt.webp',
     description: 'The application allows you to consult the timetable of IUT students over several weeks. It also allows you to check the availability of a teacher with a group and to add courses according to free slots',
     link: `${GITHUB_URL}/${GITHUB_USERNAME}/university-schedule`,
@@ -40,7 +40,7 @@ export default [
     year: '2020',
   },
   {
-    chips: ['Laravel', 'Angular', 'PHP', 'JS', 'Phaser', 'Bootstrap'],
+    chips: ['Laravel', 'Angular', 'PHP', 'JavaScript', 'Phaser', 'Bootstrap'],
     cover: 'slay-the-demon.webp',
     description:
       'In a fantasy universe, the player fights demons to progress in level and save his village. An account system also allows you to consult the ranking of other players.',
@@ -70,7 +70,7 @@ export default [
     year: '2019',
   },
   {
-    chips: ['JS', 'HTML'],
+    chips: ['JavaScript', 'HTML'],
     cover: 'site.webp',
     description:
       'Project to redesign my university\'s website, with the aim of offering a modern and elegant interface, replacing the old version.',
