@@ -1,4 +1,4 @@
-import { createApp } from 'vue'
+import { createApp, vaporInteropPlugin } from 'vue'
 
 import { initAos } from '@/plugins/aos'
 import { initGoogleAnalytics } from '@/plugins/google-analytics'
@@ -11,6 +11,7 @@ import { initWebFontLoader } from '@/plugins/webfontloader'
 import App from './App.vue'
 
 const app = createApp(App)
+  .use(vaporInteropPlugin)
 
 initAos(app)
 initWebFontLoader()
@@ -19,5 +20,4 @@ initRecaptcha(app)
 initVuetify(app)
 initI18n(app)
 
-app.config.performance = true
 app.mount('#app', true)
