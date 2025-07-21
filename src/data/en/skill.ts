@@ -1,26 +1,26 @@
 export default [
   {
-    content: ['TypeScript', 'PHP'],
-    label: 'Web languages',
+    content: ['Nuxt', 'Symfony', 'Vuetify'],
+    label: 'Frameworks',
   },
   {
-    content: ['Git', 'Jenkins', 'Docker'],
-    label: 'Continuous integration',
+    content: ['ESLint', 'Vitest', 'Playwright'],
+    label: 'Code quality',
   },
   {
-    content: ['Nuxt', 'Vuetify'],
-    label: 'Front-end frameworks',
-  },
-  {
-    content: ['Symfony'],
-    label: 'Back-end frameworks',
-  },
-  {
-    content: ['Vite', 'Vitest', 'PNPM', 'ESLint', 'Pinia'],
+    content: ['TypeScript', 'Vite', 'Pinia'],
     label: 'Front-end tools',
   },
   {
-    content: ['Grafana', 'RabbitMQ'],
+    content: ['MySQL', 'RabbitMQ', 'Redis'],
     label: 'Back-end tools',
+  },
+  {
+    content: ['GitLab', 'Jenkins', 'Docker'],
+    label: 'Continuous integration',
+  },
+  {
+    content: ['Grafana', 'GTM'],
+    label: 'Analytics & monitoring',
   },
 ]

@@ -39,17 +39,23 @@ export default {
     label: 'ESlint',
     link: 'https://eslint.org/',
   },
-  git: {
-    color: '#F05032',
-    icon: `${devIconPrefix}git`,
-    label: 'Git',
-    link: 'https://git-scm.com/',
+  gitlab: {
+    color: '#FC6D26',
+    icon: `${devIconPrefix}gitlab`,
+    label: 'GitLab',
+    link: 'https://gitlab.com/',
   },
   grafana: {
     color: '#F46800',
     icon: `${devIconPrefix}grafana`,
     label: 'Grafana',
     link: 'https://grafana.com/',
+  },
+  gtm: {
+    color: '#4285F4',
+    icon: `${logosPrefix}google-tag-manager`,
+    label: 'GTM',
+    link: 'https://tagmanager.google.com/',
   },
   html: {
     color: '#E34F26',
@@ -71,7 +77,7 @@ export default {
   },
   jenkins: {
     color: '#D24939',
-    height: 17,
+    height: 16,
     icon: `${devIconPrefix}jenkins`,
     label: 'Jenkins',
     link: 'https://www.jenkins.io/',
@@ -96,7 +102,7 @@ export default {
   },
   nuxt: {
     color: '#00DC82',
-    height: 11,
+    height: 10,
     icon: `${logosPrefix}nuxt-icon`,
     label: 'Nuxt',
     link: 'https://nuxt.com/',
@@ -121,12 +127,12 @@ export default {
     label: 'Pinia',
     link: 'https://pinia.vuejs.org/',
   },
-  pnpm: {
-    color: '#F69220',
-    height: 12,
-    icon: `${devIconPrefix}pnpm`,
-    label: 'PNPM',
-    link: 'https://pnpm.io/fr/',
+  playwright: {
+    color: '#2EAD33',
+    height: 17,
+    icon: `${devIconPrefix}playwright`,
+    label: 'Playwright',
+    link: 'https://playwright.dev/',
   },
   pyqt: {
     color: '#41CD52',
@@ -141,6 +147,7 @@ export default {
   },
   rabbitmq: {
     color: '#FF6600',
+    height: 12,
     icon: `${devIconPrefix}rabbitmq`,
     label: 'RabbitMQ',
     link: 'https://www.rabbitmq.com/',
@@ -151,6 +158,13 @@ export default {
     label: 'React',
     link: 'https://react.dev/',
   },
+  redis: {
+    color: '#DC382D',
+    height: 11,
+    icon: `${logosPrefix}redis`,
+    label: 'Redis',
+    link: 'https://redis.io/',
+  },
   symfony: {
     color: '#000000',
     icon: `${devIconPrefix}symfony`,
@@ -159,12 +173,14 @@ export default {
   },
   typescript: {
     color: '#3178C6',
+    height: 12,
     icon: `${devIconPrefix}typescript`,
     label: 'TypeScript',
     link: 'https://www.typescriptlang.org/',
   },
   vite: {
     color: '#646CFF',
+    height: 14,
     icon: `${devIconPrefix}vitejs`,
     label: 'Vite',
     link: 'https://vite.dev/',
