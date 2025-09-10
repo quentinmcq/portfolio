@@ -23,7 +23,7 @@
     "@mdi/font": "^7.4.47",
     "@neoconfetti/vue": "^2.2.1",
     "aos": "^2.3.4",
-    "globals": "^16.3.0",
+    "globals": "^16.4.0",
     "pathe": "^2.0.3",
     "roboto-fontface": "^0.10.0",
     "typescript": "^5.9.2",
