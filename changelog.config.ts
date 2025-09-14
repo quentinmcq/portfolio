@@ -5,7 +5,4 @@ export default {
       '^chore\\(deps\\):',
     ],
   },
-  contributors: {
-    exclude: ['release workflow', 'github-actions[bot]'],
-  },
 }

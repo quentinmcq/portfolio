@@ -28,8 +28,8 @@ jobs:
 
       - name: Initialize Git user
         run: |
-          git config --global user.name "Quentin Macq"
-          git config --global user.email "quentin.macq@outlook.fr"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Release
         run: pnpm release
