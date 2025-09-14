@@ -1,1 +1,1 @@
-pnpm lint && pnpm typecheck && pnpm test:unit run
+pnpm lint && pnpm typecheck && pnpm test

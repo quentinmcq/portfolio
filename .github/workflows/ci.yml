@@ -9,23 +9,20 @@ on:
       - 'main'
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Run actions/checkout@master
-        uses: actions/checkout@master
+      - uses: actions/checkout@master
 
-      - name: Enable corepack (allow to use pnpm)
-        run: npm install -g corepack@latest && corepack enable
-
-      - name: actions/setup-node@master
-        uses: actions/setup-node@master
+      - uses: actions/setup-node@master
         with:
-          node-version: 23
+          node-version: 24
+
+      - run: npm i -g --force corepack@latest && corepack enable
 
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
-      - name: Execute vitest tests
-        run: pnpm test:unit
+      - name: Test
+        run: pnpm test

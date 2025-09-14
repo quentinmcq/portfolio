@@ -16,6 +16,6 @@ $ pnpm build
 $ pnpm lint
 
 # Run vitest tests
-$ pnpm test:unit
+$ pnpm test
 ```
 
