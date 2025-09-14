@@ -14,7 +14,7 @@ export default tseslint.config(
       eslint.configs.recommended,
       ...tseslint.configs.recommended,
       ...pluginVue.configs['flat/strongly-recommended'],
-      stylistic.configs['recommended-flat'],
+      stylistic.configs['recommended'],
       stylistic.configs['disable-legacy'],
       perfectionist.configs['recommended-natural'],
       ...oxlint.configs['flat/recommended'],
