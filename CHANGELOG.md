@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.29.5
+
+[compare changes](https://github.com/quentinmcq/portfolio/compare/v2.29.4...v2.29.5)
+
+### 🩹 Fixes
+
+- Tag versionning (2) ([3b1ca4f](https://github.com/quentinmcq/portfolio/commit/3b1ca4f))
+
+### ❤️ Contributors
+
+- Quentin Macq ([@quentinmcq](https://github.com/quentinmcq))
+
 ## v2.29.4
 
 [compare changes](https://github.com/quentinmcq/portfolio/compare/2.29.0...v2.29.4)
