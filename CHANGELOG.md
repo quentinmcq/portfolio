@@ -1,5 +1,32 @@
 # Changelog
 
+## v2.29.4
+
+[compare changes](https://github.com/quentinmcq/portfolio/compare/2.29.0...v2.29.4)
+
+### 🩹 Fixes
+
+- Dependency ([cd63412](https://github.com/quentinmcq/portfolio/commit/cd63412))
+- Remove deprecated config stylistic ([be928dc](https://github.com/quentinmcq/portfolio/commit/be928dc))
+- Ci regression ([3068c76](https://github.com/quentinmcq/portfolio/commit/3068c76))
+- Add deleted release workflow ([2621141](https://github.com/quentinmcq/portfolio/commit/2621141))
+- Identify git user for changelogen ([c44600b](https://github.com/quentinmcq/portfolio/commit/c44600b))
+- Changelogen not working ([3129ee3](https://github.com/quentinmcq/portfolio/commit/3129ee3))
+- Remove duplicate config ([dfbe30b](https://github.com/quentinmcq/portfolio/commit/dfbe30b))
+- Git user in workflow ([d2a81f2](https://github.com/quentinmcq/portfolio/commit/d2a81f2))
+- Tag versionning ([d1ce3b8](https://github.com/quentinmcq/portfolio/commit/d1ce3b8))
+
+### 🏡 Chore
+
+- **release:** V2.29.1 ([dea7599](https://github.com/quentinmcq/portfolio/commit/dea7599))
+- Release ([46ebe94](https://github.com/quentinmcq/portfolio/commit/46ebe94))
+- **release:** V2.29.3 ([6d29843](https://github.com/quentinmcq/portfolio/commit/6d29843))
+
+### ❤️ Contributors
+
+- Quentin Macq ([@quentinmcq](https://github.com/quentinmcq))
+- Release Workflow ([@quentinmcq](https://github.com/quentinmcq))
+
 ## v2.29.3
 
 [compare changes](https://github.com/quentinmcq/portfolio/compare/2.29.0...v2.29.3)
