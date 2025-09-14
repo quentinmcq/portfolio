@@ -26,11 +26,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
-      - name: Initialize Git user
-        run: |
-          git config --global user.email "quentin.macq@outlook.fr"
-          git config --global user.name "Release Workflow"
-
       - name: Release
         run: pnpm release
 
