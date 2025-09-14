@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.29.6
+
+[compare changes](https://github.com/quentinmcq/portfolio/compare/v2.29.5...v2.29.6)
+
+### 🩹 Fixes
+
+- Workflow user ([6feba30](https://github.com/quentinmcq/portfolio/commit/6feba30))
+
+### ❤️ Contributors
+
+- Quentin Macq ([@quentinmcq](https://github.com/quentinmcq))
+
 ## v2.29.5
 
 [compare changes](https://github.com/quentinmcq/portfolio/compare/v2.29.4...v2.29.5)
