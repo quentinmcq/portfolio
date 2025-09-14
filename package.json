@@ -15,7 +15,7 @@
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "lint": "oxlint && eslint --fix --cache",
-    "release": "changelogen --release",
+    "release": "changelogen --release && git push --follow-tags",
     "prepare": "husky"
   },
   "dependencies": {
