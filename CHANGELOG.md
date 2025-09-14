@@ -1,5 +1,22 @@
 # Changelog
 
+## v2.29.1
+
+[compare changes](https://github.com/quentinmcq/portfolio/compare/2.29.0...v2.29.1)
+
+### 🩹 Fixes
+
+- Dependency ([cd63412](https://github.com/quentinmcq/portfolio/commit/cd63412))
+- Remove deprecated config stylistic ([be928dc](https://github.com/quentinmcq/portfolio/commit/be928dc))
+- Ci regression ([3068c76](https://github.com/quentinmcq/portfolio/commit/3068c76))
+- Add deleted release workflow ([2621141](https://github.com/quentinmcq/portfolio/commit/2621141))
+- Identify git user for changelogen ([c44600b](https://github.com/quentinmcq/portfolio/commit/c44600b))
+- Changelogen not working ([3129ee3](https://github.com/quentinmcq/portfolio/commit/3129ee3))
+
+### ❤️ Contributors
+
+- Quentin Macq ([@quentinmcq](https://github.com/quentinmcq))
+
 ## [2.29.0](https://github.com/quentinmcq/portfolio/compare/2.28.0...2.29.0) (2025-07-21)
 
 ### 🚀 Enhancements
