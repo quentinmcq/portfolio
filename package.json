@@ -29,7 +29,7 @@
     "vue-gtag": "^3.6.1",
     "vue-i18n": "^11.1.12",
     "vue-recaptcha": "3.0.0-alpha.6",
-    "vue-tsc": "^3.0.8",
+    "vue-tsc": "^3.1.0",
     "vuetify": "^3.10.3",
     "webfontloader": "^1.6.28"
   },
