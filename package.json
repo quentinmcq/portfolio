@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "packageManager": "pnpm@10.18.1",
+  "packageManager": "pnpm@10.18.2",
   "engines": {
     "node": "^24.10.0"
   },
@@ -38,7 +38,7 @@
     "@iconify/vue": "^5.0.0",
     "@stylistic/eslint-plugin": "^5.4.0",
     "@types/aos": "^3.0.7",
-    "@types/node": "^24.7.0",
+    "@types/node": "^24.7.1",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.8.1",
