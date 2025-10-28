@@ -56,7 +56,7 @@
     "typescript-eslint": "^8.46.2",
     "vite": "7.1.12",
     "vite-plugin-vuetify": "^2.1.2",
-    "vitest": "^3.2.4",
+    "vitest": "^4.0.4",
     "vue-eslint-parser": "^10.2.0"
   }
 }
