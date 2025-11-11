@@ -11,7 +11,7 @@ export function initI18n(app: App<Element>) {
     fallbackWarn: false,
     globalInjection: true,
     legacy: false,
-    locale: localStorage?.getItem('lang') || 'fr',
+    locale: localStorage.getItem('lang') || 'fr',
     messages: {
       en,
       fr,
