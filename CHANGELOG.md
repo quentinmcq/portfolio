@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.29.7
+
+[compare changes](https://github.com/quentinmcq/portfolio/compare/v2.29.6...v2.29.7)
+
+### 🩹 Fixes
+
+- Local storage not defined ([af8e4a8](https://github.com/quentinmcq/portfolio/commit/af8e4a8))
+
+### ❤️ Contributors
+
+- Quentin Macq ([@quentinmcq](https://github.com/quentinmcq))
+
 ## v2.29.6
 
 [compare changes](https://github.com/quentinmcq/portfolio/compare/v2.29.5...v2.29.6)
