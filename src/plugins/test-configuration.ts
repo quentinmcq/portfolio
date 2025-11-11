@@ -12,6 +12,7 @@ export const vuetifyInstanceTest = createVuetify({
 export const i18nInstanceTest = createI18n({
   fallbackLocale: 'fr',
   globalInjection: true,
+  legacy: false,
   locale: localStorage.getItem?.('lang') || 'fr',
 })
 

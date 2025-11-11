@@ -1,4 +1,5 @@
 import eslint from '@eslint/js'
+import { defineConfig } from 'eslint/config';
 import stylistic from '@stylistic/eslint-plugin'
 import oxlint from 'eslint-plugin-oxlint'
 import perfectionist from 'eslint-plugin-perfectionist'
@@ -7,7 +8,7 @@ import globals from 'globals'
 import tseslint from 'typescript-eslint'
 import vueParser from 'vue-eslint-parser'
 
-export default tseslint.config(
+export default defineConfig(
   { ignores: ['*.d.ts', 'dist'] },
   {
     extends: [
