@@ -26,4 +26,4 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Run release
-        run: docker compose run --rm portfolio-dev pnpm release
+        run: docker compose run --rm portfolio-dev sh -c "git config --global --add safe.directory /app && pnpm release"
