@@ -65,7 +65,7 @@ function storeLangToLocalStorage(lang: string): void {
 
 function switchLocale(lang: string): void {
   if (locale.value !== lang) {
-    availableLocales.reverse()
+    availableLocales.value.reverse()
   }
 
   locale.value = lang
