@@ -35,7 +35,7 @@ CMD ["/docker-entrypoint.sh", "nginx", "-g", "daemon off;"]
 FROM node:25.2.1-alpine AS dev
 
 ARG PNPM_VERSION
-RUN apk add --no-cache libc6-compat && npm install -g pnpm@${PNPM_VERSION}
+RUN apk add --no-cache libc6-compat git && npm install -g pnpm@${PNPM_VERSION}
 
 WORKDIR /app
 
