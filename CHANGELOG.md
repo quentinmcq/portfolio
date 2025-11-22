@@ -1,5 +1,28 @@
 # Changelog
 
+## v2.30.0
+
+[compare changes](https://github.com/quentinmcq/portfolio/compare/v2.29.7...v2.30.0)
+
+### 🚀 Enhancements
+
+- Dockerize application ([9b728e0](https://github.com/quentinmcq/portfolio/commit/9b728e0))
+
+### 🩹 Fixes
+
+- Remove deprecations ([1226178](https://github.com/quentinmcq/portfolio/commit/1226178))
+- Add missing git dependency ([4a635e9](https://github.com/quentinmcq/portfolio/commit/4a635e9))
+- Bypass git security check for user ([6428805](https://github.com/quentinmcq/portfolio/commit/6428805))
+- Try fixing git auth ([9d6ed97](https://github.com/quentinmcq/portfolio/commit/9d6ed97))
+
+### 🏡 Chore
+
+- Update dependencies ([2cfc4e8](https://github.com/quentinmcq/portfolio/commit/2cfc4e8))
+
+### ❤️ Contributors
+
+- Quentin Macq ([@quentinmcq](https://github.com/quentinmcq))
+
 ## v2.29.7
 
 [compare changes](https://github.com/quentinmcq/portfolio/compare/v2.29.6...v2.29.7)
