@@ -1,7 +1,7 @@
 ARG PNPM_VERSION=10.23.0
 
 # --- Builder stage ----------------------------------------------------------
-FROM node:25.2-alpine AS builder
+FROM node:25.2.1-alpine AS builder
 
 ARG PNPM_VERSION
 RUN npm install -g pnpm@${PNPM_VERSION}
@@ -15,7 +15,7 @@ COPY . .
 RUN pnpm build
 
 # --- Production stage -------------------------------------------------------
-FROM nginx:1.27-alpine AS production
+FROM nginx:1.29-alpine AS production
 
 ARG PORT=4173
 ENV PORT=${PORT}
@@ -32,7 +32,7 @@ HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
 CMD ["/docker-entrypoint.sh", "nginx", "-g", "daemon off;"]
 
 # --- Development stage ------------------------------------------------------
-FROM node:25.2-alpine AS dev
+FROM node:25.2.1-alpine AS dev
 
 ARG PNPM_VERSION
 RUN apk add --no-cache libc6-compat && npm install -g pnpm@${PNPM_VERSION}
