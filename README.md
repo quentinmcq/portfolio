@@ -18,4 +18,3 @@ $ pnpm lint
 # Run vitest tests
 $ pnpm test
 ```
-

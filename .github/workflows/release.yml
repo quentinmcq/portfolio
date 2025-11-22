@@ -17,19 +17,13 @@ jobs:
         with:
           fetch-depth: 0
 
-      - run: npm i -g --force corepack@latest && corepack enable
-
-      - uses: actions/setup-node@master
-        with:
-          node-version: 25.0.0
-
-      - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+      - name: Build Docker image
+        run: docker compose build portfolio-dev
 
       - name: Initialize Git user
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Release
-        run: pnpm release
+      - name: Run release
+        run: docker compose run --rm portfolio-dev pnpm release

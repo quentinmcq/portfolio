@@ -36,7 +36,7 @@ import { computed } from 'vue'
 
 import { useResponsive } from '@/composables/style/responsive'
 
-const version = APP_VERSION
+const version = import.meta.env.APP_VERSION
 const { chipSize } = useResponsive()
 const currentYear = computed(() => new Date().getFullYear())
 </script>

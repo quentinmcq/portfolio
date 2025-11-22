@@ -1,0 +1,23 @@
+services:
+  portfolio:
+    build:
+      context: .
+      target: production
+      args:
+        PORT: 4173
+    ports:
+      - "4173:4173"
+
+  portfolio-dev:
+    build:
+      context: .
+      target: dev
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_APP_ENV=development
+    hostname: portfolio
+

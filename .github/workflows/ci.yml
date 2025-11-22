@@ -15,14 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
-      - run: npm i -g --force corepack@latest && corepack enable
+      - name: Build Docker image
+        run: docker compose build portfolio-dev
 
-      - uses: actions/setup-node@master
-        with:
-          node-version: 25.0.0
-
-      - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
-
-      - name: Test
-        run: pnpm test
+      - name: Run tests
+        run: docker compose run --rm portfolio-dev pnpm test

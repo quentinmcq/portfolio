@@ -1,0 +1,14 @@
+node_modules
+.pnpm-store
+.git
+.gitignore
+.github
+.husky
+.idea
+.vscode
+.eslintcache
+dist
+coverage
+*.log
+.DS_Store
+

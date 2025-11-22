@@ -9,7 +9,7 @@
   "author": "Quentin Macq",
   "private": true,
   "scripts": {
-    "dev": "vite --open",
+    "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest run",
@@ -34,7 +34,7 @@
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.0",
+    "@eslint/js": "^9.39.1",
     "@iconify/vue": "^5.0.0",
     "@stylistic/eslint-plugin": "^6.0.0-beta.1",
     "@types/aos": "^3.0.7",
@@ -43,7 +43,7 @@
     "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.8.1",
     "changelogen": "^0.6.2",
-    "eslint": "^10.0.0-alpha.0",
+    "eslint": "^9.39.1",
     "eslint-plugin-oxlint": "^1.29.0",
     "eslint-plugin-perfectionist": "^4.15.1",
     "eslint-plugin-vue": "^10.6.0",

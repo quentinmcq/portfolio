@@ -22,3 +22,6 @@ tsconfig.tsbuildinfo
 # Eslint
 eslint-typegen.d.ts
 .eslintcache
+
+# PNPM
+.pnpm-store
