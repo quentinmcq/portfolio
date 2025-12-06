@@ -1,9 +1,11 @@
 <template class="skill-chip">
   <v-chip
-    class="skill-chip__config"
     :color="color ?? chipConfig.color"
     :size="chipSize"
     :href="chipConfig.link"
+    variant="tonal"
+    class="skill-chip__config font-weight-bold"
+    :style="`box-shadow: 0 0 10px ${color ?? chipConfig.color}40`"
   >
     <template
       #prepend

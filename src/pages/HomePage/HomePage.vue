@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <TheScrollTop />
+  <div class="home-page">
     <PresentationPage />
     <SkillPage />
     <ExperiencePage />
@@ -11,7 +10,6 @@
 </template>
 
 <script setup lang="ts">
-import TheScrollTop from '@/components/TheScrollTop/TheScrollTop.vue'
 import ContactPage from '@/pages/ContactPage/ContactPage.vue'
 import ExperiencePage from '@/pages/ExperiencePage/ExperiencePage.vue'
 import HobbyPage from '@/pages/HobbyPage/HobbyPage.vue'

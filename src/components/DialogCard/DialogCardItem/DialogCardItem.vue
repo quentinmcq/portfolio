@@ -1,84 +1,108 @@
 <template>
   <v-col
     class="dialog-card-item"
-    md="6"
+    cols="12"
+    sm="6"
+    md="4"
+    lg="3"
   >
-    <div class="card-animation">
-      <v-card
-        color="#f4f4f4"
-        class="dialog-card-item__card"
-        :data-aos="animation"
-        link
-      >
-        <div @click="dialog = true">
-          <GenericImage
-            :src="path"
-            :lazy-src="path"
-            :alt="item.cover"
-            height="180"
-            cover
-          />
+    <div
+      class="glass-card pa-0 overflow-hidden h-100 position-relative group"
+      data-aos="fade-up"
+      style="min-height: 300px; cursor: pointer;"
+      @click="dialog = true"
+    >
+      <!-- Image Background -->
+      <GenericImage
+        :src="path"
+        :lazy-src="path"
+        :alt="item.cover"
+        cover
+        class="w-100 h-100 position-absolute top-0 left-0 transition-transform"
+        style="transition: transform 0.5s ease;"
+      />
 
-          <v-card-title class="dialog-card-item__card__title pt-3">
-            {{ item.title }}
-            <span v-if="item.year">({{ item.year }})</span>
-          </v-card-title>
+      <!-- Overlay Gradient -->
+      <div
+        class="position-absolute w-100 h-100 top-0 left-0"
+        style="background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.4) 50%, transparent 100%);"
+      />
 
-          <v-card-text
-            v-if="item.subtitle"
-            class="dialog-card-item__card__subtitle"
-          >
-            {{ item.subtitle }}
-          </v-card-text>
+      <!-- Content (Bottom aligned) -->
+      <div class="position-absolute bottom-0 w-100 pa-6">
+        <h3 class="text-white font-weight-bold text-h6 mb-1">
+          {{ item.title }}
+        </h3>
+        <div
+          class="text-primary text-subtitle-2 mb-2"
+          v-if="item.year"
+        >
+          {{ item.year }}
         </div>
-      </v-card>
+        <p class="text-grey-lighten-2 text-body-2 text-truncate">
+          {{ item.subtitle }}
+        </p>
+      </div>
 
+      <!-- Popin Dialog -->
       <v-dialog
         v-model="dialog"
         :transition
         width="auto"
+        max-width="800"
       >
         <v-card
-          class="dialog-card-item__popin"
-          color="#f4f4f4"
+          color="#0f172a"
+          class="border-thin glass-border"
         >
-          <div class="dialog-card-item__popin__cross-icon">
-            <v-icon
-              class="cross-icon"
-              color="white"
+          <div class="position-relative">
+            <GenericImage
+              :src="path"
+              :lazy-src="path"
+              :alt="item.cover"
+              height="300"
+              cover
+            />
+            <v-btn
               icon="mdi-close"
-              right
-              size="30"
-              @click="dialog = false"
+              variant="text"
+              color="white"
+              class="position-absolute top-0 right-0 ma-4 bg-black-alpha"
+              @click.stop="dialog = false"
             />
           </div>
 
-          <v-card-text>
-            {{ item.description }}
+          <v-card-text class="pa-6">
+            <h2 class="text-h4 font-weight-bold text-white mb-4">
+              {{ item.title }}
+            </h2>
 
-            <!-- Overloads the component with additional custom content (chips, logos, ...) -->
+            <p class="text-body-1 text-grey-lighten-1 mb-6">
+              {{ item.description }}
+            </p>
+
+            <!-- Custom Content Slot -->
             <slot name="chipsAndLinks" />
+
+            <div class="d-flex justify-center mt-6">
+              <v-btn
+                v-if="item.link"
+                :href="item.link"
+                target="_blank"
+                color="primary"
+                variant="flat"
+                prepend-icon="mdi-open-in-new"
+                @click="sendFindOutMoreButtonClickAnalyticsEvent"
+              >
+                {{ $t(buttonText) }}
+              </v-btn>
+            </div>
+
+            <slot
+              name="imageGallery"
+              v-if="item.hasImages"
+            />
           </v-card-text>
-
-          <v-card-actions class="justify-center">
-            <v-btn
-              :disabled="!item.link"
-              :href="item.link"
-              :size="buttonSize"
-              color="#e52c4d"
-              target="_blank"
-              variant="outlined"
-              @click="sendFindOutMoreButtonClickAnalyticsEvent"
-              :aria-label="$t(buttonText)"
-            >
-              {{ $t(buttonText) }}
-            </v-btn>
-          </v-card-actions>
-
-          <slot
-            name="imageGallery"
-            v-if="item.hasImages"
-          />
         </v-card>
       </v-dialog>
     </div>
@@ -94,7 +118,6 @@ import type { Project } from '@/types/Project'
 import GenericImage from '@/components/GenericImage/GenericImage.vue'
 import { useImagePath } from '@/composables/common/image-path'
 import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics'
-import { useAnimation } from '@/composables/style/animation'
 import { useResponsive } from '@/composables/style/responsive'
 
 const { componentName, customButtonText = false, index, item, transition = 'dialog-bottom-transition' } = defineProps<{
@@ -107,8 +130,6 @@ const { componentName, customButtonText = false, index, item, transition = 'dial
 
 const dialog = ref(false)
 
-const { buttonSize } = useResponsive()
-
 const buttonText = computed(() =>
   customButtonText ? item.button : 'project.find-out-more',
 )
@@ -116,11 +137,6 @@ const buttonText = computed(() =>
 const { path } = useImagePath({
   directory: componentName,
   image: item.cover,
-})
-
-const { animation } = useAnimation({
-  componentType: 'dialog',
-  index,
 })
 
 function sendFindOutMoreButtonClickAnalyticsEvent(): void {
@@ -132,4 +148,14 @@ function sendFindOutMoreButtonClickAnalyticsEvent(): void {
 }
 </script>
 
-<style lang="scss" src="./dialog-card-item.scss" />
+<style lang="scss" scoped>
+.group:hover .transition-transform {
+  transform: scale(1.1);
+}
+.bg-black-alpha {
+  background-color: rgba(0,0,0,0.5);
+}
+.glass-border {
+  border: 1px solid rgba(255,255,255,0.1);
+}
+</style>

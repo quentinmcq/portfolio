@@ -19,11 +19,11 @@
           </div>
           <v-chip
             :size="chipSize"
-            class="footer__version"
-            color="#e52c4d"
-            theme="dark"
+            class="footer__version glass-chip"
+            variant="outlined"
+            color="white"
           >
-            {{ version }}
+            v{{ version }}
           </v-chip>
         </div>
       </v-col>

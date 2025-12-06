@@ -1,29 +1,42 @@
 <template>
   <v-container
     :id="componentName"
-    class="presentation-page"
+    class="presentation-page py-16"
   >
     <CategoryTitle :component-name />
 
-    <v-row data-aos="zoom-in">
-      <v-col>
-        <v-card class="card-animation presentation-page__card-style">
-          <div>
+    <v-row
+      align="center"
+      justify="center"
+      class="mt-8"
+    >
+      <!-- Text Content -->
+      <v-col
+        cols="12"
+        md="7"
+        lg="6"
+        data-aos="fade-right"
+      >
+        <div class="glass-card pa-8 pa-md-12">
+          <h2 class="text-h4 font-weight-bold mb-6 text-gradient">
+            {{ $t('common.firstname') }} {{ $t('common.name') }}
+          </h2>
+
+          <div
+            class="text-body-1 text-grey-lighten-1"
+            style="line-height: 1.8;"
+          >
             <i18n-t
               keypath="presentation.part-1"
-              tag="div"
-              class="presentation-page__card-spacing"
+              tag="p"
+              class="mb-4"
               scope="global"
             >
               <template #name>
-                <a
-                  :href="presentations[0].link"
-                  class="presentation-page__link"
-                  target="_blank"
-                >{{ $t('common.firstname') }} {{ $t('common.name') }}
-                </a>
+                <span class="font-weight-bold text-white">
+                  {{ $t('common.firstname') }} {{ $t('common.name') }}
+                </span>
               </template>
-
               <template #age>
                 {{ useAge() }}
               </template>
@@ -31,49 +44,43 @@
 
             <i18n-t
               keypath="presentation.part-2"
-              tag="div"
-              class="presentation-page__card-spacing"
+              tag="p"
+              class="mb-4"
               scope="global"
             >
               <template #symfony>
                 <a
                   href="https://symfony.com/"
-                  class="presentation-page__link"
+                  class="text-primary text-decoration-none font-weight-medium"
                   target="_blank"
-                  rel="noopener"
-                >
-                  {{ $t('common.symfony') }}
-                </a>
+                >Symfony</a>
               </template>
-
               <template #nuxt>
                 <a
                   href="https://nuxt.com/"
-                  class="presentation-page__link"
+                  class="text-primary text-decoration-none font-weight-medium"
                   target="_blank"
-                  rel="noopener"
-                >
-                  {{ $t('common.nuxt') }}</a>
+                >Nuxt</a>
               </template>
             </i18n-t>
 
-            <div>
+            <p class="mb-6">
               {{ $t('presentation.part-3') }}
-            </div>
+            </p>
           </div>
 
-          <div
-            class="text-center mt-4"
-            data-aos="fade-up"
-          >
+          <div class="d-flex flex-wrap ga-4 mt-8">
             <PresentationPageButton
               v-for="(presentation, index) in presentations"
               :key="index"
               :presentation
             />
           </div>
-        </v-card>
+        </div>
       </v-col>
+
+      <!-- Visual/Image Column (could be added here later or just centered text for now if no image) -->
+      <!-- Keeping it centered unique card for now as per design but cleaner -->
     </v-row>
   </v-container>
 </template>

@@ -1,8 +1,7 @@
 <template>
   <v-toolbar
     :class="{ navbar__transition: visible }"
-    class="navbar"
-    color="#273142"
+    class="navbar pr-4"
     elevation="0"
   >
     <v-toolbar-title>
@@ -21,8 +20,19 @@
 
     <v-spacer />
 
+    <div class="navbar__desktop-menu d-none d-md-flex align-center">
+      <a
+        v-for="(item, index) in $tm('menu')"
+        :key="index"
+        class="navbar__link-desktop ml-6"
+        @click="scrollToSection(item.link)"
+      >
+        {{ item.title }}
+      </a>
+    </div>
+
     <v-app-bar-nav-icon
-      class="navbar__nav-icon"
+      class="navbar__nav-icon d-md-none"
       @click="toggleMenu"
       aria-label="bouton de menu"
     />
@@ -84,7 +94,11 @@ function scrollToSection(anchor: string): void {
 
   link.scrollIntoView({ behavior: 'smooth' })
 
-  toggleMenu()
+  // Only toggle if we are on mobile (drawer is active) or handle via display check
+  // Best check: if drawer is true, close it.
+  if (drawer.value) {
+    toggleMenu()
+  }
 }
 
 function sendMenuClickAnalyticsEvent(): void {

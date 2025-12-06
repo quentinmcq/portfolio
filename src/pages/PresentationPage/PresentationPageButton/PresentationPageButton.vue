@@ -1,12 +1,12 @@
 <template class="presentation-page-button">
   <v-btn
-    class="presentation-page-button__config"
-    theme="dark"
+    class="glass-chip font-weight-bold"
     :href="presentation.link"
     :target="target"
-    :color="presentation.color"
+    color="white"
     :size="buttonSize"
     :prepend-icon="icon"
+    variant="outlined"
     @click="sendEventOnButtonClick"
     data-aos="zoom-in"
     :aria-label="presentation.label"

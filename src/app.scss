@@ -1,5 +1,58 @@
+:root {
+  --font-primary: 'Inter', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+
+  --color-bg-base: #0b0e14;
+  --color-bg-surface: #151b26;
+  --color-text-main: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  --color-primary: #38bdf8;
+  --color-primary-glow: rgba(56, 189, 248, 0.5);
+
+  --glass-surface: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+}
+
 .app {
-  background: $metal-blue;
+  background: radial-gradient(circle at 10% 20%, #1e293b 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, #172554 0%, transparent 40%),
+    var(--color-bg-base);
+  min-height: 100vh;
+  color: var(--color-text-main);
+  font-family: var(--font-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.text-display {
+  font-family: var(--font-display);
+}
+
+.glass-card {
+  background: var(--glass-surface);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .grecaptcha-badge {

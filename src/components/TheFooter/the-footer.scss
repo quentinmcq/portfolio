@@ -1,5 +1,6 @@
 .footer {
-  background: $metal-blue;
+  background: var(--color-bg-base);
+  border-top: 1px solid var(--glass-border);
 
   &__credit {
     padding-top: 18px;

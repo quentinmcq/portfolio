@@ -5,6 +5,9 @@
   transition: all 0.5s ease;
   transform: translateY(-100px);
   opacity: 0;
+  background: rgba(11, 14, 20, 0.7) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
 
   :deep(.v-toolbar-title__placeholder) {
     overflow: initial;
@@ -18,14 +21,15 @@
   &__full-name {
     cursor: pointer;
     margin-right: 10px;
-    color: $whitesmoke;
-    font-weight: bold;
-    font-size: 15px;
-    letter-spacing: 1px;
+    color: var(--color-text-main);
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
+    font-family: var(--font-display);
 
-    @media (min-width: $md) {
-      font-size: 18px;
+    @media (min-width: 960px) {
+      font-size: 1.25rem;
     }
 
     &:last-child {
@@ -34,12 +38,29 @@
   }
 
   &__first-letter {
-    padding-right: 0.5px;
-    color: $cherry-red;
+    color: var(--color-primary);
   }
 
   &__nav-icon {
-    color: $whitesmoke !important;
+    color: var(--color-text-main) !important;
+  }
+
+  &__link-desktop {
+    color: var(--color-text-muted);
+    font-family: var(--font-primary);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      color: var(--color-primary);
+      text-shadow: 0 0 8px var(--color-primary-glow);
+    }
   }
 
   &__link-list {
@@ -47,36 +68,24 @@
     padding-top: 100px;
     text-transform: uppercase;
     list-style-type: none;
-    font-size: 25px;
-    font-family: Lekton, sans-serif;
-    letter-spacing: 2.5pt;
+    font-size: 1.5rem;
+    font-family: var(--font-display);
+    letter-spacing: 0.1em;
     font-weight: 700;
+    text-align: center;
   }
 
   &__link {
-    display: block;
-    padding-bottom: 0.6em;
-    padding-left: 1.6em;
-    color: #fff;
+    display: inline-block;
+    padding: 1rem 0;
+    color: var(--color-text-main);
     text-decoration: none;
-    max-width: fit-content;
-
-    @media only screen and (min-width: 390px) and (orientation: landscape) {
-      padding-left: 3.1em;
-    }
+    transition: transform 0.2s;
 
     &:hover {
       cursor: pointer;
-      color: #e52c4d !important;
-      transform: scale(1.06);
-    }
-
-    @media (min-width: $md) {
-      font-size: 25px;
-    }
-
-    @media (min-width: $lg) {
-      font-size: 30px;
+      color: var(--color-primary) !important;
+      transform: scale(1.05);
     }
   }
 }

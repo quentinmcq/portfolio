@@ -7,7 +7,10 @@
         <TheNavbar />
         <TheHeader />
 
-        <v-container :style="appStyle">
+        <v-container
+          fluid
+          class="pa-0"
+        >
           <HomePage />
         </v-container>
 
@@ -32,7 +35,6 @@ import HomePage from '@/pages/HomePage/HomePage.vue'
 useRecaptchaProvider()
 
 onMounted(() => sendEventOnFirstPageLoading())
-const { appStyle } = useResponsive()
 
 function sendEventOnFirstPageLoading(): void {
   useGoogleAnalyticsEvent({

@@ -1,7 +1,7 @@
 <template>
   <v-container
     :id="componentName"
-    class="contact-page"
+    class="contact-page py-16"
   >
     <CategoryTitle :component-name />
 
@@ -12,11 +12,16 @@
 
     <v-row
       align="center"
-      data-aos="zoom-in"
+      data-aos="fade-up"
       justify="center"
+      class="mt-8"
     >
-      <v-col>
-        <v-card class="contact-page__card">
+      <v-col
+        cols="12"
+        md="8"
+        lg="6"
+      >
+        <div class="glass-card pa-8 pa-md-12">
           <v-form
             ref="form"
             v-model="valid"
@@ -26,37 +31,37 @@
             <v-text-field
               :label="$t('contact.name')"
               :rules="nameRules"
-              class="contact-page__form__field"
-              clearable
-              color="#273142"
+              class="mb-4 glass-input"
+              color="primary"
               required
               type="text"
               name="name"
-              variant="underlined"
+              variant="outlined"
+              bg-color="transparent"
             />
 
             <v-text-field
               :counter="10"
               :label="$t('contact.phone-number')"
               :rules="phoneRules"
-              class="contact-page__form__field"
-              clearable
-              color="#273142"
+              class="mb-4 glass-input"
+              color="primary"
               type="tel"
               name="phone"
-              variant="underlined"
+              variant="outlined"
+              bg-color="transparent"
             />
 
             <v-text-field
               :label="$t('contact.mail-address')"
               :rules="emailRules"
-              class="contact-page__form__field"
-              clearable
-              color="#273142"
+              class="mb-4 glass-input"
+              color="primary"
               required
               type="email"
               name="email"
-              variant="underlined"
+              variant="outlined"
+              bg-color="transparent"
             />
 
             <v-textarea
@@ -64,23 +69,24 @@
               :rows="textAreaRows"
               :rules="messageRules"
               auto-grow
-              class="contact-page__form__field"
-              clearable
-              color="#273142"
+              class="mb-6 glass-input"
+              color="primary"
               required
               type="text"
               name="message"
-              variant="underlined"
+              variant="outlined"
+              bg-color="transparent"
             />
 
-            <v-container class="text-center">
+            <div class="text-center d-flex justify-center ga-4">
               <v-btn
                 id="message-status"
                 :aria-label="$t('contact.send')"
                 :loading
                 :size="buttonSize"
-                color="#e52c4d"
+                color="primary"
                 type="submit"
+                class="flex-grow-1"
               >
                 {{ $t('contact.send') }}
               </v-btn>
@@ -88,16 +94,15 @@
               <v-btn
                 :aria-label="$t('contact.erase')"
                 :size="buttonSize"
-                class="ml-4"
-                color="#273142"
+                color="white"
                 variant="outlined"
                 @click="resetForm"
               >
                 {{ $t('contact.erase') }}
               </v-btn>
-            </v-container>
+            </div>
           </v-form>
-        </v-card>
+        </div>
       </v-col>
     </v-row>
   </v-container>

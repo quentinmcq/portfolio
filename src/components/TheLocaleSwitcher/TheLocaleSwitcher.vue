@@ -8,14 +8,15 @@
     >
       <template #activator="{ props }">
         <v-btn
-          color="#e52c4d"
+          variant="text"
+          class="text-body-2"
           v-bind="props"
           aria-label="Choix de la langue"
         >
           <v-icon
             color="white"
-            dense
             icon="mdi-translate"
+            class="mr-1"
           />
           <v-icon
             color="white"
@@ -65,7 +66,7 @@ function storeLangToLocalStorage(lang: string): void {
 
 function switchLocale(lang: string): void {
   if (locale.value !== lang) {
-    availableLocales.value.reverse()
+    availableLocales.reverse()
   }
 
   locale.value = lang

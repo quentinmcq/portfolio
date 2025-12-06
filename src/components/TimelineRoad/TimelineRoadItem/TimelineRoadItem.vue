@@ -1,101 +1,54 @@
 <template>
   <v-timeline-item
-    dot-color="#e52c4d"
-    :size="timelineSize"
+    :dot-color="dotColor"
+    class="timeline-road-item"
+    fill-dot
+    size="small"
   >
     <template #opposite>
-      <span class="timeline-item__year">{{ item.year }}</span>
-    </template>
-    <v-card
-      class="timeline-item__card"
-      color="#f4f4f4"
-      :data-aos="animation"
-    >
-      <div class="timeline-item__thumbnail-container">
-        <a
-          :href="item.link"
-          target="_blank"
-          @click="sendTimelineCardClickAnalyticsEvent"
-        >
-          <GenericImage
-            class="image-animation"
-            :src="path"
-            :lazy-src="path"
-            :alt="item.cover"
-            cover
-          />
-        </a>
+      <div
+        class="text-body-2 font-weight-bold text-grey-lighten-1"
+        :class="index % 2 === 0 ? 'text-right' : 'text-left'"
+      >
+        {{ item.date }}
       </div>
+    </template>
 
-      <v-card-title class="timeline-item__title">
+    <div
+      class="glass-card pa-6"
+      data-aos="fade-up"
+    >
+      <h3 class="text-h6 font-weight-bold text-white mb-1">
         {{ item.title }}
-      </v-card-title>
-
-      <v-card-subtitle
-        class="timeline-item__year"
-        v-if="smAndDown"
-      >
-        {{ item.year }}
-      </v-card-subtitle>
-
-      <v-card-subtitle class="timeline-item__location">
+      </h3>
+      <div class="text-subtitle-2 text-primary mb-2">
         {{ item.location }}
-      </v-card-subtitle>
-
-      <v-card-subtitle
-        class="timeline-item__description"
-        v-if="smAndUp"
-      >
-        <ul>
-          <li
-            v-for="(task, key) in item.tasks"
-            :key
-          >
-            {{ task }}
-          </li>
-        </ul>
-      </v-card-subtitle>
-    </v-card>
+      </div>
+      <div class="text-body-2 text-grey-lighten-2">
+        {{ item.description }}
+      </div>
+    </div>
   </v-timeline-item>
 </template>
 
 <script setup lang="ts">
-import { useDisplay } from 'vuetify'
+import { computed } from 'vue'
 
 import type { Experience } from '@/types/Experience'
 
-import GenericImage from '@/components/GenericImage/GenericImage.vue'
-import { useImagePath } from '@/composables/common/image-path'
-import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics'
-import { useAnimation } from '@/composables/style/animation'
-import { useResponsive } from '@/composables/style/responsive'
-
-const { componentName, index, item } = defineProps<{
+const props = defineProps<{
   componentName: string
   index: number
   item: Experience
 }>()
 
-const { timelineSize } = useResponsive()
-const { smAndDown, smAndUp } = useDisplay()
-
-const { path } = useImagePath({
-  directory: componentName,
-  image: item.cover,
-})
-
-function sendTimelineCardClickAnalyticsEvent(): void {
-  useGoogleAnalyticsEvent({
-    action: `timeline-card:click`,
-    category: componentName,
-    label: item.title,
-  })
-}
-
-const { animation } = useAnimation({
-  componentType: 'timeline',
-  index,
+const dotColor = computed(() => {
+  return '#38bdf8' // Primary blue
 })
 </script>
 
-<style lang="scss" src="./timeline-road-item.scss" scoped />
+<style lang="scss" scoped>
+:deep(.v-timeline-divider__dot) {
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+}
+</style>

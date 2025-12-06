@@ -50,7 +50,7 @@ export default {
 
   hobby: {
     'list': hobby,
-    'main-title': 'Loisirs',
+    'main-title': 'Hobbies',
   },
 
   languages: {
