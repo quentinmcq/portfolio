@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.30.1
+
+[compare changes](https://github.com/quentinmcq/portfolio/compare/v2.30.0...v2.30.1)
+
+### 🩹 Fixes
+
+- Revert i18n change ([39a51d9](https://github.com/quentinmcq/portfolio/commit/39a51d9))
+
+### ❤️ Contributors
+
+- Quentin Macq ([@quentinmcq](https://github.com/quentinmcq))
+
 ## v2.30.0
 
 [compare changes](https://github.com/quentinmcq/portfolio/compare/v2.29.7...v2.30.0)
