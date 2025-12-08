@@ -54,7 +54,7 @@
     "sass-embedded": "^1.93.3",
     "sass-loader": "^16.0.6",
     "typescript-eslint": "^8.48.1",
-    "vite": "7.2.6",
+    "vite": "7.2.7",
     "vite-plugin-vuetify": "^2.1.2",
     "vitest": "^4.0.15",
     "vue-eslint-parser": "^10.2.0"
