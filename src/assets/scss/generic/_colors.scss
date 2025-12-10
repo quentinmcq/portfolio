@@ -1,3 +1,8 @@
+// ============================================
+// Modern Color System - UX/UI Portfolio
+// ============================================
+
+// Base Colors (Legacy - kept for compatibility)
 $cherry-red: #e52c4d;
 $dark-red: #d21a43;
 $grey: #808080FF;
@@ -5,3 +10,60 @@ $metal-blue: #273142;
 $white: #fff;
 $whitesmoke: #f4f4f4;
 $black: #000000;
+
+// Modern Primary Colors (HSL for better manipulation)
+$primary-hue: 345;
+$primary-sat: 80%;
+$primary-light: 55%;
+$primary: hsl($primary-hue, $primary-sat, $primary-light); // Modern red-pink
+$primary-dark: hsl($primary-hue, $primary-sat, 45%);
+$primary-light-variant: hsl($primary-hue, $primary-sat, 65%);
+
+// Accent Colors
+$accent-purple: hsl(280, 70%, 60%);
+$accent-blue: hsl(220, 85%, 60%);
+$accent-cyan: hsl(190, 80%, 55%);
+$accent-pink: hsl(330, 75%, 65%);
+
+// Gradients
+$gradient-primary: linear-gradient(135deg, $primary 0%, $accent-pink 100%);
+$gradient-accent: linear-gradient(135deg, $accent-purple 0%, $accent-blue 50%, $accent-cyan 100%);
+$gradient-dark: linear-gradient(135deg, #1a1f2e 0%, #273142 50%, #2d3748 100%);
+$gradient-glow: radial-gradient(circle at 50% 50%, rgba($primary, 0.3) 0%, transparent 70%);
+
+// Glassmorphism Colors
+$glass-white: rgba(255, 255, 255, 0.1);
+$glass-white-border: rgba(255, 255, 255, 0.18);
+$glass-dark: rgba(0, 0, 0, 0.2);
+$glass-dark-border: rgba(255, 255, 255, 0.1);
+
+// Background Colors
+$bg-primary: #0f1419;
+$bg-secondary: #1a1f2e;
+$bg-tertiary: #273142;
+$bg-card: rgba(65, 80, 105, 0.92); // Much lighter for excellent contrast
+
+// Text Colors
+$text-primary: #ffffff;
+$text-secondary: rgba(255, 255, 255, 0.9); // Much lighter for better readability
+$text-muted: rgba(255, 255, 255, 0.7);
+$text-disabled: rgba(255, 255, 255, 0.5);
+
+// Border Colors
+$border-subtle: rgba(255, 255, 255, 0.08);
+$border-default: rgba(255, 255, 255, 0.12);
+$border-strong: rgba(255, 255, 255, 0.2);
+
+// Shadow Colors
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
+$shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.2);
+$shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.3);
+$shadow-glow: 0 0 20px rgba($primary, 0.4);
+$shadow-glow-strong: 0 0 40px rgba($primary, 0.6);
+
+// State Colors
+$success: hsl(142, 70%, 50%);
+$warning: hsl(45, 95%, 55%);
+$error: hsl(0, 75%, 60%);
+$info: hsl(200, 80%, 55%);

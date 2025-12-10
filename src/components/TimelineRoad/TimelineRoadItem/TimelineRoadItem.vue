@@ -7,8 +7,8 @@
       <span class="timeline-item__year">{{ item.year }}</span>
     </template>
     <v-card
-      class="timeline-item__card"
-      color="#f4f4f4"
+      class="timeline-item__card card-animation"
+      color="transparent"
       :data-aos="animation"
     >
       <div class="timeline-item__thumbnail-container">

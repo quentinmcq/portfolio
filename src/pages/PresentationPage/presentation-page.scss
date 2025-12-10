@@ -1,41 +1,100 @@
 .presentation-page {
   &__link {
-    color: #e52c4d;
-    font-weight: bold;
+    color: $primary;
+    font-weight: 700;
     text-decoration: none;
+    position: relative;
+    transition: all var(--transition-base);
+
+    // Animated underline
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: $gradient-primary;
+      transition: width var(--transition-base);
+    }
+
+    &:hover {
+      color: $primary-light-variant;
+
+      &::after {
+        width: 100%;
+      }
+    }
   }
 
   &__wrapper-button {
     @media (min-width: $md) {
-      margin-top: 18px;
+      margin-top: 24px;
     }
   }
 
   &__card-spacing {
-    padding-bottom: 15px;
-
-    @media (min-width: $md) {
-      padding-bottom: 25px;
-    }
-  }
-
-  &__card-style {
-    padding: 30px;
+    padding-bottom: 24px;
+    line-height: 1.9;
     font-size: 16px;
-    text-align: justify;
-    background: $whitesmoke;
 
     @media (min-width: $md) {
+      padding-bottom: 30px;
       font-size: 17px;
     }
 
     @media (min-width: $lg) {
       font-size: 18px;
     }
+  }
+
+  &__card-style {
+    padding: 40px;
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: justify;
+    background: $bg-card;
+    backdrop-filter: blur(var(--blur-md));
+    -webkit-backdrop-filter: blur(var(--blur-md));
+    border: 1px solid $border-subtle;
+    box-shadow: $shadow-lg;
+    border-radius: 16px;
+    transition: all var(--transition-smooth);
+    font-family: var(--font-body);
+    color: $text-secondary;
+
+    @media (min-width: $md) {
+      padding: 50px;
+      font-size: 17px;
+    }
+
+    @media (min-width: $lg) {
+      padding: 60px;
+      font-size: 18px;
+    }
 
     @media (min-width: $xl) {
-      padding: 55px;
-      font-size: 20px;
+      padding: 70px;
+      font-size: 19px;
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: $shadow-xl, $shadow-glow;
+      border-color: $border-default;
+    }
+
+    // Enhanced paragraph spacing
+    >div {
+      margin-bottom: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+
+        @media (min-width: $md) {
+          margin-bottom: 24px;
+        }
+      }
     }
   }
 }

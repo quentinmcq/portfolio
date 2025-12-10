@@ -2,41 +2,243 @@
   padding: 15px;
   flex-basis: auto;
 
+  &__wrapper {
+    position: relative;
+  }
+
   &__card {
+    background: $bg-card;
+    backdrop-filter: blur(var(--blur-md));
+    -webkit-backdrop-filter: blur(var(--blur-md));
+    border: 1px solid $border-subtle;
+    box-shadow: $shadow-md;
+    border-radius: 16px;
+    transition: all var(--transition-smooth);
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: $shadow-xl, $shadow-glow;
+      border-color: $border-default;
+    }
+
     &__title {
-      font-size: 18px;
+      font-size: 19px;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      color: $text-primary !important;
 
       @media (min-width: $md) {
-        font-size: 20px;
+        font-size: 21px;
+      }
+
+      span {
+        color: $text-secondary !important;
       }
     }
 
     &__subtitle {
       max-width: 600px;
-      font-size: 13px;
-      color: $grey;
+      font-size: 14px;
+      color: $text-secondary !important;
       margin-top: -10px;
 
       @media (min-width: $md) {
-        font-size: 14px;
+        font-size: 15px;
         margin-top: -8px;
       }
     }
   }
 
-  &__popin {
-    padding: 15px 5px 20px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+  // Image container with overlay
+  &__image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px 16px 0 0;
+  }
 
-    &__cross-icon {
-      text-align: right;
-      margin-right: 10px;
+  // Hover overlay
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg,
+        rgba(15, 20, 25, 0.75) 0%,
+        rgba(15, 20, 25, 0.95) 100%);
+    backdrop-filter: blur(var(--blur-lg));
+    -webkit-backdrop-filter: blur(var(--blur-lg));
+    opacity: 0;
+    transition: opacity var(--transition-smooth);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    z-index: 2;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__overlay-content {
+    text-align: center;
+    max-width: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    animation: slideUp var(--transition-base) ease-out;
+    padding: 5px;
+
+    // Custom scrollbar
+    &::-webkit-scrollbar {
+      width: 6px;
     }
 
-    .cross-icon {
-      color: $cherry-red !important;
+    &::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 3px;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+
+  &__overlay-title {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 700;
+    color: $text-primary;
+    margin-bottom: 8px;
+    line-height: 1.2;
+
+    @media (min-width: $md) {
+      font-size: 20px;
+    }
+  }
+
+  &__overlay-year {
+    font-size: 14px;
+    color: $text-secondary;
+    font-weight: 500;
+    margin-left: 4px;
+  }
+
+  &__overlay-description {
+    font-family: var(--font-body);
+    font-size: 12px;
+    line-height: 1.4;
+    color: $text-secondary;
+    margin-bottom: 10px;
+    max-height: 50px;
+    overflow-y: auto;
+
+    @media (min-width: $md) {
+      font-size: 13px;
+      max-height: 60px;
+    }
+
+    // Custom scrollbar for description
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 2px;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+
+  &__overlay-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    justify-content: center;
+    margin-bottom: 10px;
+    max-height: 40px;
+    overflow-y: auto;
+
+    // Custom scrollbar for chips
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 2px;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+
+  &__overlay-gallery {
+    margin-bottom: 10px;
+    max-height: 60px;
+    overflow-y: auto;
+
+    // Custom scrollbar
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 2px;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    :deep(img) {
+      max-height: 50px;
+      width: auto;
+      border-radius: 4px;
+    }
+  }
+
+  &__overlay-btn {
+    border-color: $primary !important;
+    color: $text-primary !important;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0.5px;
+    transition: all var(--transition-base);
+    font-size: 12px !important;
+    padding: 8px 16px !important;
+
+    &:hover {
+      background: $primary !important;
+      color: $text-primary !important;
+      transform: translateY(-2px);
+      box-shadow: $shadow-glow;
     }
   }
 

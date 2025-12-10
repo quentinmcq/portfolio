@@ -1,5 +1,8 @@
 .app {
-  background: $metal-blue;
+  background: $bg-primary;
+  background-image: $gradient-dark;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 .grecaptcha-badge {

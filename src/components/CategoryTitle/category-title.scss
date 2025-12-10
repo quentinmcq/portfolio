@@ -1,19 +1,48 @@
 .category-title {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: #fff;
-  font-weight: 800;
-  font-size: 26px;
-  letter-spacing: 5px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: $text-primary;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(28px, 5vw, 40px);
+  letter-spacing: 3px;
   text-align: center;
   text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
+  // Gradient text
+  background: $gradient-primary;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  // Animated underline
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: $gradient-primary;
+    border-radius: 2px;
+    animation: slideUp 0.6s ease-out;
+  }
 
   @media (min-width: $md) {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 60px;
-    margin-bottom: 40px;
-    font-size: 40px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    font-size: clamp(40px, 6vw, 50px);
+
+    &::after {
+      width: 120px;
+      height: 5px;
+    }
   }
 }

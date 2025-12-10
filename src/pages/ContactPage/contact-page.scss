@@ -1,16 +1,107 @@
 .contact-page {
   &__card {
-    padding: 10px 30px !important;
+    padding: 30px 35px !important;
+    background: $bg-card;
+    backdrop-filter: blur(var(--blur-md));
+    -webkit-backdrop-filter: blur(var(--blur-md));
+    border: 1px solid $border-subtle;
+    box-shadow: $shadow-lg;
+    border-radius: 16px;
+    transition: all var(--transition-smooth);
 
     @media (min-width: $md) {
-      padding: 25px 50px !important;
+      padding: 40px 60px !important;
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: $shadow-xl, $shadow-glow;
+      border-color: $border-default;
     }
   }
 
   &__form {
     &__field {
+      color: $text-primary;
+
       @media (min-width: $md) {
-        padding-bottom: 5px;
+        padding-bottom: 8px;
+      }
+
+      :deep(.v-label) {
+        color: rgba(255, 255, 255, 0.8) !important;
+        font-family: var(--font-body);
+      }
+
+      :deep(.v-field__input) {
+        color: #ffffff !important;
+      }
+
+      :deep(input),
+      :deep(textarea) {
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+      }
+
+      :deep(.v-field__outline) {
+        color: $border-default;
+      }
+
+      // Force text color on all possible Vuetify selectors
+      :deep(.v-field--variant-underlined input),
+      :deep(.v-field--variant-underlined textarea) {
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+      }
+
+      :deep(.v-input__control) {
+        color: #ffffff !important;
+      }
+
+      :deep(.v-field__field) {
+        color: #ffffff !important;
+      }
+
+      :deep(.v-text-field input),
+      :deep(.v-textarea textarea) {
+        color: #ffffff !important;
+        caret-color: #ffffff !important;
+      }
+
+      :deep(.v-field__input input),
+      :deep(.v-field__input textarea) {
+        color: #ffffff !important;
+      }
+    }
+  }
+
+  // Modern button styles
+  :deep(.v-btn) {
+    font-family: var(--font-body);
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all var(--transition-base);
+    text-transform: none;
+    letter-spacing: 0.5px;
+
+    &[type="submit"] {
+      background: $gradient-primary !important;
+      box-shadow: $shadow-md;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: $shadow-lg, $shadow-glow;
+      }
+    }
+
+    &[variant="outlined"] {
+      border-color: $border-default;
+      color: $text-primary;
+
+      &:hover {
+        background: rgba($primary, 0.1);
+        border-color: $primary;
+        transform: translateY(-2px);
       }
     }
   }

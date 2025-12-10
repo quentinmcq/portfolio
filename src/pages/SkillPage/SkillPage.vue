@@ -5,22 +5,18 @@
   >
     <CategoryTitle :component-name />
 
-    <v-card
-      class="card-animation skill-page__card"
-      data-aos="zoom-in"
+    <v-row
+      :style="gridStyle"
+      class="skill-page__grid"
+      data-aos="fade-up"
     >
-      <v-row
-        :style="gridStyle"
-        class="skill-page__grid"
-      >
-        <SkillPageItem
-          v-for="(skill, index) in $tm('skill.list')"
-          :key="index"
-          :index
-          :skill
-        />
-      </v-row>
-    </v-card>
+      <SkillPageItem
+        v-for="(skill, index) in $tm('skill.list')"
+        :key="index"
+        :index
+        :skill
+      />
+    </v-row>
   </v-container>
 </template>
 

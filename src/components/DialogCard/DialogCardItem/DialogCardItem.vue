@@ -1,97 +1,93 @@
 <template>
   <v-col
     class="dialog-card-item"
-    md="6"
+    md="12"
+    lg="6"
   >
-    <div class="card-animation">
+    <div class="card-animation dialog-card-item__wrapper">
       <v-card
-        color="#f4f4f4"
+        color="transparent"
         class="dialog-card-item__card"
         :data-aos="animation"
-        link
       >
-        <div @click="dialog = true">
+        <div class="dialog-card-item__image-container">
           <GenericImage
             :src="path"
             :lazy-src="path"
             :alt="item.cover"
-            height="180"
+            height="240"
             cover
           />
-
-          <v-card-title class="dialog-card-item__card__title pt-3">
-            {{ item.title }}
-            <span v-if="item.year">({{ item.year }})</span>
-          </v-card-title>
-
-          <v-card-text
-            v-if="item.subtitle"
-            class="dialog-card-item__card__subtitle"
-          >
-            {{ item.subtitle }}
-          </v-card-text>
-        </div>
-      </v-card>
-
-      <v-dialog
-        v-model="dialog"
-        :transition
-        width="auto"
-      >
-        <v-card
-          class="dialog-card-item__popin"
-          color="#f4f4f4"
-        >
-          <div class="dialog-card-item__popin__cross-icon">
-            <v-icon
-              class="cross-icon"
-              color="white"
-              icon="mdi-close"
-              right
-              size="30"
-              @click="dialog = false"
-            />
+          
+          <!-- Hover Overlay -->
+          <div class="dialog-card-item__overlay">
+            <div class="dialog-card-item__overlay-content">
+              <h3 class="dialog-card-item__overlay-title">
+                {{ item.title }}
+                <span v-if="item.year" class="dialog-card-item__overlay-year">({{ item.year }})</span>
+              </h3>
+              
+              <p class="dialog-card-item__overlay-description">
+                {{ item.description }}
+              </p>
+              
+              <!-- Chips -->
+              <div v-if="item?.chips" class="dialog-card-item__overlay-chips">
+                <SkillChip
+                  v-for="(label, chipIndex) in item?.chips"
+                  :key="chipIndex"
+                  :label
+                  target="_blank"
+                />
+              </div>
+              
+              <!-- Image Gallery for Hobbies -->
+              <div v-if="item.hasImages" class="dialog-card-item__overlay-gallery">
+                <slot name="imageGallery" />
+              </div>
+              
+              <!-- Link Button -->
+              <v-btn
+                v-if="item.link"
+                :href="item.link"
+                :size="buttonSize"
+                color="transparent"
+                class="dialog-card-item__overlay-btn"
+                target="_blank"
+                variant="outlined"
+                @click="sendFindOutMoreButtonClickAnalyticsEvent"
+                :aria-label="$t(buttonText)"
+              >
+                {{ $t(buttonText) }}
+              </v-btn>
+            </div>
           </div>
+        </div>
 
-          <v-card-text>
-            {{ item.description }}
+        <v-card-title class="dialog-card-item__card__title pt-3">
+          {{ item.title }}
+          <span v-if="item.year">({{ item.year }})</span>
+        </v-card-title>
 
-            <!-- Overloads the component with additional custom content (chips, logos, ...) -->
-            <slot name="chipsAndLinks" />
-          </v-card-text>
-
-          <v-card-actions class="justify-center">
-            <v-btn
-              :disabled="!item.link"
-              :href="item.link"
-              :size="buttonSize"
-              color="#e52c4d"
-              target="_blank"
-              variant="outlined"
-              @click="sendFindOutMoreButtonClickAnalyticsEvent"
-              :aria-label="$t(buttonText)"
-            >
-              {{ $t(buttonText) }}
-            </v-btn>
-          </v-card-actions>
-
-          <slot
-            name="imageGallery"
-            v-if="item.hasImages"
-          />
-        </v-card>
-      </v-dialog>
+        <v-card-text
+          v-if="item.subtitle"
+          class="dialog-card-item__card__subtitle"
+        >
+          {{ item.subtitle }}
+        </v-card-text>
+      </v-card>
     </div>
   </v-col>
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed } from 'vue'
 
 import type { Hobby } from '@/types/Hobby'
 import type { Project } from '@/types/Project'
 
 import GenericImage from '@/components/GenericImage/GenericImage.vue'
+import SkillChip from '@/components/SkillChip/SkillChip.vue'
 import { useImagePath } from '@/composables/common/image-path'
 import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics'
 import { useAnimation } from '@/composables/style/animation'
@@ -104,8 +100,6 @@ const { componentName, customButtonText = false, index, item, transition = 'dial
   item: Hobby | Project
   transition?: string
 }>()
-
-const dialog = ref(false)
 
 const { buttonSize } = useResponsive()
 

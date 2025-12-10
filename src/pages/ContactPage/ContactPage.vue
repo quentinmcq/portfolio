@@ -28,7 +28,8 @@
               :rules="nameRules"
               class="contact-page__form__field"
               clearable
-              color="#273142"
+              color="#e52c4d"
+              base-color="#ffffff"
               required
               type="text"
               name="name"
@@ -41,7 +42,8 @@
               :rules="phoneRules"
               class="contact-page__form__field"
               clearable
-              color="#273142"
+              color="#e52c4d"
+              base-color="#ffffff"
               type="tel"
               name="phone"
               variant="underlined"
@@ -52,7 +54,8 @@
               :rules="emailRules"
               class="contact-page__form__field"
               clearable
-              color="#273142"
+              color="#e52c4d"
+              base-color="#ffffff"
               required
               type="email"
               name="email"
@@ -66,7 +69,8 @@
               auto-grow
               class="contact-page__form__field"
               clearable
-              color="#273142"
+              color="#e52c4d"
+              base-color="#ffffff"
               required
               type="text"
               name="message"

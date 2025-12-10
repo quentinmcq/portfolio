@@ -1,18 +1,26 @@
 .footer {
-  background: $metal-blue;
+  background: rgba(15, 20, 25, 0.8);
+  backdrop-filter: blur(var(--blur-md));
+  -webkit-backdrop-filter: blur(var(--blur-md));
+  border-top: 1px solid $border-subtle;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
 
   &__credit {
-    padding-top: 18px;
+    padding-top: 25px;
+    padding-bottom: 10px;
     text-align: center;
   }
 
   &__information {
-    letter-spacing: 1.5pt;
+    letter-spacing: 1pt;
+    font-family: var(--font-body);
   }
 
   &__credit-message {
     font-size: 14px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    color: $text-secondary;
+    line-height: 1.6;
 
     @media (min-width: $xl) {
       font-size: 16px;
@@ -21,6 +29,8 @@
 
   &__copyright {
     font-size: 13px;
+    color: $text-muted;
+    font-weight: 500;
 
     @media (min-width: $xl) {
       font-size: 15px;
@@ -29,8 +39,17 @@
 
   &__version {
     margin-top: 20px;
-    color: $white;
-    font-size: 16px;
-    letter-spacing: 1.5pt;
+    color: $text-primary;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1pt;
+    background: $gradient-primary !important;
+    box-shadow: $shadow-sm;
+    transition: all var(--transition-base);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: $shadow-md, $shadow-glow;
+    }
   }
 }

@@ -1,7 +1,15 @@
 .skill-chip {
   &__config {
-    font-weight: bold;
-    margin: 5px 8px 5px 2px !important;
+    font-weight: 600;
+    font-family: var(--font-body);
+    margin: 6px 10px 6px 2px !important;
+    transition: all var(--transition-base);
+    box-shadow: $shadow-sm;
+
+    &:hover {
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: $shadow-md;
+    }
   }
 }
 

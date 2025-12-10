@@ -31,7 +31,7 @@
   <v-navigation-drawer
     v-model="drawer"
     :style="{ width: drawer ? menuWidth : 0 }"
-    color="#333333"
+    color="rgba(15, 20, 25, 0.95)"
     location="right"
     temporary
   >

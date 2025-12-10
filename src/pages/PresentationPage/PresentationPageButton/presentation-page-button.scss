@@ -1,19 +1,49 @@
 .presentation-page-button {
   &__config {
-    color: $white;
-    width: 98px;
-    margin-top: 11px;
-    margin-right: 8px;
-    margin-left: 8px;
+    color: $text-primary;
+    width: 110px;
+    margin-top: 12px;
+    margin-right: 10px;
+    margin-left: 10px;
     font-size: 13px;
+    font-weight: 600;
+    font-family: var(--font-body);
+    border-radius: 8px;
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+    
+    // Gradient background
+    background: $gradient-primary !important;
+    box-shadow: $shadow-md;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left var(--transition-smooth);
+    }
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: $shadow-lg, $shadow-glow;
+      
+      &::before {
+        left: 100%;
+      }
+    }
 
     @media (min-width: $md) {
-      width: 110px;
+      width: 120px;
       margin-right: 15px;
     }
 
     @media (min-width: $lg) {
-      width: 115px;
+      width: 130px;
       margin-top: 20px;
       margin-right: 15px;
       margin-left: 15px;
@@ -23,10 +53,10 @@
     :deep(.v-btn__prepend) {
       margin-inline-start: 0;
       margin-inline-end: 0;
-      margin-right: 3px;
+      margin-right: 4px;
 
       @media (min-width: $lg) {
-        margin-right: 4px;
+        margin-right: 5px;
       }
     }
   }

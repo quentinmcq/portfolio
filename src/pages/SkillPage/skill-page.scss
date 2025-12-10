@@ -1,14 +1,10 @@
 .skill-page {
-  &__card {
-    padding: 30px;
-    background-color: $whitesmoke;
-
-    @media (min-width: $xl) {
-      padding: 40px;
-    }
-  }
-
   &__grid {
     display: grid;
+    gap: 25px;
+
+    @media (min-width: $md) {
+      gap: 30px;
+    }
   }
 }

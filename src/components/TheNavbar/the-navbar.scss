@@ -2,9 +2,36 @@
   position: fixed;
   z-index: 999;
   width: 100%;
-  transition: all 0.5s ease;
+  transition: all var(--transition-smooth);
   transform: translateY(-100px);
   opacity: 0;
+
+  // Glassmorphism effect
+  background: rgba(15, 20, 25, 0.7) !important;
+  backdrop-filter: blur(var(--blur-lg));
+  -webkit-backdrop-filter: blur(var(--blur-lg));
+  border-bottom: 1px solid $glass-dark-border;
+  box-shadow: $shadow-lg;
+  
+  // Subtle liquid glass effect
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba($primary, 0.03) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: liquidFlow 4s ease-in-out infinite;
+    pointer-events: none;
+    z-index: -1;
+  }
 
   :deep(.v-toolbar-title__placeholder) {
     overflow: initial;
@@ -18,71 +45,87 @@
   &__full-name {
     cursor: pointer;
     margin-right: 10px;
-    color: $whitesmoke;
-    font-weight: bold;
-    font-size: 15px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 20px;
     letter-spacing: 1px;
-    text-transform: uppercase;
+    color: $text-primary;
+    transition: all var(--transition-base);
 
     @media (min-width: $md) {
-      font-size: 18px;
+      font-size: 22px;
     }
 
-    &:last-child {
-      margin-right: 16px;
+    // Glow effect on first letter
+    &::first-letter {
+      color: $primary;
+      text-shadow: 0 0 10px rgba($primary, 0.5);
     }
-  }
 
-  &__first-letter {
-    padding-right: 0.5px;
-    color: $cherry-red;
+    &:hover {
+      color: $primary;
+      transform: scale(1.02);
+    }
   }
 
   &__nav-icon {
-    color: $whitesmoke !important;
+    transition: all var(--transition-base);
+
+    &:hover {
+      transform: rotate(90deg);
+      color: $primary;
+    }
   }
 
-  &__link-list {
-    display: block;
-    padding-top: 100px;
-    text-transform: uppercase;
-    list-style-type: none;
-    font-size: 25px;
-    font-family: Lekton, sans-serif;
-    letter-spacing: 2.5pt;
-    font-weight: 700;
+  &__menu-link-list {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 18px;
   }
 
-  &__link {
-    display: block;
-    padding-bottom: 0.6em;
-    padding-left: 1.6em;
-    color: #fff;
+  &__menu-link {
+    color: $text-primary;
     text-decoration: none;
     max-width: fit-content;
+    position: relative;
+    transition: all var(--transition-base);
 
     @media only screen and (min-width: 390px) and (orientation: landscape) {
       padding-left: 3.1em;
     }
 
+    // Animated underline
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0.4em;
+      left: 1.6em;
+      width: 0;
+      height: 3px;
+      background: $gradient-primary;
+      transition: width var(--transition-base);
+
+      @media only screen and (min-width: 390px) and (orientation: landscape) {
+        left: 3.1em;
+      }
+    }
+
     &:hover {
       cursor: pointer;
-      color: #e52c4d !important;
-      transform: scale(1.06);
+      color: $primary !important;
+      transform: translateX(10px);
+
+      &::after {
+        width: 80%;
+      }
     }
 
     @media (min-width: $md) {
-      font-size: 25px;
-    }
-
-    @media (min-width: $lg) {
-      font-size: 30px;
+      font-size: 20px;
     }
   }
-}
 
-@media only screen and (min-width: 390px) and (orientation: landscape) {
-  :deep(.cross-icon) {
+  &__menu-link-icon {
     padding-top: 0.5em;
     padding-left: 0.8em;
   }
