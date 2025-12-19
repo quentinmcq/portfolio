@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "packageManager": "pnpm@10.26.0",
+  "packageManager": "pnpm@10.26.1",
   "engines": {
     "node": "^25.2.1"
   },
@@ -50,7 +50,7 @@
     "globals": "^16.5.0",
     "happy-dom": "^20.0.11",
     "husky": "^9.1.7",
-    "oxlint": "^1.33.0",
+    "oxlint": "^1.34.0",
     "sass-embedded": "^1.97.0",
     "sass-loader": "^16.0.6",
     "typescript-eslint": "^8.50.0",
