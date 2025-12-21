@@ -27,7 +27,7 @@
     "typescript": "^5.9.3",
     "vue": "^3.6.0-alpha.7",
     "vue-gtag": "^3.6.3",
-    "vue-i18n": "^11.2.2",
+    "vue-i18n": "^11.2.7",
     "vue-recaptcha": "3.0.0-alpha.6",
     "vue-tsc": "^3.2.0",
     "vuetify": "^3.11.4",
