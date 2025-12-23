@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "packageManager": "pnpm@10.26.1",
+  "packageManager": "pnpm@10.26.2",
   "engines": {
     "node": "^25.2.1"
   },
@@ -25,7 +25,7 @@
     "aos": "^2.3.4",
     "roboto-fontface": "^0.10.0",
     "typescript": "^5.9.3",
-    "vue": "^3.6.0-alpha.7",
+    "vue": "^3.6.0-beta.1",
     "vue-gtag": "^3.6.3",
     "vue-i18n": "^11.2.7",
     "vue-recaptcha": "3.0.0-alpha.6",
