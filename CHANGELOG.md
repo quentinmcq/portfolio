@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.30.2
+
+[compare changes](https://github.com/quentinmcq/portfolio/compare/v2.30.1...v2.30.2)
+
+### 🩹 Fixes
+
+- Add ds store to gitignore ([dbb6815](https://github.com/quentinmcq/portfolio/commit/dbb6815))
+
+### ❤️ Contributors
+
+- Quentin Macq ([@quentinmcq](https://github.com/quentinmcq))
+
 ## v2.30.1
 
 [compare changes](https://github.com/quentinmcq/portfolio/compare/v2.30.0...v2.30.1)
