@@ -25,3 +25,6 @@ eslint-typegen.d.ts
 
 # PNPM
 .pnpm-store
+
+# Mac system files
+.DS_Store
