@@ -44,19 +44,19 @@
     "@vue/tsconfig": "^0.8.1",
     "changelogen": "^0.6.2",
     "eslint": "^9.39.2",
-    "eslint-plugin-oxlint": "^1.38.0",
+    "eslint-plugin-oxlint": "^1.39.0",
     "eslint-plugin-perfectionist": "^5.3.1",
     "eslint-plugin-vue": "^10.6.2",
     "globals": "^17.0.0",
     "happy-dom": "^20.1.0",
     "husky": "^9.1.7",
-    "oxlint": "^1.38.0",
+    "oxlint": "^1.39.0",
     "sass-embedded": "^1.97.2",
     "sass-loader": "^16.0.6",
-    "typescript-eslint": "^8.52.0",
+    "typescript-eslint": "^8.53.0",
     "vite": "7.3.1",
     "vite-plugin-vuetify": "^2.1.2",
-    "vitest": "^4.0.16",
+    "vitest": "^4.0.17",
     "vue-eslint-parser": "^10.2.0"
   }
 }
