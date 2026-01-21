@@ -1,7 +1,8 @@
 <template>
   <v-layout>
     <v-footer
-      class="footer"
+      class="footer glass-effect"
+      color="transparent"
       theme="dark"
     >
       <v-col

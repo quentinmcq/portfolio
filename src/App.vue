@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <v-main>
+      <TheBackground />
       <RotateDevice />
 
       <div class="app">
@@ -22,6 +23,7 @@ import { onMounted } from 'vue'
 import { useRecaptchaProvider } from 'vue-recaptcha/head'
 
 import RotateDevice from '@/components/RotateDevice/RotateDevice.vue'
+import TheBackground from '@/components/TheBackground/TheBackground.vue'
 import TheFooter from '@/components/TheFooter/TheFooter.vue'
 import TheHeader from '@/components/TheHeader/TheHeader.vue'
 import TheNavbar from '@/components/TheNavbar/TheNavbar.vue'

@@ -6,7 +6,8 @@
     <CategoryTitle :component-name />
 
     <v-card
-      class="card-animation skill-page__card"
+      class="card-animation skill-page__card glass-effect"
+      color="transparent"
       data-aos="zoom-in"
     >
       <v-row

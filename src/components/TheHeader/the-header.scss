@@ -31,8 +31,12 @@
   &__name {
     padding: 14px;
     line-height: 80px;
-    background: $dark-red;
-    border-radius: 5px;
+    // Glass effect for the highlighted name
+    background: rgba(229, 44, 77, 0.2); // $cherry-red with opacity
+    border: 1px solid rgba(229, 44, 77, 0.5);
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(229, 44, 77, 0.3);
 
     @media (min-width: $lg) {
       padding: 13px 16px;

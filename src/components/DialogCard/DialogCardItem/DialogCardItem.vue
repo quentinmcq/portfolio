@@ -5,8 +5,8 @@
   >
     <div class="card-animation">
       <v-card
-        color="#f4f4f4"
-        class="dialog-card-item__card"
+        class="dialog-card-item__card glass-card"
+        color="transparent"
         :data-aos="animation"
         link
       >
@@ -39,8 +39,8 @@
         width="auto"
       >
         <v-card
-          class="dialog-card-item__popin"
-          color="#f4f4f4"
+          class="dialog-card-item__popin glass-effect"
+          color="rgba(30, 41, 59, 0.95)"
         >
           <div class="dialog-card-item__popin__cross-icon">
             <v-icon

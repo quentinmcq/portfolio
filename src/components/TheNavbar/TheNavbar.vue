@@ -1,8 +1,8 @@
 <template>
   <v-toolbar
     :class="{ navbar__transition: visible }"
-    class="navbar"
-    color="#273142"
+    class="navbar glass-effect"
+    color="transparent"
     elevation="0"
   >
     <v-toolbar-title>
@@ -31,10 +31,14 @@
   <v-navigation-drawer
     v-model="drawer"
     :style="{ width: drawer ? menuWidth : 0 }"
-    color="#333333"
+    class="glass-effect"
+    color="transparent"
     location="right"
     temporary
   >
+    location="right"
+    temporary
+    >
     <v-icon
       class="cross-icon"
       color="white"
