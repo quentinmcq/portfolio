@@ -29,7 +29,7 @@
     "vue-gtag": "^3.6.3",
     "vue-i18n": "^11.2.7",
     "vue-recaptcha": "3.0.0-alpha.6",
-    "vue-tsc": "^3.2.3",
+    "vue-tsc": "^3.2.4",
     "vuetify": "^3.11.7",
     "webfontloader": "^1.6.28"
   },
@@ -48,7 +48,7 @@
     "eslint-plugin-perfectionist": "^5.4.0",
     "eslint-plugin-vue": "^10.7.0",
     "globals": "^17.1.0",
-    "happy-dom": "^20.3.7",
+    "happy-dom": "^20.3.9",
     "husky": "^9.1.7",
     "oxlint": "^1.41.0",
     "sass-embedded": "^1.97.3",
