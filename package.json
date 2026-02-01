@@ -47,7 +47,7 @@
     "eslint-plugin-oxlint": "^1.42.0",
     "eslint-plugin-perfectionist": "^5.4.0",
     "eslint-plugin-vue": "^10.7.0",
-    "globals": "^17.2.0",
+    "globals": "^17.3.0",
     "happy-dom": "^20.4.0",
     "husky": "^9.1.7",
     "oxlint": "^1.42.0",
