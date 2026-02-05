@@ -45,7 +45,7 @@
     "changelogen": "^0.6.2",
     "eslint": "^9.39.2",
     "eslint-plugin-oxlint": "^1.43.0",
-    "eslint-plugin-perfectionist": "^5.4.0",
+    "eslint-plugin-perfectionist": "^5.5.0",
     "eslint-plugin-vue": "^10.7.0",
     "globals": "^17.3.0",
     "happy-dom": "^20.5.0",
