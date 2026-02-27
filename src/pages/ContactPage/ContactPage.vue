@@ -2,6 +2,7 @@
   <v-container
     :id="componentName"
     class="contact-page"
+    fluid
   >
     <CategoryTitle :component-name />
 
@@ -16,7 +17,7 @@
       justify="center"
     >
       <v-col>
-        <v-card class="contact-page__card">
+        <v-card class="contact-page__card glass-card">
           <v-form
             ref="form"
             v-model="valid"
@@ -28,7 +29,7 @@
               :rules="nameRules"
               class="contact-page__form__field"
               clearable
-              color="#273142"
+              color="primary"
               required
               type="text"
               name="name"
@@ -41,7 +42,7 @@
               :rules="phoneRules"
               class="contact-page__form__field"
               clearable
-              color="#273142"
+              color="primary"
               type="tel"
               name="phone"
               variant="underlined"
@@ -52,7 +53,7 @@
               :rules="emailRules"
               class="contact-page__form__field"
               clearable
-              color="#273142"
+              color="primary"
               required
               type="email"
               name="email"
@@ -66,7 +67,7 @@
               auto-grow
               class="contact-page__form__field"
               clearable
-              color="#273142"
+              color="primary"
               required
               type="text"
               name="message"
@@ -79,7 +80,7 @@
                 :aria-label="$t('contact.send')"
                 :loading
                 :size="buttonSize"
-                color="#e52c4d"
+                color="primary"
                 type="submit"
               >
                 {{ $t('contact.send') }}
@@ -89,7 +90,7 @@
                 :aria-label="$t('contact.erase')"
                 :size="buttonSize"
                 class="ml-4"
-                color="#273142"
+                color="white"
                 variant="outlined"
                 @click="resetForm"
               >

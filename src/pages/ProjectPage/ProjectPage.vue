@@ -2,6 +2,7 @@
   <v-container
     :id="componentName"
     class="project"
+    fluid
   >
     <CategoryTitle :component-name />
     <DialogCard

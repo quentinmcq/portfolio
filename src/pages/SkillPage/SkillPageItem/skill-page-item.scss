@@ -1,29 +1,37 @@
 .skill-page-item {
+  &__card {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 4px solid $cherry-red; // Top border accent
+  }
+
   &__title {
-    font-size: 19px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $white;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
 
-    @media (min-width: $xl) {
-      font-size: 22px;
+    // Underline effect
+    &::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 2px;
+      background: $cherry-red;
+      margin: 10px auto 0;
     }
   }
 
-  &__config {
-    font-weight: bold;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-right: 5px;
-  }
+  &__chip {
+    transition: transform 0.2s;
 
-  &__content {
-    color: $cherry-red;
-    font-size: 15px;
-
-    @media (min-width: $xl) {
-      font-size: 17px;
+    &:hover {
+      transform: scale(1.1);
     }
-  }
-
-  &__percentage {
-    color: $whitesmoke;
   }
 }

@@ -17,8 +17,8 @@ const myCustomDarkTheme: ThemeDefinition = {
     background: '#0F172A',
     error: '#EF4444',
     info: '#3B82F6',
-    primary: '#38BDF8',
-    secondary: '#818CF8',
+    primary: '#e52c4d', // Cherry Red (Main)
+    secondary: '#38BDF8', // Sky Blue (Accent)
     success: '#10B981',
     surface: '#1E293B',
     warning: '#F59E0B',

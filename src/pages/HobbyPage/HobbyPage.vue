@@ -1,6 +1,10 @@
 <template>
-  <v-container :id="componentName">
+  <v-container
+    :id="componentName"
+    fluid
+  >
     <CategoryTitle :component-name />
+
     <DialogCard
       :items="allItems"
       :component-name

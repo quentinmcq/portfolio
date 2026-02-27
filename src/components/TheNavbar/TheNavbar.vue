@@ -33,12 +33,7 @@
     :style="{ width: drawer ? menuWidth : 0 }"
     class="glass-effect"
     color="transparent"
-    location="right"
-    temporary
   >
-    location="right"
-    temporary
-    >
     <v-icon
       class="cross-icon"
       color="white"

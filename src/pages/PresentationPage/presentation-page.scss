@@ -1,41 +1,51 @@
 .presentation-page {
-  &__link {
-    color: #e52c4d;
-    font-weight: bold;
-    text-decoration: none;
+  &__card {
+    position: relative;
+    // overflow: hidden; // Removed to prevent text cutting
   }
 
-  &__wrapper-button {
-    @media (min-width: $md) {
-      margin-top: 18px;
+  &__avatar {
+    position: relative;
+
+    // Pulsing or Glow effect behind avatar
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 160px;
+      height: 160px;
+      background: radial-gradient(circle, rgba($cherry-red, 0.4) 0%, transparent 70%);
+      border-radius: 50%;
+      z-index: 0;
+      animation: pulse-avatar 3s infinite ease-in-out;
     }
   }
 
-  &__card-spacing {
-    padding-bottom: 15px;
+  &__content {
+    z-index: 1;
 
-    @media (min-width: $md) {
-      padding-bottom: 25px;
+    p {
+      line-height: 1.8;
+      font-size: 1.1rem;
     }
   }
+}
 
-  &__card-style {
-    padding: 30px;
-    font-size: 16px;
-    text-align: justify;
-    background: $whitesmoke;
+@keyframes pulse-avatar {
+  0% {
+    transform: translate(-50%, -50%) scale(0.95);
+    opacity: 0.5;
+  }
 
-    @media (min-width: $md) {
-      font-size: 17px;
-    }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.8;
+  }
 
-    @media (min-width: $lg) {
-      font-size: 18px;
-    }
-
-    @media (min-width: $xl) {
-      padding: 55px;
-      font-size: 20px;
-    }
+  100% {
+    transform: translate(-50%, -50%) scale(0.95);
+    opacity: 0.5;
   }
 }

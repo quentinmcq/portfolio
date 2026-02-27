@@ -1,21 +1,29 @@
 <template>
-  <v-col class="grid-list-sm">
-    <h3
-      class="skill-page-item__title"
-      data-aos="zoom-in"
+  <v-col
+    cols="12"
+    md="6"
+    lg="4"
+    class="d-flex"
+  >
+    <v-card
+      class="skill-page-item__card glass-card w-100"
+      data-aos="fade-up"
     >
-      {{ skill.label }}
-    </h3>
+      <v-card-title class="skill-page-item__title justify-center d-flex">
+        {{ skill.label }}
+      </v-card-title>
 
-    <SkillChip
-      v-for="(label, key) in skill.content"
-      :key
-      :label
-      :color="skill.color"
-      class="skill-page-item__config"
-      target="_blank"
-      data-aos="zoom-in"
-    />
+      <v-card-text class="text-center">
+        <SkillChip
+          v-for="(label, key) in skill.content"
+          :key="key"
+          :label="label"
+          :color="skill.color"
+          class="skill-page-item__chip ma-1"
+          target="_blank"
+        />
+      </v-card-text>
+    </v-card>
   </v-col>
 </template>
 

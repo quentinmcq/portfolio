@@ -44,6 +44,8 @@ export default {
 
   header: {
     developer: 'Développeur Full-Stack',
+    intro: 'Salut, je suis',
+    view_work: 'Voir mes projets',
     visit: 'Bonne visite !',
   },
 

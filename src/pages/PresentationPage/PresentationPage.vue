@@ -2,75 +2,86 @@
   <v-container
     :id="componentName"
     class="presentation-page"
+    fluid
   >
     <CategoryTitle :component-name />
 
-    <v-row data-aos="zoom-in">
-      <v-col>
-        <v-card class="card-animation presentation-page__card-style">
-          <div>
-            <i18n-t
-              keypath="presentation.part-1"
-              tag="div"
-              class="presentation-page__card-spacing"
-              scope="global"
-            >
-              <template #name>
-                <a
-                  :href="presentations[0].link"
-                  class="presentation-page__link"
-                  target="_blank"
-                >{{ $t('common.firstname') }} {{ $t('common.name') }}
-                </a>
-              </template>
-
-              <template #age>
-                {{ useAge() }}
-              </template>
-            </i18n-t>
-
-            <i18n-t
-              keypath="presentation.part-2"
-              tag="div"
-              class="presentation-page__card-spacing"
-              scope="global"
-            >
-              <template #symfony>
-                <a
-                  href="https://symfony.com/"
-                  class="presentation-page__link"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  {{ $t('common.symfony') }}
-                </a>
-              </template>
-
-              <template #nuxt>
-                <a
-                  href="https://nuxt.com/"
-                  class="presentation-page__link"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  {{ $t('common.nuxt') }}</a>
-              </template>
-            </i18n-t>
-
-            <div>
-              {{ $t('presentation.part-3') }}
+    <v-row
+      align="center"
+      justify="center"
+      data-aos="fade-up"
+    >
+      <v-col
+        cols="12"
+        md="12"
+        lg="10"
+      >
+        <v-card class="presentation-page__card glass-card pa-8">
+          <div class="d-flex flex-column flex-md-row align-center">
+            <!-- Left: Avatar / Visual (Placeholder) -->
+            <div class="presentation-page__avatar mb-6 mb-md-0 mr-md-8">
+              <v-avatar
+                size="150"
+                color="secondary"
+                variant="outlined"
+                class="elevation-10"
+              >
+                <v-icon
+                  icon="mdi-account-tie"
+                  size="80"
+                  color="white"
+                />
+              </v-avatar>
             </div>
-          </div>
 
-          <div
-            class="text-center mt-4"
-            data-aos="fade-up"
-          >
-            <PresentationPageButton
-              v-for="(presentation, index) in presentations"
-              :key="index"
-              :presentation
-            />
+            <!-- Right: Bio Content -->
+            <div class="presentation-page__content text-center text-md-left flex-1-1-100">
+              <h3 class="text-h3 font-weight-bold text-white mb-4">
+                {{ $t('header.intro') }}
+                <span class="text-primary">{{ $t('common.firstname') }}</span>
+              </h3>
+
+              <div class="text-h6 text-grey-lighten-1 mb-6">
+                <i18n-t
+                  keypath="presentation.part-1"
+                  tag="p"
+                  class="mb-2"
+                  scope="global"
+                >
+                  <template #name>
+                    <strong class="text-primary">{{ $t('common.firstname') }}</strong>
+                  </template>
+                  <template #age>
+                    {{ useAge() }}
+                  </template>
+                </i18n-t>
+
+                <i18n-t
+                  keypath="presentation.part-2"
+                  tag="p"
+                  class="mb-2"
+                  scope="global"
+                >
+                  <template #symfony>
+                    <span class="text-secondary font-weight-bold">{{ $t('common.symfony') }}</span>
+                  </template>
+                  <template #nuxt>
+                    <span class="text-secondary font-weight-bold">{{ $t('common.nuxt') }}</span>
+                  </template>
+                </i18n-t>
+
+                <p>{{ $t('presentation.part-3') }}</p>
+              </div>
+
+              <!-- Social Buttons -->
+              <div class="d-flex justify-center justify-md-start gap-4">
+                <PresentationPageButton
+                  v-for="(presentation, index) in presentations"
+                  :key="index"
+                  :presentation
+                />
+              </div>
+            </div>
           </div>
         </v-card>
       </v-col>

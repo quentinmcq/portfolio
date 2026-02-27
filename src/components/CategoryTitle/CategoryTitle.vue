@@ -8,13 +8,12 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-const { componentName } = defineProps<{
+const props = defineProps<{
   componentName: string
 }>()
 
 const { t } = useI18n()
-
-const categoryTitle = computed(() => componentName !== '' ? t(`${componentName}.main-title`) : '')
+const categoryTitle = computed(() => props.componentName ? t(`${props.componentName}.main-title`) : '')
 </script>
 
 <style lang="scss" src="./category-title.scss" scoped />

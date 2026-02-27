@@ -1,5 +1,36 @@
 .timeline {
   &__container {
     justify-content: center;
+
+    // Gradient Line Hacking
+    :deep(.v-timeline-divider__line) {
+      background: linear-gradient(180deg, $cherry-red 0%, $secondary 100%) !important;
+      width: 4px;
+      box-shadow: 0 0 10px rgba(229, 44, 77, 0.4);
+    }
+
+    // Glowing Dots
+    :deep(.v-timeline-divider__dot) {
+
+      .v-badge__badge,
+      .v-timeline-divider__inner-dot {
+        box-shadow: 0 0 15px $cherry-red;
+        animation: pulse-glow 2s infinite;
+      }
+    }
+  }
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(229, 44, 77, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(229, 44, 77, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(229, 44, 77, 0);
   }
 }

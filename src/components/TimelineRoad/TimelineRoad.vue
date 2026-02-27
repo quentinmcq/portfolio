@@ -4,7 +4,6 @@
   <v-timeline
     :density="timelineDensity"
     class="timeline__container"
-    line-color="white"
   >
     <TimelineRoadItem
       v-for="(item, index) in $tm('experience.list')"
