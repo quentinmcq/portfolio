@@ -42,8 +42,8 @@ importers:
         specifier: ^3.2.6
         version: 3.2.6(typescript@6.0.2)
       vuetify:
-        specifier: ^4.0.3
-        version: 4.0.3(typescript@6.0.2)(vite-plugin-vuetify@2.1.3)(vue@3.6.0-beta.8(typescript@6.0.2))
+        specifier: ^4.0.4
+        version: 4.0.4(typescript@6.0.2)(vite-plugin-vuetify@2.1.3)(vue@3.6.0-beta.8(typescript@6.0.2))
       webfontloader:
         specifier: ^1.6.28
         version: 1.6.28
@@ -91,8 +91,8 @@ importers:
         specifier: ^17.4.0
         version: 17.4.0
       happy-dom:
-        specifier: ^20.8.7
-        version: 20.8.7
+        specifier: ^20.8.8
+        version: 20.8.8
       husky:
         specifier: ^9.1.7
         version: 9.1.7
@@ -113,10 +113,10 @@ importers:
         version: 8.0.2(@types/node@24.12.0)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.98.0)(sass@1.98.0)
       vite-plugin-vuetify:
         specifier: ^2.1.3
-        version: 2.1.3(vite@8.0.2(@types/node@24.12.0)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.98.0)(sass@1.98.0))(vue@3.6.0-beta.8(typescript@6.0.2))(vuetify@4.0.3)
+        version: 2.1.3(vite@8.0.2(@types/node@24.12.0)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.98.0)(sass@1.98.0))(vue@3.6.0-beta.8(typescript@6.0.2))(vuetify@4.0.4)
       vitest:
         specifier: ^4.1.1
-        version: 4.1.1(@types/node@24.12.0)(happy-dom@20.8.7)(vite@8.0.2(@types/node@24.12.0)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.98.0)(sass@1.98.0))
+        version: 4.1.1(@types/node@24.12.0)(happy-dom@20.8.8)(vite@8.0.2(@types/node@24.12.0)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.98.0)(sass@1.98.0))
       vue-eslint-parser:
         specifier: ^10.4.0
         version: 10.4.0(eslint@10.1.0(jiti@2.6.1))
@@ -1391,8 +1391,8 @@ packages:
     resolution: {integrity: sha512-hjrNztw/VajQwOLsMNT1cbJiH2muO3OROCHnbehc8eY5JyD2gqz4AcMHPqgaOR59DjgUjYAYLeH699g/eWi2jw==}
     engines: {node: '>=18'}
 
-  happy-dom@20.8.7:
-    resolution: {integrity: sha512-7wfBi+UqulQlyLcis+9a+hTK0A/fMO4QKP6w6J9HnadXVkRdOvGf/N5G4XVpfgCYfnY7oKazlOSdWmsfatNSLQ==}
+  happy-dom@20.8.8:
+    resolution: {integrity: sha512-5/F8wxkNxYtsN0bXfMwIyNLZ9WYsoOYPbmoluqVJqv8KBUbcyKZawJ7uYK4WTX8IHBLYv+VXIwfeNDPy1oKMwQ==}
     engines: {node: '>=20.0.0'}
 
   has-flag@4.0.0:
@@ -2207,8 +2207,8 @@ packages:
       typescript:
         optional: true
 
-  vuetify@4.0.3:
-    resolution: {integrity: sha512-RjvmvXuq0omR4h4BQGNzkzl7/CKml+Q82JUu3AvecuX43V7eSxk35GC/TsUoKMWJVgXPLwGh5dpQnH1bG1D3qg==}
+  vuetify@4.0.4:
+    resolution: {integrity: sha512-sO2ux9RG0C1HKaP1HqDMro3+vbbmUJwzcKXuzaxQmUERAT/0FR0yfbwnj4PrMwWy1qc2WPJq01h4cr86FmNrFA==}
     peerDependencies:
       typescript: '>=4.7'
       vite-plugin-vuetify: '>=2.1.0'
@@ -3060,11 +3060,11 @@ snapshots:
       typescript: 6.0.2
       vue: 3.6.0-beta.8(typescript@6.0.2)
 
-  '@vuetify/loader-shared@2.1.2(vue@3.6.0-beta.8(typescript@6.0.2))(vuetify@4.0.3)':
+  '@vuetify/loader-shared@2.1.2(vue@3.6.0-beta.8(typescript@6.0.2))(vuetify@4.0.4)':
     dependencies:
       upath: 2.0.1
       vue: 3.6.0-beta.8(typescript@6.0.2)
-      vuetify: 4.0.3(typescript@6.0.2)(vite-plugin-vuetify@2.1.3)(vue@3.6.0-beta.8(typescript@6.0.2))
+      vuetify: 4.0.4(typescript@6.0.2)(vite-plugin-vuetify@2.1.3)(vue@3.6.0-beta.8(typescript@6.0.2))
 
   '@vueuse/shared@10.11.1(vue@3.6.0-beta.8(typescript@6.0.2))':
     dependencies:
@@ -3484,7 +3484,7 @@ snapshots:
 
   globals@17.4.0: {}
 
-  happy-dom@20.8.7:
+  happy-dom@20.8.8:
     dependencies:
       '@types/node': 24.12.0
       '@types/whatwg-mimetype': 3.0.2
@@ -4076,14 +4076,14 @@ snapshots:
 
   varint@6.0.0: {}
 
-  vite-plugin-vuetify@2.1.3(vite@8.0.2(@types/node@24.12.0)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.98.0)(sass@1.98.0))(vue@3.6.0-beta.8(typescript@6.0.2))(vuetify@4.0.3):
+  vite-plugin-vuetify@2.1.3(vite@8.0.2(@types/node@24.12.0)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.98.0)(sass@1.98.0))(vue@3.6.0-beta.8(typescript@6.0.2))(vuetify@4.0.4):
     dependencies:
-      '@vuetify/loader-shared': 2.1.2(vue@3.6.0-beta.8(typescript@6.0.2))(vuetify@4.0.3)
+      '@vuetify/loader-shared': 2.1.2(vue@3.6.0-beta.8(typescript@6.0.2))(vuetify@4.0.4)
       debug: 4.4.3
       upath: 2.0.1
       vite: 8.0.2(@types/node@24.12.0)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.98.0)(sass@1.98.0)
       vue: 3.6.0-beta.8(typescript@6.0.2)
-      vuetify: 4.0.3(typescript@6.0.2)(vite-plugin-vuetify@2.1.3)(vue@3.6.0-beta.8(typescript@6.0.2))
+      vuetify: 4.0.4(typescript@6.0.2)(vite-plugin-vuetify@2.1.3)(vue@3.6.0-beta.8(typescript@6.0.2))
     transitivePeerDependencies:
       - supports-color
 
@@ -4102,7 +4102,7 @@ snapshots:
       sass: 1.98.0
       sass-embedded: 1.98.0
 
-  vitest@4.1.1(@types/node@24.12.0)(happy-dom@20.8.7)(vite@8.0.2(@types/node@24.12.0)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.98.0)(sass@1.98.0)):
+  vitest@4.1.1(@types/node@24.12.0)(happy-dom@20.8.8)(vite@8.0.2(@types/node@24.12.0)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.98.0)(sass@1.98.0)):
     dependencies:
       '@vitest/expect': 4.1.1
       '@vitest/mocker': 4.1.1(vite@8.0.2(@types/node@24.12.0)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.98.0)(sass@1.98.0))
@@ -4126,7 +4126,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 24.12.0
-      happy-dom: 20.8.7
+      happy-dom: 20.8.8
     transitivePeerDependencies:
       - msw
 
@@ -4193,12 +4193,12 @@ snapshots:
     optionalDependencies:
       typescript: 6.0.2
 
-  vuetify@4.0.3(typescript@6.0.2)(vite-plugin-vuetify@2.1.3)(vue@3.6.0-beta.8(typescript@6.0.2)):
+  vuetify@4.0.4(typescript@6.0.2)(vite-plugin-vuetify@2.1.3)(vue@3.6.0-beta.8(typescript@6.0.2)):
     dependencies:
       vue: 3.6.0-beta.8(typescript@6.0.2)
     optionalDependencies:
       typescript: 6.0.2
-      vite-plugin-vuetify: 2.1.3(vite@8.0.2(@types/node@24.12.0)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.98.0)(sass@1.98.0))(vue@3.6.0-beta.8(typescript@6.0.2))(vuetify@4.0.3)
+      vite-plugin-vuetify: 2.1.3(vite@8.0.2(@types/node@24.12.0)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.98.0)(sass@1.98.0))(vue@3.6.0-beta.8(typescript@6.0.2))(vuetify@4.0.4)
 
   webfontloader@1.6.28: {}
 
