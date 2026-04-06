@@ -33,8 +33,8 @@ importers:
         specifier: ^3.7.0
         version: 3.7.0(vue@3.6.0-beta.9(typescript@6.0.2))
       vue-i18n:
-        specifier: ^11.3.0
-        version: 11.3.0(vue@3.6.0-beta.9(typescript@6.0.2))
+        specifier: ^11.3.1
+        version: 11.3.1(vue@3.6.0-beta.9(typescript@6.0.2))
       vue-recaptcha:
         specifier: 3.0.0-alpha.6
         version: 3.0.0-alpha.6(vue@3.6.0-beta.9(typescript@6.0.2))
@@ -65,7 +65,7 @@ importers:
         version: 24.12.2
       '@vitejs/plugin-vue':
         specifier: ^6.0.5
-        version: 6.0.5(vite@8.0.3(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0))(vue@3.6.0-beta.9(typescript@6.0.2))
+        version: 6.0.5(vite@8.0.5(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0))(vue@3.6.0-beta.9(typescript@6.0.2))
       '@vue/test-utils':
         specifier: ^2.4.6
         version: 2.4.6
@@ -109,14 +109,14 @@ importers:
         specifier: ^8.58.0
         version: 8.58.0(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.2)
       vite:
-        specifier: 8.0.3
-        version: 8.0.3(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0)
+        specifier: 8.0.5
+        version: 8.0.5(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0)
       vite-plugin-vuetify:
         specifier: ^2.1.3
-        version: 2.1.3(vite@8.0.3(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0))(vue@3.6.0-beta.9(typescript@6.0.2))(vuetify@4.0.5)
+        version: 2.1.3(vite@8.0.5(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0))(vue@3.6.0-beta.9(typescript@6.0.2))(vuetify@4.0.5)
       vitest:
         specifier: ^4.1.2
-        version: 4.1.2(@types/node@24.12.2)(happy-dom@20.8.9)(vite@8.0.3(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0))
+        version: 4.1.2(@types/node@24.12.2)(happy-dom@20.8.9)(vite@8.0.5(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0))
       vue-eslint-parser:
         specifier: ^10.4.0
         version: 10.4.0(eslint@10.2.0(jiti@2.6.1))
@@ -380,20 +380,20 @@ packages:
     peerDependencies:
       vue: '>=3'
 
-  '@intlify/core-base@11.3.0':
-    resolution: {integrity: sha512-NNX5jIwF4TJBe7RtSKDMOA6JD9mp2mRcBHAwt2X+Q8PvnZub0yj5YYXlFu2AcESdgQpEv/5Yx2uOCV/yh7YkZg==}
+  '@intlify/core-base@11.3.1':
+    resolution: {integrity: sha512-9nG3ItSD5ApZHmTbv2UFqvJSy3m+u6C/orMohukNKoT/Yuwiz8tPtlNw6ylLuPqSP2kP7ZF4Cdqwp6V1m3BQgw==}
     engines: {node: '>= 16'}
 
-  '@intlify/devtools-types@11.3.0':
-    resolution: {integrity: sha512-G9CNL4WpANWVdUjubOIIS7/D2j/0j+1KJmhBJxHilWNKr9mmt3IjFV3Hq4JoBP23uOoC5ynxz/FHZ42M+YxfGw==}
+  '@intlify/devtools-types@11.3.1':
+    resolution: {integrity: sha512-qrOknIx294W4YYVYBgldDOeOnv2NlpabW+aYGjMuXMSrY36f7GCAPlEBE2G+qTC5x0oAWDBSY5BmvLlPUx1exg==}
     engines: {node: '>= 16'}
 
-  '@intlify/message-compiler@11.3.0':
-    resolution: {integrity: sha512-RAJp3TMsqohg/Wa7bVF3cChRhecSYBLrTCQSj7j0UtWVFLP+6iEJoE2zb7GU5fp+fmG5kCbUdzhmlAUCWXiUJw==}
+  '@intlify/message-compiler@11.3.1':
+    resolution: {integrity: sha512-uIa4YurbphU+4Cl5CoL6nq/c7uQhVNRowEelgboNmXNs+UEcyFLQBESwaUjMvdtYxzA2qh+vGim080KZ84ruDA==}
     engines: {node: '>= 16'}
 
-  '@intlify/shared@11.3.0':
-    resolution: {integrity: sha512-LC6P/uay7rXL5zZ5+5iRJfLs/iUN8apu9tm8YqQVmW3Uq3X4A0dOFUIDuAmB7gAC29wTHOS3EiN/IosNSz0eNQ==}
+  '@intlify/shared@11.3.1':
+    resolution: {integrity: sha512-9GWc5PKuRdeWkT7FJN43c/+rD6xpSB3WtizewkfFCK/0XzYqCk4gQBWWcTdfKo8ylEcHwqYsR2Z3HRE3XhEHrQ==}
     engines: {node: '>= 16'}
 
   '@isaacs/cliui@8.0.2':
@@ -2040,14 +2040,14 @@ packages:
       vue: ^3.0.0
       vuetify: '>=3'
 
-  vite@8.0.3:
-    resolution: {integrity: sha512-B9ifbFudT1TFhfltfaIPgjo9Z3mDynBTJSUYxTjOQruf/zHH+ezCQKcoqO+h7a9Pw9Nm/OtlXAiGT1axBgwqrQ==}
+  vite@8.0.5:
+    resolution: {integrity: sha512-nmu43Qvq9UopTRfMx2jOYW5l16pb3iDC1JH6yMuPkpVbzK0k+L7dfsEDH4jRgYFmsg0sTAqkojoZgzLMlwHsCQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
       '@types/node': ^20.19.0 || >=22.12.0
       '@vitejs/devtools': ^0.1.0
-      esbuild: ^0.27.0
+      esbuild: ^0.27.0 || ^0.28.0
       jiti: '>=1.21.0'
       less: ^4.0.0
       sass: ^1.70.0
@@ -2150,8 +2150,8 @@ packages:
       vue-router:
         optional: true
 
-  vue-i18n@11.3.0:
-    resolution: {integrity: sha512-1J+xDfDJTLhDxElkd3+XUhT7FYSZd2b8pa7IRKGxhWH/8yt6PTvi3xmWhGwhYT5EaXdatui11pF2R6tL73/zPA==}
+  vue-i18n@11.3.1:
+    resolution: {integrity: sha512-azq8fhVnCwJAw0iXW7i44h9P+Bj+snNuevBAaJ9bxn0I3YVsRU3deVFPNnTfZ2uxVJefGp83JUmL68ddCPw5Pw==}
     engines: {node: '>= 16'}
     peerDependencies:
       vue: ^3.0.0
@@ -2419,23 +2419,23 @@ snapshots:
       '@iconify/types': 2.0.0
       vue: 3.6.0-beta.9(typescript@6.0.2)
 
-  '@intlify/core-base@11.3.0':
+  '@intlify/core-base@11.3.1':
     dependencies:
-      '@intlify/devtools-types': 11.3.0
-      '@intlify/message-compiler': 11.3.0
-      '@intlify/shared': 11.3.0
+      '@intlify/devtools-types': 11.3.1
+      '@intlify/message-compiler': 11.3.1
+      '@intlify/shared': 11.3.1
 
-  '@intlify/devtools-types@11.3.0':
+  '@intlify/devtools-types@11.3.1':
     dependencies:
-      '@intlify/core-base': 11.3.0
-      '@intlify/shared': 11.3.0
+      '@intlify/core-base': 11.3.1
+      '@intlify/shared': 11.3.1
 
-  '@intlify/message-compiler@11.3.0':
+  '@intlify/message-compiler@11.3.1':
     dependencies:
-      '@intlify/shared': 11.3.0
+      '@intlify/shared': 11.3.1
       source-map-js: 1.2.1
 
-  '@intlify/shared@11.3.0': {}
+  '@intlify/shared@11.3.1': {}
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -2820,10 +2820,10 @@ snapshots:
       '@typescript-eslint/types': 8.58.0
       eslint-visitor-keys: 5.0.1
 
-  '@vitejs/plugin-vue@6.0.5(vite@8.0.3(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0))(vue@3.6.0-beta.9(typescript@6.0.2))':
+  '@vitejs/plugin-vue@6.0.5(vite@8.0.5(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0))(vue@3.6.0-beta.9(typescript@6.0.2))':
     dependencies:
       '@rolldown/pluginutils': 1.0.0-rc.2
-      vite: 8.0.3(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0)
+      vite: 8.0.5(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0)
       vue: 3.6.0-beta.9(typescript@6.0.2)
 
   '@vitest/expect@4.1.2':
@@ -2835,13 +2835,13 @@ snapshots:
       chai: 6.2.2
       tinyrainbow: 3.1.0
 
-  '@vitest/mocker@4.1.2(vite@8.0.3(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0))':
+  '@vitest/mocker@4.1.2(vite@8.0.5(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0))':
     dependencies:
       '@vitest/spy': 4.1.2
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 8.0.3(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0)
+      vite: 8.0.5(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0)
 
   '@vitest/pretty-format@4.1.2':
     dependencies:
@@ -4003,18 +4003,18 @@ snapshots:
 
   varint@6.0.0: {}
 
-  vite-plugin-vuetify@2.1.3(vite@8.0.3(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0))(vue@3.6.0-beta.9(typescript@6.0.2))(vuetify@4.0.5):
+  vite-plugin-vuetify@2.1.3(vite@8.0.5(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0))(vue@3.6.0-beta.9(typescript@6.0.2))(vuetify@4.0.5):
     dependencies:
       '@vuetify/loader-shared': 2.1.2(vue@3.6.0-beta.9(typescript@6.0.2))(vuetify@4.0.5)
       debug: 4.4.3
       upath: 2.0.1
-      vite: 8.0.3(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0)
+      vite: 8.0.5(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0)
       vue: 3.6.0-beta.9(typescript@6.0.2)
       vuetify: 4.0.5(typescript@6.0.2)(vite-plugin-vuetify@2.1.3)(vue@3.6.0-beta.9(typescript@6.0.2))
     transitivePeerDependencies:
       - supports-color
 
-  vite@8.0.3(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0):
+  vite@8.0.5(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0):
     dependencies:
       lightningcss: 1.32.0
       picomatch: 4.0.4
@@ -4029,10 +4029,10 @@ snapshots:
       sass: 1.99.0
       sass-embedded: 1.99.0
 
-  vitest@4.1.2(@types/node@24.12.2)(happy-dom@20.8.9)(vite@8.0.3(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0)):
+  vitest@4.1.2(@types/node@24.12.2)(happy-dom@20.8.9)(vite@8.0.5(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0)):
     dependencies:
       '@vitest/expect': 4.1.2
-      '@vitest/mocker': 4.1.2(vite@8.0.3(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0))
+      '@vitest/mocker': 4.1.2(vite@8.0.5(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0))
       '@vitest/pretty-format': 4.1.2
       '@vitest/runner': 4.1.2
       '@vitest/snapshot': 4.1.2
@@ -4049,7 +4049,7 @@ snapshots:
       tinyexec: 1.0.2
       tinyglobby: 0.2.15
       tinyrainbow: 3.1.0
-      vite: 8.0.3(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0)
+      vite: 8.0.5(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 24.12.2
@@ -4081,11 +4081,11 @@ snapshots:
     dependencies:
       vue: 3.6.0-beta.9(typescript@6.0.2)
 
-  vue-i18n@11.3.0(vue@3.6.0-beta.9(typescript@6.0.2)):
+  vue-i18n@11.3.1(vue@3.6.0-beta.9(typescript@6.0.2)):
     dependencies:
-      '@intlify/core-base': 11.3.0
-      '@intlify/devtools-types': 11.3.0
-      '@intlify/shared': 11.3.0
+      '@intlify/core-base': 11.3.1
+      '@intlify/devtools-types': 11.3.1
+      '@intlify/shared': 11.3.1
       '@vue/devtools-api': 6.6.4
       vue: 3.6.0-beta.9(typescript@6.0.2)
 
@@ -4125,7 +4125,7 @@ snapshots:
       vue: 3.6.0-beta.9(typescript@6.0.2)
     optionalDependencies:
       typescript: 6.0.2
-      vite-plugin-vuetify: 2.1.3(vite@8.0.3(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0))(vue@3.6.0-beta.9(typescript@6.0.2))(vuetify@4.0.5)
+      vite-plugin-vuetify: 2.1.3(vite@8.0.5(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0))(vue@3.6.0-beta.9(typescript@6.0.2))(vuetify@4.0.5)
 
   webfontloader@1.6.28: {}
 
