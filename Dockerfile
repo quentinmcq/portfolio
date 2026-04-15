@@ -15,7 +15,7 @@ COPY . .
 RUN pnpm build
 
 # --- Production stage -------------------------------------------------------
-FROM nginx:1.29-alpine AS production
+FROM nginx:1.30-alpine AS production
 
 ARG PORT=4173
 ENV PORT=${PORT}
