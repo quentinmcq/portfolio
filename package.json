@@ -43,7 +43,7 @@
     "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.9.1",
     "changelogen": "^0.6.2",
-    "eslint": "^10.2.0",
+    "eslint": "^10.2.1",
     "eslint-plugin-oxlint": "^1.60.0",
     "eslint-plugin-perfectionist": "^5.8.0",
     "eslint-plugin-vue": "^10.8.0",
