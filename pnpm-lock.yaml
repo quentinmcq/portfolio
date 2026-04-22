@@ -42,8 +42,8 @@ importers:
         specifier: ^3.2.7
         version: 3.2.7(typescript@6.0.3)
       vuetify:
-        specifier: ^4.0.5
-        version: 4.0.5(typescript@6.0.3)(vite-plugin-vuetify@2.1.3)(vue@3.6.0-beta.10(typescript@6.0.3))
+        specifier: ^4.0.6
+        version: 4.0.6(typescript@6.0.3)(vite-plugin-vuetify@2.1.3)(vue@3.6.0-beta.10(typescript@6.0.3))
       webfontloader:
         specifier: ^1.6.28
         version: 1.6.28
@@ -85,8 +85,8 @@ importers:
         specifier: ^5.9.0
         version: 5.9.0(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3)
       eslint-plugin-vue:
-        specifier: ^10.8.0
-        version: 10.8.0(@stylistic/eslint-plugin@6.0.0-beta.4(eslint@10.2.1(jiti@2.6.1))(oxlint@1.61.0))(@typescript-eslint/parser@8.59.0(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3))(eslint@10.2.1(jiti@2.6.1))(vue-eslint-parser@10.4.0(eslint@10.2.1(jiti@2.6.1)))
+        specifier: ^10.9.0
+        version: 10.9.0(@stylistic/eslint-plugin@6.0.0-beta.4(eslint@10.2.1(jiti@2.6.1))(oxlint@1.61.0))(@typescript-eslint/parser@8.59.0(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3))(eslint@10.2.1(jiti@2.6.1))(vue-eslint-parser@10.4.0(eslint@10.2.1(jiti@2.6.1)))
       globals:
         specifier: ^17.5.0
         version: 17.5.0
@@ -113,7 +113,7 @@ importers:
         version: 8.0.9(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0)
       vite-plugin-vuetify:
         specifier: ^2.1.3
-        version: 2.1.3(vite@8.0.9(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0))(vue@3.6.0-beta.10(typescript@6.0.3))(vuetify@4.0.5)
+        version: 2.1.3(vite@8.0.9(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0))(vue@3.6.0-beta.10(typescript@6.0.3))(vuetify@4.0.6)
       vitest:
         specifier: ^4.1.5
         version: 4.1.5(@types/node@24.12.2)(happy-dom@20.9.0)(vite@8.0.9(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0))
@@ -1256,8 +1256,8 @@ packages:
     peerDependencies:
       eslint: ^8.45.0 || ^9.0.0 || ^10.0.0
 
-  eslint-plugin-vue@10.8.0:
-    resolution: {integrity: sha512-f1J/tcbnrpgC8suPN5AtdJ5MQjuXbSU9pGRSSYAuF3SHoiYCOdEX6O22pLaRyLHXvDcOe+O5ENgc1owQ587agA==}
+  eslint-plugin-vue@10.9.0:
+    resolution: {integrity: sha512-EFNNzu4HqtTRb5DJINpyd+u3bDdzETWDMpCzG+UBHz1tpsnMDCeOcf61u4Wy/cbXnMymK+MT9bjH7KcG1fItSw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       '@stylistic/eslint-plugin': ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0
@@ -2226,8 +2226,8 @@ packages:
       typescript:
         optional: true
 
-  vuetify@4.0.5:
-    resolution: {integrity: sha512-pFysKOHuY3dROTVh9PdlhVz50ZR0E5/goY5ecTXc8F8tajUA2ee3xZ8Lqs1WtEw/X3w93wx/LogyjgaQCAL/Ig==}
+  vuetify@4.0.6:
+    resolution: {integrity: sha512-a4kasYa3SuFI5IOG/0Fx04M4TWeef5mCdTTKFlaxt86oz16RMQ/DJ3BynlOnIdUODt7NxYIkdLYud070/vVEUQ==}
     peerDependencies:
       typescript: '>=4.7'
       vite-plugin-vuetify: '>=2.1.0'
@@ -3088,11 +3088,11 @@ snapshots:
       typescript: 6.0.3
       vue: 3.6.0-beta.10(typescript@6.0.3)
 
-  '@vuetify/loader-shared@2.1.2(vue@3.6.0-beta.10(typescript@6.0.3))(vuetify@4.0.5)':
+  '@vuetify/loader-shared@2.1.2(vue@3.6.0-beta.10(typescript@6.0.3))(vuetify@4.0.6)':
     dependencies:
       upath: 2.0.1
       vue: 3.6.0-beta.10(typescript@6.0.3)
-      vuetify: 4.0.5(typescript@6.0.3)(vite-plugin-vuetify@2.1.3)(vue@3.6.0-beta.10(typescript@6.0.3))
+      vuetify: 4.0.6(typescript@6.0.3)(vite-plugin-vuetify@2.1.3)(vue@3.6.0-beta.10(typescript@6.0.3))
 
   '@vueuse/shared@10.11.1(vue@3.6.0-beta.10(typescript@6.0.3))':
     dependencies:
@@ -3338,7 +3338,7 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-vue@10.8.0(@stylistic/eslint-plugin@6.0.0-beta.4(eslint@10.2.1(jiti@2.6.1))(oxlint@1.61.0))(@typescript-eslint/parser@8.59.0(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3))(eslint@10.2.1(jiti@2.6.1))(vue-eslint-parser@10.4.0(eslint@10.2.1(jiti@2.6.1))):
+  eslint-plugin-vue@10.9.0(@stylistic/eslint-plugin@6.0.0-beta.4(eslint@10.2.1(jiti@2.6.1))(oxlint@1.61.0))(@typescript-eslint/parser@8.59.0(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3))(eslint@10.2.1(jiti@2.6.1))(vue-eslint-parser@10.4.0(eslint@10.2.1(jiti@2.6.1))):
     dependencies:
       '@eslint-community/eslint-utils': 4.9.1(eslint@10.2.1(jiti@2.6.1))
       eslint: 10.2.1(jiti@2.6.1)
@@ -4104,14 +4104,14 @@ snapshots:
 
   varint@6.0.0: {}
 
-  vite-plugin-vuetify@2.1.3(vite@8.0.9(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0))(vue@3.6.0-beta.10(typescript@6.0.3))(vuetify@4.0.5):
+  vite-plugin-vuetify@2.1.3(vite@8.0.9(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0))(vue@3.6.0-beta.10(typescript@6.0.3))(vuetify@4.0.6):
     dependencies:
-      '@vuetify/loader-shared': 2.1.2(vue@3.6.0-beta.10(typescript@6.0.3))(vuetify@4.0.5)
+      '@vuetify/loader-shared': 2.1.2(vue@3.6.0-beta.10(typescript@6.0.3))(vuetify@4.0.6)
       debug: 4.4.3
       upath: 2.0.1
       vite: 8.0.9(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0)
       vue: 3.6.0-beta.10(typescript@6.0.3)
-      vuetify: 4.0.5(typescript@6.0.3)(vite-plugin-vuetify@2.1.3)(vue@3.6.0-beta.10(typescript@6.0.3))
+      vuetify: 4.0.6(typescript@6.0.3)(vite-plugin-vuetify@2.1.3)(vue@3.6.0-beta.10(typescript@6.0.3))
     transitivePeerDependencies:
       - supports-color
 
@@ -4221,12 +4221,12 @@ snapshots:
     optionalDependencies:
       typescript: 6.0.3
 
-  vuetify@4.0.5(typescript@6.0.3)(vite-plugin-vuetify@2.1.3)(vue@3.6.0-beta.10(typescript@6.0.3)):
+  vuetify@4.0.6(typescript@6.0.3)(vite-plugin-vuetify@2.1.3)(vue@3.6.0-beta.10(typescript@6.0.3)):
     dependencies:
       vue: 3.6.0-beta.10(typescript@6.0.3)
     optionalDependencies:
       typescript: 6.0.3
-      vite-plugin-vuetify: 2.1.3(vite@8.0.9(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0))(vue@3.6.0-beta.10(typescript@6.0.3))(vuetify@4.0.5)
+      vite-plugin-vuetify: 2.1.3(vite@8.0.9(@types/node@24.12.2)(esbuild@0.27.1)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0))(vue@3.6.0-beta.10(typescript@6.0.3))(vuetify@4.0.6)
 
   webfontloader@1.6.28: {}
 

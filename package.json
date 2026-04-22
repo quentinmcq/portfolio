@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "packageManager": "pnpm@10.33.0",
+  "packageManager": "pnpm@10.33.1",
   "engines": {
     "node": "^25.9.0"
   },
@@ -30,7 +30,7 @@
     "vue-i18n": "^11.3.2",
     "vue-recaptcha": "3.0.0-alpha.6",
     "vue-tsc": "^3.2.7",
-    "vuetify": "^4.0.5",
+    "vuetify": "^4.0.6",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
@@ -46,7 +46,7 @@
     "eslint": "^10.2.1",
     "eslint-plugin-oxlint": "^1.61.0",
     "eslint-plugin-perfectionist": "^5.9.0",
-    "eslint-plugin-vue": "^10.8.0",
+    "eslint-plugin-vue": "^10.9.0",
     "globals": "^17.5.0",
     "happy-dom": "^20.9.0",
     "husky": "^9.1.7",
