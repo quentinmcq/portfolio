@@ -17,6 +17,11 @@ body {
   border: 0;
 }
 
+ul,
+ol {
+  padding-inline-start: 0;
+}
+
 img {
   cursor: pointer;
 }

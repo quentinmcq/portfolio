@@ -27,6 +27,9 @@ export function initVuetify(app: App<Element>) {
         style: 'padding: 14px',
       },
     },
+    theme: {
+      defaultTheme: 'light',
+    },
   })
 
   app.use(vuetifyInstance)
