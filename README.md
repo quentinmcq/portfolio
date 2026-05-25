@@ -21,6 +21,7 @@ bun run build     # production build
 bun run preview   # serve the built bundle locally
 bun run typecheck # tsc --noEmit
 bun run lint      # oxlint with auto-fix
+bun run deploy    # wrangler deploy (Cloudflare Workers)
 ```
 
 ## License

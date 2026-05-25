@@ -1,5 +1,4 @@
 import { EmailMessage } from 'cloudflare:email'
-import { createMimeMessage } from 'mimetext'
 
 interface Env {
   ASSETS: { fetch: (request: Request) => Promise<Response> }
@@ -13,9 +12,31 @@ interface ContactPayload {
 }
 
 const FROM_EMAIL = 'contact@quentin-macq.dev'
-const TO_EMAIL = 'quentin.macq@outlook.fr'
+const TO_EMAIL = 'quentin.macq6@gmail.com'
 const MIN_MESSAGE_LENGTH = 20
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+function encodeSubject(subject: string): string {
+  // RFC 2047 encoded-word so accents and special chars survive transit.
+  const bytes = new TextEncoder().encode(subject)
+  let binary = ''
+  for (const byte of bytes) binary += String.fromCharCode(byte)
+  return `=?UTF-8?B?${btoa(binary)}?=`
+}
+
+function buildRawEmail(name: string, replyTo: string, body: string): string {
+  return [
+    `From: Portfolio <${FROM_EMAIL}>`,
+    `To: ${TO_EMAIL}`,
+    `Reply-To: ${replyTo}`,
+    `Subject: ${encodeSubject(`Portfolio · ${name}`)}`,
+    'MIME-Version: 1.0',
+    'Content-Type: text/plain; charset=utf-8',
+    'Content-Transfer-Encoding: 8bit',
+    '',
+    body,
+  ].join('\r\n')
+}
 
 async function handleContact(request: Request, env: Env): Promise<Response> {
   if (request.method !== 'POST') {
@@ -38,18 +59,9 @@ async function handleContact(request: Request, env: Env): Promise<Response> {
     return new Response('Validation failed', { status: 400 })
   }
 
-  const msg = createMimeMessage()
-  msg.setSender({ addr: FROM_EMAIL, name: 'Portfolio' })
-  msg.setRecipient(TO_EMAIL)
-  msg.setHeader('Reply-To', email)
-  msg.setSubject(`Portfolio · ${name}`)
-  msg.addMessage({
-    contentType: 'text/plain',
-    data: `${name} <${email}>\n\n${message}`,
-  })
-
   try {
-    await env.SEND_EMAIL.send(new EmailMessage(FROM_EMAIL, TO_EMAIL, msg.asRaw()))
+    const raw = buildRawEmail(name, email, `${name} <${email}>\n\n${message}`)
+    await env.SEND_EMAIL.send(new EmailMessage(FROM_EMAIL, TO_EMAIL, raw))
   }
   catch {
     return new Response('Email send failed', { status: 502 })
