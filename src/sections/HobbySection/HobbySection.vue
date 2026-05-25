@@ -28,6 +28,7 @@
           >
             <span>{{ entry.button }}</span>
             <svg
+              aria-hidden="true"
               width="13"
               height="13"
               viewBox="0 0 24 24"
@@ -51,18 +52,12 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue'
+import type { Hobby } from '@/types/Hobby'
 
 const componentName = 'hobby'
 const { tm } = useI18n()
 
-interface HobbyEntry {
-  button?: string
-  description: string
-  link?: string
-  title: string
-}
-
-const hobbies = computed(() => tm('hobby.list') as HobbyEntry[])
+const hobbies = computed(() => tm('hobby.list') as Hobby[])
 </script>
 
 <style lang="scss" src="./hobby-section.scss" scoped />

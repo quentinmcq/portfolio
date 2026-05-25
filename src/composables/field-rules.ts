@@ -1,36 +1,21 @@
 import { useI18n } from 'vue-i18n'
 
+import { MIN_MESSAGE_LENGTH } from '@/shared/contact'
+
 export type FieldRule = (value: string) => string | true
-type Translator = ReturnType<typeof useI18n>['t']
 
 const EMAIL_REGEX = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
-const MIN_MESSAGE_LENGTH = 20
 
-interface FieldRules {
-  emailRules: FieldRule[]
-  messageRules: FieldRule[]
-  nameRules: FieldRule[]
-}
-
-export function useFieldRules(): FieldRules {
+export function useFieldRules() {
   const { t } = useI18n()
 
+  const required: FieldRule = v => Boolean(v) || t('contact.required-field')
+  const email: FieldRule = v => !v || EMAIL_REGEX.test(v) || t('contact.invalid-address-format')
+  const minLength: FieldRule = v => v?.length >= MIN_MESSAGE_LENGTH || t('contact.min-message-length', { minLength: MIN_MESSAGE_LENGTH })
+
   return {
-    emailRules: [requiredField(t), emailFormat(t)],
-    messageRules: [requiredField(t), minMessageLength(t)],
-    nameRules: [requiredField(t)],
+    emailRules: [required, email],
+    messageRules: [required, minLength],
+    nameRules: [required],
   }
-}
-
-function emailFormat(t: Translator): FieldRule {
-  return value => !value || EMAIL_REGEX.test(value) || t('contact.invalid-address-format')
-}
-
-function minMessageLength(t: Translator): FieldRule {
-  return value => value?.length >= MIN_MESSAGE_LENGTH
-    || t('contact.min-message-length', { minLength: MIN_MESSAGE_LENGTH })
-}
-
-function requiredField(t: Translator): FieldRule {
-  return value => Boolean(value) || t('contact.required-field')
 }

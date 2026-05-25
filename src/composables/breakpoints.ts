@@ -57,6 +57,6 @@ export function useBreakpoints(): UseBreakpoints {
   }
 }
 
-function onResize(): void {
+function onResize() {
   width.value = window.innerWidth
 }

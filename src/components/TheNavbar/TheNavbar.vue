@@ -49,6 +49,7 @@
         >
           <svg
             v-if="theme === 'dark'"
+            aria-hidden="true"
             width="16"
             height="16"
             viewBox="0 0 24 24"
@@ -67,6 +68,7 @@
           </svg>
           <svg
             v-else
+            aria-hidden="true"
             width="16"
             height="16"
             viewBox="0 0 24 24"
@@ -93,109 +95,25 @@
     </div>
   </header>
 
-  <Transition name="drawer-fade">
-    <div
-      v-if="drawer"
-      class="drawer-scrim"
-      @click="toggleMenu"
-      aria-hidden="true"
-    />
-  </Transition>
-
-  <Transition name="drawer">
-    <aside
-      v-if="drawer"
-      ref="drawerRef"
-      class="drawer"
-      tabindex="-1"
-      @keydown="onDrawerKeydown"
-    >
-      <div class="drawer__header">
-        <span class="drawer__eyebrow">{{ $t('header.idx') }} — {{ $t('header.edition', { year: currentYear }) }}</span>
-        <button
-          class="drawer__close"
-          type="button"
-          :aria-label="$t('common.close-menu')"
-          @click="toggleMenu"
-        >
-          ×
-        </button>
-      </div>
-
-      <nav
-        class="drawer__nav"
-        aria-label="primary mobile"
-      >
-        <a
-          v-for="item in menu"
-          :key="item.link"
-          class="drawer__link"
-          :href="item.link"
-          @click.prevent="scrollToSection(item.link)"
-        >
-          <span class="drawer__link-idx">{{ item.index }}</span>
-          <span class="drawer__link-label">{{ item.title }}</span>
-        </a>
-      </nav>
-
-      <div class="drawer__resources">
-        <a
-          class="drawer__resource"
-          :href="linkedinUrl"
-          target="_blank"
-          rel="noopener"
-        >
-          <span>LinkedIn</span>
-          <svg
-            width="12"
-            height="12"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M7 17 17 7M9 7h8v8" />
-          </svg>
-        </a>
-        <a
-          class="drawer__resource"
-          :href="githubUrl"
-          target="_blank"
-          rel="noopener"
-        >
-          <span>GitHub</span>
-          <svg
-            width="12"
-            height="12"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M7 17 17 7M9 7h8v8" />
-          </svg>
-        </a>
-      </div>
-
-      <div class="drawer__footer">
-        <span class="drawer__caption">{{ $t('common.firstname') }} {{ $t('common.name-upper') }} — {{ $t('header.role') }}</span>
-        <span class="drawer__caption drawer__caption--muted">{{ $t('header.meta-location') }}</span>
-      </div>
-    </aside>
-  </Transition>
+  <TheNavDrawer
+    v-model:open="drawer"
+    :menu
+    :current-year
+    :linkedin-url="linkedinUrl"
+    :github-url="githubUrl"
+    @navigate="scrollToSection"
+  />
 </template>
 
 <script setup lang="ts">
-import { computed, nextTick, onBeforeUnmount, onMounted, ref, useTemplateRef, watch } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import TheLocaleSwitcher from '@/components/TheLocaleSwitcher/TheLocaleSwitcher.vue'
 import { useTheme } from '@/composables/theme'
 import { CONTACTS } from '@/data/contacts'
+
+import TheNavDrawer from './TheNavDrawer/TheNavDrawer.vue'
 
 const { tm } = useI18n()
 const { theme, toggleTheme } = useTheme()
@@ -206,9 +124,8 @@ const { github: githubUrl, linkedin: linkedinUrl } = CONTACTS
 const currentYear = computed(() => new Date().getFullYear())
 const drawer = ref(false)
 const scrolled = ref(false)
-const drawerRef = useTemplateRef<HTMLElement>('drawerRef')
 
-function onScroll(): void {
+function onScroll() {
   scrolled.value = window.scrollY > 60
 }
 
@@ -221,52 +138,25 @@ onBeforeUnmount(() => {
   window.removeEventListener('scroll', onScroll)
 })
 
-function scrollToSection(anchor: string): void {
+function scrollToSection(anchor: string) {
   const target = document.querySelector(anchor)
   target?.scrollIntoView({ behavior: 'smooth', block: 'start' })
 
-  if (drawer.value) toggleMenu()
+  if (drawer.value) drawer.value = false
 }
 
-function scrollToTop(): void {
+function scrollToTop() {
   window.scrollTo({ behavior: 'smooth', top: 0 })
 }
 
-function toggleMenu(): void {
+function toggleMenu() {
   drawer.value = !drawer.value
-  document.body.style.overflow = drawer.value ? 'hidden' : ''
 }
 
-// Focus the drawer when it opens so keyboard users land inside it.
-watch(drawer, async (open) => {
-  if (!open) return
-  await nextTick()
-  drawerRef.value?.focus()
+// Lock body scroll when drawer is open
+watch(drawer, (open) => {
+  document.body.style.overflow = open ? 'hidden' : ''
 })
-
-// Trap Tab navigation inside the drawer + ESC closes it.
-function onDrawerKeydown(e: KeyboardEvent): void {
-  if (e.key === 'Escape') return toggleMenu()
-  if (e.key !== 'Tab' || !drawerRef.value) return
-
-  const focusables = drawerRef.value.querySelectorAll<HTMLElement>(
-    'a, button, [tabindex]:not([tabindex="-1"])',
-  )
-  if (!focusables.length) return
-
-  const first = focusables[0]
-  const last = focusables[focusables.length - 1]
-  const active = document.activeElement
-
-  if (e.shiftKey && active === first) {
-    e.preventDefault()
-    last.focus()
-  }
-  else if (!e.shiftKey && active === last) {
-    e.preventDefault()
-    first.focus()
-  }
-}
 </script>
 
 <style lang="scss" src="./the-navbar.scss" scoped />

@@ -27,6 +27,7 @@
               >
                 {{ item.title }}
                 <svg
+                  aria-hidden="true"
                   width="14"
                   height="14"
                   viewBox="0 0 24 24"
@@ -81,20 +82,12 @@ import { useI18n } from 'vue-i18n'
 
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue'
 import SkillChip from '@/components/SkillChip/SkillChip.vue'
+import type { Project } from '@/types/Project'
 
 const componentName = 'project'
 const { tm } = useI18n()
 
-interface ProjectEntry {
-  chips?: string[]
-  kind?: 'personal' | 'private' | 'school'
-  link?: string
-  subtitle?: string
-  title: string
-  year: string
-}
-
-const projects = computed(() => tm('project.list') as ProjectEntry[])
+const projects = computed(() => tm('project.list') as Project[])
 </script>
 
 <style lang="scss" src="./project-section.scss" scoped />

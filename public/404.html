@@ -8,7 +8,16 @@
   <title>404 — Quentin Macq</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Inter+Tight:ital,wght@0,300..700&family=JetBrains+Mono:wght@400..700&display=swap" rel="stylesheet" />
+  <link rel="preload"
+        as="style"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Inter+Tight:ital,wght@0,300..700&family=JetBrains+Mono:wght@400..700&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Inter+Tight:ital,wght@0,300..700&family=JetBrains+Mono:wght@400..700&display=swap"
+    />
+  </noscript>
   <style>
     :root {
       --ink: #0d0d10;
@@ -28,7 +37,6 @@
       margin: 0;
       padding: 0;
       width: 100%;
-      min-height: 100vh;
       min-height: 100dvh;
       background: var(--ink);
       color: var(--paper);
@@ -158,7 +166,7 @@
   <main class="center">
     <span class="eyebrow">Page introuvable</span>
     <p class="code">404.</p>
-    <h1>Cette page n'existe pas — ou n'existe plus.</h1>
+    <h1>Cette page n'existe pas ou n'existe plus.</h1>
     <p>Lien périmé, faute de frappe, ou contenu déplacé.</p>
     <a class="back" href="/">
       <span>Retour à l'accueil</span>
@@ -169,7 +177,7 @@
   </main>
 
   <footer class="bottom">
-    <span>Quentin Macq · Harnes · France</span>
+    <span>Quentin Macq · Hauts-de-France</span>
     <span class="top__rule"></span>
   </footer>
 </body>

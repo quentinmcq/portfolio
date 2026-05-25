@@ -1,5 +1,4 @@
-// Shared typography presets — included in components that need
-// the same display headline across distinct UI surfaces.
+// Shared typography presets
 @mixin display-title {
   margin: 0;
   font-family: var(--font-display), serif;

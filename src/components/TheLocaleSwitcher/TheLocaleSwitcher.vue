@@ -22,15 +22,17 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
+import { LOCALE_STORAGE_KEY } from '@/i18n'
+
 const { availableLocales, locale } = useI18n()
 
 const currentLocale = computed(() => locale.value)
 
-function switchLocale(lang: string): void {
+function switchLocale(lang: string) {
   if (locale.value === lang) return
   locale.value = lang
   document.documentElement.lang = lang
-  localStorage.setItem('lang', lang)
+  localStorage.setItem(LOCALE_STORAGE_KEY, lang)
 }
 </script>
 

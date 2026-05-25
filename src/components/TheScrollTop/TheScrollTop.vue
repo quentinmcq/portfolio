@@ -7,6 +7,7 @@
     @click="scrollToTop"
   >
     <svg
+      aria-hidden="true"
       width="16"
       height="16"
       viewBox="0 0 24 24"
@@ -27,11 +28,11 @@ import { onBeforeUnmount, onMounted, ref } from 'vue'
 
 const visible = ref(false)
 
-function onScroll(): void {
+function onScroll() {
   visible.value = window.scrollY > window.innerHeight * 0.8
 }
 
-function scrollToTop(): void {
+function scrollToTop() {
   window.scrollTo({ behavior: 'smooth', top: 0 })
 }
 

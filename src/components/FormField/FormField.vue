@@ -28,6 +28,8 @@
       :name="name"
       :rows="rows"
       :required="required"
+      :minlength="minLength"
+      :maxlength="maxLength"
       :aria-invalid="showError"
       :aria-describedby="showError ? `${fieldId}-error` : undefined"
       @focus="focused = true"
@@ -42,6 +44,8 @@
       :type="type"
       :name="name"
       :required="required"
+      :minlength="minLength"
+      :maxlength="maxLength"
       :inputmode="inputmode"
       :autocomplete="autocomplete"
       :aria-invalid="showError"
@@ -71,12 +75,14 @@
 <script setup lang="ts">
 import { computed, ref, useId, useTemplateRef, watch } from 'vue'
 
-type Rule = (v: string) => string | true
+import type { FieldRule } from '@/composables/field-rules'
 
 const {
   autocomplete = undefined,
   inputmode = undefined,
   label,
+  maxLength = undefined,
+  minLength = undefined,
   name,
   required = false,
   rows = 6,
@@ -84,13 +90,15 @@ const {
   type = 'text',
 } = defineProps<{
   autocomplete?: string
-  inputmode?: 'email' | 'numeric' | 'search' | 'tel' | 'text' | 'url'
+  inputmode?: 'email'
   label: string
+  maxLength?: number
+  minLength?: number
   name: string
   required?: boolean
   rows?: number
-  rules?: Rule[]
-  type?: 'email' | 'tel' | 'text' | 'textarea'
+  rules?: FieldRule[]
+  type?: 'email' | 'text' | 'textarea'
 }>()
 
 const value = defineModel<string>({ required: true })
@@ -116,21 +124,21 @@ const showError = computed(() => touched.value && !isValid.value)
 
 watch(isValid, v => (valid.value = v), { immediate: true })
 
-function onBlur(): void {
+function onBlur() {
   focused.value = false
   touched.value = true
 }
 
 defineExpose({
-  focus(): void {
+  focus() {
     inputRef.value?.focus()
   },
-  reset(): void {
+  reset() {
     value.value = ''
     touched.value = false
     focused.value = false
   },
-  touch(): void {
+  touch() {
     touched.value = true
   },
 })

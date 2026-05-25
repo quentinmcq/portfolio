@@ -44,8 +44,6 @@ import { CONTACTS } from '@/data/contacts'
 const componentName = 'experience'
 const { tm } = useI18n()
 
-// The first experience entry is showcased in the featured card.
-// The timeline below shows the path that led there.
 const experiences = computed(() => tm('experience.list') as Experience[])
 const timelineItems = computed(() => experiences.value.slice(1))
 
@@ -53,13 +51,4 @@ const skills = computed(() => tm('skill.list') as Skill[])
 const dailyStack = computed(() => skills.value.find(s => s.primary)?.content ?? [])
 </script>
 
-<style lang="scss" scoped>
-.experience {
-  &__timeline {
-    list-style: none;
-    margin: clamp(2rem, 4vw, 3rem) 0 0;
-    padding: 0;
-    border-top: 1px solid var(--line);
-  }
-}
-</style>
+<style lang="scss" src="./experience-section.scss" scoped />

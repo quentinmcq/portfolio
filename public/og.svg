@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Social preview image — 1200×630, editorial brand layout.
-  SVG renders fine on Twitter/Discord/Slack/iMessage. LinkedIn does not
-  support SVG OG previews; export this to og.png (1200×630) before pinning
-  on LinkedIn or sharing in posts. Any browser-based renderer (e.g. resvg,
-  Figma, https://cloudconvert.com) does the job — no font embedding needed.
+  Social preview image for social medias (1200×630).
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Quentin Macq — Développeur full-stack">
   <defs>
@@ -18,39 +14,32 @@
     </radialGradient>
   </defs>
 
-  <!-- Background -->
   <rect width="1200" height="630" fill="#0d0d10" />
   <rect width="1200" height="630" fill="url(#warmGlow)" />
   <rect width="1200" height="630" fill="url(#goldGlow)" />
 
-  <!-- Top running header -->
   <g font-family="'JetBrains Mono', 'SF Mono', Menlo, monospace" font-size="14" letter-spacing="2.6" fill="#8a8580">
-    <text x="80" y="80" text-transform="uppercase">IDX 001</text>
+    <text x="80" y="80">IDX 001</text>
     <line x1="170" y1="73" x2="1010" y2="73" stroke="#f5f1e8" stroke-opacity="0.12" />
-    <text x="1030" y="80" text-anchor="end" text-transform="uppercase" transform="translate(90,0)">ÉDITION 2026</text>
+    <text x="1030" y="80" text-anchor="end" transform="translate(90,0)">ÉDITION 2026</text>
   </g>
 
-  <!-- Pulse caption -->
   <g transform="translate(80, 165)">
     <circle cx="9" cy="9" r="4" fill="#ff5b3a" />
     <circle cx="9" cy="9" r="9" fill="none" stroke="#ff5b3a" stroke-opacity="0.35" />
-    <text x="32" y="13" font-family="'JetBrains Mono', monospace" font-size="13" letter-spacing="2" fill="#8a8580" text-transform="uppercase">DISPONIBLE POUR DISCUTER</text>
+    <text x="32" y="13" font-family="'JetBrains Mono', monospace" font-size="13" letter-spacing="2" fill="#8a8580">DISPONIBLE POUR DISCUTER</text>
   </g>
 
-  <!-- Title — shifted up by 30px so the italic descender of "q" in Macq
-       does not collide with the lede line below it. -->
   <g font-family="'Fraunces', 'Iowan Old Style', 'Apple Garamond', Baskerville, serif" fill="#f5f1e8">
-    <text x="80" y="315" font-size="170" font-weight="350" letter-spacing="-5">Quentin</text>
-    <text x="80" y="470" font-size="170" font-weight="350" font-style="italic" letter-spacing="-5">Macq<tspan fill="#ff5b3a">.</tspan></text>
+    <text x="80" y="315" font-size="170" font-weight="300" letter-spacing="-5">Quentin</text>
+    <text x="80" y="470" font-size="170" font-weight="300" font-style="italic" letter-spacing="-5">Macq<tspan fill="#ff5b3a">.</tspan></text>
   </g>
 
-  <!-- Lede -->
-  <text x="80" y="545" font-family="'Fraunces', serif" font-style="italic" font-size="22" fill="#8a8580" letter-spacing="0.2">Développeur full-stack · affinité interface · UX/UI</text>
+  <text x="80" y="545" font-family="'Fraunces', serif" font-style="italic" font-size="22" fill="#8a8580" letter-spacing="0.2">Développeur full-stack</text>
 
-  <!-- Bottom strip -->
   <g font-family="'JetBrains Mono', monospace" font-size="13" letter-spacing="2.4" fill="#8a8580">
     <line x1="80" y1="580" x2="1120" y2="580" stroke="#f5f1e8" stroke-opacity="0.12" />
-    <text x="80" y="608" text-transform="uppercase">HARNES · FRANCE</text>
-    <text x="1120" y="608" text-anchor="end" text-transform="uppercase">QMACQ.NETLIFY.APP</text>
+    <text x="80" y="608">HARNES · FRANCE</text>
+    <text x="1120" y="608" text-anchor="end">QUENTIN-MACQ.DEV</text>
   </g>
 </svg>

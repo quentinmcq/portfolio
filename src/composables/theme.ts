@@ -10,7 +10,7 @@ const theme = ref<Theme>(readInitialTheme())
 if (isBrowser) applyTheme(theme.value)
 
 export function useTheme() {
-  function toggleTheme(): void {
+  function toggleTheme() {
     theme.value = theme.value === 'dark' ? 'light' : 'dark'
     applyTheme(theme.value)
     localStorage.setItem(STORAGE_KEY, theme.value)
@@ -19,7 +19,7 @@ export function useTheme() {
   return { theme, toggleTheme }
 }
 
-function applyTheme(value: Theme): void {
+function applyTheme(value: Theme) {
   const root = document.documentElement
   root.classList.toggle('theme-dark', value === 'dark')
   root.classList.toggle('theme-light', value === 'light')

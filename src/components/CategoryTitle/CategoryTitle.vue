@@ -14,6 +14,7 @@
       >
         <span>{{ $t('common.back-to-top') }}</span>
         <svg
+          aria-hidden="true"
           width="12"
           height="12"
           viewBox="0 0 24 24"
@@ -60,7 +61,7 @@ const heading = computed(() => componentName ? t(`${componentName}.main-title`) 
 const index = computed(() => componentName && te(`${componentName}.index`) ? t(`${componentName}.index`) : '')
 const kicker = computed(() => componentName && te(`${componentName}.kicker`) ? t(`${componentName}.kicker`) : '')
 
-function scrollToTop(): void {
+function scrollToTop() {
   window.scrollTo({ behavior: 'smooth', top: 0 })
 }
 </script>

@@ -16,3 +16,7 @@ dist
 
 # Logs
 *.log
+
+# Cloudflare Pages
+.wrangler
+

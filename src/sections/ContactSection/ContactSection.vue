@@ -79,6 +79,7 @@
             aria-live="polite"
           >
             <svg
+              aria-hidden="true"
               class="contact__success-icon"
               width="40"
               height="40"
@@ -114,6 +115,7 @@
               type="text"
               autocomplete="name"
               required
+              :max-length="MAX_NAME_LENGTH"
               :rules="nameRules"
             />
 
@@ -126,6 +128,7 @@
               inputmode="email"
               autocomplete="email"
               required
+              :max-length="MAX_EMAIL_LENGTH"
               :rules="emailRules"
             />
 
@@ -137,6 +140,8 @@
               type="textarea"
               :rows="textAreaRows"
               required
+              :min-length="MIN_MESSAGE_LENGTH"
+              :max-length="MAX_MESSAGE_LENGTH"
               :rules="messageRules"
             />
 
@@ -152,6 +157,7 @@
                   {{ submitLabel }}
                 </span>
                 <svg
+                  aria-hidden="true"
                   width="14"
                   height="14"
                   viewBox="0 0 24 24"
@@ -190,6 +196,13 @@ import FormField from '@/components/FormField/FormField.vue'
 import { useBreakpoints } from '@/composables/breakpoints'
 import { useFieldRules } from '@/composables/field-rules'
 import { CONTACTS } from '@/data/contacts'
+import {
+  CONTACT_ENDPOINT,
+  MAX_EMAIL_LENGTH,
+  MAX_MESSAGE_LENGTH,
+  MAX_NAME_LENGTH,
+  MIN_MESSAGE_LENGTH,
+} from '@/shared/contact'
 
 const componentName = 'contact'
 const { xs } = useBreakpoints()
@@ -201,8 +214,6 @@ const { t } = useI18n()
 const loading = ref(false)
 
 const { github: githubUrl, linkedin: linkedinUrl } = CONTACTS
-
-const CONTACT_ENDPOINT = '/api/contact'
 
 type SubmitState = 'error' | 'idle' | 'sending' | 'sent'
 const submitState = ref<SubmitState>('idle')
@@ -232,14 +243,14 @@ const valid = computed(() =>
   validity.name && validity.email && validity.message,
 )
 
-function resetForm(): void {
+function resetForm() {
   form.name = ''
   form.email = ''
   form.message = ''
   submitState.value = 'idle'
 }
 
-async function sendMessage(): Promise<void> {
+async function sendMessage() {
   if (!valid.value) return
 
   loading.value = true
@@ -256,7 +267,11 @@ async function sendMessage(): Promise<void> {
       method: 'POST',
     })
 
-    if (!response.ok) throw new Error('submission failed')
+    if (!response.ok) {
+      submitState.value = 'error'
+
+      return
+    }
 
     submitState.value = 'sent'
     form.name = ''

@@ -1,6 +1,4 @@
 <template>
-  <RotateDevice />
-
   <div class="app">
     <a class="skip-link" href="#main">{{ $t('common.skip-to-content') }}</a>
 
@@ -26,7 +24,6 @@
 </template>
 
 <script setup lang="ts">
-import RotateDevice from '@/components/RotateDevice/RotateDevice.vue'
 import TheFooter from '@/components/TheFooter/TheFooter.vue'
 import TheHeader from '@/components/TheHeader/TheHeader.vue'
 import TheNavbar from '@/components/TheNavbar/TheNavbar.vue'

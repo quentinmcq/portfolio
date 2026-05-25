@@ -9,7 +9,6 @@ export const CONTACTS = {
   linkedinHandle: `@${LINKEDIN_USERNAME}`,
 } as const
 
-// Helper for project repo URLs built on top of the GitHub profile.
-export function repoUrl(slug: string): string {
+export function repoUrl(slug: string) {
   return `${CONTACTS.github}/${slug}`
 }

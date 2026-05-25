@@ -1,5 +1,5 @@
 export interface Hobby {
-  button: string
+  button?: string
   description: string
   link?: string
   title: string

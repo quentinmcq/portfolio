@@ -1,0 +1,8 @@
+.experience {
+  &__timeline {
+    list-style: none;
+    margin: clamp(2rem, 4vw, 3rem) 0 0;
+    padding: 0;
+    border-top: 1px solid var(--line);
+  }
+}

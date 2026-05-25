@@ -19,6 +19,7 @@
           >
             <span>LinkedIn</span>
             <svg
+              aria-hidden="true"
               width="11"
               height="11"
               viewBox="0 0 24 24"
@@ -39,6 +40,7 @@
           >
             <span>GitHub</span>
             <svg
+              aria-hidden="true"
               width="11"
               height="11"
               viewBox="0 0 24 24"
@@ -57,6 +59,7 @@
           >
             <span>Email</span>
             <svg
+              aria-hidden="true"
               width="11"
               height="11"
               viewBox="0 0 24 24"

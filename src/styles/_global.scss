@@ -76,7 +76,6 @@ img {
   color: var(--ink);
 }
 
-// Utility — fluid container
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -84,7 +83,6 @@ img {
   padding-inline: var(--container-pad);
 }
 
-// Section base — used by every content page
 .section {
   position: relative;
   padding-block: var(--section-pad-y);
@@ -95,7 +93,6 @@ img {
   }
 }
 
-// Type utilities
 .font-display {
   font-family: var(--font-display), serif;
   font-variation-settings: 'opsz' 144, 'SOFT' 60;

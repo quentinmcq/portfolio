@@ -65,6 +65,7 @@
             >
               <span>{{ $t('header.cta-work') }}</span>
               <svg
+                aria-hidden="true"
                 width="14"
                 height="14"
                 viewBox="0 0 24 24"
@@ -130,6 +131,7 @@
         >
           <span>{{ $t('header.scroll') }}</span>
           <svg
+            aria-hidden="true"
             width="14"
             height="14"
             viewBox="0 0 24 24"
@@ -152,7 +154,7 @@ import { computed } from 'vue'
 
 const currentYear = computed(() => new Date().getFullYear())
 
-function scrollTo(anchor: string): void {
+function scrollTo(anchor: string) {
   document.querySelector(anchor)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 </script>
