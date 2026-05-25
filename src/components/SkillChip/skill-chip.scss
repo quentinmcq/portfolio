@@ -1,15 +1,44 @@
 .skill-chip {
-  &__config {
-    font-weight: bold;
-    margin: 5px 8px 5px 2px !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 5px 12px 5px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--fg);
+  font-family: var(--font-mono), monospace;
+  font-size: var(--fs-micro);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color var(--dur-fast) var(--ease-out),
+              color var(--dur-fast) var(--ease-out),
+              background var(--dur-fast) var(--ease-out);
+
+  &__dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--chip-color);
+    // Subtle ring so light-coloured dots (e.g. Bun cream) stay visible on paper bg.
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--fg) 12%, transparent);
+    transition: transform var(--dur-fast) var(--ease-out),
+                box-shadow var(--dur-fast) var(--ease-out);
   }
-}
 
-:deep(.v-chip__prepend .v-responsive .v-img__placeholder .v-row) {
-  justify-content: initial !important;
-}
+  &__label {
+    white-space: nowrap;
+  }
 
-:deep(.v-chip__prepend .v-progress-circular) {
-  width: 15px;
-  height: 15px;
+  &:hover {
+    color: var(--fg);
+    border-color: color-mix(in srgb, var(--chip-color) 70%, var(--line));
+    background: color-mix(in srgb, var(--chip-color) 8%, transparent);
+
+    .skill-chip__dot {
+      transform: scale(1.25);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--chip-color) 20%, transparent);
+    }
+  }
 }

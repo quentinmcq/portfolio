@@ -1,7 +1,36 @@
 .app {
-  background: $metal-blue;
+  position: relative;
+  background: var(--bg);
+  color: var(--fg);
+  overflow-x: clip;
+  transition: background var(--dur-mid) var(--ease-out),
+              color var(--dur-mid) var(--ease-out);
 }
 
-.grecaptcha-badge {
-  visibility: hidden;
+.app__main {
+  position: relative;
+  z-index: 2;
+}
+
+// Hidden until keyboard focus — lets keyboard users skip the navbar.
+.skip-link {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 10px 16px;
+  background: var(--accent-button);
+  color: var(--ink);
+  font-family: var(--font-mono), monospace;
+  font-size: var(--fs-caption);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transform: translateY(-100%);
+  transition: transform var(--dur-fast) var(--ease-out);
+
+  &:focus-visible {
+    transform: translateY(0);
+    outline: 2px solid var(--ink);
+    outline-offset: -4px;
+  }
 }

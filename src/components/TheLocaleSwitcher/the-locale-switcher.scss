@@ -1,20 +1,33 @@
 .locale-switcher {
-  :deep(.v-btn) {
-    width: 42px;
-    min-width: 42px !important;
-    height: 29px !important;
-    min-height: 29px;
-    transform: none;
-  }
+  display: inline-flex;
+  align-items: center;
+  gap: 0.125rem;
+  font-family: var(--font-mono), monospace;
+  font-size: var(--fs-micro);
+  letter-spacing: 0.16em;
 
-  &__label {
-    margin: 10px;
-    font-size: 12px;
-    text-transform: uppercase;
-    font-weight: 900;
-  }
-}
+  &__btn {
+    appearance: none;
+    background: none;
+    border: 0;
+    padding: 10px 8px;
+    color: var(--fg-faint);
+    font: inherit;
+    cursor: pointer;
+    transition: color var(--dur-fast) var(--ease-out);
 
-:deep(.v-list-item--variant-text .v-list-item__overlay) {
-  background: $cherry-red !important;
+    &:hover {
+      color: var(--fg);
+    }
+
+    &.is-active {
+      color: var(--accent);
+    }
+
+    &:not(:last-child)::after {
+      content: '/';
+      margin-left: 0.5rem;
+      color: var(--fg-faint);
+    }
+  }
 }

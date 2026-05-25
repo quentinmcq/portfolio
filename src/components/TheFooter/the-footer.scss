@@ -1,37 +1,109 @@
 .footer {
-  background: $metal-blue;
-  justify-content: center;
+  position: relative;
+  padding-block: clamp(3rem, 6vw, 5rem);
+  background: var(--bg-inset);
+  color: var(--fg);
+  border-top: 1px solid var(--line);
 
-  &__credit {
-    padding-top: 18px;
-    text-align: center;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
   }
 
-  &__information {
-    letter-spacing: 1.5pt;
-  }
+  &__top {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
 
-  &__credit-message {
-    font-size: 14px;
-    margin-bottom: 25px;
-
-    @media (min-width: $xl) {
-      font-size: 16px;
+    @media (min-width: $md) {
+      grid-template-columns: 1fr auto;
+      align-items: end;
     }
   }
 
-  &__copyright {
-    font-size: 13px;
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
 
-    @media (min-width: $xl) {
-      font-size: 15px;
+  &__brand-name {
+    font-family: var(--font-display), serif;
+    font-variation-settings: 'opsz' 72, 'SOFT' 60;
+    font-style: italic;
+    font-weight: 350;
+    font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+    line-height: 1;
+    letter-spacing: -0.015em;
+  }
+
+  &__brand-tag {
+    font-family: var(--font-mono), monospace;
+    font-size: var(--fs-micro);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    justify-content: flex-start;
+
+    @media (min-width: $md) {
+      justify-content: flex-end;
     }
   }
 
-  &__version {
-    margin-top: 20px;
-    color: $white;
-    font-size: 16px;
-    letter-spacing: 1.5pt;
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: var(--font-body), sans-serif;
+    font-size: var(--fs-caption);
+    color: var(--fg);
+    transition: color var(--dur-fast) var(--ease-out);
+
+    svg {
+      color: var(--fg-faint);
+      transition: color var(--dur-fast) var(--ease-out),
+                  transform var(--dur-fast) var(--ease-out);
+    }
+
+    &:hover {
+      color: var(--accent);
+
+      svg {
+        color: var(--accent);
+        transform: translate(2px, -2px);
+      }
+    }
+  }
+
+  &__rule {
+    height: 1px;
+    background: var(--line);
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+  }
+
+  &__caption {
+    font-family: var(--font-mono), monospace;
+    font-size: var(--fs-micro);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--fg);
+
+    &--muted {
+      color: var(--fg-muted);
+    }
   }
 }

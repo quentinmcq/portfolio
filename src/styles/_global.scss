@@ -1,0 +1,163 @@
+@use 'breakpoints';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  cursor: default;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'ss01' on, 'cv11' on;
+  background: var(--bg);
+  color: var(--fg);
+  transition: background var(--dur-mid) var(--ease-out),
+              color var(--dur-mid) var(--ease-out);
+}
+
+body {
+  font-family: var(--font-body), sans-serif;
+  font-size: var(--fs-body);
+  line-height: 1.55;
+  font-weight: 380;
+  letter-spacing: 0.005em;
+}
+
+ul,
+ol {
+  padding-inline-start: 0;
+  margin: 0;
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// Global focus indicator — form fields handle their own (underline animation).
+:where(a, button, [role='button'], [tabindex]):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+// Utility — fluid container
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+// Section base — used by every content page
+.section {
+  position: relative;
+  padding-block: var(--section-pad-y);
+  border-top: 1px solid var(--line);
+
+  &:first-of-type {
+    border-top: 0;
+  }
+}
+
+// Type utilities
+.font-display {
+  font-family: var(--font-display), serif;
+  font-variation-settings: 'opsz' 144, 'SOFT' 60;
+}
+
+.font-mono {
+  font-family: var(--font-mono), monospace;
+}
+
+.eyebrow {
+  font-family: var(--font-mono), monospace;
+  font-size: var(--fs-micro);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background: var(--line);
+  border: 0;
+}
+
+// Reveal-on-scroll utility (used alongside an IntersectionObserver directive
+// in App.vue's mounted hook — falls back gracefully without JS).
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 800ms var(--ease-out),
+              transform 800ms var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+[data-reveal].is-visible,
+.no-js [data-reveal] {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// Subtle film grain across the whole app, switched by theme
+.app-grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: var(--grain-opacity);
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}

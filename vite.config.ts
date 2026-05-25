@@ -1,24 +1,19 @@
 import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
-import vuetify from 'vite-plugin-vuetify'
 
 export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: '@use "@/assets/scss/_index.scss" as *;',
+        additionalData: '@use "@/styles/_index.scss" as *;',
       },
     },
   },
-  define: {
-    'import.meta.env.APP_VERSION': JSON.stringify(process.env.npm_package_version),
-  },
-  plugins: [vue(), vuetify({ autoImport: true })],
+  plugins: [vue()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
-      '@neoconfetti/vue': '/node_modules/@neoconfetti/vue/dist/index.js',
     },
   },
 })

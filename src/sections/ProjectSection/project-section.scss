@@ -1,0 +1,118 @@
+.project {
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding-block: clamp(1.25rem, 2.5vw, 2rem);
+    border-bottom: 1px solid var(--line);
+    transition: padding-left var(--dur-mid) var(--ease-out);
+
+    @media (min-width: $md) {
+      grid-template-columns: 120px 1fr;
+      gap: 2rem;
+      align-items: baseline;
+    }
+
+    @media (min-width: $lg) {
+      grid-template-columns: 150px 1fr;
+    }
+
+    &:hover {
+      padding-left: 0.5rem;
+    }
+  }
+
+  &__year {
+    font-family: var(--font-mono), monospace;
+    font-size: var(--fs-caption);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--fg-faint);
+    white-space: nowrap;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__title {
+    @include display-title;
+  }
+
+  &__title-link {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    color: var(--fg);
+    transition: color var(--dur-fast) var(--ease-out);
+  }
+
+  &__title-icon {
+    color: var(--fg-faint);
+    transition: color var(--dur-fast) var(--ease-out),
+                transform var(--dur-fast) var(--ease-out);
+  }
+
+  &__title-link:hover {
+    color: var(--accent);
+
+    .project__title-icon {
+      color: var(--accent);
+      transform: translate(3px, -3px);
+    }
+  }
+
+  &__kind-tag {
+    display: inline-block;
+    margin-left: 0.5rem;
+    padding: 2px 8px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-family: var(--font-mono), monospace;
+    font-size: var(--fs-micro);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
+    vertical-align: middle;
+
+    &--school {
+      color: var(--gold);
+      border-color: color-mix(in srgb, var(--gold) 30%, transparent);
+    }
+
+    &--personal {
+      color: var(--accent);
+      border-color: color-mix(in srgb, var(--accent) 30%, transparent);
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    max-width: 60ch;
+    font-family: var(--font-display), serif;
+    font-variation-settings: 'opsz' 24, 'SOFT' 60;
+    font-style: italic;
+    font-weight: 300;
+    font-size: var(--fs-body-lg);
+    line-height: 1.45;
+    color: var(--fg-muted);
+  }
+
+  &__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.5rem;
+    margin: 0.25rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+}

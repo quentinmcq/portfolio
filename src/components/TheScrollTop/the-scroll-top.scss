@@ -1,41 +1,42 @@
 .scroll-top {
   position: fixed;
-  right: 11px;
-  bottom: 15px;
-  z-index: 998;
+  right: clamp(1rem, 2vw, 2rem);
+  bottom: clamp(1.25rem, 2.5vw, 2.5rem);
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 10px 14px;
+  background: color-mix(in srgb, var(--bg-elevated) 70%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--fg);
   cursor: pointer;
-  transition: all 0.5s ease;
-  transform: translateY(100px);
   opacity: 0;
-  text-decoration: none;
+  transform: translateY(8px) scale(0.96);
+  transition: opacity var(--dur-mid) var(--ease-out),
+              transform var(--dur-mid) var(--ease-out),
+              color var(--dur-fast) var(--ease-out),
+              border-color var(--dur-fast) var(--ease-out);
+  pointer-events: none;
 
-  @media only screen and (min-width: 390px) and (orientation: landscape) {
-    bottom: 18px;
-    right: 22px;
-  }
-
-  @media (min-width: $xl) {
-    right: 20px;
-    bottom: 18px;
-  }
-
-  &__transition {
+  &.is-visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
+    pointer-events: auto;
   }
 
   &:hover {
-    transform: scale(1.08);
-    transition: 0.5s all ease 0s;
+    color: var(--accent);
+    border-color: var(--accent);
   }
 
-  &__icon {
-    padding: 8px;
-    background: $cherry-red;
-    border-radius: 8px;
-
-    @media (min-width: $lg) {
-      padding: 10px;
-    }
+  &__label {
+    font-family: var(--font-mono), monospace;
+    font-size: var(--fs-micro);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
   }
 }

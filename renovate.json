@@ -7,7 +7,6 @@
     ":automergeStableNonMajor"
   ],
   "rangeStrategy": "bump",
-  "ignoreDeps": ["vue-writer"],
   "rebaseWhen": "conflicted"
 }
 

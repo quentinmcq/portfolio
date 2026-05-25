@@ -1,19 +1,70 @@
 .category-title {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: #fff;
-  font-weight: 800;
-  font-size: 26px;
-  letter-spacing: 5px;
-  text-align: center;
-  text-transform: uppercase;
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
 
-  @media (min-width: $md) {
+  &__row {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 60px;
-    margin-bottom: 40px;
-    font-size: 40px;
+    gap: 1rem;
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  &__index {
+    font-family: var(--font-mono), monospace;
+    font-size: var(--fs-micro);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  &__rule {
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
+
+  &__top {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-mono), monospace;
+    font-size: var(--fs-micro);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
+    transition: color var(--dur-fast) var(--ease-out);
+
+    svg {
+      transition: transform var(--dur-fast) var(--ease-out);
+    }
+
+    &:hover {
+      color: var(--accent);
+
+      svg {
+        transform: translate(2px, -2px);
+      }
+    }
+  }
+
+  &__heading {
+    font-family: var(--font-display), serif;
+    font-variation-settings: 'opsz' 144, 'SOFT' 60;
+    font-weight: 350;
+    font-size: var(--fs-display-lg);
+    line-height: 1;
+    letter-spacing: -0.025em;
+    color: var(--fg);
+    margin: 0;
+  }
+
+  &__kicker {
+    margin: 0.75rem 0 0;
+    max-width: 48ch;
+    font-family: var(--font-display), serif;
+    font-variation-settings: 'opsz' 24, 'SOFT' 60;
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(1.05rem, 0.95rem + 0.4vw, 1.25rem);
+    color: var(--fg-muted);
   }
 }

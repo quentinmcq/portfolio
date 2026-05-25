@@ -1,0 +1,11 @@
+// Shared typography presets — included in components that need
+// the same display headline across distinct UI surfaces.
+@mixin display-title {
+  margin: 0;
+  font-family: var(--font-display), serif;
+  font-variation-settings: 'opsz' 72, 'SOFT' 60;
+  font-weight: 350;
+  font-size: clamp(1.375rem, 1.2rem + 0.9vw, 1.875rem);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}

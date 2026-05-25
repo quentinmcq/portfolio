@@ -1,136 +1,96 @@
-const devIconPrefix = 'devicon:'
-const logosPrefix = 'logos:'
-const simpleIconsPrefix = 'simple-icons:'
-const streamlineEmojisPrefix = 'streamline-emojis:'
+interface Tool {
+  color?: string
+  label: string
+  link: string
+}
 
-export default {
+const tools: Record<string, Tool> = {
   angular: {
     color: '#DD0031',
-    icon: `${devIconPrefix}angular`,
     label: 'Angular',
     link: 'https://angular.io/',
   },
   api: {
-    icon: `${logosPrefix}fastapi-icon`,
     label: 'API',
     link: 'https://www.cnil.fr/fr/definition/interface-de-programmation-dapplication-api',
   },
-  bootstrap: {
-    color: '#7952B3',
-    icon: `${devIconPrefix}bootstrap`,
-    label: 'Bootstrap',
-    link: 'https://getbootstrap.com/',
+  bun: {
+    color: '#FBF0DF',
+    label: 'Bun',
+    link: 'https://bun.sh/',
+  },
+  claude: {
+    color: '#D97757',
+    label: 'Claude',
+    link: 'https://www.anthropic.com/claude',
+  },
+  cloudflare: {
+    color: '#F38020',
+    label: 'Cloudflare',
+    link: 'https://www.cloudflare.com/',
   },
   docker: {
     color: '#2496ED',
-    height: 19,
-    icon: `${devIconPrefix}docker`,
     label: 'Docker',
     link: 'https://www.docker.com/',
   },
-  elasticsearch: {
-    icon: `${devIconPrefix}elasticsearch`,
-    label: 'Elasticsearch',
-    link: 'https://www.elastic.co/elasticsearch/',
-  },
   eslint: {
     color: '#4B32C3',
-    icon: `${devIconPrefix}eslint`,
     label: 'ESlint',
     link: 'https://eslint.org/',
   },
   gitlab: {
     color: '#FC6D26',
-    icon: `${devIconPrefix}gitlab`,
     label: 'GitLab',
     link: 'https://gitlab.com/',
   },
   grafana: {
     color: '#F46800',
-    icon: `${devIconPrefix}grafana`,
     label: 'Grafana',
     link: 'https://grafana.com/',
   },
-  gtm: {
-    color: '#4285F4',
-    icon: `${logosPrefix}google-tag-manager`,
-    label: 'GTM',
-    link: 'https://tagmanager.google.com/',
-  },
-  html: {
-    color: '#E34F26',
-    icon: `${devIconPrefix}html5`,
-    label: 'HTML/CSS',
-    link: 'https://developer.mozilla.org/fr/docs/Learn/Getting_started_with_the_web/HTML_basics/',
-  },
-  inertiajs: {
-    color: '#3B82F6',
-    icon: `${simpleIconsPrefix}inertia`,
-    label: 'Inertia.js',
-    link: 'https://inertiajs.com/',
-  },
-  javascript: {
-    color: '#F1D900',
-    icon: `${devIconPrefix}javascript`,
-    label: 'JavaScript',
-    link: 'https://developer.mozilla.org/fr/docs/Web/JavaScript/',
-  },
   jenkins: {
     color: '#D24939',
-    height: 16,
-    icon: `${devIconPrefix}jenkins`,
     label: 'Jenkins',
     link: 'https://www.jenkins.io/',
   },
   laravel: {
     color: '#FF2D20',
-    icon: `${devIconPrefix}laravel`,
     label: 'Laravel',
     link: 'https://laravel.com/',
   },
-  livewire: {
-    color: '#0F52BA',
-    icon: `${devIconPrefix}livewire`,
-    label: 'Livewire',
-    link: 'https://laravel-livewire.com/',
-  },
   mysql: {
     color: '#4479A1',
-    icon: `${devIconPrefix}mysql`,
     label: 'MySQL',
     link: 'https://www.mysql.com/',
   },
   nuxt: {
     color: '#00DC82',
-    height: 10,
-    icon: `${logosPrefix}nuxt-icon`,
     label: 'Nuxt',
     link: 'https://nuxt.com/',
   },
+  oxlint: {
+    color: '#A78BFA',
+    label: 'Oxlint',
+    link: 'https://oxc.rs/docs/guide/usage/linter.html',
+  },
   phaser: {
     color: '#3D99F6',
-    height: 18,
-    icon: `${streamlineEmojisPrefix}rocket`,
     label: 'Phaser',
     link: 'https://phaser.io/',
   },
   php: {
     color: '#777BB4',
-    height: 18,
-    icon: `${devIconPrefix}php`,
     label: 'PHP',
     link: 'https://www.php.net/',
   },
   pinia: {
     color: '#FFD859',
-    icon: `${logosPrefix}pinia`,
     label: 'Pinia',
     link: 'https://pinia.vuejs.org/',
   },
   playwright: {
     color: '#2EAD33',
-    height: 17,
-    icon: `${devIconPrefix}playwright`,
     label: 'Playwright',
     link: 'https://playwright.dev/',
   },
@@ -141,66 +101,71 @@ export default {
   },
   python: {
     color: '#306998',
-    icon: `${devIconPrefix}python`,
     label: 'Python',
     link: 'https://www.python.org/',
   },
   rabbitmq: {
     color: '#FF6600',
-    height: 12,
-    icon: `${devIconPrefix}rabbitmq`,
     label: 'RabbitMQ',
     link: 'https://www.rabbitmq.com/',
   },
-  react: {
-    color: '#61DAFB',
-    icon: `${devIconPrefix}react`,
-    label: 'React',
-    link: 'https://react.dev/',
-  },
   redis: {
     color: '#DC382D',
-    height: 11,
-    icon: `${logosPrefix}redis`,
     label: 'Redis',
     link: 'https://redis.io/',
   },
+  resend: {
+    color: 'var(--fg)',
+    label: 'Resend',
+    link: 'https://resend.com/',
+  },
+  stripe: {
+    color: '#635BFF',
+    label: 'Stripe',
+    link: 'https://stripe.com/',
+  },
+  supabase: {
+    color: '#3ECF8E',
+    label: 'Supabase',
+    link: 'https://supabase.com/',
+  },
+  swift: {
+    color: '#FA7343',
+    label: 'Swift',
+    link: 'https://www.swift.org/',
+  },
   symfony: {
-    color: '#000000',
-    icon: `${devIconPrefix}symfony`,
+    // Symfony brand is pure black; using the foreground token so the chip
+    // dot stays visible across both themes.
+    color: 'var(--fg)',
     label: 'Symfony',
     link: 'https://symfony.com/',
   },
+  tailwind: {
+    color: '#06B6D4',
+    label: 'Tailwind',
+    link: 'https://tailwindcss.com/',
+  },
   typescript: {
     color: '#3178C6',
-    height: 12,
-    icon: `${devIconPrefix}typescript`,
     label: 'TypeScript',
     link: 'https://www.typescriptlang.org/',
   },
-  vite: {
-    color: '#646CFF',
-    height: 14,
-    icon: `${devIconPrefix}vitejs`,
-    label: 'Vite',
-    link: 'https://vite.dev/',
+  vercel: {
+    color: 'var(--fg)',
+    label: 'Vercel',
+    link: 'https://vercel.com/',
   },
   vitest: {
     color: '#6E9F18',
-    icon: `${devIconPrefix}vitest`,
     label: 'Vitest',
     link: 'https://vitest.dev/',
   },
-  vuejs: {
+  vue: {
     color: '#41B883',
-    icon: `${devIconPrefix}vuejs`,
-    label: 'Vue.js',
+    label: 'Vue',
     link: 'https://vuejs.org/',
   },
-  vuetify: {
-    color: '#1867C0',
-    icon: `${devIconPrefix}vuetify`,
-    label: 'Vuetify',
-    link: 'https://vuetifyjs.com/',
-  },
 }
+
+export default tools

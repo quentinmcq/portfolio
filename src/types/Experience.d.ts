@@ -1,8 +1,8 @@
 export interface Experience {
-  cover: string
-  link: string
+  kind?: 'education' | 'work'
+  link?: string
   location: string
-  tasks: string[]
+  subtitle?: string
   title: string
   year: string
 }

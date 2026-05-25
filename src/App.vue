@@ -1,46 +1,46 @@
 <template>
-  <v-app>
-    <v-main>
-      <RotateDevice />
+  <RotateDevice />
 
-      <div class="app">
-        <TheNavbar />
-        <TheHeader />
+  <div class="app">
+    <a class="skip-link" href="#main">{{ $t('common.skip-to-content') }}</a>
 
-        <v-container :style="appStyle">
-          <HomePage />
-        </v-container>
+    <div
+      class="app-grain"
+      aria-hidden="true"
+    />
 
-        <TheFooter />
-      </div>
-    </v-main>
-  </v-app>
+    <TheNavbar />
+    <TheHeader />
+
+    <main id="main" class="app__main">
+      <SkillSection />
+      <ExperienceSection />
+      <ProjectSection />
+      <HobbySection />
+      <ContactSection />
+    </main>
+
+    <TheFooter />
+    <TheScrollTop />
+  </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
-import { useRecaptchaProvider } from 'vue-recaptcha/head'
-
 import RotateDevice from '@/components/RotateDevice/RotateDevice.vue'
 import TheFooter from '@/components/TheFooter/TheFooter.vue'
 import TheHeader from '@/components/TheHeader/TheHeader.vue'
 import TheNavbar from '@/components/TheNavbar/TheNavbar.vue'
-import { useGoogleAnalyticsEvent } from '@/composables/event/google-analytics'
-import { useResponsive } from '@/composables/style/responsive'
-import HomePage from '@/pages/HomePage/HomePage.vue'
+import TheScrollTop from '@/components/TheScrollTop/TheScrollTop.vue'
+import { useRevealOnScroll } from '@/composables/reveal-on-scroll'
+import { useTheme } from '@/composables/theme'
+import ContactSection from '@/sections/ContactSection/ContactSection.vue'
+import ExperienceSection from '@/sections/ExperienceSection/ExperienceSection.vue'
+import HobbySection from '@/sections/HobbySection/HobbySection.vue'
+import ProjectSection from '@/sections/ProjectSection/ProjectSection.vue'
+import SkillSection from '@/sections/SkillSection/SkillSection.vue'
 
-useRecaptchaProvider()
-
-onMounted(() => sendEventOnFirstPageLoading())
-const { appStyle } = useResponsive()
-
-function sendEventOnFirstPageLoading(): void {
-  useGoogleAnalyticsEvent({
-    action: 'website-entry',
-    category: 'website',
-    label: 'A user has entered the site',
-  })
-}
+useTheme()
+useRevealOnScroll()
 </script>
 
 <style lang="scss" src="./app.scss" />

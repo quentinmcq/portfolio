@@ -1,5 +1,6 @@
 export interface Skill {
-  color: string
-  componentName?: string
+  color?: string
   content: string[]
+  label: string
+  primary?: boolean
 }

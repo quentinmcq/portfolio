@@ -1,0 +1,104 @@
+.field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-block: 1.5rem 1.25rem;
+  border: 0;
+
+  &__label {
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    font-family: var(--font-mono), monospace;
+    font-size: var(--fs-caption);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
+    pointer-events: none;
+    transform-origin: left top;
+    transition: transform var(--dur-mid) var(--ease-out),
+                color var(--dur-mid) var(--ease-out);
+  }
+
+  &--focused &__label,
+  &--filled &__label {
+    transform: translateY(-1.1rem) scale(0.78);
+    color: var(--accent);
+  }
+
+  &--error &__label {
+    color: var(--accent);
+  }
+
+  &__control {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    outline: none;
+    padding: 0.25rem 0 0.65rem;
+    font-family: var(--font-body), sans-serif;
+    font-size: var(--fs-body-lg);
+    color: var(--fg);
+    caret-color: var(--accent);
+    width: 100%;
+    line-height: 1.5;
+
+    &--textarea {
+      resize: vertical;
+      min-height: 7rem;
+      padding-top: 0.5rem;
+      font-family: var(--font-body), sans-serif;
+    }
+  }
+
+  &__line {
+    position: relative;
+    display: block;
+    height: 1px;
+    background: var(--line-strong);
+    transition: background var(--dur-fast) var(--ease-out);
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--dur-mid) var(--ease-out);
+    }
+  }
+
+  &--focused &__line::after,
+  &--error &__line::after {
+    transform: scaleX(1);
+  }
+
+  &--error &__line {
+    background: var(--accent);
+  }
+
+  &__error {
+    display: block;
+    margin-top: 0.5rem;
+    font-family: var(--font-mono), monospace;
+    font-size: var(--fs-micro);
+    letter-spacing: 0.08em;
+    color: var(--accent);
+  }
+}
+
+.field-msg-enter-active,
+.field-msg-leave-active {
+  transition: opacity var(--dur-fast) var(--ease-out),
+              transform var(--dur-fast) var(--ease-out);
+}
+
+.field-msg-enter-from,
+.field-msg-leave-to {
+  opacity: 0;
+  transform: translateY(-2px);
+}

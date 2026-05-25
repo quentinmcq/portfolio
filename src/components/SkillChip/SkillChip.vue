@@ -1,42 +1,36 @@
-<template class="skill-chip">
-  <v-chip
-    class="skill-chip__config"
-    :color="color ?? chipConfig.color"
-    :size="chipSize"
-    :href="chipConfig.link"
+<template>
+  <component
+    :is="chipConfig.link ? 'a' : 'span'"
+    :href="chipConfig.link || undefined"
+    :target="chipConfig.link ? '_blank' : undefined"
+    :rel="chipConfig.link ? 'noopener' : undefined"
+    class="skill-chip"
+    :style="dotStyle"
   >
-    <template
-      #prepend
-      v-if="chipConfig.icon"
-    >
-      <Icon
-        :icon="chipConfig.icon"
-        :height="chipConfig.height"
-      />
-    </template>
-    <div class="ml-1">
-      {{ chipConfig.label }}
-    </div>
-  </v-chip>
+    <span
+      class="skill-chip__dot"
+      aria-hidden="true"
+    />
+    <span class="skill-chip__label">{{ chipConfig.label }}</span>
+  </component>
 </template>
 
 <script setup lang="ts">
-import { Icon } from '@iconify/vue'
 import { computed } from 'vue'
 
-import { useResponsive } from '@/composables/style/responsive'
 import tool from '@/data/tools'
 
-const { color = undefined, label } = defineProps<{
-  color?: string
+const { label } = defineProps<{
   label: string
 }>()
-
-const { chipSize } = useResponsive()
 
 const chipConfig = computed(() => {
   return tool[label.toLowerCase()] ?? { color: '', label, link: '' }
 })
+
+const dotStyle = computed(() => ({
+  '--chip-color': chipConfig.value.color || 'var(--fg-muted)',
+}))
 </script>
 
 <style lang="scss" src="./skill-chip.scss" scoped />

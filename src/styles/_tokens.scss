@@ -1,0 +1,84 @@
+// Design tokens — exposed as CSS variables so we can switch theme at runtime.
+:root {
+  // Core palette (constant across themes)
+  --ink: #0d0d10;
+  --ink-soft: #15151a;
+  --paper: #f5f1e8;
+  --paper-soft: #ece6d8;
+  --ember: #ff5b3a;
+  --ember-deep: #d6411e;
+  --gold: #d4a574;
+
+  // Themed tokens — default = dark
+  --bg: var(--ink);
+  --bg-elevated: #15151a;
+  --bg-inset: #08080a;
+  --fg: var(--paper);
+  --fg-muted: rgba(245, 241, 232, 0.62);
+  --fg-faint: rgba(245, 241, 232, 0.38);
+  --line: rgba(245, 241, 232, 0.12);
+  --line-strong: rgba(245, 241, 232, 0.28);
+  --accent: var(--ember);
+  --accent-deep: var(--ember-deep);
+  // Background tone for filled buttons — kept = accent in dark mode,
+  // shifted deeper in light mode for crisper dark-text contrast.
+  --accent-button: var(--accent);
+  --shadow-card: 0 30px 60px -30px rgba(0, 0, 0, 0.6),
+                 0 18px 36px -28px rgba(0, 0, 0, 0.45);
+  --grain-opacity: 0.045;
+
+  // Type
+  --font-display: 'Fraunces', 'Iowan Old Style', 'Apple Garamond', 'Baskerville', 'Times New Roman', serif;
+  --font-body: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  // Type scale — fluid
+  --fs-micro: 0.6875rem;       // 11
+  --fs-caption: 0.8125rem;     // 13
+  --fs-body: 1rem;             // 16
+  --fs-body-lg: clamp(1.0625rem, 0.95rem + 0.4vw, 1.25rem);
+  --fs-display-sm: clamp(1.75rem, 1.3rem + 2.2vw, 2.75rem);
+  --fs-display-md: clamp(2.5rem, 1.4rem + 5.5vw, 4.5rem);
+  --fs-display-lg: clamp(3rem, 1.8rem + 7vw, 6rem);
+  --fs-display-xl: clamp(3.5rem, 1.8rem + 10vw, 9rem);
+
+  // Spacing scale
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+  --sp-10: 8rem;
+  --sp-11: 12rem;
+
+  // Layout
+  --container-max: 1280px;
+  --container-pad: clamp(1.25rem, 2.5vw, 2.5rem);
+  --section-pad-y: clamp(4rem, 8vw, 8rem);
+
+  // Motion
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.7, 0, 0.3, 1);
+  --dur-fast: 180ms;
+  --dur-mid: 360ms;
+  --dur-slow: 720ms;
+}
+
+:root.theme-light {
+  --bg: var(--paper);
+  --bg-elevated: #ffffff;
+  --bg-inset: var(--paper-soft);
+  --fg: var(--ink);
+  --fg-muted: rgba(13, 13, 16, 0.62);
+  --fg-faint: rgba(13, 13, 16, 0.38);
+  --line: rgba(13, 13, 16, 0.12);
+  --line-strong: rgba(13, 13, 16, 0.28);
+  --accent-button: var(--accent);
+  --shadow-card: 0 30px 60px -30px rgba(15, 15, 20, 0.18),
+                 0 16px 30px -22px rgba(15, 15, 20, 0.12);
+  --grain-opacity: 0.06;
+}
