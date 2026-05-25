@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "qmacq-portfolio",
+  "name": "portfolio",
   "main": "worker/index.ts",
   "compatibility_date": "2026-05-25",
   "assets": {
@@ -8,6 +8,12 @@
     "binding": "ASSETS",
     "not_found_handling": "404-page"
   },
+  "send_email": [
+    {
+      "name": "SEND_EMAIL",
+      "destination_address": "quentin.macq@outlook.fr"
+    }
+  ],
   "observability": {
     "enabled": true
   }

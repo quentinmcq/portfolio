@@ -194,7 +194,7 @@ export default {
         year: '2026',
       },
       {
-        chips: ['Nuxt', 'TypeScript', 'Tailwind', 'Supabase', 'Stripe', 'Claude', 'Vercel'],
+        chips: ['Nuxt', 'TypeScript', 'Tailwind', 'Supabase', 'Stripe', 'Claude', 'Resend', 'Vercel'],
         kind: 'personal',
         link: repoUrl('pilpoil'),
         subtitle: 'AI-augmented digital health record for pets.',

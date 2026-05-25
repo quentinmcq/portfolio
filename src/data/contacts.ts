@@ -2,7 +2,7 @@ const GITHUB_USERNAME = 'quentinmcq'
 const LINKEDIN_USERNAME = 'quentin-macq'
 
 export const CONTACTS = {
-  email: 'quentin.macq@outlook.fr',
+  email: 'contact@quentin-macq.dev',
   github: `https://github.com/${GITHUB_USERNAME}`,
   githubHandle: `@${GITHUB_USERNAME}`,
   linkedin: `https://fr.linkedin.com/in/${LINKEDIN_USERNAME}`,

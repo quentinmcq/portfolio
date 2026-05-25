@@ -1,7 +1,9 @@
+import { EmailMessage } from 'cloudflare:email'
+import { createMimeMessage } from 'mimetext'
+
 interface Env {
   ASSETS: { fetch: (request: Request) => Promise<Response> }
-  CONTACT_TO_EMAIL: string
-  RESEND_API_KEY: string
+  SEND_EMAIL: { send: (message: EmailMessage) => Promise<void> }
 }
 
 interface ContactPayload {
@@ -10,8 +12,8 @@ interface ContactPayload {
   name?: string
 }
 
-const RESEND_ENDPOINT = 'https://api.resend.com/emails'
-const FROM_EMAIL = 'Portfolio <onboarding@resend.dev>'
+const FROM_EMAIL = 'contact@quentin-macq.dev'
+const TO_EMAIL = 'quentin.macq@outlook.fr'
 const MIN_MESSAGE_LENGTH = 20
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -36,26 +38,20 @@ async function handleContact(request: Request, env: Env): Promise<Response> {
     return new Response('Validation failed', { status: 400 })
   }
 
-  if (!env.RESEND_API_KEY || !env.CONTACT_TO_EMAIL) {
-    return new Response('Server misconfigured', { status: 500 })
-  }
-
-  const resendResponse = await fetch(RESEND_ENDPOINT, {
-    body: JSON.stringify({
-      from: FROM_EMAIL,
-      reply_to: email,
-      subject: `Portfolio · ${name}`,
-      text: `${name} <${email}>\n\n${message}`,
-      to: [env.CONTACT_TO_EMAIL],
-    }),
-    headers: {
-      'Authorization': `Bearer ${env.RESEND_API_KEY}`,
-      'Content-Type': 'application/json',
-    },
-    method: 'POST',
+  const msg = createMimeMessage()
+  msg.setSender({ addr: FROM_EMAIL, name: 'Portfolio' })
+  msg.setRecipient(TO_EMAIL)
+  msg.setHeader('Reply-To', email)
+  msg.setSubject(`Portfolio · ${name}`)
+  msg.addMessage({
+    contentType: 'text/plain',
+    data: `${name} <${email}>\n\n${message}`,
   })
 
-  if (!resendResponse.ok) {
+  try {
+    await env.SEND_EMAIL.send(new EmailMessage(FROM_EMAIL, TO_EMAIL, msg.asRaw()))
+  }
+  catch {
     return new Response('Email send failed', { status: 502 })
   }
 

@@ -36,18 +36,17 @@ src/
 └─ types/         shared interfaces
 ```
 
-## Environment
+## Email
 
-The contact form posts to `/api/contact`, handled by `worker/index.ts` (Cloudflare Worker with Static Assets). It forwards the message to [Resend](https://resend.com/) using its sandbox sender `onboarding@resend.dev`. Set these on Cloudflare (Worker project → Settings → Variables and Secrets) — server-side only, no `VITE_` prefix:
+The contact form posts to `/api/contact`, handled by `worker/index.ts` (Cloudflare Worker with Static Assets). It sends the message via Cloudflare's `send_email` binding — no external email service.
 
-```
-RESEND_API_KEY=
-CONTACT_TO_EMAIL=
-```
+Pre-requisites on Cloudflare:
+- **Email Routing** enabled on `quentin-macq.dev` (auto-adds MX + SPF records)
+- Destination `quentin.macq@outlook.fr` **verified** in Email Routing → Destination Addresses
 
-`CONTACT_TO_EMAIL` must match the email used to register the Resend account (sandbox sender restriction — fine for a single-recipient contact form). To send from a custom domain later, verify it on Resend and update `FROM_EMAIL` in `worker/index.ts`.
+The `send_email` binding in `wrangler.jsonc` pins the destination, so no runtime env var is needed.
 
-For local dev, run `bun run dev` for the UI (vite), or `bun run build && bunx wrangler dev` to test the worker + assets together. Put the same env vars in a gitignored `.dev.vars` file for `wrangler dev`.
+For local dev, run `bun run dev` for the UI (vite), or `bun run build && bunx wrangler dev` to test the worker + assets together.
 
 ## License
 

@@ -178,7 +178,7 @@ export default {
     'kind-school': 'École',
     'list': [
       {
-        chips: ['Vue', 'TypeScript', 'Bun', 'Cloudflare', 'Resend'],
+        chips: ['Vue', 'TypeScript', 'Bun', 'Cloudflare'],
         kind: 'personal',
         link: repoUrl('portfolio'),
         subtitle: 'Refonte 2026 de mon portfolio professionnel.',
@@ -194,7 +194,7 @@ export default {
         year: '2026',
       },
       {
-        chips: ['Nuxt', 'TypeScript', 'Tailwind', 'Supabase', 'Stripe', 'Claude', 'Vercel'],
+        chips: ['Nuxt', 'TypeScript', 'Tailwind', 'Supabase', 'Stripe', 'Claude', 'Resend', 'Vercel'],
         kind: 'personal',
         link: repoUrl('pilpoil'),
         subtitle: 'Carnet de santé numérique pour animaux de compagnie, augmenté par IA.',

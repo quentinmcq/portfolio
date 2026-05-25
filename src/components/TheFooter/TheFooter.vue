@@ -53,26 +53,6 @@
           </a>
           <a
             class="footer__link"
-            href="/cv.pdf"
-            target="_blank"
-            rel="noopener"
-          >
-            <span>CV (PDF)</span>
-            <svg
-              width="11"
-              height="11"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M7 17 17 7M9 7h8v8" />
-            </svg>
-          </a>
-          <a
-            class="footer__link"
             :href="`mailto:${CONTACTS.email}`"
           >
             <span>Email</span>

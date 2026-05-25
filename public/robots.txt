@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://qmacq.netlify.app/sitemap.xml
+Sitemap: https://quentin-macq.dev/sitemap.xml

@@ -141,26 +141,6 @@
       <div class="drawer__resources">
         <a
           class="drawer__resource"
-          href="/cv.pdf"
-          target="_blank"
-          rel="noopener"
-        >
-          <span>CV (PDF)</span>
-          <svg
-            width="12"
-            height="12"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M7 17 17 7M9 7h8v8" />
-          </svg>
-        </a>
-        <a
-          class="drawer__resource"
           :href="linkedinUrl"
           target="_blank"
           rel="noopener"
