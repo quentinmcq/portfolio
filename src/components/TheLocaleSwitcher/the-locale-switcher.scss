@@ -21,7 +21,7 @@
     }
 
     &.is-active {
-      color: var(--accent);
+      color: var(--accent-text);
     }
 
     &:not(:last-child)::after {

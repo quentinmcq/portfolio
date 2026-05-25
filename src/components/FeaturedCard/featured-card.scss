@@ -45,7 +45,7 @@
     font-size: var(--fs-micro);
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--accent-text);
   }
 
   &__period {
@@ -76,7 +76,7 @@
   }
 
   &__stop {
-    color: var(--accent);
+    color: var(--accent-text);
   }
 
   &__description {
@@ -142,10 +142,10 @@
     }
 
     &:hover {
-      color: var(--accent);
+      color: var(--accent-text);
 
       svg {
-        color: var(--accent);
+        color: var(--accent-text);
         transform: translate(3px, -3px);
       }
     }

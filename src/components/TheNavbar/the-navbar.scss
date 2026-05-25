@@ -42,7 +42,7 @@
     cursor: pointer;
 
     &-mark {
-      color: var(--accent);
+      color: var(--accent-text);
     }
 
     &-name {
@@ -121,10 +121,10 @@
     }
 
     &:hover {
-      color: var(--accent);
+      color: var(--accent-text);
 
       .navbar__link-idx {
-        color: var(--accent);
+        color: var(--accent-text);
       }
 
       &::after {
@@ -156,8 +156,8 @@
                 border-color var(--dur-fast) var(--ease-out);
 
     &:hover {
-      color: var(--accent);
-      border-color: var(--accent);
+      color: var(--accent-text);
+      border-color: var(--accent-text);
     }
   }
 
@@ -175,7 +175,7 @@
     transition: border-color var(--dur-fast) var(--ease-out);
 
     &:hover {
-      border-color: var(--accent);
+      border-color: var(--accent-text);
 
       .navbar__menu-line {
         background: var(--accent);

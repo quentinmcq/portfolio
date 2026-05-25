@@ -34,7 +34,7 @@
     font-size: clamp(1.5rem, 1.3rem + 0.8vw, 2rem);
     line-height: 1;
     letter-spacing: -0.02em;
-    color: var(--accent);
+    color: var(--accent-text);
     white-space: nowrap;
   }
 
@@ -90,10 +90,10 @@
   }
 
   &__title-link:hover {
-    color: var(--accent);
+    color: var(--accent-text);
 
     .timeline-item__title-icon {
-      color: var(--accent);
+      color: var(--accent-text);
       transform: translate(3px, -3px);
     }
   }

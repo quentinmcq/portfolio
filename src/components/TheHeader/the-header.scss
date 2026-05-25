@@ -113,7 +113,7 @@
   }
 
   &__title-stop {
-    color: var(--accent);
+    color: var(--accent-text);
   }
 
   &__lede {
@@ -164,7 +164,7 @@
     font-size: var(--fs-micro);
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--accent-text);
   }
 
   &__aside-value {
@@ -201,7 +201,7 @@
     }
 
     &:hover {
-      color: var(--accent);
+      color: var(--accent-text);
     }
   }
 
@@ -254,8 +254,8 @@
     border-color: var(--line-strong);
 
     &:hover {
-      color: var(--accent);
-      border-color: var(--accent);
+      color: var(--accent-text);
+      border-color: var(--accent-text);
     }
   }
 }

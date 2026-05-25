@@ -63,10 +63,10 @@
   }
 
   &__title-link:hover {
-    color: var(--accent);
+    color: var(--accent-text);
 
     .project__title-icon {
-      color: var(--accent);
+      color: var(--accent-text);
       transform: translate(3px, -3px);
     }
   }
@@ -90,7 +90,7 @@
     }
 
     &--personal {
-      color: var(--accent);
+      color: var(--accent-text);
       border-color: color-mix(in srgb, var(--accent) 30%, transparent);
     }
   }

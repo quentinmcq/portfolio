@@ -23,11 +23,11 @@
   &--focused &__label,
   &--filled &__label {
     transform: translateY(-1.1rem) scale(0.78);
-    color: var(--accent);
+    color: var(--accent-text);
   }
 
   &--error &__label {
-    color: var(--accent);
+    color: var(--accent-text);
   }
 
   &__control {
@@ -39,7 +39,7 @@
     font-family: var(--font-body), sans-serif;
     font-size: var(--fs-body-lg);
     color: var(--fg);
-    caret-color: var(--accent);
+    caret-color: var(--accent-text);
     width: 100%;
     line-height: 1.5;
 
@@ -87,7 +87,7 @@
     font-family: var(--font-mono), monospace;
     font-size: var(--fs-micro);
     letter-spacing: 0.08em;
-    color: var(--accent);
+    color: var(--accent-text);
   }
 }
 

@@ -15,6 +15,7 @@ export function initI18n(app: App) {
   app.use(createI18n({
     fallbackLocale: DEFAULT_LOCALE,
     fallbackWarn: false,
+    legacy: false,
     locale,
     messages: { en, fr },
     missingWarn: false,

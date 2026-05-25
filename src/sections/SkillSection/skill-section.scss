@@ -30,7 +30,7 @@
     background: color-mix(in srgb, var(--accent) 4%, transparent);
 
     .skill-row__index {
-      color: var(--accent);
+      color: var(--accent-text);
     }
   }
 
@@ -65,7 +65,7 @@
     display: inline-block;
     margin-left: 0.5rem;
     font-size: 0.45em;
-    color: var(--accent);
+    color: var(--accent-text);
     vertical-align: middle;
     transform: translateY(-0.25em);
   }

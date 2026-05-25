@@ -1,6 +1,31 @@
 import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'node:url'
-import { defineConfig } from 'vite'
+import { defineConfig, type Plugin } from 'vite'
+
+function inlineCss(): Plugin {
+  return {
+    name: 'portfolio:inline-css',
+    enforce: 'post',
+    apply: 'build',
+    transformIndexHtml: {
+      order: 'post',
+      handler(html, ctx) {
+        const bundle = ctx.bundle
+        if (!bundle) return html
+        const css = Object.values(bundle).find(
+          (a) => a.type === 'asset' && a.fileName.endsWith('.css'),
+        )
+        if (!css || css.type !== 'asset') return html
+        const source = typeof css.source === 'string' ? css.source : css.source.toString()
+        delete bundle[css.fileName]
+        return html.replace(
+          /<link rel="stylesheet"[^>]*href="[^"]*\.css"[^>]*>/,
+          `<style>${source}</style>`,
+        )
+      },
+    },
+  }
+}
 
 export default defineConfig({
   css: {
@@ -10,7 +35,16 @@ export default defineConfig({
       },
     },
   },
-  plugins: [vue()],
+  define: {
+    __VUE_OPTIONS_API__: 'false',
+    __VUE_PROD_DEVTOOLS__: 'false',
+    __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: 'false',
+    __VUE_I18N_FULL_INSTALL__: 'false',
+    __VUE_I18N_LEGACY_API__: 'false',
+    __VUE_I18N_PROD_DEVTOOLS__: 'false',
+    __INTLIFY_PROD_DEVTOOLS__: 'false',
+  },
+  plugins: [vue(), inlineCss()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

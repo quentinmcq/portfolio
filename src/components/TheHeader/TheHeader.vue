@@ -119,11 +119,11 @@
         </aside>
       </div>
 
-      <div
-        class="hero__bottom"
-        aria-hidden="true"
-      >
-        <span class="hero__rule" />
+      <div class="hero__bottom">
+        <span
+          class="hero__rule"
+          aria-hidden="true"
+        />
         <a
           class="hero__scroll"
           href="#skill"

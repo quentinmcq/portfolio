@@ -60,7 +60,7 @@ a {
 
 // Global focus indicator — form fields handle their own (underline animation).
 :where(a, button, [role='button'], [tabindex]):focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--accent-text);
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -88,8 +88,14 @@ img {
   padding-block: var(--section-pad-y);
   border-top: 1px solid var(--line);
 
+  // Defer layout/paint of off-screen sections — drops initial reflow cost.
+  // First section keeps default rendering so LCP candidates aren't skipped.
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+
   &:first-of-type {
     border-top: 0;
+    content-visibility: visible;
   }
 }
 

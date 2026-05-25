@@ -73,10 +73,10 @@
     }
 
     &:hover {
-      color: var(--accent);
+      color: var(--accent-text);
 
       svg {
-        color: var(--accent);
+        color: var(--accent-text);
         transform: translate(2px, -2px);
       }
     }
