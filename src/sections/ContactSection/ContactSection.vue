@@ -72,7 +72,37 @@
           data-reveal
           style="--reveal-delay: 150ms"
         >
+          <div
+            v-if="submitState === 'sent'"
+            class="contact__success"
+            role="status"
+            aria-live="polite"
+          >
+            <svg
+              class="contact__success-icon"
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12.5l4.5 4.5L19 7.5" />
+            </svg>
+            <p class="contact__success-title">{{ $t('contact.sent') }}</p>
+            <button
+              class="contact__success-action"
+              type="button"
+              @click="submitState = 'idle'"
+            >
+              {{ $t('contact.send-another') }}
+            </button>
+          </div>
+
           <form
+            v-else
             class="contact__form"
             @submit.prevent="sendMessage"
           >
@@ -229,7 +259,9 @@ async function sendMessage(): Promise<void> {
     if (!response.ok) throw new Error('submission failed')
 
     submitState.value = 'sent'
-    resetForm()
+    form.name = ''
+    form.email = ''
+    form.message = ''
   }
   catch {
     submitState.value = 'error'

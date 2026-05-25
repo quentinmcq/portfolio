@@ -1,4 +1,4 @@
-# Quentin Macq — Portfolio
+# Portfolio
 
 Hosted on Cloudflare Pages.
 

@@ -113,6 +113,48 @@
     gap: 0.25rem;
   }
 
+  &__success {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding-block: 2rem;
+  }
+
+  &__success-icon {
+    color: var(--accent);
+  }
+
+  &__success-title {
+    margin: 0;
+    font-family: var(--font-display), serif;
+    font-variation-settings: 'opsz' 72, 'SOFT' 60;
+    font-style: italic;
+    font-weight: 350;
+    font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    color: var(--fg);
+  }
+
+  &__success-action {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    color: var(--fg-muted);
+    cursor: pointer;
+    font-family: var(--font-mono), monospace;
+    font-size: var(--fs-micro);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transition: color var(--dur-fast) var(--ease-out);
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
   &__form-actions {
     display: flex;
     flex-wrap: wrap;

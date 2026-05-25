@@ -29,6 +29,7 @@ export default {
     'name': 'Nom',
     'required-field': 'Ce champ est requis',
     'send': 'Envoyer',
+    'send-another': 'Envoyer un autre message',
     'sending': 'Envoi en cours…',
     'sent': 'Envoyé — merci !',
   },
