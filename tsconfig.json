@@ -3,7 +3,8 @@
   "include": [
     "vite.config.*",
     "env.d.ts",
-    "src/**/*"
+    "src/**/*",
+    "worker/**/*"
   ],
   "compilerOptions": {
     "noUnusedLocals": true,
@@ -12,7 +13,8 @@
     },
     "types": [
       "node",
-      "vite/client"
+      "vite/client",
+      "@cloudflare/workers-types"
     ]
   }
 }

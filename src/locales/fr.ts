@@ -119,18 +119,18 @@ export default {
     'list': [
       {
         button: 'Voir la collection',
-        description: 'Loisir découvert grâce à un ami, devenu une passion.',
+        description: 'Découvert grâce à un ami, les mangas sont rapidement devenus une véritable passion pour moi.',
         link: 'http://mangacollec.com/user/kakashi/collection',
         title: 'Manga',
       },
       {
         button: 'Voir le club',
-        description: 'Découverte pendant mes études, reprise depuis quelques années — quelques compétitions à la clé.',
+        description: 'Commencée pendant mes études, l\'escalade est une activité que j\'ai reprise ces dernières années, avec quelques compétitions à mon actif.',
         link: 'https://escalade-rouvroy.fr/',
         title: 'Escalade',
       },
       {
-        description: 'Échappées du week-end sur ma Z650, dès que la météo s\'y prête.',
+        description: 'Balades le week-end au guidon de ma Z650 dès que la météo le permet.',
         title: 'Moto',
       },
     ],
@@ -231,7 +231,7 @@ export default {
 
   skill: {
     'index': '01',
-    'kicker': 'Quatre piles, par ordre d\'usage.',
+    'kicker': 'Quatre piles complémentaires, du build aux tests.',
     'list': [
       {
         content: ['Symfony', 'Nuxt', 'Vue', 'TypeScript', 'Pinia', 'Claude'],

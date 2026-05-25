@@ -1,8 +1,8 @@
 import { EmailMessage } from 'cloudflare:email'
 
 interface Env {
-  ASSETS: { fetch: (request: Request) => Promise<Response> }
-  SEND_EMAIL: { send: (message: EmailMessage) => Promise<void> }
+  ASSETS: Fetcher
+  SEND_EMAIL: SendEmail
 }
 
 interface ContactPayload {

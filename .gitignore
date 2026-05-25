@@ -10,10 +10,8 @@ node_modules
 
 # Build artifacts
 dist
-*.tsbuildinfo
 
 # Local env files
-*.local
 .env*.local
 
 # Logs

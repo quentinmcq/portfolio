@@ -119,18 +119,18 @@ export default {
     'list': [
       {
         button: 'See the collection',
-        description: 'A friend got me into it — now a real passion.',
+        description: 'A friend introduced me to manga, and it quickly grew into a real passion.',
         link: 'http://mangacollec.com/user/kakashi/collection',
         title: 'Manga',
       },
       {
         button: 'See the club',
-        description: 'Discovered during my studies, back at it for a few years now — with the occasional competition.',
+        description: 'Started climbing during my studies and got back into it over the last few years, with a handful of competitions under my belt.',
         link: 'https://escalade-rouvroy.fr/',
         title: 'Climbing',
       },
       {
-        description: 'Weekend escapes on my Z650, whenever the weather plays along.',
+        description: 'Weekend rides on my Z650, whenever the weather allows.',
         title: 'Motorbike',
       },
     ],
@@ -231,7 +231,7 @@ export default {
 
   skill: {
     'index': '01',
-    'kicker': 'Four stacks, ordered by daily reach.',
+    'kicker': 'Four complementary stacks, from build to tests.',
     'list': [
       {
         content: ['Symfony', 'Nuxt', 'Vue', 'TypeScript', 'Pinia', 'Claude'],
