@@ -9,30 +9,20 @@ export function useRevealOnScroll() {
   onMounted(() => {
     if (typeof IntersectionObserver === 'undefined') return
 
-    // Defer setup past first paint — the querySelectorAll + observe pass
-    // forces a layout pass that would otherwise block LCP.
-    const setup = () => {
-      observer = new IntersectionObserver(
-        (entries) => {
-          for (const entry of entries) {
-            if (!entry.isIntersecting) continue
-            entry.target.classList.add('is-visible')
-            observer?.unobserve(entry.target)
-          }
-        },
-        { rootMargin: '0px 0px -8% 0px', threshold: 0.05 },
-      )
+    observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue
+          entry.target.classList.add('is-visible')
+          observer?.unobserve(entry.target)
+        }
+      },
+      { rootMargin: '0px 0px -8% 0px', threshold: 0.05 },
+    )
 
-      document.querySelectorAll('[data-reveal]:not(.is-visible)').forEach((el) => {
-        observer?.observe(el)
-      })
-    }
-
-    if ('requestIdleCallback' in window) {
-      window.requestIdleCallback(setup, { timeout: 200 })
-    } else {
-      requestAnimationFrame(setup)
-    }
+    document.querySelectorAll('[data-reveal]:not(.is-visible)').forEach((el) => {
+      observer?.observe(el)
+    })
   })
 
   onBeforeUnmount(() => observer?.disconnect())
