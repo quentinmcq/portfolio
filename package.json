@@ -39,7 +39,7 @@
     "oxlint": "^1.66.0",
     "sass-embedded": "^1.100.0",
     "simple-git-hooks": "^2.13.1",
-    "vite": "8.0.13",
+    "vite": "8.0.14",
     "wrangler": "^4.94.0"
   }
 }
