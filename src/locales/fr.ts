@@ -99,11 +99,9 @@ export default {
     'cta-work': 'Voir le travail',
     'edition': 'Édition {year}',
     'focus': {
-      'exploring': 'Le dev iOS en Swift et les stacks modernes.',
-      'exploring-label': 'En exploration',
       'open': 'Discussions, opportunités, ou juste partage de veille.',
       'open-label': 'Disponible pour',
-      'shipping': 'Outils internes et fonctionnalités e-commerce chez Motoblouz.',
+      'shipping': 'Front Nuxt, back Symfony et design system entre les deux.',
       'shipping-label': 'En production',
     },
     'idx': 'IDX 001',

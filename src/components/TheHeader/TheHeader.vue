@@ -103,15 +103,7 @@
           <div
             class="hero__aside-block"
             data-reveal
-            style="--reveal-delay: 400ms"
-          >
-            <span class="hero__aside-label">{{ $t('header.focus.exploring-label') }}</span>
-            <span class="hero__aside-value">{{ $t('header.focus.exploring') }}</span>
-          </div>
-          <div
-            class="hero__aside-block"
-            data-reveal
-            style="--reveal-delay: 480ms"
+            style="--reveal-delay: 420ms"
           >
             <span class="hero__aside-label">{{ $t('header.focus.open-label') }}</span>
             <span class="hero__aside-value">{{ $t('header.focus.open') }}</span>

@@ -99,11 +99,9 @@ export default {
     'cta-work': 'See the work',
     'edition': 'Edition {year}',
     'focus': {
-      'exploring': 'Native iOS in Swift, and modern stacks.',
-      'exploring-label': 'Exploring',
       'open': 'Conversations, opportunities, or simply sharing what I read.',
       'open-label': 'Open to',
-      'shipping': 'Internal tooling and e-commerce features at Motoblouz.',
+      'shipping': 'Nuxt up front, Symfony at the back, design system in between.',
       'shipping-label': 'Now shipping',
     },
     'idx': 'IDX 001',
