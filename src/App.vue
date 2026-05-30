@@ -20,10 +20,12 @@
 
     <TheFooter />
     <TheScrollTop />
+    <LivePresence />
   </div>
 </template>
 
 <script setup lang="ts">
+import LivePresence from '@/components/LivePresence/LivePresence.vue'
 import TheFooter from '@/components/TheFooter/TheFooter.vue'
 import TheHeader from '@/components/TheHeader/TheHeader.vue'
 import TheNavbar from '@/components/TheNavbar/TheNavbar.vue'

@@ -13,6 +13,7 @@ dist
 
 # Local env files
 .env*.local
+.dev.vars
 
 # Logs
 *.log

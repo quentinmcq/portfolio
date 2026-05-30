@@ -20,10 +20,15 @@
 		"not_found_handling": "404-page"
 	},
 	"send_email": [
-		{
-			"name": "SEND_EMAIL",
-			"destination_address": "quentin.macq6@gmail.com"
-		}
+		{ "name": "SEND_EMAIL" }
+	],
+	"durable_objects": {
+		"bindings": [
+			{ "name": "PRESENCE", "class_name": "PresenceCounter" }
+		]
+	},
+	"migrations": [
+		{ "tag": "v1", "new_sqlite_classes": ["PresenceCounter"] }
 	],
 	"observability": {
 		"enabled": true

@@ -145,13 +145,18 @@
               :rules="messageRules"
             />
 
+            <TurnstileWidget
+              ref="turnstile"
+              v-model="captchaToken"
+            />
+
             <div class="contact__form-actions">
               <button
                 id="message-status"
                 class="contact__submit"
                 type="submit"
                 :aria-label="$t('contact.send')"
-                :disabled="loading"
+                :disabled="loading || !captchaToken"
               >
                 <span class="contact__submit-label">
                   {{ submitLabel }}
@@ -193,6 +198,7 @@ import { useI18n } from 'vue-i18n'
 
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue'
 import FormField from '@/components/FormField/FormField.vue'
+import TurnstileWidget from '@/components/TurnstileWidget/TurnstileWidget.vue'
 import { useBreakpoints } from '@/composables/breakpoints'
 import { useFieldRules } from '@/composables/field-rules'
 import { CONTACTS } from '@/data/contacts'
@@ -212,6 +218,9 @@ const { emailRules, messageRules, nameRules } = useFieldRules()
 
 const { t } = useI18n()
 const loading = ref(false)
+
+const captchaToken = ref('')
+const turnstile = ref<InstanceType<typeof TurnstileWidget> | null>(null)
 
 const { github: githubUrl, linkedin: linkedinUrl } = CONTACTS
 
@@ -248,10 +257,11 @@ function resetForm() {
   form.email = ''
   form.message = ''
   submitState.value = 'idle'
+  turnstile.value?.reset()
 }
 
 async function sendMessage() {
-  if (!valid.value) return
+  if (!valid.value || !captchaToken.value) return
 
   loading.value = true
   submitState.value = 'sending'
@@ -262,6 +272,7 @@ async function sendMessage() {
         email: form.email,
         message: form.message,
         name: form.name,
+        turnstileToken: captchaToken.value,
       }),
       headers: { 'Content-Type': 'application/json' },
       method: 'POST',
@@ -283,6 +294,8 @@ async function sendMessage() {
   }
   finally {
     loading.value = false
+    // Turnstile tokens are single-use — issue a fresh one for the next attempt.
+    turnstile.value?.reset()
     setTimeout(() => {
       if (submitState.value !== 'sending') submitState.value = 'idle'
     }, 5000)

@@ -1,6 +1,9 @@
 .footer {
   position: relative;
   padding-block: clamp(3rem, 6vw, 5rem);
+  // Clear the bottom-fixed pills (presence bubble + scroll-top) so the
+  // copyright/tools row never sits underneath them at the end of the page.
+  padding-bottom: clamp(5.5rem, 4vw + 4rem, 8rem);
   background: var(--bg-inset);
   color: var(--fg);
   border-top: 1px solid var(--line);

@@ -22,6 +22,8 @@
   --accent-deep: var(--ember-deep);
   --accent-button: var(--accent);
   --accent-text: var(--accent);
+  // Live-presence indicator — the one non-ember signal (online = green convention)
+  --live: #34d399;
   --shadow-card: 0 30px 60px -30px rgba(0, 0, 0, 0.6),
                  0 18px 36px -28px rgba(0, 0, 0, 0.45);
   --grain-opacity: 0.045;

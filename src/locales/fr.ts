@@ -90,7 +90,6 @@ export default {
 
   footer: {
     copyright: '© {currentYear} — Quentin Macq',
-    credit: 'Construit avec passion',
     tools: 'Vue · TypeScript · sans framework UI',
   },
 
@@ -168,6 +167,10 @@ export default {
       title: 'Contact',
     },
   ],
+
+  presence: {
+    online: '{count} en ligne',
+  },
 
   project: {
     'index': '03',

@@ -69,7 +69,14 @@
               stroke-linecap="round"
               stroke-linejoin="round"
             >
-              <path d="M7 17 17 7M9 7h8v8" />
+              <rect
+                x="3"
+                y="5"
+                width="18"
+                height="14"
+                rx="2"
+              />
+              <path d="m3 8 9 5 9-5" />
             </svg>
           </a>
         </div>
@@ -82,7 +89,7 @@
 
       <div class="footer__bottom">
         <span class="footer__caption">{{ $t('footer.copyright', { currentYear }) }}</span>
-        <span class="footer__caption footer__caption--muted">{{ $t('footer.credit') }} — {{ $t('footer.tools') }}</span>
+        <span class="footer__caption footer__caption--muted">{{ $t('footer.tools') }}</span>
       </div>
     </div>
   </footer>

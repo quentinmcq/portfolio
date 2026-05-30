@@ -1,0 +1,58 @@
+.presence {
+  position: fixed;
+  left: clamp(1rem, 2vw, 2rem);
+  bottom: clamp(1.25rem, 2.5vw, 2.5rem);
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 10px 14px;
+  background: color-mix(in srgb, var(--bg-elevated) 70%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--fg);
+  user-select: none;
+
+  &__dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--live);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--live) 55%, transparent);
+    animation: presence-pulse 2.4s var(--ease-out) infinite;
+  }
+
+  &__label {
+    font-family: var(--font-mono), monospace;
+    font-size: var(--fs-micro);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-variant-numeric: tabular-nums;
+  }
+
+  @keyframes presence-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--live) 55%, transparent); }
+    50% { box-shadow: 0 0 0 8px color-mix(in srgb, var(--live) 0%, transparent); }
+  }
+}
+
+// Appear / disappear
+.presence-enter-active,
+.presence-leave-active {
+  transition: opacity var(--dur-mid) var(--ease-out),
+              transform var(--dur-mid) var(--ease-out);
+}
+
+.presence-enter-from,
+.presence-leave-to {
+  opacity: 0;
+  transform: translateY(8px) scale(0.96);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .presence__dot {
+    animation: none;
+  }
+}
