@@ -105,6 +105,7 @@
           <form
             v-else
             class="contact__form"
+            @focusin="armCaptcha"
             @submit.prevent="sendMessage"
           >
             <FormField
@@ -220,7 +221,16 @@ const { t } = useI18n()
 const loading = ref(false)
 
 const captchaToken = ref('')
+const captchaArmed = ref(false)
 const turnstile = ref<InstanceType<typeof TurnstileWidget> | null>(null)
+
+// Defer the Turnstile challenge until the user actually engages the form, so it
+// never runs for visitors who don't contact. Fires once on first focus.
+function armCaptcha() {
+  if (captchaArmed.value) return
+  captchaArmed.value = true
+  turnstile.value?.execute()
+}
 
 const { github: githubUrl, linkedin: linkedinUrl } = CONTACTS
 
@@ -257,7 +267,8 @@ function resetForm() {
   form.email = ''
   form.message = ''
   submitState.value = 'idle'
-  turnstile.value?.reset()
+  // Erasing fields doesn't consume the captcha token, so keep it — no need to
+  // re-run a challenge here.
 }
 
 async function sendMessage() {
@@ -288,14 +299,21 @@ async function sendMessage() {
     form.name = ''
     form.email = ''
     form.message = ''
+    // Form unmounts to the success view — disarm so the next session re-arms on focus.
+    captchaToken.value = ''
+    captchaArmed.value = false
   }
   catch {
     submitState.value = 'error'
   }
   finally {
     loading.value = false
-    // Turnstile tokens are single-use — issue a fresh one for the next attempt.
-    turnstile.value?.reset()
+    // On error the form stays mounted and the token was consumed — fetch a
+    // fresh one so a retry can go through.
+    if (submitState.value === 'error') {
+      turnstile.value?.reset()
+      turnstile.value?.execute()
+    }
     setTimeout(() => {
       if (submitState.value !== 'sending') submitState.value = 'idle'
     }, 5000)

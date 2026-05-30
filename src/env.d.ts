@@ -16,10 +16,13 @@ interface TurnstileRenderOptions {
   'error-callback'?: () => void
   theme?: 'auto' | 'dark' | 'light'
   action?: string
+  execution?: 'execute' | 'render'
+  appearance?: 'always' | 'execute' | 'interaction-only'
 }
 
 interface Turnstile {
   render: (element: HTMLElement, options: TurnstileRenderOptions) => string
+  execute: (widgetId?: string, options?: TurnstileRenderOptions) => void
   reset: (widgetId?: string) => void
   remove: (widgetId?: string) => void
   getResponse: (widgetId?: string) => string | undefined

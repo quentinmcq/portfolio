@@ -20,6 +20,9 @@ const emit = defineEmits<{
 
 const container = ref<HTMLElement | null>(null)
 let widgetId: string | null = null
+// Set if execute() is called before the widget finished rendering — the
+// challenge is then kicked off as soon as render completes.
+let pendingExecute = false
 
 function loadScript(): Promise<void> {
   if (window.turnstile) return Promise.resolve()
@@ -46,10 +49,29 @@ function render() {
   widgetId = window.turnstile.render(container.value, {
     sitekey: SITE_KEY,
     theme: 'auto',
+    // Stay idle until the form is engaged; only show UI if a challenge needs it.
+    execution: 'execute',
+    appearance: 'interaction-only',
     callback: (token) => emit('update:modelValue', token),
-    'expired-callback': () => emit('update:modelValue', ''),
+    // Token expired (~5 min) while the form is open — refresh it in place so the
+    // submit button doesn't silently lock up.
+    'expired-callback': () => {
+      emit('update:modelValue', '')
+      if (widgetId) window.turnstile?.execute(widgetId)
+    },
     'error-callback': () => emit('update:modelValue', ''),
   })
+
+  if (pendingExecute) {
+    pendingExecute = false
+    window.turnstile.execute(widgetId)
+  }
+}
+
+// Kick off the challenge on demand (called when the user engages the form).
+function execute() {
+  if (window.turnstile && widgetId) window.turnstile.execute(widgetId)
+  else pendingExecute = true
 }
 
 function reset() {
@@ -74,11 +96,13 @@ onBeforeUnmount(() => {
   if (window.turnstile && widgetId) window.turnstile.remove(widgetId)
 })
 
-defineExpose({ reset })
+defineExpose({ execute, reset })
 </script>
 
 <style lang="scss" scoped>
-.turnstile {
-  min-height: 65px;
+// interaction-only: the widget is empty unless an interactive challenge shows,
+// so only reserve space when it actually has content.
+.turnstile:not(:empty) {
+  margin-top: 0.75rem;
 }
 </style>
