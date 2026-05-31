@@ -116,9 +116,17 @@
   &__success {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    // Centered on mobile so the confirmation reads as a deliberate moment;
+    // left-aligned on desktop to match the form it replaces in the column.
+    align-items: center;
+    text-align: center;
     gap: 1.25rem;
     padding-block: 2rem;
+
+    @media (min-width: $lg) {
+      align-items: flex-start;
+      text-align: left;
+    }
   }
 
   &__success-icon {
