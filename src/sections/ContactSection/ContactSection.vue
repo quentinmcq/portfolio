@@ -308,15 +308,16 @@ async function sendMessage() {
   }
   finally {
     loading.value = false
-    // On error the form stays mounted and the token was consumed — fetch a
-    // fresh one so a retry can go through.
+    // On error: re-arm a fresh token and let the button return to its default
+    // label after a moment so the user can retry. Success persists until the
+    // user dismisses it via "send another".
     if (submitState.value === 'error') {
       turnstile.value?.reset()
       turnstile.value?.execute()
+      setTimeout(() => {
+        if (submitState.value === 'error') submitState.value = 'idle'
+      }, 5000)
     }
-    setTimeout(() => {
-      if (submitState.value !== 'sending') submitState.value = 'idle'
-    }, 5000)
   }
 }
 </script>

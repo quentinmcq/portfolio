@@ -72,7 +72,7 @@ async function verifyTurnstile(token: string, ip: string, secret: string): Promi
   }
 }
 
-async function handleContact(request: Request, env: Env): Promise<Response> {
+async function handleContact(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
   if (request.method !== 'POST') {
     return new Response('Method not allowed', { status: 405 })
   }
@@ -106,14 +106,16 @@ async function handleContact(request: Request, env: Env): Promise<Response> {
     return new Response('Captcha verification failed', { status: 403 })
   }
 
-  try {
-    const to = env.CONTACT_TO_EMAIL
-    const raw = buildRawEmail(name, email, to, `${name} <${email}>\n\n${message}`)
-    await env.SEND_EMAIL.send(new EmailMessage(FROM_EMAIL, to, raw))
-  }
-  catch {
-    return new Response('Email send failed', { status: 502 })
-  }
+  // Relay in the background: validation + captcha already passed synchronously,
+  // and a 200 here only ever meant "accepted" (never "delivered to inbox"), so
+  // don't block the client on the multi-second send.
+  const to = env.CONTACT_TO_EMAIL
+  const raw = buildRawEmail(name, email, to, `${name} <${email}>\n\n${message}`)
+  ctx.waitUntil(
+    env.SEND_EMAIL.send(new EmailMessage(FROM_EMAIL, to, raw)).catch((error) => {
+      console.error('Contact email send failed', error)
+    }),
+  )
 
   return new Response(JSON.stringify({ ok: true }), {
     headers: { 'Content-Type': 'application/json' },
@@ -128,11 +130,11 @@ function handlePresence(request: Request, env: Env): Promise<Response> | Respons
   return env.PRESENCE.getByName('global').fetch(request)
 }
 
-async function handleRequest(request: Request, env: Env): Promise<Response> {
+async function handleRequest(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
   const url = new URL(request.url)
 
   if (url.pathname === CONTACT_ENDPOINT) {
-    return handleContact(request, env)
+    return handleContact(request, env, ctx)
   }
 
   if (url.pathname === PRESENCE_ENDPOINT) {
