@@ -11,7 +11,7 @@ import { onBeforeUnmount, onMounted, ref } from 'vue'
 // Public site key — safe to ship. Falls back to Cloudflare's "always passes"
 // test key so the form works in dev without any config. Set the real key via
 // VITE_TURNSTILE_SITE_KEY for production builds.
-const SITE_KEY = import.meta.env.VITE_TURNSTILE_SITE_KEY ?? '1x00000000000000000000AA'
+const SITE_KEY = import.meta.env.VITE_TURNSTILE_SITE_KEY
 const SCRIPT_SRC = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit'
 
 const emit = defineEmits<{

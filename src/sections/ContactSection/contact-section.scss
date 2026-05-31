@@ -116,8 +116,6 @@
   &__success {
     display: flex;
     flex-direction: column;
-    // Centered on mobile so the confirmation reads as a deliberate moment;
-    // left-aligned on desktop to match the form it replaces in the column.
     align-items: center;
     text-align: center;
     gap: 1.25rem;

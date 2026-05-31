@@ -21,7 +21,6 @@
     height: 7px;
     border-radius: 50%;
     background: var(--chip-color);
-    // Subtle ring so light-coloured dots (e.g. Bun cream) stay visible on paper bg.
     box-shadow: 0 0 0 1px color-mix(in srgb, var(--fg) 12%, transparent);
     transition: transform var(--dur-fast) var(--ease-out),
                 box-shadow var(--dur-fast) var(--ease-out);
