@@ -39,7 +39,7 @@
 
   <g font-family="'JetBrains Mono', monospace" font-size="13" letter-spacing="2.4" fill="#8a8580">
     <line x1="80" y1="580" x2="1120" y2="580" stroke="#f5f1e8" stroke-opacity="0.12" />
-    <text x="80" y="608">HARNES · FRANCE</text>
+    <text x="80" y="608">HAUTS-DE-FRANCE</text>
     <text x="1120" y="608" text-anchor="end">QUENTIN-MACQ.DEV</text>
   </g>
 </svg>
