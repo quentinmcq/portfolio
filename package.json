@@ -29,7 +29,7 @@
     "vue-i18n": "^11.4.4"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20260528.1",
+    "@cloudflare/workers-types": "^4.20260531.1",
     "@vitejs/plugin-vue": "^6.0.7",
     "@vue/tsconfig": "^0.9.1",
     "oxlint": "^1.67.0",
