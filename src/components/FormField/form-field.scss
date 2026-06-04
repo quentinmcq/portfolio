@@ -16,8 +16,9 @@
     color: var(--fg-muted);
     pointer-events: none;
     transform-origin: left top;
-    transition: transform var(--dur-mid) var(--ease-out),
-                color var(--dur-mid) var(--ease-out);
+    transition:
+      transform var(--dur-mid) var(--ease-out),
+      color var(--dur-mid) var(--ease-out);
   }
 
   &--focused &__label,
@@ -93,8 +94,9 @@
 
 .field-msg-enter-active,
 .field-msg-leave-active {
-  transition: opacity var(--dur-fast) var(--ease-out),
-              transform var(--dur-fast) var(--ease-out);
+  transition:
+    opacity var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
 }
 
 .field-msg-enter-from,

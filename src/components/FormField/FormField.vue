@@ -8,15 +8,9 @@
       'field--textarea': type === 'textarea',
     }"
   >
-    <label
-      class="field__label"
-      :for="fieldId"
-    >
+    <label class="field__label" :for="fieldId">
       {{ label }}
-      <span
-        v-if="required"
-        aria-hidden="true"
-      >*</span>
+      <span v-if="required" aria-hidden="true">*</span>
     </label>
 
     <textarea
@@ -52,20 +46,12 @@
       :aria-describedby="showError ? `${fieldId}-error` : undefined"
       @focus="focused = true"
       @blur="onBlur"
-    >
-
-    <span
-      class="field__line"
-      aria-hidden="true"
     />
 
+    <span class="field__line" aria-hidden="true" />
+
     <Transition name="field-msg">
-      <span
-        v-if="showError"
-        :id="`${fieldId}-error`"
-        class="field__error"
-        role="alert"
-      >
+      <span v-if="showError" :id="`${fieldId}-error`" class="field__error" role="alert">
         {{ errorMessage }}
       </span>
     </Transition>
@@ -122,7 +108,7 @@ const errorMessage = computed<null | string>(() => {
 const isValid = computed(() => errorMessage.value === null)
 const showError = computed(() => touched.value && !isValid.value)
 
-watch(isValid, v => (valid.value = v), { immediate: true })
+watch(isValid, (v) => (valid.value = v), { immediate: true })
 
 function onBlur() {
   focused.value = false

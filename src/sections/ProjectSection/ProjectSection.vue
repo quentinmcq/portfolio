@@ -1,8 +1,5 @@
 <template>
-  <section
-    :id="componentName"
-    class="section project"
-  >
+  <section :id="componentName" class="section project">
     <div class="container">
       <CategoryTitle :component-name />
 
@@ -51,21 +48,12 @@
               </span>
             </h3>
 
-            <p
-              v-if="item.subtitle"
-              class="project__subtitle"
-            >
+            <p v-if="item.subtitle" class="project__subtitle">
               {{ item.subtitle }}
             </p>
 
-            <ul
-              v-if="item.chips?.length"
-              class="project__chips"
-            >
-              <li
-                v-for="chip in item.chips"
-                :key="chip"
-              >
+            <ul v-if="item.chips?.length" class="project__chips">
+              <li v-for="chip in item.chips" :key="chip">
                 <SkillChip :label="chip" />
               </li>
             </ul>

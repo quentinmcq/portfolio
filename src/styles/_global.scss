@@ -21,11 +21,14 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: 'ss01' on, 'cv11' on;
+  font-feature-settings:
+    'ss01' on,
+    'cv11' on;
   background: var(--bg);
   color: var(--fg);
-  transition: background var(--dur-mid) var(--ease-out),
-              color var(--dur-mid) var(--ease-out);
+  transition:
+    background var(--dur-mid) var(--ease-out),
+    color var(--dur-mid) var(--ease-out);
 }
 
 body {
@@ -101,7 +104,9 @@ img {
 
 .font-display {
   font-family: var(--font-display), serif;
-  font-variation-settings: 'opsz' 144, 'SOFT' 60;
+  font-variation-settings:
+    'opsz' 144,
+    'SOFT' 60;
 }
 
 .font-mono {
@@ -128,8 +133,9 @@ img {
 [data-reveal] {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 800ms var(--ease-out),
-              transform 800ms var(--ease-out);
+  transition:
+    opacity 800ms var(--ease-out),
+    transform 800ms var(--ease-out);
   transition-delay: var(--reveal-delay, 0ms);
 }
 

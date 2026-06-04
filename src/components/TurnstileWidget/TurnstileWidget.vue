@@ -1,8 +1,5 @@
 <template>
-  <div
-    ref="container"
-    class="turnstile"
-  />
+  <div ref="container" class="turnstile" />
 </template>
 
 <script setup lang="ts">
@@ -29,7 +26,9 @@ function loadScript(): Promise<void> {
 
   const existing = document.querySelector<HTMLScriptElement>(`script[src="${SCRIPT_SRC}"]`)
   if (existing) {
-    return new Promise((resolve) => existing.addEventListener('load', () => resolve(), { once: true }))
+    return new Promise((resolve) =>
+      existing.addEventListener('load', () => resolve(), { once: true }),
+    )
   }
 
   return new Promise((resolve, reject) => {
@@ -38,7 +37,9 @@ function loadScript(): Promise<void> {
     script.async = true
     script.defer = true
     script.addEventListener('load', () => resolve(), { once: true })
-    script.addEventListener('error', () => reject(new Error('Turnstile failed to load')), { once: true })
+    script.addEventListener('error', () => reject(new Error('Turnstile failed to load')), {
+      once: true,
+    })
     document.head.appendChild(script)
   })
 }
@@ -85,8 +86,7 @@ onMounted(async () => {
   try {
     await loadScript()
     render()
-  }
-  catch {
+  } catch {
     // Script blocked (network / privacy extension). The token stays empty and
     // the server verification fails closed — submission is simply refused.
   }

@@ -45,8 +45,9 @@
     line-height: 1;
     color: var(--fg);
     cursor: pointer;
-    transition: color var(--dur-fast) var(--ease-out),
-                transform var(--dur-fast) var(--ease-out);
+    transition:
+      color var(--dur-fast) var(--ease-out),
+      transform var(--dur-fast) var(--ease-out);
 
     &:hover {
       color: var(--accent-text);
@@ -69,8 +70,9 @@
     padding-block: 0.5rem;
     border-bottom: 1px solid var(--line);
     color: var(--fg);
-    transition: color var(--dur-fast) var(--ease-out),
-                padding-left var(--dur-mid) var(--ease-out);
+    transition:
+      color var(--dur-fast) var(--ease-out),
+      padding-left var(--dur-mid) var(--ease-out);
 
     &-idx {
       font-family: var(--font-mono), monospace;
@@ -81,7 +83,9 @@
 
     &-label {
       font-family: var(--font-display), serif;
-      font-variation-settings: 'opsz' 72, 'SOFT' 60;
+      font-variation-settings:
+        'opsz' 72,
+        'SOFT' 60;
       font-weight: 350;
       font-size: clamp(1.875rem, 6vw, 2.75rem);
       line-height: 1.1;
@@ -121,8 +125,9 @@
 
     svg {
       color: var(--fg-faint);
-      transition: color var(--dur-fast) var(--ease-out),
-                  transform var(--dur-fast) var(--ease-out);
+      transition:
+        color var(--dur-fast) var(--ease-out),
+        transform var(--dur-fast) var(--ease-out);
     }
 
     &:hover {

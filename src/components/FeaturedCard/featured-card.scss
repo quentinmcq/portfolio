@@ -67,7 +67,9 @@
   &__title {
     margin: 0;
     font-family: var(--font-display), serif;
-    font-variation-settings: 'opsz' 144, 'SOFT' 60;
+    font-variation-settings:
+      'opsz' 144,
+      'SOFT' 60;
     font-weight: 350;
     font-size: clamp(1.625rem, 1.2rem + 1.6vw, 2.5rem);
     line-height: 1.1;
@@ -82,7 +84,9 @@
   &__description {
     margin: 0;
     font-family: var(--font-display), serif;
-    font-variation-settings: 'opsz' 24, 'SOFT' 60;
+    font-variation-settings:
+      'opsz' 24,
+      'SOFT' 60;
     font-style: italic;
     font-weight: 300;
     font-size: clamp(1.0625rem, 0.95rem + 0.4vw, 1.25rem);
@@ -137,8 +141,9 @@
 
     svg {
       color: var(--fg-faint);
-      transition: color var(--dur-fast) var(--ease-out),
-                  transform var(--dur-fast) var(--ease-out);
+      transition:
+        color var(--dur-fast) var(--ease-out),
+        transform var(--dur-fast) var(--ease-out);
     }
 
     &:hover {

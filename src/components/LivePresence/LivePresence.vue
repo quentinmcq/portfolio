@@ -1,14 +1,7 @@
 <template>
   <Transition name="presence">
-    <div
-      v-if="connected && count > 0"
-      class="presence"
-      role="status"
-    >
-      <span
-        class="presence__dot"
-        aria-hidden="true"
-      />
+    <div v-if="connected && count > 0" class="presence" role="status">
+      <span class="presence__dot" aria-hidden="true" />
       <span class="presence__label">{{ $t('presence.online', { count }) }}</span>
     </div>
   </Transition>

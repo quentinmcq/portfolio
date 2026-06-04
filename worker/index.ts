@@ -64,10 +64,9 @@ async function verifyTurnstile(token: string, ip: string, secret: string): Promi
       body,
       method: 'POST',
     })
-    const data = await res.json() as { success?: boolean }
+    const data = (await res.json()) as { success?: boolean }
     return data.success === true
-  }
-  catch {
+  } catch {
     return false
   }
 }
@@ -79,9 +78,8 @@ async function handleContact(request: Request, env: Env, ctx: ExecutionContext):
 
   let payload: ContactPayload
   try {
-    payload = await request.json() as ContactPayload
-  }
-  catch {
+    payload = (await request.json()) as ContactPayload
+  } catch {
     return new Response('Invalid JSON', { status: 400 })
   }
 
@@ -91,18 +89,18 @@ async function handleContact(request: Request, env: Env, ctx: ExecutionContext):
   const token = payload.turnstileToken?.trim() ?? ''
 
   if (
-    !name
-    || name.length > MAX_NAME_LENGTH
-    || !EMAIL_RE.test(email)
-    || email.length > MAX_EMAIL_LENGTH
-    || message.length < MIN_MESSAGE_LENGTH
-    || message.length > MAX_MESSAGE_LENGTH
+    !name ||
+    name.length > MAX_NAME_LENGTH ||
+    !EMAIL_RE.test(email) ||
+    email.length > MAX_EMAIL_LENGTH ||
+    message.length < MIN_MESSAGE_LENGTH ||
+    message.length > MAX_MESSAGE_LENGTH
   ) {
     return new Response('Validation failed', { status: 400 })
   }
 
   const ip = request.headers.get('CF-Connecting-IP') ?? ''
-  if (!token || !await verifyTurnstile(token, ip, env.TURNSTILE_SECRET)) {
+  if (!token || !(await verifyTurnstile(token, ip, env.TURNSTILE_SECRET))) {
     return new Response('Captcha verification failed', { status: 403 })
   }
 

@@ -1,6 +1,6 @@
 import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'node:url'
-import { defineConfig, type Plugin } from 'vite'
+import { defineConfig, type Plugin } from 'vite-plus'
 
 function inlineCss(): Plugin {
   return {
@@ -28,6 +28,23 @@ function inlineCss(): Plugin {
 }
 
 export default defineConfig({
+  fmt: {
+    semi: false,
+    singleQuote: true,
+  },
+  lint: {
+    jsPlugins: [{ name: 'vite-plus', specifier: 'vite-plus/oxlint-plugin' }],
+    rules: {
+      'vite-plus/prefer-vite-plus-imports': 'error',
+    },
+    options: {
+      typeAware: true,
+      typeCheck: true,
+    },
+  },
+  staged: {
+    '*.{ts,mts,cts,js,mjs,cjs,vue,scss,css,json,jsonc}': 'vp check --fix',
+  },
   css: {
     preprocessorOptions: {
       scss: {
@@ -37,8 +54,6 @@ export default defineConfig({
   },
   define: {
     __VUE_OPTIONS_API__: 'false',
-    __VUE_PROD_DEVTOOLS__: 'false',
-    __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: 'false',
     __VUE_I18N_FULL_INSTALL__: 'false',
     __VUE_I18N_LEGACY_API__: 'false',
     __VUE_I18N_PROD_DEVTOOLS__: 'false',

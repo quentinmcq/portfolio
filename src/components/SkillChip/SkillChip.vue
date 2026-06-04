@@ -7,10 +7,7 @@
     class="skill-chip"
     :style="dotStyle"
   >
-    <span
-      class="skill-chip__dot"
-      aria-hidden="true"
-    />
+    <span class="skill-chip__dot" aria-hidden="true" />
     <span class="skill-chip__label">{{ chipConfig.label }}</span>
   </component>
 </template>

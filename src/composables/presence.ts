@@ -34,8 +34,7 @@ export function usePresence() {
       try {
         const data = JSON.parse(event.data)
         if (typeof data.count === 'number') count.value = data.count
-      }
-      catch {
+      } catch {
         // non-JSON frame (e.g. pong) — ignore
       }
     })

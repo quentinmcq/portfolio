@@ -1,9 +1,5 @@
 <template>
-  <div
-    class="locale-switcher"
-    role="group"
-    :aria-label="$t('languages.title')"
-  >
+  <div class="locale-switcher" role="group" :aria-label="$t('languages.title')">
     <button
       v-for="lang in availableLocales"
       :key="lang"

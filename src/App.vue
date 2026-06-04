@@ -2,10 +2,7 @@
   <div class="app">
     <a class="skip-link" href="#main">{{ $t('common.skip-to-content') }}</a>
 
-    <div
-      class="app-grain"
-      aria-hidden="true"
-    />
+    <div class="app-grain" aria-hidden="true" />
 
     <TheNavbar />
     <TheHeader />

@@ -1,8 +1,5 @@
 <template>
-  <section
-    :id="componentName"
-    class="section experience"
-  >
+  <section :id="componentName" class="section experience">
     <div class="container">
       <CategoryTitle :component-name />
 
@@ -48,7 +45,7 @@ const experiences = computed(() => tm('experience.list') as Experience[])
 const timelineItems = computed(() => experiences.value.slice(1))
 
 const skills = computed(() => tm('skill.list') as Skill[])
-const dailyStack = computed(() => skills.value.find(s => s.primary)?.content ?? [])
+const dailyStack = computed(() => skills.value.find((s) => s.primary)?.content ?? [])
 </script>
 
 <style lang="scss" src="./experience-section.scss" scoped />

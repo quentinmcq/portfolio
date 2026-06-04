@@ -1,23 +1,14 @@
 <template>
   <Transition name="drawer-fade">
-    <div
-      v-if="open"
-      class="drawer-scrim"
-      aria-hidden="true"
-      @click="close"
-    />
+    <div v-if="open" class="drawer-scrim" aria-hidden="true" @click="close" />
   </Transition>
 
   <Transition name="drawer">
-    <aside
-      v-if="open"
-      ref="drawerRef"
-      class="drawer"
-      tabindex="-1"
-      @keydown="onKeydown"
-    >
+    <aside v-if="open" ref="drawerRef" class="drawer" tabindex="-1" @keydown="onKeydown">
       <div class="drawer__header">
-        <span class="drawer__eyebrow">{{ $t('header.idx') }} — {{ $t('header.edition', { year: currentYear }) }}</span>
+        <span class="drawer__eyebrow"
+          >{{ $t('header.idx') }} — {{ $t('header.edition', { year: currentYear }) }}</span
+        >
         <button
           class="drawer__close"
           type="button"
@@ -28,10 +19,7 @@
         </button>
       </div>
 
-      <nav
-        class="drawer__nav"
-        aria-label="primary mobile"
-      >
+      <nav class="drawer__nav" aria-label="primary mobile">
         <a
           v-for="item in menu"
           :key="item.link"
@@ -45,12 +33,7 @@
       </nav>
 
       <div class="drawer__resources">
-        <a
-          class="drawer__resource"
-          :href="linkedinUrl"
-          target="_blank"
-          rel="noopener"
-        >
+        <a class="drawer__resource" :href="linkedinUrl" target="_blank" rel="noopener">
           <span>LinkedIn</span>
           <svg
             aria-hidden="true"
@@ -66,12 +49,7 @@
             <path d="M7 17 17 7M9 7h8v8" />
           </svg>
         </a>
-        <a
-          class="drawer__resource"
-          :href="githubUrl"
-          target="_blank"
-          rel="noopener"
-        >
+        <a class="drawer__resource" :href="githubUrl" target="_blank" rel="noopener">
           <span>GitHub</span>
           <svg
             aria-hidden="true"
@@ -90,7 +68,10 @@
       </div>
 
       <div class="drawer__footer">
-        <span class="drawer__caption">{{ $t('common.firstname') }} {{ $t('common.name-upper') }} — {{ $t('header.role') }}</span>
+        <span class="drawer__caption"
+          >{{ $t('common.firstname') }} {{ $t('common.name-upper') }} —
+          {{ $t('header.role') }}</span
+        >
         <span class="drawer__caption drawer__caption--muted">{{ $t('header.meta-location') }}</span>
       </div>
     </aside>
@@ -129,11 +110,14 @@ function onNavigate(anchor: string) {
   emit('navigate', anchor)
 }
 
-watch(() => open, async (isOpen) => {
-  if (!isOpen) return
-  await nextTick()
-  drawerRef.value?.focus()
-})
+watch(
+  () => open,
+  async (isOpen) => {
+    if (!isOpen) return
+    await nextTick()
+    drawerRef.value?.focus()
+  },
+)
 
 function onKeydown(e: KeyboardEvent) {
   if (e.key === 'Escape') return close()
@@ -151,8 +135,7 @@ function onKeydown(e: KeyboardEvent) {
   if (e.shiftKey && active === first) {
     e.preventDefault()
     last.focus()
-  }
-  else if (!e.shiftKey && active === last) {
+  } else if (!e.shiftKey && active === last) {
     e.preventDefault()
     first.focus()
   }

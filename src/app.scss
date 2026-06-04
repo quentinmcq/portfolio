@@ -3,8 +3,9 @@
   background: var(--bg);
   color: var(--fg);
   overflow-x: clip;
-  transition: background var(--dur-mid) var(--ease-out),
-              color var(--dur-mid) var(--ease-out);
+  transition:
+    background var(--dur-mid) var(--ease-out),
+    color var(--dur-mid) var(--ease-out);
 }
 
 .app__main {

@@ -1,8 +1,5 @@
 <template>
-  <section
-    :id="componentName"
-    class="section skill"
-  >
+  <section :id="componentName" class="section skill">
     <div class="container">
       <CategoryTitle :component-name />
 
@@ -14,31 +11,19 @@
           data-reveal
           :style="{ '--reveal-delay': `${index * 60}ms` }"
         >
-          <div
-            class="skill-row"
-            :class="{ 'skill-row--primary': skill.primary }"
-          >
+          <div class="skill-row" :class="{ 'skill-row--primary': skill.primary }">
             <div class="skill-row__head">
               <span class="skill-row__index">{{ paddedIndex(index) }}</span>
               <h3 class="skill-row__label">
                 {{ skill.label }}
-                <span
-                  v-if="skill.primary"
-                  class="skill-row__primary-mark"
-                  aria-hidden="true"
-                >●</span>
+                <span v-if="skill.primary" class="skill-row__primary-mark" aria-hidden="true"
+                  >●</span
+                >
               </h3>
             </div>
 
-            <ul
-              class="skill-row__tools"
-              aria-label="Tools"
-            >
-              <li
-                v-for="label in skill.content"
-                :key="label"
-                class="skill-row__tool"
-              >
+            <ul class="skill-row__tools" aria-label="Tools">
+              <li v-for="label in skill.content" :key="label" class="skill-row__tool">
                 <SkillChip :label />
               </li>
             </ul>

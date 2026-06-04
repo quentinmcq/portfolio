@@ -12,15 +12,17 @@ export function initI18n(app: App) {
   const locale = readStoredLocale()
   if (typeof document !== 'undefined') document.documentElement.lang = locale
 
-  app.use(createI18n({
-    fallbackLocale: DEFAULT_LOCALE,
-    fallbackWarn: false,
-    legacy: false,
-    locale,
-    messages: { en, fr },
-    missingWarn: false,
-    warnHtmlMessage: false,
-  }))
+  app.use(
+    createI18n({
+      fallbackLocale: DEFAULT_LOCALE,
+      fallbackWarn: false,
+      legacy: false,
+      locale,
+      messages: { en, fr },
+      missingWarn: false,
+      warnHtmlMessage: false,
+    }),
+  )
 }
 
 function readStoredLocale(): string {

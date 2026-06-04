@@ -6,47 +6,48 @@ export default {
   common: {
     'back-to-top': 'Haut de page',
     'close-menu': 'Fermer le menu',
-    'firstname': 'Quentin',
-    'name': 'Macq',
+    firstname: 'Quentin',
+    name: 'Macq',
     'name-upper': 'MACQ',
     'open-menu': 'Ouvrir le menu',
-    'rotate-device': 'Veuillez faire pivoter l\'appareil',
+    'rotate-device': "Veuillez faire pivoter l'appareil",
     'skip-to-content': 'Aller au contenu',
   },
 
   contact: {
-    'channels': 'Autres canaux',
-    'erase': 'Effacer',
-    'error': 'Erreur, on réessaie ?',
-    'index': '05',
-    'invalid-address-format': 'Le format de l\'adresse est invalide',
-    'kicker': 'On en parle ?',
-    'lede': 'Une opportunité, un projet, ou juste envie de discuter front-end et café — je suis à l\'écoute.',
+    channels: 'Autres canaux',
+    erase: 'Effacer',
+    error: 'Erreur, on réessaie ?',
+    index: '05',
+    'invalid-address-format': "Le format de l'adresse est invalide",
+    kicker: 'On en parle ?',
+    lede: "Une opportunité, un projet, ou juste envie de discuter front-end et café — je suis à l'écoute.",
     'mail-address': 'Adresse mail',
     'main-title': 'Contact',
-    'message': 'Message',
+    message: 'Message',
     'min-message-length': 'Le message doit comporter {minLength} caractères minimum',
-    'name': 'Nom',
+    name: 'Nom',
     'required-field': 'Ce champ est requis',
-    'send': 'Envoyer',
+    send: 'Envoyer',
     'send-another': 'Envoyer un autre message',
-    'sending': 'Envoi en cours…',
-    'sent': 'Envoyé — merci !',
+    sending: 'Envoi en cours…',
+    sent: 'Envoyé — merci !',
   },
 
   experience: {
-    'featured': {
-      'description': 'Projets transverses, maintenance et refonte des outils internes, contribution à la stratégie SI.',
-      'eyebrow': 'Poste actuel',
+    featured: {
+      description:
+        'Projets transverses, maintenance et refonte des outils internes, contribution à la stratégie SI.',
+      eyebrow: 'Poste actuel',
       'link-label': 'Détails sur LinkedIn',
-      'period': 'CDI · depuis 2023',
+      period: 'CDI · depuis 2023',
       'stack-label': 'Au quotidien',
-      'title': 'Développeur full-stack chez Motoblouz',
+      title: 'Développeur full-stack chez Motoblouz',
     },
-    'index': '02',
-    'kicker': 'Voici où j\'en suis — et le chemin pour y arriver.',
+    index: '02',
+    kicker: "Voici où j'en suis — et le chemin pour y arriver.",
     'kind-education': 'Études',
-    'list': [
+    list: [
       {
         kind: 'work',
         link: linkedin,
@@ -67,7 +68,7 @@ export default {
         kind: 'work',
         link: linkedin,
         location: 'Motoblouz · Carvin',
-        subtitle: 'Stage · refonte d\'un outil de suivi des impayés.',
+        subtitle: "Stage · refonte d'un outil de suivi des impayés.",
         title: 'Développeur web',
         year: '2021',
       },
@@ -75,7 +76,7 @@ export default {
         kind: 'education',
         location: 'EPSI · Lille',
         subtitle: 'Cursus axé gestion de projet et management.',
-        title: 'Master Expert en Informatique et Systèmes d\'Information',
+        title: "Master Expert en Informatique et Systèmes d'Information",
         year: '2021 — 2023',
       },
       {
@@ -94,35 +95,37 @@ export default {
   },
 
   header: {
-    'available': 'À l\'écoute',
+    available: "À l'écoute",
     'cta-work': 'Voir le travail',
-    'edition': 'Édition {year}',
-    'focus': {
-      'open': 'Discussions, opportunités, ou juste partage de veille.',
+    edition: 'Édition {year}',
+    focus: {
+      open: 'Discussions, opportunités, ou juste partage de veille.',
       'open-label': 'Disponible pour',
-      'shipping': 'Front Nuxt, back Symfony et design system entre les deux.',
+      shipping: 'Front Nuxt, back Symfony et design system entre les deux.',
       'shipping-label': 'En production',
     },
-    'idx': 'IDX 001',
-    'lede': 'Full-stack avec une obsession pour la performance front et les nouveaux outils.',
+    idx: 'IDX 001',
+    lede: 'Full-stack avec une obsession pour la performance front et les nouveaux outils.',
     'meta-location': 'Hauts-de-France',
-    'role': 'Développeur full-stack',
-    'scroll': 'Scroller',
+    role: 'Développeur full-stack',
+    scroll: 'Scroller',
   },
 
   hobby: {
-    'index': '04',
-    'kicker': 'Ce que je fais quand je ferme l\'éditeur.',
-    'list': [
+    index: '04',
+    kicker: "Ce que je fais quand je ferme l'éditeur.",
+    list: [
       {
         button: 'Voir la collection',
-        description: 'Découvert grâce à un ami, les mangas sont rapidement devenus une véritable passion pour moi.',
+        description:
+          'Découvert grâce à un ami, les mangas sont rapidement devenus une véritable passion pour moi.',
         link: 'http://mangacollec.com/user/kakashi/collection',
         title: 'Manga',
       },
       {
         button: 'Voir le club',
-        description: 'Commencée pendant mes études, l\'escalade est une activité que j\'ai reprise ces dernières années, avec quelques compétitions à mon actif.',
+        description:
+          "Commencée pendant mes études, l'escalade est une activité que j'ai reprise ces dernières années, avec quelques compétitions à mon actif.",
         link: 'https://escalade-rouvroy.fr/',
         title: 'Escalade',
       },
@@ -173,12 +176,12 @@ export default {
   },
 
   project: {
-    'index': '03',
-    'kicker': 'Une sélection — perso, école, et un aperçu pro.',
+    index: '03',
+    kicker: 'Une sélection — perso, école, et un aperçu pro.',
     'kind-personal': 'Perso',
     'kind-private': 'Privé',
     'kind-school': 'École',
-    'list': [
+    list: [
       {
         chips: ['Vue', 'TypeScript', 'Bun', 'Cloudflare'],
         kind: 'personal',
@@ -191,12 +194,22 @@ export default {
         chips: ['Swift'],
         kind: 'personal',
         link: repoUrl('wizard-tomb'),
-        subtitle: 'Adaptation iOS d\'un livre dont on est le héros, dans la veine des « défis fantastiques ».',
+        subtitle:
+          "Adaptation iOS d'un livre dont on est le héros, dans la veine des « défis fantastiques ».",
         title: 'Wizard Tomb',
         year: '2026',
       },
       {
-        chips: ['Nuxt', 'TypeScript', 'Tailwind', 'Supabase', 'Stripe', 'Claude', 'Resend', 'Vercel'],
+        chips: [
+          'Nuxt',
+          'TypeScript',
+          'Tailwind',
+          'Supabase',
+          'Stripe',
+          'Claude',
+          'Resend',
+          'Vercel',
+        ],
         kind: 'personal',
         link: repoUrl('pilpoil'),
         subtitle: 'Carnet de santé numérique pour animaux de compagnie, augmenté par IA.',
@@ -231,9 +244,9 @@ export default {
   },
 
   skill: {
-    'index': '01',
-    'kicker': 'Quatre piles complémentaires, du build aux tests.',
-    'list': [
+    index: '01',
+    kicker: 'Quatre piles complémentaires, du build aux tests.',
+    list: [
       {
         content: ['Symfony', 'Nuxt', 'Vue', 'TypeScript', 'Pinia', 'Claude'],
         label: 'Au quotidien',
@@ -256,6 +269,6 @@ export default {
   },
 
   theme: {
-    'toggle': 'Changer de thème',
+    toggle: 'Changer de thème',
   },
 }

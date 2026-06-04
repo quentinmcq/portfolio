@@ -13,9 +13,7 @@ export class PresenceCounter extends DurableObject {
   constructor(ctx: DurableObjectState, env: unknown) {
     super(ctx, env as never)
     // Pongs are sent by the runtime without waking the DO from hibernation.
-    this.ctx.setWebSocketAutoResponse(
-      new WebSocketRequestResponsePair(PRESENCE_PING, 'pong'),
-    )
+    this.ctx.setWebSocketAutoResponse(new WebSocketRequestResponsePair(PRESENCE_PING, 'pong'))
   }
 
   override async fetch(): Promise<Response> {
@@ -35,8 +33,7 @@ export class PresenceCounter extends DurableObject {
   override webSocketClose(ws: WebSocket, code: number, reason: string): void {
     try {
       ws.close(code, reason)
-    }
-    catch {
+    } catch {
       // already closing
     }
     this.broadcast(ws)
@@ -56,8 +53,7 @@ export class PresenceCounter extends DurableObject {
     for (const ws of sockets) {
       try {
         ws.send(payload)
-      }
-      catch {
+      } catch {
         // socket went away mid-broadcast; the close handler will reconcile
       }
     }

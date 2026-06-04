@@ -9,19 +9,15 @@
       <span class="timeline-item__year-text">{{ item.year }}</span>
     </div>
 
-    <div
-      class="timeline-item__marker"
-      aria-hidden="true"
-    >
+    <div class="timeline-item__marker" aria-hidden="true">
       <span class="timeline-item__marker-dot" />
       <span class="timeline-item__marker-line" />
     </div>
 
     <article class="timeline-item__body">
-      <span
-        v-if="isEducation"
-        class="timeline-item__kind"
-      >{{ $t('experience.kind-education') }}</span>
+      <span v-if="isEducation" class="timeline-item__kind">{{
+        $t('experience.kind-education')
+      }}</span>
 
       <h3 class="timeline-item__title">
         <a
@@ -52,10 +48,7 @@
 
       <span class="timeline-item__location">{{ item.location }}</span>
 
-      <p
-        v-if="item.subtitle"
-        class="timeline-item__subtitle"
-      >
+      <p v-if="item.subtitle" class="timeline-item__subtitle">
         {{ item.subtitle }}
       </p>
     </article>

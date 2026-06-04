@@ -1,8 +1,5 @@
 <template>
-  <section
-    :id="componentName"
-    class="section hobby"
-  >
+  <section :id="componentName" class="section hobby">
     <div class="container">
       <CategoryTitle :component-name />
 

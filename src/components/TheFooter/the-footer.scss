@@ -31,7 +31,9 @@
 
   &__brand-name {
     font-family: var(--font-display), serif;
-    font-variation-settings: 'opsz' 72, 'SOFT' 60;
+    font-variation-settings:
+      'opsz' 72,
+      'SOFT' 60;
     font-style: italic;
     font-weight: 350;
     font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
@@ -69,8 +71,9 @@
 
     svg {
       color: var(--fg-faint);
-      transition: color var(--dur-fast) var(--ease-out),
-                  transform var(--dur-fast) var(--ease-out);
+      transition:
+        color var(--dur-fast) var(--ease-out),
+        transform var(--dur-fast) var(--ease-out);
     }
 
     &:hover {

@@ -33,15 +33,21 @@
   }
 
   @keyframes presence-pulse {
-    0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--live) 55%, transparent); }
-    50% { box-shadow: 0 0 0 8px color-mix(in srgb, var(--live) 0%, transparent); }
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 color-mix(in srgb, var(--live) 55%, transparent);
+    }
+    50% {
+      box-shadow: 0 0 0 8px color-mix(in srgb, var(--live) 0%, transparent);
+    }
   }
 }
 
 .presence-enter-active,
 .presence-leave-active {
-  transition: opacity var(--dur-mid) var(--ease-out),
-              transform var(--dur-mid) var(--ease-out);
+  transition:
+    opacity var(--dur-mid) var(--ease-out),
+    transform var(--dur-mid) var(--ease-out);
 }
 
 .presence-enter-from,

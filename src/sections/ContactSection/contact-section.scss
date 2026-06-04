@@ -25,7 +25,9 @@
     margin: 0;
     max-width: 36ch;
     font-family: var(--font-display), serif;
-    font-variation-settings: 'opsz' 24, 'SOFT' 60;
+    font-variation-settings:
+      'opsz' 24,
+      'SOFT' 60;
     font-style: italic;
     font-weight: 300;
     font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.625rem);
@@ -62,8 +64,9 @@
     gap: 1rem;
     padding-block: 0.75rem;
     border-bottom: 1px solid var(--line);
-    transition: padding-left var(--dur-mid) var(--ease-out),
-                color var(--dur-fast) var(--ease-out);
+    transition:
+      padding-left var(--dur-mid) var(--ease-out),
+      color var(--dur-fast) var(--ease-out);
     color: var(--fg);
 
     @media (min-width: $md) {
@@ -134,7 +137,9 @@
   &__success-title {
     margin: 0;
     font-family: var(--font-display), serif;
-    font-variation-settings: 'opsz' 72, 'SOFT' 60;
+    font-variation-settings:
+      'opsz' 72,
+      'SOFT' 60;
     font-style: italic;
     font-weight: 350;
     font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
@@ -184,9 +189,10 @@
     font-weight: 500;
     letter-spacing: 0.04em;
     cursor: pointer;
-    transition: background var(--dur-fast) var(--ease-out),
-                border-color var(--dur-fast) var(--ease-out),
-                opacity var(--dur-fast) var(--ease-out);
+    transition:
+      background var(--dur-fast) var(--ease-out),
+      border-color var(--dur-fast) var(--ease-out),
+      opacity var(--dur-fast) var(--ease-out);
 
     svg {
       transition: transform var(--dur-mid) var(--ease-out);

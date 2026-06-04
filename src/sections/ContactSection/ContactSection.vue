@@ -1,58 +1,32 @@
 <template>
-  <section
-    :id="componentName"
-    class="section contact"
-  >
+  <section :id="componentName" class="section contact">
     <div class="container">
       <CategoryTitle :component-name />
 
       <div class="contact__grid">
-        <aside
-          class="contact__intro"
-          aria-label="Channels"
-        >
-          <p
-            class="contact__lede"
-            data-reveal
-          >
+        <aside class="contact__intro" aria-label="Channels">
+          <p class="contact__lede" data-reveal>
             {{ $t('contact.lede') }}
           </p>
 
-          <div
-            class="contact__channels"
-            data-reveal
-            style="--reveal-delay: 100ms"
-          >
+          <div class="contact__channels" data-reveal style="--reveal-delay: 100ms">
             <span class="contact__channels-label">{{ $t('contact.channels') }}</span>
 
             <ul class="contact__channel-list">
               <li>
-                <a
-                  class="contact__channel"
-                  :href="`mailto:${CONTACTS.email}`"
-                >
+                <a class="contact__channel" :href="`mailto:${CONTACTS.email}`">
                   <span class="contact__channel-key">Email</span>
                   <span class="contact__channel-val">{{ CONTACTS.email }}</span>
                 </a>
               </li>
               <li>
-                <a
-                  class="contact__channel"
-                  :href="linkedinUrl"
-                  target="_blank"
-                  rel="noopener"
-                >
+                <a class="contact__channel" :href="linkedinUrl" target="_blank" rel="noopener">
                   <span class="contact__channel-key">LinkedIn</span>
                   <span class="contact__channel-val">{{ CONTACTS.linkedinHandle }}</span>
                 </a>
               </li>
               <li>
-                <a
-                  class="contact__channel"
-                  :href="githubUrl"
-                  target="_blank"
-                  rel="noopener"
-                >
+                <a class="contact__channel" :href="githubUrl" target="_blank" rel="noopener">
                   <span class="contact__channel-key">GitHub</span>
                   <span class="contact__channel-val">{{ CONTACTS.githubHandle }}</span>
                 </a>
@@ -67,11 +41,7 @@
           </div>
         </aside>
 
-        <div
-          class="contact__form-wrap"
-          data-reveal
-          style="--reveal-delay: 150ms"
-        >
+        <div class="contact__form-wrap" data-reveal style="--reveal-delay: 150ms">
           <div
             v-if="submitState === 'sent'"
             class="contact__success"
@@ -93,21 +63,12 @@
               <path d="M5 12.5l4.5 4.5L19 7.5" />
             </svg>
             <p class="contact__success-title">{{ $t('contact.sent') }}</p>
-            <button
-              class="contact__success-action"
-              type="button"
-              @click="submitState = 'idle'"
-            >
+            <button class="contact__success-action" type="button" @click="submitState = 'idle'">
               {{ $t('contact.send-another') }}
             </button>
           </div>
 
-          <form
-            v-else
-            class="contact__form"
-            @focusin="armCaptcha"
-            @submit.prevent="sendMessage"
-          >
+          <form v-else class="contact__form" @focusin="armCaptcha" @submit.prevent="sendMessage">
             <FormField
               v-model="form.name"
               v-model:valid="validity.name"
@@ -146,10 +107,7 @@
               :rules="messageRules"
             />
 
-            <TurnstileWidget
-              ref="turnstile"
-              v-model="captchaToken"
-            />
+            <TurnstileWidget ref="turnstile" v-model="captchaToken" />
 
             <div class="contact__form-actions">
               <button
@@ -239,10 +197,14 @@ const submitState = ref<SubmitState>('idle')
 
 const submitLabel = computed(() => {
   switch (submitState.value) {
-    case 'error': return t('contact.error')
-    case 'sending': return t('contact.sending')
-    case 'sent': return t('contact.sent')
-    default: return t('contact.send')
+    case 'error':
+      return t('contact.error')
+    case 'sending':
+      return t('contact.sending')
+    case 'sent':
+      return t('contact.sent')
+    default:
+      return t('contact.send')
   }
 })
 
@@ -258,9 +220,7 @@ const validity = reactive({
   name: false,
 })
 
-const valid = computed(() =>
-  validity.name && validity.email && validity.message,
-)
+const valid = computed(() => validity.name && validity.email && validity.message)
 
 function resetForm() {
   form.name = ''
@@ -302,11 +262,9 @@ async function sendMessage() {
     // Form unmounts to the success view — disarm so the next session re-arms on focus.
     captchaToken.value = ''
     captchaArmed.value = false
-  }
-  catch {
+  } catch {
     submitState.value = 'error'
-  }
-  finally {
+  } finally {
     loading.value = false
     // On error: re-arm a fresh token and let the button return to its default
     // label after a moment so the user can retry. Success persists until the

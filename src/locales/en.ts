@@ -6,8 +6,8 @@ export default {
   common: {
     'back-to-top': 'Back to top',
     'close-menu': 'Close menu',
-    'firstname': 'Quentin',
-    'name': 'Macq',
+    firstname: 'Quentin',
+    name: 'Macq',
     'name-upper': 'MACQ',
     'open-menu': 'Open menu',
     'rotate-device': 'Please rotate your device',
@@ -15,38 +15,39 @@ export default {
   },
 
   contact: {
-    'channels': 'Other channels',
-    'erase': 'Clear',
-    'error': 'Something broke, try again?',
-    'index': '05',
+    channels: 'Other channels',
+    erase: 'Clear',
+    error: 'Something broke, try again?',
+    index: '05',
     'invalid-address-format': 'Invalid email format',
-    'kicker': 'Let\'s talk.',
-    'lede': 'An opportunity, a project, or just wanting to talk front-end and coffee — I\'m listening.',
+    kicker: "Let's talk.",
+    lede: "An opportunity, a project, or just wanting to talk front-end and coffee — I'm listening.",
     'mail-address': 'Email address',
     'main-title': 'Contact',
-    'message': 'Message',
+    message: 'Message',
     'min-message-length': 'The message must be at least {minLength} characters long',
-    'name': 'Name',
+    name: 'Name',
     'required-field': 'This field is required',
-    'send': 'Send',
+    send: 'Send',
     'send-another': 'Send another message',
-    'sending': 'Sending…',
-    'sent': 'Sent — thank you!',
+    sending: 'Sending…',
+    sent: 'Sent — thank you!',
   },
 
   experience: {
-    'featured': {
-      'description': 'Cross-team projects, maintaining and refactoring internal tools, contributing to the IS strategy.',
-      'eyebrow': 'Current role',
+    featured: {
+      description:
+        'Cross-team projects, maintaining and refactoring internal tools, contributing to the IS strategy.',
+      eyebrow: 'Current role',
       'link-label': 'Details on LinkedIn',
-      'period': 'Permanent · since 2023',
+      period: 'Permanent · since 2023',
       'stack-label': 'Day-to-day',
-      'title': 'Full-stack developer at Motoblouz',
+      title: 'Full-stack developer at Motoblouz',
     },
-    'index': '02',
-    'kicker': 'Where I am now — and the path that got me there.',
+    index: '02',
+    kicker: 'Where I am now — and the path that got me there.',
     'kind-education': 'Education',
-    'list': [
+    list: [
       {
         kind: 'work',
         link: linkedin,
@@ -94,26 +95,26 @@ export default {
   },
 
   header: {
-    'available': 'Always up for a chat',
+    available: 'Always up for a chat',
     'cta-work': 'See the work',
-    'edition': 'Edition {year}',
-    'focus': {
-      'open': 'Conversations, opportunities, or simply sharing what I read.',
+    edition: 'Edition {year}',
+    focus: {
+      open: 'Conversations, opportunities, or simply sharing what I read.',
       'open-label': 'Open to',
-      'shipping': 'Nuxt up front, Symfony at the back, design system in between.',
+      shipping: 'Nuxt up front, Symfony at the back, design system in between.',
       'shipping-label': 'Now shipping',
     },
-    'idx': 'IDX 001',
-    'lede': 'Full-stack with an obsession for front-end performance and emerging tools.',
+    idx: 'IDX 001',
+    lede: 'Full-stack with an obsession for front-end performance and emerging tools.',
     'meta-location': 'Hauts-de-France',
-    'role': 'Full-stack developer',
-    'scroll': 'Scroll',
+    role: 'Full-stack developer',
+    scroll: 'Scroll',
   },
 
   hobby: {
-    'index': '04',
-    'kicker': 'What I do when the editor is closed.',
-    'list': [
+    index: '04',
+    kicker: 'What I do when the editor is closed.',
+    list: [
       {
         button: 'See the collection',
         description: 'A friend introduced me to manga, and it quickly grew into a real passion.',
@@ -122,7 +123,8 @@ export default {
       },
       {
         button: 'See the club',
-        description: 'Started climbing during my studies and got back into it over the last few years, with a handful of competitions under my belt.',
+        description:
+          'Started climbing during my studies and got back into it over the last few years, with a handful of competitions under my belt.',
         link: 'https://escalade-rouvroy.fr/',
         title: 'Climbing',
       },
@@ -173,12 +175,12 @@ export default {
   },
 
   project: {
-    'index': '03',
-    'kicker': 'A selection — personal, school, and a glimpse of pro.',
+    index: '03',
+    kicker: 'A selection — personal, school, and a glimpse of pro.',
     'kind-personal': 'Personal',
     'kind-private': 'Private',
     'kind-school': 'School',
-    'list': [
+    list: [
       {
         chips: ['Vue', 'TypeScript', 'Bun', 'Cloudflare', 'Resend'],
         kind: 'personal',
@@ -191,12 +193,22 @@ export default {
         chips: ['Swift'],
         kind: 'personal',
         link: repoUrl('wizard-tomb'),
-        subtitle: 'iOS adaptation of a choose-your-own-adventure gamebook, inspired by the "Fighting Fantasy" series.',
+        subtitle:
+          'iOS adaptation of a choose-your-own-adventure gamebook, inspired by the "Fighting Fantasy" series.',
         title: 'Wizard Tomb',
         year: '2026',
       },
       {
-        chips: ['Nuxt', 'TypeScript', 'Tailwind', 'Supabase', 'Stripe', 'Claude', 'Resend', 'Vercel'],
+        chips: [
+          'Nuxt',
+          'TypeScript',
+          'Tailwind',
+          'Supabase',
+          'Stripe',
+          'Claude',
+          'Resend',
+          'Vercel',
+        ],
         kind: 'personal',
         link: repoUrl('pilpoil'),
         subtitle: 'AI-augmented digital health record for pets.',
@@ -231,9 +243,9 @@ export default {
   },
 
   skill: {
-    'index': '01',
-    'kicker': 'Four complementary stacks, from build to tests.',
-    'list': [
+    index: '01',
+    kicker: 'Four complementary stacks, from build to tests.',
+    list: [
       {
         content: ['Symfony', 'Nuxt', 'Vue', 'TypeScript', 'Pinia', 'Claude'],
         label: 'Day-to-day',
@@ -256,6 +268,6 @@ export default {
   },
 
   theme: {
-    'toggle': 'Toggle theme',
+    toggle: 'Toggle theme',
   },
 }

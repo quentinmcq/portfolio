@@ -48,7 +48,9 @@
 
   &__heading {
     font-family: var(--font-display), serif;
-    font-variation-settings: 'opsz' 144, 'SOFT' 60;
+    font-variation-settings:
+      'opsz' 144,
+      'SOFT' 60;
     font-weight: 350;
     font-size: var(--fs-display-lg);
     line-height: 1;
@@ -61,7 +63,9 @@
     margin: 0.75rem 0 0;
     max-width: 48ch;
     font-family: var(--font-display), serif;
-    font-variation-settings: 'opsz' 24, 'SOFT' 60;
+    font-variation-settings:
+      'opsz' 24,
+      'SOFT' 60;
     font-style: italic;
     font-weight: 300;
     font-size: clamp(1.05rem, 0.95rem + 0.4vw, 1.25rem);

@@ -1,56 +1,28 @@
 <template>
-  <article
-    class="featured-card"
-    data-reveal
-  >
+  <article class="featured-card" data-reveal>
     <header class="featured-card__head">
       <span class="featured-card__eyebrow">{{ eyebrow }}</span>
-      <span
-        v-if="period"
-        class="featured-card__period"
-      >{{ period }}</span>
+      <span v-if="period" class="featured-card__period">{{ period }}</span>
     </header>
 
     <div class="featured-card__body">
-      <h3 class="featured-card__title">
-        {{ title }}<span class="featured-card__stop">.</span>
-      </h3>
-      <p
-        v-if="description"
-        class="featured-card__description"
-      >
+      <h3 class="featured-card__title">{{ title }}<span class="featured-card__stop">.</span></h3>
+      <p v-if="description" class="featured-card__description">
         {{ description }}
       </p>
     </div>
 
-    <div
-      v-if="stack?.length"
-      class="featured-card__stack"
-    >
-      <span
-        v-if="stackLabel"
-        class="featured-card__stack-label"
-      >{{ stackLabel }}</span>
+    <div v-if="stack?.length" class="featured-card__stack">
+      <span v-if="stackLabel" class="featured-card__stack-label">{{ stackLabel }}</span>
       <ul class="featured-card__stack-list">
-        <li
-          v-for="tech in stack"
-          :key="tech"
-        >
+        <li v-for="tech in stack" :key="tech">
           <SkillChip :label="tech" />
         </li>
       </ul>
     </div>
 
-    <div
-      v-if="linkHref"
-      class="featured-card__actions"
-    >
-      <a
-        :href="linkHref"
-        target="_blank"
-        rel="noopener"
-        class="featured-card__cta"
-      >
+    <div v-if="linkHref" class="featured-card__actions">
+      <a :href="linkHref" target="_blank" rel="noopener" class="featured-card__cta">
         <span>{{ linkLabel }}</span>
         <svg
           aria-hidden="true"

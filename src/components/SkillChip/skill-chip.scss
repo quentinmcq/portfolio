@@ -12,9 +12,10 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: border-color var(--dur-fast) var(--ease-out),
-              color var(--dur-fast) var(--ease-out),
-              background var(--dur-fast) var(--ease-out);
+  transition:
+    border-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out),
+    background var(--dur-fast) var(--ease-out);
 
   &__dot {
     width: 7px;
@@ -22,8 +23,9 @@
     border-radius: 50%;
     background: var(--chip-color);
     box-shadow: 0 0 0 1px color-mix(in srgb, var(--fg) 12%, transparent);
-    transition: transform var(--dur-fast) var(--ease-out),
-                box-shadow var(--dur-fast) var(--ease-out);
+    transition:
+      transform var(--dur-fast) var(--ease-out),
+      box-shadow var(--dur-fast) var(--ease-out);
   }
 
   &__label {

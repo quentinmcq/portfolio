@@ -88,13 +88,20 @@
   }
 
   @keyframes hero-pulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(255, 91, 58, 0.55); }
-    50% { box-shadow: 0 0 0 8px rgba(255, 91, 58, 0); }
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 91, 58, 0.55);
+    }
+    50% {
+      box-shadow: 0 0 0 8px rgba(255, 91, 58, 0);
+    }
   }
 
   &__title {
     font-family: var(--font-display), serif;
-    font-variation-settings: 'opsz' 144, 'SOFT' 60;
+    font-variation-settings:
+      'opsz' 144,
+      'SOFT' 60;
     font-weight: 350;
     font-size: var(--fs-display-xl);
     line-height: 0.92;
@@ -108,7 +115,9 @@
 
     &--accent {
       font-style: italic;
-      font-variation-settings: 'opsz' 144, 'SOFT' 100;
+      font-variation-settings:
+        'opsz' 144,
+        'SOFT' 100;
     }
   }
 
@@ -119,7 +128,9 @@
   &__lede {
     max-width: 38ch;
     font-family: var(--font-display), serif;
-    font-variation-settings: 'opsz' 24, 'SOFT' 60;
+    font-variation-settings:
+      'opsz' 24,
+      'SOFT' 60;
     font-weight: 300;
     font-style: italic;
     font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem);
@@ -168,7 +179,9 @@
 
   &__aside-value {
     font-family: var(--font-display), serif;
-    font-variation-settings: 'opsz' 24, 'SOFT' 60;
+    font-variation-settings:
+      'opsz' 24,
+      'SOFT' 60;
     font-weight: 350;
     font-style: italic;
     font-size: clamp(1rem, 0.9rem + 0.4vw, 1.125rem);
@@ -205,8 +218,13 @@
   }
 
   @keyframes hero-bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(3px); }
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(3px);
+    }
   }
 }
 
@@ -222,10 +240,11 @@
   border: 1px solid;
   border-radius: 999px;
   cursor: pointer;
-  transition: background var(--dur-mid) var(--ease-out),
-              color var(--dur-mid) var(--ease-out),
-              border-color var(--dur-mid) var(--ease-out),
-              transform var(--dur-fast) var(--ease-out);
+  transition:
+    background var(--dur-mid) var(--ease-out),
+    color var(--dur-mid) var(--ease-out),
+    border-color var(--dur-mid) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
 
   svg {
     transition: transform var(--dur-mid) var(--ease-out);

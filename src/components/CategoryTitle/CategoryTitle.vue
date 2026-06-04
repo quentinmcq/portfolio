@@ -2,10 +2,7 @@
   <header class="category-title">
     <div class="category-title__row">
       <span class="category-title__index">{{ index }}</span>
-      <span
-        class="category-title__rule"
-        aria-hidden="true"
-      />
+      <span class="category-title__rule" aria-hidden="true" />
       <a
         class="category-title__top"
         href="#top"
@@ -29,19 +26,11 @@
       </a>
     </div>
 
-    <h2
-      class="category-title__heading"
-      data-reveal
-    >
+    <h2 class="category-title__heading" data-reveal>
       {{ heading }}
     </h2>
 
-    <p
-      v-if="kicker"
-      class="category-title__kicker"
-      data-reveal
-      style="--reveal-delay: 80ms"
-    >
+    <p v-if="kicker" class="category-title__kicker" data-reveal style="--reveal-delay: 80ms">
       {{ kicker }}
     </p>
   </header>
@@ -57,9 +46,13 @@ const { componentName } = defineProps<{
 
 const { t, te } = useI18n()
 
-const heading = computed(() => componentName ? t(`${componentName}.main-title`) : '')
-const index = computed(() => componentName && te(`${componentName}.index`) ? t(`${componentName}.index`) : '')
-const kicker = computed(() => componentName && te(`${componentName}.kicker`) ? t(`${componentName}.kicker`) : '')
+const heading = computed(() => (componentName ? t(`${componentName}.main-title`) : ''))
+const index = computed(() =>
+  componentName && te(`${componentName}.index`) ? t(`${componentName}.index`) : '',
+)
+const kicker = computed(() =>
+  componentName && te(`${componentName}.kicker`) ? t(`${componentName}.kicker`) : '',
+)
 
 function scrollToTop() {
   window.scrollTo({ behavior: 'smooth', top: 0 })

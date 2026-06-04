@@ -1,39 +1,21 @@
 <template>
-  <section
-    id="top"
-    class="hero"
-    aria-label="Quentin Macq — Hero"
-  >
+  <section id="top" class="hero" aria-label="Quentin Macq — Hero">
     <div class="container hero__container">
       <div class="hero__top">
         <span class="hero__eyebrow">{{ $t('header.idx') }}</span>
-        <span
-          class="hero__rule"
-          aria-hidden="true"
-        />
+        <span class="hero__rule" aria-hidden="true" />
         <span class="hero__eyebrow">{{ $t('header.edition', { year: currentYear }) }}</span>
       </div>
 
       <div class="hero__body">
         <div class="hero__main">
-          <p
-            class="hero__caption"
-            data-reveal
-            style="--reveal-delay: 80ms"
-          >
-            <span
-              class="hero__caption-dot"
-              aria-hidden="true"
-            />
+          <p class="hero__caption" data-reveal style="--reveal-delay: 80ms">
+            <span class="hero__caption-dot" aria-hidden="true" />
             {{ $t('header.available') }}
           </p>
 
           <h1 class="hero__title">
-            <span
-              class="hero__title-line"
-              data-reveal
-              style="--reveal-delay: 140ms"
-            >
+            <span class="hero__title-line" data-reveal style="--reveal-delay: 140ms">
               {{ $t('common.firstname') }}
             </span>
             <span
@@ -45,19 +27,11 @@
             </span>
           </h1>
 
-          <p
-            class="hero__lede"
-            data-reveal
-            style="--reveal-delay: 360ms"
-          >
+          <p class="hero__lede" data-reveal style="--reveal-delay: 360ms">
             {{ $t('header.lede') }}
           </p>
 
-          <div
-            class="hero__cta"
-            data-reveal
-            style="--reveal-delay: 520ms"
-          >
+          <div class="hero__cta" data-reveal style="--reveal-delay: 520ms">
             <a
               class="hero-btn hero-btn--primary"
               href="#project"
@@ -88,23 +62,12 @@
           </div>
         </div>
 
-        <aside
-          class="hero__aside"
-          aria-label="Current focus"
-        >
-          <div
-            class="hero__aside-block"
-            data-reveal
-            style="--reveal-delay: 320ms"
-          >
+        <aside class="hero__aside" aria-label="Current focus">
+          <div class="hero__aside-block" data-reveal style="--reveal-delay: 320ms">
             <span class="hero__aside-label">{{ $t('header.focus.shipping-label') }}</span>
             <span class="hero__aside-value">{{ $t('header.focus.shipping') }}</span>
           </div>
-          <div
-            class="hero__aside-block"
-            data-reveal
-            style="--reveal-delay: 420ms"
-          >
+          <div class="hero__aside-block" data-reveal style="--reveal-delay: 420ms">
             <span class="hero__aside-label">{{ $t('header.focus.open-label') }}</span>
             <span class="hero__aside-value">{{ $t('header.focus.open') }}</span>
           </div>
@@ -112,15 +75,8 @@
       </div>
 
       <div class="hero__bottom">
-        <span
-          class="hero__rule"
-          aria-hidden="true"
-        />
-        <a
-          class="hero__scroll"
-          href="#skill"
-          @click.prevent="scrollTo('#skill')"
-        >
+        <span class="hero__rule" aria-hidden="true" />
+        <a class="hero__scroll" href="#skill" @click.prevent="scrollTo('#skill')">
           <span>{{ $t('header.scroll') }}</span>
           <svg
             aria-hidden="true"
