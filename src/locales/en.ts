@@ -171,7 +171,7 @@ export default {
   ],
 
   presence: {
-    online: '{count} online',
+    label: 'online',
   },
 
   project: {

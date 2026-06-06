@@ -5,15 +5,28 @@
   z-index: 90;
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
-  padding: 10px 14px;
-  background: color-mix(in srgb, var(--bg-elevated) 70%, transparent);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid var(--line);
+  padding: 9px 13px;
+  background: color-mix(in srgb, var(--bg-elevated) 55%, transparent);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid color-mix(in srgb, var(--fg) 12%, transparent);
   border-radius: 999px;
   color: var(--fg);
   user-select: none;
+  // Liquid-glass nod: lit top edge + soft lift, kept subtle for the dark theme.
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, white 14%, transparent),
+    0 8px 24px -14px rgba(0, 0, 0, 0.5);
+  transition:
+    opacity var(--dur-mid) var(--ease-out),
+    transform var(--dur-mid) var(--ease-out);
+
+  // Auto-hide while scrolling down — slides out past its own bottom offset.
+  &.is-hidden {
+    opacity: 0;
+    transform: translateY(calc(100% + 2.5rem));
+    pointer-events: none;
+  }
 
   &__dot {
     width: 7px;
@@ -24,12 +37,36 @@
     animation: presence-pulse 2.4s var(--ease-out) infinite;
   }
 
+  &__count {
+    margin-left: 0.5rem;
+    font-family: var(--font-mono), monospace;
+    font-size: var(--fs-micro);
+    letter-spacing: 0.04em;
+    font-variant-numeric: tabular-nums;
+  }
+
+  // Collapsed at rest (just dot + number), expands on hover/focus.
   &__label {
+    max-width: 0;
+    margin-left: 0;
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
     font-family: var(--font-mono), monospace;
     font-size: var(--fs-micro);
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    font-variant-numeric: tabular-nums;
+    transition:
+      max-width var(--dur-mid) var(--ease-out),
+      margin-left var(--dur-mid) var(--ease-out),
+      opacity var(--dur-fast) var(--ease-out);
+  }
+
+  &:hover &__label,
+  &:focus-within &__label {
+    max-width: 8rem;
+    margin-left: 0.45rem;
+    opacity: 1;
   }
 
   @keyframes presence-pulse {

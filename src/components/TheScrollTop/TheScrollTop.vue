@@ -1,7 +1,7 @@
 <template>
   <button
     class="scroll-top"
-    :class="{ 'is-visible': visible }"
+    :class="{ 'is-visible': visible && !hidden }"
     :aria-label="$t('common.back-to-top')"
     type="button"
     @click="scrollToTop"
@@ -26,7 +26,10 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 
+import { useScrollHide } from '@/composables/scroll-hide'
+
 const visible = ref(false)
+const { hidden } = useScrollHide()
 
 function onScroll() {
   visible.value = window.scrollY > window.innerHeight * 0.8
