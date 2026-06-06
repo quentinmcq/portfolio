@@ -1,7 +1,10 @@
 .skill {
+  --row-pad: clamp(0.75rem, 1.5vw, 1.25rem);
+
   &__list {
     list-style: none;
     margin: 0;
+    margin-inline: calc(-1 * var(--row-pad));
     padding: 0;
     border-top: 1px solid var(--line);
   }
@@ -16,6 +19,7 @@
   grid-template-columns: 1fr;
   gap: 1rem;
   padding-block: clamp(1.25rem, 2.5vw, 2rem);
+  padding-inline: var(--row-pad);
   transition:
     padding-left var(--dur-mid) var(--ease-out),
     background var(--dur-mid) var(--ease-out);
@@ -27,7 +31,7 @@
   }
 
   &:hover {
-    padding-left: 0.5rem;
+    padding-left: calc(var(--row-pad) + 0.5rem);
     background: color-mix(in srgb, var(--accent) 4%, transparent);
 
     .skill-row__index {
