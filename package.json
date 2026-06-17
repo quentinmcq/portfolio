@@ -14,17 +14,17 @@
   },
   "dependencies": {
     "typescript": "^6.0.3",
-    "vue": "^3.6.0-beta.15",
+    "vue": "^3.6.0-beta.16",
     "vue-i18n": "^11.4.5"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20260611.1",
+    "@cloudflare/workers-types": "^4.20260617.1",
     "@vitejs/plugin-vue": "^6.0.7",
     "@vue/tsconfig": "^0.9.1",
     "sass-embedded": "^1.100.0",
     "vite": "npm:@voidzero-dev/vite-plus-core@latest",
     "vite-plus": "latest",
-    "wrangler": "^4.100.0"
+    "wrangler": "^4.101.0"
   },
   "overrides": {
     "vite": "npm:@voidzero-dev/vite-plus-core@latest",
