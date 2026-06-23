@@ -8,5 +8,12 @@
   ],
   "rangeStrategy": "bump",
   "rebaseWhen": "conflicted",
-  "commitMessageSuffix": " [skip ci]"
+  "commitMessageSuffix": " [skip ci]",
+  "packageRules": [
+    {
+      "matchPackageNames": ["wrangler", "@cloudflare/**", "miniflare"],
+      "groupName": "cloudflare",
+      "groupSlug": "cloudflare"
+    }
+  ]
 }
