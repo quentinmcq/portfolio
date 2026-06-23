@@ -1,5 +1,7 @@
 <template>
   <section id="top" class="hero" aria-label="Quentin Macq — Hero">
+    <AsciiBackdrop />
+
     <div class="container hero__container">
       <div class="hero__top">
         <span class="hero__eyebrow">{{ $t('header.idx') }}</span>
@@ -99,6 +101,8 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+
+import AsciiBackdrop from '@/components/AsciiBackdrop/AsciiBackdrop.vue'
 
 const currentYear = computed(() => new Date().getFullYear())
 

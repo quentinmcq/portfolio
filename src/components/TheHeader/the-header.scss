@@ -12,6 +12,8 @@
   overflow: hidden;
 
   &__container {
+    position: relative;
+    z-index: 1; // sit above the ASCII backdrop (z-index: 0)
     display: flex;
     flex-direction: column;
     width: 100%;
