@@ -115,6 +115,7 @@
                 class="contact__submit"
                 type="submit"
                 :aria-label="$t('contact.send')"
+                :aria-busy="loading"
                 :disabled="loading || !captchaToken"
               >
                 <span class="contact__submit-label">

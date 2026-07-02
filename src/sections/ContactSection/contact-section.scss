@@ -198,7 +198,7 @@
       transition: transform var(--dur-mid) var(--ease-out);
     }
 
-    &:hover {
+    &:hover:not(:disabled) {
       background: var(--accent-deep);
       border-color: var(--accent-deep);
 
@@ -209,6 +209,12 @@
 
     &:disabled {
       opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    // Only the actual send shows a progress cursor — :disabled alone also
+    // covers "captcha not solved yet", which is not an in-flight operation.
+    &[aria-busy='true'] {
       cursor: progress;
     }
   }
