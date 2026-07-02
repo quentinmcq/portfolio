@@ -24,7 +24,7 @@
     "sass-embedded": "^1.100.0",
     "vite": "npm:@voidzero-dev/vite-plus-core@latest",
     "vite-plus": "latest",
-    "wrangler": "^4.106.0"
+    "wrangler": "^4.107.0"
   },
   "overrides": {
     "vite": "npm:@voidzero-dev/vite-plus-core@latest",
