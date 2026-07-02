@@ -6,7 +6,7 @@
       <ul class="hobby__list">
         <li
           v-for="(entry, index) in hobbies"
-          :key="entry.title"
+          :key="index"
           class="hobby__row"
           data-reveal
           :style="{ '--reveal-delay': `${index * 100}ms` }"

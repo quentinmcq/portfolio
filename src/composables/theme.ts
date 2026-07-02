@@ -3,11 +3,7 @@ import { ref } from 'vue'
 export type Theme = 'dark' | 'light'
 
 const STORAGE_KEY = 'theme'
-const isBrowser = typeof window !== 'undefined'
-
-const theme = ref<Theme>(readInitialTheme())
-
-if (isBrowser) applyTheme(theme.value)
+const theme = ref<Theme>('dark')
 
 export function useTheme() {
   function toggleTheme() {
@@ -19,6 +15,10 @@ export function useTheme() {
   return { theme, toggleTheme }
 }
 
+export function syncTheme() {
+  theme.value = readStoredTheme()
+}
+
 function applyTheme(value: Theme) {
   const root = document.documentElement
   root.classList.toggle('theme-dark', value === 'dark')
@@ -28,9 +28,8 @@ function applyTheme(value: Theme) {
   meta?.setAttribute('content', value === 'dark' ? '#0d0d10' : '#f5f1e8')
 }
 
-function readInitialTheme(): Theme {
-  if (!isBrowser) return 'dark'
-
+// Same resolution order as the inline head script — keep the two in sync.
+function readStoredTheme(): Theme {
   const stored = localStorage.getItem(STORAGE_KEY)
   if (stored === 'dark' || stored === 'light') return stored
 

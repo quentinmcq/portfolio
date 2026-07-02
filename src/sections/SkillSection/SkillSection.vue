@@ -6,7 +6,7 @@
       <ol class="skill__list">
         <li
           v-for="(skill, index) in skills"
-          :key="skill.label"
+          :key="index"
           class="skill__row"
           data-reveal
           :style="{ '--reveal-delay': `${index * 60}ms` }"

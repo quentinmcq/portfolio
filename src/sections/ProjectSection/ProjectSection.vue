@@ -6,7 +6,7 @@
       <ol class="project__list">
         <li
           v-for="(item, index) in projects"
-          :key="item.title"
+          :key="index"
           class="project__row"
           data-reveal
           :style="{ '--reveal-delay': `${index * 80}ms` }"

@@ -2,6 +2,7 @@ import { createApp, createSSRApp } from 'vue'
 
 import '@/styles/main.scss'
 
+import { syncTheme } from '@/composables/theme'
 import { initI18n, resolvePreferredLocale } from '@/i18n'
 
 import App from './App.vue'
@@ -16,6 +17,8 @@ const app = container.firstElementChild ? createSSRApp(App) : createApp(App)
 const i18n = initI18n(app)
 
 app.mount('#app')
+
+syncTheme()
 
 const preferred = resolvePreferredLocale()
 
