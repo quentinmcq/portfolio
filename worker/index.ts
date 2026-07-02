@@ -5,7 +5,7 @@ import {
   MAX_EMAIL_LENGTH,
   MAX_MESSAGE_LENGTH,
   MAX_NAME_LENGTH,
-  MIN_MESSAGE_LENGTH,
+  MIN_MESSAGE_LENGTH
 } from '@/shared/contact'
 import { PRESENCE_ENDPOINT } from '@/shared/presence'
 
@@ -49,7 +49,7 @@ function buildRawEmail(name: string, replyTo: string, to: string, body: string) 
     'Content-Type: text/plain; charset=utf-8',
     'Content-Transfer-Encoding: 8bit',
     '',
-    body,
+    body
   ].join('\r\n')
 }
 
@@ -62,7 +62,7 @@ async function verifyTurnstile(token: string, ip: string, secret: string): Promi
   try {
     const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
       body,
-      method: 'POST',
+      method: 'POST'
     })
     const data = (await res.json()) as { success?: boolean }
     return data.success === true
@@ -112,12 +112,12 @@ async function handleContact(request: Request, env: Env, ctx: ExecutionContext):
   ctx.waitUntil(
     env.SEND_EMAIL.send(new EmailMessage(FROM_EMAIL, to, raw)).catch((error) => {
       console.error('Contact email send failed', error)
-    }),
+    })
   )
 
   return new Response(JSON.stringify({ ok: true }), {
     headers: { 'Content-Type': 'application/json' },
-    status: 200,
+    status: 200
   })
 }
 

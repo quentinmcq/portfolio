@@ -330,7 +330,7 @@ export function useAsciiBackdrop(canvasRef: Readonly<ShallowRef<HTMLCanvasElemen
         onscreen = entries[0]?.isIntersecting ?? true
         evaluate()
       },
-      { threshold: 0 },
+      { threshold: 0 }
     )
     interObs.observe(canvas)
 

@@ -22,7 +22,7 @@ function loadScript(): Promise<void> {
   const existing = document.querySelector<HTMLScriptElement>(`script[src="${SCRIPT_SRC}"]`)
   if (existing) {
     return new Promise((resolve) =>
-      existing.addEventListener('load', () => resolve(), { once: true }),
+      existing.addEventListener('load', () => resolve(), { once: true })
     )
   }
 
@@ -33,7 +33,7 @@ function loadScript(): Promise<void> {
     script.defer = true
     script.addEventListener('load', () => resolve(), { once: true })
     script.addEventListener('error', () => reject(new Error('Turnstile failed to load')), {
-      once: true,
+      once: true
     })
     document.head.appendChild(script)
   })
@@ -52,7 +52,7 @@ function render() {
       emit('update:modelValue', '')
       if (widgetId) window.turnstile?.execute(widgetId)
     },
-    'error-callback': () => emit('update:modelValue', ''),
+    'error-callback': () => emit('update:modelValue', '')
   })
 
   if (pendingExecute) {

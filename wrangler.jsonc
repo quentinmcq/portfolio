@@ -2,7 +2,7 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "portfolio",
   "main": "worker/index.ts",
-  "compatibility_date": "2026-07-02",
+  "compatibility_date": "2027-07-02",
   "workers_dev": false,
   "preview_urls": false,
   "routes": [
@@ -11,20 +11,20 @@
       "zone_name": "quentin-macq.dev",
       "custom_domain": true,
       "enabled": true,
-      "previews_enabled": false,
-    },
+      "previews_enabled": false
+    }
   ],
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",
-    "not_found_handling": "404-page",
+    "not_found_handling": "404-page"
   },
   "send_email": [{ "name": "SEND_EMAIL" }],
   "durable_objects": {
-    "bindings": [{ "name": "PRESENCE", "class_name": "PresenceCounter" }],
+    "bindings": [{ "name": "PRESENCE", "class_name": "PresenceCounter" }]
   },
   "migrations": [{ "tag": "v1", "new_sqlite_classes": ["PresenceCounter"] }],
   "observability": {
-    "enabled": true,
-  },
+    "enabled": true
+  }
 }

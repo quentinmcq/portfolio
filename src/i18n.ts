@@ -19,7 +19,7 @@ export function initI18n(app: App) {
     locale: DEFAULT_LOCALE,
     messages: { en, fr },
     missingWarn: false,
-    warnHtmlMessage: false,
+    warnHtmlMessage: false
   })
   app.use(i18n)
   return i18n

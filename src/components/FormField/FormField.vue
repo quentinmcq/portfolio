@@ -5,7 +5,7 @@
       'field--focused': focused,
       'field--filled': hasValue,
       'field--error': showError,
-      'field--textarea': type === 'textarea',
+      'field--textarea': type === 'textarea'
     }"
   >
     <label class="field__label" :for="fieldId">
@@ -73,7 +73,7 @@ const {
   required = false,
   rows = 6,
   rules = [],
-  type = 'text',
+  type = 'text'
 } = defineProps<{
   autocomplete?: string
   inputmode?: 'email'
@@ -126,7 +126,7 @@ defineExpose({
   },
   touch() {
     touched.value = true
-  },
+  }
 })
 </script>
 

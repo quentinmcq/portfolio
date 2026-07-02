@@ -53,7 +53,7 @@ const {
   period = undefined,
   stack = undefined,
   stackLabel = undefined,
-  title,
+  title
 } = defineProps<{
   description?: string
   eyebrow: string

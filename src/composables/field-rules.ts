@@ -18,6 +18,6 @@ export function useFieldRules() {
   return {
     emailRules: [required, email],
     messageRules: [required, minLength],
-    nameRules: [required],
+    nameRules: [required]
   }
 }

@@ -129,7 +129,7 @@ watch(
       lastFocused?.focus({ preventScroll: true })
       lastFocused = null
     }
-  },
+  }
 )
 
 function onKeydown(e: KeyboardEvent) {
@@ -137,7 +137,7 @@ function onKeydown(e: KeyboardEvent) {
   if (e.key !== 'Tab' || !drawerRef.value) return
 
   const focusables = drawerRef.value.querySelectorAll<HTMLElement>(
-    'a, button, [tabindex]:not([tabindex="-1"])',
+    'a, button, [tabindex]:not([tabindex="-1"])'
   )
   if (!focusables.length) return
 

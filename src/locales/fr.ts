@@ -13,7 +13,7 @@ export default {
     'name-upper': 'MACQ',
     'open-menu': 'Ouvrir le menu',
     'rotate-device': "Veuillez faire pivoter l'appareil",
-    'skip-to-content': 'Aller au contenu',
+    'skip-to-content': 'Aller au contenu'
   },
 
   contact: {
@@ -33,7 +33,7 @@ export default {
     send: 'Envoyer',
     'send-another': 'Envoyer un autre message',
     sending: 'Envoi en cours…',
-    sent: 'Envoyé — merci !',
+    sent: 'Envoyé — merci !'
   },
 
   experience: {
@@ -44,7 +44,7 @@ export default {
       'link-label': 'Détails sur LinkedIn',
       period: 'CDI · depuis 2023',
       'stack-label': 'Au quotidien',
-      title: 'Développeur full-stack chez Motoblouz',
+      title: 'Développeur full-stack chez Motoblouz'
     },
     index: '02',
     kicker: "Voici où j'en suis — et le chemin pour y arriver.",
@@ -56,7 +56,7 @@ export default {
         location: 'Motoblouz · Carvin',
         subtitle: 'CDI · projets transverses, outils internes, stratégie SI.',
         title: 'Développeur full-stack',
-        year: '2023 →',
+        year: '2023 →'
       },
       {
         kind: 'work',
@@ -64,7 +64,7 @@ export default {
         location: 'Motoblouz · Carvin',
         subtitle: 'Alternance · projets impactants côté e-commerce.',
         title: 'Développeur web',
-        year: '2021 — 2023',
+        year: '2021 — 2023'
       },
       {
         kind: 'work',
@@ -72,29 +72,29 @@ export default {
         location: 'Motoblouz · Carvin',
         subtitle: "Stage · refonte d'un outil de suivi des impayés.",
         title: 'Développeur web',
-        year: '2021',
+        year: '2021'
       },
       {
         kind: 'education',
         location: 'EPSI · Lille',
         subtitle: 'Cursus axé gestion de projet et management.',
         title: "Master Expert en Informatique et Systèmes d'Information",
-        year: '2021 — 2023',
+        year: '2021 — 2023'
       },
       {
         kind: 'education',
         location: 'IUT — Hauts-de-France',
         title: 'Formation supérieure en informatique',
-        year: '2018 — 2021',
-      },
+        year: '2018 — 2021'
+      }
     ],
-    'main-title': 'Parcours',
+    'main-title': 'Parcours'
   },
 
   footer: {
     'aria-links': 'Liens de contact',
     copyright: '© {currentYear} — Quentin Macq',
-    tools: 'Vue · TypeScript · sans framework UI',
+    tools: 'Vue · TypeScript · sans framework UI'
   },
 
   header: {
@@ -107,13 +107,13 @@ export default {
       open: 'Discussions, opportunités, ou juste partage de veille.',
       'open-label': 'Disponible pour',
       shipping: 'Front Nuxt, back Symfony et design system entre les deux.',
-      'shipping-label': 'En production',
+      'shipping-label': 'En production'
     },
     idx: 'IDX 001',
     lede: 'Full-stack avec une obsession pour la performance front et les nouveaux outils.',
     'meta-location': 'Hauts-de-France',
     role: 'Développeur full-stack',
-    scroll: 'Scroller',
+    scroll: 'Scroller'
   },
 
   hobby: {
@@ -125,59 +125,59 @@ export default {
         description:
           'Découvert grâce à un ami, les mangas sont rapidement devenus une véritable passion pour moi.',
         link: 'http://mangacollec.com/user/kakashi/collection',
-        title: 'Manga',
+        title: 'Manga'
       },
       {
         button: 'Voir le club',
         description:
           "Commencée pendant mes études, l'escalade est une activité que j'ai reprise ces dernières années, avec quelques compétitions à mon actif.",
         link: 'https://escalade-rouvroy.fr/',
-        title: 'Escalade',
+        title: 'Escalade'
       },
       {
         description: 'Balades le week-end au guidon de ma Z650 dès que la météo le permet.',
-        title: 'Moto',
-      },
+        title: 'Moto'
+      }
     ],
-    'main-title': 'Hors-écran',
+    'main-title': 'Hors-écran'
   },
 
   languages: {
     en: 'Anglais',
     fr: 'Français',
-    title: 'Langues',
+    title: 'Langues'
   },
 
   menu: [
     {
       index: '01',
       link: '#skill',
-      title: 'Stack',
+      title: 'Stack'
     },
     {
       index: '02',
       link: '#experience',
-      title: 'Parcours',
+      title: 'Parcours'
     },
     {
       index: '03',
       link: '#project',
-      title: 'Travaux',
+      title: 'Travaux'
     },
     {
       index: '04',
       link: '#hobby',
-      title: 'Hors-écran',
+      title: 'Hors-écran'
     },
     {
       index: '05',
       link: '#contact',
-      title: 'Contact',
-    },
+      title: 'Contact'
+    }
   ],
 
   presence: {
-    label: 'en ligne',
+    label: 'en ligne'
   },
 
   project: {
@@ -193,7 +193,7 @@ export default {
         link: repoUrl('portfolio'),
         subtitle: 'Refonte 2026 de mon portfolio professionnel.',
         title: 'Portfolio',
-        year: '2026 →',
+        year: '2026 →'
       },
       {
         chips: ['Swift'],
@@ -202,7 +202,7 @@ export default {
         subtitle:
           "Adaptation iOS d'un livre dont on est le héros, dans la veine des « défis fantastiques ».",
         title: 'Wizard Tomb',
-        year: '2026',
+        year: '2026'
       },
       {
         chips: [
@@ -213,20 +213,20 @@ export default {
           'Stripe',
           'Claude',
           'Resend',
-          'Vercel',
+          'Vercel'
         ],
         kind: 'personal',
         link: repoUrl('pilpoil'),
         subtitle: 'Carnet de santé numérique pour animaux de compagnie, augmenté par IA.',
         title: 'Pilpoil',
-        year: '2026',
+        year: '2026'
       },
       {
         chips: ['Symfony', 'Vue', 'PHP', 'Docker', 'API'],
         kind: 'private',
         subtitle: 'Outil interne de suivi des impayés.',
         title: 'Unpaid Tracking',
-        year: '2021',
+        year: '2021'
       },
       {
         chips: ['Laravel', 'Angular', 'Phaser', 'PHP'],
@@ -234,7 +234,7 @@ export default {
         link: repoUrl('slay-the-demons'),
         subtitle: 'Jeu vidéo intégré à une page web.',
         title: 'Slay the Demons',
-        year: '2020',
+        year: '2020'
       },
       {
         chips: ['Python', 'PyQt'],
@@ -242,10 +242,10 @@ export default {
         link: repoUrl('bomberman'),
         subtitle: 'Clone de Bomberman avec interface graphique.',
         title: 'Bomberman',
-        year: '2019',
-      },
+        year: '2019'
+      }
     ],
-    'main-title': 'Travaux',
+    'main-title': 'Travaux'
   },
 
   skill: {
@@ -256,25 +256,25 @@ export default {
       {
         content: ['Symfony', 'Nuxt', 'Vue', 'TypeScript', 'Pinia', 'Claude'],
         label: 'Au quotidien',
-        primary: true,
+        primary: true
       },
       {
         content: ['ESLint', 'Oxlint', 'Vitest', 'Playwright'],
-        label: 'Tests & qualité',
+        label: 'Tests & qualité'
       },
       {
         content: ['MySQL', 'RabbitMQ', 'Docker', 'GitLab', 'Jenkins', 'Grafana'],
-        label: 'Infra & data',
+        label: 'Infra & data'
       },
       {
         content: ['Bun', 'Swift'],
-        label: 'Outils & explorations',
-      },
+        label: 'Outils & explorations'
+      }
     ],
-    'main-title': 'Stack',
+    'main-title': 'Stack'
   },
 
   theme: {
-    toggle: 'Changer de thème',
-  },
+    toggle: 'Changer de thème'
+  }
 }

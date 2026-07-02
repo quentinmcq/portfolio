@@ -26,7 +26,7 @@ const chipConfig = computed(() => {
 })
 
 const dotStyle = computed(() => ({
-  '--chip-color': chipConfig.value.color || 'var(--fg-muted)',
+  '--chip-color': chipConfig.value.color || 'var(--fg-muted)'
 }))
 </script>
 

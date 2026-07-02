@@ -43,10 +43,10 @@ const { t, te } = useI18n()
 
 const heading = computed(() => (componentName ? t(`${componentName}.main-title`) : ''))
 const index = computed(() =>
-  componentName && te(`${componentName}.index`) ? t(`${componentName}.index`) : '',
+  componentName && te(`${componentName}.index`) ? t(`${componentName}.index`) : ''
 )
 const kicker = computed(() =>
-  componentName && te(`${componentName}.kicker`) ? t(`${componentName}.kicker`) : '',
+  componentName && te(`${componentName}.kicker`) ? t(`${componentName}.kicker`) : ''
 )
 </script>
 

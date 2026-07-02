@@ -123,7 +123,7 @@ watch(
   (open) => {
     document.body.style.overflow = open ? 'hidden' : ''
   },
-  { flush: 'sync' },
+  { flush: 'sync' }
 )
 </script>
 

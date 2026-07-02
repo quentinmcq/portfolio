@@ -6,7 +6,7 @@ export const CONTACTS = {
   github: `https://github.com/${GITHUB_USERNAME}`,
   githubHandle: `@${GITHUB_USERNAME}`,
   linkedin: `https://fr.linkedin.com/in/${LINKEDIN_USERNAME}`,
-  linkedinHandle: `@${LINKEDIN_USERNAME}`,
+  linkedinHandle: `@${LINKEDIN_USERNAME}`
 } as const
 
 export function repoUrl(slug: string) {

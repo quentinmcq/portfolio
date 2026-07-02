@@ -166,7 +166,7 @@ import {
   MAX_EMAIL_LENGTH,
   MAX_MESSAGE_LENGTH,
   MAX_NAME_LENGTH,
-  MIN_MESSAGE_LENGTH,
+  MIN_MESSAGE_LENGTH
 } from '@/shared/contact'
 
 const componentName = 'contact'
@@ -211,13 +211,13 @@ const submitLabel = computed(() => {
 const form = reactive({
   email: '',
   message: '',
-  name: '',
+  name: ''
 })
 
 const validity = reactive({
   email: false,
   message: false,
-  name: false,
+  name: false
 })
 
 const valid = computed(() => validity.name && validity.email && validity.message)
@@ -241,10 +241,10 @@ async function sendMessage() {
         email: form.email,
         message: form.message,
         name: form.name,
-        turnstileToken: captchaToken.value,
+        turnstileToken: captchaToken.value
       }),
       headers: { 'Content-Type': 'application/json' },
-      method: 'POST',
+      method: 'POST'
     })
 
     if (!response.ok) {

@@ -6,7 +6,7 @@ const BP = {
   md: 768,
   lg: 1024,
   xl: 1280,
-  xxl: 1536,
+  xxl: 1536
 }
 
 interface UseBreakpoints {
@@ -56,7 +56,7 @@ export function useBreakpoints(): UseBreakpoints {
     width: computed(() => width.value),
     xl: computed(() => width.value >= BP.xl && width.value < BP.xxl),
     xxl: computed(() => width.value >= BP.xxl),
-    xs: computed(() => width.value < BP.sm),
+    xs: computed(() => width.value < BP.sm)
   }
 }
 
