@@ -4,7 +4,16 @@
   </Transition>
 
   <Transition name="drawer">
-    <aside v-if="open" ref="drawerRef" class="drawer" tabindex="-1" @keydown="onKeydown">
+    <div
+      v-if="open"
+      ref="drawerRef"
+      class="drawer"
+      role="dialog"
+      aria-modal="true"
+      :aria-label="$t('common.aria-nav-mobile')"
+      tabindex="-1"
+      @keydown="onKeydown"
+    >
       <div class="drawer__header">
         <span class="drawer__eyebrow"
           >{{ $t('header.idx') }} — {{ $t('header.edition', { year: currentYear }) }}</span
@@ -19,13 +28,13 @@
         </button>
       </div>
 
-      <nav class="drawer__nav" aria-label="primary mobile">
+      <nav class="drawer__nav" :aria-label="$t('common.aria-nav-mobile')">
         <a
           v-for="item in menu"
           :key="item.link"
           class="drawer__link"
           :href="item.link"
-          @click.prevent="onNavigate(item.link)"
+          @click="close"
         >
           <span class="drawer__link-idx">{{ item.index }}</span>
           <span class="drawer__link-label">{{ item.title }}</span>
@@ -74,7 +83,7 @@
         >
         <span class="drawer__caption drawer__caption--muted">{{ $t('header.meta-location') }}</span>
       </div>
-    </aside>
+    </div>
   </Transition>
 </template>
 
@@ -96,26 +105,30 @@ const { open } = defineProps<{
 }>()
 
 const emit = defineEmits<{
-  navigate: [anchor: string]
   'update:open': [value: boolean]
 }>()
 
 const drawerRef = useTemplateRef<HTMLElement>('drawerRef')
+let lastFocused: HTMLElement | null = null
 
 function close() {
   emit('update:open', false)
 }
 
-function onNavigate(anchor: string) {
-  emit('navigate', anchor)
-}
-
+// Move focus into the dialog on open; hand it back to the trigger on close.
+// preventScroll: restoring focus must not fight an anchor scroll started by
+// the very link click that closed the drawer.
 watch(
   () => open,
   async (isOpen) => {
-    if (!isOpen) return
-    await nextTick()
-    drawerRef.value?.focus()
+    if (isOpen) {
+      lastFocused = document.activeElement as HTMLElement | null
+      await nextTick()
+      drawerRef.value?.focus()
+    } else {
+      lastFocused?.focus({ preventScroll: true })
+      lastFocused = null
+    }
   },
 )
 

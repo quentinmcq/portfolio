@@ -4,6 +4,8 @@ const linkedin = CONTACTS.linkedin
 
 export default {
   common: {
+    'aria-nav-mobile': 'Navigation mobile',
+    'aria-nav-primary': 'Navigation principale',
     'back-to-top': 'Haut de page',
     'close-menu': 'Fermer le menu',
     firstname: 'Quentin',
@@ -90,11 +92,14 @@ export default {
   },
 
   footer: {
+    'aria-links': 'Liens de contact',
     copyright: '© {currentYear} — Quentin Macq',
     tools: 'Vue · TypeScript · sans framework UI',
   },
 
   header: {
+    'aria-focus': 'En ce moment',
+    'aria-hero': 'Introduction',
     available: "À l'écoute",
     'cta-work': 'Voir le travail',
     edition: 'Édition {year}',
@@ -244,6 +249,7 @@ export default {
   },
 
   skill: {
+    'aria-tools': 'Outils',
     index: '01',
     kicker: 'Quatre piles complémentaires, du build aux tests.',
     list: [

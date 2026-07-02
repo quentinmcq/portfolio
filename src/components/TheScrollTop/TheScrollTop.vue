@@ -36,7 +36,7 @@ function onScroll() {
 }
 
 function scrollToTop() {
-  window.scrollTo({ behavior: 'smooth', top: 0 })
+  window.scrollTo({ top: 0 })
 }
 
 onMounted(() => {

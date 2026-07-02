@@ -111,7 +111,6 @@
 
             <div class="contact__form-actions">
               <button
-                id="message-status"
                 class="contact__submit"
                 type="submit"
                 :aria-label="$t('contact.send')"
@@ -228,8 +227,6 @@ function resetForm() {
   form.email = ''
   form.message = ''
   submitState.value = 'idle'
-  // Erasing fields doesn't consume the captcha token, so keep it — no need to
-  // re-run a challenge here.
 }
 
 async function sendMessage() {
@@ -257,24 +254,25 @@ async function sendMessage() {
     }
 
     submitState.value = 'sent'
+
     form.name = ''
     form.email = ''
     form.message = ''
-    // Form unmounts to the success view — disarm so the next session re-arms on focus.
+
     captchaToken.value = ''
     captchaArmed.value = false
   } catch {
     submitState.value = 'error'
   } finally {
     loading.value = false
-    // On error: re-arm a fresh token and let the button return to its default
-    // label after a moment so the user can retry. Success persists until the
-    // user dismisses it via "send another".
     if (submitState.value === 'error') {
       turnstile.value?.reset()
       turnstile.value?.execute()
+
       setTimeout(() => {
-        if (submitState.value === 'error') submitState.value = 'idle'
+        if (submitState.value === 'error') {
+          submitState.value = 'idle'
+        }
       }, 5000)
     }
   }

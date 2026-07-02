@@ -1,11 +1,26 @@
-import { createApp } from 'vue'
+import { createApp, createSSRApp } from 'vue'
 
-import { initI18n } from '@/i18n'
+import '@/styles/main.scss'
+
+import { initI18n, resolvePreferredLocale } from '@/i18n'
 
 import App from './App.vue'
 
-const app = createApp(App)
+const container = document.getElementById('app')
 
-initI18n(app)
+if (!container) {
+  throw new Error('#app container missing')
+}
+
+const app = container.firstElementChild ? createSSRApp(App) : createApp(App)
+const i18n = initI18n(app)
 
 app.mount('#app')
+
+const preferred = resolvePreferredLocale()
+
+if (i18n.global.locale.value !== preferred) {
+  i18n.global.locale.value = preferred
+}
+
+document.documentElement.lang = preferred

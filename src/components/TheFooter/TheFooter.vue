@@ -9,7 +9,7 @@
           >
         </div>
 
-        <div class="footer__links" aria-label="Footer links">
+        <nav class="footer__links" :aria-label="$t('footer.aria-links')">
           <a class="footer__link" :href="linkedinUrl" target="_blank" rel="noopener">
             <span>LinkedIn</span>
             <svg
@@ -59,7 +59,7 @@
               <path d="m3 8 9 5 9-5" />
             </svg>
           </a>
-        </div>
+        </nav>
       </div>
 
       <div class="footer__rule" aria-hidden="true" />

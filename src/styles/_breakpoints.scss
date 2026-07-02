@@ -1,6 +1,6 @@
-$xs: 320px;
-$sm: 576px;
-$sm-hd: 640px;
+// Tailwind-aligned breakpoints — keep in sync with src/composables/breakpoints.ts
+$sm: 640px;
 $md: 768px;
 $lg: 1024px;
 $xl: 1280px;
+$xxl: 1536px;

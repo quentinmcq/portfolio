@@ -6,6 +6,22 @@
     <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
     <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport" />
 
+    <script>
+      document.documentElement.classList.add('js')
+
+      try {
+        const stored = localStorage.getItem('theme')
+        const light =
+          stored === 'light' || (!stored && matchMedia('(prefers-color-scheme: light)').matches)
+        document.documentElement.classList.toggle('theme-light', light)
+        document.documentElement.classList.toggle('theme-dark', !light)
+
+        if (light) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f5f1e8')
+        }
+      } catch (e) {}
+    </script>
+
     <title>Quentin Macq — Développeur full-stack</title>
 
     <meta
@@ -22,7 +38,8 @@
       property="og:description"
       content="Développeur full-stack avec une obsession pour la performance front et les nouveaux outils. Symfony, Nuxt, TypeScript. Hauts-de-France."
     />
-    <meta property="og:image" content="https://quentin-macq.dev/og.svg" />
+    <meta property="og:image" content="https://quentin-macq.dev/og.png" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="fr_FR" />
@@ -34,25 +51,36 @@
       name="twitter:description"
       content="Développeur full-stack avec une affinité particulière pour l'interface."
     />
-    <meta name="twitter:image" content="https://quentin-macq.dev/og.svg" />
+    <meta name="twitter:image" content="https://quentin-macq.dev/og.png" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Inter+Tight:ital,wght@0,300..700;1,300..700&family=JetBrains+Mono:ital,wght@0,400..700;1,400..700&display=swap"
-      onload="
-        this.onload = null
-        this.rel = 'stylesheet'
-      "
+      as="font"
+      type="font/woff2"
+      href="/fonts/fraunces-v38-latin.woff2"
+      crossorigin
     />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Inter+Tight:ital,wght@0,300..700;1,300..700&family=JetBrains+Mono:ital,wght@0,400..700;1,400..700&display=swap"
-      />
-    </noscript>
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/fonts/fraunces-italic-v38-latin.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/fonts/inter-tight-v9-latin.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/fonts/jetbrains-mono-v24-latin.woff2"
+      crossorigin
+    />
 
     <!-- Schema.org Person — helps Google build a knowledge panel for recruiters searching the name -->
     <script type="application/ld+json">
@@ -61,7 +89,7 @@
         "@type": "Person",
         "name": "Quentin Macq",
         "url": "https://quentin-macq.dev/",
-        "image": "https://quentin-macq.dev/og.svg",
+        "image": "https://quentin-macq.dev/og.png",
         "jobTitle": "Full-stack developer",
         "worksFor": {
           "@type": "Organization",
@@ -81,7 +109,7 @@
   </head>
 
   <body>
-    <div id="app"><main id="main"></main></div>
+    <div id="app"></div>
     <script src="/src/main.ts" type="module"></script>
   </body>
 </html>

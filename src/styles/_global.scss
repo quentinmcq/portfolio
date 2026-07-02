@@ -1,5 +1,3 @@
-@use 'breakpoints';
-
 *,
 *::before,
 *::after {
@@ -90,6 +88,9 @@ img {
   position: relative;
   padding-block: var(--section-pad-y);
   border-top: 1px solid var(--line);
+  // Anchor navigation is native (real #hash links) — keep targets clear of
+  // the fixed navbar.
+  scroll-margin-top: 4.5rem;
 
   // Defer layout/paint of off-screen sections — drops initial reflow cost.
   // First section keeps default rendering so LCP candidates aren't skipped.
@@ -128,9 +129,7 @@ img {
   border: 0;
 }
 
-// Reveal-on-scroll utility (used alongside an IntersectionObserver directive
-// in App.vue's mounted hook — falls back gracefully without JS).
-[data-reveal] {
+.js [data-reveal] {
   opacity: 0;
   transform: translateY(24px);
   transition:
@@ -139,28 +138,31 @@ img {
   transition-delay: var(--reveal-delay, 0ms);
 }
 
-[data-reveal].is-visible,
-.no-js [data-reveal] {
+.js [data-reveal].is-visible {
   opacity: 1;
   transform: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   *,
   *::before,
   *::after {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
     animation-iteration-count: 1 !important;
   }
 
-  [data-reveal] {
+  .js [data-reveal] {
     opacity: 1;
     transform: none;
   }
 }
 
-// Subtle film grain across the whole app, switched by theme
 .app-grain {
   position: fixed;
   inset: 0;

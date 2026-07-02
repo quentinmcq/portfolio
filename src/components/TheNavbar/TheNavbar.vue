@@ -1,12 +1,7 @@
 <template>
   <header class="navbar" :class="{ 'is-scrolled': scrolled }" role="banner">
     <div class="container navbar__inner">
-      <a
-        class="navbar__brand"
-        href="#top"
-        @click.prevent="scrollToTop"
-        :aria-label="$t('common.back-to-top')"
-      >
+      <a class="navbar__brand" href="#top" :aria-label="$t('common.back-to-top')">
         <span class="navbar__brand-mark">Q.</span><span class="navbar__brand-name">Macq</span>
       </a>
 
@@ -16,14 +11,8 @@
         <span class="navbar__edition">{{ $t('header.edition', { year: currentYear }) }}</span>
       </div>
 
-      <nav class="navbar__links" aria-label="primary">
-        <a
-          v-for="item in menu"
-          :key="item.link"
-          class="navbar__link"
-          :href="item.link"
-          @click.prevent="scrollToSection(item.link)"
-        >
+      <nav class="navbar__links" :aria-label="$t('common.aria-nav-primary')">
+        <a v-for="item in menu" :key="item.link" class="navbar__link" :href="item.link">
           <span class="navbar__link-idx">{{ item.index }}</span>
           <span class="navbar__link-label">{{ item.title }}</span>
         </a>
@@ -89,7 +78,6 @@
     :current-year
     :linkedin-url="linkedinUrl"
     :github-url="githubUrl"
-    @navigate="scrollToSection"
   />
 </template>
 
@@ -126,25 +114,17 @@ onBeforeUnmount(() => {
   window.removeEventListener('scroll', onScroll)
 })
 
-function scrollToSection(anchor: string) {
-  const target = document.querySelector(anchor)
-  target?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-
-  if (drawer.value) drawer.value = false
-}
-
-function scrollToTop() {
-  window.scrollTo({ behavior: 'smooth', top: 0 })
-}
-
 function toggleMenu() {
   drawer.value = !drawer.value
 }
 
-// Lock body scroll when drawer is open
-watch(drawer, (open) => {
-  document.body.style.overflow = open ? 'hidden' : ''
-})
+watch(
+  drawer,
+  (open) => {
+    document.body.style.overflow = open ? 'hidden' : ''
+  },
+  { flush: 'sync' },
+)
 </script>
 
 <style lang="scss" src="./the-navbar.scss" scoped />

@@ -33,6 +33,7 @@
     font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.625rem);
     line-height: 1.4;
     color: var(--fg);
+    text-wrap: pretty;
   }
 
   &__channels {
@@ -146,6 +147,7 @@
     line-height: 1.2;
     letter-spacing: -0.015em;
     color: var(--fg);
+    text-wrap: balance;
   }
 
   &__success-action {
@@ -212,8 +214,6 @@
       cursor: not-allowed;
     }
 
-    // Only the actual send shows a progress cursor — :disabled alone also
-    // covers "captcha not solved yet", which is not an in-flight operation.
     &[aria-busy='true'] {
       cursor: progress;
     }

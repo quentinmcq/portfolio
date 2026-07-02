@@ -10,20 +10,23 @@ const BP = {
 }
 
 interface UseBreakpoints {
-  lg: ComputedRef<boolean> // 1024..1279
-  lgAndUp: ComputedRef<boolean> // >=1024
-  md: ComputedRef<boolean> // 768..1023
-  mdAndDown: ComputedRef<boolean> // <1024
-  mdAndUp: ComputedRef<boolean> // >=768
-  sm: ComputedRef<boolean> // 640..767
-  smAndDown: ComputedRef<boolean> // <768
+  lg: ComputedRef<boolean>
+  lgAndUp: ComputedRef<boolean>
+  md: ComputedRef<boolean>
+  mdAndDown: ComputedRef<boolean>
+  mdAndUp: ComputedRef<boolean>
+  sm: ComputedRef<boolean>
+  smAndDown: ComputedRef<boolean>
   width: ComputedRef<number>
-  xl: ComputedRef<boolean> // 1280..1535
-  xxl: ComputedRef<boolean> // >=1536
-  xs: ComputedRef<boolean> // <640
+  xl: ComputedRef<boolean>
+  xxl: ComputedRef<boolean>
+  xs: ComputedRef<boolean>
 }
 
-const width = ref(typeof window === 'undefined' ? 1280 : window.innerWidth)
+// Starts at the desktop default even in the browser so hydration matches the
+// prerendered markup — onMounted syncs to the real width before first paint
+// of any post-mount update.
+const width = ref(1280)
 let listenerCount = 0
 
 export function useBreakpoints(): UseBreakpoints {

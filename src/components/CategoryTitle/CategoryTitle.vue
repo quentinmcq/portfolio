@@ -3,12 +3,7 @@
     <div class="category-title__row">
       <span class="category-title__index">{{ index }}</span>
       <span class="category-title__rule" aria-hidden="true" />
-      <a
-        class="category-title__top"
-        href="#top"
-        :aria-label="$t('common.back-to-top')"
-        @click.prevent="scrollToTop"
-      >
+      <a class="category-title__top" href="#top" :aria-label="$t('common.back-to-top')">
         <span>{{ $t('common.back-to-top') }}</span>
         <svg
           aria-hidden="true"
@@ -53,10 +48,6 @@ const index = computed(() =>
 const kicker = computed(() =>
   componentName && te(`${componentName}.kicker`) ? t(`${componentName}.kicker`) : '',
 )
-
-function scrollToTop() {
-  window.scrollTo({ behavior: 'smooth', top: 0 })
-}
 </script>
 
 <style lang="scss" src="./category-title.scss" scoped />

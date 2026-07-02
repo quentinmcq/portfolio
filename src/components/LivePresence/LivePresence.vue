@@ -1,11 +1,6 @@
 <template>
   <Transition name="presence">
-    <div
-      v-if="connected && count > 0"
-      class="presence"
-      :class="{ 'is-hidden': hidden }"
-      role="status"
-    >
+    <div v-if="connected && count > 0" class="presence" :class="{ 'is-hidden': hidden }">
       <span class="presence__dot" aria-hidden="true" />
       <span class="presence__count">{{ count }}</span>
       <span class="presence__label">{{ $t('presence.label') }}</span>

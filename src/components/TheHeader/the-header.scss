@@ -1,6 +1,5 @@
 .hero {
   position: relative;
-  min-height: 100vh;
   min-height: 100dvh;
   display: flex;
   align-items: stretch;
@@ -139,6 +138,7 @@
     line-height: 1.35;
     color: var(--fg);
     margin: 0;
+    text-wrap: pretty;
   }
 
   &__cta {
@@ -227,6 +227,23 @@
     50% {
       transform: translateY(3px);
     }
+  }
+}
+
+.hero-enter {
+  animation: hero-enter 800ms var(--ease-out) both;
+  animation-delay: var(--enter-delay, 0ms);
+}
+
+@keyframes hero-enter {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
 

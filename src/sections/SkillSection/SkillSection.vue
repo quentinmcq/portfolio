@@ -22,7 +22,7 @@
               </h3>
             </div>
 
-            <ul class="skill-row__tools" aria-label="Tools">
+            <ul class="skill-row__tools" :aria-label="$t('skill.aria-tools')">
               <li v-for="label in skill.content" :key="label" class="skill-row__tool">
                 <SkillChip :label />
               </li>

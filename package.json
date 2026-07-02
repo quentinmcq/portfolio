@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vp dev",
-    "build": "vp build",
+    "build": "vp build && vp build --ssr src/entry-server.ts --outDir dist-server && bun scripts/prerender.mjs",
     "preview": "vp preview",
     "deploy": "wrangler deploy",
     "check": "vp check",
