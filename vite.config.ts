@@ -2,10 +2,6 @@ import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig, type Plugin } from 'vite-plus'
 
-// Build-only: on the dev server the @font-face rules arrive through the JS
-// module graph seconds after boot, so an eager preload sits unused long
-// enough for browsers to warn about it. In the production HTML the CSS is
-// inlined in <head> and the preloads are consumed immediately.
 const FONT_PRELOADS = [
   '/fonts/fraunces-v38-latin.woff2',
   '/fonts/fraunces-italic-v38-latin.woff2',
