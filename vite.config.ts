@@ -2,6 +2,31 @@ import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig, type Plugin } from 'vite-plus'
 
+// Build-only: on the dev server the @font-face rules arrive through the JS
+// module graph seconds after boot, so an eager preload sits unused long
+// enough for browsers to warn about it. In the production HTML the CSS is
+// inlined in <head> and the preloads are consumed immediately.
+const FONT_PRELOADS = [
+  '/fonts/fraunces-v38-latin.woff2',
+  '/fonts/fraunces-italic-v38-latin.woff2',
+  '/fonts/inter-tight-v9-latin.woff2',
+  '/fonts/jetbrains-mono-v24-latin.woff2',
+]
+
+function fontPreloads(): Plugin {
+  return {
+    name: 'portfolio:font-preloads',
+    apply: 'build',
+    transformIndexHtml() {
+      return FONT_PRELOADS.map((href) => ({
+        tag: 'link',
+        attrs: { rel: 'preload', as: 'font', type: 'font/woff2', href, crossorigin: true },
+        injectTo: 'head',
+      }))
+    },
+  }
+}
+
 function inlineCss(): Plugin {
   return {
     name: 'portfolio:inline-css',
@@ -59,7 +84,7 @@ export default defineConfig({
     __VUE_I18N_PROD_DEVTOOLS__: 'false',
     __INTLIFY_PROD_DEVTOOLS__: 'false',
   },
-  plugins: [vue(), inlineCss()],
+  plugins: [vue(), fontPreloads(), inlineCss()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
