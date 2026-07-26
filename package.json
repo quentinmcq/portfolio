@@ -15,7 +15,7 @@
   "dependencies": {
     "typescript": "^7.0.2",
     "vue": "^3.6.0-rc.2",
-    "vue-i18n": "^11.4.7"
+    "vue-i18n": "^11.4.8"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20260724.1",

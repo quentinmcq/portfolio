@@ -7,7 +7,7 @@
       "dependencies": {
         "typescript": "^7.0.2",
         "vue": "^3.6.0-rc.2",
-        "vue-i18n": "^11.4.7",
+        "vue-i18n": "^11.4.8",
       },
       "devDependencies": {
         "@cloudflare/workers-types": "^5.20260724.1",
@@ -161,13 +161,13 @@
 
     "@img/sharp-win32-x64": ["@img/sharp-win32-x64@0.35.2", "", { "os": "win32", "cpu": "x64" }, "sha512-imoOyBcoM/iiUr4J6VPpCNjPnjvP/Gks95898yB8YqoGGYmHYbOyCuNv9FMhFgtaiHFGbHW8bxKqRV6VjtXThQ=="],
 
-    "@intlify/core-base": ["@intlify/core-base@11.4.7", "", { "dependencies": { "@intlify/devtools-types": "11.4.7", "@intlify/message-compiler": "11.4.7", "@intlify/shared": "11.4.7" } }, "sha512-MSB/sBKwEWJTILvQIhg2rnIcwPpLayo3wGwvVA+dJTNeUBD9GoqQgAaSOLdI9iOPDHCm9YoVnLqpfzza98MpkQ=="],
+    "@intlify/core-base": ["@intlify/core-base@11.4.8", "", { "dependencies": { "@intlify/devtools-types": "11.4.8", "@intlify/message-compiler": "11.4.8", "@intlify/shared": "11.4.8" } }, "sha512-A+Q7SKm5oEcy1E/cghqd7n/St4XjTqLhiiyDuieNcMrJcrHlkY5n0jp7Q9dD3txvVHzvsmBVV5M9wD5/s1zfzw=="],
 
-    "@intlify/devtools-types": ["@intlify/devtools-types@11.4.7", "", { "dependencies": { "@intlify/core-base": "11.4.7", "@intlify/shared": "11.4.7" } }, "sha512-GSz+J+hqH+AEpAHIYya6fSufS30OaMnG39HiZX7DmGKi3+aaLvassCfsXENEc4Wr4m68q2YP0QdMdB3D9UeAXg=="],
+    "@intlify/devtools-types": ["@intlify/devtools-types@11.4.8", "", { "dependencies": { "@intlify/core-base": "11.4.8", "@intlify/shared": "11.4.8" } }, "sha512-MGpID+rlfzGUbNcnC20bm5NMSBHPrvx0atLTfv9dftn3kjXw1hGKDcIcwrO99tSrZEc2i+hczRL7ks8qXsHPkQ=="],
 
-    "@intlify/message-compiler": ["@intlify/message-compiler@11.4.7", "", { "dependencies": { "@intlify/shared": "11.4.7", "source-map-js": "^1.0.2" } }, "sha512-bHxmh7n94N4N1evADeb7XTkc3jTw6Ki5biMFZVSX6Jmk+iehy8/maeH2XUsBI27rtKIK+Hzc6QnVAKggUwylKw=="],
+    "@intlify/message-compiler": ["@intlify/message-compiler@11.4.8", "", { "dependencies": { "@intlify/shared": "11.4.8", "source-map-js": "^1.0.2" } }, "sha512-vbzk17dYwduYiv52EK61+FDCyhfVg1uPUtPmiD/d45W99uJIcXywrweOBcHv7n9/iEqmXiMGT52bgJbZDQqK3w=="],
 
-    "@intlify/shared": ["@intlify/shared@11.4.7", "", {}, "sha512-OtjPZan3No2OZZFnMUiCVsXC6+j+XRwEywaFDk0AoayAbLuPesyDloXhJZLl9JUl5vHZeQUkYSbEA8VX+CWMjg=="],
+    "@intlify/shared": ["@intlify/shared@11.4.8", "", {}, "sha512-XbRgrv+XEuvDr7UCY55oibVrh+o4u+A0VB6nSL0F5Z8LcZxE/8j573LYG6bCrOigIcHdGpSNI7Rh5UpC5/B/eg=="],
 
     "@jridgewell/resolve-uri": ["@jridgewell/resolve-uri@3.1.2", "", {}, "sha512-bRISgCIjP20/tbWSPWMEi54QVPRZExkuD9lJL+UIxUKtwVJA8wW1Trb1jMs1RFXo1CBTNZ/5hpC9QvmKWdopKw=="],
 
@@ -585,7 +585,7 @@
 
     "vue": ["vue@3.6.0-rc.2", "", { "dependencies": { "@vue/compiler-dom": "3.6.0-rc.2", "@vue/compiler-sfc": "3.6.0-rc.2", "@vue/runtime-dom": "3.6.0-rc.2", "@vue/runtime-vapor": "3.6.0-rc.2", "@vue/server-renderer": "3.6.0-rc.2", "@vue/shared": "3.6.0-rc.2" }, "peerDependencies": { "typescript": "*" }, "optionalPeers": ["typescript"] }, "sha512-pBgoISqETcufJ1e92vVW2/D5MEbCm2XHlC/5dq3hWq8s17tx9v5BEdYv4hojJ0yEEDidYxUL7itS+vV32wfZrw=="],
 
-    "vue-i18n": ["vue-i18n@11.4.7", "", { "dependencies": { "@intlify/core-base": "11.4.7", "@intlify/devtools-types": "11.4.7", "@intlify/shared": "11.4.7", "@vue/devtools-api": "^6.5.0" }, "peerDependencies": { "vue": "^3.0.0" } }, "sha512-j6RyshdPPzqLiMAUpnpvZGFPM+rRoWi14Sl5yTsquvoW0/56DWyvhAj2o9TO2YXGvb6teg8T0xrYO9jR3urvdw=="],
+    "vue-i18n": ["vue-i18n@11.4.8", "", { "dependencies": { "@intlify/core-base": "11.4.8", "@intlify/devtools-types": "11.4.8", "@intlify/shared": "11.4.8", "@vue/devtools-api": "^6.5.0" }, "peerDependencies": { "vue": "^3.0.0" } }, "sha512-0ULeHP6Z9CGvAm67S77ZEp41cfGXIREGL8qfhos2BMgcQQewtQcDKuojt6jjasAD/S8GwfTp2ySPmDSpwvrCMQ=="],
 
     "workerd": ["workerd@1.20260722.1", "", { "optionalDependencies": { "@cloudflare/workerd-darwin-64": "1.20260722.1", "@cloudflare/workerd-darwin-arm64": "1.20260722.1", "@cloudflare/workerd-linux-64": "1.20260722.1", "@cloudflare/workerd-linux-arm64": "1.20260722.1", "@cloudflare/workerd-windows-64": "1.20260722.1" }, "bin": { "workerd": "bin/workerd" } }, "sha512-NycKuc1x2onvsRfGGpM093vRlLFU2zHDAM0+APpccfg4+gZxDGCH27RmdDvkeBuoZyYqgLo3oAfF6re4mvC3vQ=="],
 
