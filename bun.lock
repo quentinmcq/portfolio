@@ -7,7 +7,7 @@
       "dependencies": {
         "typescript": "^7.0.2",
         "vue": "^3.6.0-rc.5",
-        "vue-i18n": "^11.4.10",
+        "vue-i18n": "^12.0.0-alpha.4",
       },
       "devDependencies": {
         "@cloudflare/workers-types": "^5.20260826.1",
@@ -168,13 +168,13 @@
 
     "@img/sharp-win32-x64": ["@img/sharp-win32-x64@0.35.2", "", { "os": "win32", "cpu": "x64" }, "sha512-imoOyBcoM/iiUr4J6VPpCNjPnjvP/Gks95898yB8YqoGGYmHYbOyCuNv9FMhFgtaiHFGbHW8bxKqRV6VjtXThQ=="],
 
-    "@intlify/core-base": ["@intlify/core-base@11.4.10", "", { "dependencies": { "@intlify/devtools-types": "11.4.10", "@intlify/message-compiler": "11.4.10", "@intlify/shared": "11.4.10" } }, "sha512-+yJ74JRWVJokdgG9zYNMyTSzeNV3O9T4vVxk8PvLFHmI+R/BYA//cITh7vhRK37hWLZ4/kTcKcUz1dlWOpypIg=="],
+    "@intlify/core-base": ["@intlify/core-base@12.0.0-alpha.4", "", { "dependencies": { "@intlify/message-compiler": "12.0.0-alpha.4", "@intlify/shared": "12.0.0-alpha.4" } }, "sha512-7JZiWLP9ScL/DDgT6+t1HebP4IqiA0FmHkd7M17LgjchPdIxWCBJFbFANK9bYAj+ZyzR8urtPK65FxyARjPi3A=="],
 
-    "@intlify/devtools-types": ["@intlify/devtools-types@11.4.10", "", { "dependencies": { "@intlify/core-base": "11.4.10", "@intlify/shared": "11.4.10" } }, "sha512-xZxzZsAuu6/0zoLRVQWdpXWe5Kjl0LnWpjlQA3r9u9FbLYMhapqt7IwkgQyn0Tm2GUNAqhj9eZiUmYOrB024BQ=="],
+    "@intlify/message-compiler": ["@intlify/message-compiler@12.0.0-alpha.4", "", { "dependencies": { "@intlify/shared": "12.0.0-alpha.4", "source-map-js": "^1.0.2" } }, "sha512-F4yHuJzI2ZXtXTW2B1VhuNULAOjR5bniFSC/Z0rLWRYPO43pVgKLu+FPDoJq13OjTFq4X5hx2s855M4gqPU/pA=="],
 
-    "@intlify/message-compiler": ["@intlify/message-compiler@11.4.10", "", { "dependencies": { "@intlify/shared": "11.4.10", "source-map-js": "^1.0.2" } }, "sha512-oUB/scz2EJENXDiUJ7JjZffOrH8UIZ1BuZeHvonbi5fWLavLt04aivuk2OIByOZA0tsci1bkeeQRmwhb5M8Imw=="],
+    "@intlify/shared": ["@intlify/shared@12.0.0-alpha.4", "", {}, "sha512-MfunEN3/yQjD1Q9HnD4Qtvg/qLYnR+tK3mEz/EEvikJO+Hu8ICe7Rqh6uusLSjpWy6ECVt2p5HGXlYA12UBweA=="],
 
-    "@intlify/shared": ["@intlify/shared@11.4.10", "", {}, "sha512-FeImVdPeoSHTm3NBFFZHv0eRP9gQ3F4lj2puDBX5Kw7iiM1uJW6JTf39ian0K/17pbXCI3ef5i9RVsRrALqI6Q=="],
+    "@intlify/vue-i18n-core": ["@intlify/vue-i18n-core@12.0.0-alpha.4", "", { "dependencies": { "@intlify/core-base": "12.0.0-alpha.4", "@intlify/shared": "12.0.0-alpha.4", "@vue/devtools-api": "^6.5.0" }, "peerDependencies": { "vue": "^3.0.0" } }, "sha512-pQuMjLsUopwyPnWkv+HfOqFSv2leG78hgtihRba26N1GAs13yIGetHYkZSoEIjnAHmpCO1k5588F5WQVZUCMQg=="],
 
     "@jridgewell/resolve-uri": ["@jridgewell/resolve-uri@3.1.2", "", {}, "sha512-bRISgCIjP20/tbWSPWMEi54QVPRZExkuD9lJL+UIxUKtwVJA8wW1Trb1jMs1RFXo1CBTNZ/5hpC9QvmKWdopKw=="],
 
@@ -694,7 +694,7 @@
 
     "vue": ["vue@3.6.0-rc.5", "", { "dependencies": { "@vue/compiler-dom": "3.6.0-rc.5", "@vue/compiler-sfc": "3.6.0-rc.5", "@vue/runtime-dom": "3.6.0-rc.5", "@vue/runtime-vapor": "3.6.0-rc.5", "@vue/server-renderer": "3.6.0-rc.5", "@vue/shared": "3.6.0-rc.5" }, "peerDependencies": { "typescript": "*" }, "optionalPeers": ["typescript"] }, "sha512-yM+CHEWSTc9FjJGIeViI86VVheHvJ3YaZrrXqlD7wX3S+8tNPR/vDMviGOv4ULIMTkzWWKWVRvylsytXbHBbNA=="],
 
-    "vue-i18n": ["vue-i18n@11.4.10", "", { "dependencies": { "@intlify/core-base": "11.4.10", "@intlify/devtools-types": "11.4.10", "@intlify/shared": "11.4.10", "@vue/devtools-api": "^6.5.0" }, "peerDependencies": { "vue": "^3.0.0" } }, "sha512-Lp+BjOxqzOY87DS6Z8KrQrpiTr9IN/Lt4kZEilwyXG2Wrx+AcU6IVsAW92HNXtVcn1HFFPV6ty41p9e/qDpyvg=="],
+    "vue-i18n": ["vue-i18n@12.0.0-alpha.4", "", { "dependencies": { "@intlify/core-base": "12.0.0-alpha.4", "@intlify/vue-i18n-core": "12.0.0-alpha.4", "@vue/devtools-api": "^6.5.0" }, "peerDependencies": { "vue": "^3.0.0" } }, "sha512-qkIvoGxgA5lFKx3vb8l7R0FXw2B4zxUFi/AlnqBGOHq9E0Ik4FxNXbb0YtNyHjvn/dMSZACbDJcJRHkKdZFJVg=="],
 
     "why-is-node-running": ["why-is-node-running@2.3.0", "", { "dependencies": { "siginfo": "^2.0.0", "stackback": "0.0.2" }, "bin": { "why-is-node-running": "cli.js" } }, "sha512-hUrmaWBdVDcxvYqnyh09zunKzROWjbZTiNy8dBEjkS7ehEDQibXJ7XvlmtbwuTclUiIyN+CyXQD4Vmko8fNm8w=="],
 
