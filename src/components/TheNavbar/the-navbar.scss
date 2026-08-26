@@ -25,7 +25,7 @@
     align-items: center;
     gap: 1rem;
 
-    @media (min-width: $lg) {
+    @media (min-width: $xl) {
       grid-template-columns: auto 1fr auto auto;
     }
   }
@@ -33,57 +33,28 @@
   &__brand {
     display: inline-flex;
     align-items: baseline;
-    gap: 2px;
-    font-family: var(--font-display), serif;
-    font-variation-settings:
-      'opsz' 9,
-      'SOFT' 60;
-    font-weight: 400;
-    font-size: 1.125rem;
-    letter-spacing: -0.01em;
+    gap: 1px;
+    font-family: var(--font-display), sans-serif;
+    font-weight: 600;
+    font-size: 1.0625rem;
+    letter-spacing: -0.03em;
     color: var(--fg);
     cursor: pointer;
 
     &-mark {
       color: var(--accent-text);
     }
-
-    &-name {
-      font-style: italic;
-    }
-  }
-
-  &__meta {
-    display: none;
-    font-family: var(--font-mono), monospace;
-    font-size: var(--fs-micro);
-    letter-spacing: 0.18em;
-    color: var(--fg-muted);
-    text-transform: uppercase;
-    justify-content: center;
-
-    @media (min-width: $lg) {
-      display: flex;
-      gap: 0.5rem;
-      align-items: center;
-    }
-  }
-
-  &__sep {
-    opacity: 0.5;
-  }
-
-  &__edition {
-    white-space: nowrap;
   }
 
   &__links {
     display: none;
     align-items: center;
-    gap: 1.25rem;
+    gap: 1.5rem;
 
     @media (min-width: $xl) {
       display: flex;
+      justify-self: end;
+      margin-right: 1rem;
     }
   }
 
@@ -91,23 +62,15 @@
     position: relative;
     display: inline-flex;
     align-items: baseline;
-    gap: 0.35rem;
     padding-block: 4px;
     font-size: var(--fs-caption);
     color: var(--fg);
     transition: color var(--dur-fast) var(--ease-out);
 
-    &-idx {
-      font-family: var(--font-mono), monospace;
-      font-size: var(--fs-micro);
-      letter-spacing: 0.1em;
-      color: var(--fg-faint);
-      transition: color var(--dur-fast) var(--ease-out);
-    }
-
     &-label {
       font-family: var(--font-body), sans-serif;
       font-weight: 500;
+      letter-spacing: -0.005em;
     }
 
     &::after {
@@ -123,17 +86,16 @@
       transition: transform var(--dur-mid) var(--ease-out);
     }
 
-    &:hover {
-      color: var(--accent-text);
-
-      .navbar__link-idx {
-        color: var(--accent-text);
-      }
-
+    &:hover,
+    &.is-active {
       &::after {
         transform: scaleX(1);
         transform-origin: left;
       }
+    }
+
+    &:hover {
+      color: var(--accent-text);
     }
   }
 

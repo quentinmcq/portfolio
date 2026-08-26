@@ -1,4 +1,5 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "timezone": "Europe/Paris",
   "extends": [
     "config:recommended",
@@ -6,14 +7,29 @@
     ":semanticCommitTypeAll(chore)",
     ":automergeStableNonMajor"
   ],
+  "schedule": ["before 7am on monday"],
   "rangeStrategy": "bump",
   "rebaseWhen": "conflicted",
   "commitMessageSuffix": " [skip ci]",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 7am on the first day of the month"]
+  },
   "packageRules": [
     {
-      "matchPackageNames": ["wrangler", "@cloudflare/**", "miniflare"],
       "groupName": "cloudflare",
-      "groupSlug": "cloudflare"
+      "groupSlug": "cloudflare",
+      "matchPackageNames": ["wrangler", "workerd", "miniflare", "@cloudflare/**"]
+    },
+    {
+      "groupName": "vue",
+      "groupSlug": "vue",
+      "matchPackageNames": ["vue", "vue-i18n", "@vue/**", "@vitejs/plugin-vue"]
+    },
+    {
+      "groupName": "vite-plus",
+      "groupSlug": "vite-plus",
+      "matchPackageNames": ["vite", "vite-plus", "@voidzero-dev/**"]
     }
   ]
 }

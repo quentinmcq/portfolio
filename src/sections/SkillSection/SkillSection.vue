@@ -1,35 +1,42 @@
 <template>
   <section :id="componentName" class="section skill">
-    <div class="container">
-      <CategoryTitle :component-name />
+    <div class="container spread">
+      <CategoryTitle class="spread__head" :component-name />
 
-      <ol class="skill__list">
-        <li
-          v-for="(skill, index) in skills"
-          :key="index"
-          class="skill__row"
-          data-reveal
-          :style="{ '--reveal-delay': `${index * 60}ms` }"
-        >
-          <div class="skill-row" :class="{ 'skill-row--primary': skill.primary }">
-            <div class="skill-row__head">
-              <span class="skill-row__index">{{ paddedIndex(index) }}</span>
-              <h3 class="skill-row__label">
-                {{ skill.label }}
-                <span v-if="skill.primary" class="skill-row__primary-mark" aria-hidden="true"
-                  >●</span
-                >
-              </h3>
-            </div>
+      <div class="spread__body">
+        <!-- The daily stack, set as type: this is the headline of the section. -->
+        <div v-if="primary" class="skill-lead">
+          <ul class="skill-lead__list" :aria-label="primary.label">
+            <!-- One tool after another — the only entrance that earns a rhythm. -->
+            <li
+              v-for="(label, index) in primary.content"
+              :key="label"
+              class="skill-lead__item"
+              data-reveal
+              :style="{ '--reveal-delay': `${index * 60}ms`, '--reveal-shift': '16px' }"
+            >
+              <SkillChip :label size="lg" />
+            </li>
+          </ul>
+        </div>
 
-            <ul class="skill-row__tools" :aria-label="$t('skill.aria-tools')">
-              <li v-for="label in skill.content" :key="label" class="skill-row__tool">
+        <ol class="skill-piles">
+          <li
+            v-for="(pile, index) in secondary"
+            :key="pile.label"
+            class="skill-pile"
+            data-reveal
+            :style="{ '--reveal-delay': `${(index + 1) * 80}ms` }"
+          >
+            <h3 class="skill-pile__label">{{ pile.label }}</h3>
+            <ul class="skill-pile__tools" :aria-label="$t('skill.aria-tools')">
+              <li v-for="label in pile.content" :key="label">
                 <SkillChip :label />
               </li>
             </ul>
-          </div>
-        </li>
-      </ol>
+          </li>
+        </ol>
+      </div>
     </div>
   </section>
 </template>
@@ -47,10 +54,8 @@ const componentName = 'skill'
 const { tm } = useI18n()
 
 const skills = computed(() => tm('skill.list') as Skill[])
-
-function paddedIndex(index: number) {
-  return String(index + 1).padStart(2, '0')
-}
+const primary = computed(() => skills.value.find((skill) => skill.primary))
+const secondary = computed(() => skills.value.filter((skill) => !skill.primary))
 </script>
 
 <style lang="scss" src="./skill-section.scss" scoped />

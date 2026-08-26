@@ -1,6 +1,4 @@
-import { CONTACTS, repoUrl } from '@/data/contacts'
-
-const linkedin = CONTACTS.linkedin
+import { repoUrl } from '@/data/contacts'
 
 export default {
   common: {
@@ -18,22 +16,10 @@ export default {
 
   contact: {
     channels: 'Autres canaux',
-    erase: 'Effacer',
-    error: 'Erreur, on réessaie ?',
-    index: '05',
-    'invalid-address-format': "Le format de l'adresse est invalide",
-    kicker: 'On en parle ?',
-    lede: "Une opportunité, un projet, ou juste envie de discuter front-end et café — je suis à l'écoute.",
-    'mail-address': 'Adresse mail',
+    kicker:
+      "Une opportunité, un projet, ou juste envie de discuter front-end et café — je suis à l'écoute.",
     'main-title': 'Contact',
-    message: 'Message',
-    'min-message-length': 'Le message doit comporter {minLength} caractères minimum',
-    name: 'Nom',
-    'required-field': 'Ce champ est requis',
-    send: 'Envoyer',
-    'send-another': 'Envoyer un autre message',
-    sending: 'Envoi en cours…',
-    sent: 'Envoyé — merci !'
+    where: 'Où'
   },
 
   experience: {
@@ -46,13 +32,10 @@ export default {
       'stack-label': 'Au quotidien',
       title: 'Développeur full-stack chez Motoblouz'
     },
-    index: '02',
-    kicker: "Voici où j'en suis — et le chemin pour y arriver.",
     'kind-education': 'Études',
     list: [
       {
         kind: 'work',
-        link: linkedin,
         location: 'Motoblouz · Carvin',
         subtitle: 'CDI · projets transverses, outils internes, stratégie SI.',
         title: 'Développeur full-stack',
@@ -60,7 +43,6 @@ export default {
       },
       {
         kind: 'work',
-        link: linkedin,
         location: 'Motoblouz · Carvin',
         subtitle: 'Alternance · projets impactants côté e-commerce.',
         title: 'Développeur web',
@@ -68,7 +50,6 @@ export default {
       },
       {
         kind: 'work',
-        link: linkedin,
         location: 'Motoblouz · Carvin',
         subtitle: "Stage · refonte d'un outil de suivi des impayés.",
         title: 'Développeur web',
@@ -77,7 +58,6 @@ export default {
       {
         kind: 'education',
         location: 'EPSI · Lille',
-        subtitle: 'Cursus axé gestion de projet et management.',
         title: "Master Expert en Informatique et Systèmes d'Information",
         year: '2021 — 2023'
       },
@@ -92,33 +72,19 @@ export default {
   },
 
   footer: {
-    'aria-links': 'Liens de contact',
     copyright: '© {currentYear} — Quentin Macq',
-    tools: 'Vue · TypeScript · sans framework UI'
+    source: 'Code source'
   },
 
   header: {
-    'aria-focus': 'En ce moment',
     'aria-hero': 'Introduction',
-    available: "À l'écoute",
     'cta-work': 'Voir le travail',
-    edition: 'Édition {year}',
-    focus: {
-      open: 'Discussions, opportunités, ou juste partage de veille.',
-      'open-label': 'Disponible pour',
-      shipping: 'Front Nuxt, back Symfony et design system entre les deux.',
-      'shipping-label': 'En production'
-    },
-    idx: 'IDX 001',
     lede: 'Full-stack avec une obsession pour la performance front et les nouveaux outils.',
     'meta-location': 'Hauts-de-France',
-    role: 'Développeur full-stack',
-    scroll: 'Scroller'
+    role: 'Développeur full-stack'
   },
 
   hobby: {
-    index: '04',
-    kicker: "Ce que je fais quand je ferme l'éditeur.",
     list: [
       {
         button: 'Voir la collection',
@@ -131,7 +97,6 @@ export default {
         button: 'Voir le club',
         description:
           "Commencée pendant mes études, l'escalade est une activité que j'ai reprise ces dernières années, avec quelques compétitions à mon actif.",
-        link: 'https://escalade-rouvroy.fr/',
         title: 'Escalade'
       },
       {
@@ -150,27 +115,22 @@ export default {
 
   menu: [
     {
-      index: '01',
       link: '#skill',
       title: 'Stack'
     },
     {
-      index: '02',
       link: '#experience',
       title: 'Parcours'
     },
     {
-      index: '03',
       link: '#project',
       title: 'Travaux'
     },
     {
-      index: '04',
       link: '#hobby',
       title: 'Hors-écran'
     },
     {
-      index: '05',
       link: '#contact',
       title: 'Contact'
     }
@@ -181,8 +141,6 @@ export default {
   },
 
   project: {
-    index: '03',
-    kicker: 'Une sélection — perso, école, et un aperçu pro.',
     'kind-personal': 'Perso',
     'kind-private': 'Privé',
     'kind-school': 'École',
@@ -250,25 +208,19 @@ export default {
 
   skill: {
     'aria-tools': 'Outils',
-    index: '01',
-    kicker: 'Quatre piles complémentaires, du build aux tests.',
     list: [
       {
-        content: ['Symfony', 'Nuxt', 'Vue', 'TypeScript', 'Pinia', 'Claude'],
+        content: ['Nuxt', 'Vue', 'TypeScript', 'Pinia', 'Symfony', 'Claude'],
         label: 'Au quotidien',
         primary: true
       },
       {
-        content: ['ESLint', 'Oxlint', 'Vitest', 'Playwright'],
-        label: 'Tests & qualité'
+        content: ['ESLint', 'Oxlint', 'Vitest', 'Playwright', 'Bun'],
+        label: 'Tests & outillage'
       },
       {
         content: ['MySQL', 'RabbitMQ', 'Docker', 'GitLab', 'Jenkins', 'Grafana'],
         label: 'Infra & data'
-      },
-      {
-        content: ['Bun', 'Swift'],
-        label: 'Outils & explorations'
       }
     ],
     'main-title': 'Stack'

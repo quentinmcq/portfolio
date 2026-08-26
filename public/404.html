@@ -8,27 +8,12 @@
     <title>404 — Quentin Macq</title>
     <style>
       @font-face {
-        font-family: 'Fraunces';
+        font-family: 'Bricolage Grotesque';
         font-style: normal;
-        font-weight: 300 700;
+        font-weight: 200 800;
+        font-stretch: 75% 100%;
         font-display: swap;
-        src: url('/fonts/fraunces-v38-latin.woff2') format('woff2');
-      }
-
-      @font-face {
-        font-family: 'Fraunces';
-        font-style: italic;
-        font-weight: 300 700;
-        font-display: swap;
-        src: url('/fonts/fraunces-italic-v38-latin.woff2') format('woff2');
-      }
-
-      @font-face {
-        font-family: 'Inter Tight';
-        font-style: normal;
-        font-weight: 300 700;
-        font-display: swap;
-        src: url('/fonts/inter-tight-v9-latin.woff2') format('woff2');
+        src: url('/fonts/bricolage-grotesque-v9-latin.woff2') format('woff2');
       }
 
       @font-face {
@@ -46,8 +31,7 @@
         --muted: rgba(245, 241, 232, 0.62);
         --faint: rgba(245, 241, 232, 0.38);
         --line: rgba(245, 241, 232, 0.12);
-        --font-display: 'Fraunces', 'Iowan Old Style', 'Apple Garamond', Baskerville, serif;
-        --font-body: 'Inter Tight', -apple-system, BlinkMacSystemFont, sans-serif;
+        --font-display: 'Bricolage Grotesque', 'Helvetica Neue', Helvetica, Arial, sans-serif;
         --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
       }
 
@@ -65,7 +49,7 @@
         min-height: 100dvh;
         background: var(--ink);
         color: var(--paper);
-        font-family: var(--font-body), sans-serif;
+        font-family: var(--font-display), sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
       }
@@ -80,21 +64,40 @@
           radial-gradient(60% 60% at 0% 110%, rgba(212, 165, 116, 0.05), transparent 60%);
       }
 
-      .top {
+      .top,
+      .bottom {
         display: flex;
         align-items: center;
         gap: 1rem;
         font-family: var(--font-mono), monospace;
         font-size: 0.6875rem;
-        letter-spacing: 0.22em;
+        letter-spacing: 0.18em;
         text-transform: uppercase;
         color: var(--muted);
       }
 
-      .top__rule {
+      .bottom {
+        color: var(--faint);
+      }
+
+      .rule {
         flex: 1;
         height: 1px;
         background: var(--line);
+      }
+
+      .brand {
+        font-family: var(--font-display), sans-serif;
+        font-size: 1.0625rem;
+        font-weight: 600;
+        letter-spacing: -0.03em;
+        text-transform: none;
+        color: var(--paper);
+        text-decoration: none;
+      }
+
+      .brand span {
+        color: var(--accent);
       }
 
       .center {
@@ -102,54 +105,43 @@
         margin: auto 0;
       }
 
-      .eyebrow {
-        display: inline-block;
-        margin: 0 0 1.5rem;
-        padding: 6px 12px;
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        font-family: var(--font-mono), monospace;
-        font-size: 0.6875rem;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: var(--muted);
+      .stroke {
+        display: block;
+        width: 2.5rem;
+        height: 2px;
+        margin-bottom: 2rem;
+        background: var(--accent);
       }
 
       .code {
-        font-family: var(--font-display), serif;
-        font-variation-settings:
-          'opsz' 144,
-          'SOFT' 60;
-        font-weight: 350;
-        font-style: italic;
-        font-size: clamp(5rem, 14vw, 12rem);
-        line-height: 0.9;
-        letter-spacing: -0.04em;
-        color: var(--accent);
         margin: 0;
+        font-weight: 700;
+        font-stretch: 80%;
+        font-size: clamp(6rem, 18vw, 14rem);
+        line-height: 0.86;
+        letter-spacing: -0.05em;
+        color: var(--paper);
+      }
+
+      .code span {
+        color: var(--accent);
       }
 
       h1 {
-        font-family: var(--font-display), serif;
-        font-variation-settings:
-          'opsz' 144,
-          'SOFT' 60;
-        font-weight: 350;
-        font-size: clamp(2rem, 1.4rem + 3vw, 3.5rem);
-        line-height: 1.05;
-        letter-spacing: -0.025em;
-        margin: 1rem 0 1.5rem;
+        margin: 1.5rem 0 1rem;
+        font-weight: 600;
+        font-size: clamp(1.75rem, 1.2rem + 2.4vw, 3rem);
+        line-height: 1;
+        letter-spacing: -0.035em;
       }
 
       p {
-        max-width: 48ch;
-        font-family: var(--font-display), serif;
-        font-style: italic;
-        font-weight: 300;
-        font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+        max-width: 44ch;
+        margin: 0 0 2.5rem;
+        font-weight: 400;
+        font-size: clamp(1.0625rem, 1rem + 0.4vw, 1.25rem);
         line-height: 1.45;
         color: var(--muted);
-        margin: 0 0 2.5rem;
       }
 
       a.back {
@@ -161,10 +153,9 @@
         color: var(--ink);
         text-decoration: none;
         border-radius: 999px;
-        font-family: var(--font-body), sans-serif;
         font-size: 0.8125rem;
         font-weight: 500;
-        letter-spacing: 0.04em;
+        letter-spacing: 0.02em;
         transition: background 180ms cubic-bezier(0.16, 1, 0.3, 1);
       }
 
@@ -175,32 +166,22 @@
       a.back svg {
         transition: transform 360ms cubic-bezier(0.16, 1, 0.3, 1);
       }
+
       a.back:hover svg {
         transform: translateX(3px);
-      }
-
-      .bottom {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        font-family: var(--font-mono), monospace;
-        font-size: 0.6875rem;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        color: var(--faint);
       }
     </style>
   </head>
   <body>
     <header class="top">
-      <span>IDX 001 — ÉDITION 2026</span>
-      <span class="top__rule"></span>
+      <a class="brand" href="/"><span>Q.</span>Macq</a>
+      <span class="rule"></span>
       <span>404</span>
     </header>
 
     <main class="center">
-      <span class="eyebrow">Page introuvable</span>
-      <p class="code">404.</p>
+      <span class="stroke" aria-hidden="true"></span>
+      <p class="code">404<span>.</span></p>
       <h1>Cette page n'existe pas ou n'existe plus.</h1>
       <p>Lien périmé, faute de frappe, ou contenu déplacé.</p>
       <a class="back" href="/">
@@ -214,6 +195,7 @@
           stroke-width="1.6"
           stroke-linecap="round"
           stroke-linejoin="round"
+          aria-hidden="true"
         >
           <path d="M5 12h14M13 6l6 6-6 6" />
         </svg>
@@ -222,7 +204,8 @@
 
     <footer class="bottom">
       <span>Quentin Macq · Hauts-de-France</span>
-      <span class="top__rule"></span>
+      <span class="rule"></span>
+      <span>quentin-macq.dev</span>
     </footer>
   </body>
 </html>

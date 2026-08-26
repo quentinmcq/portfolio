@@ -3,6 +3,11 @@ import { onBeforeUnmount, onMounted, readonly, ref } from 'vue'
 import { PRESENCE_ENDPOINT, PRESENCE_PING, PRESENCE_PING_INTERVAL_MS } from '@/shared/presence'
 
 const MAX_BACKOFF_MS = 30_000
+// Desktop only — matches $md in _breakpoints.scss. On a phone the pill fights
+// the thumb zone and the scroll-top button for a badge nobody needs, so the
+// socket is only open while the viewport is desktop-sized (and closes again
+// if the window shrinks below it).
+const DESKTOP_QUERY = '(min-width: 768px)'
 
 // Connects to the presence Durable Object and exposes the live connected count.
 // Reconnects with exponential backoff and keeps the socket alive with periodic
@@ -16,10 +21,12 @@ export function usePresence() {
   let pingTimer: ReturnType<typeof setInterval> | null = null
   let reconnectTimer: ReturnType<typeof setTimeout> | null = null
   let attempts = 0
+  let active = false
   let disposed = false
+  let media: MediaQueryList | null = null
 
   function open() {
-    if (typeof WebSocket === 'undefined') return
+    if (!active || typeof WebSocket === 'undefined') return
 
     const proto = location.protocol === 'https:' ? 'wss' : 'ws'
     socket = new WebSocket(`${proto}://${location.host}${PRESENCE_ENDPOINT}`)
@@ -42,7 +49,7 @@ export function usePresence() {
     socket.addEventListener('close', () => {
       connected.value = false
       stopPing()
-      if (!disposed) scheduleReconnect()
+      if (!disposed && active) scheduleReconnect()
     })
 
     socket.addEventListener('error', () => socket?.close())
@@ -61,13 +68,45 @@ export function usePresence() {
     }
   }
 
-  onMounted(open)
+  // Drop the connection and reset the state — the pill disappears.
+  function teardown() {
+    stopPing()
+    if (reconnectTimer) {
+      clearTimeout(reconnectTimer)
+      reconnectTimer = null
+    }
+    const current = socket
+    socket = null
+    current?.close()
+    connected.value = false
+    count.value = 0
+  }
+
+  function onMediaChange(event: MediaQueryListEvent) {
+    if (event.matches && !active) {
+      active = true
+      attempts = 0
+      open()
+    } else if (!event.matches && active) {
+      active = false
+      teardown()
+    }
+  }
+
+  onMounted(() => {
+    media = window.matchMedia(DESKTOP_QUERY)
+    media.addEventListener('change', onMediaChange)
+    if (media.matches) {
+      active = true
+      open()
+    }
+  })
 
   onBeforeUnmount(() => {
     disposed = true
-    stopPing()
-    if (reconnectTimer) clearTimeout(reconnectTimer)
-    socket?.close()
+    active = false
+    media?.removeEventListener('change', onMediaChange)
+    teardown()
   })
 
   return { count: readonly(count), connected: readonly(connected) }

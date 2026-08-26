@@ -1,71 +1,41 @@
+// One centred line. The floating pills (live presence, scroll-top) sit in the
+// bottom corners, so the text stays clear of them on wide screens; on narrow
+// ones we leave them the room below instead.
 .footer {
   position: relative;
-  padding-block: clamp(3rem, 6vw, 5rem);
-  padding-bottom: clamp(5.5rem, 4vw + 4rem, 8rem);
-  background: var(--bg-inset);
+  padding-top: clamp(1.75rem, 3vw, 2.5rem);
+  padding-bottom: 5.5rem;
   color: var(--fg);
   border-top: 1px solid var(--line);
 
+  @media (min-width: $md) {
+    padding-bottom: clamp(1.75rem, 3vw, 2.5rem);
+  }
+
   &__inner {
     display: flex;
-    flex-direction: column;
-    gap: clamp(1.5rem, 3vw, 2.5rem);
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.75rem 2rem;
   }
 
-  &__top {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-
-    @media (min-width: $md) {
-      grid-template-columns: 1fr auto;
-      align-items: end;
-    }
-  }
-
-  &__brand {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  &__brand-name {
-    font-family: var(--font-display), serif;
-    font-variation-settings:
-      'opsz' 72,
-      'SOFT' 60;
-    font-style: italic;
-    font-weight: 350;
-    font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
-    line-height: 1;
-    letter-spacing: -0.015em;
-  }
-
-  &__brand-tag {
+  &__caption {
     font-family: var(--font-mono), monospace;
     font-size: var(--fs-micro);
-    letter-spacing: 0.16em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--fg-muted);
-  }
-
-  &__links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem 1.5rem;
-    justify-content: flex-start;
-
-    @media (min-width: $md) {
-      justify-content: flex-end;
-    }
   }
 
   &__link {
     display: inline-flex;
     align-items: center;
-    gap: 0.35rem;
-    font-family: var(--font-body), sans-serif;
-    font-size: var(--fs-caption);
+    gap: 0.3rem;
+    font-family: var(--font-mono), monospace;
+    font-size: var(--fs-micro);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
     color: var(--fg);
     transition: color var(--dur-fast) var(--ease-out);
 
@@ -83,31 +53,6 @@
         color: var(--accent-text);
         transform: translate(2px, -2px);
       }
-    }
-  }
-
-  &__rule {
-    height: 1px;
-    background: var(--line);
-  }
-
-  &__bottom {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 0.5rem 1rem;
-  }
-
-  &__caption {
-    font-family: var(--font-mono), monospace;
-    font-size: var(--fs-micro);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--fg);
-
-    &--muted {
-      color: var(--fg-muted);
     }
   }
 }

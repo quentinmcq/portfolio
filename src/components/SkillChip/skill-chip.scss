@@ -42,4 +42,36 @@
       box-shadow: 0 0 0 3px color-mix(in srgb, var(--chip-color) 20%, transparent);
     }
   }
+
+  // Display variant — the tool name set as type, the brand dot as a bullet.
+  &--lg {
+    gap: 0.4em;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    font-family: var(--font-display), sans-serif;
+    font-weight: 600;
+    font-size: inherit;
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+    text-transform: none;
+    transition: color var(--dur-fast) var(--ease-out);
+
+    .skill-chip__dot {
+      width: 0.22em;
+      height: 0.22em;
+      box-shadow: 0 0 0 0.08em color-mix(in srgb, var(--chip-color) 22%, transparent);
+    }
+
+    &:hover {
+      color: var(--accent-text);
+      border-color: transparent;
+      background: transparent;
+
+      .skill-chip__dot {
+        transform: scale(1.2);
+        box-shadow: 0 0 0 0.16em color-mix(in srgb, var(--chip-color) 24%, transparent);
+      }
+    }
+  }
 }

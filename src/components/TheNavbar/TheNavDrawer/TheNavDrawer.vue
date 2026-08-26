@@ -15,9 +15,6 @@
       @keydown="onKeydown"
     >
       <div class="drawer__header">
-        <span class="drawer__eyebrow"
-          >{{ $t('header.idx') }} — {{ $t('header.edition', { year: currentYear }) }}</span
-        >
         <button
           class="drawer__close"
           type="button"
@@ -36,7 +33,6 @@
           :href="item.link"
           @click="close"
         >
-          <span class="drawer__link-idx">{{ item.index }}</span>
           <span class="drawer__link-label">{{ item.title }}</span>
         </a>
       </nav>
@@ -91,13 +87,11 @@
 import { nextTick, useTemplateRef, watch } from 'vue'
 
 interface MenuItem {
-  index: string
   link: string
   title: string
 }
 
 const { open } = defineProps<{
-  currentYear: number
   githubUrl: string
   linkedinUrl: string
   menu: MenuItem[]

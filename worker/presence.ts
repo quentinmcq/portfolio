@@ -2,23 +2,16 @@ import { DurableObject } from 'cloudflare:workers'
 
 import { PRESENCE_PING } from '@/shared/presence'
 
-// Single global instance (getByName('global')) tracking every open tab on the
-// site. The connected count is derived live from ctx.getWebSockets(), which
-// survives hibernation — so there is no state to persist and nothing to rebuild
-// on wake. The closing socket is excluded explicitly to avoid an off-by-one
-// during webSocketClose.
-const WS_OPEN = 1 // WebSocket.READY_STATE_OPEN
+const WS_OPEN = 1
 
-export class PresenceCounter extends DurableObject {
+export class PresenceCounter extends DurableObject<unknown> {
   constructor(ctx: DurableObjectState, env: unknown) {
-    super(ctx, env as never)
-    // Pongs are sent by the runtime without waking the DO from hibernation.
-    this.ctx.setWebSocketAutoResponse(new WebSocketRequestResponsePair(PRESENCE_PING, 'pong'))
+    super(ctx, env)
+    ctx.setWebSocketAutoResponse(new WebSocketRequestResponsePair(PRESENCE_PING, 'pong'))
   }
 
-  override async fetch(): Promise<Response> {
-    const pair = new WebSocketPair()
-    const [client, server] = Object.values(pair)
+  override fetch(): Response {
+    const [client, server] = Object.values(new WebSocketPair())
 
     this.ctx.acceptWebSocket(server)
     this.broadcast()
@@ -26,9 +19,7 @@ export class PresenceCounter extends DurableObject {
     return new Response(null, { status: 101, webSocket: client })
   }
 
-  override webSocketMessage(): void {
-    // Keepalive pings handled by auto-response; real messages are ignored.
-  }
+  override webSocketMessage(): void {}
 
   override webSocketClose(ws: WebSocket, code: number, reason: string): void {
     try {
@@ -43,18 +34,18 @@ export class PresenceCounter extends DurableObject {
     this.broadcast(ws)
   }
 
-  private broadcast(exclude?: WebSocket): void {
-    const sockets = this.ctx
+  private broadcast(leaving?: WebSocket): void {
+    const open = this.ctx
       .getWebSockets()
-      .filter((ws) => ws !== exclude && ws.readyState === WS_OPEN)
+      .filter((ws) => ws !== leaving && ws.readyState === WS_OPEN)
 
-    const payload = JSON.stringify({ count: sockets.length })
+    const payload = JSON.stringify({ count: open.length })
 
-    for (const ws of sockets) {
+    for (const ws of open) {
       try {
         ws.send(payload)
       } catch {
-        // socket went away mid-broadcast; the close handler will reconcile
+        // went away mid-broadcast; its close handler reconciles the count
       }
     }
   }

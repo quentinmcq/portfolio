@@ -13,11 +13,11 @@ Personal site at [quentin-macq.dev](https://quentin-macq.dev/) — hosted on **C
 
 ## Cloudflare
 
-- `worker/index.ts` — serves the static build, `/api/contact` (Turnstile-verified email relay via Email Workers) and `/api/presence` (live visitor count)
+- `worker/index.ts` — serves the static build and `/api/presence` (live visitor count)
 - `worker/presence.ts` — `PresenceCounter` Durable Object using the WebSocket hibernation API
-- `wrangler.jsonc` — routes, bindings (`SEND_EMAIL`, `PRESENCE`), static assets
+- `wrangler.jsonc` — routes, bindings (`PRESENCE`), static assets
 
-Secrets/vars expected in production: `TURNSTILE_SECRET`, `CONTACT_TO_EMAIL`, `VITE_TURNSTILE_SITE_KEY` (build-time). Without the latter, the widget falls back to Cloudflare's always-passing test key (dev only — the server still verifies with the real secret).
+No secrets required: contact goes through a plain `mailto:` link.
 
 ## Scripts
 

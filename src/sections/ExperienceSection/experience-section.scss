@@ -1,8 +1,72 @@
-.experience {
-  &__timeline {
-    list-style: none;
-    margin: clamp(2rem, 4vw, 3rem) 0 0;
-    padding: 0;
-    border-top: 1px solid var(--line);
+.timeline {
+  --year-w: 0px;
+
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $md) {
+    --year-w: 10rem;
+  }
+
+  @media (min-width: $xl) {
+    --year-w: 11rem;
+  }
+
+  // One continuous hairline — the road itself. Entries hang their dots on it.
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    left: var(--year-w);
+    width: 1px;
+    background: var(--line);
+  }
+
+  &__band {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.75rem;
+    padding-block: clamp(1.25rem, 2.5vw, 1.75rem);
+
+    &:first-child {
+      padding-top: 0.25rem;
+    }
+
+    @media (min-width: $md) {
+      grid-template-columns: var(--year-w) minmax(0, 1fr);
+      gap: 0;
+    }
+  }
+
+  &__year {
+    padding-left: 2rem;
+
+    // Dates sit right-aligned against the road, like margin notes.
+    @media (min-width: $md) {
+      padding-left: 0;
+      padding-right: 1.75rem;
+      padding-top: 0.55rem;
+      text-align: right;
+    }
+  }
+
+  &__year-text {
+    display: inline-block;
+    font-family: var(--font-mono), monospace;
+    font-size: var(--fs-caption);
+    line-height: 1;
+    letter-spacing: 0.08em;
+    font-variant-numeric: tabular-nums;
+    color: var(--fg-muted);
+    white-space: nowrap;
+  }
+
+  &__entries {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 3vw, 2rem);
   }
 }

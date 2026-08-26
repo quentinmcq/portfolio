@@ -35,28 +35,4 @@
     color: var(--accent-text);
     border-color: color-mix(in srgb, var(--accent-text) 50%, transparent);
   }
-
-  // Icon-only at rest; the label slides open on hover/focus.
-  &__label {
-    max-width: 0;
-    margin-left: 0;
-    opacity: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    font-family: var(--font-mono), monospace;
-    font-size: var(--fs-micro);
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    transition:
-      max-width var(--dur-mid) var(--ease-out),
-      margin-left var(--dur-mid) var(--ease-out),
-      opacity var(--dur-fast) var(--ease-out);
-  }
-
-  &:hover &__label,
-  &:focus-visible &__label {
-    max-width: 9rem;
-    margin-left: 0.5rem;
-    opacity: 1;
-  }
 }

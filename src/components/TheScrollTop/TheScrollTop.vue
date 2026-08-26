@@ -3,6 +3,7 @@
     class="scroll-top"
     :class="{ 'is-visible': visible && !hidden }"
     :aria-label="$t('common.back-to-top')"
+    :title="$t('common.back-to-top')"
     type="button"
     @click="scrollToTop"
   >
@@ -19,7 +20,6 @@
     >
       <path d="M12 19V5M6 11l6-6 6 6" />
     </svg>
-    <span class="scroll-top__label">{{ $t('common.back-to-top') }}</span>
   </button>
 </template>
 

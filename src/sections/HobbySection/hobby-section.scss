@@ -1,88 +1,111 @@
 .hobby {
-  &__list {
+  &__cards {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 0;
-    margin: 0;
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+    max-width: 1080px;
+    margin: 0 auto;
     padding: 0;
     list-style: none;
-    border-top: 1px solid var(--line);
 
     @media (min-width: $md) {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: start;
+      padding-top: 1rem;
     }
   }
 
-  &__row {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding-block: clamp(1rem, 2vw, 1.5rem);
-    border-bottom: 1px solid var(--line);
+  &__slot {
+    --tilt: 0deg;
+    --lift: 0rem;
 
+    // The reveal transform lives on the slot, the tilt on the card — they
+    // must not fight over the same transform.
     @media (min-width: $md) {
-      padding: clamp(1rem, 2vw, 1.5rem) clamp(1rem, 2vw, 2rem);
-      border-right: 1px solid var(--line);
+      padding-top: var(--lift);
+    }
+  }
+}
 
-      &:first-child {
-        padding-left: 0;
-      }
+.hobby-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-card);
+  transform: rotate(var(--tilt));
+  transition:
+    transform var(--dur-slow) var(--ease-out),
+    border-color var(--dur-mid) var(--ease-out);
 
-      &:last-child {
-        padding-right: 0;
-        border-right: none;
+  // Side by side, the three cards want a common footprint.
+  @media (min-width: $md) {
+    min-height: 19rem;
+  }
+
+  // Every card lifts and straightens on hover — the ones with a link are
+  // clickable edge to edge (see &__link) and their arrow answers.
+  &:hover {
+    transform: rotate(0deg) translateY(-6px);
+    border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+
+    .hobby-card__link {
+      color: var(--accent-text);
+
+      svg {
+        transform: translate(3px, -3px);
       }
     }
   }
 
   &__title {
-    font-family: var(--font-display), serif;
-    font-variation-settings:
-      'opsz' 72,
-      'SOFT' 60;
-    font-style: italic;
-    font-weight: 350;
-    font-size: clamp(1.25rem, 1.05rem + 0.6vw, 1.625rem);
-    line-height: 1.1;
-    letter-spacing: -0.015em;
+    margin: 0;
+    font-family: var(--font-display), sans-serif;
+    font-weight: 600;
+    font-size: clamp(1.625rem, 1.25rem + 1.2vw, 2.25rem);
+    line-height: 1;
+    letter-spacing: -0.035em;
     color: var(--fg);
   }
 
   &__description {
     margin: 0;
-    max-width: 44ch;
+    max-width: 30ch;
     font-family: var(--font-body), sans-serif;
     font-size: var(--fs-body);
-    line-height: 1.5;
+    line-height: 1.55;
     color: var(--fg-muted);
   }
 
+  // Stretched link with the arrow pinned to the corner. The anchor stays in
+  // normal flow so its ::after resolves against the card; keyboard focus
+  // rings the card.
   &__link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    margin-top: 0.25rem;
-    font-family: var(--font-mono), monospace;
-    font-size: var(--fs-micro);
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--fg);
+    color: var(--fg-faint);
     transition: color var(--dur-fast) var(--ease-out);
-    width: fit-content;
 
     svg {
-      color: var(--fg-faint);
-      transition:
-        color var(--dur-fast) var(--ease-out),
-        transform var(--dur-fast) var(--ease-out);
+      position: absolute;
+      top: clamp(1.25rem, 2.5vw, 1.75rem);
+      right: clamp(1.25rem, 2.5vw, 1.75rem);
+      transition: transform var(--dur-mid) var(--ease-out);
     }
 
-    &:hover {
-      color: var(--accent-text);
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+    }
 
-      svg {
-        color: var(--accent-text);
-        transform: translate(3px, -3px);
+    &:focus-visible {
+      outline: none;
+
+      &::after {
+        outline: 2px solid var(--accent-text);
+        outline-offset: 2px;
       }
     }
   }

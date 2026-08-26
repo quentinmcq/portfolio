@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Social preview image for social medias (1200×630).
--->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Quentin Macq — Développeur full-stack">
   <defs>
+    <style>
+      @font-face {
+        font-family: 'Bricolage Grotesque';
+        font-weight: 200 800;
+        font-stretch: 75% 100%;
+        src: url('../public/fonts/bricolage-grotesque-v9-latin.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'JetBrains Mono';
+        font-weight: 400 700;
+        src: url('../public/fonts/jetbrains-mono-v24-latin.woff2') format('woff2');
+      }
+      .display { font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; }
+      .mono { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; }
+    </style>
     <radialGradient id="warmGlow" cx="92%" cy="-8%" r="80%">
-      <stop offset="0%" stop-color="#ff5b3a" stop-opacity="0.18" />
+      <stop offset="0%" stop-color="#ff5b3a" stop-opacity="0.16" />
       <stop offset="55%" stop-color="#ff5b3a" stop-opacity="0" />
     </radialGradient>
     <radialGradient id="goldGlow" cx="3%" cy="108%" r="60%">
-      <stop offset="0%" stop-color="#d4a574" stop-opacity="0.10" />
+      <stop offset="0%" stop-color="#d4a574" stop-opacity="0.09" />
       <stop offset="55%" stop-color="#d4a574" stop-opacity="0" />
     </radialGradient>
   </defs>
@@ -18,28 +30,19 @@
   <rect width="1200" height="630" fill="url(#warmGlow)" />
   <rect width="1200" height="630" fill="url(#goldGlow)" />
 
-  <g font-family="'JetBrains Mono', 'SF Mono', Menlo, monospace" font-size="14" letter-spacing="2.6" fill="#8a8580">
-    <text x="80" y="80">IDX 001</text>
-    <line x1="170" y1="73" x2="1010" y2="73" stroke="#f5f1e8" stroke-opacity="0.12" />
-    <text x="1030" y="80" text-anchor="end" transform="translate(90,0)">ÉDITION 2026</text>
+  <rect x="80" y="72" width="40" height="2" fill="#ff5b3a" />
+  <text class="mono" x="80" y="112" font-size="14" letter-spacing="3" fill="#8a8580">DÉVELOPPEUR FULL-STACK</text>
+
+  <g class="display" fill="#f5f1e8">
+    <text x="70" y="318" font-size="196" style="font-weight: 500; letter-spacing: -9.8px">Quentin</text>
+    <text x="118" y="470" font-size="196" style="font-weight: 700; font-stretch: 80%; letter-spacing: -7.8px">Macq<tspan fill="#ff5b3a">.</tspan></text>
   </g>
 
-  <g transform="translate(80, 165)">
-    <circle cx="9" cy="9" r="4" fill="#ff5b3a" />
-    <circle cx="9" cy="9" r="9" fill="none" stroke="#ff5b3a" stroke-opacity="0.35" />
-    <text x="32" y="13" font-family="'JetBrains Mono', monospace" font-size="13" letter-spacing="2" fill="#8a8580">DISPONIBLE POUR DISCUTER</text>
-  </g>
+  <text class="display" x="80" y="534" font-size="27" style="font-weight: 400; letter-spacing: -0.4px" fill="#d9d4ca">Full-stack avec une obsession pour la performance front et les nouveaux outils.</text>
 
-  <g font-family="'Fraunces', 'Iowan Old Style', 'Apple Garamond', Baskerville, serif" fill="#f5f1e8">
-    <text x="80" y="315" font-size="170" font-weight="300" letter-spacing="-5">Quentin</text>
-    <text x="80" y="470" font-size="170" font-weight="300" font-style="italic" letter-spacing="-5">Macq<tspan fill="#ff5b3a">.</tspan></text>
-  </g>
-
-  <text x="80" y="545" font-family="'Fraunces', serif" font-style="italic" font-size="22" fill="#8a8580" letter-spacing="0.2">Développeur full-stack</text>
-
-  <g font-family="'JetBrains Mono', monospace" font-size="13" letter-spacing="2.4" fill="#8a8580">
-    <line x1="80" y1="580" x2="1120" y2="580" stroke="#f5f1e8" stroke-opacity="0.12" />
-    <text x="80" y="608">HAUTS-DE-FRANCE</text>
-    <text x="1120" y="608" text-anchor="end">QUENTIN-MACQ.DEV</text>
+  <g class="mono" font-size="13" letter-spacing="2.6" fill="#8a8580">
+    <line x1="80" y1="576" x2="1120" y2="576" stroke="#f5f1e8" stroke-opacity="0.12" />
+    <text x="80" y="606">HAUTS-DE-FRANCE</text>
+    <text x="1120" y="606" text-anchor="end">QUENTIN-MACQ.DEV</text>
   </g>
 </svg>

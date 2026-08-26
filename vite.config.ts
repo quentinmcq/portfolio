@@ -3,9 +3,7 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig, type Plugin } from 'vite-plus'
 
 const FONT_PRELOADS = [
-  '/fonts/fraunces-v38-latin.woff2',
-  '/fonts/fraunces-italic-v38-latin.woff2',
-  '/fonts/inter-tight-v9-latin.woff2',
+  '/fonts/bricolage-grotesque-v9-latin.woff2',
   '/fonts/jetbrains-mono-v24-latin.woff2'
 ]
 

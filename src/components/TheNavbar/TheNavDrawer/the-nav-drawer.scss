@@ -25,16 +25,8 @@
   &__header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-bottom: clamp(2rem, 6vw, 4rem);
-  }
-
-  &__eyebrow {
-    font-family: var(--font-mono), monospace;
-    font-size: var(--fs-micro);
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--fg-muted);
   }
 
   &__close {
@@ -65,42 +57,25 @@
   }
 
   &__link {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: baseline;
-    gap: 1rem;
-    padding-block: 0.5rem;
+    display: block;
+    padding-block: 0.6rem;
     border-bottom: 1px solid var(--line);
     color: var(--fg);
     transition:
       color var(--dur-fast) var(--ease-out),
       padding-left var(--dur-mid) var(--ease-out);
 
-    &-idx {
-      font-family: var(--font-mono), monospace;
-      font-size: var(--fs-micro);
-      letter-spacing: 0.18em;
-      color: var(--fg-faint);
-    }
-
     &-label {
-      font-family: var(--font-display), serif;
-      font-variation-settings:
-        'opsz' 72,
-        'SOFT' 60;
-      font-weight: 350;
+      font-family: var(--font-display), sans-serif;
+      font-weight: 600;
       font-size: clamp(1.875rem, 6vw, 2.75rem);
-      line-height: 1.1;
-      letter-spacing: -0.015em;
+      line-height: 1.05;
+      letter-spacing: -0.035em;
     }
 
     &:hover {
       color: var(--accent-text);
       padding-left: 0.5rem;
-
-      .drawer__link-idx {
-        color: var(--accent-text);
-      }
     }
   }
 

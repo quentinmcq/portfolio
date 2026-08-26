@@ -1,63 +1,67 @@
 <template>
   <section :id="componentName" class="section project">
     <div class="container">
-      <CategoryTitle :component-name />
+      <CategoryTitle :component-name wide />
 
-      <ol class="project__list">
+      <!-- Table of contents, magazine style: the title IS the row. -->
+      <ol class="project__index">
         <li
           v-for="(item, index) in projects"
-          :key="index"
-          class="project__row"
+          :key="item.title"
+          class="project-row"
+          :class="{ 'project-row--linked': !!item.link }"
           data-reveal
-          :style="{ '--reveal-delay': `${index * 80}ms` }"
+          :style="{ '--reveal-delay': `${index * 70}ms` }"
         >
-          <span class="project__year">{{ item.year }}</span>
+          <span class="project-row__year">{{ item.year }}</span>
 
-          <div class="project__body">
-            <h3 class="project__title">
-              <a
-                v-if="item.link"
-                :href="item.link"
-                target="_blank"
-                rel="noopener"
-                class="project__title-link"
-              >
-                {{ item.title }}
-                <svg
-                  aria-hidden="true"
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="project__title-icon"
-                >
-                  <path d="M7 17 17 7M9 7h8v8" />
-                </svg>
-              </a>
-              <span v-else>{{ item.title }}</span>
-              <span
-                v-if="item.kind"
-                class="project__kind-tag"
-                :class="`project__kind-tag--${item.kind}`"
-              >
-                {{ $t(`project.kind-${item.kind}`) }}
-              </span>
-            </h3>
+          <h3 class="project-row__title">
+            <a
+              v-if="item.link"
+              :href="item.link"
+              target="_blank"
+              rel="noopener"
+              class="project-row__link"
+            >
+              {{ item.title }}
+            </a>
+            <span v-else>{{ item.title }}</span>
+          </h3>
 
-            <p v-if="item.subtitle" class="project__subtitle">
-              {{ item.subtitle }}
-            </p>
-
-            <ul v-if="item.chips?.length" class="project__chips">
-              <li v-for="chip in item.chips" :key="chip">
-                <SkillChip :label="chip" />
-              </li>
-            </ul>
+          <div class="project-row__meta">
+            <span
+              v-if="item.kind"
+              class="project-row__kind"
+              :class="`project-row__kind--${item.kind}`"
+            >
+              {{ $t(`project.kind-${item.kind}`) }}
+            </span>
+            <svg
+              v-if="item.link"
+              aria-hidden="true"
+              class="project-row__arrow"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M7 17 17 7M9 7h8v8" />
+            </svg>
           </div>
+
+          <p v-if="item.subtitle" class="project-row__subtitle">
+            {{ item.subtitle }}
+          </p>
+
+          <ul v-if="item.chips?.length" class="project-row__chips">
+            <li v-for="chip in item.chips" :key="chip">
+              <SkillChip :label="chip" />
+            </li>
+          </ul>
         </li>
       </ol>
     </div>

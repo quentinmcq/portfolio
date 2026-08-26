@@ -1,3 +1,5 @@
+@use 'breakpoints' as *;
+
 *,
 *::before,
 *::after {
@@ -19,9 +21,6 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-feature-settings:
-    'ss01' on,
-    'cv11' on;
   background: var(--bg);
   color: var(--fg);
   transition:
@@ -33,8 +32,7 @@ body {
   font-family: var(--font-body), sans-serif;
   font-size: var(--fs-body);
   line-height: 1.55;
-  font-weight: 380;
-  letter-spacing: 0.005em;
+  font-weight: 400;
 }
 
 ul,
@@ -84,10 +82,12 @@ img {
   padding-inline: var(--container-pad);
 }
 
+// Sections are separated by rhythm (type scale, air), not by rules — the
+// full-width hairline between every block is what made the page read as a
+// stack of identical cards.
 .section {
   position: relative;
   padding-block: var(--section-pad-y);
-  border-top: 1px solid var(--line);
   // Anchor navigation is native (real #hash links) — keep targets clear of
   // the fixed navbar.
   scroll-margin-top: 4.5rem;
@@ -98,16 +98,46 @@ img {
   contain-intrinsic-size: auto 800px;
 
   &:first-of-type {
-    border-top: 0;
     content-visibility: visible;
+  }
+
+  // Full-bleed "breather" band on the inset surface.
+  &--band {
+    background: var(--bg-inset);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+}
+
+// Editorial spread: sticky heading column on the left, content flowing on the
+// right. Collapses to a single column below the desktop breakpoint.
+.spread {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(2.5rem, 5vw, 4rem);
+
+  @media (min-width: $lg) {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    column-gap: clamp(3rem, 6vw, 6rem);
+    align-items: start;
+  }
+
+  &__head {
+    @media (min-width: $lg) {
+      position: sticky;
+      top: var(--head-sticky-top);
+    }
+  }
+
+  &__body {
+    min-width: 0;
   }
 }
 
 .font-display {
-  font-family: var(--font-display), serif;
-  font-variation-settings:
-    'opsz' 144,
-    'SOFT' 60;
+  font-family: var(--font-display), sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.03em;
 }
 
 .font-mono {
@@ -131,7 +161,7 @@ img {
 
 .js [data-reveal] {
   opacity: 0;
-  transform: translateY(24px);
+  transform: translateY(var(--reveal-shift, 24px));
   transition:
     opacity 800ms var(--ease-out),
     transform 800ms var(--ease-out);

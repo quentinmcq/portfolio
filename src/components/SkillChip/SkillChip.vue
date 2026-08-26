@@ -5,6 +5,7 @@
     :target="chipConfig.link ? '_blank' : undefined"
     :rel="chipConfig.link ? 'noopener' : undefined"
     class="skill-chip"
+    :class="{ 'skill-chip--lg': size === 'lg' }"
     :style="dotStyle"
   >
     <span class="skill-chip__dot" aria-hidden="true" />
@@ -17,8 +18,10 @@ import { computed } from 'vue'
 
 import tool from '@/data/tools'
 
-const { label } = defineProps<{
+const { label, size = 'md' } = defineProps<{
   label: string
+  /** `lg` renders the tool name as display type — no pill, just the dot. */
+  size?: 'lg' | 'md'
 }>()
 
 const chipConfig = computed(() => {

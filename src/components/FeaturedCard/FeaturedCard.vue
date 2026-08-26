@@ -1,8 +1,34 @@
 <template>
-  <article class="featured-card" data-reveal>
+  <article class="featured-card" :class="{ 'featured-card--linked': !!linkHref }" data-reveal>
     <header class="featured-card__head">
       <span class="featured-card__eyebrow">{{ eyebrow }}</span>
-      <span v-if="period" class="featured-card__period">{{ period }}</span>
+
+      <span class="featured-card__meta">
+        <span v-if="period" class="featured-card__period">{{ period }}</span>
+        <!-- Stretched over the whole card (see scss): one link, one destination. -->
+        <a
+          v-if="linkHref"
+          :href="linkHref"
+          target="_blank"
+          rel="noopener"
+          class="featured-card__link"
+          :aria-label="linkLabel"
+        >
+          <svg
+            aria-hidden="true"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M7 17 17 7M9 7h8v8" />
+          </svg>
+        </a>
+      </span>
     </header>
 
     <div class="featured-card__body">
@@ -19,25 +45,6 @@
           <SkillChip :label="tech" />
         </li>
       </ul>
-    </div>
-
-    <div v-if="linkHref" class="featured-card__actions">
-      <a :href="linkHref" target="_blank" rel="noopener" class="featured-card__cta">
-        <span>{{ linkLabel }}</span>
-        <svg
-          aria-hidden="true"
-          width="14"
-          height="14"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path d="M7 17 17 7M9 7h8v8" />
-        </svg>
-      </a>
     </div>
   </article>
 </template>
@@ -58,6 +65,7 @@ const {
   description?: string
   eyebrow: string
   linkHref?: string
+  /** Accessible name of the (icon-only) link. */
   linkLabel?: string
   period?: string
   stack?: string[]

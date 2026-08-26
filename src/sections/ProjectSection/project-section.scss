@@ -1,35 +1,98 @@
 .project {
-  &__list {
+  --row-pad: clamp(1rem, 2vw, 1.75rem);
+
+  // The index bleeds into the container gutter so the hover wash can run
+  // past the text edge; the rules follow it.
+  &__index {
     list-style: none;
-    margin: 0;
+    margin: 0 calc(-1 * var(--row-pad));
     padding: 0;
     border-top: 1px solid var(--line);
   }
+}
 
-  &__row {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-    padding-block: clamp(1.25rem, 2.5vw, 2rem);
-    border-bottom: 1px solid var(--line);
-    transition: padding-left var(--dur-mid) var(--ease-out);
+.project-row {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    'year meta'
+    'title title'
+    'sub sub'
+    'chips chips';
+  gap: 0.6rem var(--row-pad);
+  padding: clamp(1.5rem, 3vw, 2.5rem) var(--row-pad);
+  border-bottom: 1px solid var(--line);
+  color: var(--fg);
 
-    @media (min-width: $md) {
-      grid-template-columns: 120px 1fr;
-      gap: 2rem;
-      align-items: baseline;
+  @media (min-width: $md) {
+    grid-template-columns: 7.5rem minmax(0, 1fr) auto;
+    grid-template-areas:
+      'year title meta'
+      'year sub meta'
+      'year chips meta';
+    align-items: start;
+    row-gap: 0.85rem;
+  }
+
+  // Hover: a quiet tint, a 2px ember rule unrolling down the left edge, and
+  // the meta (year, arrow, tag) picking up the accent. The title stays put —
+  // a full colour flood at this size was too loud.
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: color-mix(in srgb, var(--accent) 7%, transparent);
+    opacity: 0;
+    transition: opacity var(--dur-mid) var(--ease-out);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    left: 0;
+    width: 2px;
+    background: var(--accent);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform var(--dur-mid) var(--ease-out);
+  }
+
+  &:hover,
+  &:focus-within {
+    &::before {
+      opacity: 1;
     }
 
-    @media (min-width: $lg) {
-      grid-template-columns: 150px 1fr;
+    &::after {
+      transform: scaleY(1);
     }
 
-    &:hover {
-      padding-left: 0.5rem;
+    .project-row__year,
+    .project-row__arrow {
+      color: var(--accent-text);
+    }
+
+    .project-row__kind {
+      border-color: color-mix(in srgb, var(--accent-text) 45%, var(--line));
     }
   }
 
+  &__year,
+  &__arrow,
+  &__kind {
+    transition:
+      color var(--dur-fast) var(--ease-out),
+      border-color var(--dur-fast) var(--ease-out);
+  }
+
   &__year {
+    grid-area: year;
+    padding-top: 0.5em;
     font-family: var(--font-mono), monospace;
     font-size: var(--fs-caption);
     letter-spacing: 0.18em;
@@ -38,44 +101,41 @@
     white-space: nowrap;
   }
 
-  &__body {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
   &__title {
-    @include display-title;
-  }
-
-  &__title-link {
-    display: inline-flex;
-    align-items: baseline;
-    gap: 0.4rem;
+    grid-area: title;
+    margin: 0;
+    font-family: var(--font-display), sans-serif;
+    font-weight: 600;
+    font-size: clamp(2rem, 1rem + 3.2vw, 4rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
     color: var(--fg);
-    transition: color var(--dur-fast) var(--ease-out);
+    text-wrap: balance;
   }
 
-  &__title-icon {
-    color: var(--fg-faint);
-    transition:
-      color var(--dur-fast) var(--ease-out),
-      transform var(--dur-fast) var(--ease-out);
-  }
+  // Stretched link: the whole row is the click target, chips stay on top.
+  &__link {
+    color: inherit;
 
-  &__title-link:hover {
-    color: var(--accent-text);
-
-    .project__title-icon {
-      color: var(--accent-text);
-      transform: translate(3px, -3px);
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
     }
   }
 
-  &__kind-tag {
+  &__meta {
+    grid-area: meta;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    justify-self: end;
+    padding-top: 0.35em;
+  }
+
+  &__kind {
     display: inline-block;
-    margin-left: 0.5rem;
-    padding: 2px 8px;
+    padding: 3px 9px;
     border: 1px solid var(--line);
     border-radius: 999px;
     font-family: var(--font-mono), monospace;
@@ -83,34 +143,45 @@
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--fg-muted);
-    vertical-align: middle;
+    white-space: nowrap;
 
     &--school {
       color: var(--gold);
-      border-color: color-mix(in srgb, var(--gold) 30%, transparent);
+      border-color: color-mix(in srgb, var(--gold) 30%, var(--line));
     }
 
     &--personal {
       color: var(--accent-text);
-      border-color: color-mix(in srgb, var(--accent) 30%, transparent);
+      border-color: color-mix(in srgb, var(--accent-text) 30%, var(--line));
     }
   }
 
+  &__arrow {
+    flex: none;
+    color: var(--fg-faint);
+    transition:
+      color var(--dur-fast) var(--ease-out),
+      transform var(--dur-mid) var(--ease-out);
+  }
+
+  &:hover &__arrow {
+    transform: translate(4px, -4px);
+  }
+
   &__subtitle {
+    grid-area: sub;
     margin: 0;
     max-width: 60ch;
-    font-family: var(--font-display), serif;
-    font-variation-settings:
-      'opsz' 24,
-      'SOFT' 60;
-    font-style: italic;
-    font-weight: 300;
+    font-family: var(--font-body), sans-serif;
     font-size: var(--fs-body-lg);
     line-height: 1.45;
     color: var(--fg-muted);
   }
 
   &__chips {
+    grid-area: chips;
+    position: relative;
+    z-index: 1; // above the stretched link
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem 0.5rem;

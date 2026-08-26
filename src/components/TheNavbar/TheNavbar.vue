@@ -5,15 +5,15 @@
         <span class="navbar__brand-mark">Q.</span><span class="navbar__brand-name">Macq</span>
       </a>
 
-      <div class="navbar__meta" aria-hidden="true">
-        <span class="navbar__edition">{{ $t('header.idx') }}</span>
-        <span class="navbar__sep">·</span>
-        <span class="navbar__edition">{{ $t('header.edition', { year: currentYear }) }}</span>
-      </div>
-
       <nav class="navbar__links" :aria-label="$t('common.aria-nav-primary')">
-        <a v-for="item in menu" :key="item.link" class="navbar__link" :href="item.link">
-          <span class="navbar__link-idx">{{ item.index }}</span>
+        <a
+          v-for="item in menu"
+          :key="item.link"
+          class="navbar__link"
+          :class="{ 'is-active': active && item.link === `#${active}` }"
+          :href="item.link"
+          :aria-current="active && item.link === `#${active}` ? 'true' : undefined"
+        >
           <span class="navbar__link-label">{{ item.title }}</span>
         </a>
       </nav>
@@ -72,13 +72,7 @@
     </div>
   </header>
 
-  <TheNavDrawer
-    v-model:open="drawer"
-    :menu
-    :current-year
-    :linkedin-url="linkedinUrl"
-    :github-url="githubUrl"
-  />
+  <TheNavDrawer v-model:open="drawer" :menu :linkedin-url="linkedinUrl" :github-url="githubUrl" />
 </template>
 
 <script setup lang="ts">
@@ -86,6 +80,7 @@ import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import TheLocaleSwitcher from '@/components/TheLocaleSwitcher/TheLocaleSwitcher.vue'
+import { useActiveSection } from '@/composables/active-section'
 import { useTheme } from '@/composables/theme'
 import { CONTACTS } from '@/data/contacts'
 
@@ -93,11 +88,11 @@ import TheNavDrawer from './TheNavDrawer/TheNavDrawer.vue'
 
 const { tm } = useI18n()
 const { theme, toggleTheme } = useTheme()
+const { active } = useActiveSection()
 
-const menu = computed(() => tm('menu') as Array<{ index: string; link: string; title: string }>)
+const menu = computed(() => tm('menu') as Array<{ link: string; title: string }>)
 const { github: githubUrl, linkedin: linkedinUrl } = CONTACTS
 
-const currentYear = computed(() => new Date().getFullYear())
 const drawer = ref(false)
 const scrolled = ref(false)
 
