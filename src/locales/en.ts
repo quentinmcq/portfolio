@@ -89,7 +89,7 @@ export default {
       {
         button: 'See the collection',
         description: 'A friend introduced me to manga, and it quickly grew into a real passion.',
-        link: 'http://mangacollec.com/user/kakashi/collection',
+        link: 'https://mangacollec.com/user/kakashi/collection',
         title: 'Manga'
       },
       {

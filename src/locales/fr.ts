@@ -90,7 +90,7 @@ export default {
         button: 'Voir la collection',
         description:
           'Découvert grâce à un ami, les mangas sont rapidement devenus une véritable passion pour moi.',
-        link: 'http://mangacollec.com/user/kakashi/collection',
+        link: 'https://mangacollec.com/user/kakashi/collection',
         title: 'Manga'
       },
       {
