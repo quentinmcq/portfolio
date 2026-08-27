@@ -18,14 +18,14 @@
     "vue-i18n": "^12.0.0-alpha.4"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^5.20260826.1",
-    "@types/node": "^26.3.0",
+    "@cloudflare/workers-types": "^5.20260827.1",
+    "@types/node": "^26.4.0",
     "@vitejs/plugin-vue": "^6.0.8",
     "@vue/tsconfig": "^0.9.1",
     "sass-embedded": "^1.103.1",
     "vite": "npm:@voidzero-dev/vite-plus-core@latest",
     "vite-plus": "latest",
-    "wrangler": "^4.126.0"
+    "wrangler": "^4.127.0"
   },
   "overrides": {
     "vite": "npm:@voidzero-dev/vite-plus-core@latest",

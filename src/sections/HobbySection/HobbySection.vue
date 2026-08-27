@@ -3,7 +3,6 @@
     <div class="container">
       <CategoryTitle :component-name center />
 
-      <!-- Three cards dropped on the desk, slightly askew. Straighten on hover. -->
       <ul class="hobby__cards">
         <li
           v-for="(entry, index) in hobbies"
@@ -20,7 +19,6 @@
             <h3 class="hobby-card__title">{{ entry.title }}</h3>
             <p class="hobby-card__description">{{ entry.description }}</p>
 
-            <!-- Stretched over the whole card (see scss); the label is the accessible name. -->
             <a
               v-if="entry.link"
               :href="entry.link"
@@ -51,19 +49,16 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useI18n } from 'vue-i18n'
-
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue'
+import { useMessageList } from '@/composables/message-list'
 import type { Hobby } from '@/types/Hobby'
 
 const TILTS = ['-1.8deg', '1.3deg', '-0.9deg']
 const LIFTS = ['0rem', '2.75rem', '1.25rem']
 
 const componentName = 'hobby'
-const { tm } = useI18n()
 
-const hobbies = computed(() => tm('hobby.list') as Hobby[])
+const hobbies = useMessageList<Hobby>('hobby.list')
 </script>
 
 <style lang="scss" src="./hobby-section.scss" scoped />

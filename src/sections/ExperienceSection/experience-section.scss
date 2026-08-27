@@ -14,7 +14,6 @@
     --year-w: 11rem;
   }
 
-  // One continuous hairline — the road itself. Entries hang their dots on it.
   &::before {
     content: '';
     position: absolute;
@@ -44,7 +43,6 @@
   &__year {
     padding-left: 2rem;
 
-    // Dates sit right-aligned against the road, like margin notes.
     @media (min-width: $md) {
       padding-left: 0;
       padding-right: 1.75rem;

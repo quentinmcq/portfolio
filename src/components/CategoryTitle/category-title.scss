@@ -2,9 +2,6 @@
   position: relative;
   margin-bottom: clamp(2.5rem, 5vw, 4rem);
 
-  // As a spread heading: sticky (must win over the header's own `position:
-  // relative` — same specificity, scoped styles load last), spacing handled
-  // by the grid gap.
   &.spread__head {
     margin-bottom: 0;
 
@@ -13,7 +10,6 @@
     }
   }
 
-  // The only ornament: a short ember stroke, like a pull-quote mark.
   &__rule {
     display: block;
     width: 2.5rem;
@@ -46,10 +42,8 @@
     font-size: clamp(1.0625rem, 0.95rem + 0.4vw, 1.25rem);
     line-height: 1.45;
     color: var(--fg-muted);
-    text-wrap: pretty;
   }
 
-  // ---- Wide: heading left, kicker hanging on the right at the baseline.
   &--wide &__text {
     @media (min-width: $lg) {
       display: grid;
@@ -67,7 +61,6 @@
     }
   }
 
-  // ---- Center: for the full-bleed band.
   &--center {
     text-align: center;
 

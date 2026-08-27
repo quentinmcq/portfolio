@@ -15,7 +15,7 @@ const tools: Record<string, Tool> = {
     link: 'https://www.cnil.fr/fr/definition/interface-de-programmation-dapplication-api'
   },
   bun: {
-    color: '#FBF0DF',
+    color: 'var(--fg)',
     label: 'Bun',
     link: 'https://bun.sh/'
   },
@@ -36,7 +36,7 @@ const tools: Record<string, Tool> = {
   },
   eslint: {
     color: '#4B32C3',
-    label: 'ESlint',
+    label: 'ESLint',
     link: 'https://eslint.org/'
   },
   gitlab: {
@@ -135,8 +135,6 @@ const tools: Record<string, Tool> = {
     link: 'https://www.swift.org/'
   },
   symfony: {
-    // Symfony brand is pure black; using the foreground token so the chip
-    // dot stays visible across both themes.
     color: 'var(--fg)',
     label: 'Symfony',
     link: 'https://symfony.com/'

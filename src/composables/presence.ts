@@ -3,16 +3,8 @@ import { onBeforeUnmount, onMounted, readonly, ref } from 'vue'
 import { PRESENCE_ENDPOINT, PRESENCE_PING, PRESENCE_PING_INTERVAL_MS } from '@/shared/presence'
 
 const MAX_BACKOFF_MS = 30_000
-// Desktop only — matches $md in _breakpoints.scss. On a phone the pill fights
-// the thumb zone and the scroll-top button for a badge nobody needs, so the
-// socket is only open while the viewport is desktop-sized (and closes again
-// if the window shrinks below it).
 const DESKTOP_QUERY = '(min-width: 768px)'
 
-// Connects to the presence Durable Object and exposes the live connected count.
-// Reconnects with exponential backoff and keeps the socket alive with periodic
-// pings. Stays silent (count 0, connected false) if WebSockets are unavailable
-// or the worker isn't reachable (e.g. pure `vite` dev without `wrangler dev`).
 export function usePresence() {
   const count = ref(0)
   const connected = ref(false)
@@ -68,13 +60,14 @@ export function usePresence() {
     }
   }
 
-  // Drop the connection and reset the state — the pill disappears.
   function teardown() {
     stopPing()
+
     if (reconnectTimer) {
       clearTimeout(reconnectTimer)
       reconnectTimer = null
     }
+
     const current = socket
     socket = null
     current?.close()

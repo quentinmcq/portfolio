@@ -1,8 +1,5 @@
 import { onBeforeUnmount, onMounted, readonly, ref } from 'vue'
 
-// Shared scroll-direction state for the floating pills: hides them while the
-// user scrolls down (reading), reveals them on scroll up or near the top.
-// Single listener shared across consumers, like breakpoints.ts.
 const THRESHOLD = 120
 const DELTA = 4
 

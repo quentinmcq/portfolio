@@ -4,7 +4,6 @@
       <CategoryTitle class="spread__head" :component-name />
 
       <div class="spread__body">
-        <!-- The address is the call to action; everything else is a footnote. -->
         <a class="contact__email" :href="`mailto:${CONTACTS.email}`" data-reveal>
           <span>{{ CONTACTS.email }}</span>
           <svg

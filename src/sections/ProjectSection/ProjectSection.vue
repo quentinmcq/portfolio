@@ -3,7 +3,6 @@
     <div class="container">
       <CategoryTitle :component-name wide />
 
-      <!-- Table of contents, magazine style: the title IS the row. -->
       <ol class="project__index">
         <li
           v-for="(item, index) in projects"
@@ -69,17 +68,14 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useI18n } from 'vue-i18n'
-
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue'
 import SkillChip from '@/components/SkillChip/SkillChip.vue'
+import { useMessageList } from '@/composables/message-list'
 import type { Project } from '@/types/Project'
 
 const componentName = 'project'
-const { tm } = useI18n()
 
-const projects = computed(() => tm('project.list') as Project[])
+const projects = useMessageList<Project>('project.list')
 </script>
 
 <style lang="scss" src="./project-section.scss" scoped />

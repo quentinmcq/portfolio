@@ -13,7 +13,6 @@
   border-radius: 999px;
   color: var(--fg);
   user-select: none;
-  // Liquid-glass nod: lit top edge + soft lift, kept subtle for the dark theme.
   box-shadow:
     inset 0 1px 0 color-mix(in srgb, white 14%, transparent),
     0 8px 24px -14px rgba(0, 0, 0, 0.5);
@@ -21,7 +20,6 @@
     opacity var(--dur-mid) var(--ease-out),
     transform var(--dur-mid) var(--ease-out);
 
-  // Auto-hide while scrolling down — slides out past its own bottom offset.
   &.is-hidden {
     opacity: 0;
     transform: translateY(calc(100% + 2.5rem));
@@ -45,7 +43,6 @@
     font-variant-numeric: tabular-nums;
   }
 
-  // Collapsed at rest (just dot + number), expands on hover/focus.
   &__label {
     max-width: 0;
     margin-left: 0;

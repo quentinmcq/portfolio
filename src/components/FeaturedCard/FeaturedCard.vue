@@ -5,7 +5,6 @@
 
       <span class="featured-card__meta">
         <span v-if="period" class="featured-card__period">{{ period }}</span>
-        <!-- Stretched over the whole card (see scss): one link, one destination. -->
         <a
           v-if="linkHref"
           :href="linkHref"

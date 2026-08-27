@@ -52,12 +52,15 @@ h6 {
   margin: 0;
 }
 
+p {
+  text-wrap: pretty;
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
-// Global focus indicator — form fields handle their own (underline animation).
 :where(a, button, [role='button'], [tabindex]):focus-visible {
   outline: 2px solid var(--accent-text);
   outline-offset: 2px;
@@ -82,18 +85,11 @@ img {
   padding-inline: var(--container-pad);
 }
 
-// Sections are separated by rhythm (type scale, air), not by rules — the
-// full-width hairline between every block is what made the page read as a
-// stack of identical cards.
 .section {
   position: relative;
   padding-block: var(--section-pad-y);
-  // Anchor navigation is native (real #hash links) — keep targets clear of
-  // the fixed navbar.
   scroll-margin-top: 4.5rem;
 
-  // Defer layout/paint of off-screen sections — drops initial reflow cost.
-  // First section keeps default rendering so LCP candidates aren't skipped.
   content-visibility: auto;
   contain-intrinsic-size: auto 800px;
 
@@ -101,7 +97,6 @@ img {
     content-visibility: visible;
   }
 
-  // Full-bleed "breather" band on the inset surface.
   &--band {
     background: var(--bg-inset);
     border-top: 1px solid var(--line);
@@ -109,8 +104,6 @@ img {
   }
 }
 
-// Editorial spread: sticky heading column on the left, content flowing on the
-// right. Collapses to a single column below the desktop breakpoint.
 .spread {
   display: grid;
   grid-template-columns: minmax(0, 1fr);

@@ -1,8 +1,6 @@
 .project {
   --row-pad: clamp(1rem, 2vw, 1.75rem);
 
-  // The index bleeds into the container gutter so the hover wash can run
-  // past the text edge; the rules follow it.
   &__index {
     list-style: none;
     margin: 0 calc(-1 * var(--row-pad));
@@ -36,9 +34,6 @@
     row-gap: 0.85rem;
   }
 
-  // Hover: a quiet tint, a 2px ember rule unrolling down the left edge, and
-  // the meta (year, arrow, tag) picking up the accent. The title stays put —
-  // a full colour flood at this size was too loud.
   &::before {
     content: '';
     position: absolute;
@@ -113,7 +108,6 @@
     text-wrap: balance;
   }
 
-  // Stretched link: the whole row is the click target, chips stay on top.
   &__link {
     color: inherit;
 
@@ -181,7 +175,7 @@
   &__chips {
     grid-area: chips;
     position: relative;
-    z-index: 1; // above the stretched link
+    z-index: 1;
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem 0.5rem;

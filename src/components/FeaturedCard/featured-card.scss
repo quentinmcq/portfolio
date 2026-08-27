@@ -2,25 +2,16 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: clamp(1.25rem, 2.5vw, 1.75rem);
   padding: clamp(1.5rem, 3vw, 2.25rem);
   background: var(--bg-elevated);
   border: 1px solid var(--line);
   transition: border-color var(--dur-mid) var(--ease-out);
 
-  // In the sticky column the card has a fixed footprint: header pinned top,
-  // the role and its description settle at the bottom.
-  @media (min-width: $lg) {
-    aspect-ratio: 4 / 3;
-  }
-
   &--linked {
     cursor: pointer;
   }
 
-  // The arrow link is stretched over the whole card (see &__link::after):
-  // one link, one destination, the entire card as the target.
   &--linked:hover {
     border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
 
@@ -63,9 +54,6 @@
     white-space: nowrap;
   }
 
-  // Never transform the anchor itself: a transformed element becomes the
-  // containing block of its absolute descendants and the stretched ::after
-  // would collapse onto the icon on hover — animate the svg instead.
   &__link {
     display: inline-flex;
     color: var(--fg-faint);
@@ -75,7 +63,6 @@
       transition: transform var(--dur-mid) var(--ease-out);
     }
 
-    // Stretched link: covers the card, so a click anywhere follows it.
     &::after {
       content: '';
       position: absolute;

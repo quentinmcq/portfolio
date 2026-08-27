@@ -2,8 +2,6 @@
   padding-bottom: clamp(2rem, 4vw, 3rem);
   border-bottom: 1px solid var(--line);
 
-  // The tools run as a sentence — wrapping display type, each brand dot
-  // doing the job of a bullet.
   &__list {
     display: flex;
     flex-wrap: wrap;

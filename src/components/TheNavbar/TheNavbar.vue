@@ -76,21 +76,20 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 
 import TheLocaleSwitcher from '@/components/TheLocaleSwitcher/TheLocaleSwitcher.vue'
 import { useActiveSection } from '@/composables/active-section'
+import { useMessageList } from '@/composables/message-list'
 import { useTheme } from '@/composables/theme'
 import { CONTACTS } from '@/data/contacts'
 
 import TheNavDrawer from './TheNavDrawer/TheNavDrawer.vue'
 
-const { tm } = useI18n()
 const { theme, toggleTheme } = useTheme()
 const { active } = useActiveSection()
 
-const menu = computed(() => tm('menu') as Array<{ link: string; title: string }>)
+const menu = useMessageList<{ link: string; title: string }>('menu')
 const { github: githubUrl, linkedin: linkedinUrl } = CONTACTS
 
 const drawer = ref(false)

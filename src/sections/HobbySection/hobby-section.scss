@@ -19,8 +19,6 @@
     --tilt: 0deg;
     --lift: 0rem;
 
-    // The reveal transform lives on the slot, the tilt on the card — they
-    // must not fight over the same transform.
     @media (min-width: $md) {
       padding-top: var(--lift);
     }
@@ -41,13 +39,6 @@
     transform var(--dur-slow) var(--ease-out),
     border-color var(--dur-mid) var(--ease-out);
 
-  // Side by side, the three cards want a common footprint.
-  @media (min-width: $md) {
-    min-height: 19rem;
-  }
-
-  // Every card lifts and straightens on hover — the ones with a link are
-  // clickable edge to edge (see &__link) and their arrow answers.
   &:hover {
     transform: rotate(0deg) translateY(-6px);
     border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
@@ -80,9 +71,6 @@
     color: var(--fg-muted);
   }
 
-  // Stretched link with the arrow pinned to the corner. The anchor stays in
-  // normal flow so its ::after resolves against the card; keyboard focus
-  // rings the card.
   &__link {
     color: var(--fg-faint);
     transition: color var(--dur-fast) var(--ease-out);

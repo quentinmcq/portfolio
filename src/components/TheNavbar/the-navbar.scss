@@ -24,10 +24,6 @@
     grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: 1rem;
-
-    @media (min-width: $xl) {
-      grid-template-columns: auto 1fr auto auto;
-    }
   }
 
   &__brand {
@@ -51,7 +47,7 @@
     align-items: center;
     gap: 1.5rem;
 
-    @media (min-width: $xl) {
+    @media (min-width: $lg) {
       display: flex;
       justify-self: end;
       margin-right: 1rem;
@@ -103,6 +99,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    grid-column: 3;
   }
 
   &__icon-btn {
@@ -148,7 +145,7 @@
       }
     }
 
-    @media (min-width: $xl) {
+    @media (min-width: $lg) {
       display: none;
     }
   }

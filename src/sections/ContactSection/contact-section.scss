@@ -70,7 +70,6 @@
     font-size: var(--fs-body);
   }
 
-  // The one channel that isn't a link (where I am) reads as plain data.
   span.contact__channel .contact__channel-val {
     color: var(--fg-muted);
   }

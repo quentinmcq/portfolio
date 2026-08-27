@@ -1,7 +1,5 @@
 .hero {
   position: relative;
-  // Fills the viewport, but stops growing on very tall screens so the name
-  // doesn't sink to the bottom of an empty wall.
   min-height: min(100dvh, 60rem);
   display: flex;
   align-items: stretch;
@@ -14,7 +12,7 @@
 
   &__container {
     position: relative;
-    z-index: 1; // sit above the ASCII backdrop (z-index: 0)
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -34,15 +32,13 @@
     font-size: var(--fs-display-xl);
     line-height: 0.86;
     letter-spacing: -0.05em;
-    margin: 0 0 0 -0.04em; // optical alignment of the Q's bowl with the text edge
+    margin: 0 0 0 -0.04em;
     color: var(--fg);
   }
 
   &__title-line {
     display: block;
 
-    // The staircase — the surname steps in under the first name, heavier and
-    // narrower.
     &--accent {
       margin-left: 0.24em;
       font-weight: 700;
@@ -64,7 +60,6 @@
     line-height: 1.3;
     letter-spacing: -0.015em;
     color: var(--fg);
-    text-wrap: pretty;
   }
 
   &__cta {

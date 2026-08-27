@@ -28,7 +28,6 @@ function applyTheme(value: Theme) {
   meta?.setAttribute('content', value === 'dark' ? '#0d0d10' : '#f5f1e8')
 }
 
-// Same resolution order as the inline head script — keep the two in sync.
 function readStoredTheme(): Theme {
   const stored = localStorage.getItem(STORAGE_KEY)
   if (stored === 'dark' || stored === 'light') return stored

@@ -11,8 +11,6 @@
   position: fixed;
   top: 0;
   right: 0;
-  // dvh, not vh: the drawer is a mobile pattern — vh would push the footer
-  // behind the browser's URL bar.
   height: 100dvh;
   width: min(440px, 86vw);
   background: var(--bg-elevated);

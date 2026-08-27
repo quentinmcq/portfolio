@@ -109,9 +109,6 @@ function close() {
   emit('update:open', false)
 }
 
-// Move focus into the dialog on open; hand it back to the trigger on close.
-// preventScroll: restoring focus must not fight an anchor scroll started by
-// the very link click that closed the drawer.
 watch(
   () => open,
   async (isOpen) => {
