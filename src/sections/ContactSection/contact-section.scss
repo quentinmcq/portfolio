@@ -29,7 +29,7 @@
         transform var(--dur-fast) var(--ease-out);
     }
 
-    &:hover {
+    @include hover {
       color: var(--accent-text);
 
       svg {
@@ -74,11 +74,13 @@
     color: var(--fg-muted);
   }
 
-  a.contact__channel:hover {
-    color: var(--accent-text);
-
-    .contact__channel-key {
+  a.contact__channel {
+    @include hover {
       color: var(--accent-text);
+
+      .contact__channel-key {
+        color: var(--accent-text);
+      }
     }
   }
 }

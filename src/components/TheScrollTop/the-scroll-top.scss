@@ -13,6 +13,8 @@
   border-radius: 999px;
   color: var(--fg);
   cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
   opacity: 0;
   visibility: hidden;
   transform: translateY(8px) scale(0.96);
@@ -34,7 +36,7 @@
     pointer-events: auto;
   }
 
-  &:hover {
+  @include hover {
     color: var(--accent-text);
     border-color: color-mix(in srgb, var(--accent-text) 50%, transparent);
   }

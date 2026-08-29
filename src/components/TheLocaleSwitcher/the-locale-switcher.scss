@@ -16,7 +16,7 @@
     cursor: pointer;
     transition: color var(--dur-fast) var(--ease-out);
 
-    &:hover {
+    @include hover {
       color: var(--fg);
     }
 

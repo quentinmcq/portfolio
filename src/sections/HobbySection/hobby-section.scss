@@ -39,7 +39,7 @@
     transform var(--dur-slow) var(--ease-out),
     border-color var(--dur-mid) var(--ease-out);
 
-  &:hover {
+  @include hover {
     transform: rotate(0deg) translateY(-6px);
     border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
 

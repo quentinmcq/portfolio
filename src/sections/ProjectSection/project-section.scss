@@ -9,6 +9,25 @@
   }
 }
 
+@mixin project-row-active {
+  &::before {
+    opacity: 1;
+  }
+
+  &::after {
+    transform: scaleY(1);
+  }
+
+  .project-row__year,
+  .project-row__arrow {
+    color: var(--accent-text);
+  }
+
+  .project-row__kind {
+    border-color: color-mix(in srgb, var(--accent-text) 45%, var(--line));
+  }
+}
+
 .project-row {
   position: relative;
   isolation: isolate;
@@ -57,24 +76,12 @@
     transition: transform var(--dur-mid) var(--ease-out);
   }
 
-  &:hover,
+  @include hover {
+    @include project-row-active;
+  }
+
   &:focus-within {
-    &::before {
-      opacity: 1;
-    }
-
-    &::after {
-      transform: scaleY(1);
-    }
-
-    .project-row__year,
-    .project-row__arrow {
-      color: var(--accent-text);
-    }
-
-    .project-row__kind {
-      border-color: color-mix(in srgb, var(--accent-text) 45%, var(--line));
-    }
+    @include project-row-active;
   }
 
   &__year,
@@ -158,8 +165,10 @@
       transform var(--dur-mid) var(--ease-out);
   }
 
-  &:hover &__arrow {
-    transform: translate(4px, -4px);
+  @include hover {
+    .project-row__arrow {
+      transform: translate(4px, -4px);
+    }
   }
 
   &__subtitle {

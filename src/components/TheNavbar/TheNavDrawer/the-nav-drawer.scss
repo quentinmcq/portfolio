@@ -46,7 +46,7 @@
       color var(--dur-fast) var(--ease-out),
       transform var(--dur-fast) var(--ease-out);
 
-    &:hover {
+    @include hover {
       color: var(--accent-text);
       transform: rotate(90deg);
     }
@@ -76,7 +76,7 @@
       letter-spacing: -0.035em;
     }
 
-    &:hover {
+    @include hover {
       color: var(--accent-text);
       padding-left: 0.5rem;
     }
@@ -110,7 +110,7 @@
         transform var(--dur-fast) var(--ease-out);
     }
 
-    &:hover {
+    @include hover {
       color: var(--accent-text);
 
       svg {

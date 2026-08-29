@@ -109,8 +109,10 @@
     transition: transform var(--dur-mid) var(--ease-out);
   }
 
-  &:hover svg {
-    transform: translateX(3px);
+  @include hover {
+    svg {
+      transform: translateX(3px);
+    }
   }
 
   &--primary {
@@ -118,7 +120,7 @@
     color: var(--ink);
     border-color: var(--accent-button);
 
-    &:hover {
+    @include hover {
       background: var(--accent-deep);
       border-color: var(--accent-deep);
     }
@@ -129,7 +131,7 @@
     color: var(--fg);
     border-color: var(--line-strong);
 
-    &:hover {
+    @include hover {
       color: var(--accent-text);
       border-color: var(--accent-text);
     }

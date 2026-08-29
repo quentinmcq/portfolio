@@ -43,7 +43,7 @@
         transform var(--dur-fast) var(--ease-out);
     }
 
-    &:hover {
+    @include hover {
       color: var(--accent-text);
 
       svg {

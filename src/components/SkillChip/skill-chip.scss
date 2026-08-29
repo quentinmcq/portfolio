@@ -32,7 +32,7 @@
     white-space: nowrap;
   }
 
-  &:hover {
+  @include hover {
     color: var(--fg);
     border-color: color-mix(in srgb, var(--chip-color) 70%, var(--line));
     background: color-mix(in srgb, var(--chip-color) 8%, transparent);
@@ -62,7 +62,7 @@
       box-shadow: 0 0 0 0.08em color-mix(in srgb, var(--chip-color) 22%, transparent);
     }
 
-    &:hover {
+    @include hover {
       color: var(--accent-text);
       border-color: transparent;
       background: transparent;

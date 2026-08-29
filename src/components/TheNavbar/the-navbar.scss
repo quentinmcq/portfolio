@@ -82,15 +82,19 @@
       transition: transform var(--dur-mid) var(--ease-out);
     }
 
-    &:hover,
-    &.is-active {
+    @include hover {
       &::after {
         transform: scaleX(1);
         transform-origin: left;
       }
     }
 
-    &:hover {
+    &.is-active::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    @include hover {
       color: var(--accent-text);
     }
   }
@@ -118,7 +122,7 @@
       color var(--dur-fast) var(--ease-out),
       border-color var(--dur-fast) var(--ease-out);
 
-    &:hover {
+    @include hover {
       color: var(--accent-text);
       border-color: var(--accent-text);
     }
@@ -137,7 +141,7 @@
     cursor: pointer;
     transition: border-color var(--dur-fast) var(--ease-out);
 
-    &:hover {
+    @include hover {
       border-color: var(--accent-text);
 
       .navbar__menu-line {

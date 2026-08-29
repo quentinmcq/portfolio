@@ -10,16 +10,16 @@
 
   &--linked {
     cursor: pointer;
-  }
 
-  &--linked:hover {
-    border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+    @include hover {
+      border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
 
-    .featured-card__link {
-      color: var(--accent-text);
+      .featured-card__link {
+        color: var(--accent-text);
 
-      svg {
-        transform: translate(3px, -3px);
+        svg {
+          transform: translate(3px, -3px);
+        }
       }
     }
   }

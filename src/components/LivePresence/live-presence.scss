@@ -61,10 +61,12 @@
       opacity var(--dur-fast) var(--ease-out);
   }
 
-  &:hover &__label {
-    max-width: 8rem;
-    margin-left: 0.45rem;
-    opacity: 1;
+  @include hover {
+    .presence__label {
+      max-width: 8rem;
+      margin-left: 0.45rem;
+      opacity: 1;
+    }
   }
 
   @keyframes presence-pulse {
