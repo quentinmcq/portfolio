@@ -25,7 +25,7 @@
         </button>
       </div>
 
-      <nav class="drawer__nav" :aria-label="$t('common.aria-nav-mobile')">
+      <nav class="drawer__nav">
         <a
           v-for="item in menu"
           :key="item.link"
@@ -38,7 +38,7 @@
       </nav>
 
       <div class="drawer__resources">
-        <a class="drawer__resource" :href="linkedinUrl" target="_blank" rel="noopener">
+        <a class="drawer__resource" :href="CONTACTS.linkedin" target="_blank" rel="noopener">
           <span>LinkedIn</span>
           <svg
             aria-hidden="true"
@@ -54,7 +54,7 @@
             <path d="M7 17 17 7M9 7h8v8" />
           </svg>
         </a>
-        <a class="drawer__resource" :href="githubUrl" target="_blank" rel="noopener">
+        <a class="drawer__resource" :href="CONTACTS.github" target="_blank" rel="noopener">
           <span>GitHub</span>
           <svg
             aria-hidden="true"
@@ -86,14 +86,11 @@
 <script setup lang="ts">
 import { nextTick, useTemplateRef, watch } from 'vue'
 
-interface MenuItem {
-  link: string
-  title: string
-}
+import type { MenuItem } from '@/types/MenuItem'
+
+import { CONTACTS } from '@/data/contacts'
 
 const { open } = defineProps<{
-  githubUrl: string
-  linkedinUrl: string
   menu: MenuItem[]
   open: boolean
 }>()
@@ -124,8 +121,13 @@ watch(
 )
 
 function onKeydown(e: KeyboardEvent) {
-  if (e.key === 'Escape') return close()
-  if (e.key !== 'Tab' || !drawerRef.value) return
+  if (e.key === 'Escape') {
+    return close()
+  }
+
+  if (e.key !== 'Tab' || !drawerRef.value) {
+    return
+  }
 
   const focusables = drawerRef.value.querySelectorAll<HTMLElement>(
     'a, button, [tabindex]:not([tabindex="-1"])'

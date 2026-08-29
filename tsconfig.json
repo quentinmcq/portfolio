@@ -1,6 +1,6 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "include": ["vite.config.*", "env.d.ts", "src/**/*", "worker/**/*"],
+  "include": ["vite.config.*", "src/**/*", "worker/**/*"],
   "compilerOptions": {
     "noUnusedLocals": true,
     "paths": {

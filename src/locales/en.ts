@@ -10,7 +10,6 @@ export default {
     name: 'Macq',
     'name-upper': 'MACQ',
     'open-menu': 'Open menu',
-    'rotate-device': 'Please rotate your device',
     'skip-to-content': 'Skip to content'
   },
 
@@ -29,7 +28,6 @@ export default {
       eyebrow: 'Current role',
       'link-label': 'Details on LinkedIn',
       period: 'Permanent · since 2023',
-      'stack-label': 'Day-to-day',
       title: 'Full-stack developer at Motoblouz'
     },
     'kind-education': 'Education',
@@ -37,35 +35,34 @@ export default {
       {
         kind: 'work',
         location: 'Motoblouz · Carvin',
-        subtitle: 'Permanent · cross-team projects, internal tooling, IS strategy.',
-        title: 'Full-stack developer',
-        year: '2023 →'
-      },
-      {
-        kind: 'work',
-        location: 'Motoblouz · Carvin',
-        subtitle: 'Apprenticeship · high-impact e-commerce features.',
+        subtitle: 'Apprenticeship',
         title: 'Web developer',
         year: '2021 — 2023'
       },
       {
         kind: 'work',
         location: 'Motoblouz · Carvin',
-        subtitle: 'Internship · rebuilt an unpaid-invoices tracking tool.',
+        subtitle: 'Internship · rebuild of an unpaid-invoices tracking tool',
         title: 'Web developer',
         year: '2021'
       },
       {
         kind: 'education',
         location: 'EPSI · Lille',
-        title: 'Master in Computer Science & Information Systems',
+        title: "Master's degree in computer science",
         year: '2021 — 2023'
       },
       {
         kind: 'education',
-        location: 'IUT — Hauts-de-France',
-        title: 'Higher education in computer science',
-        year: '2018 — 2021'
+        location: 'IUT · Lens',
+        title: "Professional bachelor's degree in computer science",
+        year: '2020 — 2021'
+      },
+      {
+        kind: 'education',
+        location: 'IUT · Lens',
+        title: 'Two-year technical degree (DUT) in computer science',
+        year: '2018 — 2020'
       }
     ],
     'main-title': 'Background'
@@ -93,7 +90,6 @@ export default {
         title: 'Manga'
       },
       {
-        button: 'See the club',
         description:
           'Started climbing during my studies and got back into it over the last few years, with a handful of competitions under my belt.',
         title: 'Climbing'
@@ -107,8 +103,6 @@ export default {
   },
 
   languages: {
-    en: 'English',
-    fr: 'French',
     title: 'Languages'
   },
 
@@ -145,7 +139,7 @@ export default {
     'kind-school': 'School',
     list: [
       {
-        chips: ['Vue', 'TypeScript', 'Bun', 'Cloudflare', 'Resend'],
+        chips: ['Vue', 'TypeScript', 'Bun', 'Cloudflare'],
         kind: 'personal',
         link: repoUrl('portfolio'),
         subtitle: '2026 rebuild of my professional portfolio.',
@@ -181,7 +175,7 @@ export default {
       {
         chips: ['Symfony', 'Vue', 'PHP', 'Docker', 'API'],
         kind: 'private',
-        subtitle: 'Internal unpaid-invoices tracking tool.',
+        subtitle: "Rebuild of Motoblouz's internal unpaid-invoices tracking tool.",
         title: 'Unpaid Tracking',
         year: '2021'
       },
@@ -214,11 +208,11 @@ export default {
         primary: true
       },
       {
-        content: ['ESLint', 'Oxlint', 'Vitest', 'Playwright', 'Bun'],
+        content: ['Oxlint', 'Vitest', 'Playwright', 'Bun'],
         label: 'Tests & tooling'
       },
       {
-        content: ['MySQL', 'RabbitMQ', 'Docker', 'GitLab', 'Jenkins', 'Grafana'],
+        content: ['MySQL', 'RabbitMQ', 'Docker', 'Grafana'],
         label: 'Infra & data'
       }
     ],
@@ -226,6 +220,7 @@ export default {
   },
 
   theme: {
-    toggle: 'Toggle theme'
+    'to-dark': 'Switch to dark theme',
+    'to-light': 'Switch to light theme'
   }
 }

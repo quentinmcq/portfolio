@@ -1,7 +1,7 @@
 <template>
-  <section :id="componentName" class="section project">
+  <section id="project" class="section project">
     <div class="container">
-      <CategoryTitle :component-name wide />
+      <CategoryTitle section="project" wide />
 
       <ol class="project__index">
         <li
@@ -28,11 +28,7 @@
           </h3>
 
           <div class="project-row__meta">
-            <span
-              v-if="item.kind"
-              class="project-row__kind"
-              :class="`project-row__kind--${item.kind}`"
-            >
+            <span class="project-row__kind" :class="`project-row__kind--${item.kind}`">
               {{ $t(`project.kind-${item.kind}`) }}
             </span>
             <svg
@@ -72,8 +68,6 @@ import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue'
 import SkillChip from '@/components/SkillChip/SkillChip.vue'
 import { useMessageList } from '@/composables/message-list'
 import type { Project } from '@/types/Project'
-
-const componentName = 'project'
 
 const projects = useMessageList<Project>('project.list')
 </script>

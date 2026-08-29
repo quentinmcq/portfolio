@@ -1,7 +1,7 @@
 <template>
-  <section :id="componentName" class="section skill">
+  <section id="skill" class="section skill">
     <div class="container spread">
-      <CategoryTitle class="spread__head" :component-name />
+      <CategoryTitle class="spread__head" section="skill" />
 
       <div class="spread__body">
         <div v-if="primary" class="skill-lead">
@@ -21,7 +21,7 @@
         <ol class="skill-piles">
           <li
             v-for="(pile, index) in secondary"
-            :key="pile.label"
+            :key="index"
             class="skill-pile"
             data-reveal
             :style="{ '--reveal-delay': `${(index + 1) * 80}ms` }"
@@ -47,8 +47,6 @@ import type { Skill } from '@/types/Skill'
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue'
 import SkillChip from '@/components/SkillChip/SkillChip.vue'
 import { useMessageList } from '@/composables/message-list'
-
-const componentName = 'skill'
 
 const skills = useMessageList<Skill>('skill.list')
 const primary = computed(() => skills.value.find((skill) => skill.primary))

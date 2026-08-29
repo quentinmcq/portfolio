@@ -29,10 +29,11 @@
         --paper: #f5f1e8;
         --accent: #ff5b3a;
         --muted: rgba(245, 241, 232, 0.62);
-        --faint: rgba(245, 241, 232, 0.38);
+        --faint: rgba(245, 241, 232, 0.52);
         --line: rgba(245, 241, 232, 0.12);
         --font-display: 'Bricolage Grotesque', 'Helvetica Neue', Helvetica, Arial, sans-serif;
         --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+        --pad: clamp(1.5rem, 4vw, 3rem);
       }
 
       *,
@@ -58,7 +59,9 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: clamp(1.5rem, 4vw, 3rem);
+        padding: max(var(--pad), env(safe-area-inset-top))
+          max(var(--pad), env(safe-area-inset-right)) max(var(--pad), env(safe-area-inset-bottom))
+          max(var(--pad), env(safe-area-inset-left));
         background:
           radial-gradient(120% 80% at 90% -10%, rgba(255, 91, 58, 0.07), transparent 60%),
           radial-gradient(60% 60% at 0% 110%, rgba(212, 165, 116, 0.05), transparent 60%);
@@ -160,7 +163,7 @@
       }
 
       a.back:hover {
-        background: #d6411e;
+        background: #e04a26;
       }
 
       a.back svg {

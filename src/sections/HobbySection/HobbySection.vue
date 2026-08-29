@@ -1,12 +1,12 @@
 <template>
-  <section :id="componentName" class="section section--band hobby">
+  <section id="hobby" class="section section--band hobby">
     <div class="container">
-      <CategoryTitle :component-name center />
+      <CategoryTitle section="hobby" center />
 
       <ul class="hobby__cards">
         <li
           v-for="(entry, index) in hobbies"
-          :key="entry.title"
+          :key="index"
           class="hobby__slot"
           data-reveal
           :style="{
@@ -55,8 +55,6 @@ import type { Hobby } from '@/types/Hobby'
 
 const TILTS = ['-1.8deg', '1.3deg', '-0.9deg']
 const LIFTS = ['0rem', '2.75rem', '1.25rem']
-
-const componentName = 'hobby'
 
 const hobbies = useMessageList<Hobby>('hobby.list')
 </script>

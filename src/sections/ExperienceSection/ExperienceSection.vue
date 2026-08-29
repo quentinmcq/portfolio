@@ -1,8 +1,8 @@
 <template>
-  <section :id="componentName" class="section experience">
+  <section id="experience" class="section experience">
     <div class="container spread">
       <div class="spread__head">
-        <CategoryTitle :component-name />
+        <CategoryTitle section="experience" />
 
         <FeaturedCard
           :eyebrow="$t('experience.featured.eyebrow')"
@@ -27,7 +27,7 @@
           </div>
 
           <div class="timeline__entries">
-            <TimelineRoadItem v-for="item in band.items" :key="item.title" :item />
+            <TimelineRoadItem v-for="(item, index) in band.items" :key="index" :item />
           </div>
         </li>
       </ol>
@@ -51,14 +51,12 @@ interface Band {
   year: string
 }
 
-const componentName = 'experience'
-
 const experiences = useMessageList<Experience>('experience.list')
 
 const bands = computed<Band[]>(() => {
   const byYear = new Map<string, Band>()
 
-  for (const item of experiences.value.slice(1)) {
+  for (const item of experiences.value) {
     const band = byYear.get(item.year)
     if (band) band.items.push(item)
     else byYear.set(item.year, { items: [item], year: item.year })

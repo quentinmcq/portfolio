@@ -1,12 +1,14 @@
 <template>
   <div class="locale-switcher" role="group" :aria-label="$t('languages.title')">
     <button
-      v-for="lang in availableLocales"
+      v-for="lang in SUPPORTED_LOCALES"
       :key="lang"
       class="locale-switcher__btn"
-      :class="{ 'is-active': currentLocale === lang }"
-      :aria-pressed="currentLocale === lang"
-      :aria-label="$t(`languages.${lang}`)"
+      :class="{ 'is-active': locale === lang }"
+      type="button"
+      :lang
+      :aria-pressed="locale === lang"
+      :aria-label="LOCALE_NAMES[lang]"
       @click="switchLocale(lang)"
     >
       {{ lang.toUpperCase() }}
@@ -15,19 +17,25 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-import { LOCALE_STORAGE_KEY } from '@/i18n'
+import {
+  applyLocale,
+  LOCALE_NAMES,
+  LOCALE_STORAGE_KEY,
+  SUPPORTED_LOCALES,
+  type Locale
+} from '@/i18n'
 
-const { availableLocales, locale } = useI18n()
+const { locale } = useI18n()
 
-const currentLocale = computed(() => locale.value)
+function switchLocale(lang: Locale) {
+  if (locale.value === lang) {
+    return
+  }
 
-function switchLocale(lang: string) {
-  if (locale.value === lang) return
-  locale.value = lang
-  document.documentElement.lang = lang
+  applyLocale(lang)
+
   localStorage.setItem(LOCALE_STORAGE_KEY, lang)
 }
 </script>

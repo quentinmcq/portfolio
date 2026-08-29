@@ -1,7 +1,7 @@
 .presence {
   position: fixed;
-  left: clamp(1rem, 2vw, 2rem);
-  bottom: clamp(1.25rem, 2.5vw, 2.5rem);
+  left: calc(clamp(1rem, 2vw, 2rem) + env(safe-area-inset-left));
+  bottom: calc(clamp(1.25rem, 2.5vw, 2.5rem) + env(safe-area-inset-bottom));
   z-index: 90;
   display: inline-flex;
   align-items: center;
@@ -18,10 +18,12 @@
     0 8px 24px -14px rgba(0, 0, 0, 0.5);
   transition:
     opacity var(--dur-mid) var(--ease-out),
+    visibility var(--dur-mid) var(--ease-out),
     transform var(--dur-mid) var(--ease-out);
 
   &.is-hidden {
     opacity: 0;
+    visibility: hidden;
     transform: translateY(calc(100% + 2.5rem));
     pointer-events: none;
   }
@@ -59,8 +61,7 @@
       opacity var(--dur-fast) var(--ease-out);
   }
 
-  &:hover &__label,
-  &:focus-within &__label {
+  &:hover &__label {
     max-width: 8rem;
     margin-left: 0.45rem;
     opacity: 1;

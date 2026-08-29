@@ -15,8 +15,8 @@
 
 .skip-link {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: env(safe-area-inset-top);
+  left: env(safe-area-inset-left);
   z-index: 1000;
   padding: 10px 16px;
   background: var(--accent-button);

@@ -1,7 +1,7 @@
 <template>
-  <header class="navbar" :class="{ 'is-scrolled': scrolled }" role="banner">
+  <header class="navbar" :class="{ 'is-scrolled': scrolled }">
     <div class="container navbar__inner">
-      <a class="navbar__brand" href="#top" :aria-label="$t('common.back-to-top')">
+      <a class="navbar__brand" href="#top">
         <span class="navbar__brand-mark">Q.</span><span class="navbar__brand-name">Macq</span>
       </a>
 
@@ -23,7 +23,7 @@
         <button
           class="navbar__icon-btn"
           type="button"
-          :aria-label="$t('theme.toggle')"
+          :aria-label="$t(theme === 'dark' ? 'theme.to-light' : 'theme.to-dark')"
           @click="toggleTheme"
         >
           <svg
@@ -72,41 +72,30 @@
     </div>
   </header>
 
-  <TheNavDrawer v-model:open="drawer" :menu :linkedin-url="linkedinUrl" :github-url="githubUrl" />
+  <TheNavDrawer v-model:open="drawer" :menu />
 </template>
 
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
+
+import type { MenuItem } from '@/types/MenuItem'
 
 import TheLocaleSwitcher from '@/components/TheLocaleSwitcher/TheLocaleSwitcher.vue'
 import { useActiveSection } from '@/composables/active-section'
 import { useMessageList } from '@/composables/message-list'
 import { useTheme } from '@/composables/theme'
-import { CONTACTS } from '@/data/contacts'
+import { useWindowScroll } from '@/composables/window-scroll'
 
 import TheNavDrawer from './TheNavDrawer/TheNavDrawer.vue'
 
 const { theme, toggleTheme } = useTheme()
 const { active } = useActiveSection()
+const { y } = useWindowScroll()
 
-const menu = useMessageList<{ link: string; title: string }>('menu')
-const { github: githubUrl, linkedin: linkedinUrl } = CONTACTS
+const menu = useMessageList<MenuItem>('menu')
 
 const drawer = ref(false)
-const scrolled = ref(false)
-
-function onScroll() {
-  scrolled.value = window.scrollY > 60
-}
-
-onMounted(() => {
-  onScroll()
-  window.addEventListener('scroll', onScroll, { passive: true })
-})
-
-onBeforeUnmount(() => {
-  window.removeEventListener('scroll', onScroll)
-})
+const scrolled = computed(() => y.value > 60)
 
 function toggleMenu() {
   drawer.value = !drawer.value

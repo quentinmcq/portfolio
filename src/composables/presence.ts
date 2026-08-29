@@ -1,9 +1,14 @@
 import { onBeforeUnmount, onMounted, readonly, ref } from 'vue'
 
-import { PRESENCE_ENDPOINT, PRESENCE_PING, PRESENCE_PING_INTERVAL_MS } from '@/shared/presence'
+import {
+  PRESENCE_ENDPOINT,
+  PRESENCE_PING,
+  PRESENCE_PING_INTERVAL_MS,
+  PRESENCE_PONG
+} from '@/shared/presence'
 
 const MAX_BACKOFF_MS = 30_000
-const DESKTOP_QUERY = '(min-width: 768px)'
+const DESKTOP_QUERY = '(min-width: 768px) and (hover: hover)'
 
 export function usePresence() {
   const count = ref(0)
@@ -18,7 +23,9 @@ export function usePresence() {
   let media: MediaQueryList | null = null
 
   function open() {
-    if (!active || typeof WebSocket === 'undefined') return
+    if (!active || typeof WebSocket === 'undefined') {
+      return
+    }
 
     const proto = location.protocol === 'https:' ? 'wss' : 'ws'
     socket = new WebSocket(`${proto}://${location.host}${PRESENCE_ENDPOINT}`)
@@ -30,18 +37,24 @@ export function usePresence() {
     })
 
     socket.addEventListener('message', (event) => {
-      try {
-        const data = JSON.parse(event.data)
-        if (typeof data.count === 'number') count.value = data.count
-      } catch {
-        // non-JSON frame (e.g. pong) — ignore
+      if (event.data === PRESENCE_PONG) {
+        return
+      }
+
+      const data = JSON.parse(event.data)
+
+      if (typeof data.count === 'number') {
+        count.value = data.count
       }
     })
 
     socket.addEventListener('close', () => {
       connected.value = false
       stopPing()
-      if (!disposed && active) scheduleReconnect()
+
+      if (!disposed && active) {
+        scheduleReconnect()
+      }
     })
 
     socket.addEventListener('error', () => socket?.close())
@@ -49,6 +62,7 @@ export function usePresence() {
 
   function scheduleReconnect() {
     const delay = Math.min(1000 * 2 ** attempts, MAX_BACKOFF_MS)
+
     attempts += 1
     reconnectTimer = setTimeout(open, delay)
   }
@@ -89,6 +103,7 @@ export function usePresence() {
   onMounted(() => {
     media = window.matchMedia(DESKTOP_QUERY)
     media.addEventListener('change', onMediaChange)
+
     if (media.matches) {
       active = true
       open()

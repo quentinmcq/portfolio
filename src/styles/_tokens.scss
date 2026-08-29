@@ -1,10 +1,8 @@
 :root {
   --ink: #0d0d10;
-  --ink-soft: #15151a;
   --paper: #f5f1e8;
-  --paper-soft: #ece6d8;
   --ember: #ff5b3a;
-  --ember-deep: #d6411e;
+  --ember-deep: #e04a26;
   --gold: #d4a574;
 
   --bg: var(--ink);
@@ -12,9 +10,9 @@
   --bg-inset: #08080a;
   --fg: var(--paper);
   --fg-muted: rgba(245, 241, 232, 0.62);
-  --fg-faint: rgba(245, 241, 232, 0.38);
+  --fg-faint: rgba(245, 241, 232, 0.52);
   --line: rgba(245, 241, 232, 0.12);
-  --line-strong: rgba(245, 241, 232, 0.28);
+  --line-strong: rgba(245, 241, 232, 0.36);
   --accent: var(--ember);
   --accent-deep: var(--ember-deep);
   --accent-button: var(--accent);
@@ -32,22 +30,7 @@
   --fs-caption: 0.8125rem;
   --fs-body: 1rem;
   --fs-body-lg: clamp(1.0625rem, 0.95rem + 0.4vw, 1.25rem);
-  --fs-display-sm: clamp(1.75rem, 1.3rem + 2.2vw, 2.75rem);
-  --fs-display-md: clamp(2.5rem, 1.4rem + 5.5vw, 4.5rem);
-  --fs-display-lg: clamp(2.75rem, 1.6rem + 5.6vw, 6rem);
   --fs-display-xl: clamp(3.75rem, 2rem + 11vw, 11.5rem);
-
-  --sp-1: 0.25rem;
-  --sp-2: 0.5rem;
-  --sp-3: 0.75rem;
-  --sp-4: 1rem;
-  --sp-5: 1.5rem;
-  --sp-6: 2rem;
-  --sp-7: 3rem;
-  --sp-8: 4rem;
-  --sp-9: 6rem;
-  --sp-10: 8rem;
-  --sp-11: 12rem;
 
   --container-max: 1280px;
   --container-pad: clamp(1.25rem, 2.5vw, 2.5rem);
@@ -55,7 +38,6 @@
   --head-sticky-top: 6.5rem;
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-in-out: cubic-bezier(0.7, 0, 0.3, 1);
   --dur-fast: 180ms;
   --dur-mid: 360ms;
   --dur-slow: 720ms;
@@ -66,12 +48,12 @@
   --bg-elevated: #fffdf9;
   --bg-inset: #ece8df;
   --fg: var(--ink);
-  --fg-muted: rgba(13, 13, 16, 0.66);
-  --fg-faint: rgba(13, 13, 16, 0.44);
+  --fg-muted: rgba(13, 13, 16, 0.72);
+  --fg-faint: rgba(13, 13, 16, 0.62);
   --line: rgba(13, 13, 16, 0.1);
-  --line-strong: rgba(13, 13, 16, 0.26);
-  --accent-button: var(--accent);
+  --line-strong: rgba(13, 13, 16, 0.46);
   --accent-text: #b8350f;
+  --gold: #8f5d24;
   --shadow-card: 0 24px 48px -28px rgba(15, 15, 20, 0.16), 0 12px 24px -20px rgba(15, 15, 20, 0.1);
   --grain-opacity: 0.05;
   --ascii-presence: 0.5;

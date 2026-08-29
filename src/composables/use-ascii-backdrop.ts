@@ -5,33 +5,28 @@ import { useTheme } from '@/composables/theme'
 const RAMP = ' .:-=+*#%@'
 const FONT_STACK = `'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace`
 
-// --- Presence knobs (the two dials to make it louder / quieter) ---
-const PRESENCE = 0.92 // global density of the resting texture (↑ = more glyphs)
-const POINTER_GAIN = 0.55 // how brightly the cursor blooms the ember accent
+const PRESENCE = 0.92
+const POINTER_GAIN = 0.55
 
-// --- Field shape ---
-const GAMMA = 1.55 // > 1 keeps the resting field sparse (mostly negative space)
+const GAMMA = 1.55
 const FREQ_X = 6
 const FREQ_Y = 5
 const FREQ_DIAG = 4
 const FREQ_RING = 26
-const DRIFT = 0.18 // base animation speed
+const DRIFT = 0.18
 
-// --- Pointer bloom dynamics ---
-const SIGMA = 0.13 // radius of the cursor glow (normalised to the hero)
-const POINTER_REST = 0.18 // ambient glow while the cursor rests inside the hero
+const SIGMA = 0.13
+const POINTER_REST = 0.18
 const POINTER_MAX = 0.5
-const POINTER_SPIKE = 0.06 // energy added per pointermove event
+const POINTER_SPIKE = 0.06
 
-// --- Colour ramp ---
 const ALPHA_MIN = 0.05
 const ALPHA_MAX = 0.5
-const EMBER_FROM = 0.55 // ramp position where glyphs start shifting to the accent
+const EMBER_FROM = 0.55
 
-// --- Cost ceiling ---
-const MAX_CELLS = 12000 // bounds per-frame work on a full-bleed 4K hero
+const MAX_CELLS = 12000
 const TARGET_FPS = 30
-const STATIC_T = 7.3 // frozen timestamp used for the reduced-motion frame
+const STATIC_T = 7.3
 
 type Rgb = [number, number, number]
 
@@ -41,14 +36,12 @@ export function useAsciiBackdrop(canvasRef: Readonly<ShallowRef<HTMLCanvasElemen
   let ctx: CanvasRenderingContext2D | null = null
   let host: HTMLElement | null = null
 
-  // Grid geometry
   let cols = 0
   let rows = 0
   let cellW = 0
   let cellH = 0
   let fontSize = 16
 
-  // Per-axis lookups (rebuilt on resize)
   let nx = new Float32Array(0)
   let ny = new Float32Array(0)
   let dx2 = new Float32Array(0)
@@ -56,10 +49,8 @@ export function useAsciiBackdrop(canvasRef: Readonly<ShallowRef<HTMLCanvasElemen
   let colWave = new Float32Array(0)
   let rowWave = new Float32Array(0)
 
-  // Colour string per ramp level (rebuilt on theme change)
   const colors: string[] = []
 
-  // Pointer state (normalised 0..1, centre at rest)
   let px = 0.5
   let py = 0.5
   let tx = 0.5
@@ -67,7 +58,6 @@ export function useAsciiBackdrop(canvasRef: Readonly<ShallowRef<HTMLCanvasElemen
   let energy = 0
   let inside = false
 
-  // Loop state
   let reduced = false
   let running = false
   let rafId = 0
@@ -87,8 +77,6 @@ export function useAsciiBackdrop(canvasRef: Readonly<ShallowRef<HTMLCanvasElemen
     return t * t * (3 - 2 * t)
   }
 
-  // Resolve a CSS variable to concrete rgb channels via a throwaway probe —
-  // getComputedStyle on a custom property may hand back the unresolved var().
   function resolveRgb(value: string): Rgb {
     const probe = document.createElement('span')
     probe.style.cssText = `position:absolute;left:-9999px;color:${value}`
@@ -124,8 +112,6 @@ export function useAsciiBackdrop(canvasRef: Readonly<ShallowRef<HTMLCanvasElemen
     const small = window.innerWidth < 768
     interval = 1000 / (small ? 24 : TARGET_FPS)
 
-    // Target glyph size, then enforce the cell ceiling so a full-bleed hero on
-    // a large monitor can't explode the per-frame work.
     fontSize = small ? 18 : 16
     cellW = fontSize * 0.6
     cellH = fontSize * 1.05
@@ -172,13 +158,11 @@ export function useAsciiBackdrop(canvasRef: Readonly<ShallowRef<HTMLCanvasElemen
     if (!ctx) return
     const sx = t * DRIFT
 
-    // Two of the four field terms are separable — precompute them per axis.
     for (let x = 0; x < cols; x++) colWave[x] = Math.sin(nx[x] * FREQ_X + sx * 0.6)
     for (let y = 0; y < rows; y++) rowWave[y] = Math.sin(ny[y] * FREQ_Y - sx * 0.5)
 
     ctx.clearRect(0, 0, cols * cellW, rows * cellH)
 
-    // The pointer bloom only touches a bounded window around the cursor.
     const active = energy > 0.012
     const inv2s2 = 1 / (2 * SIGMA * SIGMA)
     const reach = 3 * SIGMA
@@ -201,7 +185,6 @@ export function useAsciiBackdrop(canvasRef: Readonly<ShallowRef<HTMLCanvasElemen
           rWave +
           Math.sin((nx[x] + nyy) * FREQ_DIAG + sx * 0.3) +
           Math.sin((dx2[x] + dyy) * FREQ_RING - sx * 0.7)
-        // -4..4 → 0..1, gamma-biased toward sparse negative space.
         let val = Math.pow((v + 4) * 0.125, GAMMA) * PRESENCE
 
         if (inRowBand && x >= cMin && x <= cMax) {
@@ -211,7 +194,7 @@ export function useAsciiBackdrop(canvasRef: Readonly<ShallowRef<HTMLCanvasElemen
         }
 
         let i = (val * RAMP.length) | 0
-        if (i <= 0) continue // blank cell — skip the fillText entirely
+        if (i <= 0) continue
         if (i > last) i = last
         if (i !== prev) {
           ctx.fillStyle = colors[i]
@@ -261,7 +244,6 @@ export function useAsciiBackdrop(canvasRef: Readonly<ShallowRef<HTMLCanvasElemen
     }
   }
 
-  // Only burn frames while the hero is on-screen and the tab is focused.
   function evaluate() {
     if (reduced) return
     if (onscreen && visible) start()
@@ -334,7 +316,6 @@ export function useAsciiBackdrop(canvasRef: Readonly<ShallowRef<HTMLCanvasElemen
     )
     interObs.observe(canvas)
 
-    // The canvas snapshots the font face — repaint once the webfont is ready.
     void document.fonts?.ready.then(() => {
       if (reduced) drawStatic()
     })

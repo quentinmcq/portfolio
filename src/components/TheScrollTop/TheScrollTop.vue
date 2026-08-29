@@ -24,29 +24,22 @@
 </template>
 
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { ref, watch } from 'vue'
 
 import { useScrollHide } from '@/composables/scroll-hide'
+import { useWindowScroll } from '@/composables/window-scroll'
 
-const visible = ref(false)
+const { y } = useWindowScroll()
 const { hidden } = useScrollHide()
+const visible = ref(false)
 
-function onScroll() {
-  visible.value = window.scrollY > window.innerHeight * 0.8
-}
+watch(y, (value) => {
+  visible.value = value > window.innerHeight * 0.8
+})
 
 function scrollToTop() {
   window.scrollTo({ top: 0 })
 }
-
-onMounted(() => {
-  onScroll()
-  window.addEventListener('scroll', onScroll, { passive: true })
-})
-
-onBeforeUnmount(() => {
-  window.removeEventListener('scroll', onScroll)
-})
 </script>
 
 <style lang="scss" src="./the-scroll-top.scss" scoped />

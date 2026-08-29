@@ -3,7 +3,7 @@ import { createApp, createSSRApp } from 'vue'
 import '@/styles/main.scss'
 
 import { syncTheme } from '@/composables/theme'
-import { initI18n, resolvePreferredLocale } from '@/i18n'
+import { applyLocale, i18n, resolvePreferredLocale } from '@/i18n'
 
 import App from './App.vue'
 
@@ -14,8 +14,7 @@ if (!container) {
 }
 
 const app = container.firstElementChild ? createSSRApp(App) : createApp(App)
-const i18n = initI18n(app)
-
+app.use(i18n)
 app.mount('#app')
 
 syncTheme()
@@ -23,7 +22,5 @@ syncTheme()
 const preferred = resolvePreferredLocale()
 
 if (i18n.global.locale.value !== preferred) {
-  i18n.global.locale.value = preferred
+  applyLocale(preferred)
 }
-
-document.documentElement.lang = preferred

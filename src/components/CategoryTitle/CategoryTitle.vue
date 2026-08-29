@@ -23,22 +23,18 @@ import { useI18n } from 'vue-i18n'
 
 const {
   center = false,
-  componentName,
+  section,
   wide = false
 } = defineProps<{
-  /** Centered heading — for full-bleed bands. */
   center?: boolean
-  componentName: string
-  /** Full-width heading with the kicker set on the right. */
+  section: string
   wide?: boolean
 }>()
 
 const { t, te } = useI18n()
 
-const heading = computed(() => (componentName ? t(`${componentName}.main-title`) : ''))
-const kicker = computed(() =>
-  componentName && te(`${componentName}.kicker`) ? t(`${componentName}.kicker`) : ''
-)
+const heading = computed(() => t(`${section}.main-title`))
+const kicker = computed(() => (te(`${section}.kicker`) ? t(`${section}.kicker`) : ''))
 </script>
 
 <style lang="scss" src="./category-title.scss" scoped />

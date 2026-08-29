@@ -10,7 +10,6 @@ export default {
     name: 'Macq',
     'name-upper': 'MACQ',
     'open-menu': 'Ouvrir le menu',
-    'rotate-device': "Veuillez faire pivoter l'appareil",
     'skip-to-content': 'Aller au contenu'
   },
 
@@ -29,7 +28,6 @@ export default {
       eyebrow: 'Poste actuel',
       'link-label': 'Détails sur LinkedIn',
       period: 'CDI · depuis 2023',
-      'stack-label': 'Au quotidien',
       title: 'Développeur full-stack chez Motoblouz'
     },
     'kind-education': 'Études',
@@ -37,35 +35,34 @@ export default {
       {
         kind: 'work',
         location: 'Motoblouz · Carvin',
-        subtitle: 'CDI · projets transverses, outils internes, stratégie SI.',
-        title: 'Développeur full-stack',
-        year: '2023 →'
-      },
-      {
-        kind: 'work',
-        location: 'Motoblouz · Carvin',
-        subtitle: 'Alternance · projets impactants côté e-commerce.',
+        subtitle: 'Alternance',
         title: 'Développeur web',
         year: '2021 — 2023'
       },
       {
         kind: 'work',
         location: 'Motoblouz · Carvin',
-        subtitle: "Stage · refonte d'un outil de suivi des impayés.",
+        subtitle: "Stage · refonte d'un outil de suivi des impayés",
         title: 'Développeur web',
         year: '2021'
       },
       {
         kind: 'education',
         location: 'EPSI · Lille',
-        title: "Master Expert en Informatique et Systèmes d'Information",
+        title: 'Master Informatique',
         year: '2021 — 2023'
       },
       {
         kind: 'education',
-        location: 'IUT — Hauts-de-France',
-        title: 'Formation supérieure en informatique',
-        year: '2018 — 2021'
+        location: 'IUT · Lens',
+        title: 'Licence pro Informatique',
+        year: '2020 — 2021'
+      },
+      {
+        kind: 'education',
+        location: 'IUT · Lens',
+        title: 'DUT Informatique',
+        year: '2018 — 2020'
       }
     ],
     'main-title': 'Parcours'
@@ -94,7 +91,6 @@ export default {
         title: 'Manga'
       },
       {
-        button: 'Voir le club',
         description:
           "Commencée pendant mes études, l'escalade est une activité que j'ai reprise ces dernières années, avec quelques compétitions à mon actif.",
         title: 'Escalade'
@@ -108,8 +104,6 @@ export default {
   },
 
   languages: {
-    en: 'Anglais',
-    fr: 'Français',
     title: 'Langues'
   },
 
@@ -182,7 +176,7 @@ export default {
       {
         chips: ['Symfony', 'Vue', 'PHP', 'Docker', 'API'],
         kind: 'private',
-        subtitle: 'Outil interne de suivi des impayés.',
+        subtitle: "Refonte de l'outil interne de suivi des impayés de Motoblouz.",
         title: 'Unpaid Tracking',
         year: '2021'
       },
@@ -215,11 +209,11 @@ export default {
         primary: true
       },
       {
-        content: ['ESLint', 'Oxlint', 'Vitest', 'Playwright', 'Bun'],
+        content: ['Oxlint', 'Vitest', 'Playwright', 'Bun'],
         label: 'Tests & outillage'
       },
       {
-        content: ['MySQL', 'RabbitMQ', 'Docker', 'GitLab', 'Jenkins', 'Grafana'],
+        content: ['MySQL', 'RabbitMQ', 'Docker', 'Grafana'],
         label: 'Infra & data'
       }
     ],
@@ -227,6 +221,7 @@ export default {
   },
 
   theme: {
-    toggle: 'Changer de thème'
+    'to-dark': 'Passer au thème sombre',
+    'to-light': 'Passer au thème clair'
   }
 }

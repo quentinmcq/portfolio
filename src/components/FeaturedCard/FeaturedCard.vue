@@ -36,39 +36,16 @@
         {{ description }}
       </p>
     </div>
-
-    <div v-if="stack?.length" class="featured-card__stack">
-      <span v-if="stackLabel" class="featured-card__stack-label">{{ stackLabel }}</span>
-      <ul class="featured-card__stack-list">
-        <li v-for="tech in stack" :key="tech">
-          <SkillChip :label="tech" />
-        </li>
-      </ul>
-    </div>
   </article>
 </template>
 
 <script setup lang="ts">
-import SkillChip from '@/components/SkillChip/SkillChip.vue'
-
-const {
-  description = undefined,
-  eyebrow,
-  linkHref = undefined,
-  linkLabel = undefined,
-  period = undefined,
-  stack = undefined,
-  stackLabel = undefined,
-  title
-} = defineProps<{
+const { description, eyebrow, linkHref, linkLabel, period, title } = defineProps<{
   description?: string
   eyebrow: string
   linkHref?: string
-  /** Accessible name of the (icon-only) link. */
   linkLabel?: string
   period?: string
-  stack?: string[]
-  stackLabel?: string
   title: string
 }>()
 </script>

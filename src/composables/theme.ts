@@ -1,8 +1,9 @@
-import { ref } from 'vue'
+import { readonly, ref } from 'vue'
 
 export type Theme = 'dark' | 'light'
 
 const STORAGE_KEY = 'theme'
+const THEME_COLOR: Record<Theme, string> = { dark: '#0d0d10', light: '#f5f1e8' }
 const theme = ref<Theme>('dark')
 
 export function useTheme() {
@@ -12,25 +13,18 @@ export function useTheme() {
     localStorage.setItem(STORAGE_KEY, theme.value)
   }
 
-  return { theme, toggleTheme }
+  return { theme: readonly(theme), toggleTheme }
 }
 
 export function syncTheme() {
-  theme.value = readStoredTheme()
+  theme.value = document.documentElement.classList.contains('theme-light') ? 'light' : 'dark'
 }
 
 function applyTheme(value: Theme) {
   const root = document.documentElement
+
   root.classList.toggle('theme-dark', value === 'dark')
   root.classList.toggle('theme-light', value === 'light')
 
-  const meta = document.querySelector('meta[name="theme-color"]')
-  meta?.setAttribute('content', value === 'dark' ? '#0d0d10' : '#f5f1e8')
-}
-
-function readStoredTheme(): Theme {
-  const stored = localStorage.getItem(STORAGE_KEY)
-  if (stored === 'dark' || stored === 'light') return stored
-
-  return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', THEME_COLOR[value])
 }

@@ -16,16 +16,15 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-import tool from '@/data/tools'
+import tools from '@/data/tools'
 
 const { label, size = 'md' } = defineProps<{
   label: string
-  /** `lg` renders the tool name as display type — no pill, just the dot. */
   size?: 'lg' | 'md'
 }>()
 
 const chipConfig = computed(() => {
-  return tool[label.toLowerCase()] ?? { color: '', label, link: '' }
+  return tools[label.toLowerCase()] ?? { color: '', label, link: '' }
 })
 
 const dotStyle = computed(() => ({

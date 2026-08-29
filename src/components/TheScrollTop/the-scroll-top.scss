@@ -1,7 +1,7 @@
 .scroll-top {
   position: fixed;
-  right: clamp(1rem, 2vw, 2rem);
-  bottom: clamp(1.25rem, 2.5vw, 2.5rem);
+  right: calc(clamp(1rem, 2vw, 2rem) + env(safe-area-inset-right));
+  bottom: calc(clamp(1.25rem, 2.5vw, 2.5rem) + env(safe-area-inset-bottom));
   z-index: 90;
   display: inline-flex;
   align-items: center;
@@ -14,12 +14,14 @@
   color: var(--fg);
   cursor: pointer;
   opacity: 0;
+  visibility: hidden;
   transform: translateY(8px) scale(0.96);
   box-shadow:
     inset 0 1px 0 color-mix(in srgb, white 14%, transparent),
     0 8px 24px -14px rgba(0, 0, 0, 0.5);
   transition:
     opacity var(--dur-mid) var(--ease-out),
+    visibility var(--dur-mid) var(--ease-out),
     transform var(--dur-mid) var(--ease-out),
     color var(--dur-fast) var(--ease-out),
     border-color var(--dur-fast) var(--ease-out);
@@ -27,6 +29,7 @@
 
   &.is-visible {
     opacity: 1;
+    visibility: visible;
     transform: none;
     pointer-events: auto;
   }

@@ -1,7 +1,7 @@
 <template>
-  <section :id="componentName" class="section contact">
+  <section id="contact" class="section contact">
     <div class="container spread">
-      <CategoryTitle class="spread__head" :component-name />
+      <CategoryTitle class="spread__head" section="contact" />
 
       <div class="spread__body">
         <a class="contact__email" :href="`mailto:${CONTACTS.email}`" data-reveal>
@@ -52,8 +52,6 @@
 <script setup lang="ts">
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue'
 import { CONTACTS } from '@/data/contacts'
-
-const componentName = 'contact'
 </script>
 
 <style lang="scss" src="./contact-section.scss" scoped />

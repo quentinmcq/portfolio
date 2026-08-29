@@ -22,13 +22,15 @@ No secrets required: contact goes through a plain `mailto:` link.
 ## Scripts
 
 ```sh
-bun install       # install dependencies
-bun run dev       # dev server (localhost:5173)
-bun run build     # production build + prerender
-bun run preview   # serve the built bundle locally
-bun run check     # format check + lint + typecheck
-bun run lint      # lint with auto-fix
-bun run deploy    # wrangler deploy (Cloudflare Workers)
+bun install
+bun run dev       # dev server on localhost:5173
+bun run build     # production build + prerender (dist/)
+bun run preview   # serve dist/ locally
+bun run check     # format check + lint + typecheck (vp check)
+bun run fmt       # same, with auto-fix
+bun run lint      # lint only, with auto-fix
+bun run deploy    # wrangler deploy
+bunx vp hooks enable   # once per clone: pre-commit hook running `vp staged`
 ```
 
 ## License

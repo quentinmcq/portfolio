@@ -10,6 +10,7 @@ node_modules
 
 # Build artifacts
 dist
+dist-server
 
 # Local env files
 .env*.local
@@ -18,6 +19,6 @@ dist
 # Logs
 *.log
 
-# Cloudflare Pages
+# Cloudflare
 .wrangler
 

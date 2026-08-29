@@ -8,7 +8,7 @@ const tools: Record<string, Tool> = {
   angular: {
     color: '#DD0031',
     label: 'Angular',
-    link: 'https://angular.io/'
+    link: 'https://angular.dev/'
   },
   api: {
     label: 'API',
@@ -34,25 +34,10 @@ const tools: Record<string, Tool> = {
     label: 'Docker',
     link: 'https://www.docker.com/'
   },
-  eslint: {
-    color: '#4B32C3',
-    label: 'ESLint',
-    link: 'https://eslint.org/'
-  },
-  gitlab: {
-    color: '#FC6D26',
-    label: 'GitLab',
-    link: 'https://gitlab.com/'
-  },
   grafana: {
     color: '#F46800',
     label: 'Grafana',
     link: 'https://grafana.com/'
-  },
-  jenkins: {
-    color: '#D24939',
-    label: 'Jenkins',
-    link: 'https://www.jenkins.io/'
   },
   laravel: {
     color: '#FF2D20',
@@ -108,11 +93,6 @@ const tools: Record<string, Tool> = {
     color: '#FF6600',
     label: 'RabbitMQ',
     link: 'https://www.rabbitmq.com/'
-  },
-  redis: {
-    color: '#DC382D',
-    label: 'Redis',
-    link: 'https://redis.io/'
   },
   resend: {
     color: 'var(--fg)',

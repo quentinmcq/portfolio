@@ -1,13 +1,13 @@
 import { DurableObject } from 'cloudflare:workers'
 
-import { PRESENCE_PING } from '@/shared/presence'
+import { PRESENCE_PING, PRESENCE_PONG } from '@/shared/presence'
 
 const WS_OPEN = 1
 
 export class PresenceCounter extends DurableObject<unknown> {
   constructor(ctx: DurableObjectState, env: unknown) {
     super(ctx, env)
-    ctx.setWebSocketAutoResponse(new WebSocketRequestResponsePair(PRESENCE_PING, 'pong'))
+    ctx.setWebSocketAutoResponse(new WebSocketRequestResponsePair(PRESENCE_PING, PRESENCE_PONG))
   }
 
   override fetch(): Response {
@@ -24,9 +24,8 @@ export class PresenceCounter extends DurableObject<unknown> {
   override webSocketClose(ws: WebSocket, code: number, reason: string): void {
     try {
       ws.close(code, reason)
-    } catch {
-      // already closing
-    }
+    } catch {}
+
     this.broadcast(ws)
   }
 
@@ -44,9 +43,7 @@ export class PresenceCounter extends DurableObject<unknown> {
     for (const ws of open) {
       try {
         ws.send(payload)
-      } catch {
-        // went away mid-broadcast; its close handler reconciles the count
-      }
+      } catch {}
     }
   }
 }
