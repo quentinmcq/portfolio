@@ -40,35 +40,11 @@
       <div class="drawer__resources">
         <a class="drawer__resource" :href="CONTACTS.linkedin" target="_blank" rel="noopener">
           <span>LinkedIn</span>
-          <svg
-            aria-hidden="true"
-            width="12"
-            height="12"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M7 17 17 7M9 7h8v8" />
-          </svg>
+          <ArrowIcon :size="12" :stroke-width="1.6" />
         </a>
         <a class="drawer__resource" :href="CONTACTS.github" target="_blank" rel="noopener">
           <span>GitHub</span>
-          <svg
-            aria-hidden="true"
-            width="12"
-            height="12"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M7 17 17 7M9 7h8v8" />
-          </svg>
+          <ArrowIcon :size="12" :stroke-width="1.6" />
         </a>
       </div>
 
@@ -84,6 +60,7 @@
 </template>
 
 <script setup lang="ts">
+import ArrowIcon from '@/components/ArrowIcon/ArrowIcon.vue'
 import { nextTick, useTemplateRef, watch } from 'vue'
 
 import type { MenuItem } from '@/types/MenuItem'

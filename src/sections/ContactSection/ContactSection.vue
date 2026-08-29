@@ -6,17 +6,7 @@
       <div class="spread__body">
         <a class="contact__email" :href="`mailto:${CONTACTS.email}`" data-reveal>
           <span>{{ CONTACTS.email }}</span>
-          <svg
-            aria-hidden="true"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M7 17 17 7M9 7h8v8" />
-          </svg>
+          <ArrowIcon :stroke-width="1.4" />
         </a>
 
         <ul
@@ -50,6 +40,7 @@
 </template>
 
 <script setup lang="ts">
+import ArrowIcon from '@/components/ArrowIcon/ArrowIcon.vue'
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue'
 import { CONTACTS } from '@/data/contacts'
 </script>

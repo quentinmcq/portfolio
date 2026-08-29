@@ -35,22 +35,16 @@ export default {
       {
         kind: 'work',
         location: 'Motoblouz · Carvin',
-        subtitle: 'Alternance',
-        title: 'Développeur web',
+        subtitle: 'Master Informatique · EPSI Lille',
+        title: 'Développeur web en alternance',
         year: '2021 — 2023'
       },
       {
         kind: 'work',
         location: 'Motoblouz · Carvin',
-        subtitle: "Stage · refonte d'un outil de suivi des impayés",
-        title: 'Développeur web',
+        subtitle: "Refonte d'un outil de suivi des impayés",
+        title: 'Stage développeur web',
         year: '2021'
-      },
-      {
-        kind: 'education',
-        location: 'EPSI · Lille',
-        title: 'Master Informatique',
-        year: '2021 — 2023'
       },
       {
         kind: 'education',
@@ -85,18 +79,19 @@ export default {
     list: [
       {
         button: 'Voir la collection',
-        description:
-          'Découvert grâce à un ami, les mangas sont rapidement devenus une véritable passion pour moi.',
+        description: 'Lecteur et collectionneur, suivi sur Mangacollec.',
+        detail: '933 volumes',
         link: 'https://mangacollec.com/user/kakashi/collection',
-        title: 'Manga'
+        title: 'Mangas'
       },
       {
-        description:
-          "Commencée pendant mes études, l'escalade est une activité que j'ai reprise ces dernières années, avec quelques compétitions à mon actif.",
+        description: 'Grimpe en salle, en bloc comme en voie.',
+        detail: '7 compétitions',
         title: 'Escalade'
       },
       {
-        description: 'Balades le week-end au guidon de ma Z650 dès que la météo le permet.',
+        description: 'Balades le week-end dès que la météo le permet.',
+        detail: 'Kawasaki Z650',
         title: 'Moto'
       }
     ],
@@ -135,24 +130,91 @@ export default {
   },
 
   project: {
+    'case-link-code': 'Voir le code',
+    'case-link-site': 'Voir le site',
+    cases: {
+      bomberman: {
+        facts: [
+          { label: 'Équipe', value: '3 personnes' },
+          { label: 'Période', value: 'Avril à juin 2019' },
+          { label: 'Code', value: '≈ 2 460 lignes' },
+          { label: 'Adversaires', value: "jusqu'à 3 bots" }
+        ],
+        'figure-alt':
+          'Schéma du plateau : murs, blocs destructibles, une bombe dont les flammes se propagent sur deux cases, un joueur et un bot.',
+        'figure-meta': 'Schéma',
+        'figure-title': 'Plateau',
+        lede: 'Un clone de Bomberman en Python, à jouer contre des amis ou des bots.',
+        paragraphs: [
+          "Projet scolaire à trois, d'avril à juin 2019 — notre premier vrai programme. Plateau, bombes, power-ups et malus cachés dans les blocs, jusqu'à quatre joueurs humains ou bots, le tout dessiné avec PyQt.",
+          "La partie la plus intéressante : les bots. Ils repèrent un bloc destructible à portée, posent une bombe s'ils peuvent se mettre à l'abri, et s'éloignent avant l'explosion."
+        ]
+      },
+      pilpoil: {
+        facts: [
+          { label: 'Données', value: '437 races référencées' },
+          { label: 'IA', value: 'Claude · bilans & symptômes' },
+          { label: 'Mobile', value: 'Capacitor · iOS & Android' },
+          { label: 'Version', value: 'v1.2' }
+        ],
+        'figure-alt':
+          "Page d'accueil de PilPoil sur mobile : « La santé de vos animaux, au poil », avec un bouton de création de compte et trois chiffres clés.",
+        'figure-meta': 'En production',
+        'figure-title': 'pilpoil.app',
+        lede: "Un carnet de santé numérique pour animaux, qui anticipe les risques selon la race et l'âge.",
+        paragraphs: [
+          "Le carnet de santé d'un animal, c'est souvent une pochette de papiers et des rappels qu'on oublie. PilPoil centralise l'historique médical, prévient avant les échéances et partage le dossier avec la famille ou le vétérinaire.",
+          "Le cœur : une base de 437 races avec leurs prédispositions et un calendrier de suivi recommandé. Claude croise ce profil avec l'historique pour produire des bilans et analyser un symptôme décrit par le propriétaire, réservé aux abonnés."
+        ]
+      },
+      portfolio: {
+        facts: [
+          { label: 'Hébergement', value: 'Cloudflare' },
+          { label: 'Historique', value: '78 commits' }
+        ],
+        'figure-meta': 'Compteur de visiteurs en direct',
+        'figure-title': 'worker/presence.ts',
+        lede: 'Le site que vous lisez : un SPA Vue prérendu, hébergé sur Cloudflare, sans librairie de composants.',
+        paragraphs: [
+          "L'objectif : un site qui charge instantanément et qui ne dépend d'aucune librairie de composants.",
+          "Le HTML est prérendu au build depuis le bundle SSR : la page est complète sans JavaScript, Vue s'hydrate ensuite pour les transitions.",
+          "Le compteur de visiteurs en direct est un Durable Object Cloudflare : chaque visiteur ouvre un WebSocket, l'objet garde les connexions en hibernation et diffuse le nombre de connectés à chaque arrivée ou départ."
+        ]
+      },
+      'wizard-tomb': {
+        facts: [
+          { label: 'Plateforme', value: 'iOS 26 · SwiftUI' },
+          { label: 'Moteur narratif', value: 'Ink via InkSwift' },
+          { label: 'Histoire', value: 'Originale, écrite pour le jeu' },
+          { label: 'Longueur', value: '1 790 lignes · 164 passages' }
+        ],
+        'figure-meta': 'Combat piloté par tags',
+        'figure-title': 'adventure.ink',
+        lede: 'Un livre dont vous êtes le héros, natif iOS, avec de vraies règles de jeu.',
+        paragraphs: [
+          'Le point de départ, ce sont les Défis Fantastiques de mon enfance : combat à 2d6 + Habileté, jets de Chance, inventaire et fins multiples. Je voulais retrouver ça sur téléphone.',
+          "L'aventure est écrite en Ink, pas en Swift. Les combats, l'inventaire et les effets ne vivent pas dans le texte : ce sont des tags que le moteur SwiftUI intercepte au fil de la lecture. L'écriture et la mécanique n'ont plus à se marcher dessus."
+        ]
+      }
+    },
     'kind-personal': 'Perso',
-    'kind-private': 'Privé',
-    'kind-school': 'École',
+    'kind-school': 'Études',
+    'kind-work': 'Pro',
     list: [
       {
         chips: ['Vue', 'TypeScript', 'Bun', 'Cloudflare'],
         kind: 'personal',
         link: repoUrl('portfolio'),
-        subtitle: 'Refonte 2026 de mon portfolio professionnel.',
+        slug: 'portfolio',
         title: 'Portfolio',
-        year: '2026 →'
+        year: '2026'
       },
       {
         chips: ['Swift'],
         kind: 'personal',
         link: repoUrl('wizard-tomb'),
-        subtitle:
-          "Adaptation iOS d'un livre dont on est le héros, dans la veine des « défis fantastiques ».",
+        slug: 'wizard-tomb',
+        status: 'wip',
         title: 'Wizard Tomb',
         year: '2026'
       },
@@ -169,35 +231,29 @@ export default {
         ],
         kind: 'personal',
         link: repoUrl('pilpoil'),
-        subtitle: 'Carnet de santé numérique pour animaux de compagnie, augmenté par IA.',
+        slug: 'pilpoil',
+        status: 'wip',
         title: 'Pilpoil',
         year: '2026'
       },
       {
-        chips: ['Symfony', 'Vue', 'PHP', 'Docker', 'API'],
-        kind: 'private',
+        chips: ['Symfony', 'Vue', 'PHP', 'Docker'],
+        kind: 'work',
         subtitle: "Refonte de l'outil interne de suivi des impayés de Motoblouz.",
         title: 'Unpaid Tracking',
         year: '2021'
       },
       {
-        chips: ['Laravel', 'Angular', 'Phaser', 'PHP'],
-        kind: 'school',
-        link: repoUrl('slay-the-demons'),
-        subtitle: 'Jeu vidéo intégré à une page web.',
-        title: 'Slay the Demons',
-        year: '2020'
-      },
-      {
         chips: ['Python', 'PyQt'],
         kind: 'school',
         link: repoUrl('bomberman'),
-        subtitle: 'Clone de Bomberman avec interface graphique.',
+        slug: 'bomberman',
         title: 'Bomberman',
         year: '2019'
       }
     ],
-    'main-title': 'Travaux'
+    'main-title': 'Travaux',
+    'status-wip': 'En cours'
   },
 
   skill: {

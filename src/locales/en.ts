@@ -35,22 +35,16 @@ export default {
       {
         kind: 'work',
         location: 'Motoblouz · Carvin',
-        subtitle: 'Apprenticeship',
-        title: 'Web developer',
+        subtitle: "Master's degree in computer science · EPSI Lille",
+        title: 'Web developer (apprenticeship)',
         year: '2021 — 2023'
       },
       {
         kind: 'work',
         location: 'Motoblouz · Carvin',
-        subtitle: 'Internship · rebuild of an unpaid-invoices tracking tool',
-        title: 'Web developer',
+        subtitle: 'Rebuild of an unpaid-invoices tracking tool',
+        title: 'Web development internship',
         year: '2021'
-      },
-      {
-        kind: 'education',
-        location: 'EPSI · Lille',
-        title: "Master's degree in computer science",
-        year: '2021 — 2023'
       },
       {
         kind: 'education',
@@ -85,17 +79,19 @@ export default {
     list: [
       {
         button: 'See the collection',
-        description: 'A friend introduced me to manga, and it quickly grew into a real passion.',
+        description: 'Reader and collector, tracked on Mangacollec.',
+        detail: '933 volumes',
         link: 'https://mangacollec.com/user/kakashi/collection',
         title: 'Manga'
       },
       {
-        description:
-          'Started climbing during my studies and got back into it over the last few years, with a handful of competitions under my belt.',
+        description: 'Indoor climbing, bouldering and lead.',
+        detail: '7 competitions',
         title: 'Climbing'
       },
       {
-        description: 'Weekend rides on my Z650, whenever the weather allows.',
+        description: 'Weekend rides whenever the weather allows.',
+        detail: 'Kawasaki Z650',
         title: 'Motorbike'
       }
     ],
@@ -134,24 +130,91 @@ export default {
   },
 
   project: {
+    'case-link-code': 'View the code',
+    'case-link-site': 'Visit the site',
+    cases: {
+      bomberman: {
+        facts: [
+          { label: 'Team', value: '3 people' },
+          { label: 'Period', value: 'April to June 2019' },
+          { label: 'Code', value: '≈ 2,460 lines' },
+          { label: 'Opponents', value: 'up to 3 bots' }
+        ],
+        'figure-alt':
+          'Board diagram: walls, destructible blocks, a bomb whose flames spread over two cells, a player and a bot.',
+        'figure-meta': 'Diagram',
+        'figure-title': 'Board',
+        lede: 'A Bomberman clone in Python, to play against friends or bots.',
+        paragraphs: [
+          'A three-person school project from April to June 2019 — our first real program. Board, bombs, power-ups and penalties hidden in blocks, up to four human or bot players, all drawn with PyQt.',
+          'The most interesting part: the bots. They spot a destructible block within reach, drop a bomb if they can get to safety, and move away before it goes off.'
+        ]
+      },
+      pilpoil: {
+        facts: [
+          { label: 'Data', value: '437 breeds referenced' },
+          { label: 'AI', value: 'Claude · check-ups & symptoms' },
+          { label: 'Mobile', value: 'Capacitor · iOS & Android' },
+          { label: 'Version', value: 'v1.2' }
+        ],
+        'figure-alt':
+          'PilPoil home page on mobile: "La santé de vos animaux, au poil", with a sign-up button and three key figures.',
+        'figure-meta': 'In production',
+        'figure-title': 'pilpoil.app',
+        lede: 'A digital health record for pets that anticipates risks by breed and age.',
+        paragraphs: [
+          "A pet's health record is usually a folder of paper and reminders you forget. PilPoil centralises the medical history, warns before deadlines and shares the file with the family or the vet.",
+          'The core: a database of 437 breeds with their predispositions and a recommended follow-up schedule. Claude crosses that profile with the history to produce check-ups and analyse a symptom described by the owner, for subscribers only.'
+        ]
+      },
+      portfolio: {
+        facts: [
+          { label: 'Hosting', value: 'Cloudflare' },
+          { label: 'History', value: '78 commits' }
+        ],
+        'figure-meta': 'Live visitor counter',
+        'figure-title': 'worker/presence.ts',
+        lede: 'The site you are reading: a prerendered Vue SPA, hosted on Cloudflare, with no component library.',
+        paragraphs: [
+          'The goal: a site that loads instantly and depends on no component library.',
+          'The HTML is prerendered at build time from the SSR bundle: the page is complete without JavaScript, then Vue hydrates for transitions.',
+          'The live visitor counter is a Cloudflare Durable Object: each visitor opens a WebSocket, the object keeps the connections in hibernation and broadcasts the number of connected people on every arrival or departure.'
+        ]
+      },
+      'wizard-tomb': {
+        facts: [
+          { label: 'Platform', value: 'iOS 26 · SwiftUI' },
+          { label: 'Narrative engine', value: 'Ink via InkSwift' },
+          { label: 'Story', value: 'Original, written for the game' },
+          { label: 'Length', value: '1,790 lines · 164 passages' }
+        ],
+        'figure-meta': 'Tag-driven combat',
+        'figure-title': 'adventure.ink',
+        lede: 'A choose-your-own-adventure gamebook, native on iOS, with real game rules.',
+        paragraphs: [
+          'It started with the Fighting Fantasy books of my childhood: 2d6 + Skill combat, Luck rolls, an inventory and multiple endings. I wanted that on a phone.',
+          'The adventure is written in Ink, not Swift. Combat, inventory and effects do not live in the prose: they are tags the SwiftUI engine intercepts while reading. Writing and mechanics no longer step on each other.'
+        ]
+      }
+    },
     'kind-personal': 'Personal',
-    'kind-private': 'Private',
-    'kind-school': 'School',
+    'kind-school': 'Studies',
+    'kind-work': 'Work',
     list: [
       {
         chips: ['Vue', 'TypeScript', 'Bun', 'Cloudflare'],
         kind: 'personal',
         link: repoUrl('portfolio'),
-        subtitle: '2026 rebuild of my professional portfolio.',
+        slug: 'portfolio',
         title: 'Portfolio',
-        year: '2026 →'
+        year: '2026'
       },
       {
         chips: ['Swift'],
         kind: 'personal',
         link: repoUrl('wizard-tomb'),
-        subtitle:
-          'iOS adaptation of a choose-your-own-adventure gamebook, inspired by the "Fighting Fantasy" series.',
+        slug: 'wizard-tomb',
+        status: 'wip',
         title: 'Wizard Tomb',
         year: '2026'
       },
@@ -168,35 +231,29 @@ export default {
         ],
         kind: 'personal',
         link: repoUrl('pilpoil'),
-        subtitle: 'AI-augmented digital health record for pets.',
+        slug: 'pilpoil',
+        status: 'wip',
         title: 'Pilpoil',
         year: '2026'
       },
       {
-        chips: ['Symfony', 'Vue', 'PHP', 'Docker', 'API'],
-        kind: 'private',
+        chips: ['Symfony', 'Vue', 'PHP', 'Docker'],
+        kind: 'work',
         subtitle: "Rebuild of Motoblouz's internal unpaid-invoices tracking tool.",
         title: 'Unpaid Tracking',
         year: '2021'
       },
       {
-        chips: ['Laravel', 'Angular', 'Phaser', 'PHP'],
-        kind: 'school',
-        link: repoUrl('slay-the-demons'),
-        subtitle: 'Video game embedded in a web page.',
-        title: 'Slay the Demons',
-        year: '2020'
-      },
-      {
         chips: ['Python', 'PyQt'],
         kind: 'school',
         link: repoUrl('bomberman'),
-        subtitle: 'Bomberman clone with graphical interface.',
+        slug: 'bomberman',
         title: 'Bomberman',
         year: '2019'
       }
     ],
-    'main-title': 'Work'
+    'main-title': 'Work',
+    'status-wip': 'In progress'
   },
 
   skill: {

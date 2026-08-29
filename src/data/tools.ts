@@ -10,10 +10,6 @@ const tools: Record<string, Tool> = {
     label: 'Angular',
     link: 'https://angular.dev/'
   },
-  api: {
-    label: 'API',
-    link: 'https://www.cnil.fr/fr/definition/interface-de-programmation-dapplication-api'
-  },
   bun: {
     color: 'var(--fg)',
     label: 'Bun',
