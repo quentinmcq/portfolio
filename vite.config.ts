@@ -63,7 +63,7 @@ export default defineConfig({
     }
   },
   staged: {
-    '*.{ts,mts,cts,js,mjs,cjs,vue,scss,css,json,jsonc}': 'vp check --fix'
+    '*.{ts,vue,scss,json,jsonc}': 'vp check --fix'
   },
   css: {
     preprocessorOptions: {
@@ -73,13 +73,9 @@ export default defineConfig({
     }
   },
   define: {
-    __VUE_OPTIONS_API__: 'false',
-    __VUE_I18N_FULL_INSTALL__: 'false',
-    __VUE_I18N_LEGACY_API__: 'false',
-    __VUE_I18N_PROD_DEVTOOLS__: 'false',
-    __INTLIFY_PROD_DEVTOOLS__: 'false'
+    __VUE_I18N_FULL_INSTALL__: 'false'
   },
-  plugins: [vue(), fontPreloads(), inlineCss()],
+  plugins: [vue({ features: { optionsAPI: false } }), fontPreloads(), inlineCss()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
