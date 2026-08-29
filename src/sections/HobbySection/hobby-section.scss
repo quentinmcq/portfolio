@@ -71,6 +71,14 @@
     color: var(--fg-muted);
   }
 
+  &__detail {
+    font-family: var(--font-mono), monospace;
+    font-size: var(--fs-micro);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--fg-faint);
+  }
+
   &__link {
     color: var(--fg-faint);
     transition: color var(--dur-fast) var(--ease-out);
