@@ -137,17 +137,18 @@ export default {
         facts: [
           { label: 'Équipe', value: '3 personnes' },
           { label: 'Période', value: 'Avril à juin 2019' },
-          { label: 'Code', value: '≈ 2 460 lignes' },
+          { label: 'Code', value: '≈ 1 900 lignes · 900 de tests' },
           { label: 'Adversaires', value: "jusqu'à 3 bots" }
         ],
         'figure-alt':
-          'Capture du plateau en cours de partie : murs de pierre, briques destructibles, deux bombes posées et quatre pions colorés à la place des personnages.',
-        'figure-meta': 'Capture · personnages remplacés par des pions',
+          "Capture d'une partie : bandeau de scores des quatre joueurs, plateau d'herbe, briques et pierres, une explosion et des bombes posées.",
+        'figure-meta': 'Version 2026',
         'figure-title': 'Partie en cours',
         lede: 'Un clone de Bomberman en Python, à jouer contre des amis ou des bots.',
         paragraphs: [
           "Projet scolaire à trois, d'avril à juin 2019 — notre premier vrai programme. Plateau, bombes, power-ups et malus cachés dans les blocs, jusqu'à quatre joueurs humains ou bots, le tout dessiné avec PyQt.",
-          "La partie la plus intéressante : les bots. Ils repèrent un bloc destructible à portée, posent une bombe s'ils peuvent se mettre à l'abri, et s'éloignent avant l'explosion."
+          "La partie la plus intéressante : les bots. Ils repèrent un bloc destructible à portée, posent une bombe s'ils peuvent se mettre à l'abri, et s'éloignent avant l'explosion.",
+          "Repris en 2026 : portage PyQt6, découpage en modules, sprites originaux générés par script, tests et intégration continue. L'audit est documenté dans le dépôt."
         ]
       },
       pilpoil: {

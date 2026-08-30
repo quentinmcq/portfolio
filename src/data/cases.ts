@@ -52,7 +52,7 @@ export const CASES: ProjectCase[] = [
     slug: 'pilpoil'
   },
   {
-    figure: { frame: 'plain', height: 950, kind: 'image', src: bombermanShot, width: 1050 },
+    figure: { frame: 'plain', height: 820, kind: 'image', src: bombermanShot, width: 1200 },
     slug: 'bomberman'
   }
 ]
