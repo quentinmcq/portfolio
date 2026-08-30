@@ -141,9 +141,9 @@ export default {
           { label: 'Adversaires', value: "jusqu'à 3 bots" }
         ],
         'figure-alt':
-          'Schéma du plateau : murs, blocs destructibles, une bombe dont les flammes se propagent sur deux cases, un joueur et un bot.',
-        'figure-meta': 'Schéma',
-        'figure-title': 'Plateau',
+          'Capture du plateau en cours de partie : murs de pierre, briques destructibles, deux bombes posées et quatre pions colorés à la place des personnages.',
+        'figure-meta': 'Capture · personnages remplacés par des pions',
+        'figure-title': 'Partie en cours',
         lede: 'Un clone de Bomberman en Python, à jouer contre des amis ou des bots.',
         paragraphs: [
           "Projet scolaire à trois, d'avril à juin 2019 — notre premier vrai programme. Plateau, bombes, power-ups et malus cachés dans les blocs, jusqu'à quatre joueurs humains ou bots, le tout dessiné avec PyQt.",
@@ -188,8 +188,10 @@ export default {
           { label: 'Histoire', value: 'Originale, écrite pour le jeu' },
           { label: 'Longueur', value: '1 790 lignes · 164 passages' }
         ],
-        'figure-meta': 'Combat piloté par tags',
-        'figure-title': 'adventure.ink',
+        'figure-alt':
+          "Écran de l'app : bandeau de statistiques (Habileté, Endurance, Chance, or), texte du premier passage dans le village de Roncebrune et trois choix en bas.",
+        'figure-meta': 'Premier passage',
+        'figure-title': 'Le Tombeau du Sorcier',
         lede: 'Un livre dont vous êtes le héros, natif iOS, avec de vraies règles de jeu.',
         paragraphs: [
           'Le point de départ, ce sont les Défis Fantastiques de mon enfance : combat à 2d6 + Habileté, jets de Chance, inventaire et fins multiples. Je voulais retrouver ça sur téléphone.',

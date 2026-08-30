@@ -141,9 +141,9 @@ export default {
           { label: 'Opponents', value: 'up to 3 bots' }
         ],
         'figure-alt':
-          'Board diagram: walls, destructible blocks, a bomb whose flames spread over two cells, a player and a bot.',
-        'figure-meta': 'Diagram',
-        'figure-title': 'Board',
+          'Screenshot of the board mid-game: stone walls, destructible bricks, two placed bombs and four coloured tokens in place of the characters.',
+        'figure-meta': 'Screenshot · characters replaced by tokens',
+        'figure-title': 'Game in progress',
         lede: 'A Bomberman clone in Python, to play against friends or bots.',
         paragraphs: [
           'A three-person school project from April to June 2019 — our first real program. Board, bombs, power-ups and penalties hidden in blocks, up to four human or bot players, all drawn with PyQt.',
@@ -188,8 +188,10 @@ export default {
           { label: 'Story', value: 'Original, written for the game' },
           { label: 'Length', value: '1,790 lines · 164 passages' }
         ],
-        'figure-meta': 'Tag-driven combat',
-        'figure-title': 'adventure.ink',
+        'figure-alt':
+          'App screen: stats bar (Skill, Stamina, Luck, gold), text of the opening passage in the village of Roncebrune and three choices at the bottom.',
+        'figure-meta': 'Opening passage',
+        'figure-title': 'Le Tombeau du Sorcier',
         lede: 'A choose-your-own-adventure gamebook, native on iOS, with real game rules.',
         paragraphs: [
           'It started with the Fighting Fantasy books of my childhood: 2d6 + Skill combat, Luck rolls, an inventory and multiple endings. I wanted that on a phone.',

@@ -1,10 +1,10 @@
+import bombermanShot from '@/assets/cases/bomberman.png'
 import pilpoilShot from '@/assets/cases/pilpoil.webp'
-import type { Lang } from '@/utils/highlight'
+import wizardTombShot from '@/assets/cases/wizard-tomb.webp'
 
 export type CaseFigure =
-  | { file: string; kind: 'code'; lang: Lang; source: string }
-  | { height: number; kind: 'image'; src: string; width: number }
-  | { kind: 'board'; rows: string[] }
+  | { file: string; kind: 'code'; source: string }
+  | { frame: 'phone' | 'plain'; height: number; kind: 'image'; src: string; width: number }
 
 export interface ProjectCase {
   figure: CaseFigure
@@ -17,7 +17,6 @@ export const CASES: ProjectCase[] = [
     figure: {
       file: 'worker/presence.ts',
       kind: 'code',
-      lang: 'ts',
       source: `export class PresenceCounter extends DurableObject {
   override fetch(): Response {
     const [client, server] = Object.values(new WebSocketPair())
@@ -44,47 +43,16 @@ export const CASES: ProjectCase[] = [
     slug: 'portfolio'
   },
   {
-    figure: {
-      file: 'adventure.ink',
-      kind: 'code',
-      lang: 'ink',
-      source: `=== fight_goblin ===
-# combat: goblin_scout
-# flee_to: bypass_goblin
-# victory_path: goblin_defeated
--> END
-
-=== goblin_defeated ===
-La créature s'effondre dans un râle sec. Dans son sac :
-un quignon de pain moisi, trois cailloux peints, et une
-fiole de verre épais qui sent l'herbe et la résine.
-
-# add_item: healing_potion
-
-* [Continuer dans la forêt] -> forest_clearing`
-    },
+    figure: { frame: 'phone', height: 1218, kind: 'image', src: wizardTombShot, width: 560 },
     slug: 'wizard-tomb'
   },
   {
-    figure: { height: 1092, kind: 'image', src: pilpoilShot, width: 560 },
+    figure: { frame: 'phone', height: 1092, kind: 'image', src: pilpoilShot, width: 560 },
     site: 'https://pilpoil.app',
     slug: 'pilpoil'
   },
   {
-    figure: {
-      kind: 'board',
-      rows: [
-        '#########',
-        '#P.x...E#',
-        '#.#x#.#.#',
-        '#x.*xx..#',
-        '#.#*#.#x#',
-        '#**B**x.#',
-        '#.#*#.#.#',
-        '#..*x...#',
-        '#########'
-      ]
-    },
+    figure: { frame: 'plain', height: 950, kind: 'image', src: bombermanShot, width: 1050 },
     slug: 'bomberman'
   }
 ]

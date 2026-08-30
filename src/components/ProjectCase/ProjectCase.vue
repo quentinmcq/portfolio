@@ -95,7 +95,7 @@
         class="case__line"
       ><span v-for="(token, position) in line" :key="position" :class="`tk-${token.type}`">{{ token.text }}</span></span></code></pre>
 
-      <div v-else-if="entry.figure.kind === 'image'" class="case__device">
+      <div v-else class="case__device" :class="`case__device--${entry.figure.frame}`">
         <img
           :src="entry.figure.src"
           :width="entry.figure.width"
@@ -103,21 +103,6 @@
           :alt="$t(`project.cases.${entry.slug}.figure-alt`)"
           loading="lazy"
           decoding="async"
-        />
-      </div>
-
-      <div
-        v-else
-        class="case__board"
-        role="img"
-        :aria-label="$t(`project.cases.${entry.slug}.figure-alt`)"
-        :style="{ '--cols': entry.figure.rows[0].length }"
-      >
-        <span
-          v-for="(cell, index) in cells"
-          :key="index"
-          class="case__cell"
-          :class="`case__cell--${cell}`"
         />
       </div>
     </figure>
@@ -139,16 +124,6 @@ interface Fact {
   value: string
 }
 
-const CELL_KINDS: Record<string, string> = {
-  '#': 'wall',
-  '*': 'flame',
-  '.': 'floor',
-  B: 'bomb',
-  E: 'bot',
-  P: 'player',
-  x: 'block'
-}
-
 const { item } = defineProps<{ item: Project }>()
 
 const { tm } = useI18n()
@@ -162,12 +137,7 @@ function caseList<T>(field: 'facts' | 'paragraphs'): T[] {
 const paragraphs = computed(() => caseList<string>('paragraphs'))
 const facts = computed(() => caseList<Fact>('facts'))
 
-const lines = entry?.figure.kind === 'code' ? highlight(entry.figure.lang, entry.figure.source) : []
-
-const cells =
-  entry?.figure.kind === 'board'
-    ? entry.figure.rows.flatMap((row) => [...row].map((char) => CELL_KINDS[char] ?? 'floor'))
-    : []
+const lines = entry?.figure.kind === 'code' ? highlight(entry.figure.source) : []
 </script>
 
 <style lang="scss" src="./project-case.scss" scoped />

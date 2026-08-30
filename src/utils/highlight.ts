@@ -1,16 +1,4 @@
-export type TokenType =
-  | 'choice'
-  | 'comment'
-  | 'divert'
-  | 'keyword'
-  | 'knot'
-  | 'number'
-  | 'plain'
-  | 'string'
-  | 'tag'
-  | 'type'
-
-export type Lang = 'ink' | 'ts'
+export type TokenType = 'comment' | 'keyword' | 'number' | 'plain' | 'string' | 'type'
 
 export interface Token {
   text: string
@@ -59,41 +47,6 @@ function tokenizeTs(line: string): Token[] {
   return tokens
 }
 
-function tokenizeInk(line: string): Token[] {
-  if (line.startsWith('===')) {
-    return [{ text: line, type: 'knot' }]
-  }
-
-  const tag = line.match(/^(#\s*\w+:?)(.*)$/)
-
-  if (tag) {
-    return [
-      { text: tag[1], type: 'tag' },
-      { text: tag[2], type: 'plain' }
-    ]
-  }
-
-  const tokens: Token[] = []
-  let rest = line
-
-  if (rest.startsWith('*')) {
-    tokens.push({ text: '*', type: 'choice' })
-    rest = rest.slice(1)
-  }
-
-  const divert = rest.indexOf('->')
-
-  if (divert >= 0) {
-    pushToken(tokens, 'plain', rest.slice(0, divert))
-    pushToken(tokens, 'divert', rest.slice(divert))
-  } else {
-    pushToken(tokens, 'plain', rest)
-  }
-
-  return tokens
-}
-
-export function highlight(lang: Lang, source: string): Token[][] {
-  const tokenize = lang === 'ink' ? tokenizeInk : tokenizeTs
-  return source.split('\n').map((line) => (line.length > 0 ? tokenize(line) : []))
+export function highlight(source: string): Token[][] {
+  return source.split('\n').map((line) => (line.length > 0 ? tokenizeTs(line) : []))
 }
