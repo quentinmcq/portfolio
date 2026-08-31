@@ -43,11 +43,11 @@ export const CASES: ProjectCase[] = [
     slug: 'portfolio'
   },
   {
-    figure: { frame: 'phone', height: 1218, kind: 'image', src: wizardTombShot, width: 560 },
+    figure: { frame: 'phone', height: 1826, kind: 'image', src: wizardTombShot, width: 840 },
     slug: 'wizard-tomb'
   },
   {
-    figure: { frame: 'phone', height: 1092, kind: 'image', src: pilpoilShot, width: 560 },
+    figure: { frame: 'phone', height: 1637, kind: 'image', src: pilpoilShot, width: 840 },
     site: 'https://pilpoil.app',
     slug: 'pilpoil'
   },
