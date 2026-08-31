@@ -11,9 +11,9 @@
   "rangeStrategy": "bump",
   "rebaseWhen": "conflicted",
   "commitMessageSuffix": " [skip ci]",
+  "automerge": true,
   "lockFileMaintenance": {
-    "enabled": true,
-    "schedule": ["before 7am on the first day of the month"]
+    "enabled": true
   },
   "packageRules": [
     {
