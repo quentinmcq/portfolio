@@ -12,6 +12,11 @@ node_modules
 dist
 dist-server
 
+# Test artifacts
+test-results
+playwright-report
+blob-report
+
 # Local env files
 .env*.local
 .dev.vars

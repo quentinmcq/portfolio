@@ -11,6 +11,14 @@ Personal site at [quentin-macq.dev](https://quentin-macq.dev/) — hosted on **C
 - **Sass embedded**
 - No UI framework — custom components throughout
 
+## Quality
+
+- `vp check` — format, lint and typecheck in one pass
+- **Vitest** — locale parity (fr/en keys and shapes), case studies coverage, syntax highlighter
+- **Playwright** — prerendered documents, language switch, theme, mobile menu, anchor navigation
+- **axe-core** — WCAG 2.2 AA on four scenarios (fr, en, light theme, mobile menu open), zero violation
+- **GitHub Actions** — the whole set runs on every pull request, including Renovate's
+
 ## Cloudflare
 
 - `worker/index.ts` — serves the static build and `/api/presence` (live visitor count)
@@ -29,6 +37,8 @@ bun run preview   # serve dist/ locally
 bun run check     # format check + lint + typecheck (vp check)
 bun run fmt       # same, with auto-fix
 bun run lint      # lint only, with auto-fix
+bun run test      # unit tests (vitest)
+bun run test:e2e  # browser + accessibility tests (playwright, needs a build first)
 bun run og        # regenerate public/og.png and og-en.png from scripts/og.svg
 bun run deploy    # wrangler deploy
 bunx vp hooks enable   # once per clone: pre-commit hook running `vp staged`

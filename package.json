@@ -12,6 +12,8 @@
     "dev": "vp dev",
     "build": "vp build && vp build --ssr src/entry-server.ts --outDir dist-server && bun scripts/prerender.ts",
     "preview": "vp preview",
+    "test": "vp test",
+    "test:e2e": "playwright test",
     "og": "bun scripts/og.ts",
     "deploy": "wrangler deploy",
     "check": "vp check",

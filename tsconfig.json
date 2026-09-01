@@ -1,6 +1,13 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "include": ["vite.config.*", "scripts/**/*", "src/**/*", "worker/**/*"],
+  "include": [
+    "playwright.config.*",
+    "scripts/**/*",
+    "src/**/*",
+    "tests/**/*",
+    "vite.config.*",
+    "worker/**/*"
+  ],
   "compilerOptions": {
     "noUnusedLocals": true,
     "paths": {

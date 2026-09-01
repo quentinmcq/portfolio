@@ -5,13 +5,14 @@
     "config:recommended",
     "group:allNonMajor",
     ":semanticCommitTypeAll(chore)",
-    ":automergeStableNonMajor"
+    ":automergeStableNonMajor",
+    "helpers:pinGitHubActionDigests"
   ],
   "schedule": ["before 7am on monday"],
   "rangeStrategy": "bump",
   "rebaseWhen": "conflicted",
-  "commitMessageSuffix": " [skip ci]",
   "automerge": true,
+  "platformAutomerge": false,
   "lockFileMaintenance": {
     "enabled": true
   },
