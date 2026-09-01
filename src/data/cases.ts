@@ -1,4 +1,4 @@
-import bombermanShot from '@/assets/cases/bomberman.png'
+import bombermanShot from '@/assets/cases/bomberman.webp'
 import pilpoilShot from '@/assets/cases/pilpoil.webp'
 import wizardTombShot from '@/assets/cases/wizard-tomb.webp'
 
