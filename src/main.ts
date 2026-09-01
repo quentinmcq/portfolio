@@ -24,3 +24,7 @@ const preferred = resolvePreferredLocale()
 if (i18n.global.locale.value !== preferred) {
   applyLocale(preferred)
 }
+
+requestAnimationFrame(() => {
+  requestAnimationFrame(() => document.documentElement.classList.add('is-rendered'))
+})

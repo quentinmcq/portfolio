@@ -91,18 +91,20 @@ img {
   padding-block: var(--section-pad-y);
   scroll-margin-top: 4.5rem;
 
-  content-visibility: auto;
-  contain-intrinsic-size: auto 800px;
-
-  &:first-of-type {
-    content-visibility: visible;
-  }
-
   &--band {
     background: var(--bg-inset);
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
   }
+}
+
+:root.js .section:not(:first-of-type) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}
+
+:root.js.is-rendered .section:not(:first-of-type) {
+  content-visibility: visible;
 }
 
 .spread {
