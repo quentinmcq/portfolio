@@ -173,7 +173,7 @@ export default {
           { label: 'Hosting', value: 'Cloudflare' },
           { label: 'History', value: '78 commits' }
         ],
-        'figure-meta': 'Live visitor counter',
+        'figure-meta': 'Real time',
         'figure-title': 'worker/presence.ts',
         lede: 'The site you are reading: a prerendered Vue SPA, hosted on Cloudflare, with no component library.',
         paragraphs: [

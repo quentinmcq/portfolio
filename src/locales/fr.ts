@@ -173,7 +173,7 @@ export default {
           { label: 'Hébergement', value: 'Cloudflare' },
           { label: 'Historique', value: '78 commits' }
         ],
-        'figure-meta': 'Compteur de visiteurs en direct',
+        'figure-meta': 'Temps réel',
         'figure-title': 'worker/presence.ts',
         lede: 'Le site que vous lisez : un SPA Vue prérendu, hébergé sur Cloudflare, sans librairie de composants.',
         paragraphs: [
