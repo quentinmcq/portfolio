@@ -7,7 +7,7 @@ Personal site at [quentin-macq.dev](https://quentin-macq.dev/) — hosted on **C
 - **Vue** + **TypeScript** — single-page portfolio, prerendered at build time
 - **vite-plus** (`vp`) — build, dev server, lint, format, typecheck in one tool
 - **Bun** runtime + package manager
-- **Vue-i18n** — fr/en
+- **Vue-i18n** — fr/en, one prerendered document per language (`/` and `/en/`, linked by `hreflang`)
 - **Sass embedded**
 - No UI framework — custom components throughout
 
@@ -29,6 +29,7 @@ bun run preview   # serve dist/ locally
 bun run check     # format check + lint + typecheck (vp check)
 bun run fmt       # same, with auto-fix
 bun run lint      # lint only, with auto-fix
+bun run og        # regenerate public/og.png and og-en.png from scripts/og.svg
 bun run deploy    # wrangler deploy
 bunx vp hooks enable   # once per clone: pre-commit hook running `vp staged`
 ```

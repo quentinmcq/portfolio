@@ -1,18 +1,18 @@
 <template>
   <div class="locale-switcher" role="group" :aria-label="$t('languages.title')">
-    <button
+    <a
       v-for="lang in SUPPORTED_LOCALES"
       :key="lang"
       class="locale-switcher__btn"
       :class="{ 'is-active': locale === lang }"
-      type="button"
+      :href="LOCALE_PATHS[lang]"
       :lang
-      :aria-pressed="locale === lang"
       :aria-label="LOCALE_NAMES[lang]"
-      @click="switchLocale(lang)"
+      :aria-current="locale === lang ? 'page' : undefined"
+      @click="remember(lang)"
     >
       {{ lang.toUpperCase() }}
-    </button>
+    </a>
   </div>
 </template>
 
@@ -20,8 +20,8 @@
 import { useI18n } from 'vue-i18n'
 
 import {
-  applyLocale,
   LOCALE_NAMES,
+  LOCALE_PATHS,
   LOCALE_STORAGE_KEY,
   SUPPORTED_LOCALES,
   type Locale
@@ -29,13 +29,7 @@ import {
 
 const { locale } = useI18n()
 
-function switchLocale(lang: Locale) {
-  if (locale.value === lang) {
-    return
-  }
-
-  applyLocale(lang)
-
+function remember(lang: Locale) {
   localStorage.setItem(LOCALE_STORAGE_KEY, lang)
 }
 </script>

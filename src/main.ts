@@ -3,7 +3,7 @@ import { createApp, createSSRApp } from 'vue'
 import '@/styles/main.scss'
 
 import { syncTheme } from '@/composables/theme'
-import { applyLocale, i18n, resolvePreferredLocale } from '@/i18n'
+import { i18n, localeFromPath, setLocale } from '@/i18n'
 
 import App from './App.vue'
 
@@ -13,17 +13,16 @@ if (!container) {
   throw new Error('#app container missing')
 }
 
+const locale = localeFromPath(location.pathname)
+
+setLocale(locale)
+document.documentElement.lang = locale
+
 const app = container.firstElementChild ? createSSRApp(App) : createApp(App)
 app.use(i18n)
 app.mount('#app')
 
 syncTheme()
-
-const preferred = resolvePreferredLocale()
-
-if (i18n.global.locale.value !== preferred) {
-  applyLocale(preferred)
-}
 
 requestAnimationFrame(() => {
   requestAnimationFrame(() => document.documentElement.classList.add('is-rendered'))

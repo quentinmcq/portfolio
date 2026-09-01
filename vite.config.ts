@@ -21,6 +21,24 @@ function fontPreloads(): Plugin {
   }
 }
 
+function localeRoutes(): Plugin {
+  return {
+    name: 'portfolio:locale-routes',
+    apply: 'serve',
+    configureServer(server) {
+      server.middlewares.use((request, _response, next) => {
+        const { pathname, search } = new URL(request.url ?? '/', 'http://localhost')
+
+        if (pathname === '/en' || pathname === '/en/') {
+          request.url = `/${search}`
+        }
+
+        next()
+      })
+    }
+  }
+}
+
 function inlineCss(): Plugin {
   return {
     name: 'portfolio:inline-css',
@@ -75,7 +93,7 @@ export default defineConfig({
   define: {
     __VUE_I18N_FULL_INSTALL__: 'false'
   },
-  plugins: [vue({ features: { optionsAPI: false } }), fontPreloads(), inlineCss()],
+  plugins: [vue({ features: { optionsAPI: false } }), localeRoutes(), fontPreloads(), inlineCss()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
