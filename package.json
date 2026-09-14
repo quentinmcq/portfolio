@@ -27,11 +27,11 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20260831.1",
     "@playwright/test": "^1.63.0",
-    "@types/node": "^26.4.1",
+    "@types/node": "^26.5.1",
     "@vitejs/plugin-vue": "^6.0.8",
     "@vue/tsconfig": "^0.9.1",
     "axe-core": "^4.13.0",
-    "sass-embedded": "^1.104.0",
+    "sass-embedded": "^1.104.1",
     "typescript": "^7.0.2",
     "vite": "npm:@voidzero-dev/vite-plus-core@latest",
     "vite-plus": "latest",
