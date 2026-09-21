@@ -21,14 +21,14 @@
     "lint": "vp lint --fix"
   },
   "dependencies": {
-    "vue": "^3.6.0-rc.8",
+    "vue": "^3.6.0-rc.9",
     "vue-i18n": "^12.0.0-alpha.4"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20260831.1",
     "@playwright/test": "^1.63.0",
     "@types/node": "^26.5.1",
-    "@vitejs/plugin-vue": "^6.0.8",
+    "@vitejs/plugin-vue": "^6.0.9",
     "@vue/tsconfig": "^0.9.1",
     "axe-core": "^4.13.0",
     "sass-embedded": "^1.104.1",
