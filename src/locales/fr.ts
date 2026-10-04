@@ -15,8 +15,7 @@ export default {
 
   contact: {
     channels: 'Autres canaux',
-    kicker:
-      "Une opportunité, un projet, ou juste envie de discuter front-end et café — je suis à l'écoute.",
+    kicker: "Un projet, une question, ou juste envie de parler front-end autour d'un café.",
     'main-title': 'Contact',
     where: 'Où'
   },
@@ -80,13 +79,13 @@ export default {
       {
         button: 'Voir la collection',
         description: 'Lecteur et collectionneur, suivi sur Mangacollec.',
-        detail: '933 volumes',
+        detail: '900+ volumes',
         link: 'https://mangacollec.com/user/kakashi/collection',
         title: 'Mangas'
       },
       {
         description: 'Grimpe en salle, en bloc comme en voie.',
-        detail: '7 compétitions',
+        detail: 'Compétitions en club',
         title: 'Escalade'
       },
       {
@@ -170,15 +169,16 @@ export default {
       },
       portfolio: {
         facts: [
-          { label: 'Hébergement', value: 'Cloudflare' },
-          { label: 'Historique', value: '78 commits' }
+          { label: 'Rendu', value: 'Prérendu · fr et en' },
+          { label: 'Accessibilité', value: 'WCAG 2.2 AA · axe en CI' },
+          { label: 'Tests', value: 'Vitest · Playwright' },
+          { label: 'Budget', value: 'JS < 70 Ko gzip' }
         ],
         'figure-meta': 'Temps réel',
         'figure-title': 'worker/presence.ts',
-        lede: 'Le site que vous lisez : un SPA Vue prérendu, hébergé sur Cloudflare, sans librairie de composants.',
+        lede: 'Le site que vous lisez, prérendu au build et sans librairie de composants.',
         paragraphs: [
-          "L'objectif : un site qui charge instantanément et qui ne dépend d'aucune librairie de composants.",
-          "Le HTML est prérendu au build depuis le bundle SSR : la page est complète sans JavaScript, Vue s'hydrate ensuite pour les transitions.",
+          "Le HTML vient du bundle SSR : la page est complète sans JavaScript, Vue s'hydrate ensuite pour les transitions.",
           "Le compteur de visiteurs en direct est un Durable Object Cloudflare : chaque visiteur ouvre un WebSocket, l'objet garde les connexions en hibernation et diffuse le nombre de connectés à chaque arrivée ou départ."
         ]
       },

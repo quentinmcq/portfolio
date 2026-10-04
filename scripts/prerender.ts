@@ -1,5 +1,6 @@
 import { createHash } from 'node:crypto'
-import { mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
+import { mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
+import { gzipSync } from 'node:zlib'
 
 import { swapper } from './swap'
 
@@ -7,6 +8,8 @@ const SITE = 'https://quentin-macq.dev'
 const MARKER = '<div id="app">'
 
 const LOCALES = ['fr', 'en'] as const
+
+const BUDGET_KB = { html: 20, js: 70 }
 
 type Locale = (typeof LOCALES)[number]
 
@@ -74,7 +77,21 @@ const alternates = [
   `<link rel="alternate" hreflang="x-default" href="${SITE}${META.fr.path}" />`
 ].join('\n    ')
 
+const gzipKB = (content: string | Buffer) => gzipSync(content).length / 1024
+
+const assetsUrl = new URL('assets/', distUrl)
+const jsKB = readdirSync(assetsUrl)
+  .filter((file) => file.endsWith('.js'))
+  .reduce((total, file) => total + gzipKB(readFileSync(new URL(file, assetsUrl))), 0)
+
+if (jsKB > BUDGET_KB.js) {
+  throw new Error(
+    `prerender: JavaScript weighs ${jsKB.toFixed(1)}KB gzip, budget is ${BUDGET_KB.js}KB`
+  )
+}
+
 let injected = 0
+let htmlKB = 0
 
 for (const locale of LOCALES) {
   const meta = META[locale]
@@ -122,6 +139,14 @@ for (const locale of LOCALES) {
     )
   }
 
+  htmlKB = Math.max(htmlKB, gzipKB(html))
+
+  if (htmlKB > BUDGET_KB.html) {
+    throw new Error(
+      `prerender: ${meta.path} weighs ${htmlKB.toFixed(1)}KB gzip, budget is ${BUDGET_KB.html}KB`
+    )
+  }
+
   const outDir = new URL(meta.dir, distUrl)
 
   mkdirSync(outDir, { recursive: true })
@@ -155,5 +180,6 @@ ${urls}
 rmSync(new URL('../dist-server/', import.meta.url), { force: true, recursive: true })
 
 console.log(
-  `prerender: ${LOCALES.join(' + ')} — ${(injected / 1024).toFixed(1)}KB of markup injected`
+  `prerender: ${LOCALES.join(' + ')} — ${(injected / 1024).toFixed(1)}KB of markup injected, ` +
+    `JS ${jsKB.toFixed(1)}/${BUDGET_KB.js}KB gzip, HTML ${htmlKB.toFixed(1)}/${BUDGET_KB.html}KB gzip`
 )

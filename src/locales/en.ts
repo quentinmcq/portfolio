@@ -15,8 +15,7 @@ export default {
 
   contact: {
     channels: 'Other channels',
-    kicker:
-      "An opportunity, a project, or just wanting to talk front-end and coffee — I'm listening.",
+    kicker: 'A project, a question, or just wanting to talk front-end over coffee.',
     'main-title': 'Contact',
     where: 'Where'
   },
@@ -80,13 +79,13 @@ export default {
       {
         button: 'See the collection',
         description: 'Reader and collector, tracked on Mangacollec.',
-        detail: '933 volumes',
+        detail: '900+ volumes',
         link: 'https://mangacollec.com/user/kakashi/collection',
         title: 'Manga'
       },
       {
         description: 'Indoor climbing, bouldering and lead.',
-        detail: '7 competitions',
+        detail: 'Club competitions',
         title: 'Climbing'
       },
       {
@@ -170,15 +169,16 @@ export default {
       },
       portfolio: {
         facts: [
-          { label: 'Hosting', value: 'Cloudflare' },
-          { label: 'History', value: '78 commits' }
+          { label: 'Rendering', value: 'Prerendered · fr and en' },
+          { label: 'Accessibility', value: 'WCAG 2.2 AA · axe in CI' },
+          { label: 'Tests', value: 'Vitest · Playwright' },
+          { label: 'Budget', value: 'JS < 70 KB gzip' }
         ],
         'figure-meta': 'Real time',
         'figure-title': 'worker/presence.ts',
-        lede: 'The site you are reading: a prerendered Vue SPA, hosted on Cloudflare, with no component library.',
+        lede: 'The site you are reading, prerendered at build time with no component library.',
         paragraphs: [
-          'The goal: a site that loads instantly and depends on no component library.',
-          'The HTML is prerendered at build time from the SSR bundle: the page is complete without JavaScript, then Vue hydrates for transitions.',
+          'The HTML comes from the SSR bundle: the page is complete without JavaScript, then Vue hydrates for transitions.',
           'The live visitor counter is a Cloudflare Durable Object: each visitor opens a WebSocket, the object keeps the connections in hibernation and broadcasts the number of connected people on every arrival or departure.'
         ]
       },
