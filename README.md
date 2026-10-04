@@ -1,6 +1,6 @@
 # Portfolio
 
-Personal site at [quentin-macq.dev](https://quentin-macq.dev/) — hosted on **Cloudflare Workers** (static assets + a small API worker), deployed through Workers Builds.
+Personal site at [quentin-macq.dev](https://quentin-macq.dev/) — hosted on **Cloudflare Workers**, deployed through Workers Builds.
 
 ## Stack
 
