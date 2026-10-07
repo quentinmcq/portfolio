@@ -7,7 +7,7 @@
       :class="{ 'is-active': locale === lang }"
       :href="LOCALE_PATHS[lang]"
       :lang
-      :aria-label="LOCALE_NAMES[lang]"
+      :title="LOCALE_NAMES[lang]"
       :aria-current="locale === lang ? 'page' : undefined"
       @click="remember(lang)"
     >
