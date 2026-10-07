@@ -50,7 +50,7 @@ test.describe('prerendered documents', () => {
 test.describe('language', () => {
   test('switches to English and remembers it', async ({ page }) => {
     await page.goto('/')
-    await page.getByRole('link', { name: 'English' }).click()
+    await page.getByRole('link', { name: 'EN', exact: true }).click()
 
     await expect(page).toHaveURL(/\/en\/$/)
     await expect(page.locator('html')).toHaveAttribute('lang', 'en')
@@ -65,7 +65,7 @@ test.describe('language', () => {
     await page.goto('/#project')
     await expect(page).toHaveURL(/\/en\/#project$/)
 
-    await page.getByRole('link', { name: 'Français' }).click()
+    await page.getByRole('link', { name: 'FR', exact: true }).click()
     await expect(page.locator('html')).toHaveAttribute('lang', 'fr')
     expect(new URL(page.url()).pathname).toBe('/')
   })
