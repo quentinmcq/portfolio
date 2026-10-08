@@ -4,53 +4,33 @@
       <CategoryTitle class="spread__head" section="skill" />
 
       <div class="spread__body">
-        <div v-if="primary" class="skill-lead">
-          <ul class="skill-lead__list" :aria-label="primary.label">
-            <li
-              v-for="(label, index) in primary.content"
-              :key="label"
-              class="skill-lead__item"
-              data-reveal
-              :style="{ '--reveal-delay': `${index * 60}ms`, '--reveal-shift': '16px' }"
-            >
-              <SkillChip :label size="lg" />
-            </li>
-          </ul>
-        </div>
-
-        <ol class="skill-piles">
-          <li
-            v-for="(pile, index) in secondary"
-            :key="index"
-            class="skill-pile"
+        <dl class="skill-sheet">
+          <div
+            v-for="(row, index) in skills"
+            :key="row.label"
+            class="skill-sheet__row"
             data-reveal
-            :style="{ '--reveal-delay': `${(index + 1) * 80}ms` }"
+            :style="{ '--reveal-delay': `${index * 80}ms` }"
           >
-            <h3 class="skill-pile__label">{{ pile.label }}</h3>
-            <ul class="skill-pile__tools" :aria-label="$t('skill.aria-tools')">
-              <li v-for="label in pile.content" :key="label">
-                <SkillChip :label />
-              </li>
-            </ul>
-          </li>
-        </ol>
+            <dt class="skill-sheet__label">{{ row.label }}</dt>
+            <dd class="skill-sheet__tools">
+              <ToolList :labels="row.content" size="lg" />
+            </dd>
+          </div>
+        </dl>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-
 import type { Skill } from '@/types/Skill'
 
 import CategoryTitle from '@/components/CategoryTitle/CategoryTitle.vue'
-import SkillChip from '@/components/SkillChip/SkillChip.vue'
+import ToolList from '@/components/ToolList/ToolList.vue'
 import { useMessageList } from '@/composables/message-list'
 
 const skills = useMessageList<Skill>('skill.list')
-const primary = computed(() => skills.value.find((skill) => skill.primary))
-const secondary = computed(() => skills.value.filter((skill) => !skill.primary))
 </script>
 
 <style lang="scss" src="./skill-section.scss" scoped />

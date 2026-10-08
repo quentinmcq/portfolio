@@ -260,20 +260,22 @@ export default {
   },
 
   skill: {
-    'aria-tools': 'Tools',
     list: [
       {
-        content: ['Nuxt', 'Vue', 'TypeScript', 'Pinia', 'Symfony', 'Claude'],
-        label: 'Day-to-day',
-        primary: true
+        content: ['Nuxt', 'Vue', 'TypeScript'],
+        label: 'Front'
       },
       {
-        content: ['Oxlint', 'Vitest', 'Playwright', 'Bun'],
-        label: 'Tests & tooling'
+        content: ['Symfony', 'MySQL', 'RabbitMQ'],
+        label: 'Back'
       },
       {
-        content: ['MySQL', 'RabbitMQ', 'Docker', 'Grafana'],
-        label: 'Infra & data'
+        content: ['Vitest', 'Playwright', 'Oxlint'],
+        label: 'Quality'
+      },
+      {
+        content: ['Bun', 'Docker', 'Cloudflare', 'Claude'],
+        label: 'Tooling'
       }
     ],
     'main-title': 'Stack'

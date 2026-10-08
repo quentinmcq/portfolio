@@ -20,11 +20,7 @@
 
       <p class="case__lede">{{ entry ? $t(`project.cases.${entry.slug}.lede`) : item.subtitle }}</p>
 
-      <ul v-if="item.chips?.length" class="case__chips">
-        <li v-for="chip in item.chips" :key="chip">
-          <SkillChip :label="chip" />
-        </li>
-      </ul>
+      <ToolList v-if="item.chips?.length" :labels="item.chips" />
 
       <template v-if="entry">
         <div class="case__body">
@@ -114,7 +110,7 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import ArrowIcon from '@/components/ArrowIcon/ArrowIcon.vue'
-import SkillChip from '@/components/SkillChip/SkillChip.vue'
+import ToolList from '@/components/ToolList/ToolList.vue'
 import { CASES } from '@/data/cases'
 import type { Project } from '@/types/Project'
 import { highlight } from '@/utils/highlight'

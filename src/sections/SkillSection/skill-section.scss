@@ -1,60 +1,41 @@
-.skill-lead {
-  padding-bottom: clamp(2rem, 4vw, 3rem);
-  border-bottom: 1px solid var(--line);
-
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 0.3em 0.7em;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: clamp(1.75rem, 1.1rem + 2.4vw, 3.25rem);
-    line-height: 1.05;
-  }
-
-  &__item {
-    display: inline-flex;
-    align-items: center;
-  }
-}
-
-.skill-piles {
+.skill-sheet {
   margin: 0;
-  padding: 0;
-  list-style: none;
-}
+  border-top: 1px solid var(--line);
 
-.skill-pile {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 0.75rem 0;
-  padding-block: clamp(1.5rem, 3vw, 2.25rem);
-  border-bottom: 1px solid var(--line);
+  &__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.5rem 0;
+    padding-block: clamp(1.25rem, 2.4vw, 1.75rem);
+    border-bottom: 1px solid var(--line);
 
-  @media (min-width: $md) {
-    grid-template-columns: minmax(0, 12rem) minmax(0, 1fr);
-    align-items: baseline;
-    column-gap: 1.5rem;
+    @media (min-width: $md) {
+      grid-template-columns: minmax(0, 8rem) minmax(0, 1fr);
+      align-items: baseline;
+      column-gap: 1.5rem;
+    }
+
+    @include hover {
+      .skill-sheet__label {
+        color: var(--accent-text);
+      }
+    }
   }
 
   &__label {
-    margin: 0;
-    font-family: var(--font-display), sans-serif;
-    font-weight: 500;
-    font-size: clamp(1.125rem, 1rem + 0.4vw, 1.3125rem);
-    line-height: 1.15;
-    letter-spacing: -0.02em;
-    color: var(--fg);
+    font-family: var(--font-mono), monospace;
+    font-size: var(--fs-micro);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--fg-faint);
+    transition: color var(--dur-fast) var(--ease-out);
   }
 
   &__tools {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem 0.5rem;
+    --tool-size: clamp(1.125rem, 6.3cqi, 2.125rem);
+
     margin: 0;
-    padding: 0;
-    list-style: none;
+    min-width: 0;
+    container-type: inline-size;
   }
 }
