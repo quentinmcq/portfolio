@@ -24,13 +24,26 @@ const ALPHA_MIN = 0.05
 const ALPHA_MAX = 0.5
 const EMBER_FROM = 0.55
 
+const MOON_X = 0.8
+const MOON_Y = 0.32
+const MOON_RADIUS = 0.13
+const MOON_CRATERS: [number, number, number][] = [
+  [-0.32, -0.22, 0.24],
+  [0.28, 0.12, 0.3],
+  [-0.12, 0.45, 0.17],
+  [0.38, -0.4, 0.13]
+]
+
 const MAX_CELLS = 12000
 const TARGET_FPS = 30
 const STATIC_T = 7.3
 
 type Rgb = [number, number, number]
 
-export function useAsciiBackdrop(canvasRef: Readonly<ShallowRef<HTMLCanvasElement | null>>) {
+export function useAsciiBackdrop(
+  canvasRef: Readonly<ShallowRef<HTMLCanvasElement | null>>,
+  moonVisible: () => boolean = () => false
+) {
   const { theme } = useTheme()
 
   let ctx: CanvasRenderingContext2D | null = null
@@ -48,6 +61,7 @@ export function useAsciiBackdrop(canvasRef: Readonly<ShallowRef<HTMLCanvasElemen
   let dy2 = new Float32Array(0)
   let colWave = new Float32Array(0)
   let rowWave = new Float32Array(0)
+  let moon = new Float32Array(0)
 
   const colors: string[] = []
 
@@ -149,9 +163,36 @@ export function useAsciiBackdrop(canvasRef: Readonly<ShallowRef<HTMLCanvasElemen
       dy2[y] = (v - 0.5) * (v - 0.5)
     }
 
+    buildMoon(w, h)
+
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
     ctx.textBaseline = 'top'
     ctx.font = `${fontSize}px ${FONT_STACK}`
+  }
+
+  function buildMoon(w: number, h: number) {
+    if (!moonVisible()) {
+      moon = new Float32Array(0)
+      return
+    }
+    moon = new Float32Array(cols * rows)
+    const r = Math.max(80, Math.min(w, h) * MOON_RADIUS)
+    const mx = w * MOON_X
+    const my = h * MOON_Y
+    for (let y = 0; y < rows; y++) {
+      const oy = ((y + 0.5) * cellH - my) / r
+      for (let x = 0; x < cols; x++) {
+        const ox = ((x + 0.5) * cellW - mx) / r
+        const d = Math.sqrt(ox * ox + oy * oy)
+        if (d > 1.05) continue
+        let v = 0.94 - 0.14 * d * d
+        for (const [cx, cy, cr] of MOON_CRATERS) {
+          const cd = Math.hypot(ox - cx, oy - cy) / cr
+          v -= 0.24 * smoothstep(1, 0.4, cd)
+        }
+        moon[y * cols + x] = v * smoothstep(1.05, 0.9, d)
+      }
+    }
   }
 
   function draw(t: number) {
@@ -191,6 +232,11 @@ export function useAsciiBackdrop(canvasRef: Readonly<ShallowRef<HTMLCanvasElemen
           const ddx = nx[x] - px
           const ddy = nyy - py
           val += energy * Math.exp(-(ddx * ddx + ddy * ddy) * inv2s2) * POINTER_GAIN
+        }
+
+        if (moon.length) {
+          const m = moon[y * cols + x]
+          if (m > val) val = m
         }
 
         let i = (val * RAMP.length) | 0
@@ -277,6 +323,11 @@ export function useAsciiBackdrop(canvasRef: Readonly<ShallowRef<HTMLCanvasElemen
       evaluate()
     }
   }
+
+  watch(moonVisible, () => {
+    measure()
+    if (reduced) drawStatic()
+  })
 
   watch(theme, () => {
     buildColors()
