@@ -1,8 +1,5 @@
 <template>
-  <header
-    class="category-title"
-    :class="{ 'category-title--center': center, 'category-title--wide': wide }"
-  >
+  <header class="category-title" :class="{ 'category-title--wide': wide }">
     <span class="category-title__rule" aria-hidden="true" />
 
     <div class="category-title__text">
@@ -21,12 +18,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-const {
-  center = false,
-  section,
-  wide = false
-} = defineProps<{
-  center?: boolean
+const { section, wide = false } = defineProps<{
   section: string
   wide?: boolean
 }>()

@@ -1,7 +1,7 @@
 <template>
   <section id="hobby" class="section section--band hobby">
     <div class="container">
-      <CategoryTitle section="hobby" center />
+      <CategoryTitle section="hobby" wide />
 
       <ul class="hobby__cards">
         <li
