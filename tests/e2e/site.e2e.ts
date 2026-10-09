@@ -8,7 +8,7 @@ test.describe('prerendered documents', () => {
     expect(html).toContain('<title>Quentin Macq — Développeur full-stack</title>')
     expect(html).toContain('<link rel="canonical" href="https://quentin-macq.dev/" />')
     expect(html).toContain('Travaux')
-    expect(html).toContain('Unpaid Tracking')
+    expect(html).toContain('Bomberman')
     expect(html).not.toContain('<div id="app"></div>')
   })
 
