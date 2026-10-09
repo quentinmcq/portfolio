@@ -143,9 +143,8 @@ export default {
         'figure-title': 'Partie en cours',
         lede: 'Un clone de Bomberman en Python, à jouer contre des amis ou des bots.',
         paragraphs: [
-          "Projet scolaire à trois, d'avril à juin 2019 — notre premier vrai programme. Plateau, bombes, power-ups et malus cachés dans les blocs, jusqu'à quatre joueurs humains ou bots, le tout dessiné avec PyQt.",
-          "La partie la plus intéressante : les bots. Ils repèrent un bloc destructible à portée, posent une bombe s'ils peuvent se mettre à l'abri, et s'éloignent avant l'explosion.",
-          "Repris en 2026 pour le remettre à niveau : code réorganisé, nouveaux sprites et tests automatiques. L'audit est documenté dans le dépôt."
+          "Projet scolaire à trois en 2019, notre premier vrai programme : plateau, bombes, power-ups, jusqu'à quatre joueurs humains ou bots. Repris en 2026 pour le remettre à niveau, avec de nouveaux sprites et des tests automatiques.",
+          "La partie la plus intéressante : les bots. Ils repèrent un bloc destructible à portée, posent une bombe s'ils peuvent se mettre à l'abri, et s'éloignent avant l'explosion."
         ]
       },
       pilpoil: {
@@ -161,8 +160,8 @@ export default {
         'figure-title': 'pilpoil.app',
         lede: "Un carnet de santé numérique pour animaux, qui anticipe les risques selon la race et l'âge.",
         paragraphs: [
-          "Le carnet de santé d'un animal, c'est souvent une pochette de papiers et des rappels qu'on oublie. PilPoil centralise l'historique médical, prévient avant les échéances et partage le dossier avec la famille ou le vétérinaire.",
-          "Le cœur : une base de 437 races avec leurs prédispositions et un calendrier de suivi recommandé. Claude croise ce profil avec l'historique pour produire des bilans et analyser un symptôme décrit par le propriétaire, réservé aux abonnés."
+          "Le carnet de santé d'un animal, c'est souvent une pochette de papiers et des rappels oubliés. PilPoil centralise l'historique, prévient avant les échéances et partage le dossier avec la famille ou le vétérinaire.",
+          "Une base de 437 races et leurs prédispositions sert de socle : Claude croise ce profil avec l'historique pour produire des bilans et analyser un symptôme, pour les abonnés."
         ]
       },
       portfolio: {
@@ -178,8 +177,7 @@ export default {
         'figure-title': 'quentin-macq.dev',
         lede: 'Le site que vous lisez, conçu et codé de A à Z.',
         paragraphs: [
-          "Les pages sont générées à l'avance : elles s'affichent tout de suite, même sans JavaScript, en français comme en anglais.",
-          'Chaque mise à jour passe des tests automatiques : accessibilité, poids des pages, parcours de navigation.',
+          "Les pages sont générées à l'avance et s'affichent tout de suite, en français comme en anglais. Chaque mise à jour passe des tests automatiques d'accessibilité, de poids et de navigation.",
           "Sur ordinateur, un compteur en bas de l'écran indique combien de personnes visitent le site en ce moment."
         ]
       },
@@ -196,8 +194,8 @@ export default {
         'figure-title': 'Le Tombeau du Sorcier',
         lede: 'Un livre dont vous êtes le héros, natif iOS, avec de vraies règles de jeu.',
         paragraphs: [
-          'Le point de départ, ce sont les Défis Fantastiques de mon enfance : combat à 2d6 + Habileté, jets de Chance, inventaire et fins multiples. Je voulais retrouver ça sur téléphone.',
-          "L'histoire est écrite à part, dans un format fait pour les récits à embranchements. Les combats et l'inventaire sont gérés par l'app : je peux réécrire un passage sans toucher aux règles du jeu."
+          'Le point de départ, ce sont les Défis Fantastiques de mon enfance : combats aux dés, jets de Chance, inventaire et fins multiples, à retrouver sur téléphone.',
+          "L'histoire est écrite à part, dans un format fait pour les récits à embranchements : je peux réécrire un passage sans toucher aux règles du jeu."
         ]
       }
     },
@@ -239,13 +237,6 @@ export default {
         status: 'wip',
         title: 'Pilpoil',
         year: '2026'
-      },
-      {
-        chips: ['Symfony', 'Vue', 'PHP', 'Docker'],
-        kind: 'work',
-        subtitle: "Refonte de l'outil interne de suivi des impayés de Motoblouz.",
-        title: 'Unpaid Tracking',
-        year: '2021'
       },
       {
         chips: ['Python', 'PyQt'],

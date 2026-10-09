@@ -143,9 +143,8 @@ export default {
         'figure-title': 'Game in progress',
         lede: 'A Bomberman clone in Python, to play against friends or bots.',
         paragraphs: [
-          'A three-person school project from April to June 2019 — our first real program. Board, bombs, power-ups and penalties hidden in blocks, up to four human or bot players, all drawn with PyQt.',
-          'The most interesting part: the bots. They spot a destructible block within reach, drop a bomb if they can get to safety, and move away before it goes off.',
-          'Reworked in 2026 to bring it up to date: reorganised code, new sprites and automated tests. The audit is documented in the repository.'
+          'A school project for three in 2019, our first real program: board, bombs, power-ups, up to four human or bot players. Reworked in 2026 to bring it up to date, with new sprites and automated tests.',
+          'The most interesting part: the bots. They spot a destructible block in range, drop a bomb if they can reach cover, and move away before the blast.'
         ]
       },
       pilpoil: {
@@ -161,8 +160,8 @@ export default {
         'figure-title': 'pilpoil.app',
         lede: 'A digital health record for pets that anticipates risks by breed and age.',
         paragraphs: [
-          "A pet's health record is usually a folder of paper and reminders you forget. PilPoil centralises the medical history, warns before deadlines and shares the file with the family or the vet.",
-          'The core: a database of 437 breeds with their predispositions and a recommended follow-up schedule. Claude crosses that profile with the history to produce check-ups and analyse a symptom described by the owner, for subscribers only.'
+          "A pet's health record is often a folder of papers and forgotten reminders. PilPoil gathers the history, warns before due dates and shares the record with family or the vet.",
+          'A base of 437 breeds and their predispositions is the foundation: Claude crosses this profile with the history to produce check-ups and analyse a symptom, for subscribers.'
         ]
       },
       portfolio: {
@@ -178,8 +177,7 @@ export default {
         'figure-title': 'quentin-macq.dev',
         lede: 'The site you are reading, designed and built from scratch.',
         paragraphs: [
-          'Pages are generated ahead of time: they show up instantly, even without JavaScript, in French and in English.',
-          'Every update goes through automated tests: accessibility, page weight, navigation paths.',
+          'Pages are generated ahead of time and show up instantly, in French and in English. Every update goes through automated accessibility, weight and navigation tests.',
           'On desktop, a counter at the bottom of the screen shows how many people are on the site right now.'
         ]
       },
@@ -196,8 +194,8 @@ export default {
         'figure-title': 'Le Tombeau du Sorcier',
         lede: 'A choose-your-own-adventure gamebook, native on iOS, with real game rules.',
         paragraphs: [
-          'It started with the Fighting Fantasy books of my childhood: 2d6 + Skill combat, Luck rolls, an inventory and multiple endings. I wanted that on a phone.',
-          'The story is written separately, in a format made for branching narratives. Combat and inventory are handled by the app: I can rewrite a passage without touching the game rules.'
+          'It started with the Fighting Fantasy books of my childhood: dice combat, Luck rolls, an inventory and multiple endings, brought to the phone.',
+          'The story is written separately, in a format made for branching narratives: I can rewrite a passage without touching the game rules.'
         ]
       }
     },
@@ -239,13 +237,6 @@ export default {
         status: 'wip',
         title: 'Pilpoil',
         year: '2026'
-      },
-      {
-        chips: ['Symfony', 'Vue', 'PHP', 'Docker'],
-        kind: 'work',
-        subtitle: "Rebuild of Motoblouz's internal unpaid-invoices tracking tool.",
-        title: 'Unpaid Tracking',
-        year: '2021'
       },
       {
         chips: ['Python', 'PyQt'],
