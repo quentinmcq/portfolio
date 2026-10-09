@@ -84,17 +84,16 @@
 
   &__resources {
     margin-top: auto;
-    padding-top: 1.5rem;
+    padding-top: 1.25rem;
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    gap: 2rem;
     border-top: 1px solid var(--line);
   }
 
   &__resource {
     display: inline-flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 0.5rem;
     padding: 0.4rem 0;
     font-family: var(--font-mono), monospace;
     font-size: var(--fs-micro);
@@ -117,26 +116,6 @@
         color: var(--accent-text);
         transform: translate(2px, -2px);
       }
-    }
-  }
-
-  &__footer {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-
-  &__caption {
-    font-family: var(--font-mono), monospace;
-    font-size: var(--fs-micro);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--fg);
-
-    &--muted {
-      color: var(--fg-muted);
     }
   }
 }

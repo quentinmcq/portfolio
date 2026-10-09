@@ -47,14 +47,6 @@
           <ArrowIcon :size="12" :stroke-width="1.6" />
         </a>
       </div>
-
-      <div class="drawer__footer">
-        <span class="drawer__caption"
-          >{{ $t('common.firstname') }} {{ $t('common.name-upper') }} —
-          {{ $t('header.role') }}</span
-        >
-        <span class="drawer__caption drawer__caption--muted">{{ $t('header.meta-location') }}</span>
-      </div>
     </div>
   </Transition>
 </template>
