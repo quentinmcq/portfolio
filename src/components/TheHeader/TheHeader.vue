@@ -11,7 +11,11 @@
       <div class="hero__main">
         <h1 class="hero__title">
           <span class="hero__title-line hero-enter" style="--enter-delay: 80ms">
-            <span class="hero__ears-host" :class="{ 'hero__ears-host--howl': howling }">
+            <span
+              class="hero__ears-host"
+              :class="{ 'hero__ears-host--howl': howling }"
+              @pointerup="onTap"
+            >
               <span class="hero__ears" aria-hidden="true">
                 <svg viewBox="0 0 100 44" fill="currentColor">
                   <g class="hero__ear hero__ear--left">
@@ -85,7 +89,11 @@
 import AsciiBackdrop from '@/components/AsciiBackdrop/AsciiBackdrop.vue'
 import { useWerewolf } from '@/composables/werewolf'
 
-const { fullMoon, howling } = useWerewolf()
+const { fullMoon, howl, howling } = useWerewolf()
+
+function onTap(e: PointerEvent) {
+  if (e.pointerType !== 'mouse') howl()
+}
 </script>
 
 <style lang="scss" src="./the-header.scss" scoped />

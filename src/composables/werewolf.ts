@@ -19,6 +19,10 @@ export function useWerewolf() {
     typed = (typed + e.key.toLowerCase()).slice(-HOWL.length)
     if (typed !== HOWL) return
     typed = ''
+    howl()
+  }
+
+  function howl() {
     howling.value = false
     window.clearTimeout(timer)
     requestAnimationFrame(() => {
@@ -37,5 +41,5 @@ export function useWerewolf() {
     window.clearTimeout(timer)
   })
 
-  return { fullMoon: readonly(fullMoon), howling: readonly(howling) }
+  return { fullMoon: readonly(fullMoon), howl, howling: readonly(howling) }
 }
