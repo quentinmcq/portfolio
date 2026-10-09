@@ -151,8 +151,7 @@ export default {
         facts: [
           { label: 'Données', value: '437 races référencées' },
           { label: 'IA', value: 'Claude · bilans & symptômes' },
-          { label: 'Plateformes', value: 'Web · iOS · Android' },
-          { label: 'Partage', value: 'Famille · vétérinaire' }
+          { label: 'Plateformes', value: 'Web · iOS · Android' }
         ],
         'figure-alt':
           "Page d'accueil de PilPoil sur mobile : « La santé de vos animaux, au poil », avec un bouton de création de compte et trois chiffres clés.",
@@ -160,7 +159,7 @@ export default {
         'figure-title': 'pilpoil.app',
         lede: "Un carnet de santé numérique pour animaux, qui anticipe les risques selon la race et l'âge.",
         paragraphs: [
-          "Le carnet de santé d'un animal, c'est souvent une pochette de papiers et des rappels oubliés. PilPoil centralise l'historique, prévient avant les échéances et partage le dossier avec la famille ou le vétérinaire.",
+          "Le carnet de santé d'un animal, c'est souvent une pochette de papiers et des rappels oubliés. PilPoil centralise l'historique et prévient avant les échéances.",
           "Une base de 437 races et leurs prédispositions sert de socle : Claude croise ce profil avec l'historique pour produire des bilans et analyser un symptôme, pour les abonnés."
         ]
       },

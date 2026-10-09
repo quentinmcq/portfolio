@@ -151,8 +151,7 @@ export default {
         facts: [
           { label: 'Data', value: '437 breeds referenced' },
           { label: 'AI', value: 'Claude · check-ups & symptoms' },
-          { label: 'Platforms', value: 'Web · iOS · Android' },
-          { label: 'Sharing', value: 'Family · vet' }
+          { label: 'Platforms', value: 'Web · iOS · Android' }
         ],
         'figure-alt':
           'PilPoil home page on mobile: "La santé de vos animaux, au poil", with a sign-up button and three key figures.',
@@ -160,7 +159,7 @@ export default {
         'figure-title': 'pilpoil.app',
         lede: 'A digital health record for pets that anticipates risks by breed and age.',
         paragraphs: [
-          "A pet's health record is often a folder of papers and forgotten reminders. PilPoil gathers the history, warns before due dates and shares the record with family or the vet.",
+          "A pet's health record is often a folder of papers and forgotten reminders. PilPoil gathers the history and warns before due dates.",
           'A base of 437 breeds and their predispositions is the foundation: Claude crosses this profile with the history to produce check-ups and analyse a symptom, for subscribers.'
         ]
       },
