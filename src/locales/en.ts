@@ -48,7 +48,7 @@ export default {
       {
         kind: 'education',
         location: 'IUT · Lens',
-        title: "Professional bachelor's degree in computer science",
+        title: "Professional bachelor's degree (DIOC)",
         year: '2020 — 2021'
       },
       {

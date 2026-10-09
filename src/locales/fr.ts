@@ -48,7 +48,7 @@ export default {
       {
         kind: 'education',
         location: 'IUT · Lens',
-        title: 'Licence pro Informatique',
+        title: 'Licence pro DIOC',
         year: '2020 — 2021'
       },
       {
