@@ -27,12 +27,6 @@
               <span class="contact__channel-val">{{ CONTACTS.githubHandle }}</span>
             </a>
           </li>
-          <li>
-            <span class="contact__channel">
-              <span class="contact__channel-key">{{ $t('contact.where') }}</span>
-              <span class="contact__channel-val">{{ $t('header.meta-location') }}</span>
-            </span>
-          </li>
         </ul>
       </div>
     </div>

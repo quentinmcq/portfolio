@@ -15,8 +15,7 @@ export default {
   contact: {
     channels: 'Autres canaux',
     kicker: "Un projet, une question, ou juste envie de parler front-end autour d'un café.",
-    'main-title': 'Contact',
-    where: 'Où'
+    'main-title': 'Contact'
   },
 
   experience: {
@@ -68,8 +67,7 @@ export default {
   header: {
     'aria-hero': 'Introduction',
     'cta-work': 'Voir le travail',
-    lede: 'Full-stack avec une obsession pour la performance front et les nouveaux outils.',
-    'meta-location': 'Hauts-de-France'
+    lede: 'Full-stack avec une obsession pour la performance front et les nouveaux outils.'
   },
 
   hobby: {

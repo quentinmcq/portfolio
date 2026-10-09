@@ -63,15 +63,15 @@
     text-transform: uppercase;
     color: var(--fg-faint);
     transition: color var(--dur-fast) var(--ease-out);
+
+    @media (max-width: calc(#{$md} - 1px)) {
+      min-width: 5.5rem;
+    }
   }
 
   &__channel-val {
     font-family: var(--font-body), sans-serif;
     font-size: var(--fs-body);
-  }
-
-  span.contact__channel .contact__channel-val {
-    color: var(--fg-muted);
   }
 
   a.contact__channel {
