@@ -22,34 +22,11 @@
     font-size: var(--fs-micro);
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--fg-muted);
-  }
-
-  &__link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-    font-family: var(--font-mono), monospace;
-    font-size: var(--fs-micro);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
+    text-align: center;
     color: var(--fg);
-    transition: color var(--dur-fast) var(--ease-out);
 
-    svg {
-      color: var(--fg-faint);
-      transition:
-        color var(--dur-fast) var(--ease-out),
-        transform var(--dur-fast) var(--ease-out);
-    }
-
-    @include hover {
-      color: var(--accent-text);
-
-      svg {
-        color: var(--accent-text);
-        transform: translate(2px, -2px);
-      }
+    &--muted {
+      color: var(--fg-muted);
     }
   }
 }

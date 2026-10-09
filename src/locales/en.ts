@@ -60,8 +60,8 @@ export default {
   },
 
   footer: {
-    copyright: '© {currentYear} — Quentin Macq',
-    source: 'Source code'
+    author: 'Quentin Macq',
+    host: 'Hosted by Cloudflare, Inc. · 101 Townsend St, San Francisco, CA 94107, USA'
   },
 
   header: {
