@@ -199,50 +199,6 @@
     text-align: right;
   }
 
-  &__code {
-    margin: 0;
-    padding: clamp(1.25rem, 2.5vw, 1.75rem);
-    overflow-x: auto;
-    font-family: var(--font-mono), monospace;
-    font-size: var(--fs-caption);
-    line-height: 1.7;
-    color: var(--fg-muted);
-    font-variant-ligatures: none;
-    tab-size: 2;
-
-    code {
-      display: block;
-      font: inherit;
-    }
-
-    &:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: -2px;
-    }
-  }
-
-  &__line {
-    display: block;
-    min-height: 1.7em;
-    white-space: pre;
-  }
-
-  .tk-keyword {
-    color: var(--accent-text);
-  }
-
-  .tk-type {
-    color: var(--gold);
-  }
-
-  .tk-string {
-    color: var(--fg);
-  }
-
-  .tk-comment {
-    color: var(--fg-faint);
-  }
-
   &__device {
     display: flex;
     justify-content: center;

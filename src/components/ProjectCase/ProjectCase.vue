@@ -61,37 +61,13 @@
       </div>
     </div>
 
-    <figure
-      v-if="entry"
-      class="case__figure"
-      :class="`case__figure--${entry.figure.kind}`"
-      data-reveal
-      style="--reveal-delay: 120ms"
-    >
+    <figure v-if="entry" class="case__figure" data-reveal style="--reveal-delay: 120ms">
       <figcaption class="case__figure-head">
-        <span class="case__file">
-          {{
-            entry.figure.kind === 'code'
-              ? entry.figure.file
-              : $t(`project.cases.${entry.slug}.figure-title`)
-          }}
-        </span>
+        <span class="case__file">{{ $t(`project.cases.${entry.slug}.figure-title`) }}</span>
         <span class="case__file-meta">{{ $t(`project.cases.${entry.slug}.figure-meta`) }}</span>
       </figcaption>
 
-      <pre
-        v-if="entry.figure.kind === 'code'"
-        class="case__code"
-        role="region"
-        :aria-label="entry.figure.file"
-        tabindex="0"
-      ><code><span
-        v-for="(line, index) in lines"
-        :key="index"
-        class="case__line"
-      ><span v-for="(token, position) in line" :key="position" :class="`tk-${token.type}`">{{ token.text }}</span></span></code></pre>
-
-      <div v-else class="case__device" :class="`case__device--${entry.figure.frame}`">
+      <div class="case__device" :class="`case__device--${entry.figure.frame}`">
         <img
           :src="entry.figure.src"
           :width="entry.figure.width"
@@ -113,7 +89,6 @@ import ArrowIcon from '@/components/ArrowIcon/ArrowIcon.vue'
 import ToolList from '@/components/ToolList/ToolList.vue'
 import { CASES } from '@/data/cases'
 import type { Project } from '@/types/Project'
-import { highlight } from '@/utils/highlight'
 
 interface Fact {
   label: string
@@ -132,8 +107,6 @@ function caseList<T>(field: 'facts' | 'paragraphs'): T[] {
 
 const paragraphs = computed(() => caseList<string>('paragraphs'))
 const facts = computed(() => caseList<Fact>('facts'))
-
-const lines = entry?.figure.kind === 'code' ? highlight(entry.figure.source) : []
 </script>
 
 <style lang="scss" src="./project-case.scss" scoped />

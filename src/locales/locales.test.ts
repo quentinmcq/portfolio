@@ -67,9 +67,7 @@ describe('project cases', () => {
         expect(Array.isArray(block?.paragraphs)).toBe(true)
         expect(Array.isArray(block?.facts)).toBe(true)
 
-        if (entry.figure.kind === 'image') {
-          expect(typeof block?.['figure-alt'], `${locale} — ${entry.slug}`).toBe('string')
-        }
+        expect(typeof block?.['figure-alt'], `${locale} — ${entry.slug}`).toBe('string')
 
         for (const key of FIGURE_KEYS) {
           expect(typeof block?.[key], `${locale} — ${entry.slug} — ${key}`).toBe('string')

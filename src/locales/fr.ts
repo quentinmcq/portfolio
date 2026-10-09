@@ -8,7 +8,6 @@ export default {
     'close-menu': 'Fermer le menu',
     firstname: 'Quentin',
     name: 'Macq',
-    'name-upper': 'MACQ',
     'open-menu': 'Ouvrir le menu',
     'skip-to-content': 'Aller au contenu'
   },
@@ -70,8 +69,7 @@ export default {
     'aria-hero': 'Introduction',
     'cta-work': 'Voir le travail',
     lede: 'Full-stack avec une obsession pour la performance front et les nouveaux outils.',
-    'meta-location': 'Hauts-de-France',
-    role: 'Développeur full-stack'
+    'meta-location': 'Hauts-de-France'
   },
 
   hobby: {
@@ -147,15 +145,15 @@ export default {
         paragraphs: [
           "Projet scolaire à trois, d'avril à juin 2019 — notre premier vrai programme. Plateau, bombes, power-ups et malus cachés dans les blocs, jusqu'à quatre joueurs humains ou bots, le tout dessiné avec PyQt.",
           "La partie la plus intéressante : les bots. Ils repèrent un bloc destructible à portée, posent une bombe s'ils peuvent se mettre à l'abri, et s'éloignent avant l'explosion.",
-          "Repris en 2026 : portage PyQt6, découpage en modules, sprites originaux générés par script, tests et intégration continue. L'audit est documenté dans le dépôt."
+          "Repris en 2026 pour le remettre à niveau : code réorganisé, nouveaux sprites et tests automatiques. L'audit est documenté dans le dépôt."
         ]
       },
       pilpoil: {
         facts: [
           { label: 'Données', value: '437 races référencées' },
           { label: 'IA', value: 'Claude · bilans & symptômes' },
-          { label: 'Mobile', value: 'Capacitor · iOS & Android' },
-          { label: 'Version', value: 'v1.2' }
+          { label: 'Plateformes', value: 'Web · iOS · Android' },
+          { label: 'Partage', value: 'Famille · vétérinaire' }
         ],
         'figure-alt':
           "Page d'accueil de PilPoil sur mobile : « La santé de vos animaux, au poil », avec un bouton de création de compte et trois chiffres clés.",
@@ -169,25 +167,28 @@ export default {
       },
       portfolio: {
         facts: [
-          { label: 'Rendu', value: 'Prérendu · fr et en' },
-          { label: 'Accessibilité', value: 'WCAG 2.2 AA · axe en CI' },
-          { label: 'Tests', value: 'Vitest · Playwright' },
-          { label: 'Budget', value: 'JS < 70 Ko gzip' }
+          { label: 'Langues', value: 'Français · anglais' },
+          { label: 'Accessibilité', value: 'Normes WCAG 2.2 AA' },
+          { label: 'Poids', value: 'Moins de 70 Ko de JavaScript' },
+          { label: 'Code', value: 'Open source' }
         ],
-        'figure-meta': 'Temps réel',
-        'figure-title': 'worker/presence.ts',
-        lede: 'Le site que vous lisez, prérendu au build et sans librairie de composants.',
+        'figure-alt':
+          "Accueil du site en thème sombre : « Quentin Macq. » en grand sur un fond de caractères ASCII, l'accroche et les boutons « Voir le travail » et « Contact ».",
+        'figure-meta': 'En ligne',
+        'figure-title': 'quentin-macq.dev',
+        lede: 'Le site que vous lisez, conçu et codé de A à Z.',
         paragraphs: [
-          "Le HTML vient du bundle SSR : la page est complète sans JavaScript, Vue s'hydrate ensuite pour les transitions.",
-          "Le compteur de visiteurs en direct est un Durable Object Cloudflare : chaque visiteur ouvre un WebSocket, l'objet garde les connexions en hibernation et diffuse le nombre de connectés à chaque arrivée ou départ."
+          "Les pages sont générées à l'avance : elles s'affichent tout de suite, même sans JavaScript, en français comme en anglais.",
+          'Chaque mise à jour passe des tests automatiques : accessibilité, poids des pages, parcours de navigation.',
+          "Sur ordinateur, un compteur en bas de l'écran indique combien de personnes visitent le site en ce moment."
         ]
       },
       'wizard-tomb': {
         facts: [
           { label: 'Plateforme', value: 'iOS 26 · SwiftUI' },
-          { label: 'Moteur narratif', value: 'Ink via InkSwift' },
+          { label: 'Écriture', value: 'Ink, séparée du code' },
           { label: 'Histoire', value: 'Originale, écrite pour le jeu' },
-          { label: 'Longueur', value: '1 790 lignes · 164 passages' }
+          { label: 'Fins', value: 'Multiples' }
         ],
         'figure-alt':
           "Écran de l'app : bandeau de statistiques (Habileté, Endurance, Chance, or), texte du premier passage dans le village de Roncebrune et trois choix en bas.",
@@ -196,7 +197,7 @@ export default {
         lede: 'Un livre dont vous êtes le héros, natif iOS, avec de vraies règles de jeu.',
         paragraphs: [
           'Le point de départ, ce sont les Défis Fantastiques de mon enfance : combat à 2d6 + Habileté, jets de Chance, inventaire et fins multiples. Je voulais retrouver ça sur téléphone.',
-          "L'aventure est écrite en Ink, pas en Swift. Les combats, l'inventaire et les effets ne vivent pas dans le texte : ce sont des tags que le moteur SwiftUI intercepte au fil de la lecture. L'écriture et la mécanique n'ont plus à se marcher dessus."
+          "L'histoire est écrite à part, dans un format fait pour les récits à embranchements. Les combats et l'inventaire sont gérés par l'app : je peux réécrire un passage sans toucher aux règles du jeu."
         ]
       }
     },

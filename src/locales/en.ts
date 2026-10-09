@@ -8,7 +8,6 @@ export default {
     'close-menu': 'Close menu',
     firstname: 'Quentin',
     name: 'Macq',
-    'name-upper': 'MACQ',
     'open-menu': 'Open menu',
     'skip-to-content': 'Skip to content'
   },
@@ -70,8 +69,7 @@ export default {
     'aria-hero': 'Introduction',
     'cta-work': 'See the work',
     lede: 'Full-stack with an obsession for front-end performance and emerging tools.',
-    'meta-location': 'Hauts-de-France',
-    role: 'Full-stack developer'
+    'meta-location': 'Hauts-de-France'
   },
 
   hobby: {
@@ -147,15 +145,15 @@ export default {
         paragraphs: [
           'A three-person school project from April to June 2019 — our first real program. Board, bombs, power-ups and penalties hidden in blocks, up to four human or bot players, all drawn with PyQt.',
           'The most interesting part: the bots. They spot a destructible block within reach, drop a bomb if they can get to safety, and move away before it goes off.',
-          'Reworked in 2026: PyQt6 port, split into modules, original script-generated sprites, tests and continuous integration. The audit is documented in the repository.'
+          'Reworked in 2026 to bring it up to date: reorganised code, new sprites and automated tests. The audit is documented in the repository.'
         ]
       },
       pilpoil: {
         facts: [
           { label: 'Data', value: '437 breeds referenced' },
           { label: 'AI', value: 'Claude · check-ups & symptoms' },
-          { label: 'Mobile', value: 'Capacitor · iOS & Android' },
-          { label: 'Version', value: 'v1.2' }
+          { label: 'Platforms', value: 'Web · iOS · Android' },
+          { label: 'Sharing', value: 'Family · vet' }
         ],
         'figure-alt':
           'PilPoil home page on mobile: "La santé de vos animaux, au poil", with a sign-up button and three key figures.',
@@ -169,25 +167,28 @@ export default {
       },
       portfolio: {
         facts: [
-          { label: 'Rendering', value: 'Prerendered · fr and en' },
-          { label: 'Accessibility', value: 'WCAG 2.2 AA · axe in CI' },
-          { label: 'Tests', value: 'Vitest · Playwright' },
-          { label: 'Budget', value: 'JS < 70 KB gzip' }
+          { label: 'Languages', value: 'French · English' },
+          { label: 'Accessibility', value: 'WCAG 2.2 AA standards' },
+          { label: 'Weight', value: 'Under 70 KB of JavaScript' },
+          { label: 'Code', value: 'Open source' }
         ],
-        'figure-meta': 'Real time',
-        'figure-title': 'worker/presence.ts',
-        lede: 'The site you are reading, prerendered at build time with no component library.',
+        'figure-alt':
+          'Site homepage in dark theme: “Quentin Macq.” in large type over an ASCII character backdrop, the tagline and the “See the work” and “Contact” buttons.',
+        'figure-meta': 'Live',
+        'figure-title': 'quentin-macq.dev',
+        lede: 'The site you are reading, designed and built from scratch.',
         paragraphs: [
-          'The HTML comes from the SSR bundle: the page is complete without JavaScript, then Vue hydrates for transitions.',
-          'The live visitor counter is a Cloudflare Durable Object: each visitor opens a WebSocket, the object keeps the connections in hibernation and broadcasts the number of connected people on every arrival or departure.'
+          'Pages are generated ahead of time: they show up instantly, even without JavaScript, in French and in English.',
+          'Every update goes through automated tests: accessibility, page weight, navigation paths.',
+          'On desktop, a counter at the bottom of the screen shows how many people are on the site right now.'
         ]
       },
       'wizard-tomb': {
         facts: [
           { label: 'Platform', value: 'iOS 26 · SwiftUI' },
-          { label: 'Narrative engine', value: 'Ink via InkSwift' },
+          { label: 'Writing', value: 'Ink, separate from the code' },
           { label: 'Story', value: 'Original, written for the game' },
-          { label: 'Length', value: '1,790 lines · 164 passages' }
+          { label: 'Endings', value: 'Multiple' }
         ],
         'figure-alt':
           'App screen: stats bar (Skill, Stamina, Luck, gold), text of the opening passage in the village of Roncebrune and three choices at the bottom.',
@@ -196,7 +197,7 @@ export default {
         lede: 'A choose-your-own-adventure gamebook, native on iOS, with real game rules.',
         paragraphs: [
           'It started with the Fighting Fantasy books of my childhood: 2d6 + Skill combat, Luck rolls, an inventory and multiple endings. I wanted that on a phone.',
-          'The adventure is written in Ink, not Swift. Combat, inventory and effects do not live in the prose: they are tags the SwiftUI engine intercepts while reading. Writing and mechanics no longer step on each other.'
+          'The story is written separately, in a format made for branching narratives. Combat and inventory are handled by the app: I can rewrite a passage without touching the game rules.'
         ]
       }
     },
