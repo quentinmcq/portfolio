@@ -34,7 +34,7 @@ export default {
       {
         kind: 'work',
         location: 'Motoblouz · Carvin',
-        subtitle: "Master's degree in computer science · EPSI Lille",
+        subtitle: "IT and information systems expert, Master's level · EPSI Lille",
         title: 'Web developer (apprenticeship)',
         year: '2021 — 2023'
       },

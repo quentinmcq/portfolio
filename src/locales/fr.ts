@@ -34,7 +34,7 @@ export default {
       {
         kind: 'work',
         location: 'Motoblouz · Carvin',
-        subtitle: 'Master Informatique · EPSI Lille',
+        subtitle: 'Expert en informatique et SI, bac+5 · EPSI Lille',
         title: 'Développeur web en alternance',
         year: '2021 — 2023'
       },
