@@ -1,11 +1,12 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" class="theme-dark">
   <head>
     <meta charset="UTF-8" />
     <meta content="#0d0d10" name="theme-color" />
     <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
     <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport" />
     <title>404 — Quentin Macq</title>
+    <script src="/404.js"></script>
     <style>
       @font-face {
         font-family: 'Bricolage Grotesque';
@@ -27,13 +28,25 @@
       :root {
         --ink: #0d0d10;
         --paper: #f5f1e8;
-        --accent: #ff5b3a;
-        --muted: rgba(245, 241, 232, 0.62);
-        --faint: rgba(245, 241, 232, 0.52);
+        --bg: var(--ink);
+        --fg: var(--paper);
+        --fg-muted: rgba(245, 241, 232, 0.62);
         --line: rgba(245, 241, 232, 0.12);
+        --accent-text: #ff5b3a;
+        --accent-button: #ff5b3a;
+        --accent-deep: #e04a26;
         --font-display: 'Bricolage Grotesque', 'Helvetica Neue', Helvetica, Arial, sans-serif;
         --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
-        --pad: clamp(1.5rem, 4vw, 3rem);
+        --pad: clamp(1.25rem, 2.5vw, 2.5rem);
+        --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      :root.theme-light {
+        --bg: var(--paper);
+        --fg: var(--ink);
+        --fg-muted: rgba(13, 13, 16, 0.72);
+        --line: rgba(13, 13, 16, 0.1);
+        --accent-text: #b8350f;
       }
 
       *,
@@ -46,10 +59,9 @@
       body {
         margin: 0;
         padding: 0;
-        width: 100%;
         min-height: 100dvh;
-        background: var(--ink);
-        color: var(--paper);
+        background: var(--bg);
+        color: var(--fg);
         font-family: var(--font-display), sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -58,62 +70,40 @@
       body {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        padding: max(var(--pad), env(safe-area-inset-top))
-          max(var(--pad), env(safe-area-inset-right)) max(var(--pad), env(safe-area-inset-bottom))
-          max(var(--pad), env(safe-area-inset-left));
         background:
           radial-gradient(120% 80% at 90% -10%, rgba(255, 91, 58, 0.07), transparent 60%),
-          radial-gradient(60% 60% at 0% 110%, rgba(212, 165, 116, 0.05), transparent 60%);
+          radial-gradient(60% 60% at 0% 110%, rgba(212, 165, 116, 0.05), transparent 60%), var(--bg);
       }
 
-      .top,
-      .bottom {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        font-family: var(--font-mono), monospace;
-        font-size: 0.6875rem;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        color: var(--muted);
+      .container {
+        width: 100%;
+        max-width: 1280px;
+        margin-inline: auto;
+        padding-inline: max(var(--pad), env(safe-area-inset-left))
+          max(var(--pad), env(safe-area-inset-right));
       }
 
-      .bottom {
-        color: var(--faint);
-      }
-
-      .rule {
-        flex: 1;
-        height: 1px;
-        background: var(--line);
+      .top {
+        padding-block: 18px;
       }
 
       .brand {
-        font-family: var(--font-display), sans-serif;
-        font-size: 1.0625rem;
         font-weight: 600;
+        font-size: 1.0625rem;
         letter-spacing: -0.03em;
-        text-transform: none;
-        color: var(--paper);
+        color: var(--fg);
         text-decoration: none;
       }
 
       .brand span {
-        color: var(--accent);
+        color: var(--accent-text);
       }
 
-      .center {
-        max-width: 64ch;
-        margin: auto 0;
-      }
-
-      .stroke {
-        display: block;
-        width: 2.5rem;
-        height: 2px;
-        margin-bottom: 2rem;
-        background: var(--accent);
+      main {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        padding-block: clamp(3rem, 10vh, 6rem);
       }
 
       .code {
@@ -123,155 +113,137 @@
         font-size: clamp(6rem, 18vw, 14rem);
         line-height: 0.86;
         letter-spacing: -0.05em;
-        color: var(--paper);
+        color: var(--fg);
       }
 
       .code .stop {
-        color: var(--accent);
-      }
-
-      .zero {
-        position: relative;
-        display: inline-block;
-        isolation: isolate;
-      }
-
-      .ears {
-        position: absolute;
-        z-index: -1;
-        bottom: calc(100% - 0.15em);
-        left: 54%;
-        width: 0.34em;
-        height: 0.19em;
-        color: var(--paper);
-        translate: -50% 0;
-      }
-
-      .ear {
-        transform-box: fill-box;
-        transform-origin: 50% 100%;
-      }
-
-      .ear--left {
-        transform: translate(2%, 8%) rotate(-18deg);
-      }
-
-      .ear--right {
-        transform: translate(-2%, 8%) rotate(18deg);
-      }
-
-      .ear-inner {
-        fill: var(--accent);
-        opacity: 0.85;
+        color: var(--accent-text);
       }
 
       h1 {
-        margin: 1.5rem 0 1rem;
-        font-weight: 600;
-        font-size: clamp(1.75rem, 1.2rem + 2.4vw, 3rem);
-        line-height: 1;
-        letter-spacing: -0.035em;
+        max-width: 30ch;
+        margin: clamp(1.25rem, 2.6vw, 2rem) 0 0;
+        font-weight: 400;
+        font-size: clamp(1.25rem, 1rem + 1.1vw, 1.875rem);
+        line-height: 1.3;
+        letter-spacing: -0.015em;
       }
 
-      p {
+      p.lede {
         max-width: 44ch;
-        margin: 0 0 2.5rem;
-        font-weight: 400;
+        margin: 0.75rem 0 0;
         font-size: clamp(1.0625rem, 1rem + 0.4vw, 1.25rem);
         line-height: 1.45;
-        color: var(--muted);
+        color: var(--fg-muted);
       }
 
       a.back {
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
+        margin-top: clamp(1.75rem, 3vw, 2.5rem);
         padding: 12px 22px;
-        background: var(--accent);
+        background: var(--accent-button);
         color: var(--ink);
         text-decoration: none;
+        border: 1px solid var(--accent-button);
         border-radius: 999px;
         font-size: 0.8125rem;
         font-weight: 500;
         letter-spacing: 0.02em;
-        transition: background 180ms cubic-bezier(0.16, 1, 0.3, 1);
-      }
-
-      a.back:hover {
-        background: #e04a26;
+        transition: background 180ms var(--ease-out);
       }
 
       a.back svg {
-        transition: transform 360ms cubic-bezier(0.16, 1, 0.3, 1);
+        transition: transform 360ms var(--ease-out);
       }
 
-      a.back:hover svg {
-        transform: translateX(3px);
+      @media (hover: hover) {
+        a.back:hover {
+          background: var(--accent-deep);
+          border-color: var(--accent-deep);
+        }
+
+        a.back:hover svg {
+          transform: translateX(3px);
+        }
+      }
+
+      footer {
+        padding-block: clamp(1.75rem, 3vw, 2.5rem)
+          max(clamp(1.75rem, 3vw, 2.5rem), env(safe-area-inset-bottom));
+        border-top: 1px solid var(--line);
+      }
+
+      footer .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: center;
+        gap: 0.75rem 2rem;
+      }
+
+      footer span {
+        font-family: var(--font-mono), monospace;
+        font-size: 0.6875rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      footer span + span {
+        color: var(--fg-muted);
+      }
+
+      :focus-visible {
+        outline: 2px solid var(--accent-text);
+        outline-offset: 2px;
+        border-radius: 2px;
       }
     </style>
-    <script src="/404.js" defer></script>
   </head>
   <body>
     <header class="top">
-      <a class="brand" href="/" data-en-href="/en/"><span>Q.</span>Macq</a>
-      <span class="rule"></span>
-      <span>404</span>
+      <div class="container">
+        <a class="brand" href="/" data-en-href="/en/"><span>Q.</span>Macq</a>
+      </div>
     </header>
 
-    <main class="center">
-      <span class="stroke" aria-hidden="true"></span>
-      <p class="code">
-        4<span class="zero"
-          ><svg class="ears" viewBox="0 0 100 44" fill="currentColor" aria-hidden="true">
-            <g class="ear ear--left">
-              <path
-                d="M4 44Q0 40 2 35Q4 37 6 36Q2 31 4 26Q7 28 9 27Q6 23 8 18Q10 20 12 18C14 12 16 8 18 6Q21 2 24 6C29 13 34 23 38 33Q36 36 37 38Q40 38 41 40L42 44Z"
-              />
-              <path class="ear-inner" d="M13 38C15 31 18 24 21 18Q23 15 25 18C28 24 31 31 33 38Z" />
-              <path
-                d="M14 44Q15 36 18 30Q18 35 20 39Q20 31 22 24Q23 31 24 38Q25 33 27 29Q27 35 29 39Q30 36 32 33Q32 39 33 44Z"
-              />
-            </g>
-            <g class="ear ear--right">
-              <path
-                d="M96 44Q100 40 98 35Q96 37 94 36Q98 31 96 26Q93 28 91 27Q94 23 92 18Q90 20 88 18C86 12 84 8 82 6Q79 2 76 6C71 13 66 23 62 33Q64 36 63 38Q60 38 59 40L58 44Z"
-              />
-              <path class="ear-inner" d="M87 38C85 31 82 24 79 18Q77 15 75 18C72 24 69 31 67 38Z" />
-              <path
-                d="M86 44Q85 36 82 30Q82 35 80 39Q80 31 78 24Q77 31 76 38Q75 33 73 29Q73 35 71 39Q70 36 68 33Q68 39 67 44Z"
-              />
-            </g></svg
-          >0</span
-        >4<span class="stop">.</span>
-      </p>
-      <h1 data-en="This page doesn't exist, or no longer does.">
-        Cette page n'existe pas ou n'existe plus.
-      </h1>
-      <p data-en="Stale link, typo, or moved content.">
-        Lien périmé, faute de frappe, ou contenu déplacé.
-      </p>
-      <a class="back" href="/" data-en-href="/en/">
-        <span data-en="Back to home">Retour à l'accueil</span>
-        <svg
-          width="14"
-          height="14"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.6"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          aria-hidden="true"
-        >
-          <path d="M5 12h14M13 6l6 6-6 6" />
-        </svg>
-      </a>
+    <main>
+      <div class="container">
+        <p class="code">404<span class="stop">.</span></p>
+        <h1 data-en="This page doesn't exist, or no longer does.">
+          Cette page n'existe pas ou n'existe plus.
+        </h1>
+        <p class="lede" data-en="Stale link, typo, or moved content.">
+          Lien périmé, faute de frappe, ou contenu déplacé.
+        </p>
+        <a class="back" href="/" data-en-href="/en/">
+          <span data-en="Back to home">Retour à l'accueil</span>
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg>
+        </a>
+      </div>
     </main>
 
-    <footer class="bottom">
-      <span>Quentin Macq · Hauts-de-France</span>
-      <span class="rule"></span>
-      <span>quentin-macq.dev</span>
+    <footer>
+      <div class="container">
+        <span>Quentin Macq</span>
+        <span data-en="Hosted by Cloudflare, Inc. · 101 Townsend St, San Francisco, CA 94107, USA"
+          >Hébergé par Cloudflare, Inc. · 101 Townsend St, San Francisco, CA 94107, USA</span
+        >
+      </div>
     </footer>
   </body>
 </html>
