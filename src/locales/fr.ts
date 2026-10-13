@@ -66,8 +66,8 @@ export default {
 
   header: {
     'aria-hero': 'Introduction',
-    'cta-work': 'Voir le travail',
-    lede: 'Full-stack avec une obsession pour la performance front et les nouveaux outils.'
+    'cta-work': 'Voir les projets',
+    lede: 'Développeur full-stack chez Motoblouz.'
   },
 
   hobby: {
@@ -169,7 +169,7 @@ export default {
           { label: 'Code', value: 'Open source' }
         ],
         'figure-alt':
-          "Accueil du site en thème sombre : « Quentin Macq. » en grand sur un fond de caractères ASCII, l'accroche et les boutons « Voir le travail » et « Contact ».",
+          'Accueil du site en thème sombre : « Quentin Macq. » en grand sur un fond de caractères ASCII, la ligne « Développeur full-stack chez Motoblouz. » et les boutons « Voir les projets » et « Contact ».',
         'figure-meta': 'En ligne',
         'figure-title': 'quentin-macq.dev',
         lede: 'Le site que vous lisez, conçu et codé de A à Z.',

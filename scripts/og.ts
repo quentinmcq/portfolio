@@ -13,15 +13,15 @@ interface Card {
 const CARDS: Card[] = [
   {
     file: 'og.png',
-    kicker: 'DÉVELOPPEUR FULL-STACK',
+    kicker: 'PORTFOLIO',
     label: 'Quentin Macq — Développeur full-stack',
-    lede: 'Full-stack avec une obsession pour la performance front et les nouveaux outils.'
+    lede: 'Développeur full-stack chez Motoblouz.'
   },
   {
     file: 'og-en.png',
-    kicker: 'FULL-STACK DEVELOPER',
+    kicker: 'PORTFOLIO',
     label: 'Quentin Macq — Full-stack developer',
-    lede: 'Full-stack with an obsession for front-end performance and emerging tools.'
+    lede: 'Full-stack developer at Motoblouz.'
   }
 ]
 

@@ -26,22 +26,22 @@ interface LocaleMeta {
 const META: Record<Locale, LocaleMeta> = {
   en: {
     description:
-      'Quentin Macq — full-stack developer with an obsession for front-end performance and emerging tools. Nuxt, Vue, TypeScript, Symfony. Hauts-de-France.',
+      'Quentin Macq — full-stack developer at Motoblouz. Nuxt, Vue, TypeScript, Symfony. Hauts-de-France.',
     dir: 'en/',
     image: 'og-en.png',
     ogDescription:
-      'Full-stack developer with an obsession for front-end performance and emerging tools. Nuxt, Vue, TypeScript, Symfony. Hauts-de-France.',
+      'Full-stack developer at Motoblouz. Nuxt, Vue, TypeScript, Symfony. Hauts-de-France.',
     ogLocale: 'en_US',
     path: '/en/',
     title: 'Quentin Macq — Full-stack developer'
   },
   fr: {
     description:
-      'Quentin Macq — développeur full-stack avec une obsession pour la performance front et les nouveaux outils. Nuxt, Vue, TypeScript, Symfony. Hauts-de-France.',
+      'Quentin Macq — développeur full-stack chez Motoblouz. Nuxt, Vue, TypeScript, Symfony. Hauts-de-France.',
     dir: '',
     image: 'og.png',
     ogDescription:
-      'Développeur full-stack avec une obsession pour la performance front et les nouveaux outils. Nuxt, Vue, TypeScript, Symfony. Hauts-de-France.',
+      'Développeur full-stack chez Motoblouz. Nuxt, Vue, TypeScript, Symfony. Hauts-de-France.',
     ogLocale: 'fr_FR',
     path: '/',
     title: 'Quentin Macq — Développeur full-stack'

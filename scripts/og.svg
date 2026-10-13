@@ -31,14 +31,14 @@
   <rect width="1200" height="630" fill="url(#goldGlow)" />
 
   <rect x="80" y="72" width="40" height="2" fill="#ff5b3a" />
-  <text class="mono" x="80" y="112" font-size="14" letter-spacing="3" fill="#8a8580">DÉVELOPPEUR FULL-STACK</text>
+  <text class="mono" x="80" y="112" font-size="14" letter-spacing="3" fill="#8a8580">PORTFOLIO</text>
 
   <g class="display" fill="#f5f1e8">
     <text x="70" y="318" font-size="196" style="font-weight: 500; letter-spacing: -9.8px">Quentin</text>
     <text x="118" y="470" font-size="196" style="font-weight: 700; font-stretch: 80%; letter-spacing: -7.8px">Macq<tspan fill="#ff5b3a">.</tspan></text>
   </g>
 
-  <text class="display" x="80" y="534" font-size="27" style="font-weight: 400; letter-spacing: -0.4px" fill="#d9d4ca">Full-stack avec une obsession pour la performance front et les nouveaux outils.</text>
+  <text class="display" x="80" y="534" font-size="27" style="font-weight: 400; letter-spacing: -0.4px" fill="#d9d4ca">Développeur full-stack chez Motoblouz.</text>
 
   <g class="mono" font-size="13" letter-spacing="2.6" fill="#8a8580">
     <line x1="80" y1="576" x2="1120" y2="576" stroke="#f5f1e8" stroke-opacity="0.12" />
