@@ -2,11 +2,13 @@
   .hero__ears svg {
     opacity: 1;
     transform: none;
-    transition-delay: 120ms;
+    transition:
+      transform 640ms cubic-bezier(0.33, 1, 0.68, 1) 120ms,
+      opacity 360ms ease-out 120ms;
   }
 
   .hero__ear {
-    animation: hero-ear-twitch 520ms var(--ease-out) calc(480ms + var(--ear-delay, 0ms)) both;
+    animation: hero-ear-twitch 700ms ease-in-out calc(760ms + var(--ear-delay, 0ms)) both;
   }
 }
 
@@ -97,8 +99,8 @@
       opacity: 0;
       transform: translateY(40%);
       transition:
-        transform var(--dur-mid) var(--ease-out),
-        opacity var(--dur-fast) var(--ease-out);
+        transform 440ms cubic-bezier(0.55, 0, 0.75, 0.25),
+        opacity 280ms ease-in 160ms;
     }
   }
 
