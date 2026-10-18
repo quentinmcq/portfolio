@@ -161,6 +161,23 @@ export default {
           'A base of 437 breeds and their predispositions is the foundation: Claude crosses this profile with the history to produce check-ups and analyse a symptom, for subscribers.'
         ]
       },
+      pokedate: {
+        facts: [
+          { label: 'Pokémon', value: '1,025, one page each' },
+          { label: 'Modes', value: 'Duel · 3 to 8 player tournament' },
+          { label: 'Rendering', value: 'Server-side · Cloudflare Workers & D1' },
+          { label: 'Privacy', value: 'No account, no cookie' }
+        ],
+        'figure-alt':
+          'Result on mobile: “17 / 10 / 2026 → N° 706”, the card for Goodra (Muplodocus in French, Dragon type) with the “Partager”, “Défier” and “Ajouter aux tirages” buttons, and the navigation bar at the bottom.',
+        'figure-meta': 'Live',
+        'figure-title': 'pokedate.fr',
+        lede: 'An unofficial fan project that finds the Pokémon hidden in a date: 17/10/2026 gives 7·0·6, so #706.',
+        paragraphs: [
+          'Reveal your Pokémon, challenge a friend to a duel or run a tournament for 3 to 8 players. The Pokédex keeps track of Pokémon seen, caught and shiny, moves between devices with a QR code, and the site installs as an app.',
+          'Birth dates are never stored or shared: only the draws you choose to publish join a public feed, for seven days at most. Each of the 1,025 Pokémon has its own page explaining which dates lead to it.'
+        ]
+      },
       portfolio: {
         facts: [
           { label: 'Languages', value: 'French · English' },
@@ -200,6 +217,13 @@ export default {
     'kind-school': 'Studies',
     'kind-work': 'Work',
     list: [
+      {
+        chips: ['Nuxt', 'TypeScript', 'Bun', 'Cloudflare', 'Vitest', 'Playwright'],
+        kind: 'personal',
+        slug: 'pokedate',
+        title: 'PokéDate',
+        year: '2026'
+      },
       {
         chips: ['Vue', 'TypeScript', 'Bun', 'Cloudflare'],
         kind: 'personal',

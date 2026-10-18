@@ -1,5 +1,6 @@
 import bombermanShot from '@/assets/cases/bomberman.webp'
 import pilpoilShot from '@/assets/cases/pilpoil.webp'
+import pokedateShot from '@/assets/cases/pokedate.webp'
 import portfolioShot from '@/assets/cases/portfolio.webp'
 import wizardTombShot from '@/assets/cases/wizard-tomb.webp'
 
@@ -17,6 +18,11 @@ export interface ProjectCase {
 }
 
 export const CASES: ProjectCase[] = [
+  {
+    figure: { frame: 'phone', height: 1800, src: pokedateShot, width: 840 },
+    site: 'https://pokedate.fr',
+    slug: 'pokedate'
+  },
   {
     figure: { frame: 'plain', height: 1125, src: portfolioShot, width: 1800 },
     slug: 'portfolio'

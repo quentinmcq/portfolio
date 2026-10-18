@@ -161,6 +161,23 @@ export default {
           "Une base de 437 races et leurs prédispositions sert de socle : Claude croise ce profil avec l'historique pour produire des bilans et analyser un symptôme, pour les abonnés."
         ]
       },
+      pokedate: {
+        facts: [
+          { label: 'Pokémon', value: '1 025, une page chacun' },
+          { label: 'Modes', value: 'Duel · tournoi de 3 à 8' },
+          { label: 'Rendu', value: 'Serveur · Cloudflare Workers et D1' },
+          { label: 'Vie privée', value: 'Sans compte ni cookie' }
+        ],
+        'figure-alt':
+          'Résultat sur mobile : « 17 / 10 / 2026 → N° 706 », la fiche de Muplodocus (type Dragon) avec les boutons « Partager », « Défier » et « Ajouter aux tirages », et la barre de navigation en bas.',
+        'figure-meta': 'En ligne',
+        'figure-title': 'pokedate.fr',
+        lede: 'Un projet de fan, non officiel, qui trouve le Pokémon caché dans une date : 17/10/2026 donne 7·0·6, soit le n° 706.',
+        paragraphs: [
+          "Révélez votre Pokémon, défiez un ami en duel ou lancez un tournoi de 3 à 8 joueurs. Le Pokédex garde les Pokémon vus, attrapés et shiny, passe d'un appareil à l'autre par QR code, et le site s'installe comme une app.",
+          'Les dates de naissance ne sont ni enregistrées ni partagées : seuls les tirages que vous publiez rejoignent un fil public, sept jours au plus. Chacun des 1 025 Pokémon a sa page, qui explique quelles dates y mènent.'
+        ]
+      },
       portfolio: {
         facts: [
           { label: 'Langues', value: 'Français · anglais' },
@@ -200,6 +217,13 @@ export default {
     'kind-school': 'Études',
     'kind-work': 'Pro',
     list: [
+      {
+        chips: ['Nuxt', 'TypeScript', 'Bun', 'Cloudflare', 'Vitest', 'Playwright'],
+        kind: 'personal',
+        slug: 'pokedate',
+        title: 'PokéDate',
+        year: '2026'
+      },
       {
         chips: ['Vue', 'TypeScript', 'Bun', 'Cloudflare'],
         kind: 'personal',
