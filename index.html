@@ -30,6 +30,15 @@
           document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f5f1e8')
         }
       } catch (e) {}
+
+      // Cookieless audience measure, on the live site only so that local runs and tests are never counted.
+      if (location.hostname === 'quentin-macq.dev') {
+        const beacon = document.createElement('script')
+        beacon.defer = true
+        beacon.src = 'https://static.cloudflareinsights.com/beacon.min.js'
+        beacon.dataset.cfBeacon = '{"token": "1fd72f4be68f4072a84f9260922246a3"}'
+        document.head.append(beacon)
+      }
     </script>
 
     <title>Quentin Macq — Développeur full-stack</title>
