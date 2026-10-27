@@ -31,7 +31,7 @@
     "@vitejs/plugin-vue": "^6.0.10",
     "@vue/tsconfig": "^0.9.1",
     "axe-core": "^4.14.0",
-    "sass-embedded": "^1.105.2",
+    "sass-embedded": "^1.106.1",
     "typescript": "^7.0.2",
     "vite": "npm:@voidzero-dev/vite-plus-core@latest",
     "vite-plus": "latest",
@@ -40,5 +40,5 @@
   "overrides": {
     "vite": "npm:@voidzero-dev/vite-plus-core@latest"
   },
-  "packageManager": "bun@1.4.3"
+  "packageManager": "bun@1.4.4"
 }
