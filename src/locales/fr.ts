@@ -245,6 +245,7 @@ export default {
       {
         chips: ['Nuxt', 'TypeScript', 'Bun', 'Cloudflare', 'Vitest', 'Playwright'],
         kind: 'personal',
+        link: repoUrl('pokedate'),
         slug: 'pokedate',
         title: 'PokéDate',
         year: '2026'
