@@ -161,6 +161,23 @@ export default {
           "Une base de 437 races et leurs prédispositions sert de socle : Claude croise ce profil avec l'historique pour produire des bilans et analyser un symptôme, pour les abonnés."
         ]
       },
+      pokebrawl: {
+        facts: [
+          { label: 'Pokémon', value: '1 025, chacun avec son prix' },
+          { label: 'Modes', value: "Défi du jour · entraînement · défi d'ami" },
+          { label: 'Rendu', value: 'PixiJS · simulation déterministe' },
+          { label: 'Hébergement', value: 'Cloudflare Workers et D1' }
+        ],
+        'figure-alt':
+          "Combat en cours sur mobile : Gen 1 (129) contre Gen 3 (130) à 0:06, des centaines de Pokémon en pixel art mêlés sur une prairie, avec les noms d'attaque « Laser Glace », « Lame d'Air » et « Giclédo ».",
+        'figure-meta': 'En ligne',
+        'figure-title': 'pokebrawl.fr',
+        lede: 'Un projet de fan, non officiel : composez une équipe de 1 000 points et lancez-la contre une horde de Pokémon.',
+        paragraphs: [
+          "Chaque jour, la même horde et le même combat pour tout le monde : le résultat ne dépend que de l'équipe, et le classement retient qui gagne avec le moins de points. On peut aussi défier un ami par lien, s'entraîner, ou regarder des générations et des types s'affronter.",
+          "Une même graine rejoue toujours le même combat, ce qui permet de vérifier chaque score du classement et d'enregistrer le combat en vidéo. Le prix de chaque Pokémon ne vient pas de ses stats : il est mesuré sur des dizaines de milliers de combats simulés."
+        ]
+      },
       pokedate: {
         facts: [
           { label: 'Pokémon', value: '1 025, une page chacun' },
@@ -217,6 +234,14 @@ export default {
     'kind-school': 'Études',
     'kind-work': 'Pro',
     list: [
+      {
+        chips: ['TypeScript', 'PixiJS', 'Bun', 'Cloudflare', 'Vitest', 'Playwright'],
+        kind: 'personal',
+        link: repoUrl('pokebrawl'),
+        slug: 'pokebrawl',
+        title: 'PokéBrawl',
+        year: '2026'
+      },
       {
         chips: ['Nuxt', 'TypeScript', 'Bun', 'Cloudflare', 'Vitest', 'Playwright'],
         kind: 'personal',

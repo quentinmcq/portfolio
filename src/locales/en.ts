@@ -161,6 +161,23 @@ export default {
           'A base of 437 breeds and their predispositions is the foundation: Claude crosses this profile with the history to produce check-ups and analyse a symptom, for subscribers.'
         ]
       },
+      pokebrawl: {
+        facts: [
+          { label: 'Pokémon', value: '1,025, each with its own price' },
+          { label: 'Modes', value: 'Daily challenge · training · friend challenge' },
+          { label: 'Rendering', value: 'PixiJS · deterministic simulation' },
+          { label: 'Hosting', value: 'Cloudflare Workers & D1' }
+        ],
+        'figure-alt':
+          "Battle in progress on mobile: Gen 1 (129) against Gen 3 (130) at 0:06, hundreds of pixel-art Pokémon clashing on a meadow, with the move names “Laser Glace”, “Lame d'Air” and “Giclédo” (Ice Beam, Air Slash and Scald in French).",
+        'figure-meta': 'Live',
+        'figure-title': 'pokebrawl.fr',
+        lede: 'An unofficial fan project: build a 1,000-point team and send it against a horde of Pokémon.',
+        paragraphs: [
+          'Every day, the same horde and the same battle for everyone: the outcome depends only on the team, and the leaderboard ranks whoever wins with the fewest points. You can also challenge a friend with a link, train, or watch generations and types fight it out.',
+          'The same seed always replays the same battle, which makes it possible to check every leaderboard score and to record the battle as a video. The price of each Pokémon does not come from its stats: it is measured over tens of thousands of simulated battles.'
+        ]
+      },
       pokedate: {
         facts: [
           { label: 'Pokémon', value: '1,025, one page each' },
@@ -217,6 +234,14 @@ export default {
     'kind-school': 'Studies',
     'kind-work': 'Work',
     list: [
+      {
+        chips: ['TypeScript', 'PixiJS', 'Bun', 'Cloudflare', 'Vitest', 'Playwright'],
+        kind: 'personal',
+        link: repoUrl('pokebrawl'),
+        slug: 'pokebrawl',
+        title: 'PokéBrawl',
+        year: '2026'
+      },
       {
         chips: ['Nuxt', 'TypeScript', 'Bun', 'Cloudflare', 'Vitest', 'Playwright'],
         kind: 'personal',
