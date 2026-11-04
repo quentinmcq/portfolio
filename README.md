@@ -40,6 +40,7 @@ bun run lint      # lint only, with auto-fix
 bun run test      # unit tests (vitest)
 bun run test:e2e  # browser + accessibility tests (playwright, needs a build first)
 bun run og        # regenerate public/og.png and og-en.png from scripts/og.svg
+bun run stats     # live site audience per day, from Cloudflare analytics (--days 7, needs wrangler login)
 bun run deploy    # wrangler deploy
 bunx vp hooks enable   # once per clone: pre-commit hook running `vp staged`
 ```
