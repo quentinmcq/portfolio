@@ -28,6 +28,20 @@ Personal site at [quentin-macq.dev](https://quentin-macq.dev/) — hosted on **C
 
 No secrets required: contact goes through a plain `mailto:` link.
 
+## Fonts
+
+`public/fonts/bricolage-grotesque-v9-fr-en.woff2` is the Google Fonts latin file cut with
+[fonttools](https://github.com/fonttools/fonttools) to the axes the site uses (wght 200–700,
+wdth 80–100, opsz untouched since browsers follow the font size) and to French and English glyphs:
+
+```sh
+uvx --from fonttools fonttools varLib.instancer latin.woff2 wght=200:700 wdth=80:100 -o cut.ttf
+uvx --with brotli --from fonttools pyftsubset cut.ttf --flavor=woff2 --layout-features='*' \
+  --notdef-outline --name-IDs='*' --unicodes='U+0020-007E,U+00A0,U+2002,U+2009,U+200B,U+2122' \
+  --text='àâäçéèêëîïôöùûüÿæœÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸÆŒ«»“”‘’—–…·•°€→←↑↓≈×' \
+  --output-file=bricolage-grotesque-v9-fr-en.woff2
+```
+
 ## Scripts
 
 ```sh

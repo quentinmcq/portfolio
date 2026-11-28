@@ -25,7 +25,7 @@ const CARDS: Card[] = [
   }
 ]
 
-const FONTS = ['bricolage-grotesque-v9-latin.woff2', 'jetbrains-mono-v24-latin.woff2'] as const
+const FONTS = ['bricolage-grotesque-v9-fr-en.woff2', 'jetbrains-mono-v24-latin.woff2'] as const
 
 const publicUrl = new URL('../public/', import.meta.url)
 
