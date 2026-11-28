@@ -22,7 +22,7 @@ Personal site at [quentin-macq.dev](https://quentin-macq.dev/) — hosted on **C
 ## Cloudflare
 
 - `worker/index.ts` — serves the static build and `/api/presence` (live visitor count)
-- `worker/presence.ts` — `PresenceCounter` Durable Object using the WebSocket hibernation API
+- `worker/presence.ts` — `PresenceCounter` Durable Object using the WebSocket hibernation API: same-origin handshakes only, 100 sockets at most, count broadcasts coalesced over one second
 - `wrangler.jsonc` — routes, bindings (`PRESENCE`), static assets
 
 No secrets required: contact goes through a plain `mailto:` link.
