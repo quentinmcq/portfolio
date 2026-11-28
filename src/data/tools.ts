@@ -70,6 +70,11 @@ const tools: Record<string, Tool> = {
     label: 'Pinia',
     link: 'https://pinia.vuejs.org/'
   },
+  pixijs: {
+    color: '#E91E63',
+    label: 'PixiJS',
+    link: 'https://pixijs.com/'
+  },
   playwright: {
     color: '#2EAD33',
     label: 'Playwright',
