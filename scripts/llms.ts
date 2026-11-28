@@ -29,12 +29,14 @@ export interface LlmsSource {
   french: string
   home: string
   messages: Messages
+  projectUrl: (slug: string) => string
   sites: Record<string, string | undefined>
 }
 
 // https://llmstxt.org: a Markdown digest of the site, written from the English messages
 // so that it never drifts from the pages.
-export function llmsTxt({ contacts, french, home, messages, sites }: LlmsSource): string {
+export function llmsTxt(source: LlmsSource): string {
+  const { contacts, french, home, messages, sites } = source
   const featured = messages.experience.featured
   const background = messages.experience.list as Experience[]
   const projects = messages.project.list as Project[]
@@ -47,10 +49,13 @@ export function llmsTxt({ contacts, french, home, messages, sites }: LlmsSource)
     const kind = messages.project[`kind-${project.kind}` as 'kind-personal'].toLowerCase()
     const status =
       project.status === 'wip' ? `, ${messages.project['status-wip'].toLowerCase()}` : ''
+    const name = project.slug
+      ? `[${project.title}](${source.projectUrl(project.slug)})`
+      : project.title
     const links = [site && `site: ${site}`, project.link && `code: ${project.link}`].filter(Boolean)
 
     return [
-      `- **${project.title}** (${project.year}, ${kind}${status})`,
+      `- **${name}** (${project.year}, ${kind}${status})`,
       lede && `: ${lede}`,
       project.chips?.length && ` Stack: ${project.chips.join(', ')}.`,
       links.length && ` ${capitalize(links.join(' · '))}`

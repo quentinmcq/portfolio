@@ -7,7 +7,7 @@ Personal site at [quentin-macq.dev](https://quentin-macq.dev/) — hosted on **C
 - **Vue** + **TypeScript** — single-page portfolio, prerendered at build time
 - **vite-plus** (`vp`) — build, dev server, lint, format, typecheck in one tool
 - **Bun** runtime + package manager
-- **Vue-i18n** — fr/en, one prerendered document per language (`/` and `/en/`, linked by `hreflang`)
+- **Vue-i18n** — fr/en, one prerendered document per language (`/` and `/en/`, linked by `hreflang`), plus one page per project (`/projets/<slug>/`, `/en/projects/<slug>/`)
 - **`/llms.txt`** — Markdown digest of the site, written at build time from the English messages
 - **Sass embedded**
 - No UI framework — custom components throughout

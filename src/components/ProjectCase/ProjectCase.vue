@@ -16,7 +16,9 @@
         </span>
       </div>
 
-      <h3 class="case__title">{{ item.title }}<span class="case__stop">.</span></h3>
+      <component :is="standalone ? 'h1' : 'h3'" class="case__title">
+        {{ item.title }}<span class="case__stop">.</span>
+      </component>
 
       <p class="case__lede">{{ entry ? $t(`project.cases.${entry.slug}.lede`) : item.subtitle }}</p>
 
@@ -35,7 +37,29 @@
         </dl>
       </template>
 
-      <div v-if="entry?.site || item.link" class="case__links">
+      <div v-if="entry || item.link" class="case__links">
+        <a
+          v-if="entry && !standalone"
+          class="case__link"
+          :href="routePath({ locale: route.locale, slug: entry.slug })"
+          :aria-label="`${$t('project.case-link-page')} — ${item.title}`"
+        >
+          {{ $t('project.case-link-page') }}
+          <svg
+            class="case__link-forward"
+            aria-hidden="true"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg>
+        </a>
         <a
           v-if="entry?.site"
           class="case__link"
@@ -73,7 +97,7 @@
           :width="entry.figure.width"
           :height="entry.figure.height"
           :alt="$t(`project.cases.${entry.slug}.figure-alt`)"
-          loading="lazy"
+          :loading="standalone ? 'eager' : 'lazy'"
           decoding="async"
         />
       </div>
@@ -88,6 +112,7 @@ import { useI18n } from 'vue-i18n'
 import ArrowIcon from '@/components/ArrowIcon/ArrowIcon.vue'
 import ToolList from '@/components/ToolList/ToolList.vue'
 import { CASES } from '@/data/cases'
+import { route, routePath } from '@/routes'
 import type { Project } from '@/types/Project'
 
 interface Fact {
@@ -95,7 +120,7 @@ interface Fact {
   value: string
 }
 
-const { item } = defineProps<{ item: Project }>()
+const { item, standalone = false } = defineProps<{ item: Project; standalone?: boolean }>()
 
 const { tm } = useI18n()
 

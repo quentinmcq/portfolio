@@ -10,14 +10,12 @@
       document.documentElement.classList.add('js')
 
       try {
-        const path = location.pathname
-        const onEn = path === '/en' || path.startsWith('/en/')
+        // Prerendered pages name their translation in data-twin.
+        const twin = document.documentElement.dataset.twin
         const lang = localStorage.getItem('lang')
 
-        if (lang === 'en' && !onEn) {
-          location.replace('/en/' + location.hash)
-        } else if (lang === 'fr' && onEn) {
-          location.replace('/' + location.hash)
+        if (twin && (lang === 'en' || lang === 'fr') && lang !== document.documentElement.lang) {
+          location.replace(twin + location.hash)
         }
 
         const theme = localStorage.getItem('theme')

@@ -36,7 +36,7 @@ async function violations(page: Page): Promise<string[]> {
 }
 
 test.describe('accessibility', () => {
-  for (const path of ['/', '/en/']) {
+  for (const path of ['/', '/en/', '/projets/pokebrawl/', '/en/projects/bomberman/']) {
     test(`has no WCAG violation on ${path}`, async ({ page }) => {
       await page.goto(path)
 

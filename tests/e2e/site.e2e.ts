@@ -69,6 +69,50 @@ test.describe('prerendered documents', () => {
   })
 })
 
+test.describe('project pages', () => {
+  test('serves one prerendered page per project and language', async ({ request }) => {
+    for (const [path, twin, title] of [
+      ['/projets/pokebrawl/', '/en/projects/pokebrawl/', '<title>PokéBrawl — Quentin Macq</title>'],
+      ['/en/projects/pokebrawl/', '/projets/pokebrawl/', '<title>PokéBrawl — Quentin Macq</title>']
+    ]) {
+      const html = await (await request.get(path)).text()
+
+      expect(html, path).toContain(title)
+      expect(html, path).toContain(
+        `<link rel="canonical" href="https://quentin-macq.dev${path}" />`
+      )
+      expect(html, path).toContain(`href="https://quentin-macq.dev${twin}"`)
+      expect(html, path).toContain(`data-twin="${twin}"`)
+      expect(html, path).toContain('"@type":"BreadcrumbList"')
+      expect(html, path).toMatch(/<h1 class="case__title"/)
+    }
+  })
+
+  test('lists every project page in the sitemap', async ({ request }) => {
+    const xml = await (await request.get('/sitemap.xml')).text()
+
+    expect(xml).toContain('<loc>https://quentin-macq.dev/projets/pokedate/</loc>')
+    expect(xml).toContain('<loc>https://quentin-macq.dev/en/projects/pokedate/</loc>')
+  })
+
+  test('opens a project page from the home page and switches its language', async ({ page }) => {
+    await page.goto('/')
+    await page.getByRole('link', { name: 'Page du projet — PokéDate' }).click()
+
+    await expect(page).toHaveURL(/\/projets\/pokedate\/$/)
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText('PokéDate.')
+
+    await page.getByRole('link', { name: 'EN', exact: true }).click()
+    await expect(page).toHaveURL(/\/en\/projects\/pokedate\/$/)
+
+    await page.goto('/projets/pokedate/')
+    await expect(page).toHaveURL(/\/en\/projects\/pokedate\/$/)
+
+    await page.getByRole('link', { name: 'All work' }).click()
+    await expect(page).toHaveURL(/\/en\/#project$/)
+  })
+})
+
 test.describe('language', () => {
   test('switches to English and remembers it', async ({ page }) => {
     await page.goto('/')

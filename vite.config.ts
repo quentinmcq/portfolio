@@ -29,7 +29,7 @@ function localeRoutes(): Plugin {
       server.middlewares.use((request, _response, next) => {
         const { pathname, search } = new URL(request.url ?? '/', 'http://localhost')
 
-        if (pathname === '/en' || pathname === '/en/') {
+        if (pathname === '/en' || pathname.startsWith('/en/') || pathname.startsWith('/projets/')) {
           request.url = `/${search}`
         }
 

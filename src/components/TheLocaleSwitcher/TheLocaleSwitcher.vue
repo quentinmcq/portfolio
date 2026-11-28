@@ -5,7 +5,7 @@
       :key="lang"
       class="locale-switcher__btn"
       :class="{ 'is-active': locale === lang }"
-      :href="LOCALE_PATHS[lang]"
+      :href="routePath({ ...route, locale: lang })"
       :lang
       :title="LOCALE_NAMES[lang]"
       :aria-current="locale === lang ? 'page' : undefined"
@@ -19,13 +19,8 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 
-import {
-  LOCALE_NAMES,
-  LOCALE_PATHS,
-  LOCALE_STORAGE_KEY,
-  SUPPORTED_LOCALES,
-  type Locale
-} from '@/i18n'
+import { LOCALE_NAMES, LOCALE_STORAGE_KEY, SUPPORTED_LOCALES, type Locale } from '@/i18n'
+import { route, routePath } from '@/routes'
 
 const { locale } = useI18n()
 

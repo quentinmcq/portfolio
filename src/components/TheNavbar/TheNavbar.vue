@@ -1,7 +1,7 @@
 <template>
   <header class="navbar" :class="{ 'is-scrolled': scrolled }">
     <div class="container navbar__inner">
-      <a class="navbar__brand" href="#top">
+      <a class="navbar__brand" :href="onProject ? homePath : '#top'">
         <span class="navbar__brand-mark">Q.</span><span class="navbar__brand-name">Macq</span>
       </a>
 
@@ -85,6 +85,7 @@ import { useActiveSection } from '@/composables/active-section'
 import { useMessageList } from '@/composables/message-list'
 import { useTheme } from '@/composables/theme'
 import { useWindowScroll } from '@/composables/window-scroll'
+import { route, routePath } from '@/routes'
 
 import TheNavDrawer from './TheNavDrawer/TheNavDrawer.vue'
 
@@ -92,7 +93,17 @@ const { theme, toggleTheme } = useTheme()
 const { active } = useActiveSection()
 const { y } = useWindowScroll()
 
-const menu = useMessageList<MenuItem>('menu')
+const sections = useMessageList<MenuItem>('menu')
+
+const onProject = computed(() => !!route.value.slug)
+const homePath = computed(() => routePath({ locale: route.value.locale }))
+
+// A project page has none of the home sections: its menu leads back to them.
+const menu = computed(() =>
+  onProject.value
+    ? sections.value.map((item) => ({ ...item, link: `${homePath.value}${item.link}` }))
+    : sections.value
+)
 
 const drawer = ref(false)
 const scrolled = computed(() => y.value > 60)

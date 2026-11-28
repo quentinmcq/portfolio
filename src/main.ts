@@ -3,7 +3,8 @@ import { createApp, createSSRApp } from 'vue'
 import '@/styles/main.scss'
 
 import { syncTheme } from '@/composables/theme'
-import { i18n, localeFromPath, setLocale } from '@/i18n'
+import { i18n, setLocale } from '@/i18n'
+import { routeFromPath, setRoute } from '@/routes'
 
 import App from './App.vue'
 
@@ -13,10 +14,11 @@ if (!container) {
   throw new Error('#app container missing')
 }
 
-const locale = localeFromPath(location.pathname)
+const route = routeFromPath(location.pathname)
 
-setLocale(locale)
-document.documentElement.lang = locale
+setRoute(route)
+setLocale(route.locale)
+document.documentElement.lang = route.locale
 
 const app = container.firstElementChild ? createSSRApp(App) : createApp(App)
 app.use(i18n)

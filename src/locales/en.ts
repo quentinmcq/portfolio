@@ -126,6 +126,7 @@ export default {
 
   project: {
     'case-link-code': 'View the code',
+    'case-link-page': 'Project page',
     'case-link-site': 'Visit the site',
     cases: {
       bomberman: {
@@ -295,6 +296,8 @@ export default {
       }
     ],
     'main-title': 'Work',
+    'page-back': 'All work',
+    'page-others': 'Other projects',
     'status-wip': 'In progress'
   },
 
