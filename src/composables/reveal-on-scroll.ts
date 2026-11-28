@@ -1,12 +1,18 @@
 import { onBeforeUnmount, onMounted } from 'vue'
 
+// Matches the delay of the reveal-fallback animation in _global.scss.
+const REVEAL_FALLBACK_MS = 3_000
+
 export function useRevealOnScroll() {
   let observer: IntersectionObserver | null = null
 
   onMounted(() => {
     const targets = document.querySelectorAll('[data-reveal]')
+    const fallbackShown = performance.now() >= REVEAL_FALLBACK_MS
 
-    if (typeof IntersectionObserver === 'undefined') {
+    document.documentElement.classList.add('reveal-armed')
+
+    if (fallbackShown || typeof IntersectionObserver === 'undefined') {
       targets.forEach((el) => el.classList.add('is-visible'))
 
       return

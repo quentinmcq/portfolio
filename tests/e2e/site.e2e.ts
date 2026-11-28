@@ -104,6 +104,16 @@ test.describe('interface', () => {
     await expect(page.locator('#hobby h2')).toBeInViewport()
   })
 
+  test('shows the content even when the app module fails to load', async ({ page }) => {
+    await page.route('**/assets/*.js', (route) => route.abort())
+    await page.goto('/')
+
+    const lastReveal = page.locator('[data-reveal]').last()
+
+    await lastReveal.scrollIntoViewIfNeeded()
+    await expect(lastReveal).toHaveCSS('opacity', '1', { timeout: 5_000 })
+  })
+
   test('opens and closes the mobile menu', async ({ page }) => {
     await page.setViewportSize({ height: 844, width: 390 })
     await page.goto('/')
