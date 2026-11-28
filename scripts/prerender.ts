@@ -1,3 +1,4 @@
+import { execFileSync } from 'node:child_process'
 import { createHash } from 'node:crypto'
 import { mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { gzipSync } from 'node:zlib'
@@ -183,7 +184,26 @@ for (const locale of LOCALES) {
   writeFileSync(new URL('index.html', outDir), html)
 }
 
-const lastmod = new Date().toISOString().slice(0, 10)
+// The day the content last changed, not the build date: a dependency update redeploys the site
+// without changing a word. A shallow clone cannot tell, so the sitemap then leaves lastmod out.
+function contentLastModified(): string | undefined {
+  try {
+    const git = (...args: string[]) =>
+      execFileSync('git', args, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim()
+
+    if (git('rev-parse', '--is-shallow-repository') !== 'false') {
+      return undefined
+    }
+
+    return (
+      git('log', '-1', '--format=%cs', '--', 'src/locales', 'src/data', 'src/assets') || undefined
+    )
+  } catch {
+    return undefined
+  }
+}
+
+const lastmod = contentLastModified()
 
 const urls = LOCALES.map((locale) =>
   [
@@ -193,7 +213,7 @@ const urls = LOCALES.map((locale) =>
       (alt) =>
         `    <xhtml:link rel="alternate" hreflang="${alt}" href="${SITE}${META[alt].path}" />`
     ),
-    `    <lastmod>${lastmod}</lastmod>`,
+    ...(lastmod ? [`    <lastmod>${lastmod}</lastmod>`] : []),
     '  </url>'
   ].join('\n')
 ).join('\n')
