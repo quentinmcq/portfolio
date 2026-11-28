@@ -94,6 +94,8 @@
       <div class="case__device" :class="`case__device--${entry.figure.frame}`">
         <img
           :src="entry.figure.src"
+          :srcset="sources?.srcset"
+          :sizes="sources?.sizes"
           :width="entry.figure.width"
           :height="entry.figure.height"
           :alt="$t(`project.cases.${entry.slug}.figure-alt`)"
@@ -111,7 +113,7 @@ import { useI18n } from 'vue-i18n'
 
 import ArrowIcon from '@/components/ArrowIcon/ArrowIcon.vue'
 import ToolList from '@/components/ToolList/ToolList.vue'
-import { CASES } from '@/data/cases'
+import { CASES, figureSources } from '@/data/cases'
 import { route, routePath } from '@/routes'
 import type { Project } from '@/types/Project'
 
@@ -129,6 +131,8 @@ const entry = CASES.find((candidate) => candidate.slug === item.slug)
 function caseList<T>(field: 'facts' | 'paragraphs'): T[] {
   return entry ? (tm(`project.cases.${entry.slug}.${field}`) as T[]) : []
 }
+
+const sources = entry && figureSources(entry.figure)
 
 const paragraphs = computed(() => caseList<string>('paragraphs'))
 const facts = computed(() => caseList<Fact>('facts'))

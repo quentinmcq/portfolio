@@ -15,6 +15,7 @@
     "test": "vp test",
     "test:e2e": "playwright test",
     "og": "bun scripts/og.ts",
+    "cases": "bun scripts/cases.ts",
     "stats": "bun scripts/stats.ts",
     "deploy": "wrangler deploy",
     "check": "vp check",
