@@ -51,6 +51,16 @@ test.describe('prerendered documents', () => {
     }
   })
 
+  test('summarises the site for language models', async ({ request }) => {
+    const response = await request.get('/llms.txt')
+    const text = await response.text()
+
+    expect(response.ok()).toBe(true)
+    expect(text).toMatch(/^# Quentin Macq\n/)
+    expect(text).toContain('Site: https://pokebrawl.fr')
+    expect(text).toContain('Email: contact@quentin-macq.dev')
+  })
+
   test('lists both languages in the sitemap', async ({ request }) => {
     const xml = await (await request.get('/sitemap.xml')).text()
 

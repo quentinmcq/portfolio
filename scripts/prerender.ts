@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto'
 import { mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { gzipSync } from 'node:zlib'
 
+import { llmsTxt } from './llms'
 import { homeStructuredData, type Messages } from './structured-data'
 import { swapper } from './swap'
 
@@ -225,6 +226,17 @@ writeFileSync(
 ${urls}
 </urlset>
 `
+)
+
+writeFileSync(
+  new URL('llms.txt', distUrl),
+  llmsTxt({
+    contacts: CONTACTS,
+    french: `${SITE}${META.fr.path}`,
+    home: `${SITE}${META.en.path}`,
+    messages: messages.en,
+    sites
+  })
 )
 
 rmSync(new URL('../dist-server/', import.meta.url), { force: true, recursive: true })
