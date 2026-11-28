@@ -39,6 +39,18 @@ test.describe('prerendered documents', () => {
     }
   })
 
+  test('describes the person in the language of the page', async ({ request }) => {
+    for (const [path, jobTitle] of [
+      ['/', 'Développeur full-stack'],
+      ['/en/', 'Full-stack developer']
+    ]) {
+      const html = await (await request.get(path)).text()
+
+      expect(html, path).toContain(`"jobTitle":"${jobTitle}"`)
+      expect(html, path).toContain('property="og:image:alt"')
+    }
+  })
+
   test('lists both languages in the sitemap', async ({ request }) => {
     const xml = await (await request.get('/sitemap.xml')).text()
 

@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto'
 import { mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { gzipSync } from 'node:zlib'
 
+import { homeStructuredData, type Messages } from './structured-data'
 import { swapper } from './swap'
 
 const SITE = 'https://quentin-macq.dev'
@@ -17,6 +18,9 @@ interface LocaleMeta {
   description: string
   dir: string
   image: string
+  imageAlt: string
+  jobTitle: string
+  knowsAbout: string[]
   ogDescription: string
   ogLocale: string
   path: string
@@ -29,6 +33,9 @@ const META: Record<Locale, LocaleMeta> = {
       'Quentin Macq — full-stack developer at Motoblouz. Nuxt, Vue, TypeScript, Symfony. Hauts-de-France.',
     dir: 'en/',
     image: 'og-en.png',
+    imageAlt: 'Quentin Macq, full-stack developer at Motoblouz, Hauts-de-France.',
+    jobTitle: 'Full-stack developer',
+    knowsAbout: ['Nuxt', 'Vue.js', 'TypeScript', 'Symfony', 'Web performance', 'UX/UI design'],
     ogDescription:
       'Full-stack developer at Motoblouz. Nuxt, Vue, TypeScript, Symfony. Hauts-de-France.',
     ogLocale: 'en_US',
@@ -40,6 +47,9 @@ const META: Record<Locale, LocaleMeta> = {
       'Quentin Macq — développeur full-stack chez Motoblouz. Nuxt, Vue, TypeScript, Symfony. Hauts-de-France.',
     dir: '',
     image: 'og.png',
+    imageAlt: 'Quentin Macq, développeur full-stack chez Motoblouz, Hauts-de-France.',
+    jobTitle: 'Développeur full-stack',
+    knowsAbout: ['Nuxt', 'Vue.js', 'TypeScript', 'Symfony', 'Performance web', 'Design UX/UI'],
     ogDescription:
       'Développeur full-stack chez Motoblouz. Nuxt, Vue, TypeScript, Symfony. Hauts-de-France.',
     ogLocale: 'fr_FR',
@@ -51,9 +61,13 @@ const META: Record<Locale, LocaleMeta> = {
 const swap = swapper('prerender: dist/index.html')
 
 const serverEntry = new URL('../dist-server/entry-server.js', import.meta.url)
-const { render } = (await import(serverEntry.href)) as {
+const { CASES, CONTACTS, render, ...messages } = (await import(serverEntry.href)) as {
+  CASES: { site?: string; slug: string }[]
+  CONTACTS: { email: string; github: string; linkedin: string }
   render: (locale: Locale) => Promise<string>
-}
+} & Record<Locale, Messages>
+
+const sites = Object.fromEntries(CASES.map((entry) => [entry.slug, entry.site]))
 
 const distUrl = new URL('../dist/', import.meta.url)
 const template = readFileSync(new URL('index.html', distUrl), 'utf8')
@@ -103,6 +117,21 @@ for (const locale of LOCALES) {
 
   html = swap(
     html,
+    '</head>',
+    `  ${homeStructuredData({
+      contacts: CONTACTS,
+      jobTitle: meta.jobTitle,
+      knowsAbout: meta.knowsAbout,
+      locale,
+      messages: messages[locale],
+      site: SITE,
+      sites,
+      url: `${SITE}${meta.path}`
+    })}\n  </head>`
+  )
+
+  html = swap(
+    html,
     `<link rel="canonical" href="${SITE}/" />`,
     `<link rel="canonical" href="${SITE}${meta.path}" />\n    ${alternates}`
   )
@@ -112,6 +141,7 @@ for (const locale of LOCALES) {
     html = swap(html, META.fr.title, meta.title)
     html = swap(html, META.fr.description, meta.description)
     html = swap(html, META.fr.ogDescription, meta.ogDescription)
+    html = swap(html, META.fr.imageAlt, meta.imageAlt)
     html = swap(
       html,
       `property="og:url" content="${SITE}/"`,
